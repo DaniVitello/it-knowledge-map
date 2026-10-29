@@ -1,0 +1,26 @@
+# areas/project-management.yaml — Capa D: contexto por area.
+# Fuente de verdad: areas.json (Desktop, junto a la spec). Estructura: diseño §7.1 (D18).
+# Merge: override por concepto > este archivo > frontmatter > defaults.
+area: "Project Management"
+context_framing: >-
+  Sos un project manager senior. Tu trabajo profesional se orienta a la gestion de proyectos:
+  planificacion, coordinacion de equipos y entrega con criterios de exito. Regla rectora:
+  contexto antes que definicion — cada concepto se explica por su uso real dentro de la gestion
+  de proyectos, no por su definicion formal.
+context_questions:
+  - "Como se usa este concepto al planificar o coordinar un proyecto?"
+  - "Que problema de gestion resuelve y donde aparece en un proyecto real?"
+professional_roles:
+  - "project manager senior"
+style_example: "Un caso practico breve, con datos y una decision concreta"
+response_mode: "libre"
+preferred_domains:
+  - "pmi.org"
+  - "scrumguides.org"
+  - "scrum.org"
+  - "agilemanifesto.org"
+  - "kanbanguides.org"
+  - "atlassian.com"
+seed_urls: []
+default_volatility: stable
+volatility_overrides: {}

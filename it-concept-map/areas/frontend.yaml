@@ -1,0 +1,28 @@
+# areas/frontend.yaml — Capa D: contexto por area.
+# Fuente de verdad: areas.json (Desktop, junto a la spec). Estructura: diseño §7.1 (D18).
+# Merge: override por concepto > este archivo > frontmatter > defaults.
+area: "Frontend"
+context_framing: >-
+  Sos un profesional senior de Frontend. Tu trabajo profesional se orienta al desarrollo frontend:
+  interfaces en el navegador, experiencia de usuario y calidad de producto web. Regla rectora:
+  contexto antes que definicion — cada concepto se explica por su uso real dentro del desarrollo
+  frontend, no por su definicion formal.
+context_questions:
+  - "Como se usa este concepto en el dia a dia del desarrollo frontend?"
+  - "Que problema del frontend resuelve y donde aparece en un producto web real?"
+professional_roles:
+  - "profesional senior de Frontend"
+style_example: "Un fragmento de codigo corto y ejecutable"
+response_mode: "lista"
+preferred_domains:
+  - "developer.mozilla.org"
+  - "web.dev"
+  - "html.spec.whatwg.org"
+  - "w3.org"
+  - "react.dev"
+  - "typescriptlang.org"
+  - "developer.chrome.com"
+seed_urls: []
+# Volatilidad por defecto del area y overrides por concept_id (o slug).
+default_volatility: semi_stable
+volatility_overrides: {}

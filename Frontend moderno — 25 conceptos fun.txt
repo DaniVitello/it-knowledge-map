@@ -1,0 +1,27 @@
+Frontend moderno — 25 conceptos fundamentales
+#	Concepto	Qué abarca
+1	Internet & Web	HTTP, HTTPS, URLs, request/response, cliente-servidor
+2	HTML	Estructura, elementos, atributos, semántica
+3	CSS	Cascade, especificidad, box model, estilos
+4	Layout	Flexbox, Grid, posicionamiento, responsive
+5	DOM	Árbol de documentos, nodos, manipulación
+6	JavaScript	Sintaxis, tipos, funciones, objetos, arrays
+7	JavaScript avanzado	Scope, closures, prototypes, modules, this
+8	Eventos	Event listeners, bubbling, capturing, delegation
+9	Asincronía	Callbacks, Promises, async/await, event loop
+10	Web APIs	Fetch, Storage, History, URL, Web APIs del navegador
+11	JSON & APIs	Consumo, serialización, errores, contratos
+12	TypeScript	Tipado, interfaces, generics, narrowing
+13	Componentización	Componentes, composición, reutilización
+14	Frameworks UI	React, Vue, Angular, Svelte, etc.
+15	Estado	Local, global, derivado, server state
+16	Routing	SPA, rutas, parámetros, navegación, guards
+17	Formularios	Validación, errores, controlled state
+18	Data fetching	Cache, mutations, loading/error states, sincronización
+19	Autenticación en Frontend	Sesiones, tokens, cookies, permisos
+20	Accesibilidad	Semantic HTML, ARIA, keyboard navigation
+21	Tooling	Node, npm/pnpm, Vite, bundlers, ESLint
+22	Testing	Unit, integration, component, E2E
+23	Performance	Rendering, bundles, lazy loading, caching, Web Vitals
+24	Rendering moderno	CSR, SSR, SSG, hydration, streaming
+25	Arquitectura Frontend	Design systems, módulos, patrones, escalabilidad

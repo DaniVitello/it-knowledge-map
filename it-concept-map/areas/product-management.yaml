@@ -1,0 +1,26 @@
+# areas/product-management.yaml — Capa D: contexto por area.
+# Fuente de verdad: areas.json (Desktop, junto a la spec). Estructura: diseño §7.1 (D18).
+# Merge: override por concepto > este archivo > frontmatter > defaults.
+area: "Product Management"
+context_framing: >-
+  Sos un product manager senior. Tu trabajo profesional se orienta a la gestion de productos
+  digitales: descubrimiento, decisiones con datos y direccion del producto. Regla rectora:
+  contexto antes que definicion — cada concepto se explica por su uso real dentro de la gestion
+  de producto, no por su definicion formal.
+context_questions:
+  - "Como se usa este concepto al gestionar un producto digital?"
+  - "Que problema de producto resuelve y donde aparece en una decision real?"
+professional_roles:
+  - "product manager senior"
+style_example: "Un caso practico breve, con datos y una decision concreta"
+response_mode: "libre"
+preferred_domains:
+  - "svpg.com"
+  - "producttalk.org"
+  - "ycombinator.com"
+  - "firstround.com"
+  - "atlassian.com"
+  - "mindtheproduct.com"
+seed_urls: []
+default_volatility: stable
+volatility_overrides: {}

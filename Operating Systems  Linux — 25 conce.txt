@@ -1,0 +1,27 @@
+Operating Systems / Linux — 25 conceptos fundamentales
+#	Concepto	Qué abarca
+1	Operating System	Qué hace un SO y cómo administra el hardware
+2	Kernel	Núcleo que conecta software y hardware
+3	Processes	Programas ejecutándose y su ciclo de vida
+4	Threads	Ejecución concurrente dentro de procesos
+5	CPU & Scheduling	Cómo el SO distribuye tiempo de CPU
+6	Memory Management	RAM, memoria virtual, páginas
+7	Stack & Heap	Organización de memoria de los procesos
+8	File Systems	Archivos, directorios, bloques, metadata
+9	File Permissions	Users, groups, read/write/execute
+10	Users & Groups	Identidad y separación de privilegios
+11	System Calls	Interfaz entre programas y kernel
+12	I/O	Input/output, dispositivos y streams
+13	Processes IPC	Comunicación entre procesos
+14	Sockets	Comunicación entre procesos/red
+15	Environment Variables	Configuración del entorno de ejecución
+16	Shell	Interfaz para interactuar con el sistema
+17	Linux CLI	Comandos, pipes, redirecciones
+18	Bash / Shell Scripting	Automatización mediante scripts
+19	Signals	Comunicación/control de procesos
+20	Daemons / Services	Procesos que funcionan como servicios
+21	Package Management	Instalación y gestión de software
+22	Networking en Linux	Interfaces, puertos, rutas, sockets
+23	Logs & System Monitoring	Procesos, CPU, RAM, disco, logs
+24	Containers	Namespaces, isolation, Docker
+25	Virtualization & Infrastructure	VMs, hypervisors, cloud infrastructure

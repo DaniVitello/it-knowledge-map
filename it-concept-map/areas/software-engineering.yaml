@@ -1,0 +1,27 @@
+# areas/software-engineering.yaml — Capa D: contexto por area.
+# Fuente de verdad: areas.json (Desktop, junto a la spec). Estructura: diseño §7.1 (D18).
+# Merge: override por concepto > este archivo > frontmatter > defaults.
+area: "Software Engineering"
+context_framing: >-
+  Sos un ingeniero de software senior. Tu trabajo profesional se orienta a la ingenieria de
+  software: disenar, construir y mantener sistemas con criterios de calidad de ingenieria.
+  Regla rectora: contexto antes que definicion — cada concepto se explica por su uso real
+  dentro de la ingenieria de software, no por su definicion formal.
+context_questions:
+  - "Como se aplica este concepto en el trabajo diario de un ingeniero de software?"
+  - "Que problema de ingenieria resuelve y cuando puedo ignorarlo?"
+professional_roles:
+  - "ingeniero de software senior"
+style_example: "Un fragmento de codigo corto y ejecutable"
+response_mode: "lista"
+preferred_domains:
+  - "martinfowler.com"
+  - "sre.google"
+  - "abseil.io"
+  - "git-scm.com"
+  - "12factor.net"
+  - "ocw.mit.edu"
+  - "learn.microsoft.com"
+seed_urls: []
+default_volatility: stable
+volatility_overrides: {}

@@ -1,0 +1,27 @@
+Database / Data Analytics — 25 conceptos fundamentales
+#	Concepto	Qué abarca
+1	Data Fundamentals	Datos, registros, atributos, entidades, relaciones
+2	Data Modeling	Modelar entidades, relaciones y estructuras
+3	Relational Databases	Tablas, filas, columnas, relaciones
+4	SQL	SELECT, INSERT, UPDATE, DELETE, queries
+5	Filtering & Aggregation	WHERE, GROUP BY, HAVING, funciones agregadas
+6	JOINs	INNER, LEFT, RIGHT, relaciones entre tablas
+7	Keys & Constraints	Primary keys, foreign keys, unique, constraints
+8	Normalization	Reducción de redundancia y anomalías
+9	Indexes	Búsqueda eficiente, B-trees, índices compuestos
+10	Transactions	Commit, rollback, atomicidad
+11	ACID & Isolation	Consistencia, concurrencia, niveles de aislamiento
+12	Database Architecture	Storage engine, query engine, connections
+13	NoSQL	Document, key-value, wide-column, graph databases
+14	Data Warehouses	Sistemas optimizados para análisis
+15	OLTP vs OLAP	Operaciones transaccionales vs analíticas
+16	ETL / ELT	Extract, Transform, Load
+17	Data Pipelines	Ingesta, transformación y movimiento de datos
+18	Data Quality	Missing data, duplicados, inconsistencias, validación
+19	Data Cleaning	Normalización, transformación, deduplicación
+20	Data Analysis	Exploración, patrones, tendencias, correlaciones
+21	Statistics	Media, mediana, distribución, varianza, probabilidad
+22	Analytics Metrics	KPIs, métricas, dimensiones, ratios
+23	Data Visualization	Charts, dashboards, visual encoding
+24	BI & Reporting	Dashboards, reports, self-service analytics
+25	Advanced Data Architecture	Lakehouse, streaming, distributed systems, governance

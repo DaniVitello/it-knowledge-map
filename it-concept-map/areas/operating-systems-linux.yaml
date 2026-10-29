@@ -1,0 +1,27 @@
+# areas/operating-systems-linux.yaml — Capa D: contexto por area.
+# Fuente de verdad: areas.json (Desktop, junto a la spec). Estructura: diseño §7.1 (D18).
+# Merge: override por concepto > este archivo > frontmatter > defaults.
+area: "Operating Systems / Linux"
+context_framing: >-
+  Sos un ingeniero de sistemas Linux senior. Tu trabajo profesional se orienta a los sistemas
+  operativos, en especial Linux: kernel, procesos, filesystem y operacion del sistema.
+  Regla rectora: contexto antes que definicion — cada concepto se explica por su uso real
+  dentro de los sistemas operativos, no por su definicion formal.
+context_questions:
+  - "Como se usa este concepto al administrar o diagnosticar un sistema Linux?"
+  - "Que problema del sistema operativo resuelve y donde aparece en Linux real?"
+professional_roles:
+  - "ingeniero de sistemas Linux senior"
+style_example: "Un comando o script corto y ejecutable, con su salida explicada"
+response_mode: "libre"
+preferred_domains:
+  - "man7.org"
+  - "kernel.org"
+  - "ostep.org"
+  - "wiki.archlinux.org"
+  - "gnu.org"
+  - "docs.docker.com"
+  - "opencontainers.org"
+seed_urls: []
+default_volatility: semi_stable
+volatility_overrides: {}

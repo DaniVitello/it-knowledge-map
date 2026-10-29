@@ -1,0 +1,27 @@
+Networking / Internet — 25 conceptos base
+#	Concepto	Qué entendés
+1	Internet	Red de redes y modelo cliente-servidor
+2	IP	Direccionamiento de dispositivos
+3	IPv4 / IPv6	Versiones del protocolo IP
+4	TCP	Comunicación confiable orientada a conexión
+5	UDP	Comunicación rápida sin conexión
+6	Puertos	Cómo los servicios reciben conexiones
+7	DNS	Traducción de dominios → IP
+8	DHCP	Asignación automática de configuración de red
+9	MAC / Ethernet	Comunicación dentro de una red local
+10	ARP	Resolución IP → MAC en IPv4
+11	Routing	Cómo los paquetes encuentran su destino
+12	Routers	Dispositivos que interconectan redes
+13	NAT	Traducción entre direcciones privadas y públicas
+14	Subnetting / CIDR	División y representación de redes
+15	OSI / TCP-IP Model	Capas y responsabilidades de networking
+16	HTTP	Protocolo fundamental de la Web
+17	HTTPS / TLS	Comunicación HTTP cifrada
+18	Request / Response	Modelo de comunicación web
+19	HTTP Methods	GET, POST, PUT, PATCH, DELETE
+20	HTTP Status Codes	2xx, 3xx, 4xx, 5xx
+21	Headers / Cookies	Metadata y estado de comunicación
+22	WebSockets	Comunicación bidireccional persistente
+23	Proxies / Reverse Proxies	Intermediarios entre clientes y servidores
+24	Firewalls	Control de tráfico de red
+25	CDN / Load Balancing	Distribución y escalamiento del tráfico

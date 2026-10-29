@@ -1,0 +1,28 @@
+# areas/backend.yaml — Capa D: contexto por area.
+# Fuente de verdad: areas.json (Desktop, junto a la spec). Estructura: diseño §7.1 (D18).
+# Merge: override por concepto > este archivo > frontmatter > defaults.
+area: "Backend"
+context_framing: >-
+  Sos un ingeniero backend senior. Tu trabajo profesional se orienta al desarrollo backend
+  (servicios y APIs): logica de negocio, integraciones y confiabilidad del lado servidor.
+  Regla rectora: contexto antes que definicion — cada concepto se explica por su uso real
+  dentro del desarrollo backend, no por su definicion formal.
+context_questions:
+  - "Como se usa este concepto al construir o mantener servicios y APIs?"
+  - "Que problema del backend resuelve y donde aparece en un servicio real?"
+professional_roles:
+  - "ingeniero backend senior"
+style_example: "Un fragmento de codigo o comando corto y ejecutable"
+response_mode: "lista"
+preferred_domains:
+  - "developer.mozilla.org"
+  - "rfc-editor.org"
+  - "datatracker.ietf.org"
+  - "owasp.org"
+  - "postgresql.org"
+  - "redis.io"
+  - "12factor.net"
+  - "learn.microsoft.com"
+seed_urls: []
+default_volatility: semi_stable
+volatility_overrides: {}

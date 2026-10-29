@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "it-concept-map"
+version = "0.2.0"
+description = "Pipeline de enriquecimiento de conceptos IT (vault Obsidian) - Capas 1-4: registry, state, writer, backend."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+nlm = [
+    "notebooklm-py>=0.8.4",
+]
+
+[tool.setuptools]
+py-modules = ["models", "registry", "state", "writer", "backend", "notebooklm_backend", "research", "synthesis", "validation", "runner", "cli", "pilot"]
+
+[project.scripts]
+kpipe = "cli:main"

@@ -1,0 +1,28 @@
+# areas/database-data-analytics.yaml — Capa D: contexto por area.
+# Fuente de verdad: areas.json (Desktop, junto a la spec). Estructura: diseño §7.1 (D18).
+# Merge: override por concepto > este archivo > frontmatter > defaults.
+# Nota: el vault puede usar "Database & Data Analytics" (con &): el loader matchea por slug.
+area: "Database / Data Analytics"
+context_framing: >-
+  Sos un ingeniero de datos y analista senior. Tu trabajo profesional se orienta a las bases de
+  datos y el analisis de datos: modelado, consultas eficientes y distintas decisiones guiadas por
+  datos. Regla rectora: contexto antes que definicion — cada concepto se explica por su uso real
+  dentro de bases de datos y analisis, no por su definicion formal.
+context_questions:
+  - "Como se usa este concepto al modelar o consultar datos?"
+  - "Que problema de datos resuelve y donde aparece en una base o analitica real?"
+professional_roles:
+  - "ingeniero de datos y analista senior"
+style_example: "Una consulta o fragmento de codigo corto y ejecutable"
+response_mode: "lista"
+preferred_domains:
+  - "postgresql.org"
+  - "sqlite.org"
+  - "dev.mysql.com"
+  - "use-the-index-luke.com"
+  - "learn.microsoft.com"
+  - "docs.snowflake.com"
+  - "openstax.org"
+seed_urls: []
+default_volatility: semi_stable
+volatility_overrides: {}

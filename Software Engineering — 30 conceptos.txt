@@ -1,0 +1,32 @@
+Software Engineering — 30 conceptos
+#	Concepto	Qué abarca
+1	Programming Fundamentals	Variables, funciones, tipos, control flow, abstracción
+2	Data Structures	Arrays, lists, trees, hash tables, graphs
+3	Algorithms	Searching, sorting, recursion, complexity
+4	Complexity Analysis	Big O, time/space complexity, trade-offs
+5	Object-Oriented Programming	Encapsulation, inheritance, polymorphism, composition
+6	Functional Programming	Immutability, pure functions, higher-order functions
+7	Abstraction	Interfaces, contracts, separation of concerns
+8	Modularity	Modules, dependencies, boundaries
+9	API Design	Interfaces entre componentes y sistemas
+10	Error Handling	Exceptions, error types, recovery, failure modes
+11	Concurrency	Threads, async, locks, race conditions
+12	Git / Version Control	Commits, branches, merge, rebase, history
+13	Code Quality	Readability, maintainability, consistency
+14	Clean Code	Naming, functions, cohesion, coupling
+15	Design Patterns	Patrones recurrentes de diseño
+16	SOLID & Design Principles	Principios de diseño y dependencias
+17	Testing	Unit, integration, E2E, test strategy
+18	Debugging	Reproducción, diagnosis, profiling, root cause
+19	Code Review	Feedback, correctness, maintainability
+20	Refactoring	Mejorar estructura sin cambiar comportamiento
+21	Documentation	Code docs, READMEs, ADRs, technical docs
+22	Architecture	Layers, modules, services, boundaries
+23	Design Trade-offs	Performance, simplicity, cost, scalability
+24	Security Engineering	Threats, vulnerabilities, secure development
+25	CI/CD	Build, test, deploy automation
+26	Observability	Logs, metrics, traces, monitoring
+27	Reliability	Fault tolerance, availability, recovery
+28	Distributed Systems	Services, replication, consistency, messaging
+29	Technical Leadership	Decisions, standards, technical direction
+30	Engineering Processes	Planning, estimation, delivery, incident management

@@ -1,0 +1,30 @@
+Project Management — 25 conceptos
+
+Acá el centro cambia. Ya no es principalmente qué producto construir, sino cómo coordinar el trabajo para producirlo.
+
+#	Concepto	Qué abarca
+1	Project Fundamentals	Proyecto, objetivos, alcance, restricciones
+2	Scope	Qué está y qué no está dentro del proyecto
+3	Requirements	Qué debe entregarse
+4	Deliverables	Resultados concretos del proyecto
+5	Work Breakdown Structure	Dividir trabajo complejo en partes
+6	Task Management	Tareas, estados, responsables
+7	Dependencies	Relaciones entre tareas y equipos
+8	Estimation	Tiempo, esfuerzo, complejidad
+9	Planning	Secuencia y organización del trabajo
+10	Scheduling	Fechas, milestones, deadlines
+11	Prioritization	Orden de ejecución
+12	Resource Management	Personas, tiempo, presupuesto, infraestructura
+13	Risk Management	Identificación y mitigación de riesgos
+14	Issue Management	Problemas que ya ocurrieron
+15	Change Management	Control de cambios de alcance/requisitos
+16	Agile	Iteración, adaptación, feedback
+17	Scrum	Sprints, backlog, ceremonies, roles
+18	Kanban	Flow, WIP, cycle time
+19	Milestones & Releases	Puntos importantes y entregas
+20	Status & Reporting	Estado, progreso, bloqueos
+21	Stakeholder Management	Comunicación y alineamiento
+22	Team Coordination	Dependencias y colaboración
+23	Budget & Cost	Recursos financieros y trade-offs
+24	Project Metrics	Velocity, cycle time, throughput, predictability
+25	Retrospectives & Improvement	Aprender y mejorar el proceso

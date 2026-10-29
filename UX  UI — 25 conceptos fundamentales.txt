@@ -1,0 +1,30 @@
+UX / UI — 25 conceptos fundamentales
+
+Acá conviene entender que UX y UI se superponen, pero no son lo mismo. UX trata principalmente de cómo funciona y se experimenta un producto; UI trata de cómo esa experiencia se materializa visualmente e interactivamente.
+
+#	Concepto	Qué abarca
+1	Human-Centered Design	Diseñar alrededor de necesidades, capacidades y contexto humano
+2	User Research	Entrevistas, observación, encuestas, investigación cualitativa/cuantitativa
+3	User Needs & Problems	Necesidades, pain points, objetivos, motivaciones
+4	Personas & User Models	Segmentación, arquetipos, modelos mentales
+5	User Journeys	Journey maps, escenarios, puntos de contacto
+6	Information Architecture	Organización y jerarquía de información
+7	Navigation	Menús, jerarquías, breadcrumbs, navegación global/local
+8	Interaction Design	Cómo el usuario interactúa con el producto
+9	User Flows	Caminos necesarios para completar tareas
+10	Wireframing	Estructura antes del diseño visual
+11	Prototyping	Prototipos low/high fidelity, interacción
+12	Visual Hierarchy	Tamaño, contraste, posición, agrupación, énfasis
+13	Typography	Tipografía, escala, legibilidad, jerarquía
+14	Color	Paletas, contraste, significado, estados
+15	Spacing & Layout	Grid, spacing systems, composición
+16	Design Systems	Tokens, componentes, patrones y reglas
+17	UI Components	Buttons, inputs, modals, cards, tables, etc.
+18	States & Feedback	Loading, empty, success, error, disabled, hover
+19	Responsive Design	Adaptación a desktop, tablet, mobile
+20	Accessibility	WCAG, teclado, contraste, screen readers
+21	Usability	Facilidad, eficiencia, errores, learnability
+22	Usability Testing	Tests con usuarios, tareas, observación, hallazgos
+23	UX Metrics	Completion rate, time-on-task, retention, conversion
+24	Behavior & Psychology	Atención, percepción, memoria, carga cognitiva
+25	Product Design	Integración de UX, UI, negocio, tecnología y producto

@@ -1,0 +1,29 @@
+# areas/ai-engineering.yaml — Capa D: contexto por area.
+# Fuente de verdad: areas.json (Desktop, junto a la spec). Estructura: diseño §7.1 (D18).
+# Merge: override por concepto > este archivo > frontmatter > defaults.
+area: "AI Engineering"
+context_framing: >-
+  Sos un AI engineer senior. Tu trabajo profesional se orienta a la construccion de productos y
+  sistemas con modelos de IA: integracion de modelos, prompts, evaluacion y fiabilidad del
+  producto. Regla rectora: contexto antes que definicion — cada concepto se explica por su uso
+  real dentro de la ingenieria de IA, no por su definicion formal.
+context_questions:
+  - "Como se usa este concepto al construir productos con modelos de IA?"
+  - "Que problema del producto de IA resuelve y donde aparece en un sistema real?"
+professional_roles:
+  - "AI engineer senior"
+style_example: "Un fragmento de codigo corto y ejecutable"
+response_mode: "lista"
+preferred_domains:
+  - "arxiv.org"
+  - "huggingface.co"
+  - "pytorch.org"
+  - "d2l.ai"
+  - "platform.openai.com"
+  - "docs.claude.com"
+  - "ai.google.dev"
+  - "deeplearning.ai"
+seed_urls: []
+# El area de IA es la mas volatile del mapa: practica moderna que cambia rapido.
+default_volatility: dynamic
+volatility_overrides: {}

@@ -1,0 +1,30 @@
+AI Engineering — 25 conceptos fundamentales
+
+Acá haría una distinción importante respecto de Machine Learning Engineering. AI Engineering moderna suele estar muy enfocada en construir productos y sistemas alrededor de modelos existentes, especialmente LLMs, aunque también incluye fundamentos de ML y modelos propios cuando son necesarios.
+
+#	Concepto	Qué abarca
+1	AI / ML Fundamentals	Modelos, entrenamiento, inferencia, datos
+2	Python & Programming	Python, estructuras, APIs, async, tooling
+3	Linear Algebra & Probability	Vectores, matrices, distribuciones, probabilidad
+4	Machine Learning Fundamentals	Features, labels, training, validation, generalization
+5	Neural Networks	Layers, activations, backpropagation, optimization
+6	Transformers	Attention, tokens, embeddings, architecture
+7	LLMs	Pretraining, inference, context windows, capabilities
+8	Tokenization	Tokens, token budgets, context
+9	Embeddings	Representaciones vectoriales y semantic similarity
+10	Prompt Engineering	Instructions, context, few-shot, structured prompts
+11	Structured Outputs	JSON schemas, constrained generation, typed outputs
+12	LLM APIs & Model Serving	APIs, SDKs, inference, streaming
+13	Tool Calling	Models que utilizan funciones, APIs y herramientas
+14	RAG	Retrieval-Augmented Generation
+15	Vector Databases	Indexación, similarity search, retrieval
+16	Agents	Planning, tools, loops, state, autonomous workflows
+17	AI Workflows	Pipelines, orchestration, routing, parallelization
+18	Context Engineering	Qué información recibe el modelo y cuándo
+19	Memory	Conversation state, long-term memory, retrieval
+20	Evaluation	Accuracy, relevance, groundedness, task-specific evals
+21	AI Safety & Security	Prompt injection, data leakage, abuse, permissions
+22	Observability	Traces, latency, token usage, failures, monitoring
+23	AI Infrastructure	GPUs, inference servers, queues, caching, scaling
+24	Fine-tuning & Adaptation	Fine-tuning, LoRA, distillation, model adaptation
+25	AI System Architecture	Diseño completo de sistemas AI en producción

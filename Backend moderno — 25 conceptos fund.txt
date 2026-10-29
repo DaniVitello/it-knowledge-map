@@ -1,0 +1,30 @@
+Backend moderno — 25 conceptos fundamentales
+
+Acá cambia bastante la naturaleza del problema. El Frontend está principalmente preocupado por interfaz, interacción y experiencia; el Backend está mucho más relacionado con datos, lógica, seguridad, concurrencia y sistemas distribuidos.
+
+#	Concepto	Qué abarca
+1	Cliente-Servidor	Request/response, responsabilidades, comunicación
+2	HTTP	Métodos, headers, status codes, cookies
+3	Servidor	Procesos, puertos, conexiones, lifecycle
+4	Lenguaje Backend	Java, Go, Python, C#, JavaScript/TypeScript, etc.
+5	Runtime	JVM, Node.js, .NET, Python runtime, etc.
+6	Routing	Endpoints, parámetros, middleware
+7	APIs	REST, RPC, GraphQL, contratos
+8	Middleware	Pipeline, logging, auth, validación, errores
+9	Validación	Input validation, schemas, sanitización
+10	Arquitectura de aplicaciones	Capas, módulos, services, repositories
+11	Bases de datos	Persistencia, tablas, documentos, relaciones
+12	SQL	SELECT, JOIN, índices, transacciones
+13	Modelado de datos	Relaciones, normalización, constraints
+14	ORM / Data Access	Prisma, Hibernate, SQLAlchemy, EF, etc.
+15	Transacciones	ACID, isolation, locks, consistency
+16	Autenticación	Sessions, cookies, JWT, OAuth
+17	Autorización	Roles, permissions, RBAC, ABAC
+18	Seguridad	CORS, CSRF, XSS, injection, secrets
+19	Caching	Redis, HTTP cache, invalidación
+20	Asincronía & Concurrencia	Threads, async, queues, workers
+21	Mensajería	Queues, events, brokers, pub/sub
+22	Observabilidad	Logs, metrics, traces, monitoring
+23	Testing Backend	Unit, integration, API, E2E
+24	Deploy & Infraestructura	Linux, Docker, CI/CD, cloud
+25	Sistemas distribuidos	Load balancing, scaling, replication, consistency

@@ -1,0 +1,27 @@
+# areas/ux-ui.yaml — Capa D: contexto por area.
+# Fuente de verdad: areas.json (Desktop, junto a la spec). Estructura: diseño §7.1 (D18).
+# Merge: override por concepto > este archivo > frontmatter > defaults.
+area: "UX / UI"
+context_framing: >-
+  Sos un disenador de producto senior (UX/UI). Tu trabajo profesional se orienta al diseno UX/UI
+  centrado en las personas: investigacion, decisiones de diseno y calidad de la interfaz.
+  Regla rectora: contexto antes que definicion — cada concepto se explica por su uso real dentro
+  del diseno de producto, no por su definicion formal.
+context_questions:
+  - "Como se usa este concepto al disenar o evaluar una interfaz?"
+  - "Que problema de diseno resuelve y donde aparece en un producto real?"
+professional_roles:
+  - "disenador de producto senior (UX/UI)"
+style_example: "Un caso practico breve, con una decision de diseno concreta"
+response_mode: "libre"
+preferred_domains:
+  - "nngroup.com"
+  - "w3.org"
+  - "m3.material.io"
+  - "developer.apple.com"
+  - "lawsofux.com"
+  - "baymard.com"
+  - "interaction-design.org"
+seed_urls: []
+default_volatility: semi_stable
+volatility_overrides: {}

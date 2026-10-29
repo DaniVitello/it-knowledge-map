@@ -1,0 +1,27 @@
+Product Management — 25 conceptos
+#	Concepto	Qué abarca
+1	Product Thinking	Pensar en problemas, usuarios, valor y resultados
+2	Problem Discovery	Identificar problemas reales
+3	User Research	Necesidades, comportamiento, entrevistas, investigación
+4	Market Research	Mercado, competidores, alternativas
+5	User Personas	Segmentación y perfiles de usuarios
+6	Value Proposition	Qué valor ofrece el producto y para quién
+7	Product Vision	Dirección futura del producto
+8	Product Strategy	Cómo llegar desde la situación actual hacia la visión
+9	Goals & Outcomes	Objetivos y resultados esperados
+10	Product Roadmap	Dirección y evolución prevista
+11	Prioritization	Decidir qué hacer y qué no hacer
+12	Requirements	Necesidades funcionales y no funcionales
+13	User Stories	Necesidades expresadas desde el usuario
+14	Product Discovery	Explorar soluciones antes de construir
+15	MVP	Producto mínimo para validar una hipótesis
+16	Experimentation	Experimentos, hipótesis, A/B testing
+17	Product Metrics	Métricas para evaluar el producto
+18	Funnels	Acquisition → activation → conversion → retention
+19	Retention	Uso recurrente y comportamiento a lo largo del tiempo
+20	Product Analytics	Análisis del comportamiento dentro del producto
+21	Product-Market Fit	Relación entre problema, producto y mercado
+22	Product Lifecycle	Discovery → launch → growth → maturity
+23	Stakeholder Management	Usuarios, negocio, ingeniería, diseño, dirección
+24	Go-to-Market	Lanzamiento, distribución, pricing, adopción
+25	Product Strategy at Scale	Portfolio, plataformas, crecimiento y decisiones de largo plazo

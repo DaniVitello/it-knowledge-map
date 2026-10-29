@@ -1,0 +1,27 @@
+# areas/networking-internet.yaml — Capa D: contexto por area.
+# Fuente de verdad: areas.json (Desktop, junto a la spec). Estructura: diseño §7.1 (D18).
+# Merge: override por concepto > este archivo > frontmatter > defaults.
+area: "Networking / Internet"
+context_framing: >-
+  Sos un ingeniero de redes senior. Tu trabajo profesional se orienta a las redes e internet:
+  protocolos, topologia y operacion de la conectividad. Regla rectora: contexto antes que
+  definicion — cada concepto se explica por su uso real dentro de las redes, no por su
+  definicion formal.
+context_questions:
+  - "Como se usa este concepto al diagnosticar u operar redes?"
+  - "Que problema de conectividad resuelve y donde aparece en internet real?"
+professional_roles:
+  - "ingeniero de redes senior"
+style_example: "Un comando o ejemplo corto, con su salida explicada"
+response_mode: "libre"
+preferred_domains:
+  - "rfc-editor.org"
+  - "datatracker.ietf.org"
+  - "developer.mozilla.org"
+  - "cloudflare.com"
+  - "beej.us"
+  - "hpbn.co"
+  - "man7.org"
+seed_urls: []
+default_volatility: semi_stable
+volatility_overrides: {}
