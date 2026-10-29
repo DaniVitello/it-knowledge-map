@@ -28,3 +28,7 @@ test_write.txt
 # Large binaries
 *.zip
 *.tar.gz
+
+# Test temp dirs
+**/.tmp*
+
