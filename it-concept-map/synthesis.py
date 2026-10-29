@@ -106,7 +106,7 @@ def build_prompt(concept: ConceptMeta, raw: dict, sources: dict,
 CONCEPTO: {title}
 AREA: {area}
 IDEAS PRINCIPALES (definidas por el autor): {key_ideas}
-CONCEPTOS CONECTADOS (unicos que podes enlazar con [[...]]): {connections}
+CONCEPTOS CONECTADOS: {connections}
 ESTABILIDAD: {volatility}
 
 REGLAS INNEGOCIABLES
@@ -115,7 +115,7 @@ REGLAS INNEGOCIABLES
 3. Contexto antes que definicion: explica que significa y para que sirve DENTRO del area {area}.
 4. Principio 20/80: primero las 3 a 5 ideas que dan el modelo mental.
 5. Nada de historia innecesaria, listas interminables, definiciones circulares ni copiar documentacion.
-6. Enlaza conceptos solo con [[Nombre]] y solo de la lista de conceptos conectados. Explica la naturaleza de la relacion.
+6. Menciona conceptos conectados por nombre (sin usar [[...]]). Explica la naturaleza de la relacion.
 7. Espanol claro y directo; terminos tecnicos en ingles cuando son el estandar.
 8. Respondé SOLO con las secciones pedidas, cada una con su encabezado de nivel 2 EXACTO (## Nombre). Sin introduccion ni cierre.
 
@@ -136,7 +136,7 @@ GUA POR SECCION
 - Ejemplo minimo: el ejemplo mas chico que muestre el concepto funcionando. Si no hay ejemplo respaldado por las fuentes, escribilo igual de simple y marca "?? verificar".
 - Errores comunes: los errores y malentendidos reales, con una linea sobre como evitarlos.
 - Estado actual: separa fundamentos estables de practica moderna. Cada afirmacion sensible al tiempo debe salir de una fuente. Lo que no puedas respaldar escribilo como "sin verificar" o "?? verificar".
-- Conexiones: lista de enlaces [[Concepto]] (solo los conectados) y, para cada uno, una frase que explique la naturaleza de la relacion.
+- Conexiones: lista de conceptos conectados por nombre (sin [[...]]) y, para cada uno, una frase que explique la naturaleza de la relacion.
 - Ruta de estudio: que conviene saber antes (prerrequisitos) y como avanzar despues, de fundamentos a avanzado.
 - Preguntas de repaso: al menos 5 preguntas, mezclando comprension y aplicacion. Cada pregunta termina con "?".
 """

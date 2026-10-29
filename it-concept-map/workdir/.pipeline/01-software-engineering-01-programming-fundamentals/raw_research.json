@@ -1,0 +1,50 @@
+{
+  "concept_id": "01-software-engineering-01-programming-fundamentals",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No hay fuentes en tu libreta sobre los **fundamentos de programación** (variables, funciones, tipos, flujo de control y abstracción).\n\n¿Quieres que haga una **investigación en la web** sobre este tema para responder a tu pregunta?",
+      "claims": [
+        {
+          "text": "No hay fuentes en tu libreta sobre los **fundamentos de programación** (variables, funciones, tipos, flujo de control y abstracción).",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Aún no tienes fuentes cargadas en tu libreta **Programming Fundamentals**.\n\n¿Quieres que haga una **investigación en la web** sobre cómo funcionan estos fundamentos (variables, funciones, tipos, flujo de control y abstracción) en la ingeniería de software para responder a tu pregunta y ofrecerte añadir esas fuentes a tu libreta?",
+      "claims": [
+        {
+          "text": "Aún no tienes fuentes cargadas en tu libreta **Programming Fundamentals**.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Tu libreta sigue sin tener fuentes sobre el **estado actual y las relaciones de los fundamentos de programación** (variables, funciones, tipos, flujo de control, abstracción, runtimes, backend, Python, etc.).\n\n¿Quieres que haga una **investigación en la web** sobre cómo se relacionan actualmente estos conceptos en la ingeniería de software y te presente los resultados para que decidas si añadirlos como fuentes a tu libreta?",
+      "claims": [
+        {
+          "text": "Tu libreta sigue sin tener fuentes sobre el **estado actual y las relaciones de los fundamentos de programación** (variables, funciones, tipos, flujo de control, abstracción, runtimes, backend, Python",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "fe7a4106-ed1e-4bbf-9a61-0080d3c8ff17",
+  "duration_ms": 33965,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\01-software-engineering-01-programming-fundamentals\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

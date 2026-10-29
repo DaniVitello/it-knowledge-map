@@ -1,0 +1,28 @@
+{
+  "concept_id": "01-software-engineering-01-programming-fundamentals",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\01-software-engineering-01-programming-fundamentals\\sources.json",
+    "notebook_id": "fe7a4106-ed1e-4bbf-9a61-0080d3c8ff17",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-01-programming-fundamentals\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-01-programming-fundamentals\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\01-software-engineering-01-programming-fundamentals\\01 - Programming Fundamentals.md.20261029T233308Z-b279fa.bak",
+      "outside_hash": "f9f2bd91f3d918a3f0efee962f8cd70a1f31aa5516b602c7eee0b02329207e9f",
+      "inside_hash": "45a3491397eb63c06b03b2f850a6c9b1420af77b8608f33539da734435e59ad9",
+      "written_at": "2026-10-29T23:33:08.596503+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "created_at": "2026-10-29T23:32:30.998099+00:00",
+  "updated_at": "2026-10-29T23:33:08.599105+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-29T23:33:08.599105+00:00",
+    "created_at": "2026-10-29T23:32:30.998099+00:00"
+  },
+  "schema_version": "1.0.0"
+}

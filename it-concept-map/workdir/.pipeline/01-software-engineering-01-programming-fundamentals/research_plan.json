@@ -1,0 +1,43 @@
+{
+  "questions": [],
+  "concept_id": "01-software-engineering-01-programming-fundamentals",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Programming Fundamentals y para que sirve (Variables, funciones, tipos, control flow, abstracción)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Programming Fundamentals en Software Engineering"
+    ],
+    "context": [
+      "Como se usa Programming Fundamentals en el contexto profesional de Software Engineering"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Lenguaje Backend",
+      "ask": "Como se relaciona Programming Fundamentals con Lenguaje Backend?"
+    },
+    {
+      "with": "Runtime",
+      "ask": "Como se relaciona Programming Fundamentals con Runtime?"
+    },
+    {
+      "with": "Python & Programming",
+      "ask": "Como se relaciona Programming Fundamentals con Python & Programming?"
+    }
+  ],
+  "queries": [
+    "site:martinfowler.com Programming Fundamentals",
+    "site:sre.google Programming Fundamentals",
+    "site:abseil.io Programming Fundamentals",
+    "site:git-scm.com Programming Fundamentals",
+    "site:12factor.net Programming Fundamentals",
+    "site:ocw.mit.edu Programming Fundamentals",
+    "site:learn.microsoft.com Programming Fundamentals"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

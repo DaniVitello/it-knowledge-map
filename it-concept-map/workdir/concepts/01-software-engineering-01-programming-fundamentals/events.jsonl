@@ -1,0 +1,7 @@
+{"ts": "2026-10-29T23:32:30.176604+00:00", "run_id": "run-20261029-203230-154a35", "concept_id": "01-software-engineering-01-programming-fundamentals", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-29T23:33:04.990908+00:00", "run_id": "run-20261029-203230-154a35", "concept_id": "01-software-engineering-01-programming-fundamentals", "event": "phase_done", "phase": "research"}
+{"ts": "2026-10-29T23:33:08.539257+00:00", "run_id": "run-20261029-203230-154a35", "concept_id": "01-software-engineering-01-programming-fundamentals", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-10-29T23:33:08.578236+00:00", "run_id": "run-20261029-203230-154a35", "concept_id": "01-software-engineering-01-programming-fundamentals", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-10-29T23:33:08.604138+00:00", "run_id": "run-20261029-203230-154a35", "concept_id": "01-software-engineering-01-programming-fundamentals", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-10-29T23:33:08.605079+00:00", "run_id": "run-20261029-203230-154a35", "concept_id": "01-software-engineering-01-programming-fundamentals", "event": "notebook_delete_failed", "notebook_id": "fe7a4106-ed1e-4bbf-9a61-0080d3c8ff17", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-10-29T23:33:08.617191+00:00", "run_id": "run-20261029-203230-154a35", "concept_id": "01-software-engineering-01-programming-fundamentals", "event": "run_end", "status": "completed"}
