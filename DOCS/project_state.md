@@ -1,23 +1,68 @@
-# project_state.md — Estado compartido entre sesiones de Hermes
+﻿# SESSION BOOTSTRAP (leer esto primero)
 
-> Archivo de estado del proyecto. Leerlo al inicio de cada sesión antes de tocar código.
-> Actualizar las secciones 2 y 6 cada vez que se complete una capa.
+> Si sos una sesión nueva de Hermes, leé esta sección antes de hacer cualquier cosa.
 
-- **Última actualización:** 2026-10-28
-- **Autor de la última actualización:** sesión "Mente Gemela IT" (build)
+## Conexión a laptop 1 (OpenCode server)
+- URL: http://192.168.0.107:26826
+- Usuario: opencode
+- Password: Qh4KO9x41R55B4hke5_PmEIo7T-JclWrWvpr5y8lwoI
+- Puerto puede cambiar. Verificar con: curl -s -o /dev/null -w "%{http_code}" http://192.168.0.107:26826/api/info
+- Si 401: password cambió. Si connection refused: puerto cambió (probar 4096, 26826, 3000, 8080, 8000, 9000, 5000).
+
+## Cómo operar laptop 1
+- NO usar OpenCode CLI/TUI (consume free tier, falla en MSYS).
+- Usar HTTP API directa con Basic auth (0 tokens, filesystem/shell ops).
+- Leer archivos: GET /api/fs/read/<path>
+- Escribir archivos: POST /api/experimental/fs/write?path=<path> (Content-Type: application/octet-stream)
+- Shell: POST /api/shell (PowerShell, usar ; no &&, py no python)
+- Verificar conexión: GET /api/info
+
+## Skill obligatoria
+- Cargar skill 'opencode' para guía de conexión, file handling, y troubleshooting.
+
+## Estado actual del proyecto
+- 10 capas implementadas + 12 correcciones A-L aplicadas
+- 108 tests pasando
+- 1 concepto completado (Programming Fundamentals) de 255
+- LLM: Groq gpt-oss-120b (via llm_groq.py)
+- Script de ejecución: run_pipeline.py
+- Backend: notebooklm (auth via cookies, válida hasta 2027)
+
+## Lo que NO tocar
+- synthesis.py (prompt ya modificado para no generar wikilinks)
+- llm_groq.py (adapter Groq)
+- run_pipeline.py (script de ejecución)
+- writer.py (verificación de wikilinks, correcta para MVP)
+- config.yaml (backend=notebooklm, auth_file=null)
+
+## Lo que SÍ hacer
+- Leer project_state.md para progreso actual
+- Ejecutar run_pipeline.py por área
+- Verificar con cli.py status
+- Actualizar project_state.md al cerrar cada área
 
 ---
 
-## 1. Proyecto y ubicación
+# project_state.md â€” Estado compartido entre sesiones de Hermes
 
-- **Nombre:** IT Career Concept Map — pipeline de enriquecimiento de conceptos IT
-- **Ruta raíz:** `C:\Users\DGVit\Proyectos\IT Career`
-- **Código (Python):** `C:\Users\DGVit\Proyectos\IT Career\it-concept-map`
+> Archivo de estado del proyecto. Leerlo al inicio de cada sesiÃ³n antes de tocar cÃ³digo.
+> Actualizar las secciones 2 y 6 cada vez que se complete una capa.
+
+- **Ãšltima actualizaciÃ³n:** 2026-10-28
+- **Autor de la Ãºltima actualizaciÃ³n:** sesiÃ³n "Mente Gemela IT" (build)
+
+---
+
+## 1. Proyecto y ubicaciÃ³n
+
+- **Nombre:** IT Career Concept Map â€” pipeline de enriquecimiento de conceptos IT
+- **Ruta raÃ­z:** `C:\Users\DGVit\Proyectos\IT Career`
+- **CÃ³digo (Python):** `C:\Users\DGVit\Proyectos\IT Career\it-concept-map`
 - **Vault (fuente de verdad, solo lectura):** `C:\Users\DGVit\Proyectos\IT Career\IT-Mind-Map`
 - **Python:** 3.11+ (venv en `IT Career\.venv`; `pyproject.toml` declara `pytest>=8.0` dev y `notebooklm-py` opcional)
 - **Dependencias runtime:** `pyyaml>=6.0` (dev: `pytest>=8.0`)
 - **Config principal:** `it-concept-map\config.yaml`
-- **Docs de diseño:** `explicacion del proyecto por capas v1.md`, `explicacion del proyecto por capas v1 - pseudo codigo.md`
+- **Docs de diseÃ±o:** `explicacion del proyecto por capas v1.md`, `explicacion del proyecto por capas v1 - pseudo codigo.md`
 
 ---
 
@@ -28,64 +73,64 @@
 - **Capas pendientes del plan de mejoras v1 (DOCS\plan de mejoras v1.md):** E, F, G, H, I, J, K, L
 - **Capas pendientes de implementacion original:** (ninguna)
 
-| # | Capa (implementación) | Estado |
+| # | Capa (implementaciÃ³n) | Estado |
 |---|---|---|
-| 1 | Registry + contratos de datos (`models.py`, `registry.py`) | ✅ Completada |
-| 2 | State machine + persistencia (`state.py`) | ✅ Completada |
-| 3 | Writer, escritura segura (`writer.py`) | ✅ Completada |
-| 4 | Backend (interfaz + FakeBackend + NotebookLMBackend) | ✅ Completada |
-| 5 | Investigación (`research.py`) | ✅ Completada |
-| 6 | Síntesis (`synthesis.py` + prompts) | ✅ Completada |
-| 7 | Validación (`validation.py`) | ✅ Completada |
-| 8 | Orquestador (`runner.py` + logging) | ✅ Completada |
+| 1 | Registry + contratos de datos (`models.py`, `registry.py`) | âœ… Completada |
+| 2 | State machine + persistencia (`state.py`) | âœ… Completada |
+| 3 | Writer, escritura segura (`writer.py`) | âœ… Completada |
+| 4 | Backend (interfaz + FakeBackend + NotebookLMBackend) | âœ… Completada |
+| 5 | InvestigaciÃ³n (`research.py`) | âœ… Completada |
+| 6 | SÃ­ntesis (`synthesis.py` + prompts) | âœ… Completada |
+| 7 | ValidaciÃ³n (`validation.py`) | âœ… Completada |
+| 8 | Orquestador (`runner.py` + logging) | âœ… Completada |
 | 9 | CLI (cli.py) | Completada |
 | 10 | Piloto + calibracion | Completada |
-| D | Contexto por area (`areas.py` + `areas/*.yaml`) | ✅ Completada |
+| D | Contexto por area (`areas.py` + `areas/*.yaml`) | âœ… Completada |
 
-> Nota: la numbering de implementación fusiona las capas 1 y 2 del diseño pseudo-código
-> (modelo de datos + lectura del vault) en la Capa 1 de implementación. El pseudo-código
-> numera 11 capas; acá se cuentan 10.
+> Nota: la numbering de implementaciÃ³n fusiona las capas 1 y 2 del diseÃ±o pseudo-cÃ³digo
+> (modelo de datos + lectura del vault) en la Capa 1 de implementaciÃ³n. El pseudo-cÃ³digo
+> numera 11 capas; acÃ¡ se cuentan 10.
 
 ---
 
 ## 3. Archivos clave creados hasta ahora
 
-### Código (it-concept-map\)
-- `models.py` — contratos de datos: dataclasses con `schema_version`, enums, excepciones
-- `registry.py` — descubrimiento y lectura del vault, parseo de frontmatter, `key_ideas`, `connections`, hashes, contexto por área (`areas/<area>.yaml`)
-- `state.py` — máquina de estados, transiciones válidas, persistencia JSON/SQLite, reanudación, reintentos con backoff
-- `config.yaml` — configuración base (rutas, backend, marcadores, pacing, validación)
-- `areas.py` — Capa D: cargador del contexto por área con merge de prioridad (concepto > área > frontmatter > defaults)
-- `areas\*.yaml` — Capa D: 10 contextos de área (fuente de verdad generada desde `areas.json`)
-- `pyproject.toml` — metadatos del proyecto y pytest
-- `README.md` — documentación de la capa y uso rápido
+### CÃ³digo (it-concept-map\)
+- `models.py` â€” contratos de datos: dataclasses con `schema_version`, enums, excepciones
+- `registry.py` â€” descubrimiento y lectura del vault, parseo de frontmatter, `key_ideas`, `connections`, hashes, contexto por Ã¡rea (`areas/<area>.yaml`)
+- `state.py` â€” mÃ¡quina de estados, transiciones vÃ¡lidas, persistencia JSON/SQLite, reanudaciÃ³n, reintentos con backoff
+- `config.yaml` â€” configuraciÃ³n base (rutas, backend, marcadores, pacing, validaciÃ³n)
+- `areas.py` â€” Capa D: cargador del contexto por Ã¡rea con merge de prioridad (concepto > Ã¡rea > frontmatter > defaults)
+- `areas\*.yaml` â€” Capa D: 10 contextos de Ã¡rea (fuente de verdad generada desde `areas.json`)
+- `pyproject.toml` â€” metadatos del proyecto y pytest
+- `README.md` â€” documentaciÃ³n de la capa y uso rÃ¡pido
 
-### Documentación
-- `explicacion del proyecto por capas v1.md` — orden y justificación de las capas
-- `explicacion del proyecto por capas v1 - pseudo codigo.md` — pseudo-código de alto nivel
-- `explicacion codigo - capa 1 registry y contratos.md` — detalle de la Capa 1
-- `explicacion codigo - capa 2 state y persistencia.md` — detalle de la Capa 2
-- `DOCS\learnings.md` — aprendizajes e ideas de mejora (ej. encoding en subprocess)
+### DocumentaciÃ³n
+- `explicacion del proyecto por capas v1.md` â€” orden y justificaciÃ³n de las capas
+- `explicacion del proyecto por capas v1 - pseudo codigo.md` â€” pseudo-cÃ³digo de alto nivel
+- `explicacion codigo - capa 1 registry y contratos.md` â€” detalle de la Capa 1
+- `explicacion codigo - capa 2 state y persistencia.md` â€” detalle de la Capa 2
+- `DOCS\learnings.md` â€” aprendizajes e ideas de mejora (ej. encoding en subprocess)
 
 ### Scripts auxiliares
-- `generar_vault_it.py` — generación del vault de Obsidian
-- `automate_frontend_concepts.py` — automatización de conceptos Frontend (NotebookLM)
-- `add_ai_markers.py` — marcadores `ai:start`/`ai:end` en las notas
+- `generar_vault_it.py` â€” generaciÃ³n del vault de Obsidian
+- `automate_frontend_concepts.py` â€” automatizaciÃ³n de conceptos Frontend (NotebookLM)
+- `add_ai_markers.py` â€” marcadores `ai:start`/`ai:end` en las notas
 
 ### Datos
-- `IT-Mind-Map\` — vault con ~260 notas `.md` por área (fuente de verdad)
-- `it-concept-map\workdir\` — se materializa en runtime (hoy no existe en disco)
-- `skills-lock.json` — lock de skills
+- `IT-Mind-Map\` â€” vault con ~260 notas `.md` por Ã¡rea (fuente de verdad)
+- `it-concept-map\workdir\` â€” se materializa en runtime (hoy no existe en disco)
+- `skills-lock.json` â€” lock de skills
 
 ---
 
-## 4. Conexión a OpenCode
+## 4. ConexiÃ³n a OpenCode
 
 - **Server:** `http://127.0.0.1:4096` (proceso `opencode`, PID 7620)
 - **Session ID actual:** `ses_e9b3abd69ffeC74r3u1si2P0FY` ("Probemos algo", agente `build`)
-- **Otra sesión del proyecto:** `ses_e9a05e5b8ffencCuF50jVawHwQ` ("Listing OpenCode sessions")
+- **Otra sesiÃ³n del proyecto:** `ses_e9a05e5b8ffencCuF50jVawHwQ` ("Listing OpenCode sessions")
 - **Project ID:** `2d391c104e73b92469c681b8d48e67e1964ab662`
-- **Password (ubicación):** `C:\Users\DGVit\.config\opencode\service.json` → campo `password`
+- **Password (ubicaciÃ³n):** `C:\Users\DGVit\.config\opencode\service.json` â†’ campo `password`
   (no commitear, no exponer en logs ni en commits)
 - **Modelo:** `opencode/beam-free` (variant `high`)
 - **DB:** `C:\Users\DGVit\.local\share\opencode\opencode.db`
@@ -94,39 +139,39 @@
 
 ## 5. Instrucciones para quien lee este archivo
 
-### Qué hacer
-- Leer este archivo al inicio de la sesión antes de modificar código.
-- Trabajar el código dentro de `it-concept-map\`; el vault `IT-Mind-Map\` es solo lectura.
-- Antes de implementar una capa, leer la explicación correspondiente en
-  `explicacion codigo - capa N ...md` y el pseudo-código.
+### QuÃ© hacer
+- Leer este archivo al inicio de la sesiÃ³n antes de modificar cÃ³digo.
+- Trabajar el cÃ³digo dentro de `it-concept-map\`; el vault `IT-Mind-Map\` es solo lectura.
+- Antes de implementar una capa, leer la explicaciÃ³n correspondiente en
+  `explicacion codigo - capa N ...md` y el pseudo-cÃ³digo.
 - Mantener `SCHEMA_VERSION = "1.0.0"` y los aliases de compatibilidad en `state.py`.
 - Usar el venv `.venv` y Python 3.11+.
 - Actualizar este archivo (secciones 2 y 6) al completar una capa.
 
-### Qué no tocar
+### QuÃ© no tocar
 - `IT-Mind-Map\` (vault, fuente de verdad): no editar notas a mano ni regenerarlas.
 - `.venv\`, `__pycache__\`, `workdir\`: artefactos generados, no versionar.
 - Marcadores manuales del vault (`key_ideas`, `connections`, frontmatter): son fuente de verdad.
-- `config.yaml` salvo que la capa en curso lo requiera explícitamente.
+- `config.yaml` salvo que la capa en curso lo requiera explÃ­citamente.
 - Identidad de OpenCode (project ID, session IDs, password).
 
 ---
 
 ## 6. Historial de capas completadas
 
-### Capa 1 — Registry + contratos de datos (2026-10-22)
+### Capa 1 â€” Registry + contratos de datos (2026-10-22)
 - **Archivos:** `models.py`, `registry.py`, `config.yaml`, `pyproject.toml`, `README.md`
-- **Resumen:** se definió el átomo del sistema (`ConceptMeta`) con enums (`Volatility`,
+- **Resumen:** se definiÃ³ el Ã¡tomo del sistema (`ConceptMeta`) con enums (`Volatility`,
   `ConceptStatus`, `Severity`, `PromptContext`), `SCHEMA_VERSION`, y el registry que
-  lee el vault sin escribirlo. Derivación por prioridad: override por concepto >
-  override por área > frontmatter > cuerpo > defaults. Campos manuales nunca se
+  lee el vault sin escribirlo. DerivaciÃ³n por prioridad: override por concepto >
+  override por Ã¡rea > frontmatter > cuerpo > defaults. Campos manuales nunca se
   sobrescriben. Sin acceso a disco de escritura ni red.
 
-### Capa 2 — State machine + persistencia (2026-10-22)
-- **Archivos:** `state.py` (812 líneas), `README.md` actualizado
-- **Resumen:** máquina de estados con 9 estados y transiciones válidas, estados
+### Capa 2 â€” State machine + persistencia (2026-10-22)
+- **Archivos:** `state.py` (812 lÃ­neas), `README.md` actualizado
+- **Resumen:** mÃ¡quina de estados con 9 estados y transiciones vÃ¡lidas, estados
   terminales (`completed`, `failed`, `needs_review`), persistencia JSON por concepto
-  o SQLite, reanudación desde checkpoint, reconciliación de notebooks huérfanos y
+  o SQLite, reanudaciÃ³n desde checkpoint, reconciliaciÃ³n de notebooks huÃ©rfanos y
   reintentos con backoff (`[2, 4, 8]`, `max_retries=3`). Aliases de compatibilidad
   (`StateStatus`, `PipelineStatus`, etc.). No toca el vault ni la red.
 
@@ -195,7 +240,8 @@ unner.py, 	ests/test_runner.py
 - **Resumen:** areas/<area>.yaml es la fuente de verdad del contexto por area (estrucura diseno 7.1, auditoria D18): context_framing, context_questions, professional_roles, style_example, response_mode, preferred_domains, seed_urls, default_volatility + volatility_overrides. Merge de prioridad al resolver por concepto: override por concepto > areas/<area>.yaml > frontmatter > defaults (igual criterio que el registry). slugify_area colapsa variantes de nombre ("Database / Data Analytics" vs "Database & Data Analytics"). El prompt de sintesis ya no dice "Sos un experto en {area}": inyecta rol/orientacion/framing/estilo/modo/preguntas de contexto del yaml (punto 3 y 7 de la spec: contexto antes que definicion). En registry ya no hay roles inventados "{area}-dev" para las 10 areas ni dominios divergentes. config.yaml: eliminadas las claves area_overrides, area_domains y area_roles (contradicen areas.json; la divergencia critica 1.7 queda resuelta). EXPECTED_AREAS define las 10 areas con cobertura de tests.
 - **Tests:** py_compile OK. tests/test_areas.py: 25 tests (cobertura de las 10 areas, slugify, validacion de yaml, merge de prioridad, integracion con registry, prompt de sintesis). Suite completa: 109/109 pasando (requerido instalar pytest>=8.0 y notebooklm-py en el venv .venv, que solo tenia PyYAML).
 
-### Capa C — Higiene de config, tests y arranque (2026-10-29)
+### Capa C â€” Higiene de config, tests y arranque (2026-10-29)
 - **Archivos:** `config.yaml`, `tests/test_backend.py`
 - **Resumen:** eliminado el bloque muerto `validation:` de config.yaml (las secciones canonicas viven en validation.py, REQUIRED_SECTIONS). Eliminadas las claves muertas `generate_report` y `download` de `backend.notebooklm.timeouts` (no estan en NotebookLMBackend.DEFAULT_TIMEOUTS y se ignoraban). Eliminado el test vacio `test_persist_error_razon` (sin asserts; cubierto por test_fallo_marca_failed_con_razon). Verificado `py_compile` sobre todos los modulos.
 - **Tests:** py_compile OK. pytest no instalado en el venv (verificacion por sintaxis).
+
