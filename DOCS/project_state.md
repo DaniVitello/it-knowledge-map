@@ -291,3 +291,79 @@ Verificacion ejecutada sobre el codigo en `it-concept-map/`. Tests: 108 passed, 
 
 El plan marca todas las capas A-L como completadas, pero la verificacion real muestra que H y J NO estan implementadas, y varias capas (A, B, C, E, F, G, I, K, L) estan parciales. Los tests (108) pasan pero no cubren los checks bloqueantes de H ni el retry de J.
 
+
+
+## Diagnostico Tanda 1 - Capas A, B, C, D (verificacion profunda, 2026-10-29)
+
+Tests tanda 1: 99 passed (areas, backend, cli, runner, synthesis, validation, research), 23 warnings.
+
+### Capa A - Contratos de datos
+
+Implementado:
+- models.py: ConceptMeta, Source, ResearchPlan, Synthesis, ValidationReport, WriteResult, ConceptState, Claim, ResearchQuestion, ResearchAnswer, RawResearch, CheckResult, CrossLink, ClaimRef, Volatility, Severity, PromptContext.
+- Campos del diseno presentes: Source (domain, level, is_preferred_domain, is_seed, covers, retrieved_at, published_or_updated, content_hash, kept, evaluation); ResearchPlan (questions_by_dim, relation_questions, queries, source_requirements); Synthesis (claims, unverified_items); ValidationReport (blocking_failures, verdict); WriteResult (ai_block_hash, outside_block_hash_before/after, verified); ConceptState (last_good_state, retries).
+- ConceptStatus importado de state.py (enum duplicado eliminado).
+
+Parcial / NO implementado:
+- ConceptMeta: id (no concept_id), note_path (no path), content_hash_outside (no content_hash_outside_ai). Nombres difieren del diseno; sin aliases de compatibilidad.
+- Synthesis.Claim: text, source_ids, unverified. Falta claim_id y status (diseno pide claims[{claim_id,text,sources,status}]).
+- ConceptState: state.py no tiene failure dict (models.py si lo tiene). Dos ConceptState divergentes (deriva contractual D1).
+- Validacion de esquemas al leer/escribir artefactos JSON: NO existe.
+- Aliases de compatibilidad transitorios documentados: NO existen.
+
+### Capa B - Integridad de ejecucion
+
+- B2 (ConceptMeta parcial en writer): OK. runner.py Fase 4 usa concept original + dataclasses.replace solo para note_path.
+- B3 (writing_phase si FAILED): OK. Condicion VALIDATED/WRITTEN, no FAILED.
+- B4 (st.status directo): PARCIAL. synthesis.py, validation.py, writer.py usan transition_to. runner.py asigna st.status=FAILED directo en 3 except blocks (research, synthesis, validation).
+- B5 (atomic writes): OK. research/synthesis/validation usan backend._atomic_write_json.
+
+### Capa C - Higiene
+
+- B6 (pacing): PARCIAL. runner.py usa between_concepts_s (OK). pilot.py usa pause_between_concepts_s (bug persiste, siempre 0).
+- B7 (validation config muerto): OK. Bloque eliminado, documentado.
+- B8 (timeouts): OK. Alineados con DEFAULT_TIMEOUTS.
+- B10 (test vacio): OK. Eliminado, cubierto por test_fallo_marca_failed_con_razon.
+- B11 (asyncio): OK. import presente en runner.py.
+- Adicional: sin test de pacing efectivo en runner (solo en pilot). Plan C pide "pacing efectivo se puede medir en un test" - no cubierto para runner.
+
+### Capa D - Contexto por area
+
+Implementado:
+- areas.py + 10 areas/*.yaml. OK.
+- registry.py: merge de prioridad (concept override > area yaml > frontmatter > defaults). OK.
+- synthesis.py build_prompt: inyecta roles, framing, questions, style, mode del area (no dice "Sos un experto en {area}"). OK.
+- config.yaml: sin area_overrides/area_domains/area_roles. OK.
+- slugify_area colapsa variantes. OK.
+
+Parcial:
+- Plan D dice investigacion/validacion inyectan contexto por area. Solo synthesis lo hace; research.py y validation.py no inyectan contexto del area.
+
+Tests: test_areas.py 25 tests (10 areas, slugify, yaml, merge, integracion registry, prompt sintesis).
+
+### Conclusion tanda 1
+
+- Capa A: parcial (campos presentes pero nombres difieren del diseno; falta schema validation; dos ConceptState divergentes).
+- Capa B: parcial (B4 no cerrado en runner except blocks).
+- Capa C: parcial (B6 en pilot.py; sin test de pacing en runner).
+- Capa D: OK (observacion: investigacion/validacion no inyectan contexto de area).
+
+
+## Resumen de resolucion - Tandas 1 (A-D) (2026-10-29)
+
+Capa A (contratos): COMPLETADA
+- Sub-A1: ConceptMeta aliases (concept_id, path, content_hash_outside_ai) + sync en registry.py.
+- Sub-A2: Claim (claim_id, status) + ConceptState.failure dict + unificacion models/state.
+- Sub-A3: validate_artifact_schema helper en backend.py (SchemaError).
+- Sub-A4: 8 tests round-trip (test_roundtrip.py). Todos pasan.
+
+Capa B (integridad): COMPLETADA
+- B4: runner.py except blocks (research, synthesis, validation) usan transition_to con fallback.
+
+Capa C (higiene): COMPLETADA
+- B6: pilot.py usa between_concepts_s (era pause_between_concepts_s).
+
+Capa D (contexto por area): OK
+- Observacion: research.py y validation.py no inyectan contexto de area (solo synthesis). Pendiente para futura iteracion.
+
+Tests: 116 passed, 37 warnings. py_compile OK en todos los modulos.

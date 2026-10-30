@@ -85,7 +85,7 @@ class PilotRunner:
         self.workdir = workdir or self.cfg.get("workdir", "workdir")
         self.llm = llm
         self.concepts = concepts or []
-        self.pacing = self.cfg.get("pacing", {}).get("pause_between_concepts_s", 0)
+        self.pacing = self.cfg.get("pacing", {}).get("between_concepts_s", 0)
 
     async def run_pilot(self, force: bool = False, dry_run: bool = False) -> PilotReport:
         report = PilotReport(total=len(self.concepts))

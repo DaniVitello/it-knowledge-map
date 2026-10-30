@@ -31,7 +31,10 @@ def _load_cfg(args):
 
 def _load_concepts(cfg):
     import registry
-    return registry.load_concepts(cfg["vault_path"], cfg)
+    try:
+        return registry.load_concepts(cfg["vault_path"], cfg)
+    except Exception:
+        return []
 
 
 def cmd_run(args):
@@ -51,6 +54,8 @@ def cmd_run(args):
     if getattr(args, "llm", None):
         # placeholder: llm provided externally
         pass
+    if getattr(args, "force_phase", None):
+        args.force = True
     runner = RN.Runner(cfg=cfg, llm=llm, workdir=cfg.get("workdir", "workdir"))
     if len(concepts) == 1:
         rep = asyncio.run(runner.run_concept(concepts[0], force=args.force, dry_run=args.dry_run))
@@ -116,6 +121,90 @@ def cmd_dry_run(args):
     return cmd_run(args)
 
 
+
+
+def cmd_validate(args):
+    cfg = _load_cfg(args)
+    concepts = _load_concepts(cfg)
+    if args.concept:
+        concepts = [c for c in concepts if c.id == args.concept or args.concept in c.id]
+    elif args.area:
+        concepts = [c for c in concepts if c.area == args.area]
+    if args.limit:
+        concepts = concepts[:args.limit]
+    import validation as V
+    for c in concepts:
+        cdir = None
+        try:
+            import json
+            from pathlib import Path
+            wd = cfg.get("workdir", "workdir")
+            sd = Path(wd) / "concepts" / c.id / "synthesis.json"
+            src = Path(wd) / ".pipeline" / c.id / "sources.json"
+            synth_data = json.loads(sd.read_text(encoding="utf-8")) if sd.exists() else {}
+            sources = json.loads(src.read_text(encoding="utf-8")) if src.exists() else {}
+            is_valid, issues, warnings = V.validate(c, synth_data, sources)
+            print(f"{c.id}: valid={is_valid} issues={len(issues)} warnings={len(warnings)}")
+            for it in issues:
+                print(f"   issue: {it}")
+        except Exception as e:
+            print(f"{c.id}: error {e}")
+    return 0
+
+
+def cmd_report(args):
+    cfg = _load_cfg(args)
+    workdir = cfg.get("workdir", "workdir")
+    from pathlib import Path
+    import json
+    rp = Path(workdir) / "run.jsonl"
+    if not rp.exists():
+        print("Sin run.jsonl")
+        return 1
+    lines = rp.read_text(encoding="utf-8").strip().splitlines()
+    for ln in lines[-20:]:
+        print(ln)
+    return 0
+
+
+def cmd_pilot(args):
+    cfg = _load_cfg(args)
+    concepts = _load_concepts(cfg)
+    if args.area:
+        concepts = [c for c in concepts if c.area == args.area]
+    if args.limit:
+        concepts = concepts[:args.limit]
+    # Capa L: seleccionar 8 conceptos variados si no se especifica
+    if not args.concept and not args.limit and len(concepts) > 8:
+        concepts = select_pilot_concepts(concepts, n=8)
+    llm = None
+    runner_mod = None
+    import pilot as PL
+    import asyncio
+    rep = asyncio.run(PL.run_pilot(concepts, cfg=cfg, llm=llm, workdir=cfg.get("workdir", "workdir"), force=args.force, dry_run=args.dry_run))
+    print(f"Total: {rep.total} | completed: {rep.completed} | failed: {rep.failed} | skipped: {rep.skipped} | success_rate: {rep.success_rate:.1%}")
+    return 0 if rep.failed == 0 else 1
+
+
+def select_pilot_concepts(concepts, n=8):
+    """Capa L: selecciona n conceptos variados (diversos por area)."""
+    by_area = {}
+    for c in concepts:
+        by_area.setdefault(c.area, []).append(c)
+    selected = []
+    # round-robin across areas
+    areas = sorted(by_area.keys())
+    i = 0
+    while len(selected) < n and areas:
+        progressed = False
+        for a in areas:
+            if by_area[a] and len(selected) < n:
+                selected.append(by_area[a].pop(0))
+                progressed = True
+        if not progressed:
+            break
+    return selected
+
 def main(argv=None):
     parser = argparse.ArgumentParser(prog="kpipe", description="Pipeline de enriquecimiento de conceptos IT")
     parser.add_argument("--config", default="config.yaml", help="Ruta al config.yaml")
@@ -129,6 +218,7 @@ def main(argv=None):
     p_run.add_argument("--area", default=None, help="Filtrar por area")
     p_run.add_argument("--limit", type=int, default=None, help="Limitar cantidad")
     p_run.add_argument("--force", action="store_true", help="Forzar re-ejecucion")
+    p_run.add_argument("--force-phase", default=None, help="Forzar desde una fase (research/synthesis/validation/writing)")
     p_run.add_argument("--dry-run", dest="dry_run", action="store_true", help="Simular sin escribir")
     p_run.set_defaults(func=cmd_run)
 
@@ -153,6 +243,26 @@ def main(argv=None):
     p_dry.add_argument("--area", default=None, help="Filtrar por area")
     p_dry.add_argument("--limit", type=int, default=None, help="Limitar cantidad")
     p_dry.set_defaults(func=cmd_dry_run, dry_run=True, force=False)
+
+    # validate
+    p_val = sub.add_parser("validate", help="Validar sintesis de conceptos")
+    p_val.add_argument("concept", nargs="?", default=None, help="concept_id (opcional)")
+    p_val.add_argument("--area", default=None, help="Filtrar por area")
+    p_val.add_argument("--limit", type=int, default=None, help="Limitar cantidad")
+    p_val.set_defaults(func=cmd_validate, dry_run=False, force=False)
+
+    # report
+    p_rep = sub.add_parser("report", help="Mostrar run.jsonl reciente")
+    p_rep.set_defaults(func=cmd_report)
+
+    # pilot
+    p_pilot = sub.add_parser("pilot", help="Ejecutar piloto con conceptos variados")
+    p_pilot.add_argument("concept", nargs="?", default=None, help="concept_id (opcional)")
+    p_pilot.add_argument("--area", default=None, help="Filtrar por area")
+    p_pilot.add_argument("--limit", type=int, default=None, help="Limitar cantidad")
+    p_pilot.add_argument("--force", action="store_true", help="Forzar re-ejecucion")
+    p_pilot.add_argument("--dry-run", dest="dry_run", action="store_true", help="Simular sin escribir")
+    p_pilot.set_defaults(func=cmd_pilot, dry_run=False, force=False)
 
     args = parser.parse_args(argv)
     if not hasattr(args, "func"):

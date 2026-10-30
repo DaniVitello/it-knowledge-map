@@ -281,6 +281,9 @@ class ValidationPhase:
                 data = json.loads(report_path.read_text(encoding="utf-8"))
             except (json.JSONDecodeError, OSError):
                 data = {}
+            # A3: validar artefacto leido (skip si no existe / vacio / sin contenido).
+            if isinstance(data, dict) and data:
+                backend.validate_artifact_schema(data, "validation")
             return ValidationPhaseResult(
                 concept_id=data.get("concept_id", concept.id),
                 is_valid=data.get("is_valid", False),
@@ -305,6 +308,9 @@ class ValidationPhase:
             synth_data = json.loads(synth_path.read_text(encoding="utf-8"))
         except (json.JSONDecodeError, OSError, FileNotFoundError):
             synth_data = {}
+        # A3: validar artefacto leido (skip si no existe / vacio / sin contenido).
+        if isinstance(synth_data, dict) and synth_data:
+            backend.validate_artifact_schema(synth_data, "synthesis")
         try:
             sources = json.loads(sources_path.read_text(encoding="utf-8"))
         except (json.JSONDecodeError, OSError, FileNotFoundError):
@@ -336,6 +342,8 @@ class ValidationPhase:
             "blocking_failures": blocking_failures,
             "verdict": verdict,
         }
+        # A3: validar schema antes de escribir (fail-fast con mensaje claro).
+        backend.validate_artifact_schema(report, "validation")
         backend._atomic_write_json(report_path, report)
 
         # Transicion final.

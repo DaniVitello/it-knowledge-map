@@ -190,6 +190,9 @@ class SynthesisPhase:
                 data = json.loads(synthesis_path.read_text(encoding="utf-8"))
             except (json.JSONDecodeError, OSError):
                 data = {}
+            # A3: validar artefacto leido (skip si no existe / vacio / sin contenido).
+            if isinstance(data, dict) and data:
+                backend.validate_artifact_schema(data, "synthesis")
             return SynthesisPhaseResult(
                 concept_id=data.get("concept_id", concept.id),
                 markdown=data.get("markdown", ""),
@@ -272,6 +275,8 @@ class SynthesisPhase:
             "generated_at": state.now_iso() if hasattr(state, "now_iso") else datetime.datetime.now().isoformat(),
             "duration_ms": duration_ms,
         }
+        # A3: validar schema antes de escribir (fail-fast con mensaje claro).
+        backend.validate_artifact_schema(synth_data, "synthesis")
         backend._atomic_write_json(synthesis_path, synth_data)
 
         # (Ya transicionado a SYNTHESIZED al inicio de la fase.)

@@ -207,6 +207,7 @@ class ConceptState:
     phase_data: dict[str, Any] = field(default_factory=dict)
     error: str | None = None
     retries: int = 0
+    failure: dict[str, Any] = field(default_factory=dict)
     created_at: str | None = None
     updated_at: str | None = None
     timestamps: dict[str, str] = field(default_factory=dict)
@@ -321,6 +322,7 @@ def _from_dict(data: Mapping[str, Any]) -> ConceptState | None:
         phase_data=dict(data.get("phase_data") or {}),
         error=data.get("error"),
         retries=int(data.get("retries", 0) or 0),
+        failure=dict(data.get("failure") or {}),
         created_at=data.get("created_at"),
         updated_at=data.get("updated_at"),
         timestamps=dict(data.get("timestamps") or {}),
@@ -498,6 +500,11 @@ def load_state(*args, **kwargs) -> ConceptState | None:
         data = json.loads(target.read_text(encoding="utf-8"))
     except (json.JSONDecodeError, OSError):
         return None
+    # A3: validar artefacto de estado leido (skip si no existe / vacio / sin contenido).
+    if data:
+        from backend import validate_artifact_schema
+
+        validate_artifact_schema(data, "state")
     return _from_dict(data)
 
 

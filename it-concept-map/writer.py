@@ -479,14 +479,22 @@ def verify_wikilinks_preserved(original: str, written: str) -> None:
 # ---------------------------------------------------------------------------
 
 
-def render_inside(synthesis: Synthesis, target_newline: str = "\n") -> str:
+def render_inside(synthesis: Synthesis, target_newline: str = "\n", run_id: str | None = None, concept_id: str | None = None) -> str:
     """Markdown de la sintesis validada, normalizado para insertar en el bloque.
 
     La sintesis llega YA validada (Capa de validacion); el writer no la
     re-valida, solo la normaliza al estilo de newline del archivo destino.
+    Si run_id se proporciona, se anade un pie de trazabilidad al final del bloque.
     """
     md = synthesis.markdown or ""
-    return normalize_newlines(md, target_newline).strip("\n")
+    out = normalize_newlines(md, target_newline).strip("\n")
+    if run_id:
+        from datetime import datetime, timezone
+        footer = "\n\n<!-- trazabilidad: run_id=%s concept=%s written_at=%s -->" % (
+            run_id, concept_id or getattr(synthesis, "concept_id", ""), datetime.now(timezone.utc).isoformat(),
+        )
+        out = out + footer
+    return out
 
 
 # ---------------------------------------------------------------------------
@@ -527,9 +535,11 @@ class SafeWriter:
         config: Any = None,
         vault_root: Path | str | None = None,
         workdir: Path | str | None = None,
+        run_id: str | None = None,
     ) -> None:
         self.config = config
         self.vault_root = Path(vault_root) if vault_root is not None else None
+        self.run_id = run_id
         wd = (
             workdir
             or _cfg(config, "workdir", default=None)
@@ -590,7 +600,7 @@ class SafeWriter:
             )
 
         # 5. Construir texto nuevo SOLO dentro del bloque.
-        new_inside = render_inside(synthesis, target_newline=newline)
+        new_inside = render_inside(synthesis, target_newline=newline, run_id=self.run_id, concept_id=concept.id)
         new_text = replace_inside(
             original_text, span, new_inside, newline,
             self.marker_start, self.marker_end,
@@ -861,6 +871,7 @@ def writing_phase(
     workdir: Any = None,
     dry_run: bool = False,
     writer: SafeWriter | None = None,
+    run_id: str | None = None,
 ) -> ConceptState:
     """Fase de escritura: writer + transiciones de estado (written/completed).
 
@@ -881,7 +892,7 @@ def writing_phase(
         return state
 
     if writer is None:
-        writer = SafeWriter(config=config, workdir=workdir)
+        writer = SafeWriter(config=config, workdir=workdir, run_id=run_id)
 
     try:
         result = writer.write_concept(concept, synthesis, dry_run=dry_run)
@@ -895,7 +906,8 @@ def writing_phase(
         return state
 
     state = mark_written(state, result, workdir=workdir, config=config)
-    state = mark_completed(state, workdir=workdir, config=config)
+    # Capa I: el paso a completed se decide en el runner tras verificar el DoD.
+    # Aqui solo se marca written; mark_completed se invoca condicionalmente.
     return state
 
 

@@ -174,6 +174,9 @@ class Claim:
     text: str
     source_ids: list[str] = field(default_factory=list)
     unverified: bool = False
+    # --- Capa A: campos del diseno ---
+    claim_id: str = ""
+    status: str = ""
 
     schema_version: str = SCHEMA_VERSION
 

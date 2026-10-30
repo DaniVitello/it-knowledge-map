@@ -27,6 +27,7 @@ it-concept-map/
 ├── scripts/
 │   └── smoke_notebooklm.py  # Smoke test con cuenta real
 └── tests/
+    ├── test_areas.py      # 25 tests
     ├── test_backend.py    # 15 tests
     ├── test_research.py   # 12 tests
     ├── test_synthesis.py  # 11 tests
@@ -39,5 +40,5 @@ it-concept-map/
 ## Estado
 
 TODAS LAS CAPAS COMPLETADAS (1-10). Proyecto listo para piloto con cuenta real.
-Total tests: 82 (15+12+11+12+11+12+9).
+Total tests: 107 (25+15+12+11+12+11+12+9).
 ```

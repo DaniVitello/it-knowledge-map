@@ -117,9 +117,15 @@ class ResearchPhase:
                 raw = json.loads(raw_path.read_text(encoding="utf-8"))
             except (json.JSONDecodeError, OSError):
                 raw = {}
+            # A3: validar artefacto leido (skip si no existe / vacio / sin contenido).
+            if isinstance(raw, dict) and raw:
+                backend.validate_artifact_schema(raw, "raw_research")
             sources = []
             try:
                 sdata = json.loads(sources_path.read_text(encoding="utf-8"))
+                # A3: validar artefacto leido (skip si no existe / vacio / sin contenido).
+                if isinstance(sdata, dict) and sdata:
+                    backend.validate_artifact_schema(sdata, "sources")
                 for s in sdata.get("sources", []):
                     sources.append(Source(source_id=s.get("source_id", ""), url=s.get("url"), title=s.get("title", ""), kind=s.get("kind", "url")))
             except (json.JSONDecodeError, OSError, FileNotFoundError):
@@ -209,6 +215,8 @@ class ResearchPhase:
                 for s in res.sources
             ],
         }
+        # A3: validar schema antes de escribir (fail-fast con mensaje claro).
+        backend.validate_artifact_schema(sources_data, "sources")
         backend._atomic_write_json(sources_path, sources_data)
 
         # Conservacion local de fuentes (Capa F): sources_raw/<source_id>.txt.
@@ -241,6 +249,8 @@ class ResearchPhase:
             "gaps_detected": 0,
             "gaps_resolved": 0,
         }
+        # A3: validar schema antes de escribir (fail-fast con mensaje claro).
+        backend.validate_artifact_schema(raw_data, "raw_research")
         backend._atomic_write_json(raw_path, raw_data)
 
         # Transicion a RESEARCHED.

@@ -1509,3 +1509,73 @@ def create_backend(
     raise BackendConfigError(
         f"backend desconocido: {p!r} (opciones: 'fake' | 'notebooklm')"
     )
+
+
+# ---------------------------------------------------------------------------
+# Schema validation (Capa A)
+# ---------------------------------------------------------------------------
+
+ARTIFACT_SCHEMAS = {
+    "sources": {"required": ["sources"]},
+    "raw_research": {"required": ["concept_id", "answers"]},
+    "synthesis": {"required": ["concept_id", "markdown", "sections"]},
+    "validation": {"required": ["concept_id", "is_valid", "issues"]},
+    "state": {"required": ["concept_id", "status"]},
+}
+
+# Tipos esperados por campo requerido (None = sin chequeo de tipo especifico).
+ARTIFACT_FIELD_TYPES: dict[str, dict[str, Any]] = {
+    "sources": {"sources": list},
+    "raw_research": {"concept_id": str, "answers": list},
+    "synthesis": {"concept_id": str, "markdown": str, "sections": dict},
+    "validation": {"concept_id": str, "is_valid": bool, "issues": list},
+    "state": {"concept_id": str, "status": str},
+}
+
+
+class SchemaError(ValueError):
+    """Artefacto JSON no cumple el esquema minimo."""
+
+    pass
+
+
+def validate_artifact_schema(data: Any, schema_name: str) -> None:
+    """Valida los campos requeridos de un artefacto JSON del pipeline.
+
+    Schemas soportados y sus campos requeridos:
+    - ``sources``: requiere ``sources`` (lista).
+    - ``raw_research``: requiere ``concept_id``, ``answers`` (lista).
+    - ``synthesis``: requiere ``concept_id``, ``markdown``, ``sections``.
+    - ``validation``: requiere ``concept_id``, ``is_valid``, ``issues``.
+    - ``state``: requiere ``concept_id``, ``status``.
+
+    Si falta un campo requerido o un campo tiene un tipo incorrecto, lanza
+    ``SchemaError`` (subclase de ``ValueError``) con mensaje claro. Con schemas
+    desconocidos no valida (no-op) para no romper integraciones futuras.
+
+    Los callers son responsables de hacer skip cuando el artefacto no existe
+    o esta vacio (validar solo artefactos presentes).
+    """
+    if not isinstance(data, dict):
+        raise SchemaError(f"{schema_name}: se esperaba un dict, se recibio {type(data).__name__}")
+    if schema_name not in ARTIFACT_SCHEMAS:
+        return
+    required = ARTIFACT_SCHEMAS[schema_name]["required"]
+    field_types = ARTIFACT_FIELD_TYPES.get(schema_name) or {}
+    problems: list[str] = []
+    for key in required:
+        value = data.get(key)
+        if value is None:
+            problems.append(f"falta el campo requerido {key!r}")
+            continue
+        expected = field_types.get(key)
+        if expected is list and not isinstance(value, list):
+            problems.append(f"el campo {key!r} debe ser una lista, se encontro {type(value).__name__}")
+        elif expected is dict and not isinstance(value, dict):
+            problems.append(f"el campo {key!r} debe ser un objeto, se encontro {type(value).__name__}")
+        elif expected is bool and not isinstance(value, bool):
+            problems.append(f"el campo {key!r} debe ser un booleano, se encontro {type(value).__name__}")
+        elif expected is str and not isinstance(value, str):
+            problems.append(f"el campo {key!r} debe ser texto, se encontro {type(value).__name__}")
+    if problems:
+        raise SchemaError(f"{schema_name}: " + "; ".join(problems))

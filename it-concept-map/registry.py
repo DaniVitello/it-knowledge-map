@@ -509,9 +509,11 @@ def read_concept(path: Path, vault_root: Path, config: Any = None) -> ConceptMet
 
     return ConceptMeta(
         id=concept_id,
+        concept_id=concept_id,
         title=str(title),
         area=str(area),
         note_path=path.resolve(),
+        path=str(path.resolve()),
         slug=concept_id,
         numero=numero,
         aliases=aliases,
@@ -526,6 +528,7 @@ def read_concept(path: Path, vault_root: Path, config: Any = None) -> ConceptMet
         has_ai_block=has_block,
         content_hash_outside=outside_hash,
         content_hash_inside=inside_hash,
+        content_hash_outside_ai=outside_hash,
         outside_hash_at_read=outside_hash,
         mtime_at_read=mtime,
         newline=newline,
