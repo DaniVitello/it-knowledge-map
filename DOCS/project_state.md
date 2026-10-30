@@ -245,3 +245,49 @@ unner.py, 	ests/test_runner.py
 - **Resumen:** eliminado el bloque muerto `validation:` de config.yaml (las secciones canonicas viven en validation.py, REQUIRED_SECTIONS). Eliminadas las claves muertas `generate_report` y `download` de `backend.notebooklm.timeouts` (no estan en NotebookLMBackend.DEFAULT_TIMEOUTS y se ignoraban). Eliminado el test vacio `test_persist_error_razon` (sin asserts; cubierto por test_fallo_marca_failed_con_razon). Verificado `py_compile` sobre todos los modulos.
 - **Tests:** py_compile OK. pytest no instalado en el venv (verificacion por sintaxis).
 
+
+
+## Diagnostico de verificacion real - Capas A-L (2026-10-29)
+
+Verificacion ejecutada sobre el codigo en `it-concept-map/`. Tests: 108 passed, 37 warnings. No se corrigio nada.
+
+### Resumen por capa
+
+| Capa | Plan dice | Verificacion real | Estado |
+|------|-----------|-------------------|--------|
+| A | Contratos alineados | models.py tiene campos del diseno + ConceptStatus importado de state. Falta validacion de esquema al leer/escribir JSON. | Parcial |
+| B | Integridad | B2/B3/B5 OK. B4: runner asigna st.status=FAILED directo en except (violacion). | Parcial |
+| C | Higiene | B6: runner OK, pilot.py sigue con pause_between_concepts_s (bug persiste). B7/B8/B10/B11 OK. | Parcial |
+| D | Contexto por area | areas.py + areas/*.yaml integrado en synthesis y registry. | OK |
+| E | Investigacion real | B1 corregido. _build_research_plan OK. Gaps siempre 0 (ciclo no implementado). | Parcial |
+| F | Evaluacion fuentes | sources.json con evaluation/kept, sources_raw/. Prompt P2 no vi. | Parcial |
+| G | Notebook lifecycle | reconcile llamado, delete post-write, notebook_id persistido. Reutilizacion en retry no vi. | Parcial |
+| H | Validacion determinista | 4 stubs vacios (_check_contexto, _check_relaciones, _check_fuentes, _check_actualidad). Score usa 13 checks no 10. _check_cross_links solo vs connections. | NO implementado |
+| I | Semantica + bucle + DoD | Bucle needs_fix en runner. Marcador "?? verificar" (spec dice "warning verificar"). DoD no vi. | Parcial |
+| J | Orquestador robusto | execute_phase_with_retry existe pero NO se invoca. Reanudacion por strings. CLI sin pilot/--force-phase/validate/report. _load_concepts sin try/except OK. | NO implementado |
+| K | Trazabilidad | run_id, run.jsonl, events.jsonl OK. Pie de trazabilidad en nota no vi. claims_index no poblado. | Parcial |
+| L | Idempotencia + piloto | Idempotencia solo por status, no hash. pilot.py existe. README no verificado. | Parcial |
+
+### Bugs B1-B11
+
+- B1: corregido (seed_urls or []).
+- B2: corregido (no reconstruye ConceptMeta parcial).
+- B3: corregido (solo VALIDATED entra a writing).
+- B4: parcial (synthesis/validation usan transition_to; runner asigna st.status=FAILED directo en except).
+- B5: corregido (atomic writes).
+- B6: parcial (runner OK, pilot.py sigue con pause_between_concepts_s).
+- B7: corregido.
+- B8: corregido.
+- B9: parcial (campos seteados a 0 siempre).
+- B10: corregido (test vacio eliminado).
+- B11: corregido (import asyncio presente).
+
+### Warnings de tests
+
+- DeprecationWarning: asyncio.iscoroutinefunction (synthesis.py:169).
+- RuntimeWarning: coroutine 'FakeBackend.delete' never awaited (runner.py:230).
+
+### Conclusion
+
+El plan marca todas las capas A-L como completadas, pero la verificacion real muestra que H y J NO estan implementadas, y varias capas (A, B, C, E, F, G, I, K, L) estan parciales. Los tests (108) pasan pero no cubren los checks bloqueantes de H ni el retry de J.
+
