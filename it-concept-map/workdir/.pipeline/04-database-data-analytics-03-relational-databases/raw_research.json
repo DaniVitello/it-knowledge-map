@@ -1,0 +1,50 @@
+{
+  "concept_id": "04-database-data-analytics-03-relational-databases",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No veo fuentes guardadas en tu cuaderno sobre **bases de datos relacionales**. \n\n¿Quieres que realice una investigación en la web para recopilar información sobre qué son las bases de datos relacionales (tablas, filas, columnas, relaciones) y para qué sirven?",
+      "claims": [
+        {
+          "text": "No veo fuentes guardadas en tu cuaderno sobre **bases de datos relacionales**. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Tampoco encuentro fuentes o documentos en tu cuaderno sobre el funcionamiento de las **bases de datos relacionales en Database / Data Analytics**.\n\n¿Quieres que realice una investigación en la web para recopilar información sobre este tema y presentarte los resultados?",
+      "claims": [
+        {
+          "text": "Tampoco encuentro fuentes o documentos en tu cuaderno sobre el funcionamiento de las **bases de datos relacionales en Database / Data Analytics**.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Tu cuaderno aún no contiene fuentes ni documentos sobre el **estado actual y las relaciones de las bases de datos relacionales**.\n\n¿Quieres que realice una investigación en la web sobre este tema (incluyendo su panorama actual en Data Analytics y su relación con NoSQL, ORM y el modelado de datos) para presentarte los resultados?",
+      "claims": [
+        {
+          "text": "Tu cuaderno aún no contiene fuentes ni documentos sobre el **estado actual y las relaciones de las bases de datos relacionales**.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "de255005-adf4-47ac-9c8c-5031def521d5",
+  "duration_ms": 43758,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-03-relational-databases\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

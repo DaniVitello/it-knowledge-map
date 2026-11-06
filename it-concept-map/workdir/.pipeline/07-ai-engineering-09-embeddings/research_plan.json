@@ -1,0 +1,64 @@
+{
+  "questions": [],
+  "concept_id": "07-ai-engineering-09-embeddings",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Embeddings y para que sirve (Representaciones vectoriales y semantic similarity)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Embeddings en AI Engineering"
+    ],
+    "context": [
+      "Como se usa Embeddings en el contexto profesional de AI Engineering"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "NoSQL",
+      "ask": "Como se relaciona Embeddings con NoSQL?"
+    },
+    {
+      "with": "Neural Networks",
+      "ask": "Como se relaciona Embeddings con Neural Networks?"
+    },
+    {
+      "with": "Transformers",
+      "ask": "Como se relaciona Embeddings con Transformers?"
+    },
+    {
+      "with": "LLMs",
+      "ask": "Como se relaciona Embeddings con LLMs?"
+    },
+    {
+      "with": "Tokenization",
+      "ask": "Como se relaciona Embeddings con Tokenization?"
+    },
+    {
+      "with": "RAG",
+      "ask": "Como se relaciona Embeddings con RAG?"
+    },
+    {
+      "with": "Vector Databases",
+      "ask": "Como se relaciona Embeddings con Vector Databases?"
+    },
+    {
+      "with": "Context Engineering",
+      "ask": "Como se relaciona Embeddings con Context Engineering?"
+    }
+  ],
+  "queries": [
+    "site:arxiv.org Embeddings",
+    "site:huggingface.co Embeddings",
+    "site:pytorch.org Embeddings",
+    "site:d2l.ai Embeddings",
+    "site:platform.openai.com Embeddings",
+    "site:docs.claude.com Embeddings",
+    "site:ai.google.dev Embeddings",
+    "site:deeplearning.ai Embeddings"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

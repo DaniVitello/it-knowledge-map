@@ -1,0 +1,50 @@
+{
+  "concept_id": "05-networking-internet-25-cdn-load-balancing",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "**No tienes fuentes agregadas en tu libreta** sobre este tema. Como mis respuestas se basan estrictamente en tus fuentes cargadas para garantizar información verificable, no puedo responder usando conocimiento externo sin tu autorización.\n\n¿Te gustaría que realice una **investigación en la web** sobre **CDN / Load Balancing** (distribución y escalamiento de tráfico, caching, proxies, etc.) para responder a tu consulta?",
+      "claims": [
+        {
+          "text": "**No tienes fuentes agregadas en tu libreta** sobre este tema. Como mis respuestas se basan estrictamente en tus fuentes cargadas para garantizar información verificable, no puedo responder usando con",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Esto es lo que encontré sobre **CDN y Load Balancing (Distribución y escalamiento del tráfico)**:\n\nUna **CDN (Content Delivery Network)** reduce la latencia almacenando y sirviendo contenido desde servidores perimetrales (*Edge PoPs*) distribuidos globalmente cerca del usuario, mientras que un **Load Balancer (Balanceador de Carga)** distribuye de manera balanceada el tráfico de solicitudes entrantes entre múltiples servidores backend para garantizar alta disponibilidad y evitar sobrecargas.\n\n**Temas clave identificados:**\n1. **Reducción de Latencia mediante Edge Caching**: Las CDN guardan copias de recursos (imágenes, CSS, JS, HTML) en nodos perimetrales. Si la petición está almacenada (*cache hit*), se responde al instante sin viajar hasta el servidor de origen.\n2. **Jerarquía en el Flujo de Peticiones**: Las solicitudes entran primero a la CDN en el borde de la red; si el contenido es dinámico o no está cacheado (*cache miss*), la petición escala hacia los balanceadores de carga que administran los clústeres de servidores backend.\n3. **Balanceo en Capas L4 y L7**: Los balanceadores distribuyen tráfico a nivel de transporte (Capa 4: TCP/UDP) o a nivel de aplicación (Capa 7: HTTP/HTTPS), apoyándose en algoritmos como *Round Robin*, *Least Connections* o *IP Hash*, además de gestionar la terminación SSL/TLS.\n4. **Alta Disponibilidad y Resiliencia**: Ambos componentes eliminan puntos únicos de falla (SPOF), realizan evaluaciones continuas del estado de los servidores (*health checks*) y ofrecen protección frente a picos repentinos de tráfico y ataques DDoS.\n\n📥 El reporte de investigación completo está incluido como la primera fuente en la tarjeta de abajo — impórtalo a tu libreta si deseas analizar y conversar a fondo sobre estos temas.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-cdn-load-balancing\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-cdn-load-balancing\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos técnicos, guías y documentos de arquitectura sobre CDN y Load Balancing\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Reporte de investigación: CDN y Load Balancing\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiRlNGRhYmE4ZC0yNzYzLTQyYzEtOWVlMC04ZDFlNzgyYWMxZmMSCxIHEPnP8YvcBhgB&filename=Reporte_de_investigacion_CDN_y_Load_Balancing.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Reporte de Investigación\",\n          \"summary\": \"Reporte técnico completo con 10 fuentes seleccionadas sobre CDN, Load Balancers y escalamiento de tráfico.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"Cómo funciona un CDN: guía técnica\",\n          \"url\": \"https://midrocket.com/guias/cdn-como-funciona/\",\n          \"sourceName\": \"Midrocket\",\n          \"summary\": \"Explicación detallada de puntos de presencia (PoPs), servidores Edge y la reducción de latencia física.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"Edge Computing vs CDN\",\n          \"url\": \"https://www.azion.com/es/learning/cdn/edge-computing-vs-cdn/\",\n          \"sourceName\": \"Azion\",\n          \"summary\": \"Comparativa entre almacenamiento en caché estático y cómputo de código dinámico en el Edge.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"How CDN Works: Request Routing, Caching, and Edge Delivery\",\n          \"url\": \"https://www.cloudoptimo.com/blog/how-cdn-works-request-routing-caching-and-edge-delivery/\",\n          \"sourceName\": \"CloudOptimo\",\n          \"summary\": \"Guía sobre enrutamiento de peticiones, estrategias de caché HIT/MISS y comunicación con el servidor origen.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"Algoritmos de balanceo de carga\",\n          \"url\": \"https://www.coddykit.com/es/courses/api_gateway_reverse_proxy/load-balancing-algorithms-1516572\",\n          \"sourceName\": \"CoddyKit\",\n          \"summary\": \"Análisis de algoritmos de distribución de tráfico como Round Robin, Least Connections e IP Hash.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"Tipos de algoritmos de equilibrio de carga\",\n          \"url\": \"https://www.cloudflare.com/es-es/learning/performance/types-of-load-balancing-algorithms/\",\n          \"sourceName\": \"Cloudflare\",\n          \"summary\": \"Explicación de algoritmos estáticos y dinámicos para distribución eficiente de peticiones web.\"\n        },\n        {\n          \"id\": \"src-6\",\n          \"title\": \"Load Balancer en System Design: Guía para Entrevistas Técnicas\",\n          \"url\": \"https://developero.io/blog/system-design/load-balancer-system-design\",\n          \"sourceName\": \"Developero\",\n          \"summary\": \"Desglose de balanceo en capa L4 (transporte) y L7 (aplicación), tolerancia a fallos y alta disponibilidad.\"\n        },\n        {\n          \"id\": \"src-7\",\n          \"title\": \"CDN and Load balancers (Understanding the request flow)\",\n          \"url\": \"https://scaleyourapp.com/system-design-part-1/\",\n          \"sourceName\": \"Scale Your App\",\n          \"summary\": \"Flujo arquitectónico de peticiones desde el Edge de la CDN hasta los balanceadores y backend.\"\n        },\n        {\n          \"id\": \"src-8\",\n          \"title\": \"Qué es un Reverse Proxy?\",\n          \"url\": \"https://www.azion.com/es/learning/performance/que-es-reverse-proxy/\",\n          \"sourceName\": \"Azion\",\n          \"summary\": \"El rol de los proxies inversos en la terminación TLS, comprobaciones de salud y seguridad.\"\n        },\n        {\n          \"id\": \"src-9\",\n          \"title\": \"Estrategia Multi-CDN\",\n          \"url\": \"https://www.azion.com/es/learning/cdn/estrategia-multi-cdn/\",\n          \"sourceName\": \"Azion\",\n          \"summary\": \"Arquitectura de enrutamiento dinámico DNS y múltiples proveedores CDN para 99.99%+ de disponibilidad.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Esto es lo que encontré sobre **CDN y Load Balancing (Distribución y escalamiento del tráfico)**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no se han importado esas fuentes a tu libreta. ¿Quieres que las importe primero para poder responder a tus preguntas sobre el estado actual y las relaciones de **CDN / Load Balancing** basándome en su contenido? \n\nTambién puedes desplazarte hacia arriba e importarlas directamente haciendo clic en el botón de la tarjeta de investigación.",
+      "claims": [
+        {
+          "text": "Aún no se han importado esas fuentes a tu libreta. ¿Quieres que las importe primero para poder responder a tus preguntas sobre el estado actual y las relaciones de **CDN / Load Balancing** basándome e",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "64d9e692-8f0f-443a-a7b1-d7bb354ec03c",
+  "duration_ms": 63170,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-25-cdn-load-balancing\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

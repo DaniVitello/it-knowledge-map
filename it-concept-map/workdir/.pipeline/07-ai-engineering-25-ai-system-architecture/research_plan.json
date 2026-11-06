@@ -1,0 +1,44 @@
+{
+  "questions": [],
+  "concept_id": "07-ai-engineering-25-ai-system-architecture",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es AI System Architecture y para que sirve (Diseño completo de sistemas AI en producción)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de AI System Architecture en AI Engineering"
+    ],
+    "context": [
+      "Como se usa AI System Architecture en el contexto profesional de AI Engineering"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Architecture",
+      "ask": "Como se relaciona AI System Architecture con Architecture?"
+    },
+    {
+      "with": "Arquitectura Frontend",
+      "ask": "Como se relaciona AI System Architecture con Arquitectura Frontend?"
+    },
+    {
+      "with": "Arquitectura de aplicaciones",
+      "ask": "Como se relaciona AI System Architecture con Arquitectura de aplicaciones?"
+    }
+  ],
+  "queries": [
+    "site:arxiv.org AI System Architecture",
+    "site:huggingface.co AI System Architecture",
+    "site:pytorch.org AI System Architecture",
+    "site:d2l.ai AI System Architecture",
+    "site:platform.openai.com AI System Architecture",
+    "site:docs.claude.com AI System Architecture",
+    "site:ai.google.dev AI System Architecture",
+    "site:deeplearning.ai AI System Architecture"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

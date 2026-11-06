@@ -1,0 +1,29 @@
+{
+  "concept_id": "04-database-data-analytics-15-oltp-vs-olap",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-15-oltp-vs-olap\\sources.json",
+    "notebook_id": "cfbce7bd-3d6a-47fe-9378-039b4a9ce2f6",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-15-oltp-vs-olap\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-15-oltp-vs-olap\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\04-database-data-analytics-15-oltp-vs-olap\\15 - OLTP vs OLAP.md.20261105T230013Z-e3f655.bak",
+      "outside_hash": "b6af2ac6a79caf41ebbf5cda1f68cd0603516541b9fd50fe5cca14dd45466e95",
+      "inside_hash": "e4aa4f233deb389f8c2fe2acf7f70b4e476b66aa63f41c847500a8d400d213c3",
+      "written_at": "2026-11-05T23:00:13.675364+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T22:59:22.629436+00:00",
+  "updated_at": "2026-11-05T23:00:13.694364+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:00:13.694364+00:00",
+    "created_at": "2026-11-05T22:59:22.629436+00:00"
+  },
+  "schema_version": "1.0.0"
+}

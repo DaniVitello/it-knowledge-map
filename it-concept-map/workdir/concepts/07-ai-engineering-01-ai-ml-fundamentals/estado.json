@@ -1,0 +1,29 @@
+{
+  "concept_id": "07-ai-engineering-01-ai-ml-fundamentals",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\07-ai-engineering-01-ai-ml-fundamentals\\sources.json",
+    "notebook_id": "b5b78bc2-2790-46c3-affd-eb72df7b00d5",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\07-ai-engineering-01-ai-ml-fundamentals\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\07-ai-engineering-01-ai-ml-fundamentals\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\07-ai-engineering-01-ai-ml-fundamentals\\01 - AI - ML Fundamentals.md.20261105T170608Z-ee8c39.bak",
+      "outside_hash": "7c4283188dbd83e8fc147763395eb752aaf66ba9a37b94032ff67800f5ac7d4c",
+      "inside_hash": "6c984a32c6d1f818c40a5e2d7a40836e75844ff3f09fe478f8c1f5de8e36ab67",
+      "written_at": "2026-11-05T17:06:08.190443+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T17:04:44.275377+00:00",
+  "updated_at": "2026-11-05T17:06:08.208295+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T17:06:08.208295+00:00",
+    "created_at": "2026-11-05T17:04:44.275377+00:00"
+  },
+  "schema_version": "1.0.0"
+}

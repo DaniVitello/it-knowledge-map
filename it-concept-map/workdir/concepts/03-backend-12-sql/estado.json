@@ -1,0 +1,31 @@
+{
+  "concept_id": "03-backend-12-sql",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "failed_phase": "synthesizing",
+    "failed_reason": "error",
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\03-backend-12-sql\\sources.json",
+    "notebook_id": "11697641-6ffd-4b25-ba92-27c40e9a2ad3",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\03-backend-12-sql\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\03-backend-12-sql\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\03-backend-12-sql\\12 - SQL.md.20261105T194600Z-507b13.bak",
+      "outside_hash": "4e32c5249f0c15b961ac77d22b70ab39f2469f636d857806863c82947820e3b9",
+      "inside_hash": "d387f3e672a8b565cf4c6db1a594f80e83cc40d6bc0b2a1a841260f235c1877a",
+      "written_at": "2026-11-05T19:46:00.907805+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:30:45.059851+00:00",
+  "updated_at": "2026-11-05T19:46:00.947376+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T19:46:00.947376+00:00",
+    "created_at": "2026-10-30T05:30:45.059851+00:00"
+  },
+  "schema_version": "1.0.0"
+}

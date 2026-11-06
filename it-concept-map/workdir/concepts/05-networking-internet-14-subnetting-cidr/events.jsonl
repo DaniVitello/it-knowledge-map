@@ -1,0 +1,7 @@
+{"ts": "2026-11-05T23:26:04.973238+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-14-subnetting-cidr", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:27:01.738073+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-14-subnetting-cidr", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T23:27:06.078813+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-14-subnetting-cidr", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T23:27:06.109113+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-14-subnetting-cidr", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T23:27:06.135617+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-14-subnetting-cidr", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T23:27:06.155234+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-14-subnetting-cidr", "event": "notebook_delete_failed", "notebook_id": "ee36649a-5857-45bd-a7ef-26101d4dc5e6", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T23:27:06.166381+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-14-subnetting-cidr", "event": "run_end", "status": "completed"}

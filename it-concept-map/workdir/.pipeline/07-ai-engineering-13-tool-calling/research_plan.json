@@ -1,0 +1,56 @@
+{
+  "questions": [],
+  "concept_id": "07-ai-engineering-13-tool-calling",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Tool Calling y para que sirve (Models que utilizan funciones, APIs y herramientas)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Tool Calling en AI Engineering"
+    ],
+    "context": [
+      "Como se usa Tool Calling en el contexto profesional de AI Engineering"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Prompt Engineering",
+      "ask": "Como se relaciona Tool Calling con Prompt Engineering?"
+    },
+    {
+      "with": "Structured Outputs",
+      "ask": "Como se relaciona Tool Calling con Structured Outputs?"
+    },
+    {
+      "with": "Agents",
+      "ask": "Como se relaciona Tool Calling con Agents?"
+    },
+    {
+      "with": "AI Workflows",
+      "ask": "Como se relaciona Tool Calling con AI Workflows?"
+    },
+    {
+      "with": "Context Engineering",
+      "ask": "Como se relaciona Tool Calling con Context Engineering?"
+    },
+    {
+      "with": "Memory",
+      "ask": "Como se relaciona Tool Calling con Memory?"
+    }
+  ],
+  "queries": [
+    "site:arxiv.org Tool Calling",
+    "site:huggingface.co Tool Calling",
+    "site:pytorch.org Tool Calling",
+    "site:d2l.ai Tool Calling",
+    "site:platform.openai.com Tool Calling",
+    "site:docs.claude.com Tool Calling",
+    "site:ai.google.dev Tool Calling",
+    "site:deeplearning.ai Tool Calling"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

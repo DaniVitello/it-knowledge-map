@@ -5,24 +5,27 @@
   "checkpoint": "writing",
   "phase_data": {
     "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\01-software-engineering-01-programming-fundamentals\\sources.json",
-    "notebook_id": "fe7a4106-ed1e-4bbf-9a61-0080d3c8ff17",
+    "notebook_id": "5bb60eaf-1b8e-4138-a8ff-0f37ebe288c8",
+    "failed_phase": "synthesizing",
+    "failed_reason": "error",
     "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-01-programming-fundamentals\\synthesis.json",
     "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-01-programming-fundamentals\\validation.json",
     "write_result": {
-      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\01-software-engineering-01-programming-fundamentals\\01 - Programming Fundamentals.md.20261029T233308Z-b279fa.bak",
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\01-software-engineering-01-programming-fundamentals\\01 - Programming Fundamentals.md.20261105T165349Z-26e788.bak",
       "outside_hash": "f9f2bd91f3d918a3f0efee962f8cd70a1f31aa5516b602c7eee0b02329207e9f",
-      "inside_hash": "45a3491397eb63c06b03b2f850a6c9b1420af77b8608f33539da734435e59ad9",
-      "written_at": "2026-10-29T23:33:08.596503+00:00",
+      "inside_hash": "869e29d45207fb9dc8666802f057ac26b570eecb5df86c93b36bdd2fe8449798",
+      "written_at": "2026-11-05T16:53:49.157716+00:00",
       "writer_version": "1.0.0"
     }
   },
   "error": null,
   "retries": 0,
-  "created_at": "2026-10-29T23:32:30.998099+00:00",
-  "updated_at": "2026-10-29T23:33:08.599105+00:00",
+  "failure": {},
+  "created_at": "2026-11-05T16:50:59.262475+00:00",
+  "updated_at": "2026-11-05T16:53:49.181651+00:00",
   "timestamps": {
-    "updated_at": "2026-10-29T23:33:08.599105+00:00",
-    "created_at": "2026-10-29T23:32:30.998099+00:00"
+    "updated_at": "2026-11-05T16:53:49.181651+00:00",
+    "created_at": "2026-11-05T16:50:59.262475+00:00"
   },
   "schema_version": "1.0.0"
 }

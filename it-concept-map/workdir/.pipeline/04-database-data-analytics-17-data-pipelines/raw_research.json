@@ -1,0 +1,50 @@
+{
+  "concept_id": "04-database-data-analytics-17-data-pipelines",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No hay fuentes guardadas en tu cuaderno sobre este tema todavía. Como me baso únicamente en tus fuentes para dar respuestas verificables, no puedo responder utilizando mi conocimiento general.\n\n¿Te gustaría que realice una **investigación en la web** sobre **Data Pipelines** (ingesta, transformación, ETL/ELT, OLTP vs. OLAP y flujos de trabajo de IA) para responder a tu pregunta?",
+      "claims": [
+        {
+          "text": "No hay fuentes guardadas en tu cuaderno sobre este tema todavía. Como me baso únicamente en tus fuentes para dar respuestas verificables, no puedo responder utilizando mi conocimiento general.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Tu cuaderno **Data Pipelines** aún no tiene fuentes ni documentos cargados sobre este tema. Para garantizar que todas las respuestas estén basadas en información verificable dentro de tu cuaderno, no puedo responder utilizando conocimiento externo.\n\n¿Te gustaría que realice una **investigación en la web** para recopilar información sobre cómo funcionan los **Data Pipelines en bases de datos y analítica de datos** (cubriendo ingesta, transformación, ETL/ELT, OLTP vs. OLAP, Data Warehouses y flujos de IA) y responder a tu consulta?",
+      "claims": [
+        {
+          "text": "Tu cuaderno **Data Pipelines** aún no tiene fuentes ni documentos cargados sobre este tema. Para garantizar que todas las respuestas estén basadas en información verificable dentro de tu cuaderno, no ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Tu cuaderno **Data Pipelines** sigue estando vacío y no contiene fuentes o documentos sobre este tema. Para mantener el compromiso de ofrecer únicamente respuestas fundamentadas y verificables en tus materiales, no puedo responder utilizando conocimiento externo.\n\n¿Quieres que realice una **investigación en la web** sobre el **estado actual y las relaciones de los Data Pipelines** (abarcando ingesta, transformación, movimiento de datos, Data Warehouses, OLTP vs. OLAP, ETL/ELT y flujos de trabajo de IA) para responder a tu consulta?",
+      "claims": [
+        {
+          "text": "Tu cuaderno **Data Pipelines** sigue estando vacío y no contiene fuentes o documentos sobre este tema. Para mantener el compromiso de ofrecer únicamente respuestas fundamentadas y verificables en tus ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "5db2328d-d115-4502-a9cf-d39fcaf33a62",
+  "duration_ms": 34591,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-17-data-pipelines\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

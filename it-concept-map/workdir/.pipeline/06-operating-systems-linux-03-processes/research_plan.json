@@ -1,0 +1,59 @@
+{
+  "questions": [],
+  "concept_id": "06-operating-systems-linux-03-processes",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Processes y para que sirve (Programas ejecutándose y su ciclo de vida)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Processes en Operating Systems / Linux"
+    ],
+    "context": [
+      "Como se usa Processes en el contexto profesional de Operating Systems / Linux"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Concurrency",
+      "ask": "Como se relaciona Processes con Concurrency?"
+    },
+    {
+      "with": "Servidor",
+      "ask": "Como se relaciona Processes con Servidor?"
+    },
+    {
+      "with": "Threads",
+      "ask": "Como se relaciona Processes con Threads?"
+    },
+    {
+      "with": "CPU & Scheduling",
+      "ask": "Como se relaciona Processes con CPU & Scheduling?"
+    },
+    {
+      "with": "Memory Management",
+      "ask": "Como se relaciona Processes con Memory Management?"
+    },
+    {
+      "with": "Stack & Heap",
+      "ask": "Como se relaciona Processes con Stack & Heap?"
+    },
+    {
+      "with": "Daemons / Services",
+      "ask": "Como se relaciona Processes con Daemons / Services?"
+    }
+  ],
+  "queries": [
+    "site:man7.org Processes",
+    "site:kernel.org Processes",
+    "site:ostep.org Processes",
+    "site:wiki.archlinux.org Processes",
+    "site:gnu.org Processes",
+    "site:docs.docker.com Processes",
+    "site:opencontainers.org Processes"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

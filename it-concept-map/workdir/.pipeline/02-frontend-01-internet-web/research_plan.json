@@ -1,0 +1,30 @@
+{
+  "questions": [],
+  "concept_id": "02-frontend-01-internet-web",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Internet & Web y para que sirve (HTTP, HTTPS, URLs, request/response, cliente-servidor)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Internet & Web en Frontend"
+    ],
+    "context": [
+      "Como se usa Internet & Web en el contexto profesional de Frontend"
+    ]
+  },
+  "relation_questions": [],
+  "queries": [
+    "site:developer.mozilla.org Internet & Web",
+    "site:web.dev Internet & Web",
+    "site:html.spec.whatwg.org Internet & Web",
+    "site:w3.org Internet & Web",
+    "site:react.dev Internet & Web",
+    "site:typescriptlang.org Internet & Web",
+    "site:developer.chrome.com Internet & Web"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

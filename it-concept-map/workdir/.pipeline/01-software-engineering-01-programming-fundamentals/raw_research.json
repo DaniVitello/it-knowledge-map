@@ -5,10 +5,10 @@
     {
       "qid": "a1",
       "group": "a",
-      "answer_md": "No hay fuentes en tu libreta sobre los **fundamentos de programación** (variables, funciones, tipos, flujo de control y abstracción).\n\n¿Quieres que haga una **investigación en la web** sobre este tema para responder a tu pregunta?",
+      "answer_md": "No veo fuentes cargadas en tu cuaderno sobre los **fundamentos de programación** (*Programming Fundamentals*) ni sobre sus conceptos clave (variables, funciones, tipos, flujo de control y abstracción).\n\n¿Te gustaría que realice una **investigación en la web** sobre este tema para responder a tu pregunta?",
       "claims": [
         {
-          "text": "No hay fuentes en tu libreta sobre los **fundamentos de programación** (variables, funciones, tipos, flujo de control y abstracción).",
+          "text": "No veo fuentes cargadas en tu cuaderno sobre los **fundamentos de programación** (*Programming Fundamentals*) ni sobre sus conceptos clave (variables, funciones, tipos, flujo de control y abstracción)",
           "source_ids": [],
           "unverified": true
         }
@@ -17,10 +17,10 @@
     {
       "qid": "b1",
       "group": "b",
-      "answer_md": "Aún no tienes fuentes cargadas en tu libreta **Programming Fundamentals**.\n\n¿Quieres que haga una **investigación en la web** sobre cómo funcionan estos fundamentos (variables, funciones, tipos, flujo de control y abstracción) en la ingeniería de software para responder a tu pregunta y ofrecerte añadir esas fuentes a tu libreta?",
+      "answer_md": "Esto es lo que encontré sobre **los fundamentos de programación en la ingeniería de software**:\n\nLos fundamentos de programación constituyen los principios y conceptos universales e independientes del lenguaje que permiten traducir lógica abstracta en software funcional, mantenible y escalable. En ingeniería de software, estos elementos son las herramientas primarias para resolver problemas computacionales y estructurar código de calidad profesional.\n\n**Temas clave identificados:**\n1. **Variables y Tipos de Datos:** Las variables actúan como contenedores nombrados en memoria para almacenar información, mientras que los tipos de datos definen las reglas y operaciones permitidas sobre esa información.\n2. **Estructuras de Flujo de Control (Control Flow):** Determinan el orden en que se ejecutan las instrucciones del programa a través de secuencias, condicionales (tomar decisiones) y bucles (repetir tareas).\n3. **Funciones y Modularidad:** Encapsulan bloques de lógica reutilizables, lo que permite dividir problemas complejos en partes más pequeñas y fáciles de mantener sin duplicar código.\n4. **Abstracción:** Oculta los detalles técnicos complejos de la implementación interna detrás de interfaces simples y comprensibles, facilitando la construcción de arquitecturas extensas.\n\n📥 El informe de investigación completo se incluye como la primera fuente en la tarjeta de importación a continuación: impórtalo para consultar los hallazgos directamente en tu cuaderno.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-programming-fundamentals\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-programming-fundamentals\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos y recursos educativos sobre fundamentos de programación en ingeniería de software\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Informe de investigación: Fundamentos de programación\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiRlMGI3OTQyMy05MjVjLTRlYzUtYjI4MC0xMDc1MzA2ZjVhNTgSCxIHENqe1-OQCxgB&filename=Research_report_Programming_Fundamentals.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Informe de investigación\",\n          \"summary\": \"Informe completo con 6 fuentes explicativas sobre variables, funciones, tipos, flujo de control y abstracción.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"Programming Fundamentals: Essential Concepts And Approaches\",\n          \"url\": \"https://spires.co/online-programming-tutors/undergraduate/programming-fundamentals-essential-concepts-and-approaches\",\n          \"sourceName\": \"Spires\",\n          \"summary\": \"Explicación de variables, tipos de datos, control de flujo y funciones en el desarrollo de software.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"Programming Fundamentals Overview\",\n          \"url\": \"https://study.com/academy/lesson/programming-fundamentals.html\",\n          \"sourceName\": \"Study.com\",\n          \"summary\": \"Lección sobre conceptos centrales e independientes del lenguaje para la resolución computacional de problemas.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"Programming Tutorial | Introduction, Basic Concepts\",\n          \"url\": \"https://www.geeksforgeeks.org/computer-science-fundamentals/programming-tutorial/\",\n          \"sourceName\": \"GeeksforGeeks\",\n          \"summary\": \"Guía sobre los fundamentos de código, estructuras lógicas y funciones en programación.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"What are the basic fundamental concepts of programming?\",\n          \"url\": \"https://dev.to/daphnieel/what-are-the-basic-fundamental-concepts-of-programming-30nb\",\n          \"sourceName\": \"DEV Community\",\n          \"summary\": \"Artículo sobre control de flujo, funciones puras y principios de abstracción.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"Explore 5 Basic Programming Concepts That Elevate Your Coding Skills\",\n          \"url\": \"https://www.syncfusion.com/web-stories/explore-5-basic-programming-concepts-that-elevate-your-coding-skills\",\n          \"sourceName\": \"Syncfusion\",\n          \"summary\": \"Resumen sobre variables, estructuras de control y desarrollo orientado a objetos.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
       "claims": [
         {
-          "text": "Aún no tienes fuentes cargadas en tu libreta **Programming Fundamentals**.",
+          "text": "Esto es lo que encontré sobre **los fundamentos de programación en la ingeniería de software**:",
           "source_ids": [],
           "unverified": true
         }
@@ -29,10 +29,10 @@
     {
       "qid": "c1",
       "group": "c",
-      "answer_md": "Tu libreta sigue sin tener fuentes sobre el **estado actual y las relaciones de los fundamentos de programación** (variables, funciones, tipos, flujo de control, abstracción, runtimes, backend, Python, etc.).\n\n¿Quieres que haga una **investigación en la web** sobre cómo se relacionan actualmente estos conceptos en la ingeniería de software y te presente los resultados para que decidas si añadirlos como fuentes a tu libreta?",
+      "answer_md": "Aún no se han importado las fuentes de la investigación a tu cuaderno. \n\n¿Te gustaría que importe las fuentes primero? Una vez importadas, podré analizar su contenido para responder a tu pregunta sobre el estado actual y las relaciones entre variables, funciones, tipos, flujo de control y abstracción. \n\nTambién puedes desplazarte hacia arriba en el chat e importar las fuentes directamente haciendo clic en el botón de la tarjeta de resultados.",
       "claims": [
         {
-          "text": "Tu libreta sigue sin tener fuentes sobre el **estado actual y las relaciones de los fundamentos de programación** (variables, funciones, tipos, flujo de control, abstracción, runtimes, backend, Python",
+          "text": "Aún no se han importado las fuentes de la investigación a tu cuaderno. ",
           "source_ids": [],
           "unverified": true
         }
@@ -40,8 +40,8 @@
     }
   ],
   "source_ids": [],
-  "notebook_id": "fe7a4106-ed1e-4bbf-9a61-0080d3c8ff17",
-  "duration_ms": 33965,
+  "notebook_id": "5bb60eaf-1b8e-4138-a8ff-0f37ebe288c8",
+  "duration_ms": 62968,
   "backend_provider": "notebooklm",
   "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\01-software-engineering-01-programming-fundamentals\\research_plan.json",
   "gap_pass_done": true,

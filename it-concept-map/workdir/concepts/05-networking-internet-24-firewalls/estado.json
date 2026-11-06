@@ -1,0 +1,31 @@
+{
+  "concept_id": "05-networking-internet-24-firewalls",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "failed_phase": "researching",
+    "failed_reason": "error",
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-24-firewalls\\sources.json",
+    "notebook_id": "ccc78687-b3e7-4654-a22e-9c9ed3ab4b88",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-24-firewalls\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-24-firewalls\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\05-networking-internet-24-firewalls\\24 - Firewalls.md.20261105T233541Z-1bd532.bak",
+      "outside_hash": "950460be33edff7073667305f89f878e48f6cfd7da1c0c788799a2b30338e0d0",
+      "inside_hash": "e08e4d10553041a9ab38625f2174616857aa67f19172dc4fdd1b7d671642f752",
+      "written_at": "2026-11-05T23:35:41.576059+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:34:53.127125+00:00",
+  "updated_at": "2026-11-05T23:35:41.593551+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:35:41.593551+00:00",
+    "created_at": "2026-11-05T23:34:53.127125+00:00"
+  },
+  "schema_version": "1.0.0"
+}

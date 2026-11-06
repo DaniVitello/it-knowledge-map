@@ -1,0 +1,50 @@
+{
+  "concept_id": "02-frontend-01-internet-web",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No tienes fuentes agregadas a tu libreta aún para responder sobre estos conceptos (HTTP, HTTPS, URLs, modelo cliente-servidor y la arquitectura Web).\n\n¿Quieres que realice una **investigación en la web** sobre este tema para explicártelo?",
+      "claims": [
+        {
+          "text": "No tienes fuentes agregadas a tu libreta aún para responder sobre estos conceptos (HTTP, HTTPS, URLs, modelo cliente-servidor y la arquitectura Web).",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Aquí tienes lo que encontré sobre **cómo funciona Internet y la Web en el Frontend**:\n\nSegún documentación técnica de fuentes como **MDN Web Docs**, **freeCodeCamp** y **Ada Frontend**, el ecosistema web funciona mediante una arquitectura distribuida donde el **Frontend** actúa como el cliente visual que interactúa con el usuario, realizando peticiones a través de redes cifradas hacia un servidor remoto (**Backend**) que procesa y devuelve los recursos solicitados.\n\n**Temas clave detectados:**\n1. **Modelo Cliente-Servidor y Frontend**: El cliente (navegador o app web) representa la capa de presentación (HTML, CSS y JavaScript). El servidor remoto procesa la lógica de negocio, accede a bases de datos y responde a las solicitudes del cliente.\n2. **Estructura de la URL**: El Localizador Uniforme de Recursos identifica la dirección exacta del servidor y recurso deseado, desglosado en protocolo (`https://`), nombre de dominio o IP, puerto, ruta (`/ruta/recurso`) y parámetros de consulta.\n3. **Protocolos HTTP y HTTPS**: HTTP es el conjunto de reglas estándar para transferir datos en la Web. HTTPS incorpora una capa de cifrado de seguridad (SSL/TLS) para proteger la privacidad e integridad de los datos en tránsito.\n4. **Ciclo Petición/Respuesta (Request/Response)**: El cliente realiza una solicitud (Request) usando métodos estándar como `GET`, `POST`, `PUT` o `DELETE`. El servidor procesa el pedido y responde (Response) enviando un código de estado (ej. 200 OK, 404 Not Found) junto con los archivos o datos (JSON/HTML/CSS) necesarios.\n\n📥 El reporte completo de investigación está incluido como la primera fuente en la tarjeta de importación a continuación; impórtalo para poder conversar directamente sobre estos contenidos y analizarlos en tu libreta.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-internet-web-frontend\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-internet-web-frontend\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos y guías de desarrollo web sobre arquitectura cliente-servidor, HTTP/HTTPS y el flujo de peticiones web\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Reporte de investigación: Internet & Web en Frontend\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQ3YTNhZDQ5My1kOWNiLTQzMTQtOGUwNy00NmU1ZTFiOTg2Y2MSCxIHENqe1-OQCxgB&filename=Reporte_de_investigacin_Internet__Web_en_Frontend.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Reporte de investigación\",\n          \"summary\": \"Reporte completo con 6 fuentes explicativas sobre cliente-servidor, URLs, HTTP/HTTPS y el ciclo request/response.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"Generalidades del protocolo HTTP\",\n          \"url\": \"https://developer.mozilla.org/es/docs/Web/HTTP/Guides/Overview\",\n          \"sourceName\": \"MDN Web Docs\",\n          \"summary\": \"Guía de referencia sobre la arquitectura HTTP, clientes (navegadores), servidores web y proxies.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"Cliente-Servidor y HTTP - Introducción\",\n          \"url\": \"https://tute-avalos.com/presentaciones/cliente-servidor-http\",\n          \"sourceName\": \"Tute Ávalos\",\n          \"summary\": \"Explicación clara del modelo cliente-servidor, separando Frontend (interfaz) y Backend (datos y lógica).\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"Internet y HTTP\",\n          \"url\": \"https://frontend.adaitw.org/docs/internet-http/ihttp\",\n          \"sourceName\": \"Ada Frontend\",\n          \"summary\": \"Visión general sobre transmisión de recursos web, protocolo HTTP y operaciones CRUD.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"Redes HTTP en JavaScript – Manual para Principiantes\",\n          \"url\": \"https://www.freecodecamp.org/espanol/news/http-networking-in-javascript-handbook-for-beginners/\",\n          \"sourceName\": \"freeCodeCamp\",\n          \"summary\": \"Manual sobre cómo el código Frontend en JavaScript realiza peticiones HTTP a servidores.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"¿Qué es HTTP y cómo funciona?\",\n          \"url\": \"https://www.azion.com/es/learning/ddos/que-es-http/\",\n          \"sourceName\": \"Azion\",\n          \"summary\": \"Análisis de la conexión TCP/IP, peticiones HTTP y la capa de cifrado segura HTTPS.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Aquí tienes lo que encontré sobre **cómo funciona Internet y la Web en el Frontend**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no se han importado a tu libreta las fuentes encontradas en la investigación anterior.\n\n¿Quieres que las importe por ti para responder a tu pregunta basándome en el contenido de esas fuentes? También puedes desplazarte hacia arriba en el chat e importarlas directamente haciendo clic en la tarjeta de investigación.",
+      "claims": [
+        {
+          "text": "Aún no se han importado a tu libreta las fuentes encontradas en la investigación anterior.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "37d4bd66-5705-4b00-a1fd-d1877ccdd0f5",
+  "duration_ms": 59484,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\02-frontend-01-internet-web\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

@@ -1,0 +1,50 @@
+{
+  "concept_id": "06-operating-systems-linux-02-kernel",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No tienes fuentes guardadas en tu libreta aún para responder a esta pregunta sobre el Kernel.\n\n¿Quieres que realice una **investigación en la web** sobre qué es el Kernel, para qué sirve y su relación con el sistema operativo y las llamadas al sistema (*System Calls*)?",
+      "claims": [
+        {
+          "text": "No tienes fuentes guardadas en tu libreta aún para responder a esta pregunta sobre el Kernel.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Aquí tienes lo que encontré sobre el **funcionamiento del Kernel en Sistemas Operativos y Linux**:\n\nEl Kernel de Linux actúa como el puente principal de control y seguridad entre el hardware de la computadora (CPU, RAM, discos, red) y las aplicaciones de usuario. Funciona delimitando estrictamente los permisos a través de dos modos de ejecución del procesador: el **modo usuario** (*User Space*), donde corren las aplicaciones comunes de forma aislada, y el **modo kernel** (*Kernel Space*), donde el núcleo tiene control directo e irrestricto sobre la memoria y los componentes físicos del equipo.\n\n**Temas clave identificados en la investigación:**\n\n1. **Aislamiento y Modos de Ejecución (User Mode vs. Kernel Mode):** El procesador impone niveles de privilegio (por ejemplo, Ring 0 y Ring 3 en arquitecturas x86). Esto evita que una aplicación que falle o tenga un error comprometa todo el sistema o acceda a datos de otros procesos.\n2. **Llamadas al Sistema (*System Calls*):** Son la interfaz programática y el mecanismo formal para que las aplicaciones soliciten servicios al Kernel (crear procesos con `fork()`, escribir en disco con `write()`, etc.). Al realizar una *syscall*, el procesador conmuta temporalmente del modo usuario al modo kernel mediante una interrupción de software o instrucción especial (`syscall`/`sysenter`).\n3. **Gestión de Recursos Centralizada:** El Kernel incluye el planificador de tareas (*scheduler*) para repartir el tiempo de CPU entre los procesos activos, administra la memoria RAM mediante paginación (evitando conflictos entre programas) y utiliza controladores (*drivers*) para hablar el lenguaje específico de cada dispositivo físico.\n4. **Arquitectura Monolítica de Linux:** A diferencia de los microkernels, el Kernel de Linux ejecuta la gestión de memoria, el sistema de archivos, la pila de red y el control de procesos dentro del mismo espacio de direcciones, maximizando el rendimiento del sistema.\n\n📥 El informe completo de investigación se incluye como la primera fuente en la tarjeta de importación a continuación — impórtalo para chatear directamente con los hallazgos.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-kernel-linux\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-kernel-linux\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos y documentación técnica sobre el funcionamiento del Kernel en Linux y Sistemas Operativos\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Informe de investigación: Cómo funciona el Kernel en Linux\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQ4MDk3MjkwYS0xMDg4LTQ2ZjEtODMzNi1iODZiOWQxMjg2MTASCxIHEPnP8YvcBhgB&filename=Informe_de_investigacion_Como_funciona_el_Kernel_en_Linux.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Informe de investigación\",\n          \"summary\": \"Informe completo de investigación con 8 fuentes seleccionadas sobre el Kernel de Linux, System Calls y gestión de memoria y hardware.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"¿Qué es el kernel Linux? y ¿Cuáles son sus funciones?\",\n          \"url\": \"https://www.redhat.com/es/topics/linux/what-is-the-linux-kernel\",\n          \"sourceName\": \"Red Hat\",\n          \"summary\": \"Visión general de las tres capas del sistema (hardware, kernel y procesos) y la división entre espacio de kernel y usuario.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"System Calls — The Linux Kernel documentation\",\n          \"url\": \"https://linux-kernel-labs.github.io/refs/heads/master/lectures/syscalls.html\",\n          \"sourceName\": \"Linux Kernel Labs\",\n          \"summary\": \"Documentación técnica detallada sobre cómo se implementan las llamadas al sistema y la transición de registros del procesador.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"System calls: ¿qué son y para qué se emplean?\",\n          \"url\": \"https://www.ionos.es/digitalguide/servidores/know-how/que-son-las-system-calls-de-linux/\",\n          \"sourceName\": \"IONOS\",\n          \"summary\": \"Explicación clara sobre el rol de seguridad y estabilidad que cumplen las system calls en Linux.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"Cómo funciona el kernel de Linux, explicado simple\",\n          \"url\": \"https://donweb.news/como-funciona-kernel-linux/\",\n          \"sourceName\": \"DonWeb News\",\n          \"summary\": \"Desglose práctico de conceptos como context switching, MMU, fork() y exec() en el ciclo de vida de los procesos.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Aquí tienes lo que encontré sobre el **funcionamiento del Kernel en Sistemas Operativos y Linux**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no se han importado a tu libreta las fuentes encontradas en la investigación anterior.\n\n¿Quieres que **importe esas fuentes** a tu libreta? Una vez agregadas, podré responder a tus preguntas sobre el estado actual y las relaciones del Kernel basándome directamente en ese contenido. \n\nTambién puedes importarlas tú mismo seleccionándolas en la **tarjeta de importación** que aparece más arriba.",
+      "claims": [
+        {
+          "text": "Aún no se han importado a tu libreta las fuentes encontradas en la investigación anterior.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "24ab1166-3e1d-4cfb-9e3f-54dba09bcda6",
+  "duration_ms": 54485,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\06-operating-systems-linux-02-kernel\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

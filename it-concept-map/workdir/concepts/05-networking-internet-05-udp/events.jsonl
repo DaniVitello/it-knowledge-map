@@ -1,0 +1,9 @@
+{"ts": "2026-11-05T23:13:15.618902+00:00", "run_id": "run-20261105-201026-0a44b6", "concept_id": "05-networking-internet-05-udp", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:14:07.146923+00:00", "run_id": "run-20261105-201026-0a44b6", "concept_id": "05-networking-internet-05-udp", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T23:14:10.978345+00:00", "run_id": "run-20261105-201026-0a44b6", "concept_id": "05-networking-internet-05-udp", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T23:14:11.010145+00:00", "run_id": "run-20261105-201026-0a44b6", "concept_id": "05-networking-internet-05-udp", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T23:14:11.037435+00:00", "run_id": "run-20261105-201026-0a44b6", "concept_id": "05-networking-internet-05-udp", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T23:14:11.057992+00:00", "run_id": "run-20261105-201026-0a44b6", "concept_id": "05-networking-internet-05-udp", "event": "notebook_delete_failed", "notebook_id": "7b186f13-faf7-42d7-ac6c-d54645a26c5f", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T23:14:11.068623+00:00", "run_id": "run-20261105-201026-0a44b6", "concept_id": "05-networking-internet-05-udp", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T23:19:28.498091+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-05-udp", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:19:28.568269+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-05-udp", "event": "run_end", "status": "completed"}

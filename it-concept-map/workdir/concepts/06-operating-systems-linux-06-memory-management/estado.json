@@ -1,0 +1,24 @@
+{
+  "concept_id": "06-operating-systems-linux-06-memory-management",
+  "status": "failed",
+  "last_good_state": "synthesized",
+  "checkpoint": null,
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\06-operating-systems-linux-06-memory-management\\sources.json",
+    "notebook_id": "d1ca0a19-5784-4380-8add-da38aff7cb01",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\06-operating-systems-linux-06-memory-management\\synthesis.json",
+    "failed_phase": "validating",
+    "failed_reason": "validation",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\06-operating-systems-linux-06-memory-management\\validation.json"
+  },
+  "error": "Encabezado faltante: ## Objetivo; Encabezado faltante: ## Esqueleto (el 20% esencial); Encabezado faltante: ## Como funciona; Encabezado faltante: ## Detalles; Encabezado faltante: ## Ejemplo minimo; Encabezado faltante: ## Errores comunes; Encabezado faltante: ## Estado actual; Encabezado faltante: ## Conexiones; Encabezado faltante: ## Ruta de estudio; Encabezado faltante: ## Preguntas de repaso",
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:44:16.808476+00:00",
+  "updated_at": "2026-11-05T23:45:21.140406+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:45:21.140369+00:00",
+    "created_at": "2026-11-05T23:44:16.808476+00:00"
+  },
+  "schema_version": "1.0.0"
+}

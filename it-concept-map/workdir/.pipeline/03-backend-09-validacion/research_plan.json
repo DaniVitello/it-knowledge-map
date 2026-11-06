@@ -1,0 +1,40 @@
+{
+  "questions": [],
+  "concept_id": "03-backend-09-validacion",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Validación y para que sirve (Input validation, schemas, sanitización)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Validación en Backend"
+    ],
+    "context": [
+      "Como se usa Validación en el contexto profesional de Backend"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Error Handling",
+      "ask": "Como se relaciona Validación con Error Handling?"
+    },
+    {
+      "with": "Middleware",
+      "ask": "Como se relaciona Validación con Middleware?"
+    }
+  ],
+  "queries": [
+    "site:developer.mozilla.org Validación",
+    "site:rfc-editor.org Validación",
+    "site:datatracker.ietf.org Validación",
+    "site:owasp.org Validación",
+    "site:postgresql.org Validación",
+    "site:redis.io Validación",
+    "site:12factor.net Validación",
+    "site:learn.microsoft.com Validación"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

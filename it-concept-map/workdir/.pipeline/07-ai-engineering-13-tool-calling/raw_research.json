@@ -1,0 +1,50 @@
+{
+  "concept_id": "07-ai-engineering-13-tool-calling",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No encuentro fuentes en tu libreta sobre **Tool Calling** (modelos que utilizan funciones, APIs y herramientas) ni sobre los conceptos relacionados que mencionas.\n\nComo tu libreta no contiene fuentes guardadas aún, no puedo responder directamente a partir de tu material. ¿Quieres que realice una **investigación en la web** sobre qué es Tool Calling, para qué sirve y cómo se conecta con temas como *Prompt Engineering*, *Structured Outputs* y *Agentes de IA*?",
+      "claims": [
+        {
+          "text": "No encuentro fuentes en tu libreta sobre **Tool Calling** (modelos que utilizan funciones, APIs y herramientas) ni sobre los conceptos relacionados que mencionas.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Aquí tienes lo que encontré sobre **Tool Calling en AI Engineering**:\n\n**Tool Calling** (o uso de herramientas) es el patrón arquitectónico y la capacidad que permite a un modelo de lenguaje (LLM) interactuar con sistemas externos —APIs, bases de datos, ejecutores de código o herramientas web— para resolver tareas complejas de forma dinámica, superando los límites de su conocimiento preentrenado.\n\n**Aspectos clave identificados:**\n\n1. **Diferencia entre Function Calling y Tool Calling**: *Function Calling* es la capacidad nativa del LLM para estructurar parámetros y JSON según un esquema especificado; *Tool Calling* es el ciclo arquitectónico completo que incluye la invocación, la ejecución real por parte del entorno cliente y la retroalimentación al contexto del modelo.\n2. **El ciclo de ejecución en 5 pasos**: \n   - El sistema define la herramienta mediante un esquema JSON (nombre, descripción, parámetros).\n   - El usuario envía una consulta y el modelo detecta que necesita información o una acción externa.\n   - El LLM genera una salida estructurada (solicitud de herramienta) en lugar de una respuesta final.\n   - La capa de aplicación (cliente) ejecuta la API/función de forma determinista (el LLM **no** ejecuta código directamente).\n   - El resultado devuelto se añade al historial del modelo para que sintetice la respuesta o realice un siguiente paso.\n3. **Conexión con el ecosistema de AI Engineering**:\n   - **Structured Outputs**: Garantizan que el LLM devuelva argumentos que respeten estrictamente el esquema JSON requerido.\n   - **Prompt Engineering**: Las descripciones y nombres de las herramientas actúan como instrucciones del sistema; cuanto más claras sean, menor será el margen de error del modelo al elegirlas.\n   - **Agentes y AI Workflows**: Tool Calling es el bloque fundamental sobre el que se construyen los agentes autónomos (bucles ReAct, delegación multiagente).\n   - **Context Engineering y Protocolos (MCP)**: El catálogo de herramientas consume espacio en la ventana de contexto. Protocolos como *Model Context Protocol* (MCP) estandarizan el descubrimiento y ejecución de herramientas de forma eficiente.\n\n📥 El informe de investigación completo se incluye como la primera fuente en la tarjeta de importación a continuación: impórtalo para chatear directamente con los hallazgos.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-tool-calling\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-tool-calling\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos técnicos, guías y documentación sobre Tool Calling, Function Calling y Agentes en AI Engineering\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Informe de investigación: Tool Calling en AI Engineering\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQwYmMyNTU5Ni1hOWU1LTQ2YjUtODdiNC0wYTllMjU2ZThlZDgSCxIHEPnP8YvcBhgB&filename=Informe_de_investigacin_Tool_Calling_en_AI_Engineering.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Informe de investigación\",\n          \"summary\": \"Informe completo con 6 fuentes sintetizadas sobre la definición, arquitectura y ecosistema de Tool Calling\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"What Is Tool Calling?\",\n          \"url\": \"https://www.ibm.com/think/topics/tool-calling\",\n          \"sourceName\": \"IBM Think\",\n          \"summary\": \"Explicación detallada de cómo Tool Calling convierte modelos estáticos en agentes digitales proactivos.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"What is Tool Calling?\",\n          \"url\": \"https://www.databricks.com/blog/what-is-tool-calling\",\n          \"sourceName\": \"Databricks Blog\",\n          \"summary\": \"Visión técnica sobre el ciclo de invocación de herramientas, la diferencia con Function Calling y el marco de evaluación BFCL.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"Function Calling in AI Agents\",\n          \"url\": \"https://www.promptingguide.ai/agents/function-calling\",\n          \"sourceName\": \"Prompt Engineering Guide\",\n          \"summary\": \"Guía sobre cómo Function Calling impulsa el razonamiento y la acción en arquitecturas de agentes de IA.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"What Is AI Agent Tool Calling? (MCP, A2A)\",\n          \"url\": \"https://www.arcade.dev/blog/what-is-ai-agent-tool-calling/\",\n          \"sourceName\": \"Arcade.dev\",\n          \"summary\": \"Análisis de protocolos como Model Context Protocol (MCP) y los retos de contexto y autorización en sistemas de producción.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"Exploiting Tool and Function Calling in LLM Agents\",\n          \"url\": \"https://blog.sentry.security/exploiting-tool-and-function-calling-in-llm-agents/\",\n          \"sourceName\": \"Sentry Security Blog\",\n          \"summary\": \"Estudio sobre vectores de ataque e inyecciones de prompts indirectas asociadas a la ejecución de herramientas.\"\n        },\n        {\n          \"id\": \"src-6\",\n          \"title\": \"Tool Calling vs Function Calling: Complete Guide for AI\",\n          \"url\": \"https://hinterbuild.com/blog/tool-calling-vs-function-calling-explained\",\n          \"sourceName\": \"HinterBuild\",\n          \"summary\": \"Comparativa directa entre la función nativa de estructuración JSON y el patrón arquitectónico global de herramientas.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Aquí tienes lo que encontré sobre **Tool Calling en AI Engineering**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Todavía no se han importado a tu libreta las fuentes encontradas en la investigación anterior. \n\n¿Quieres que las importe ahora? Una vez agregadas a tu libreta, podré responder en detalle a tus preguntas y analizar el estado actual y las relaciones de **Tool Calling** basándome directamente en ese contenido. \n\nTambién puedes hacer clic directamente en el botón **Importar** dentro de la tarjeta de fuentes que aparece arriba.",
+      "claims": [
+        {
+          "text": "Todavía no se han importado a tu libreta las fuentes encontradas en la investigación anterior. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "894ab968-0147-4c6c-85d9-f0c15e2742c0",
+  "duration_ms": 56481,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\07-ai-engineering-13-tool-calling\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

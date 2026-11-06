@@ -1,0 +1,2 @@
+{"ts": "2026-11-05T23:56:43.491614+00:00", "run_id": "run-20261105-205426-a51c08", "concept_id": "07-ai-engineering-09-embeddings", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:57:01.346607+00:00", "run_id": "run-20261105-205426-a51c08", "concept_id": "07-ai-engineering-09-embeddings", "event": "phase_failed", "phase": "research", "error": "research (79acbc4a-ed9a-4456-a110-56145c74d9d8): Chat request was rate limited or rejected by the API. Wait a few seconds and try again."}

@@ -1,0 +1,14 @@
+{"ts": "2026-10-30T05:31:52.120873+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-16-autenticacion", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:32:07.684924+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-16-autenticacion", "event": "phase_failed", "phase": "research", "error": "research (6f6bebf9-c93e-499a-bd00-ca5c794121c8): Chat request was rate limited or rejected by the API. Wait a few seconds and try again."}
+{"ts": "2026-11-05T18:23:09.453432+00:00", "run_id": "run-20261105-151942-eb6f22", "concept_id": "03-backend-16-autenticacion", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-11-05T18:23:40.747531+00:00", "run_id": "run-20261105-151942-eb6f22", "concept_id": "03-backend-16-autenticacion", "event": "phase_failed", "phase": "research", "error": "create_notebook (03-backend-16-autenticacion): The server rejected this request (resource exhausted)."}
+{"ts": "2026-11-05T18:23:50.741622+00:00", "run_id": "run-20261105-152024-1e1855", "concept_id": "03-backend-16-autenticacion", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-11-05T19:30:18.180330+00:00", "run_id": "run-20261105-162522-4ca118", "concept_id": "03-backend-16-autenticacion", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T19:30:24.316554+00:00", "run_id": "run-20261105-162522-4ca118", "concept_id": "03-backend-16-autenticacion", "event": "phase_failed", "phase": "research", "error": "Transicion invalida: researching -> researching"}
+{"ts": "2026-11-05T19:49:00.117294+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-16-autenticacion", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T19:49:54.398212+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-16-autenticacion", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T19:49:59.624978+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-16-autenticacion", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T19:49:59.672344+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-16-autenticacion", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T19:49:59.713027+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-16-autenticacion", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T19:49:59.734278+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-16-autenticacion", "event": "notebook_delete_failed", "notebook_id": "fcee97ae-984c-4291-9f3e-ffa5eed58a8b", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T19:49:59.745627+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-16-autenticacion", "event": "run_end", "status": "completed"}

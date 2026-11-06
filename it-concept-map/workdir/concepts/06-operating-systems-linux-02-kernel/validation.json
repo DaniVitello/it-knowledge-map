@@ -1,0 +1,10 @@
+{
+  "concept_id": "06-operating-systems-linux-02-kernel",
+  "is_valid": true,
+  "issues": [],
+  "warnings": [],
+  "score": 1.0,
+  "checked_at": "2026-11-05T23:41:02.972023+00:00",
+  "blocking_failures": [],
+  "verdict": "approved"
+}

@@ -1,0 +1,11 @@
+{"ts": "2026-10-30T05:21:23.519545+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-24-rendering-moderno", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:21:33.745992+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-24-rendering-moderno", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:21:39.820780+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-24-rendering-moderno", "event": "phase_failed", "phase": "research", "error": "Transicion invalida: researching -> researching"}
+{"ts": "2026-10-30T05:21:53.904858+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-24-rendering-moderno", "event": "phase_done", "phase": "research"}
+{"ts": "2026-10-30T05:21:58.195917+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-24-rendering-moderno", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-10-30T05:21:58.232252+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-24-rendering-moderno", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-10-30T05:21:58.258286+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-24-rendering-moderno", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-10-30T05:21:58.280937+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-24-rendering-moderno", "event": "notebook_delete_failed", "notebook_id": "9887a13f-c6e9-45d3-9692-2a4b8c533b5b", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-10-30T05:21:58.295585+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-24-rendering-moderno", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T22:40:06.137166+00:00", "run_id": "run-20261105-193941-b2c223", "concept_id": "02-frontend-24-rendering-moderno", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T22:40:06.204341+00:00", "run_id": "run-20261105-193941-b2c223", "concept_id": "02-frontend-24-rendering-moderno", "event": "run_end", "status": "completed"}

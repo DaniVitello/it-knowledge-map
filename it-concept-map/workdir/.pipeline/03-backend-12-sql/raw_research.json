@@ -1,0 +1,50 @@
+{
+  "concept_id": "03-backend-12-sql",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "**No hay fuentes agregadas en tu libreta** todavía sobre este tema. Para garantizar respuestas 100% verificables y basadas en tus propios materiales, no utilizo información externa fuera de lo que hayas subido.\n\n¿Quieres que realice una **búsqueda en la web** para obtener información detallada sobre qué es SQL, para qué sirve y cómo funcionan los comandos `SELECT`, `JOIN`, los índices y las transacciones? Si confirmas, investigaré el tema y te presentaré los resultados.",
+      "claims": [
+        {
+          "text": "**No hay fuentes agregadas en tu libreta** todavía sobre este tema. Para garantizar respuestas 100% verificables y basadas en tus propios materiales, no utilizo información externa fuera de lo que hay",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Tampoco cuento con fuentes registradas en tu libreta sobre el uso de **SQL en el backend**.\n\n¿Quieres que realice una **búsqueda en la web** para investigar cómo se conecta e integra SQL en una arquitectura backend (ejecución de `SELECT`, combinaciones con `JOIN`, optimización mediante **índices** y control de integridad con **transacciones**)? Si estás de acuerdo, buscaré la información y te la presentaré aquí.",
+      "claims": [
+        {
+          "text": "Tampoco cuento con fuentes registradas en tu libreta sobre el uso de **SQL en el backend**.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Tu libreta aún no incluye fuentes sobre **SQL** ni sobre los temas que mencionas (`SELECT`, `JOIN`, índices, transacciones y sus relaciones). \n\n¿Quieres que realice una **búsqueda en la web** para investigar sobre el estado actual de SQL y cómo se relacionan estos conceptos? Si me das luz verde, buscaré la información y te compartiré los hallazgos.",
+      "claims": [
+        {
+          "text": "Tu libreta aún no incluye fuentes sobre **SQL** ni sobre los temas que mencionas (`SELECT`, `JOIN`, índices, transacciones y sus relaciones). ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "11697641-6ffd-4b25-ba92-27c40e9a2ad3",
+  "duration_ms": 40469,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\03-backend-12-sql\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

@@ -1,0 +1,50 @@
+{
+  "concept_id": "07-ai-engineering-22-observability",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No veo fuentes agregadas en tu libreta sobre la **observabilidad** (incluyendo *traces*, latencia, uso de tokens, fallos y monitoreo de sistemas/IA). \n\n¿Te gustaría que realice una investigación en la web sobre este tema para responder a tu pregunta?",
+      "claims": [
+        {
+          "text": "No veo fuentes agregadas en tu libreta sobre la **observabilidad** (incluyendo *traces*, latencia, uso de tokens, fallos y monitoreo de sistemas/IA). ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Realicé una investigación sobre **Observabilidad en AI Engineering** para responder a tu consulta.\n\nEn **AI Engineering**, la observabilidad es la capacidad de entender, rastrear y diagnosticar qué ocurre internamente durante la ejecución de una aplicación impulsada por modelos de inteligencia artificial (como LLMs o agentes). A diferencia de la supervisión de software tradicional (que solo verifica si un servidor o API responde con HTTP 200), la observabilidad en IA mide el comportamiento probabilístico y no determinista del modelo: qué prompts se enviaron, qué contexto se recuperó, la precisión del resultado, la latencia y los costos asociados.\n\n---\n\n### **Cómo funciona la Observabilidad en IA**\n\n1. **Trazabilidad de extremo a extremo (*Traces & Spans*)**: Cada solicitud de un usuario genera una traza (*trace*). Dentro de esa traza, cada subpaso (la consulta a la base de vectores en RAG, la llamada al modelo de lenguaje, la ejecución de herramientas externas o la validación del sistema) se registra como un *span* individual con sus entradas, salidas y tiempos exactos.\n2. **Seguimiento de Tokens y Control de Costos**: Mide el consumo exacto de tokens de entrada (prompts y contexto) y de salida (completions). Esto permite calcular el costo monetario por solicitud, identificar patrones de uso ineficientes y evitar sorpresas en la facturación.\n3. **Desglose de Latencia**: Se analiza el rendimiento midiendo métricas clave como el tiempo hasta el primer token (*Time to First Token* - TTFT) y la velocidad de generación (*tokens per second*), permitiendo detectar si la lentitud proviene del proveedor del modelo, de la recuperación de datos o de la red.\n4. **Captura y Clasificación de Fallos**: Registrar errores de ejecución (API cda, límites de frecuencia / *rate limits*, tiempos de espera) y fallos lógicos (bucles infinitos en agentes, llamadas a herramientas incorrectas o formato JSON inválido en la respuesta).\n5. **Evaluaciones Continuas (*Evals*) y Monitoreo de Calidad**: A diferencia de las excepciones técnicas tradicionales, los modelos pueden fallar dando respuestas sintácticamente válidas pero tácticamente incorrectas o inseguras. La observabilidad en IA integra evaluaciones automáticas para medir alucinaciones, relevancia, fidelidad al contexto y seguridad de las respuestas en producción.\n\n---\n\n📥 **Fuentes encontradas:** He preparado el informe completo y las fuentes clasificadas en la tarjeta de importación a continuación. Puedes seleccionar las que desees para añadirlas a tu libreta y continuar profundizando en el tema.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-observability-ai\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-observability-ai\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos técnicos y guías sobre observabilidad en AI Engineering\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Informe de Investigación: Observabilidad en AI Engineering\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiRhMDQ3Nzk2My02ZmZkLTRlNWUtYTBkNy1kYWI1YzA0NTdkYWISCxIHEPnP8YvcBhgB&filename=Research_report_Observabilidad_en_AI_Engineering.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Informe de Investigación\",\n          \"summary\": \"Informe completo con 6 fuentes clave sobre observabilidad, trazabilidad, costo de tokens y evaluación en IA.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"AI observability: what it is, how it works, and which tools to use\",\n          \"url\": \"https://posthog.com/blog/what-is-ai-observability\",\n          \"sourceName\": \"PostHog\",\n          \"summary\": \"Guía práctica sobre cómo funciona la observabilidad en IA, sus bloques fundamentales y herramientas.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"What is LLM observability? A span-by-span breakdown\",\n          \"url\": \"https://mastra.ai/blog/what-is-llm-observability\",\n          \"sourceName\": \"Mastra\",\n          \"summary\": \"Desglose por spans sobre el seguimiento de llamadas a modelos, uso de herramientas y métricas en aplicaciones con IA.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"LLM Observability with OpenTelemetry: Tracing LLM Calls in Production\",\n          \"url\": \"https://devopsboys.com/blog/llm-observability-opentelemetry-tracing-2026\",\n          \"sourceName\": \"DevOpsBoys\",\n          \"summary\": \"Cómo instrumentar llamadas a LLMs con estándares abiertos como OpenTelemetry y conectar con plataformas APM.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"LLM Observability: What to Monitor in Production AI Systems\",\n          \"url\": \"https://www.codegeeks.solutions/blog/llm-observability-guide\",\n          \"sourceName\": \"CodeGeeks Solutions\",\n          \"summary\": \"Las cinco dimensiones del monitoreo en IA: rendimiento, costo, calidad de salida, seguridad y comportamiento de agentes.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"12 LLM Observability Tools to Evaluate & Monitor AI in 2026\",\n          \"url\": \"https://www.confident-ai.com/knowledge-base/compare/10-llm-observability-tools-to-evaluate-and-monitor-ai-2026\",\n          \"sourceName\": \"Confident AI\",\n          \"summary\": \"Comparativa de herramientas líderes de observabilidad y evaluación continua en sistemas de IA en producción.\"\n        },\n        {\n          \"id\": \"src-6\",\n          \"title\": \"LLM Observability: How to Monitor AI When It Thinks in Tokens\",\n          \"url\": \"https://ttms.com/llm-observability-how-to-monitor-ai-when-it-thinks-in-tokens\",\n          \"sourceName\": \"TTMS\",\n          \"summary\": \"Estrategias para medir la latencia, el consumo de tokens y el rastreo end-to-end en sistemas de IA.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Realicé una investigación sobre **Observabilidad en AI Engineering** para responder a tu consulta.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no he importado a tu libreta las fuentes encontradas durante la investigación anterior. \n\n¿Quieres que las importe primero? Una vez importadas, podré analizar en detalle el estado actual y las relaciones de la observabilidad basándome directamente en ese contenido. \n\n*(También puedes seleccionar e importar las fuentes directamente desde la tarjeta de investigación que aparece arriba).*",
+      "claims": [
+        {
+          "text": "Aún no he importado a tu libreta las fuentes encontradas durante la investigación anterior. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "2287dedb-7dbb-4f73-ac2c-6d5831cddbea",
+  "duration_ms": 64709,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\07-ai-engineering-22-observability\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

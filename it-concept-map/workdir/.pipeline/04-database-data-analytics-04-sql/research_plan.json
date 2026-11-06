@@ -1,0 +1,43 @@
+{
+  "questions": [],
+  "concept_id": "04-database-data-analytics-04-sql",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es SQL y para que sirve (SELECT, INSERT, UPDATE, DELETE, queries)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de SQL en Database / Data Analytics"
+    ],
+    "context": [
+      "Como se usa SQL en el contexto profesional de Database / Data Analytics"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "SQL",
+      "ask": "Como se relaciona SQL con SQL?"
+    },
+    {
+      "with": "Filtering & Aggregation",
+      "ask": "Como se relaciona SQL con Filtering & Aggregation?"
+    },
+    {
+      "with": "JOINs",
+      "ask": "Como se relaciona SQL con JOINs?"
+    }
+  ],
+  "queries": [
+    "site:postgresql.org SQL",
+    "site:sqlite.org SQL",
+    "site:dev.mysql.com SQL",
+    "site:use-the-index-luke.com SQL",
+    "site:learn.microsoft.com SQL",
+    "site:docs.snowflake.com SQL",
+    "site:openstax.org SQL"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

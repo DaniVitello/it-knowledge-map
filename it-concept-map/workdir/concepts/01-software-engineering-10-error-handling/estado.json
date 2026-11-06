@@ -1,0 +1,29 @@
+{
+  "concept_id": "01-software-engineering-10-error-handling",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\01-software-engineering-10-error-handling\\sources.json",
+    "notebook_id": "637b464a-da28-48d2-946b-032c8892f472",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-10-error-handling\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-10-error-handling\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\01-software-engineering-10-error-handling\\10 - Error Handling.md.20261030T044252Z-3de021.bak",
+      "outside_hash": "bfaa638367a19be681ec8c99fac2a8f4d7d4f3dbd74fc5d32cb26f82e4b52d03",
+      "inside_hash": "30131981da06b40226dd8580c02115de9932e77c3bd8eb09c5ae477253b14c29",
+      "written_at": "2026-10-30T04:42:52.425138+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T04:41:51.827986+00:00",
+  "updated_at": "2026-10-30T04:42:52.445487+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T04:42:52.445487+00:00",
+    "created_at": "2026-10-30T04:41:51.827986+00:00"
+  },
+  "schema_version": "1.0.0"
+}

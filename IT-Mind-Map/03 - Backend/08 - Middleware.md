@@ -18,7 +18,6 @@ tags: [concepto, it/backend]
 
 ## Mis notas
 <!-- ai:start -->
-- 
 <!-- ai:end -->
 
 ## Relacionados

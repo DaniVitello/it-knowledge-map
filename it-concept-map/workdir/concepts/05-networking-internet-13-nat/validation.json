@@ -1,0 +1,10 @@
+{
+  "concept_id": "05-networking-internet-13-nat",
+  "is_valid": true,
+  "issues": [],
+  "warnings": [],
+  "score": 1.0,
+  "checked_at": "2026-11-05T23:26:03.887615+00:00",
+  "blocking_failures": [],
+  "verdict": "approved"
+}

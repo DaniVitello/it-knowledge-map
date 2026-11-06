@@ -1,0 +1,29 @@
+{
+  "concept_id": "05-networking-internet-17-https-tls",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-17-https-tls\\sources.json",
+    "notebook_id": "bc63b90d-de46-4be1-a338-6569ad4b9d40",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-17-https-tls\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-17-https-tls\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\05-networking-internet-17-https-tls\\17 - HTTPS - TLS.md.20261105T232941Z-baf23a.bak",
+      "outside_hash": "d9ebdc93597207f4f91f708c3c8e340778a4d79b71350d315671ed4b1e63ea5e",
+      "inside_hash": "683eba06a23b359f50af079301e674009af600f346dd40252d9689e7320d10b9",
+      "written_at": "2026-11-05T23:29:41.848939+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:28:41.204005+00:00",
+  "updated_at": "2026-11-05T23:29:41.867417+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:29:41.867417+00:00",
+    "created_at": "2026-11-05T23:28:41.204005+00:00"
+  },
+  "schema_version": "1.0.0"
+}

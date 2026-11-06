@@ -1,0 +1,50 @@
+{
+  "concept_id": "06-operating-systems-linux-04-threads",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No veo ninguna fuente en tu libreta sobre **Threads (Ejecución concurrente dentro de procesos)**. \n\n¿Quieres que haga una investigación en la web sobre este tema para responder a tu pregunta?",
+      "claims": [
+        {
+          "text": "No veo ninguna fuente en tu libreta sobre **Threads (Ejecución concurrente dentro de procesos)**. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Esto es lo que encontré sobre **Threads (Hilos) en Linux y Sistemas Operativos**:\n\nEn Linux, los hilos son unidades livianas de ejecución que permiten a un programa realizar múltiples tareas de forma simultánea. A diferencia de otros sistemas operativos que utilizan estructuras distintas para procesos e hilos, según artículos de **iximiuz Labs** y la **documentación del kernel de Linux**, el kernel trata a los hilos como procesos livianos (*Lightweight Processes* o LWP) representados por la misma estructura de datos básica (`task_struct`).\n\n**Temas clave detectados en las fuentes:**\n\n1. **Abstracción unificada de tareas (`task_struct`)**: Para el kernel de Linux no existe una distinción estricta entre un proceso y un hilo; ambos son tareas que el planificador gestiona individualmente.\n2. **Creación mediante `clone()`**: A diferencia de `fork()` (que duplica un proceso entero), los hilos se crean invocando la llamada al sistema `clone()` con banderas especiales (como `CLONE_VM` para compartir memoria y `CLONE_FILES` para compartir archivos).\n3. **Recursos compartidos vs. aislados**: Los hilos de un mismo proceso comparten el espacio de direcciones de memoria (código, datos globales y el *heap*), pero cada hilo conserva su propia pila (*stack*) y registros de CPU.\n4. **Planificación y paralelismo**: El planificador de Linux asigna ciclos de CPU a cada hilo de manera independiente, permitiendo un rendimiento óptimo y verdadero paralelismo en procesadores multinúcleo.\n\n📥 El informe de investigación completo se incluye como la primera fuente en la tarjeta de importación a continuación; impórtalo si deseas añadirlo a tu libreta y hacer preguntas detalladas al respecto.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-threads-linux\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-threads-linux\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos técnicos y documentación sobre la ejecución de hilos y concurrencia en Linux\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Informe de investigación: Threads y Ejecución Concurrente en Linux\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQwNGY4NjhlNS1iMDUwLTQ1YzMtYjNiNi1jYTFkY2U4YjlmMTcSCxIHEPnP8YvcBhgB&filename=Informe_de_investigacion_-_Threads_y_Ejecucion_Concurrente_e.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Informe de investigación\",\n          \"summary\": \"Informe completo con 6 fuentes sobre la implementación de hilos (LWP), task_struct y la llamada clone() en Linux.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"Linux Processes: Threads & Concurrency\",\n          \"url\": \"https://labs.iximiuz.com/tutorials/linux-processes-threads-concurrency-3302b677\",\n          \"sourceName\": \"iximiuz Labs\",\n          \"summary\": \"Explicación detallada del espacio de memoria virtual y la representación mediante task_struct.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"Linux Process and Thread Creation: System Call Architecture\",\n          \"url\": \"https://chessman7.substack.com/p/linux-process-and-thread-creation\",\n          \"sourceName\": \"Low-Level Lore\",\n          \"summary\": \"Análisis de la jerarquía de llamadas al sistema (fork, pthread_create) y la llamada subyacente clone().\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"The Linux Implementation of Threads\",\n          \"url\": \"https://litux.nl/mirror/kerneldevelopment/0672327201/ch03lev1sec3.html\",\n          \"sourceName\": \"Linux Kernel Development\",\n          \"summary\": \"Visión técnica sobre por qué el kernel de Linux no distingue estructuralmente entre procesos e hilos.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"How Threads and Concurrency Work in Linux Systems\",\n          \"url\": \"https://dev.to/iaadidev/how-threads-and-concurrency-work-in-linux-systems-233c\",\n          \"sourceName\": \"DEV Community\",\n          \"summary\": \"Guía sobre la API POSIX (pthreads) y la gestión de concurrencia en desarrollo de software.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"Linux Process vs. Thread\",\n          \"url\": \"https://www.baeldung.com/linux/process-vs-thread\",\n          \"sourceName\": \"Baeldung on Linux\",\n          \"summary\": \"Comparativa práctica entre procesos e hilos con banderas de clone() como CLONE_VM, CLONE_FS y CLONE_FILES.\"\n        },\n        {\n          \"id\": \"src-6\",\n          \"title\": \"Processes — The Linux Kernel documentation\",\n          \"url\": \"https://linux-kernel-labs.github.io/refs/heads/master/lectures/processes.html\",\n          \"sourceName\": \"Linux Kernel Labs\",\n          \"summary\": \"Documentación técnica sobre cambio de contexto, estados de tareas y el planificador del kernel.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Esto es lo que encontré sobre **Threads (Hilos) en Linux y Sistemas Operativos**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Todavía no he importado las fuentes de la investigación anterior a tu libreta. ¿Quieres que las importe primero para poder responder a tus preguntas basándome en el contenido de esas fuentes? \n\nTambién puedes importar las fuentes que prefieras haciendo clic en la tarjeta de resultados que aparece arriba.",
+      "claims": [
+        {
+          "text": "Todavía no he importado las fuentes de la investigación anterior a tu libreta. ¿Quieres que las importe primero para poder responder a tus preguntas basándome en el contenido de esas fuentes? ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "7119f28d-e903-46c8-82df-bb468f5f7d46",
+  "duration_ms": 58762,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\06-operating-systems-linux-04-threads\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

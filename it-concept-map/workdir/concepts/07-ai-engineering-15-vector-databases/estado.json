@@ -1,0 +1,29 @@
+{
+  "concept_id": "07-ai-engineering-15-vector-databases",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\07-ai-engineering-15-vector-databases\\sources.json",
+    "notebook_id": "b24a835e-4f8a-4aab-ab12-d31b963cb953",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\07-ai-engineering-15-vector-databases\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\07-ai-engineering-15-vector-databases\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\07-ai-engineering-15-vector-databases\\15 - Vector Databases.md.20261106T210934Z-97d01a.bak",
+      "outside_hash": "451c7a3d4d44c3e7bd2e3c0d8a1a0bf72cef9d8d22e9e77a62fc1c0c389abf52",
+      "inside_hash": "f30a3740df21162fcccbdbb2ed2afba45fabcccca30521390380c122fd16322a",
+      "written_at": "2026-11-06T21:09:34.254598+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-06T21:08:23.112617+00:00",
+  "updated_at": "2026-11-06T21:09:34.277098+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-06T21:09:34.277098+00:00",
+    "created_at": "2026-11-06T21:08:23.112617+00:00"
+  },
+  "schema_version": "1.0.0"
+}

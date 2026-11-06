@@ -1,0 +1,12 @@
+{"ts": "2026-10-30T05:12:51.954014+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-09-asincronia", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:13:46.818358+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-09-asincronia", "event": "phase_done", "phase": "research"}
+{"ts": "2026-10-30T05:13:50.624719+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-09-asincronia", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-10-30T05:13:50.660659+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-09-asincronia", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-10-30T05:13:50.701995+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-09-asincronia", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-10-30T05:13:50.723754+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-09-asincronia", "event": "notebook_delete_failed", "notebook_id": "17872331-3473-4fc7-a2f3-3c8c14ba5e3e", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-10-30T05:13:50.738490+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-09-asincronia", "event": "run_end", "status": "completed"}
+{"ts": "2026-10-30T05:17:56.413681+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-09-asincronia", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:17:56.431814+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-09-asincronia", "event": "idempotency_hash_mismatch", "stored": "77af97759865913543ca4a706b4bc36c44477bbb0abd1c7e528b03c1bd834789", "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+{"ts": "2026-10-30T05:17:56.433116+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-09-asincronia", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T22:39:50.080808+00:00", "run_id": "run-20261105-193941-b2c223", "concept_id": "02-frontend-09-asincronia", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T22:39:50.122141+00:00", "run_id": "run-20261105-193941-b2c223", "concept_id": "02-frontend-09-asincronia", "event": "run_end", "status": "completed"}

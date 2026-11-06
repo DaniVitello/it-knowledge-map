@@ -1,0 +1,44 @@
+{
+  "questions": [],
+  "concept_id": "03-backend-10-arquitectura-de-aplicaciones",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Arquitectura de aplicaciones y para que sirve (Capas, módulos, services, repositories)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Arquitectura de aplicaciones en Backend"
+    ],
+    "context": [
+      "Como se usa Arquitectura de aplicaciones en el contexto profesional de Backend"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Architecture",
+      "ask": "Como se relaciona Arquitectura de aplicaciones con Architecture?"
+    },
+    {
+      "with": "Arquitectura Frontend",
+      "ask": "Como se relaciona Arquitectura de aplicaciones con Arquitectura Frontend?"
+    },
+    {
+      "with": "AI System Architecture",
+      "ask": "Como se relaciona Arquitectura de aplicaciones con AI System Architecture?"
+    }
+  ],
+  "queries": [
+    "site:developer.mozilla.org Arquitectura de aplicaciones",
+    "site:rfc-editor.org Arquitectura de aplicaciones",
+    "site:datatracker.ietf.org Arquitectura de aplicaciones",
+    "site:owasp.org Arquitectura de aplicaciones",
+    "site:postgresql.org Arquitectura de aplicaciones",
+    "site:redis.io Arquitectura de aplicaciones",
+    "site:12factor.net Arquitectura de aplicaciones",
+    "site:learn.microsoft.com Arquitectura de aplicaciones"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

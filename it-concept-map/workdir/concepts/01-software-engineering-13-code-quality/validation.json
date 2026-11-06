@@ -1,0 +1,10 @@
+{
+  "concept_id": "01-software-engineering-13-code-quality",
+  "is_valid": true,
+  "issues": [],
+  "warnings": [],
+  "score": 1.0,
+  "checked_at": "2026-10-30T04:45:30.618212+00:00",
+  "blocking_failures": [],
+  "verdict": "approved"
+}

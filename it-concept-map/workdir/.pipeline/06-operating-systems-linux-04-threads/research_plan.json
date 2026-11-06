@@ -1,0 +1,51 @@
+{
+  "questions": [],
+  "concept_id": "06-operating-systems-linux-04-threads",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Threads y para que sirve (Ejecución concurrente dentro de procesos)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Threads en Operating Systems / Linux"
+    ],
+    "context": [
+      "Como se usa Threads en el contexto profesional de Operating Systems / Linux"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Concurrency",
+      "ask": "Como se relaciona Threads con Concurrency?"
+    },
+    {
+      "with": "Asincronía",
+      "ask": "Como se relaciona Threads con Asincronía?"
+    },
+    {
+      "with": "Asincronía & Concurrencia",
+      "ask": "Como se relaciona Threads con Asincronía & Concurrencia?"
+    },
+    {
+      "with": "Processes",
+      "ask": "Como se relaciona Threads con Processes?"
+    },
+    {
+      "with": "CPU & Scheduling",
+      "ask": "Como se relaciona Threads con CPU & Scheduling?"
+    }
+  ],
+  "queries": [
+    "site:man7.org Threads",
+    "site:kernel.org Threads",
+    "site:ostep.org Threads",
+    "site:wiki.archlinux.org Threads",
+    "site:gnu.org Threads",
+    "site:docs.docker.com Threads",
+    "site:opencontainers.org Threads"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

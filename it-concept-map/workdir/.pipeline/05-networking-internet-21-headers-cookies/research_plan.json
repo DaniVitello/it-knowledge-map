@@ -1,0 +1,59 @@
+{
+  "questions": [],
+  "concept_id": "05-networking-internet-21-headers-cookies",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Headers / Cookies y para que sirve (Metadata y estado de comunicación)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Headers / Cookies en Networking / Internet"
+    ],
+    "context": [
+      "Como se usa Headers / Cookies en el contexto profesional de Networking / Internet"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Internet & Web",
+      "ask": "Como se relaciona Headers / Cookies con Internet & Web?"
+    },
+    {
+      "with": "HTTP",
+      "ask": "Como se relaciona Headers / Cookies con HTTP?"
+    },
+    {
+      "with": "HTTPS / TLS",
+      "ask": "Como se relaciona Headers / Cookies con HTTPS / TLS?"
+    },
+    {
+      "with": "Request / Response",
+      "ask": "Como se relaciona Headers / Cookies con Request / Response?"
+    },
+    {
+      "with": "HTTP Methods",
+      "ask": "Como se relaciona Headers / Cookies con HTTP Methods?"
+    },
+    {
+      "with": "HTTP Status Codes",
+      "ask": "Como se relaciona Headers / Cookies con HTTP Status Codes?"
+    },
+    {
+      "with": "WebSockets",
+      "ask": "Como se relaciona Headers / Cookies con WebSockets?"
+    }
+  ],
+  "queries": [
+    "site:rfc-editor.org Headers / Cookies",
+    "site:datatracker.ietf.org Headers / Cookies",
+    "site:developer.mozilla.org Headers / Cookies",
+    "site:cloudflare.com Headers / Cookies",
+    "site:beej.us Headers / Cookies",
+    "site:hpbn.co Headers / Cookies",
+    "site:man7.org Headers / Cookies"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

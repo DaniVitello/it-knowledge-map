@@ -1,0 +1,50 @@
+{
+  "concept_id": "04-database-data-analytics-10-transactions",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No encuentro fuentes ni documentos guardados en tu cuaderno sobre **transacciones en bases de datos (commit, rollback, atomicidad, propiedades ACID e aislamiento)**. \n\n¿Quieres que realice una investigación en la web sobre este tema para responder a tu pregunta y sugerirte fuentes para importar a tu cuaderno?",
+      "claims": [
+        {
+          "text": "No encuentro fuentes ni documentos guardados en tu cuaderno sobre **transacciones en bases de datos (commit, rollback, atomicidad, propiedades ACID e aislamiento)**. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "He realizado una investigación web sobre cómo funcionan las **transacciones en Bases de Datos y Data Analytics**.\n\nUna **transacción** es un conjunto de una o más operaciones de base de datos que se ejecutan como una **única unidad indivisible de trabajo**. Su objetivo es garantizar la integridad y la consistencia de los datos ante fallos del sistema o accesos concurrentes de múltiples usuarios.\n\n**Conceptos clave:**\n*   **Atomicidad (Atomicity)**: Principio de \"todo o nada\". O se ejecutan con éxito todas las operaciones de la transacción, o no se aplica ninguna.\n*   **Commit**: Comando que confirma de forma permanente en el almacenamiento todos los cambios realizados durante la transacción.\n*   **Rollback**: Comando que deshace todos los cambios realizados desde el inicio de la transacción si ocurre un error o si se aborta voluntariamente, devolviendo la base de datos a su estado original (utilizando mecanismos como el *undo log* o *Write-Ahead Log* - WAL).\n*   **Aislamiento (Isolation)**: Garantiza que las transacciones simultáneas no interfieran entre sí, evitando lecturas de datos inconsistentes mediante bloqueos o control de concurrencia multiversión (MVCC).\n\n**Aplicación en Data Analytics y Data Lakehouses:**\nTradicionalmente, las transacciones ACID eran exclusivas de bases de datos operacionales (OLTP como PostgreSQL o MySQL). Sin embargo, en la analítica moderna (OLAP, Data Lakes y Lakehouses con formatos como **Delta Lake**, **Apache Iceberg** o **Snowflake**), las transacciones ACID son indispensables. Permiten que tuberías de datos (pipelines) escriban y transformen millones de registros al mismo tiempo que los analistas leen tablas para reportes y modelos de IA, evitando datos duplicados o tableros con cifras parciales o inconsistentes.\n\n---\n\n**Temas clave identificados en la investigación:**\n1. **Mecanismo Todo o Nada (Commit / Rollback)**: La transacción registra los cambios en registros de inicio/deshacer (*redo/undo logs*); si algo falla antes del `COMMIT`, el sistema ejecuta un `ROLLBACK` automático.\n2. **Niveles de Aislamiento**: Previenen anomalías como lecturas sucias (*dirty reads*) o escrituras conflictivas según las necesidades de rendimiento y rigor del negocio.\n3. **Evolución a Lakehouses**: Formatos de tabla abierta (*Delta Lake*, *Iceberg*) implementan transacciones ACID sobre almacenamiento en la nube (S3, ADLS) usando archivos de log de metadatos y concurrencia optimista.\n\n📥 **El reporte completo de investigación se incluye como la primera fuente en la tarjeta a continuación; puedes importarlo a tu cuaderno junto a los enlaces seleccionados:**\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-transacciones-db\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-transacciones-db\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos técnicos y documentación sobre transacciones ACID, Commit, Rollback e integración en Data Analytics\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Reporte de investigación: Transacciones en Bases de Datos y Data Analytics\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiRlNDNmNmQzNC03Nzc2LTQ1N2EtYmMzNS01OTRlNzUzOWI1M2MSCxIHEPnP8YvcBhgB&filename=Reporte_de_investigacion_Transacciones_en_Bases_de_Datos_y_D.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Reporte de Investigación\",\n          \"summary\": \"Reporte completo con 6 fuentes analizadas sobre transacciones ACID, Commit, Rollback y Lakehouses.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"ACID Transactions Explained: Atomicity, Consistency, Isolation & Durability\",\n          \"url\": \"https://motherduck.com/learn/acid-transactions-sql/\",\n          \"sourceName\": \"MotherDuck\",\n          \"summary\": \"Explicación práctica de las propiedades ACID y cómo se aplican en SQL y motores modernos.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"Database Transactions and ACID Properties Explained\",\n          \"url\": \"https://databasesystemsauthority.com/database-transactions-and-acid-properties/\",\n          \"sourceName\": \"Database Systems Authority\",\n          \"summary\": \"Guía técnica sobre la ejecución de transacciones (WAL, undo log, XID) y niveles de aislamiento.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"What Are ACID Transactions?\",\n          \"url\": \"https://www.databricks.com/blog/what-are-acid-transactions\",\n          \"sourceName\": \"Databricks\",\n          \"summary\": \"Conceptos fundamentales de transacciones ACID y su importancia en ingeniería de datos.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"What Is Delta Lake? A Guide to the Open Table Format\",\n          \"url\": \"https://www.snowflake.com/en/fundamentals/delta-lake/\",\n          \"sourceName\": \"Snowflake\",\n          \"summary\": \"Cómo los formatos de tabla como Delta Lake habilitan transacciones ACID sobre lagos de datos.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"Clash of ACID Data Lakes: Comparing Data Lakehouse Formats\",\n          \"url\": \"https://synvert.com/en-en/synvert-blog/clash-of-acid-data-lakes-comparing-data-lakehouse-formats/\",\n          \"sourceName\": \"Synvert\",\n          \"summary\": \"Comparativa de soporte ACID entre Delta Lake, Apache Iceberg y Apache Hudi.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "He realizado una investigación web sobre cómo funcionan las **transacciones en Bases de Datos y Data Analytics**.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no he importado las fuentes encontradas en la investigación a tu cuaderno. \n\n¿Quieres que las importe ahora? Una vez añadidas a tus fuentes, podré analizar detalladamente el estado actual de las transacciones y sus relaciones (Commit, Rollback, Atomicidad, propiedades ACID e Aislamiento) basándome directamente en ellas. \n\nTambién puedes desplazarte hacia arriba hasta la tarjeta de resultados e importar directamente las fuentes que prefieras.",
+      "claims": [
+        {
+          "text": "Aún no he importado las fuentes encontradas en la investigación a tu cuaderno. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "20064a85-ccde-4be5-b748-80249a53b102",
+  "duration_ms": 55121,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-10-transactions\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

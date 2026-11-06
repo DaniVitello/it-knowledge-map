@@ -1,0 +1,55 @@
+{
+  "questions": [],
+  "concept_id": "04-database-data-analytics-21-statistics",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Statistics y para que sirve (Media, mediana, distribución, varianza, probabilidad)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Statistics en Database / Data Analytics"
+    ],
+    "context": [
+      "Como se usa Statistics en el contexto profesional de Database / Data Analytics"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Data Analysis",
+      "ask": "Como se relaciona Statistics con Data Analysis?"
+    },
+    {
+      "with": "Analytics Metrics",
+      "ask": "Como se relaciona Statistics con Analytics Metrics?"
+    },
+    {
+      "with": "Data Visualization",
+      "ask": "Como se relaciona Statistics con Data Visualization?"
+    },
+    {
+      "with": "BI & Reporting",
+      "ask": "Como se relaciona Statistics con BI & Reporting?"
+    },
+    {
+      "with": "AI / ML Fundamentals",
+      "ask": "Como se relaciona Statistics con AI / ML Fundamentals?"
+    },
+    {
+      "with": "Machine Learning Fundamentals",
+      "ask": "Como se relaciona Statistics con Machine Learning Fundamentals?"
+    }
+  ],
+  "queries": [
+    "site:postgresql.org Statistics",
+    "site:sqlite.org Statistics",
+    "site:dev.mysql.com Statistics",
+    "site:use-the-index-luke.com Statistics",
+    "site:learn.microsoft.com Statistics",
+    "site:docs.snowflake.com Statistics",
+    "site:openstax.org Statistics"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,56 @@
+{
+  "questions": [],
+  "concept_id": "07-ai-engineering-19-memory",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Memory y para que sirve (Conversation state, long-term memory, retrieval)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Memory en AI Engineering"
+    ],
+    "context": [
+      "Como se usa Memory en el contexto profesional de AI Engineering"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Prompt Engineering",
+      "ask": "Como se relaciona Memory con Prompt Engineering?"
+    },
+    {
+      "with": "Structured Outputs",
+      "ask": "Como se relaciona Memory con Structured Outputs?"
+    },
+    {
+      "with": "Tool Calling",
+      "ask": "Como se relaciona Memory con Tool Calling?"
+    },
+    {
+      "with": "Agents",
+      "ask": "Como se relaciona Memory con Agents?"
+    },
+    {
+      "with": "AI Workflows",
+      "ask": "Como se relaciona Memory con AI Workflows?"
+    },
+    {
+      "with": "Context Engineering",
+      "ask": "Como se relaciona Memory con Context Engineering?"
+    }
+  ],
+  "queries": [
+    "site:arxiv.org Memory",
+    "site:huggingface.co Memory",
+    "site:pytorch.org Memory",
+    "site:d2l.ai Memory",
+    "site:platform.openai.com Memory",
+    "site:docs.claude.com Memory",
+    "site:ai.google.dev Memory",
+    "site:deeplearning.ai Memory"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

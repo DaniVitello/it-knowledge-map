@@ -1,0 +1,29 @@
+{
+  "concept_id": "04-database-data-analytics-16-etl-elt",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-16-etl-elt\\sources.json",
+    "notebook_id": "20a619b5-15bf-4e63-9f84-48060465bf66",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-16-etl-elt\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-16-etl-elt\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\04-database-data-analytics-16-etl-elt\\16 - ETL - ELT.md.20261105T230120Z-2228bc.bak",
+      "outside_hash": "7a042f75022bdd9f977497b3f6672302686dba3235aaf60731a42a317c10a3ff",
+      "inside_hash": "e4b0a26f89ea8955901fa4ea0645977d199a67cbc4e251207bfc7016beca667d",
+      "written_at": "2026-11-05T23:01:20.202699+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:00:14.798569+00:00",
+  "updated_at": "2026-11-05T23:01:20.223271+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:01:20.223271+00:00",
+    "created_at": "2026-11-05T23:00:14.798569+00:00"
+  },
+  "schema_version": "1.0.0"
+}

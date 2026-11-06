@@ -1,0 +1,50 @@
+{
+  "concept_id": "04-database-data-analytics-12-database-architecture",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No tengo fuentes agregadas en tu cuaderno aún para responder a esta pregunta sobre la arquitectura de bases de datos. \n\n¿Te gustaría que realice una investigación en la web sobre este tema (motores de almacenamiento, motores de consulta y conexiones) para brindarte una explicación completa?",
+      "claims": [
+        {
+          "text": "No tengo fuentes agregadas en tu cuaderno aún para responder a esta pregunta sobre la arquitectura de bases de datos. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Aquí tienes lo que encontré sobre la **Arquitectura de Bases de Datos (Database Architecture)**:\n\nLa arquitectura de una base de datos define la estructura interna y la colaboración entre subsistemas de un DBMS (Sistema Gestor de Bases de Datos) para recibir peticiones, optimizar el procesamiento de consultas y gestionar la lectura y escritura de datos de forma segura y eficiente.\n\n**Temas clave identificados en las fuentes:**\n\n1. **Capa de Conexiones (Connection / Transport Layer):** Administra el transporte de red (vía TCP/IP o sockets locales), la autenticación de usuarios, las sesiones de clientes y la reutilización de conexiones mediante piscinas de conexiones (*Connection Pools*).\n2. **Motor de Consultas (Query Engine / Relational Engine):** Transforma consultas declarativas (como SQL) en operaciones físicas. Se divide en tres etapas: **Parser/Validator** (analiza la sintaxis y verifica permisos y tablas), **Query Optimizer** (calcula el plan de ejecución más eficiente considerando índices y estadísticas) y el **Execution Engine** (ejecuta el plan).\n3. **Motor de Almacenamiento (Storage Engine):** Subcomponente de bajo nivel responsable de la interacción física con la memoria RAM (*Buffer Pool*) y el disco. Maneja estructuras de datos de almacenamiento (B-Trees o LSM-Trees), el control de concurrencia y las garantías ACID a través de registros de escritura previa (*Write-Ahead Logging*).\n4. **Rol en Bases de Datos Tradicionales (OLTP) vs. Analítica (OLAP):** En entornos OLTP (transaccionales) se prioriza el almacenamiento orientado a filas y búsquedas rápidas por clave primaria. En analítica de datos (OLAP / Data Warehousing), los motores de almacenamiento se orientan a columnas (*Columnar Storage*), permitiendo comprimir datos masivos y procesar agregaciones a gran velocidad.\n\n📥 El informe de investigación completo está incluido como la primera fuente en la tarjeta de importación a continuación — impórtalo para consultar los hallazgos directamente en tu cuaderno.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-database-architecture\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-database-architecture\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos técnicos y guías sobre arquitectura de bases de datos, motores de almacenamiento y analítica\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Informe de investigación: Arquitectura de Bases de Datos\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQ5ODA0NjhiMi04MjQ4LTQ3NTktOTM3Ni00ZjVjZmE1ZGQ3OTASCxIHEPnP8YvcBhgB&filename=Investigacion_Arquitectura_de_Bases_de_Datos.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Informe de investigación\",\n          \"summary\": \"Informe de investigación completo con 5 fuentes sobre la arquitectura de bases de datos (Conexiones, Motor de Consultas y Almacenamiento).\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"Understanding DBMS Architecture\",\n          \"url\": \"https://www.alessandroferrini.com/posts/understanding-dbms-architecture/\",\n          \"sourceName\": \"Alessandro Ferrini\",\n          \"summary\": \"Explicación detallada de la arquitectura por capas de un motor DBMS: desde transporte hasta almacenamiento físico.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"A Busy Developer's Guide to Database Storage Engines\",\n          \"url\": \"https://www.yugabyte.com/blog/a-busy-developers-guide-to-database-storage-engines-the-basics/\",\n          \"sourceName\": \"YugabyteDB\",\n          \"summary\": \"Comparación profunda entre motores de almacenamiento basados en estructuras B-Tree y LSM-Tree.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"Overview of MySQL Storage Engine Architecture\",\n          \"url\": \"https://dev.mysql.com/doc/refman/9.6/en/pluggable-storage-overview.html\",\n          \"sourceName\": \"MySQL Documentation\",\n          \"summary\": \"Visión general de la arquitectura de motores enchufables en MySQL.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"Deep Dive into SQL Server Architecture\",\n          \"url\": \"https://www.devart.com/blog/sql-server-architecture.html\",\n          \"sourceName\": \"Devart Blog\",\n          \"summary\": \"Desglose de los protocolos de red (SNI), capa relacional y motor de almacenamiento en SQL Server.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"SQL Engine Architecture & Components\",\n          \"url\": \"https://www.geeksforgeeks.org/sql/sql-engine/\",\n          \"sourceName\": \"GeeksforGeeks\",\n          \"summary\": \"Guía práctica sobre las fases de análisis, optimización y ejecución dentro del motor SQL.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Aquí tienes lo que encontré sobre la **Arquitectura de Bases de Datos (Database Architecture)**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún **no se han importado las fuentes de la investigación** a tu cuaderno. \n\n¿Quieres que **las importe ahora**? Una vez agregadas a tu cuaderno, podré analizar en detalle el estado actual y las relaciones de la arquitectura de bases de datos utilizando el contenido de las fuentes. \n\nTambién puedes ir a la **tarjeta de fuentes de la respuesta anterior** y hacer clic en **Importar** en las que prefieras.",
+      "claims": [
+        {
+          "text": "Aún **no se han importado las fuentes de la investigación** a tu cuaderno. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "32dc5c2d-5a29-4845-a2e1-3b6ee91220b2",
+  "duration_ms": 84394,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-12-database-architecture\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

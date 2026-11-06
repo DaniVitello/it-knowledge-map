@@ -1,0 +1,29 @@
+{
+  "concept_id": "02-frontend-16-routing",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\02-frontend-16-routing\\sources.json",
+    "notebook_id": "8b051be4-8998-4c4d-9517-b50a73f26d8f",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\02-frontend-16-routing\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\02-frontend-16-routing\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\02-frontend-16-routing\\16 - Routing.md.20261030T051906Z-8f0b87.bak",
+      "outside_hash": "90d5f7edc1f46911ca38462c5d6caf5c3d391584b60f23134a8038618c329178",
+      "inside_hash": "5af5dd1e6b063172943dbb9c6a5dbf178df3a1ccaa2e1bc644d53fac0e0f3007",
+      "written_at": "2026-10-30T05:19:06.583118+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:17:52.027936+00:00",
+  "updated_at": "2026-10-30T05:19:06.611112+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T05:19:06.611112+00:00",
+    "created_at": "2026-10-30T05:17:52.027936+00:00"
+  },
+  "schema_version": "1.0.0"
+}

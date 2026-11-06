@@ -1,0 +1,9 @@
+{"ts": "2026-11-05T23:11:37.177410+00:00", "run_id": "run-20261105-201026-0a44b6", "concept_id": "05-networking-internet-03-ipv4-ipv6", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:12:34.089306+00:00", "run_id": "run-20261105-201026-0a44b6", "concept_id": "05-networking-internet-03-ipv4-ipv6", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T23:12:37.856013+00:00", "run_id": "run-20261105-201026-0a44b6", "concept_id": "05-networking-internet-03-ipv4-ipv6", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T23:12:37.895100+00:00", "run_id": "run-20261105-201026-0a44b6", "concept_id": "05-networking-internet-03-ipv4-ipv6", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T23:12:37.921586+00:00", "run_id": "run-20261105-201026-0a44b6", "concept_id": "05-networking-internet-03-ipv4-ipv6", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T23:12:37.938854+00:00", "run_id": "run-20261105-201026-0a44b6", "concept_id": "05-networking-internet-03-ipv4-ipv6", "event": "notebook_delete_failed", "notebook_id": "257476ab-8c85-428b-8ce6-46276a129fa6", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T23:12:37.948435+00:00", "run_id": "run-20261105-201026-0a44b6", "concept_id": "05-networking-internet-03-ipv4-ipv6", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T23:19:26.313562+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-03-ipv4-ipv6", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:19:26.396836+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-03-ipv4-ipv6", "event": "run_end", "status": "completed"}

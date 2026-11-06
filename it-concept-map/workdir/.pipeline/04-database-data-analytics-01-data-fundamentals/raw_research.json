@@ -1,0 +1,50 @@
+{
+  "concept_id": "04-database-data-analytics-01-data-fundamentals",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No encuentro fuentes en tu cuaderno sobre **Data Fundamentals** (datos, registros, atributos, entidades y relaciones). \n\n¿Te gustaría que haga una investigación en la web sobre este tema?",
+      "claims": [
+        {
+          "text": "No encuentro fuentes en tu cuaderno sobre **Data Fundamentals** (datos, registros, atributos, entidades y relaciones). ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Tu cuaderno **Data Fundamentals** aún no contiene fuentes para explicar cómo se aplican los datos, registros, atributos, entidades y relaciones en Bases de Datos y Data Analytics.\n\n¿Quieres que haga una investigación en la web sobre este tema para traer la información a tu cuaderno?",
+      "claims": [
+        {
+          "text": "Tu cuaderno **Data Fundamentals** aún no contiene fuentes para explicar cómo se aplican los datos, registros, atributos, entidades y relaciones en Bases de Datos y Data Analytics.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Sigo sin tener fuentes guardadas en tu cuaderno **Data Fundamentals** para explicar el estado actual y la relación entre datos, registros, atributos, entidades y relaciones.\n\n¿Te gustaría que realice una investigación en la web sobre este tema para responder a tu consulta y ofrecerte agregar las fuentes a tu cuaderno?",
+      "claims": [
+        {
+          "text": "Sigo sin tener fuentes guardadas en tu cuaderno **Data Fundamentals** para explicar el estado actual y la relación entre datos, registros, atributos, entidades y relaciones.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "665ba779-2709-4609-a353-518fe72646b9",
+  "duration_ms": 36380,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-01-data-fundamentals\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

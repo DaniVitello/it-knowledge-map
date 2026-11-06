@@ -1,0 +1,29 @@
+{
+  "concept_id": "01-software-engineering-14-clean-code",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\01-software-engineering-14-clean-code\\sources.json",
+    "notebook_id": "0b497c84-8a05-4258-8591-92dfe4cc29d3",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-14-clean-code\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-14-clean-code\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\01-software-engineering-14-clean-code\\14 - Clean Code.md.20261030T044631Z-d94c5a.bak",
+      "outside_hash": "27f332bcdb5a29bf6d9bab1031590da032b3bf65fc9cf7525c8c26361a52cc83",
+      "inside_hash": "3e4f2d3a34f3bc3638fc2fd02335ab8c918bd66301daa5afa6b2328fb842e129",
+      "written_at": "2026-10-30T04:46:31.438826+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T04:45:31.743971+00:00",
+  "updated_at": "2026-10-30T04:46:31.462016+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T04:46:31.462016+00:00",
+    "created_at": "2026-10-30T04:45:31.743971+00:00"
+  },
+  "schema_version": "1.0.0"
+}

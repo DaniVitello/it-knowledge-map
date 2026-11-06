@@ -1,0 +1,39 @@
+{"ts": "2026-10-30T04:35:20.852743+00:00", "run_id": "run-20261030-013520-9d38b8", "event": "run_start", "total": 30}
+{"ts": "2026-10-30T04:58:35.547298+00:00", "run_id": "run-20261030-013520-9d38b8", "event": "run_end", "completed": 30, "failed": 0, "duration_ms": 1394700}
+{"ts": "2026-10-30T05:05:51.499779+00:00", "run_id": "run-20261030-020551-479291", "event": "run_start", "total": 30}
+{"ts": "2026-10-30T05:06:21.356505+00:00", "run_id": "run-20261030-020551-479291", "event": "run_end", "completed": 30, "failed": 0, "duration_ms": 29856}
+{"ts": "2026-10-30T05:06:34.664075+00:00", "run_id": "run-20261030-020634-64efe8", "event": "run_start", "total": 25}
+{"ts": "2026-10-30T05:09:46.204463+00:00", "run_id": "run-20261030-020946-6fad67", "event": "run_start", "total": 3}
+{"ts": "2026-10-30T05:09:48.287759+00:00", "run_id": "run-20261030-020946-6fad67", "event": "run_end", "completed": 3, "failed": 0, "duration_ms": 2082}
+{"ts": "2026-10-30T05:17:01.780623+00:00", "run_id": "run-20261030-021701-9bc0aa", "event": "run_start", "total": 30}
+{"ts": "2026-10-30T05:17:31.903863+00:00", "run_id": "run-20261030-021701-9bc0aa", "event": "run_end", "completed": 30, "failed": 0, "duration_ms": 30122}
+{"ts": "2026-10-30T05:17:48.033211+00:00", "run_id": "run-20261030-021747-132d09", "event": "run_start", "total": 25}
+{"ts": "2026-10-30T05:22:05.386355+00:00", "run_id": "run-20261030-021747-132d09", "event": "run_end", "completed": 21, "failed": 4, "duration_ms": 257353}
+{"ts": "2026-10-30T05:22:14.826938+00:00", "run_id": "run-20261030-020634-64efe8", "event": "run_end", "completed": 22, "failed": 3, "duration_ms": 940165}
+{"ts": "2026-10-30T05:22:26.306354+00:00", "run_id": "run-20261030-022226-127d25", "event": "run_start", "total": 25}
+{"ts": "2026-10-30T05:34:38.784697+00:00", "run_id": "run-20261030-022226-127d25", "event": "run_end", "completed": 9, "failed": 16, "duration_ms": 732480}
+{"ts": "2026-10-30T05:34:51.088623+00:00", "run_id": "run-20261030-023451-bcc569", "event": "run_start", "total": 25}
+{"ts": "2026-11-05T15:02:12.495504+00:00", "run_id": "run-20261105-120211-538e15", "event": "run_start", "total": 2}
+{"ts": "2026-11-05T15:02:13.601933+00:00", "run_id": "run-20261105-120211-538e15", "event": "run_end", "completed": 2, "failed": 0, "duration_ms": 1105}
+{"ts": "2026-11-05T18:17:34.063442+00:00", "run_id": "run-20261105-151734-d34ec0", "event": "run_start", "total": 0}
+{"ts": "2026-11-05T18:17:34.064908+00:00", "run_id": "run-20261105-151734-d34ec0", "event": "run_end", "completed": 0, "failed": 0, "duration_ms": 0}
+{"ts": "2026-11-05T18:18:08.242580+00:00", "run_id": "run-20261105-151808-34f931", "event": "run_start", "total": 25}
+{"ts": "2026-11-05T18:19:42.859784+00:00", "run_id": "run-20261105-151942-eb6f22", "event": "run_start", "total": 25}
+{"ts": "2026-11-05T18:20:24.638894+00:00", "run_id": "run-20261105-152024-1e1855", "event": "run_start", "total": 25}
+{"ts": "2026-11-05T18:27:21.409782+00:00", "run_id": "run-20261105-152721-dfc835", "event": "run_start", "total": 25}
+{"ts": "2026-11-05T19:21:46.689125+00:00", "run_id": "run-20261105-162145-eca78f", "event": "run_start", "total": 0}
+{"ts": "2026-11-05T19:21:46.690064+00:00", "run_id": "run-20261105-162145-eca78f", "event": "run_end", "completed": 0, "failed": 0, "duration_ms": 0}
+{"ts": "2026-11-05T19:25:22.670624+00:00", "run_id": "run-20261105-162522-4ca118", "event": "run_start", "total": 25}
+{"ts": "2026-11-05T19:38:30.288952+00:00", "run_id": "run-20261105-162522-4ca118", "event": "run_end", "completed": 9, "failed": 16, "duration_ms": 787615}
+{"ts": "2026-11-05T19:43:41.779153+00:00", "run_id": "run-20261105-164341-f091ab", "event": "run_start", "total": 25}
+{"ts": "2026-11-05T19:58:31.257957+00:00", "run_id": "run-20261105-164341-f091ab", "event": "run_end", "completed": 25, "failed": 0, "duration_ms": 889477}
+{"ts": "2026-11-05T22:39:41.541691+00:00", "run_id": "run-20261105-193941-b2c223", "event": "run_start", "total": 25}
+{"ts": "2026-11-05T22:40:07.290965+00:00", "run_id": "run-20261105-193941-b2c223", "event": "run_end", "completed": 25, "failed": 0, "duration_ms": 25748}
+{"ts": "2026-11-05T22:48:52.750167+00:00", "run_id": "run-20261105-194852-06b315", "event": "run_start", "total": 25}
+{"ts": "2026-11-05T23:08:52.139864+00:00", "run_id": "run-20261105-194852-06b315", "event": "run_end", "completed": 25, "failed": 0, "duration_ms": 1199388}
+{"ts": "2026-11-05T23:10:26.715851+00:00", "run_id": "run-20261105-201026-0a44b6", "event": "run_start", "total": 25}
+{"ts": "2026-11-05T23:19:24.193145+00:00", "run_id": "run-20261105-201924-3a3814", "event": "run_start", "total": 25}
+{"ts": "2026-11-05T23:36:50.165841+00:00", "run_id": "run-20261105-201924-3a3814", "event": "run_end", "completed": 23, "failed": 2, "duration_ms": 1045971}
+{"ts": "2026-11-05T23:40:02.233976+00:00", "run_id": "run-20261105-204002-56e07b", "event": "run_start", "total": 25}
+{"ts": "2026-11-05T23:51:20.841172+00:00", "run_id": "run-20261105-204002-56e07b", "event": "run_end", "completed": 4, "failed": 21, "duration_ms": 678606}
+{"ts": "2026-11-05T23:54:26.196287+00:00", "run_id": "run-20261105-205426-a51c08", "event": "run_start", "total": 25}

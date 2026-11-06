@@ -1,0 +1,39 @@
+{
+  "questions": [],
+  "concept_id": "04-database-data-analytics-11-acid-isolation",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es ACID & Isolation y para que sirve (Consistencia, concurrencia, niveles de aislamiento)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de ACID & Isolation en Database / Data Analytics"
+    ],
+    "context": [
+      "Como se usa ACID & Isolation en el contexto profesional de Database / Data Analytics"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Transacciones",
+      "ask": "Como se relaciona ACID & Isolation con Transacciones?"
+    },
+    {
+      "with": "Transactions",
+      "ask": "Como se relaciona ACID & Isolation con Transactions?"
+    }
+  ],
+  "queries": [
+    "site:postgresql.org ACID & Isolation",
+    "site:sqlite.org ACID & Isolation",
+    "site:dev.mysql.com ACID & Isolation",
+    "site:use-the-index-luke.com ACID & Isolation",
+    "site:learn.microsoft.com ACID & Isolation",
+    "site:docs.snowflake.com ACID & Isolation",
+    "site:openstax.org ACID & Isolation"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

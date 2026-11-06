@@ -1,0 +1,20 @@
+{
+  "concept_id": "06-operating-systems-linux-19-signals",
+  "status": "failed",
+  "last_good_state": "researching",
+  "checkpoint": null,
+  "phase_data": {
+    "failed_phase": "researching",
+    "failed_reason": "error"
+  },
+  "error": "research (71c546d8-e005-4de3-8b80-795b1034ebeb): Chat request was rate limited or rejected by the API. Wait a few seconds and try again.",
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:49:05.023492+00:00",
+  "updated_at": "2026-11-05T23:49:23.109469+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:49:23.109439+00:00",
+    "created_at": "2026-11-05T23:49:05.023492+00:00"
+  },
+  "schema_version": "1.0.0"
+}

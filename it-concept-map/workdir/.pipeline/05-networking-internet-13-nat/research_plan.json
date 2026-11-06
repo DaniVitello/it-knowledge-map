@@ -1,0 +1,43 @@
+{
+  "questions": [],
+  "concept_id": "05-networking-internet-13-nat",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es NAT y para que sirve (Traducción entre direcciones privadas y públicas)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de NAT en Networking / Internet"
+    ],
+    "context": [
+      "Como se usa NAT en el contexto profesional de Networking / Internet"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Routing",
+      "ask": "Como se relaciona NAT con Routing?"
+    },
+    {
+      "with": "Routers",
+      "ask": "Como se relaciona NAT con Routers?"
+    },
+    {
+      "with": "Subnetting / CIDR",
+      "ask": "Como se relaciona NAT con Subnetting / CIDR?"
+    }
+  ],
+  "queries": [
+    "site:rfc-editor.org NAT",
+    "site:datatracker.ietf.org NAT",
+    "site:developer.mozilla.org NAT",
+    "site:cloudflare.com NAT",
+    "site:beej.us NAT",
+    "site:hpbn.co NAT",
+    "site:man7.org NAT"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

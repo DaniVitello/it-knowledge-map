@@ -1,0 +1,56 @@
+{
+  "questions": [],
+  "concept_id": "03-backend-18-seguridad",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Seguridad y para que sirve (CORS, CSRF, XSS, injection, secrets)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Seguridad en Backend"
+    ],
+    "context": [
+      "Como se usa Seguridad en el contexto profesional de Backend"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Security Engineering",
+      "ask": "Como se relaciona Seguridad con Security Engineering?"
+    },
+    {
+      "with": "Autenticación",
+      "ask": "Como se relaciona Seguridad con Autenticación?"
+    },
+    {
+      "with": "Autorización",
+      "ask": "Como se relaciona Seguridad con Autorización?"
+    },
+    {
+      "with": "HTTPS / TLS",
+      "ask": "Como se relaciona Seguridad con HTTPS / TLS?"
+    },
+    {
+      "with": "Firewalls",
+      "ask": "Como se relaciona Seguridad con Firewalls?"
+    },
+    {
+      "with": "AI Safety & Security",
+      "ask": "Como se relaciona Seguridad con AI Safety & Security?"
+    }
+  ],
+  "queries": [
+    "site:developer.mozilla.org Seguridad",
+    "site:rfc-editor.org Seguridad",
+    "site:datatracker.ietf.org Seguridad",
+    "site:owasp.org Seguridad",
+    "site:postgresql.org Seguridad",
+    "site:redis.io Seguridad",
+    "site:12factor.net Seguridad",
+    "site:learn.microsoft.com Seguridad"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,50 @@
+{
+  "concept_id": "05-networking-internet-20-http-status-codes",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No veo fuentes o documentos guardados en tu libreta sobre los **códigos de estado HTTP (2xx, 3xx, 4xx, 5xx)**. \n\n¿Quieres que haga una investigación en la web sobre este tema para explicarte qué son, para qué sirven y cómo se relacionan con las solicitudes y respuestas en la web?",
+      "claims": [
+        {
+          "text": "No veo fuentes o documentos guardados en tu libreta sobre los **códigos de estado HTTP (2xx, 3xx, 4xx, 5xx)**. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Esto es lo que encontré sobre los **códigos de estado HTTP (2xx, 3xx, 4xx, 5xx)** en redes e Internet:\n\nLos códigos de estado HTTP son respuestas numéricas de tres dígitos que envía un servidor web al cliente (como tu navegador o una aplicación) para indicarle el resultado de su solicitud en el modelo **Solicitud/Respuesta (Request/Response)**.\n\n**Temas clave identificados:**\n\n1. **Ciclo Request/Response**: Cuando envías una solicitud mediante un método HTTP (como GET, POST, PUT o DELETE), el servidor responde con un encabezado (Header) que incluye el código de estado correspondiente.\n2. **2xx (Éxito / Success)**: Indican que la solicitud fue recibida, entendida y procesada correctamente (por ejemplo, `200 OK` o `201 Created`).\n3. **3xx (Redirección / Redirection)**: Indican que el cliente debe tomar medidas adicionales para completar la solicitud, como dirigirse a una nueva URL (`301 Moved Permanently`) o usar una versión guardada en caché (`304 Not Modified`).\n4. **4xx (Error del Cliente / Client Error)**: Indican que la solicitud tuvo un problema originado por el cliente, como pedir un recurso inexistente (`404 Not Found`) o falta de autorización (`401 Unauthorized`).\n5. **5xx (Error del Servidor / Server Error)**: Señalan que el cliente envió una solicitud válida, pero el servidor falló al intentar procesarla (`500 Internal Server Error` o `502 Bad Gateway`).\n\n📥 El reporte de investigación completo está incluido como la primera fuente en la tarjeta a continuación; puedes importarlo para consultar todos los detalles en tu libreta.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-http-status-codes\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-http-status-codes\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Documentación técnica y artículos sobre códigos de estado HTTP (2xx, 3xx, 4xx, 5xx)\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Reporte de investigación: Códigos de estado HTTP\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQ0NjI5MzMyNS02MGNmLTRiZjEtYmFlNy00Y2Y3MzlkNzk1NTYSCxIHEPnP8YvcBhgB&filename=Reporte_de_investigacion_Codigos_de_estado_HTTP.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Reporte de investigación\",\n          \"summary\": \"Reporte completo de investigación con 5 fuentes sobre el funcionamiento de los códigos de estado HTTP.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"HTTP response status codes\",\n          \"url\": \"https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status\",\n          \"sourceName\": \"MDN Web Docs\",\n          \"summary\": \"Guía técnica oficial sobre las 5 familias de códigos de respuesta HTTP.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"List of HTTP status codes\",\n          \"url\": \"https://en.wikipedia.org/wiki/List_of_HTTP_status_codes\",\n          \"sourceName\": \"Wikipedia\",\n          \"summary\": \"Lista detallada de códigos estándar IETF y personalizados de diversos servidores.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"HTTP Status Codes\",\n          \"url\": \"https://www.geeksforgeeks.org/computer-networks/what-are-http-status-codes/\",\n          \"sourceName\": \"GeeksforGeeks\",\n          \"summary\": \"Explicación conceptual de códigos de estado en redes de computadoras y APIs.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"HTTP Status Code Overview\",\n          \"url\": \"https://learn.microsoft.com/en-us/troubleshoot/developer/webapps/iis/health-diagnostic-performance/http-status-code\",\n          \"sourceName\": \"Microsoft Learn\",\n          \"summary\": \"Descripción general sobre cómo los servidores web procesan e interpretan códigos de respuesta.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"Códigos de estado HTTP\",\n          \"url\": \"https://openreplay.com/es/tools/http-status-codes/\",\n          \"sourceName\": \"OpenReplay\",\n          \"summary\": \"Referencia estructurada en español sobre cada código HTTP y su significado.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Esto es lo que encontré sobre los **códigos de estado HTTP (2xx, 3xx, 4xx, 5xx)** en redes e Internet:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Todavía no he importado esas fuentes a tu libreta. **¿Quieres que las importe ahora?** \n\nUna vez importadas a tu libreta, podré responder en detalle a tus preguntas sobre los estados y sus relaciones basándome directamente en su contenido. También puedes desplazarte hacia arriba hasta la tarjeta de fuentes e importarlas directamente desde allí.",
+      "claims": [
+        {
+          "text": "Todavía no he importado esas fuentes a tu libreta. **¿Quieres que las importe ahora?** ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "7b3da991-3d99-4cc3-b814-c1a1715e5240",
+  "duration_ms": 58447,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-20-http-status-codes\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

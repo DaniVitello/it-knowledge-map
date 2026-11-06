@@ -1,0 +1,7 @@
+{"ts": "2026-11-05T23:20:48.377241+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-09-mac-ethernet", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:21:56.191810+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-09-mac-ethernet", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T23:22:00.203840+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-09-mac-ethernet", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T23:22:00.236569+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-09-mac-ethernet", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T23:22:00.262982+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-09-mac-ethernet", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T23:22:00.281948+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-09-mac-ethernet", "event": "notebook_delete_failed", "notebook_id": "972fd1d4-7159-41fb-9cbf-c88570d5fd47", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T23:22:00.292363+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-09-mac-ethernet", "event": "run_end", "status": "completed"}

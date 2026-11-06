@@ -1,0 +1,32 @@
+{
+  "concept_id": "06-operating-systems-linux-06-memory-management",
+  "is_valid": false,
+  "issues": [
+    "Encabezado faltante: ## Objetivo",
+    "Encabezado faltante: ## Esqueleto (el 20% esencial)",
+    "Encabezado faltante: ## Como funciona",
+    "Encabezado faltante: ## Detalles",
+    "Encabezado faltante: ## Ejemplo minimo",
+    "Encabezado faltante: ## Errores comunes",
+    "Encabezado faltante: ## Estado actual",
+    "Encabezado faltante: ## Conexiones",
+    "Encabezado faltante: ## Ruta de estudio",
+    "Encabezado faltante: ## Preguntas de repaso"
+  ],
+  "warnings": [],
+  "score": 0.23076923076923078,
+  "checked_at": "2026-11-05T23:45:21.137598+00:00",
+  "blocking_failures": [
+    "Encabezado faltante: ## Objetivo",
+    "Encabezado faltante: ## Esqueleto (el 20% esencial)",
+    "Encabezado faltante: ## Como funciona",
+    "Encabezado faltante: ## Detalles",
+    "Encabezado faltante: ## Ejemplo minimo",
+    "Encabezado faltante: ## Errores comunes",
+    "Encabezado faltante: ## Estado actual",
+    "Encabezado faltante: ## Conexiones",
+    "Encabezado faltante: ## Ruta de estudio",
+    "Encabezado faltante: ## Preguntas de repaso"
+  ],
+  "verdict": "rejected"
+}

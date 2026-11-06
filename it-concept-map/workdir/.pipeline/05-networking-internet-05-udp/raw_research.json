@@ -1,0 +1,50 @@
+{
+  "concept_id": "05-networking-internet-05-udp",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No hay fuentes cargadas en tu libreta para responder a esta consulta. ¿Te gustaría que realice una búsqueda en la web sobre **UDP**, sus usos y su relación con TCP y puertos?",
+      "claims": [
+        {
+          "text": "No hay fuentes cargadas en tu libreta para responder a esta consulta. ¿Te gustaría que realice una búsqueda en la web sobre **UDP**, sus usos y su relación con TCP y puertos?",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Aquí tienes un resumen de lo que encontré sobre el **Protocolo UDP (User Datagram Protocol)**, su funcionamiento en redes, su relación con los puertos y las diferencias clave con TCP:\n\nEl protocolo **UDP** opera en la capa de transporte del modelo TCP/IP. Su característica principal es que es un protocolo **sin conexión (connectionless)**: envía la información empaquetada en pequeños bloques llamados *datagramas* sin verificar previamente si el receptor está listo ni confirmar si los paquetes llegaron con éxito.\n\n**Temas clave identificados en las fuentes:**\n1. **Funcionamiento sin conexión:** A diferencia de TCP (que realiza un proceso de saludo o *3-way handshake* para iniciar comunicación), UDP envía los datos inmediatamente al destino sin establecer un canal previo.\n2. **Velocidad y baja sobrecarga:** La cabecera de un paquete UDP es muy liviana (solo 8 bytes, frente a los 20+ bytes de TCP), lo que reduce la latencia y maximiza la velocidad de transmisión.\n3. **Rol de los Puertos:** Tanto UDP como TCP utilizan números de puerto (de 0 a 65535) junto con la dirección IP para formar un *socket*. El puerto especifica qué aplicación o servicio exacto en el dispositivo receptor debe recibir el datagrama (por ejemplo, consultas DNS en el puerto 53).\n4. **Tolerancia a pérdidas:** UDP no retransmite paquetes perdidos ni garantiza el orden de llegada. Esto lo hace ideal para aplicaciones en tiempo real como streaming de vídeo/audio, videollamadas (VoIP), juegos multijugador online y protocolos como DNS o DHCP, donde la inmediatez importa más que recuperar un paquete extraviado.\n\n---\n\n📥 **El informe de investigación completo se incluye como la primera fuente en la tarjeta de importación a continuación.** Puedes importar las fuentes a tu libreta para analizarlas y hacer preguntas detalladas sobre ellas.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-udp-networking\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-udp-networking\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos técnicos y guías sobre el protocolo UDP, su comparación con TCP y el uso de puertos\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Informe de investigación: Protocolo UDP y Puertos\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQ5OTdmOTgxZC1jM2QwLTQyYjItODJhMi02MzVjN2Q0MjgzYTISCxIHEPnP8YvcBhgB&filename=Informe_de_investigacin_Protocolo_UDP_y_Puertos.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Informe de Investigación\",\n          \"summary\": \"Informe completo con 6 fuentes sobre UDP, TCP y puertos en redes.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"TCP vs UDP: diferencias, ejemplos y cuándo usar cada protocolo\",\n          \"url\": \"https://ardumaker.com/blog/tcp-vs-udp-diferencias-ejemplos-y-cuando-usar-cada-protocolo/\",\n          \"sourceName\": \"ArduMaker Blog\",\n          \"summary\": \"Explicación técnica de UDP, RFC 768 y casos prácticos en streaming, DNS y juegos online.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"TCP y UDP: puertos, conexiones y transporte\",\n          \"url\": \"https://subnetmaster.es/guia/fundamentos-de-redes/tcp-udp/\",\n          \"sourceName\": \"SubnetMaster\",\n          \"summary\": \"Conceptos de puertos, sockets (IP+Puerto) y la estructura de comunicación sin conexión.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"TCP vs UDP: diferencias y cuándo usar cada protocolo\",\n          \"url\": \"https://www.digitalsamba.com/es/blog/tcp-and-udp-protocols\",\n          \"sourceName\": \"Digital Samba\",\n          \"summary\": \"Comparativa de velocidad, latencia y tolerancia a pérdidas entre UDP y TCP.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"Puertos TCP y UDP: ¿qué puertos son importantes?\",\n          \"url\": \"https://www.ionos.com/es-us/digitalguide/servidores/know-how/puertos-tcp-puertos-udp/\",\n          \"sourceName\": \"IONOS\",\n          \"summary\": \"Guía sobre cómo los números de puerto (0-65535) identifican aplicaciones y servicios en red.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"TCP frente a UDP: ¿En qué se diferencian y qué protocolo es mejor?\",\n          \"url\": \"https://www.avast.com/es-es/c-tcp-vs-udp-difference\",\n          \"sourceName\": \"Avast\",\n          \"summary\": \"Resumen práctico de ventajas y desventajas de los protocolos de capa de transporte.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Aquí tienes un resumen de lo que encontré sobre el **Protocolo UDP (User Datagram Protocol)**, su funcionamiento en redes, su relación con los puertos y las diferencias clave con TCP:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no he importado esas fuentes a tu libreta. ¿Quieres que las importe primero? De esa forma podré responder a tus preguntas basándome en el contenido de las fuentes. También puedes desplazarte hacia arriba hasta la tarjeta de resultados de investigación e importarlas directamente desde allí.",
+      "claims": [
+        {
+          "text": "Aún no he importado esas fuentes a tu libreta. ¿Quieres que las importe primero? De esa forma podré responder a tus preguntas basándome en el contenido de las fuentes. También puedes desplazarte hacia",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "7b186f13-faf7-42d7-ac6c-d54645a26c5f",
+  "duration_ms": 51408,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-05-udp\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

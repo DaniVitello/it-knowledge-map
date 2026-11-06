@@ -1,0 +1,7 @@
+{"ts": "2026-11-05T23:33:25.904934+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-22-websockets", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:33:55.175191+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-22-websockets", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T23:33:58.932223+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-22-websockets", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T23:33:58.970560+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-22-websockets", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T23:33:59.001363+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-22-websockets", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T23:33:59.020193+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-22-websockets", "event": "notebook_delete_failed", "notebook_id": "88f42cd9-e5d4-4e13-8a63-4ead3a8c793c", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T23:33:59.029844+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-22-websockets", "event": "run_end", "status": "completed"}

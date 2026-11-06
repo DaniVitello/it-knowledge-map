@@ -1,0 +1,10 @@
+{
+  "concept_id": "02-frontend-08-eventos",
+  "is_valid": true,
+  "issues": [],
+  "warnings": [],
+  "score": 1.0,
+  "checked_at": "2026-10-30T05:12:50.829742+00:00",
+  "blocking_failures": [],
+  "verdict": "approved"
+}

@@ -1,0 +1,29 @@
+{
+  "concept_id": "04-database-data-analytics-18-data-quality",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-18-data-quality\\sources.json",
+    "notebook_id": "c06ade21-bc4c-409b-b6a4-f8bc5c3b5a07",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-18-data-quality\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-18-data-quality\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\04-database-data-analytics-18-data-quality\\18 - Data Quality.md.20261105T230309Z-0af358.bak",
+      "outside_hash": "6437544fdd3bad34001dea088cbc3ff0c45ca91cc2b46bda00e906f94dbb8d9c",
+      "inside_hash": "252596b7528772564cf5b9b81d0955ecca5ea8a5b90513263bc13c931b9e318e",
+      "written_at": "2026-11-05T23:03:09.449135+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:02:01.843138+00:00",
+  "updated_at": "2026-11-05T23:03:09.467087+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:03:09.467087+00:00",
+    "created_at": "2026-11-05T23:02:01.843138+00:00"
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,50 @@
+{
+  "concept_id": "05-networking-internet-17-https-tls",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No veo ninguna fuente guardada en tu cuaderno sobre **HTTPS / TLS (Comunicación HTTP cifrada)**. \n\n¿Quieres que haga una investigación en la web sobre este tema para responder a tu pregunta y buscar fuentes relevantes?",
+      "claims": [
+        {
+          "text": "No veo ninguna fuente guardada en tu cuaderno sobre **HTTPS / TLS (Comunicación HTTP cifrada)**. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Aquí tienes lo que encontré sobre **Cómo funciona HTTPS / TLS en Networking e Internet**:\n\nHTTPS (HyperText Transfer Protocol Secure) funciona superponiendo el protocolo HTTP sobre un canal de comunicación cifrado creado por **TLS (Transport Layer Security)** sobre la capa de transporte TCP. Su objetivo es garantizar la confidencialidad de los datos, la autenticación del servidor mediante certificados digitales (PKI) y la integridad de la información que viaja por la red.\n\n**Temas clave identificados:**\n1. **Pila de protocolos (TCP + TLS + HTTP)**: La conexión establece primero el *handshake* TCP (tres vías), luego ejecuta el *handshake* TLS para asegurar el canal y, finalmente, transfiere las peticiones y respuestas HTTP cifradas.\n2. **Protocolo de enlace (TLS Handshake)**: El cliente y el servidor negocian la versión del protocolo y las suites de cifrado, validan el certificado digital del servidor y acuerdan claves de sesión.\n3. **Cifrado Híbrido**: Utiliza criptografía asimétrica (como Diffie-Hellman efímero / ECDHE) para intercambiar claves de forma segura y criptografía simétrica (como AES-GCM o ChaCha20) para el cifrado eficiente del tráfico de aplicación.\n4. **Optimización con TLS 1.3**: Reduce el tiempo del *handshake* de 2 viajes de ida y vuelta (RTT) a solo 1 RTT (o 0-RTT en reconexiones), aumentando la velocidad y eliminando algoritmos criptográficos obsoletos.\n\n📥 El informe de investigación completo se incluye como la primera fuente en la tarjeta de importación a continuación; impórtalo para chatear directamente con los hallazgos.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-https-tls-networking\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-https-tls-networking\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos técnicos y guías sobre el funcionamiento de HTTPS y TLS en redes\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Informe de investigación: HTTPS / TLS en Networking\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQ4ODU5YjYyMy02NTBhLTQxYzQtYmFlYi00ZmExMmVkYzcxOTMSCxIHEPnP8YvcBhgB&filename=Informe_de_investigacin_HTTPS__TLS_en_Networking.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Informe de investigación\",\n          \"summary\": \"Informe completo con 8 fuentes sobre el funcionamiento de HTTPS y TLS en Internet\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"¿Qué ocurre durante un protocolo de enlace de datos TLS?\",\n          \"url\": \"https://www.cloudflare.com/es-es/learning/ssl/what-happens-in-a-tls-handshake/\",\n          \"sourceName\": \"Cloudflare\",\n          \"summary\": \"Explicación detallada del handshake TLS, sus etapas y diferencias entre SSL y TLS.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"Proceso de SSL/TLS Handshake\",\n          \"url\": \"https://www.azion.com/es/learning/tls/ssl-tls-handshake-proceso/\",\n          \"sourceName\": \"Azion\",\n          \"summary\": \"Guía técnica sobre la latencia RTT, cifrado simétrico/asimétrico y TLS 1.3.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"HTTPS y TLS 1.3: qué ocurre antes de que una API reciba tu petición\",\n          \"url\": \"https://uncodigo.com/blog/https-tls-13-handshake-api/\",\n          \"sourceName\": \"Un Código\",\n          \"summary\": \"Análisis paso a paso del handshake TLS 1.3 en la pila de red antes de procesar solicitudes HTTP.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"Desmitificando el handshake TLS: Qué es y cómo funciona\",\n          \"url\": \"https://www.keyfactor.com/es/blog/what-is-tls-handshake-how-does-it-work/\",\n          \"sourceName\": \"Keyfactor\",\n          \"summary\": \"Explicación de conceptos criptográficos, autenticación PKI e integridad de datos en TLS.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"Explicación del protocolo de enlace TLS: qué sucede antes de que HTTPS envíe datos\",\n          \"url\": \"https://ip.vpnmasterpro.com/es/learning/tls-handshake\",\n          \"sourceName\": \"VPNMasterPro\",\n          \"summary\": \"Detalles sobre el intercambio efímero de claves (ECDHE) y la derivación de claves de sesión.\"\n        },\n        {\n          \"id\": \"src-6\",\n          \"title\": \"¿Qué es un TLS handshake y cómo funciona?\",\n          \"url\": \"https://www.ninjaone.com/es/blog/tls-handshake/\",\n          \"sourceName\": \"NinjaOne\",\n          \"summary\": \"Visión general del cifrado de canal en redes y aplicaciones web con TLS.\"\n        },\n        {\n          \"id\": \"src-7\",\n          \"title\": \"TLS: cómo se encripta en Internet\",\n          \"url\": \"https://www.ionos.es/digitalguide/servidores/seguridad/tls-transport-layer-security/\",\n          \"sourceName\": \"IONOS\",\n          \"summary\": \"Explicación sobre cifrado híbrido y mejoras de rendimiento en el estándar TLS.\"\n        },\n        {\n          \"id\": \"src-8\",\n          \"title\": \"HTTPS, SSL y TLS explicados fácil\",\n          \"url\": \"https://www.youtube.com/watch?v=udVA2AGkxBk\",\n          \"sourceName\": \"YouTube\",\n          \"summary\": \"Explicación didáctica sobre certificados de seguridad y comunicación HTTP cifrada.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Aquí tienes lo que encontré sobre **Cómo funciona HTTPS / TLS en Networking e Internet**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Veo que todavía **no has importado las fuentes** de la investigación anterior a tu cuaderno. \n\nPara poder responder a tu consulta sobre el **estado actual y las relaciones de HTTPS / TLS** de forma fundamentada en el contenido de esos documentos, ¿quieres que importe las fuentes por ti? También puedes seleccionar e importar directamente las que prefieras utilizando la **tarjeta de importación** que aparece arriba.",
+      "claims": [
+        {
+          "text": "Veo que todavía **no has importado las fuentes** de la investigación anterior a tu cuaderno. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "bc63b90d-de46-4be1-a338-6569ad4b9d40",
+  "duration_ms": 56332,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-17-https-tls\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

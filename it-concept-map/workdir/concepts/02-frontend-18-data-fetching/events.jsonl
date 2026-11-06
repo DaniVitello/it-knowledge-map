@@ -1,0 +1,11 @@
+{"ts": "2026-10-30T05:18:48.742035+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-18-data-fetching", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:19:08.707720+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-18-data-fetching", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:19:14.750155+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-18-data-fetching", "event": "phase_failed", "phase": "research", "error": "Transicion invalida: researching -> researching"}
+{"ts": "2026-10-30T05:19:22.693927+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-18-data-fetching", "event": "phase_done", "phase": "research"}
+{"ts": "2026-10-30T05:19:26.911712+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-18-data-fetching", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-10-30T05:19:26.948914+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-18-data-fetching", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-10-30T05:19:26.988455+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-18-data-fetching", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-10-30T05:19:27.019261+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-18-data-fetching", "event": "notebook_delete_failed", "notebook_id": "587ce685-4a1f-43c1-b3bf-c4f51fab504b", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-10-30T05:19:27.029827+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-18-data-fetching", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T22:39:59.747939+00:00", "run_id": "run-20261105-193941-b2c223", "concept_id": "02-frontend-18-data-fetching", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T22:39:59.782544+00:00", "run_id": "run-20261105-193941-b2c223", "concept_id": "02-frontend-18-data-fetching", "event": "run_end", "status": "completed"}

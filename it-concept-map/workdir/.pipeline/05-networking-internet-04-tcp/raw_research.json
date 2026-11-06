@@ -1,0 +1,50 @@
+{
+  "concept_id": "05-networking-internet-04-tcp",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "**No encuentro fuentes cargadas en tu libreta** para responder a tu pregunta, ya que la libreta está vacía. Para garantizar información verificable y precisa, mis respuestas se basan en los materiales que agregues a tu proyecto.\n\n¿Te gustaría que realice una **investigación en la web** sobre **qué es TCP, para qué sirve y sus conceptos relacionados**?",
+      "claims": [
+        {
+          "text": "**No encuentro fuentes cargadas en tu libreta** para responder a tu pregunta, ya que la libreta está vacía. Para garantizar información verificable y precisa, mis respuestas se basan en los materiales",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "**Tu libreta \"TCP\" aún no contiene fuentes** con las que pueda explicar el funcionamiento de TCP en redes e Internet.\n\nPara poder responderte con información detallada y verificable, ¿te gustaría que realice una **investigación en la web** sobre cómo funciona TCP y sus conceptos relacionados (IP, UDP, puertos, sockets, modelo OSI/TCP-IP, etc.)?",
+      "claims": [
+        {
+          "text": "**Tu libreta \"TCP\" aún no contiene fuentes** con las que pueda explicar el funcionamiento de TCP en redes e Internet.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "**Tu libreta \"TCP\" no contiene fuentes cargadas** sobre los estados de la conexión TCP ni sus relaciones con otros protocolos y componentes de red.\n\nPara mantener la precisión y garantizar que las respuestas estén fundamentadas en material verificable, no genero explicaciones sin fuentes cargadas. **Puedo realizar una investigación en la web** para recopilar información sobre la máquina de estados de TCP (LISTEN, SYN-SENT, ESTABLISHED, FIN-WAIT, TIME-WAIT, etc.) y sus relaciones con IP, UDP, puertos, sockets, HTTP y el modelo TCP/IP.\n\n¿Te gustaría que empiece la **investigación en la web**?",
+      "claims": [
+        {
+          "text": "**Tu libreta \"TCP\" no contiene fuentes cargadas** sobre los estados de la conexión TCP ni sus relaciones con otros protocolos y componentes de red.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "a01bbeed-d4f3-4d39-ae00-e1b2b11faa15",
+  "duration_ms": 31296,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-04-tcp\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

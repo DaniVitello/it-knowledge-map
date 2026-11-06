@@ -1,0 +1,44 @@
+{
+  "questions": [],
+  "concept_id": "03-backend-04-lenguaje-backend",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Lenguaje Backend y para que sirve (Java, Go, Python, C#, JavaScript/TypeScript, etc.)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Lenguaje Backend en Backend"
+    ],
+    "context": [
+      "Como se usa Lenguaje Backend en el contexto profesional de Backend"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Programming Fundamentals",
+      "ask": "Como se relaciona Lenguaje Backend con Programming Fundamentals?"
+    },
+    {
+      "with": "Runtime",
+      "ask": "Como se relaciona Lenguaje Backend con Runtime?"
+    },
+    {
+      "with": "Python & Programming",
+      "ask": "Como se relaciona Lenguaje Backend con Python & Programming?"
+    }
+  ],
+  "queries": [
+    "site:developer.mozilla.org Lenguaje Backend",
+    "site:rfc-editor.org Lenguaje Backend",
+    "site:datatracker.ietf.org Lenguaje Backend",
+    "site:owasp.org Lenguaje Backend",
+    "site:postgresql.org Lenguaje Backend",
+    "site:redis.io Lenguaje Backend",
+    "site:12factor.net Lenguaje Backend",
+    "site:learn.microsoft.com Lenguaje Backend"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

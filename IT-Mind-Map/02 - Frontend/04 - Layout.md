@@ -17,9 +17,6 @@ tags: [concepto, it/frontend]
 
 ## Mis notas
 <!-- ai:start -->
-# Modern Web Layout Architecture: Comprehensive Study Guide
-
-This study guide provides a structured analysis of modern CSS layout specifications, geometric calculations, positioning systems, and responsive design paradigms based on technical documentation and authoritative web standards.
 <!-- ai:end -->
 
 ---

@@ -1,0 +1,39 @@
+{
+  "questions": [],
+  "concept_id": "05-networking-internet-07-dns",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es DNS y para que sirve (Traducción de dominios → IP)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de DNS en Networking / Internet"
+    ],
+    "context": [
+      "Como se usa DNS en el contexto profesional de Networking / Internet"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Internet",
+      "ask": "Como se relaciona DNS con Internet?"
+    },
+    {
+      "with": "IP",
+      "ask": "Como se relaciona DNS con IP?"
+    }
+  ],
+  "queries": [
+    "site:rfc-editor.org DNS",
+    "site:datatracker.ietf.org DNS",
+    "site:developer.mozilla.org DNS",
+    "site:cloudflare.com DNS",
+    "site:beej.us DNS",
+    "site:hpbn.co DNS",
+    "site:man7.org DNS"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

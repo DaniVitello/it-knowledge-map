@@ -1,0 +1,50 @@
+{
+  "concept_id": "04-database-data-analytics-14-data-warehouses",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "Actualmente no tienes fuentes agregadas a tu libreta para responder a tu consulta sobre **Data Warehouses** (sistemas optimizados para análisis, OLTP vs OLAP, ETL/ELT y Data Pipelines).\n\n¿Quieres que realice una investigación en la web sobre este tema para recopilar la información y presentarte las fuentes correspondientes?",
+      "claims": [
+        {
+          "text": "Actualmente no tienes fuentes agregadas a tu libreta para responder a tu consulta sobre **Data Warehouses** (sistemas optimizados para análisis, OLTP vs OLAP, ETL/ELT y Data Pipelines).",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Un **Data Warehouse** (Almacén de Datos) es un sistema centralizado diseñado y optimizado específicamente para la consulta, el reporte y el análisis de grandes volúmenes de datos empresariales. A diferencia de las bases de datos transaccionales tradicionales, su objetivo principal es actuar como la **única fuente de verdad** (*Single Source of Truth*), consolidando información histórica limpia y estructurada proveniente de múltiples orígenes.\n\n### ¿Cómo funciona en Database y Data Analytics?\n\n1. **Separación OLTP vs. OLAP (Operativo vs. Analítico)**\n   * **OLTP (*Online Transaction Processing*)**: Son las bases de datos operacionales de uso diario (como el sistema de cobro de un e-commerce o una app bancaria). Están optimizadas para escribir y actualizar registros individuales en tiempo real de forma rápida y segura.\n   * **OLAP (*Online Analytical Processing*)**: Es el modelo en el que se basa el Data Warehouse. Está optimizado para leer y agregar millones de filas simultáneamente mediante arquitecturas orientadas a columnas, permitiendo responder preguntas analíticas complejas (por ejemplo, *\"ventas totales por categoría, región y trimestre en los últimos 5 años\"*) sin ralentizar las operaciones en vivo.\n\n2. **Pipelines de Datos e Integración (ETL vs. ELT)**\n   * **ETL (*Extract, Transform, Load*)**: Es el enfoque tradicional. Los datos se extraen de los sistemas origen (OLTP, CRM, APIs), se limpian y transforman en un servidor intermedio, y finalmente se cargan estructurados al Data Warehouse.\n   * **ELT (*Extract, Load, Transform*)**: Es el enfoque moderno impulsado por Cloud Data Warehouses (como Snowflake, BigQuery o Amazon Redshift). Los datos crudos se extraen y se cargan directamente en el almacén; luego, aprovechando la capacidad de cómputo elástico de la nube, se transforman directamente dentro del Data Warehouse según las necesidades del negocio.\n\n3. **Flujo de Trabajo del Data Pipeline**\n   * **Captura**: Extracción desde múltiples fuentes heterogéneas.\n   * **Transporte e Integración**: Procesamiento mediante pipelines ETL o ELT.\n   * **Almacenamiento**: Organización dimensional en el Data Warehouse.\n   * **Explotación**: Consumo por parte de herramientas de Business Intelligence (BI), paneles interactivos, reportes ejecutivos o modelos analíticos.\n\n---\n\n### Temas clave identificados en la investigación\n\n1. **Aislamiento de Cargas**: Separar OLTP de OLAP evita que consultas analíticas pesadas colapsen el rendimiento de los sistemas transaccionales críticos.\n2. **Evolución hacia ELT**: La nube ha hecho que ELT sea la opción preferida por su flexibilidad y menor tiempo de ingesta inicial de datos.\n3. **Consolidación Histórica**: Permite comparar tendencias a lo largo de varios años, algo que las bases de datos transaccionales suelen purgar o archivar por desempeño.\n\n📥 *He seleccionado las siguientes fuentes principales sobre el tema. Puedes importarlas a tu libreta desde la tarjeta a continuación para conservarlas y seguir profundizando:*\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-data-warehouses\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-data-warehouses\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos técnicos y documentación sobre Data Warehouses, OLTP vs OLAP y ETL/ELT\",\n      \"sources\": [\n        {\n          \"id\": \"src-1\",\n          \"title\": \"Data warehousing: ETL, OLAP y OLTP\",\n          \"url\": \"https://blog.bismart.com/data-warehouse-etl-olap-oltp\",\n          \"sourceName\": \"Bismart\",\n          \"summary\": \"Explicación de la relación e integración entre Data Warehouses, OLAP y OLTP mediante procesos ETL.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"OLTP y OLAP: diferencia entre los sistemas de procesamiento de datos\",\n          \"url\": \"https://aws.amazon.com/es/compare/the-difference-between-olap-and-oltp/\",\n          \"sourceName\": \"AWS\",\n          \"summary\": \"Comparativa de arquitecturas entre el procesamiento de transacciones en tiempo real y el análisis multidimensional.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"Diferencia entre OLAP y OLTP\",\n          \"url\": \"https://www.ibm.com/es-es/think/topics/olap-vs-oltp\",\n          \"sourceName\": \"IBM\",\n          \"summary\": \"Análisis sobre los propósitos operacionales y de analítica avanzada en entornos empresariales.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"OLTP vs. OLAP: Differences and Applications\",\n          \"url\": \"https://www.snowflake.com/en/fundamentals/olap-vs-oltp-the-differences/\",\n          \"sourceName\": \"Snowflake\",\n          \"summary\": \"Explicación práctica de cómo OLTP ayuda a 'ejecutar el negocio' mientras OLAP ayuda a 'entender el negocio'.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"ETL vs. ELT: similitudes y diferencias\",\n          \"url\": \"https://www.ibm.com/es-es/think/topics/elt-vs-etl\",\n          \"sourceName\": \"IBM\",\n          \"summary\": \"Explicación de las diferencias entre el modelo ETL tradicional y el paradigma moderno ELT en la nube.\"\n        },\n        {\n          \"id\": \"src-6\",\n          \"title\": \"ETL vs. ELT Pipelines: What to Know About Each Model\",\n          \"url\": \"https://stripe.com/resources/more/etl-vs-etl-pipelines\",\n          \"sourceName\": \"Stripe\",\n          \"summary\": \"Criterios para elegir entre pipelines ETL y ELT según velocidad, costo y gobernanza de datos.\"\n        },\n        {\n          \"id\": \"src-7\",\n          \"title\": \"¿Qué es el data warehouse?\",\n          \"url\": \"https://www.ovhcloud.com/es/learn/what-is-data-warehouse/\",\n          \"sourceName\": \"OVHcloud\",\n          \"summary\": \"Principios del Data Warehouse como repositorio centralizado y fuente única de verdad para Business Intelligence.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Un **Data Warehouse** (Almacén de Datos) es un sistema centralizado diseñado y optimizado específicamente para la consulta, el reporte y el análisis de grandes volúmenes de datos empresariales. A dife",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no he importado esas fuentes a tu libreta. ¿Quieres que las importe primero para poder responder a tus preguntas en profundidad basándome en el contenido de las fuentes? \n\nTambién puedes desplazarte hacia arriba hasta la tarjeta de investigación e importarlas directamente desde allí.",
+      "claims": [
+        {
+          "text": "Aún no he importado esas fuentes a tu libreta. ¿Quieres que las importe primero para poder responder a tus preguntas en profundidad basándome en el contenido de las fuentes? ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "1156c287-2e4b-4e83-bb12-7962c99ea33e",
+  "duration_ms": 58614,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-14-data-warehouses\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

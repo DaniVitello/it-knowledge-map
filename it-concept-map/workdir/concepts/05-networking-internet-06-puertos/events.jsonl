@@ -1,0 +1,11 @@
+{"ts": "2026-11-05T23:14:12.082668+00:00", "run_id": "run-20261105-201026-0a44b6", "concept_id": "05-networking-internet-06-puertos", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:15:17.210274+00:00", "run_id": "run-20261105-201026-0a44b6", "concept_id": "05-networking-internet-06-puertos", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T23:15:21.211260+00:00", "run_id": "run-20261105-201026-0a44b6", "concept_id": "05-networking-internet-06-puertos", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T23:15:21.257707+00:00", "run_id": "run-20261105-201026-0a44b6", "concept_id": "05-networking-internet-06-puertos", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T23:19:29.583961+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-06-puertos", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:20:34.770417+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-06-puertos", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T23:20:39.129852+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-06-puertos", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T23:20:39.162803+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-06-puertos", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T23:20:39.188471+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-06-puertos", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T23:20:39.206156+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-06-puertos", "event": "notebook_delete_failed", "notebook_id": "ecf987fd-1adc-4b0d-8621-55d7fa78854b", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T23:20:39.218938+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-06-puertos", "event": "run_end", "status": "completed"}

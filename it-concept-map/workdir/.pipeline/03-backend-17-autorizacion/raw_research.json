@@ -1,0 +1,50 @@
+{
+  "concept_id": "03-backend-17-autorizacion",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "Actualmente no hay fuentes en tu libreta sobre este tema. Para asegurar que toda la información esté respaldada y sea verificable, no respondo utilizando conocimiento general fuera de tus materiales.\n\n¿Te gustaría que realice una **investigación en la web** sobre **Autorización, Roles, Permisos, RBAC y ABAC** para reunir fuentes e información relevante?",
+      "claims": [
+        {
+          "text": "Actualmente no hay fuentes en tu libreta sobre este tema. Para asegurar que toda la información esté respaldada y sea verificable, no respondo utilizando conocimiento general fuera de tus materiales.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "He realizado una investigación en la web sobre **cómo funciona la autorización en el backend**, abarcando **Roles, Permisos, RBAC y ABAC**, así como la arquitectura estándar para su implementación.\n\n---\n\n### Resumen de hallazgos\n\nLa **autorización** en el backend es el proceso de determinar **qué acciones** tiene permitido realizar una identidad (usuario o servicio) sobre un recurso específico, una vez que ya ha sido autenticada (verificado quién es).\n\nEn el backend, este proceso se organiza principalmente a través de dos modelos de control de acceso y una arquitectura en capas:\n\n**1. Modelos de control de acceso (RBAC vs. ABAC):**\n* **RBAC (Role-Based Access Control):** Conecta a los usuarios con permisos de forma indirecta a través de **Roles** (por ejemplo, *Admin*, *Editor*, *Viewer*). Cada rol agrupa un conjunto de permisos (como `read:users`, `write:documents`). Es ideal para estructuras organizativas previsibles y estáticas.\n* **ABAC (Attribute-Based Access Control):** Evalúa reglas dinámicas considerando **atributos del sujeto** (ej. departamento, rol), **del recurso** (ej. propietario del archivo, nivel de confidencialidad), **de la acción** (ej. leer, eliminar) y **del entorno** (ej. hora, ubicación IP). Evita la \"explosión de roles\" cuando las reglas de negocio son complejas y dependientes del contexto.\n\n**2. Arquitectura de ejecución en Backend (Middleware / PEP / PDP):**\n* **PEP (Policy Enforcement Point):** Suele ser un middleware, API Gateway o interceptor en el código backend que detiene la petición HTTP, extrae las credenciales o token (ej. JWT) y solicita una decisión de autorización antes de ejecutar la lógica de negocio.\n* **PDP (Policy Decision Point):** Motor o función encargada de evaluar las políticas (verificando los roles/atributos contra el recurso solicitado) y retornar una decisión binaria: `Permitir` o `Denegar`.\n\n---\n\n### Temas clave identificados en las fuentes\n\n1. **Separación de responsabilidades**: La autenticación otorga una identidad (ej. en un token JWT con scopes/claims), mientras que la autorización en backend interpreta esos claims o consulta el motor de políticas para decidir si conceder el acceso al endpoint o recurso.\n2. **Evolución de RBAC a ABAC**: Muchas aplicaciones comienzan con RBAC debido a su sencillez, pero adoptan condiciones tipo ABAC (o enfoques híbridos) a medida que necesitan restricciones granulares como *\"solo el creador del recurso o un Admin pueden editar este registro\"*.\n3. **Desacoplamiento de políticas**: Las arquitecturas modernas recomiendan separar las reglas de autorización del código principal de la aplicación mediante motores de políticas dedicados o plataformas de gestión de autorización.\n\n---\n\n📥 El reporte completo de investigación se incluye como la primera fuente en la tarjeta de importación a continuación — impórtalo para consultar los hallazgos directamente en tu libreta.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-autorizacion-backend\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-autorizacion-backend\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos técnicos, guías y documentación sobre autorización en backend, RBAC, ABAC y patrones de arquitectura\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Reporte de investigación: Autorización en Backend\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQ2MWIwZjI5ZC01MDVlLTQ0ZDItYjgzMC04MjRiNjg3YWUxZTgSCxIHEPnP8YvcBhgB&filename=Reporte_de_investigacion_Autorizacion_en_Backend.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Reporte de investigación\",\n          \"summary\": \"Reporte completo estructurado con 9 fuentes sobre autorización en backend, RBAC, ABAC y arquitectura PEP/PDP.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"RBAC: guía sobre el control de acceso para desarrolladores\",\n          \"url\": \"https://auth0.com/es/intro-to-iam/what-is-role-based-access-control-rbac\",\n          \"sourceName\": \"Auth0\",\n          \"summary\": \"Explicación detallada de RBAC, indirección de permisos y su aplicación con JWTs en entornos multi-inquilino.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"Control de Acceso Basado en Atributos (ABAC): La Evolución del RBAC\",\n          \"url\": \"https://cibersafety.com/abac-vs-rbac-control-acceso-atributos/\",\n          \"sourceName\": \"Cibersafety\",\n          \"summary\": \"Análisis práctico sobre cómo ABAC resuelve la explosión de roles permitiendo decisiones dinámicas.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"Modelos de Autorización: DAC, MAC, RBAC, ABAC y Rule-BAC\",\n          \"url\": \"https://rutaciber.com/modelos-de-autorizacion-guia-esencial-iam/\",\n          \"sourceName\": \"RutaCiber\",\n          \"summary\": \"Guía esencial sobre los distintos modelos de control de acceso y sus diferencias conceptuales.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"PEP and PDP for Secure Authorization with Cognito\",\n          \"url\": \"https://dev.to/aws-heroes/pep-and-pdp-for-secure-authorization-with-cognito-29bd\",\n          \"sourceName\": \"DEV Community\",\n          \"summary\": \"Ejemplo práctico de arquitectura implementando Policy Enforcement Point (PEP) y Policy Decision Point (PDP) en el backend.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"Authorization Management Platforms: What They Do, How They Work\",\n          \"url\": \"https://www.cerbos.dev/blog/authorization-management-platforms\",\n          \"sourceName\": \"Cerbos\",\n          \"summary\": \"Explicación de la arquitectura estándar de autorización (PAP, PDP, PEP, PIP) para desacoplar permisos.\"\n        },\n        {\n          \"id\": \"src-6\",\n          \"title\": \"RBAC y ABAC: Los modelos de control de acceso que debes conocer\",\n          \"url\": \"https://blog.logto.io/es/rbac-and-abac\",\n          \"sourceName\": \"Logto Blog\",\n          \"summary\": \"Resumen comparativo accesible entre el control basado en roles y el control basado en atributos.\"\n        },\n        {\n          \"id\": \"src-7\",\n          \"title\": \"Implementing authorization using JWT-based access tokens\",\n          \"url\": \"https://microservices.io/post/architecture/2025/07/22/microservices-authn-authz-part-3-jwt-authorization.html\",\n          \"sourceName\": \"Microservices.io\",\n          \"summary\": \"Estrategias para transportar y validar permisos de autorización en arquitecturas de microservicios mediante JWT.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "He realizado una investigación en la web sobre **cómo funciona la autorización en el backend**, abarcando **Roles, Permisos, RBAC y ABAC**, así como la arquitectura estándar para su implementación.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no he importado las fuentes de la investigación anterior a tu libreta. \n\n¿Quieres que las importe primero? Así podré responder a tus preguntas sobre el estado actual y sus relaciones basándome en el contenido de las fuentes. También puedes desplazarte hacia arriba hasta los resultados de la investigación e importarlas directamente desde la tarjeta.",
+      "claims": [
+        {
+          "text": "Aún no he importado las fuentes de la investigación anterior a tu libreta. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "e7522a10-c2ec-4d41-81c2-310096d4b2c1",
+  "duration_ms": 79003,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\03-backend-17-autorizacion\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

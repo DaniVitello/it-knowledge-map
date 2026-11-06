@@ -1,0 +1,40 @@
+{
+  "questions": [],
+  "concept_id": "03-backend-08-middleware",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Middleware y para que sirve (Pipeline, logging, auth, validación, errores)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Middleware en Backend"
+    ],
+    "context": [
+      "Como se usa Middleware en el contexto profesional de Backend"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Error Handling",
+      "ask": "Como se relaciona Middleware con Error Handling?"
+    },
+    {
+      "with": "Validación",
+      "ask": "Como se relaciona Middleware con Validación?"
+    }
+  ],
+  "queries": [
+    "site:developer.mozilla.org Middleware",
+    "site:rfc-editor.org Middleware",
+    "site:datatracker.ietf.org Middleware",
+    "site:owasp.org Middleware",
+    "site:postgresql.org Middleware",
+    "site:redis.io Middleware",
+    "site:12factor.net Middleware",
+    "site:learn.microsoft.com Middleware"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

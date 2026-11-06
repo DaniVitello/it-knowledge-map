@@ -1,0 +1,7 @@
+{"ts": "2026-11-05T22:59:22.545137+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-15-oltp-vs-olap", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:00:09.697183+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-15-oltp-vs-olap", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T23:00:13.619165+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-15-oltp-vs-olap", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T23:00:13.655526+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-15-oltp-vs-olap", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T23:00:13.682645+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-15-oltp-vs-olap", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T23:00:13.702276+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-15-oltp-vs-olap", "event": "notebook_delete_failed", "notebook_id": "cfbce7bd-3d6a-47fe-9378-039b4a9ce2f6", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T23:00:13.711095+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-15-oltp-vs-olap", "event": "run_end", "status": "completed"}

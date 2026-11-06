@@ -1,0 +1,29 @@
+{
+  "concept_id": "01-software-engineering-28-distributed-systems",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\01-software-engineering-28-distributed-systems\\sources.json",
+    "notebook_id": "25b71cc0-cbfd-480a-88d6-dd7538e9e78e",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-28-distributed-systems\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-28-distributed-systems\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\01-software-engineering-28-distributed-systems\\28 - Distributed Systems.md.20261030T045631Z-73e685.bak",
+      "outside_hash": "f7710da45670f090a707f698a47f28c6ac24f1e8250bf8c8ebfe303c0b342d34",
+      "inside_hash": "d7af0cc0463893a1da974f7277921f02be49dd1ffc42baaa7557ab14e898b914",
+      "written_at": "2026-10-30T04:56:31.176914+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T04:55:55.281334+00:00",
+  "updated_at": "2026-10-30T04:56:31.199597+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T04:56:31.199597+00:00",
+    "created_at": "2026-10-30T04:55:55.281334+00:00"
+  },
+  "schema_version": "1.0.0"
+}

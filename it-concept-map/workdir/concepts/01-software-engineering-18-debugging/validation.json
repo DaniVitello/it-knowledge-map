@@ -1,0 +1,10 @@
+{
+  "concept_id": "01-software-engineering-18-debugging",
+  "is_valid": true,
+  "issues": [],
+  "warnings": [],
+  "score": 1.0,
+  "checked_at": "2026-10-30T04:49:16.678949+00:00",
+  "blocking_failures": [],
+  "verdict": "approved"
+}

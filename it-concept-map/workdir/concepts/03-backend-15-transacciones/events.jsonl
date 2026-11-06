@@ -1,0 +1,16 @@
+{"ts": "2026-10-30T05:31:35.227964+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-15-transacciones", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:31:51.112521+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-15-transacciones", "event": "phase_failed", "phase": "research", "error": "research (e47e9c56-f740-4c6d-8b64-033c0593f731): Chat request was rate limited or rejected by the API. Wait a few seconds and try again."}
+{"ts": "2026-11-05T18:22:37.332431+00:00", "run_id": "run-20261105-151942-eb6f22", "concept_id": "03-backend-15-transacciones", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-11-05T18:23:08.444351+00:00", "run_id": "run-20261105-151942-eb6f22", "concept_id": "03-backend-15-transacciones", "event": "phase_failed", "phase": "research", "error": "create_notebook (03-backend-15-transacciones): The server rejected this request (resource exhausted)."}
+{"ts": "2026-11-05T18:23:18.077707+00:00", "run_id": "run-20261105-152024-1e1855", "concept_id": "03-backend-15-transacciones", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-11-05T18:23:49.727411+00:00", "run_id": "run-20261105-152024-1e1855", "concept_id": "03-backend-15-transacciones", "event": "phase_failed", "phase": "research", "error": "create_notebook (03-backend-15-transacciones): The server rejected this request (resource exhausted)."}
+{"ts": "2026-11-05T19:29:09.629346+00:00", "run_id": "run-20261105-162522-4ca118", "concept_id": "03-backend-15-transacciones", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T19:30:10.958436+00:00", "run_id": "run-20261105-162522-4ca118", "concept_id": "03-backend-15-transacciones", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T19:30:17.175984+00:00", "run_id": "run-20261105-162522-4ca118", "concept_id": "03-backend-15-transacciones", "event": "phase_failed", "phase": "synthesis", "error": "No se proporciono LLM para la sintesis"}
+{"ts": "2026-11-05T19:47:59.528153+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-15-transacciones", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T19:48:55.442954+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-15-transacciones", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T19:48:58.908877+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-15-transacciones", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T19:48:58.976418+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-15-transacciones", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T19:48:59.035752+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-15-transacciones", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T19:48:59.077902+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-15-transacciones", "event": "notebook_delete_failed", "notebook_id": "d47dbff2-7e00-4e1f-9d62-79c4b1adb651", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T19:48:59.100975+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-15-transacciones", "event": "run_end", "status": "completed"}

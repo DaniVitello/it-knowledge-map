@@ -1,0 +1,31 @@
+{
+  "concept_id": "03-backend-20-asincronia-concurrencia",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "failed_phase": "synthesizing",
+    "failed_reason": "error",
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\03-backend-20-asincronia-concurrencia\\sources.json",
+    "notebook_id": "bb47cf23-d117-44fb-8ab4-86cd15a2fe5c",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\03-backend-20-asincronia-concurrencia\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\03-backend-20-asincronia-concurrencia\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\03-backend-20-asincronia-concurrencia\\20 - Asincronía & Concurrencia.md.20261105T195345Z-e7bb08.bak",
+      "outside_hash": "17125133daba53d66c3b9c35b82ad38e01f71623a21b87d7c6b0d6e884d0699a",
+      "inside_hash": "a544deca346529dc6e9b7af967e96c03644d548ae54c0678b0063e460b5ca762",
+      "written_at": "2026-11-05T19:53:45.245421+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:33:00.050865+00:00",
+  "updated_at": "2026-11-05T19:53:45.276211+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T19:53:45.276211+00:00",
+    "created_at": "2026-10-30T05:33:00.050865+00:00"
+  },
+  "schema_version": "1.0.0"
+}

@@ -74,9 +74,27 @@ def cmd_run(args):
 def cmd_status(args):
     cfg = _load_cfg(args)
     workdir = cfg.get("workdir", "workdir")
-    st = state.load_state(args.concept, workdir=workdir)
+    concept = getattr(args, "concept", None)
+    # If no concept, show manifest summary
+    if not concept:
+        manifest_path = Path(workdir) / "manifest.json"
+        if not manifest_path.exists():
+            print("Sin manifest.json. Ejecutar build_manifest.py primero.")
+            return 1
+        m = json.loads(manifest_path.read_text(encoding="utf-8"))
+        print(f"Total conceptos: {m['total_concepts']}")
+        print(f"Status counts: {m['status_counts']}")
+        # Show by area
+        from collections import Counter
+        areas = Counter(c["area"] for c in m["concepts"])
+        print("\nPor area:")
+        for area, count in sorted(areas.items()):
+            statuses = Counter(c["status"] for c in m["concepts"] if c["area"] == area)
+            print(f"  {area}: {count} total | {dict(statuses)}")
+        return 0
+    st = state.load_state(concept, workdir=workdir)
     if st is None:
-        print(f"Sin estado para: {args.concept}")
+        print(f"Sin estado para: {concept}")
         return 1
     print(f"concept_id: {st.concept_id}")
     print(f"status: {st.status.value}")
@@ -114,6 +132,37 @@ def cmd_reset(args):
     else:
         print(f"Sin estado para: {args.concept}")
     return 0
+
+def cmd_retry(args):
+    cfg = _load_cfg(args)
+    workdir = cfg.get("workdir", "workdir")
+    concepts = _load_concepts(cfg)
+    if args.concept:
+        concepts = [c for c in concepts if c.id == args.concept or args.concept in c.id]
+    elif args.area:
+        concepts = [c for c in concepts if c.area == args.area]
+    # Filter to failed/legacy/pending
+    if getattr(args, "failed_only", False):
+        concepts = [c for c in concepts if c.id in _get_failed_ids(workdir)]
+    if args.limit:
+        concepts = concepts[:args.limit]
+    if not concepts:
+        print("No hay conceptos para reintentar.")
+        return 0
+    import asyncio
+    runner = RN.Runner(cfg=cfg, llm=None, workdir=workdir)
+    batch = asyncio.run(runner.run_batch(concepts, force=True, dry_run=args.dry_run))
+    print(f"Total: {batch.total} | completed: {batch.completed} | failed: {batch.failed} | skipped: {batch.skipped}")
+    return 0 if batch.failed == 0 else 1
+
+
+def _get_failed_ids(workdir):
+    """Read manifest and return ids of failed or pending concepts."""
+    manifest_path = Path(workdir) / "manifest.json"
+    if not manifest_path.exists():
+        return set()
+    m = json.loads(manifest_path.read_text(encoding="utf-8"))
+    return set(c["id"] for c in m["concepts"] if c["status"] in ("marked", "pending", "failed"))
 
 
 def cmd_dry_run(args):
@@ -223,8 +272,8 @@ def main(argv=None):
     p_run.set_defaults(func=cmd_run)
 
     # status
-    p_status = sub.add_parser("status", help="Ver estado de un concepto")
-    p_status.add_argument("concept", help="concept_id")
+    p_status = sub.add_parser("status", help="Ver estado (sin concepto = resumen global)")
+    p_status.add_argument("concept", nargs="?", default=None, help="concept_id (opcional)")
     p_status.set_defaults(func=cmd_status)
 
     # list
@@ -236,6 +285,15 @@ def main(argv=None):
     p_reset = sub.add_parser("reset", help="Reiniciar estado de un concepto")
     p_reset.add_argument("concept", help="concept_id")
     p_reset.set_defaults(func=cmd_reset)
+
+    # retry
+    p_retry = sub.add_parser("retry", help="Reintentar conceptos fallidos o pendientes")
+    p_retry.add_argument("concept", nargs="?", default=None, help="concept_id (opcional)")
+    p_retry.add_argument("--area", default=None, help="Filtrar por area")
+    p_retry.add_argument("--limit", type=int, default=None, help="Limitar cantidad")
+    p_retry.add_argument("--failed-only", dest="failed_only", action="store_true", help="Solo fallidos")
+    p_retry.add_argument("--dry-run", dest="dry_run", action="store_true", help="Simular sin escribir")
+    p_retry.set_defaults(func=cmd_retry, dry_run=False, failed_only=False)
 
     # dry-run
     p_dry = sub.add_parser("dry-run", help="Simular pipeline sin escribir")

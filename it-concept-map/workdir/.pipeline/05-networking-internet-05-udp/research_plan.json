@@ -1,0 +1,39 @@
+{
+  "questions": [],
+  "concept_id": "05-networking-internet-05-udp",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es UDP y para que sirve (Comunicación rápida sin conexión)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de UDP en Networking / Internet"
+    ],
+    "context": [
+      "Como se usa UDP en el contexto profesional de Networking / Internet"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "TCP",
+      "ask": "Como se relaciona UDP con TCP?"
+    },
+    {
+      "with": "Puertos",
+      "ask": "Como se relaciona UDP con Puertos?"
+    }
+  ],
+  "queries": [
+    "site:rfc-editor.org UDP",
+    "site:datatracker.ietf.org UDP",
+    "site:developer.mozilla.org UDP",
+    "site:cloudflare.com UDP",
+    "site:beej.us UDP",
+    "site:hpbn.co UDP",
+    "site:man7.org UDP"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,39 @@
+{
+  "questions": [],
+  "concept_id": "06-operating-systems-linux-23-logs-system-monitoring",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Logs & System Monitoring y para que sirve (Procesos, CPU, RAM, disco, logs)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Logs & System Monitoring en Operating Systems / Linux"
+    ],
+    "context": [
+      "Como se usa Logs & System Monitoring en el contexto profesional de Operating Systems / Linux"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Observability",
+      "ask": "Como se relaciona Logs & System Monitoring con Observability?"
+    },
+    {
+      "with": "Observabilidad",
+      "ask": "Como se relaciona Logs & System Monitoring con Observabilidad?"
+    }
+  ],
+  "queries": [
+    "site:man7.org Logs & System Monitoring",
+    "site:kernel.org Logs & System Monitoring",
+    "site:ostep.org Logs & System Monitoring",
+    "site:wiki.archlinux.org Logs & System Monitoring",
+    "site:gnu.org Logs & System Monitoring",
+    "site:docs.docker.com Logs & System Monitoring",
+    "site:opencontainers.org Logs & System Monitoring"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,50 @@
+{
+  "concept_id": "04-database-data-analytics-15-oltp-vs-olap",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No encuentro fuentes cargadas en tu cuaderno sobre **OLTP vs. OLAP** (operaciones transaccionales vs. analíticas). Para darte respuestas exactas y verificables, solo trabajo con la información contenida en tus materiales.\n\n¿Te gustaría que realice una **investigación en la web** sobre este tema (incluyendo **Data Warehouses**, **ETL/ELT** y **Data Pipelines**)?",
+      "claims": [
+        {
+          "text": "No encuentro fuentes cargadas en tu cuaderno sobre **OLTP vs. OLAP** (operaciones transaccionales vs. analíticas). Para darte respuestas exactas y verificables, solo trabajo con la información conteni",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Aquí tienes un resumen de lo que encontré sobre **OLTP vs. OLAP en Bases de Datos y Analítica**:\n\nEn esencia, **OLTP** *(Online Transaction Processing)* se utiliza para **ejecutar el negocio en tiempo real**, mientras que **OLAP** *(Online Analytical Processing)* sirve para **analizar y entender el negocio** a partir de datos históricos.\n\n### Temas clave identificados en la investigación:\n\n1. **Propósito y Tipo de Carga**:\n   - **OLTP**: Optimizado para un alto volumen de transacciones rápidas y sencillas (insertar, actualizar o consultar pocos registros individualmente con latencia de milisegundos). Ejemplos: pagos en línea, compras en e-commerce, reservas de hotel o transferencias bancarias (PostgreSQL, MySQL).\n   - **OLAP**: Optimizado para consultas analíticas complejas sobre grandes volúmenes de datos históricos (escaneos, agregaciones `SUM`/`AVG`, agrupaciones). Ejemplos: reportes financieros, análisis de tendencias y Business Intelligence (Snowflake, BigQuery, Redshift, ClickHouse).\n\n2. **Diseño de Almacenamiento (Filas vs. Columnas)**:\n   - **OLTP (Orientado a Filas)**: Almacena los datos fila por fila. Es ideal para modificar o leer registros completos rápidamente.\n   - **OLAP (Orientado a Columnas)**: Almacena los datos columna por columna. Permite leer solo las columnas necesarias para una agregación sobre miles de millones de filas sin leer el resto del registro.\n\n3. **Modelado y Consistencia**:\n   - **OLTP**: Utiliza esquemas fuertemente normalizados (3NF) para garantizar consistencia estricta (**ACID**) y evitar redundancia.\n   - **OLAP**: Utiliza esquemas desnormalizados (como esquemas en estrella o copo de nieve) optimizados para lectura masiva.\n\n4. **Integración mediante Data Pipelines (ETL / ELT)**:\n   - Los datos se generan en los sistemas transaccionales (OLTP) y luego se extraen, transforman y cargan (**ETL/ELT**) mediante **Data Pipelines** hacia un **Data Warehouse** o **Data Lake**, donde quedan estructurados para el procesamiento analítico (**OLAP**).\n\n---\n\n📥 **El reporte completo de investigación se incluye como la primera fuente en la tarjeta de abajo.** Puedes importar el reporte o cualquiera de las fuentes individuales a tu cuaderno para que podamos trabajar con ellas y responder tus preguntas basándonos directamente en tus documentos.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-oltp-vs-olap\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-oltp-vs-olap\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos y documentación técnica sobre OLTP vs OLAP\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Reporte de investigación: OLTP vs OLAP\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQ0YTEyYmE5NS0xMjBiLTRlNmQtOWMxYy03NTU4ZTBhOThlZmMSCxIHEPnP8YvcBhgB&filename=reporte-investigacion-oltp-vs-olap.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Reporte de Investigación\",\n          \"summary\": \"Reporte estructurado con 5 fuentes clave sobre arquitectura, almacenamiento y data pipelines de OLTP y OLAP.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"OLTP vs OLAP - Difference Between Data Processing Systems\",\n          \"url\": \"https://aws.amazon.com/compare/the-difference-between-olap-and-oltp/\",\n          \"sourceName\": \"AWS\",\n          \"summary\": \"Comparativa directa de rendimiento, volumen de datos y casos de uso en la nube.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"OLTP vs. OLAP: Choosing Between Transactional and Analytical Databases\",\n          \"url\": \"https://www.databricks.com/blog/oltp-vs-olap-choosing-between-transactional-and-analytical-databases\",\n          \"sourceName\": \"Databricks\",\n          \"summary\": \"Análisis de latencia, captura de datos de cambio (CDC) y arquitecturas Lakehouse.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"OLTP vs. OLAP: Differences and Applications\",\n          \"url\": \"https://www.snowflake.com/en/fundamentals/olap-vs-oltp-the-differences/\",\n          \"sourceName\": \"Snowflake\",\n          \"summary\": \"Explicación práctica de cómo OLTP ejecuta el negocio y OLAP ayuda a comprenderlo.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"OLTP vs OLAP | Engineering\",\n          \"url\": \"https://clickhouse.com/resources/engineering/oltp-vs-olap\",\n          \"sourceName\": \"ClickHouse\",\n          \"summary\": \"Desglose técnico de almacenamiento por filas vs. columnas, índices y patrones de consulta.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"OLAP vs. OLTP: What's the Difference?\",\n          \"url\": \"https://www.ibm.com/think/topics/olap-vs-oltp\",\n          \"sourceName\": \"IBM\",\n          \"summary\": \"Conceptos de cubos OLAP, análisis multidimensional y Business Intelligence.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Aquí tienes un resumen de lo que encontré sobre **OLTP vs. OLAP en Bases de Datos y Analítica**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no se han importado las fuentes de la investigación a tu cuaderno.\n\n¿Quieres que las importe ahora? Una vez añadidas, podré responder en detalle a tus preguntas basándome directamente en ese contenido. También puedes hacer clic en **Importar** directamente en la tarjeta de fuentes que te mostré más arriba.",
+      "claims": [
+        {
+          "text": "Aún no se han importado las fuentes de la investigación a tu cuaderno.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "cfbce7bd-3d6a-47fe-9378-039b4a9ce2f6",
+  "duration_ms": 47034,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-15-oltp-vs-olap\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

@@ -1,0 +1,40 @@
+{
+  "questions": [],
+  "concept_id": "03-backend-14-orm-data-access",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es ORM / Data Access y para que sirve (Prisma, Hibernate, SQLAlchemy, EF, etc.)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de ORM / Data Access en Backend"
+    ],
+    "context": [
+      "Como se usa ORM / Data Access en el contexto profesional de Backend"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Modelado de datos",
+      "ask": "Como se relaciona ORM / Data Access con Modelado de datos?"
+    },
+    {
+      "with": "Relational Databases",
+      "ask": "Como se relaciona ORM / Data Access con Relational Databases?"
+    }
+  ],
+  "queries": [
+    "site:developer.mozilla.org ORM / Data Access",
+    "site:rfc-editor.org ORM / Data Access",
+    "site:datatracker.ietf.org ORM / Data Access",
+    "site:owasp.org ORM / Data Access",
+    "site:postgresql.org ORM / Data Access",
+    "site:redis.io ORM / Data Access",
+    "site:12factor.net ORM / Data Access",
+    "site:learn.microsoft.com ORM / Data Access"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,50 @@
+{
+  "concept_id": "04-database-data-analytics-09-indexes",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No veo ninguna fuente guardada en tu cuaderno sobre este tema (**índices en bases de datos, B-trees e índices compuestos**).\n\nComo mis respuestas se basan estrictamente en tus materiales, no puedo responder utilizando información externa sin tu autorización. **¿Te gustaría que realice una investigación en la web** sobre arquitectura de bases de datos e índices para responder a tu pregunta?",
+      "claims": [
+        {
+          "text": "No veo ninguna fuente guardada en tu cuaderno sobre este tema (**índices en bases de datos, B-trees e índices compuestos**).",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Esto es lo que encontré sobre **arquitectura de índices en bases de datos, B-Trees e índices compuestos**:\n\nLos **índices en bases de datos** funcionan como el índice alfabético al final de un libro. En lugar de revisar fila por fila en la tabla completa (*Full Table Scan*, con complejidad lineal \\\\(O(N)\\\\)), la base de datos consulta una estructura auxiliar ordenada para localizar directamente la página de disco donde se encuentra la información, reduciendo el tiempo de búsqueda a complejidad logarítmica \\\\(O(\\log N)\\\\).\n\n**Temas clave identificados en la investigación:**\n\n1. **Búsqueda Eficiente vs. Full Table Scan**: En tablas grandes (millones de registros), realizar un escaneo completo requiere leer miles de páginas de disco. Un índice permite que la base de datos salte directamente a la ubicación exacta mediante un número mínimo de operaciones de lectura/escritura en disco (Disk I/O).\n2. **Estructuras B-Tree y B+Tree**: Son árboles de búsqueda auto-balanceados diseñados específicamente para almacenamiento secundario (disco). Tienen un nivel de ramificación (*fan-out*) muy alto y baja profundidad (generalmente 3 o 4 niveles incluso para cientos de millones de registros). Los nodos hoja almacenan las claves ordenadas y los punteros a las filas reales.\n3. **Índices Compuestos y Orden de Columnas**: Un índice compuesto abarca múltiples columnas (por ejemplo, `(apellido, nombre)`). Se ordena primariamente por la primera columna y luego por la segunda. Debido a esto, aplica la **regla del prefijo más a la izquierda** (*Leftmost Prefix Rule*): un índice sobre `(A, B, C)` servirá para consultas que filtren por `A`, `(A, B)` o `(A, B, C)`, pero no ayudará si solo se filtra por `B` o `C`.\n4. **Compromiso entre Lectura y Escritura**: Aunque los índices aceleran drásticamente las operaciones de lectura (`SELECT`), imponen un costo adicional en escrituras (`INSERT`, `UPDATE`, `DELETE`), ya que cada modificación debe actualizar e involucrar el rebalanceo de la estructura del árbol.\n\n---\n\n📥 **El informe completo de investigación se incluye como la primera fuente en la tarjeta de importación a continuación.** Impórtalo (junto con las fuentes que elijas) a tu cuaderno para que pueda responder a tus preguntas detalladas de forma fundamentada en estos materiales.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-indexes-in-database\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-indexes-in-database\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos y guías técnicas sobre índices de bases de datos, B-Trees e índices compuestos\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Informe de investigación: Índices en Bases de Datos\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQ1Zjc0ZTVkZC1jYmQxLTQ1M2ItYmZmMi1iYmE2MDc5N2NkZWUSCxIHEPnP8YvcBhgB&filename=Informe_de_investigacion_Indices_en_Bases_de_Datos.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Informe de Investigación\",\n          \"summary\": \"Informe completo de investigación con 5 fuentes sobre arquitectura de índices, B-Trees e índices compuestos.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"How B-Tree Indexes Work in SQL Databases: An Intuitive Guide\",\n          \"url\": \"https://dev.to/ashraf_shaik_ee7ab42b0eb3/how-b-tree-indexes-work-in-sql-databases-an-intuitive-guide-3e71\",\n          \"sourceName\": \"DEV Community\",\n          \"summary\": \"Guía intuitiva sobre cómo los índices B-Tree evitan escaneos completos de tabla organizando datos en páginas de disco.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"How Database B-Tree Indexing Works\",\n          \"url\": \"https://builtin.com/data-science/b-tree-index\",\n          \"sourceName\": \"Built In\",\n          \"summary\": \"Explicación detallada de la estructura B-Tree, nodos ordenados y complejidad O(log n) en búsquedas de base de datos.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"B-trees and database indexes\",\n          \"url\": \"https://planetscale.com/blog/btrees-and-database-indexes\",\n          \"sourceName\": \"PlanetScale\",\n          \"summary\": \"Análisis técnico del rol de los B-Trees y B+Trees en DBMS modernos como MySQL, PostgreSQL y MongoDB.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"Composite Indexes Explained: Why Column Order Is the Whole Game\",\n          \"url\": \"https://dev.to/arnavsharma2711/composite-indexes-explained-why-column-order-is-the-whole-game-11o0\",\n          \"sourceName\": \"DEV Community\",\n          \"summary\": \"Explicación sobre la importancia crítica del orden de columnas en índices compuestos y cómo afecta el rendimiento.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"MySQL Composite Indexes and the Leftmost-Prefix Rule\",\n          \"url\": \"https://sql-designer.com/blog/mysql-indexes\",\n          \"sourceName\": \"SQL Designer\",\n          \"summary\": \"Desglose de la regla del prefijo más a la izquierda (leftmost-prefix rule) y el optimizador de consultas en MySQL.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Esto es lo que encontré sobre **arquitectura de índices en bases de datos, B-Trees e índices compuestos**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no se han importado las fuentes de la investigación a tu cuaderno. \n\n¿Quieres que importe las fuentes por ti para responder en detalle a tus preguntas sobre el estado actual y las relaciones de los índices basándome en su contenido? También puedes desplazarte hacia arriba e importarlas directamente haciendo clic en el botón de la tarjeta de investigación.",
+      "claims": [
+        {
+          "text": "Aún no se han importado las fuentes de la investigación a tu cuaderno. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "49bef68f-694f-4c90-bb2b-70f18dcc915f",
+  "duration_ms": 54538,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-09-indexes\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

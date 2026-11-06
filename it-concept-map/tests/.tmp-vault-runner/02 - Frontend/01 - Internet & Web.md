@@ -1,0 +1,43 @@
+---
+title: "Internet & Web"
+area: "Frontend"
+---
+# Internet & Web
+
+## Mis notas
+<!-- ai:start -->
+## Objetivo
+Para que sirve HTTP en el desarrollo web moderno.
+
+## Esqueleto (el 20% esencial)
+1. Request/response.
+2. Metodos y status codes.
+
+## Como funciona
+El cliente envia un request.
+
+## Detalles
+HTTP/1.1, HTTP/2, HTTP/3.
+
+## Ejemplo minimo
+GET / HTTP/1.1 con headers basicos.
+
+## Errores comunes
+Olvidar headers o status codes.
+
+## Estado actual
+HTTP/3 vigente y recomendado.
+
+## Conexiones
+HTTP complementa HTTPS en seguridad.
+
+## Ruta de estudio
+Antes: redes. Despues: APIs.
+
+## Preguntas de repaso
+1. Que es HTTP?
+2. Como funciona?
+3. Ejemplo?
+
+<!-- trazabilidad: run_id=run-20261106-162438-5b75f5 concept=frontend-01-internet-web written_at=2026-11-06T19:24:38.241501+00:00 -->
+<!-- ai:end -->

@@ -1,0 +1,56 @@
+{
+  "questions": [],
+  "concept_id": "07-ai-engineering-23-ai-infrastructure",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es AI Infrastructure y para que sirve (GPUs, inference servers, queues, caching, scaling)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de AI Infrastructure en AI Engineering"
+    ],
+    "context": [
+      "Como se usa AI Infrastructure en el contexto profesional de AI Engineering"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "CI/CD",
+      "ask": "Como se relaciona AI Infrastructure con CI/CD?"
+    },
+    {
+      "with": "Deploy & Infraestructura",
+      "ask": "Como se relaciona AI Infrastructure con Deploy & Infraestructura?"
+    },
+    {
+      "with": "Containers",
+      "ask": "Como se relaciona AI Infrastructure con Containers?"
+    },
+    {
+      "with": "Virtualization & Infrastructure",
+      "ask": "Como se relaciona AI Infrastructure con Virtualization & Infrastructure?"
+    },
+    {
+      "with": "LLMs",
+      "ask": "Como se relaciona AI Infrastructure con LLMs?"
+    },
+    {
+      "with": "Fine-tuning & Adaptation",
+      "ask": "Como se relaciona AI Infrastructure con Fine-tuning & Adaptation?"
+    }
+  ],
+  "queries": [
+    "site:arxiv.org AI Infrastructure",
+    "site:huggingface.co AI Infrastructure",
+    "site:pytorch.org AI Infrastructure",
+    "site:d2l.ai AI Infrastructure",
+    "site:platform.openai.com AI Infrastructure",
+    "site:docs.claude.com AI Infrastructure",
+    "site:ai.google.dev AI Infrastructure",
+    "site:deeplearning.ai AI Infrastructure"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

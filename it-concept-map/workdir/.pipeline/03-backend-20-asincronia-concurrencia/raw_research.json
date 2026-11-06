@@ -1,0 +1,50 @@
+{
+  "concept_id": "03-backend-20-asincronia-concurrencia",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "**Tu libreta aún no contiene fuentes sobre este tema.**\n\n¿Te gustaría que realice una **investigación en la web** sobre asincronía y concurrencia (Threads, async, queues y workers) para recopilar información explicativa sobre qué son y para qué sirven?",
+      "claims": [
+        {
+          "text": "**Tu libreta aún no contiene fuentes sobre este tema.**",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Actualmente **no hay fuentes en tu libreta** para explicar cómo funcionan la asincronía y la concurrencia en arquitectura backend.\n\n¿Te gustaría que realice una **investigación en la web** sobre este tema (enfocada en Threads, async, queues y workers en backend) para recopilar la información?",
+      "claims": [
+        {
+          "text": "Actualmente **no hay fuentes en tu libreta** para explicar cómo funcionan la asincronía y la concurrencia en arquitectura backend.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "**Aún no cuentas con fuentes en tu libreta** sobre el estado actual y la relación entre **Asincronía, Concurrencia, Threads, Async, Queues y Workers**.\n\n¿Te gustaría que realice una **investigación en la web** para analizar detalladamente cómo se conectan estos conceptos y cómo se aplican hoy en día?",
+      "claims": [
+        {
+          "text": "**Aún no cuentas con fuentes en tu libreta** sobre el estado actual y la relación entre **Asincronía, Concurrencia, Threads, Async, Queues y Workers**.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "bb47cf23-d117-44fb-8ab4-86cd15a2fe5c",
+  "duration_ms": 36690,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\03-backend-20-asincronia-concurrencia\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

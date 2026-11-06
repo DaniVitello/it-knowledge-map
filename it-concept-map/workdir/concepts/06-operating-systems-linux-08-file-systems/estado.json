@@ -1,0 +1,20 @@
+{
+  "concept_id": "06-operating-systems-linux-08-file-systems",
+  "status": "failed",
+  "last_good_state": "researching",
+  "checkpoint": null,
+  "phase_data": {
+    "failed_phase": "researching",
+    "failed_reason": "error"
+  },
+  "error": "research (293fd15e-bcc3-4a01-a109-5f1817aae600): Chat request was rate limited or rejected by the API. Wait a few seconds and try again.",
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:45:40.757923+00:00",
+  "updated_at": "2026-11-05T23:45:58.777859+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:45:58.777840+00:00",
+    "created_at": "2026-11-05T23:45:40.757923+00:00"
+  },
+  "schema_version": "1.0.0"
+}

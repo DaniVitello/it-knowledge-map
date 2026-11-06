@@ -1,0 +1,50 @@
+{
+  "concept_id": "04-database-data-analytics-11-acid-isolation",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "Actualmente no tienes fuentes agregadas en tu libreta sobre **ACID, transacciones, concurrencia y niveles de aislamiento**. \n\n¿Te gustaría que realice una investigación en la web sobre este tema para responder a tu pregunta?",
+      "claims": [
+        {
+          "text": "Actualmente no tienes fuentes agregadas en tu libreta sobre **ACID, transacciones, concurrencia y niveles de aislamiento**. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "He investigado sobre **ACID y Niveles de Aislamiento en Bases de Datos y Analítica de Datos**:\n\nLas propiedades **ACID** (Atomicidad, Consistencia, Aislamiento y Durabilidad) constituyen el estándar de confiabilidad que garantiza la integridad de los datos ante operaciones simultáneas y fallos. En particular, el **Aislamiento (Isolation)** gestiona la concurrencia, determinando qué cambios son visibles para otras transacciones mientras se ejecutan en paralelo.\n\n**Temas clave identificados:**\n1. **Garantías ACID**: La Atomicidad asegura que una transacción se complete por entero o se revierta; la Consistencia mantiene las reglas de integridad; el Aislamiento evita interferencias entre transacciones; y la Durabilidad garantiza que los cambios confirmados persistan.\n2. **Anomalías por Concurrencia**: Problemas típicos si no hay aislamiento adecuado, tales como *Dirty Reads* (leer datos no confirmados), *Non-Repeatable Reads* (cambios en filas ya leídas) y *Phantom Reads* (aparición de nuevos registros en un rango).\n3. **Niveles de Aislamiento y MVCC**: La escala ANSI SQL va desde *Read Uncommitted* hasta *Serializable*. Las arquitecturas modernas emplean frecuentemente *Snapshot Isolation* mediante **MVCC** (Control de Concurrencia Multiversión) para permitir lecturas sin bloqueos.\n4. **Relevancia en Analítica y Data Lakehouses**: Formatos modernos como Delta Lake, Apache Iceberg y DuckDB aplican transacciones ACID sobre almacenes de objetos (S3, GCS) para permitir ingestas y consultas analíticas concurrentes sin corromper datos.\n\n📥 **El reporte completo de investigación se encuentra como la primera fuente en la tarjeta de importación.** Puedes importarlo junto con las fuentes individuales para comenzar a realizar consultas directamente sobre el material.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-acid-isolation\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-acid-isolation\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos técnicos y guías sobre propiedades ACID, aislamiento y arquitectura de datos\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Reporte de investigación: ACID & Isolation en Bases de Datos y Analítica\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiRjYTBhMjVhZC0wMDJiLTQwNDQtYTI5My0zYTQ1YzI4NDUwMmISCxIHEPnP8YvcBhgB&filename=Reporte_de_investigacion_ACID__Isolation_en_Bases_de_Datos_y.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Reporte de Investigación\",\n          \"summary\": \"Reporte completo con síntesis y fuentes especializadas sobre transacciones ACID, niveles de aislamiento y concurrencia en bases de datos y Data Lakehouses.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"ACID Transactions: Isolation Levels and Data Consistency\",\n          \"url\": \"https://www.falkordb.com/blog/glossary/acid-transactions-isolation-data-consistency/\",\n          \"sourceName\": \"FalkorDB\",\n          \"summary\": \"Explicación detallada de las propiedades ACID y cómo los niveles de aislamiento equilibran consistencia y rendimiento.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"Understanding Isolation in ACID Transactions\",\n          \"url\": \"https://dev.to/jaiminbariya/isolation-in-acid-transaction-3055\",\n          \"sourceName\": \"DEV Community\",\n          \"summary\": \"Desglose práctico del aislamiento y de las anomalías de concurrencia como lecturas sucias, no repetibles y fantasma.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"Transaction Isolation Levels in DBMS\",\n          \"url\": \"https://www.geeksforgeeks.org/dbms/transaction-isolation-levels-dbms/\",\n          \"sourceName\": \"GeeksforGeeks\",\n          \"summary\": \"Guía técnica sobre los niveles de aislamiento ANSI SQL (Read Uncommitted, Read Committed, Repeatable Read, Serializable).\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"ACID Transactions Explained: Atomicity, Consistency, Isolation & Durability\",\n          \"url\": \"https://motherduck.com/learn/acid-transactions-sql/\",\n          \"sourceName\": \"MotherDuck\",\n          \"summary\": \"Análisis de transacciones ACID en SQL y motores modernos como DuckDB utilizando aislamiento Snapshot (MVCC).\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"ACID Transactions in an Open Data Lakehouse\",\n          \"url\": \"https://www.onehouse.ai/blog/acid-transactions-in-an-open-data-lakehouse\",\n          \"sourceName\": \"Onehouse\",\n          \"summary\": \"Cómo formatos como Delta Lake, Apache Iceberg y Apache Hudi implementan ACID en arquitecturas de Data Lakehouse.\"\n        },\n        {\n          \"id\": \"src-6\",\n          \"title\": \"Delta Lake vs Data Lake: ACID Transactions\",\n          \"url\": \"https://delta.io/blog/delta-lake-vs-data-lake/\",\n          \"sourceName\": \"Delta.io\",\n          \"summary\": \"Explicación de cómo el registro de transacciones (_delta_log) proporciona ACID y soporte de time-travel en pipelines analíticos.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "He investigado sobre **ACID y Niveles de Aislamiento en Bases de Datos y Analítica de Datos**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no he agregado esas fuentes a tu libreta. **¿Quieres que las importe primero?** \n\nUna vez importadas a tu proyecto, podré responder en detalle a tus preguntas sobre la relación y el estado actual de ACID e Isolation basándome directamente en el contenido de las fuentes. También puedes desplazarte hacia arriba hasta la tarjeta de resultados e importarlas desde allí.",
+      "claims": [
+        {
+          "text": "Aún no he agregado esas fuentes a tu libreta. **¿Quieres que las importe primero?** ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "c446e33b-d04d-44bb-b387-19f20e043888",
+  "duration_ms": 50374,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-11-acid-isolation\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

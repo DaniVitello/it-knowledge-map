@@ -1,0 +1,10 @@
+{
+  "concept_id": "03-backend-16-autenticacion",
+  "is_valid": true,
+  "issues": [],
+  "warnings": [],
+  "score": 1.0,
+  "checked_at": "2026-11-05T19:49:59.646320+00:00",
+  "blocking_failures": [],
+  "verdict": "approved"
+}

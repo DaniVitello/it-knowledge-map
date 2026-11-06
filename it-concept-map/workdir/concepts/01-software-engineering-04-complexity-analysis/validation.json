@@ -1,0 +1,10 @@
+{
+  "concept_id": "01-software-engineering-04-complexity-analysis",
+  "is_valid": true,
+  "issues": [],
+  "warnings": [],
+  "score": 1.0,
+  "checked_at": "2026-10-30T04:36:57.947224+00:00",
+  "blocking_failures": [],
+  "verdict": "approved"
+}

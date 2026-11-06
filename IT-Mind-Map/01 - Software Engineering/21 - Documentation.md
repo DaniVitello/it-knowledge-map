@@ -17,7 +17,6 @@ tags: [concepto, it/software-engineering]
 
 ## Mis notas
 <!-- ai:start -->
-- 
 <!-- ai:end -->
 
 ---

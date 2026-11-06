@@ -1,0 +1,50 @@
+{
+  "concept_id": "05-networking-internet-13-nat",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No veo ninguna fuente cargada en tu cuaderno que cubra **NAT (Traducción de Direcciones de Red)**. \n\n¿Quieres que realice una investigación en la web sobre qué es, para qué sirve y su relación con el enrutamiento y la subdivisión de redes?",
+      "claims": [
+        {
+          "text": "No veo ninguna fuente cargada en tu cuaderno que cubra **NAT (Traducción de Direcciones de Red)**. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Aquí tienes lo que encontré sobre **NAT (Traducción de Direcciones de Red) y su funcionamiento en Internet**:\n\n**NAT (Network Address Translation)** es el proceso mediante el cual un enrutador o gateway modifica la información de cabecera de los paquetes IP para traducir direcciones IP privadas (usadas dentro de la red local o LAN) a una o más direcciones IP públicas (para comunicarse en la Internet abierta) y viceversa.\n\n---\n\n### **¿Cómo funciona NAT paso a paso?**\n\n1. **Solicitud desde la red local**: Un dispositivo (por ejemplo, una laptop con IP privada `192.168.1.50`) envía un paquete de datos hacia un servidor web en Internet.\n2. **Interceptación y Traducción**: El router intercepta el paquete en la frontera entre la LAN y la WAN (Internet). Reemplaza la IP de origen privada por la **IP pública del router**.\n3. **Registro en la Tabla NAT**: Para no confundir el tráfico, el router asigna un puerto único a la conexión y registra la relación en su **tabla de traducción NAT** (`IP Privada + Puerto Interno ↔ IP Pública + Puerto Traducido`).\n4. **Envío y Respuesta**: El servidor en Internet responde únicamente a la IP pública del router. Al recibir la respuesta, el router consulta su tabla NAT, determina a qué dispositivo local pertenece y reescribe la dirección de destino con la IP privada original antes de entregárselo.\n\n---\n\n### **Conceptos Clave y Relaciones**\n\n- **Agotamiento de IPv4 y Subnetting (CIDR)**: El protocolo IPv4 original solo permite aproximadamente 4.300 millones de direcciones. NAT permite que miles de dispositivos en subredes privadas (definidas por bloques CIDR como `10.0.0.0/8` o `192.168.0.0/16`) compartan una sola dirección IP pública suministrada por el proveedor de Internet (ISP).\n- **Tipos de NAT**:\n  - **PAT / NAT Overload (Port Address Translation)**: La modalidad más común en hogares y empresas. Muchos dispositivos internos comparten una sola IP pública utilizando números de puerto diferentes.\n  - **NAT Estática**: Asignación 1 a 1 fija entre una IP privada y una IP pública (usada para servidores locales accesibles desde Internet).\n  - **NAT Dinámica**: Asigna direcciones públicas a privadas a partir de un grupo (pool) disponible de IPs públicas.\n- **Relación con Routers y Enrutamiento**: NAT se ejecuta en el router de frontera (gateway), que también se encarga de determinar las rutas óptimas (Routing) para enviar los paquetes hacia su destino final en la red mundial.\n\n---\n\n📥 **El reporte completo de investigación se incluye a continuación.** Puedes importar las fuentes que prefieras directamente a tu cuaderno para trabajar con ellas.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-nat\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-nat\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos y guías técnicas sobre el funcionamiento, tipos y conceptos de NAT en redes\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Reporte de investigación: NAT (Traducción de Direcciones de Red)\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQzYjJhZDU4OC04ODEyLTQxODgtOGE0OS00ZDEyZTZiODAzMDgSCxIHEPnP8YvcBhgB&filename=Reporte_de_investigacion_NAT_Traduccion_de_Direcciones_de_Re.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Reporte de investigación\",\n          \"summary\": \"Reporte completo con 6 fuentes seleccionadas sobre NAT, tipos y su funcionamiento con routers y subredes.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"NAT (Network Address Translation): How It Works and Why It Matters\",\n          \"url\": \"https://www.cloudns.net/blog/nat-network-address-translation-how-it-works-and-why-it-matters/\",\n          \"sourceName\": \"ClouDNS Blog\",\n          \"summary\": \"Explicación del rol de NAT en la traducción entre IP privada/pública y la conservación de IPv4.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"Network Address Translation (NAT): How It Works & Types\",\n          \"url\": \"https://www.vergecloud.com/blog/network-address-translation/\",\n          \"sourceName\": \"VergeCloud\",\n          \"summary\": \"Detalle paso a paso del ciclo del paquete IP, tablas NAT y comparación entre NAT Estática, Dinámica y PAT.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"What Is NAT? Network Address Translation Explained\",\n          \"url\": \"https://www.omadanetworks.com/us/blog/2607/what-is-nat-network-address-translation-explained/\",\n          \"sourceName\": \"TP-Link Omada\",\n          \"summary\": \"Guía técnica sobre la función de NAT en routers de gateway, enrutamiento y seguridad de redes.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"How NAT Works: A Simple Guide to Network Address Translation\",\n          \"url\": \"https://dev.to/serveravatar/how-nat-works-a-simple-guide-to-network-address-translation-h8o\",\n          \"sourceName\": \"DEV Community\",\n          \"summary\": \"Explicación clara del reescrito de paquetes IP y la estructura de la tabla de traducción NAT.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"What is NAT (Network Address Translation)? How does NAT work?\",\n          \"url\": \"https://www.fortinet.com/uk/resources/cyberglossary/network-address-translation\",\n          \"sourceName\": \"Fortinet\",\n          \"summary\": \"Perspectiva de ciberseguridad sobre la ocultación de topologías internas mediante NAT y firewalls.\"\n        },\n        {\n          \"id\": \"src-6\",\n          \"title\": \"What is NAT - Beginner's Guide to Network Address Translation\",\n          \"url\": \"https://www.diontraining.com/blogs/news/what-is-nat\",\n          \"sourceName\": \"Dion Training\",\n          \"summary\": \"Introducción didáctica sobre cómo la gestión de puertos permite conectar múltiples dispositivos locales.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Aquí tienes lo que encontré sobre **NAT (Traducción de Direcciones de Red) y su funcionamiento en Internet**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no he importado las fuentes de la investigación anterior a tu cuaderno. ¿Quieres que las importe ahora? Una vez importadas, podré responder en detalle a tus preguntas sobre el estado actual de NAT y sus relaciones basándome en el contenido de las fuentes.\n\n*(También puedes desplazarte hacia arriba hasta la tarjeta de resultados e importarlas directamente desde allí).*",
+      "claims": [
+        {
+          "text": "Aún no he importado las fuentes de la investigación anterior a tu cuaderno. ¿Quieres que las importe ahora? Una vez importadas, podré responder en detalle a tus preguntas sobre el estado actual de NAT",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "a6d8f7d9-526a-4029-8d0e-7ab8bd777004",
+  "duration_ms": 61500,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-13-nat\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

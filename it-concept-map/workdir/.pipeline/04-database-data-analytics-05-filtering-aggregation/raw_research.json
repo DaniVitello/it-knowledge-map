@@ -1,0 +1,50 @@
+{
+  "concept_id": "04-database-data-analytics-05-filtering-aggregation",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No tienes fuentes en tu libreta sobre **Filtering & Aggregation en SQL** (**WHERE**, **GROUP BY**, **HAVING** y **funciones agregadas**).\n\n¿Quieres que haga una **investigación en la web** sobre este tema para obtener fuentes explicativas y utilizarlas en tu libreta?",
+      "claims": [
+        {
+          "text": "No tienes fuentes en tu libreta sobre **Filtering & Aggregation en SQL** (**WHERE**, **GROUP BY**, **HAVING** y **funciones agregadas**).",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Aquí tienes lo que encontré sobre **Filtering & Aggregation** en bases de datos y SQL:\n\n**Filtering & Aggregation** es el conjunto de técnicas en SQL y análisis de datos que permite reducir grandes volúmenes de datos en resúmenes métricos útiles (como totales, promedios o recuentos por categoría) y filtrar la información en distintas etapas del procesamiento.\n\n**Aspectos clave de su funcionamiento:**\n\n1. **`WHERE` (Filtrado de filas)**: Actúa en la primera etapa. Filtra registros individuales **antes** de que ocurra cualquier agrupamiento o cálculo de métricas.\n2. **`GROUP BY` (Agrupamiento)**: Toma las filas supervivientes del `WHERE` y las organiza en grupos basados en los valores de una o varias columnas (por ejemplo, agrupar por departamento o por ciudad).\n3. **Funciones agregadas (`COUNT`, `SUM`, `AVG`, `MIN`, `MAX`)**: Se aplican a cada grupo para colapsar múltiples filas en un solo valor acumulado por grupo (por ejemplo, la suma total de ventas o el promedio de edad).\n4. **`HAVING` (Filtrado de grupos)**: Se evalúa **después** de agrupar y calcular las funciones de agregación. Permite filtrar únicamente los grupos que cumplan una condición basada en métricas (por ejemplo, mostrar solo departamentos cuyo salario promedio sea mayor a 50,000).\n5. **Orden de ejecución lógico**: SQL evalúa las cláusulas en el siguiente orden estricto:  \n   `FROM` → `WHERE` → `GROUP BY` → `HAVING` → `SELECT` → `ORDER BY`.\n\n---\n\n📥 **Fuentes encontradas:** He incluido el reporte completo de investigación como la primera fuente de la lista. Puedes importar las fuentes que prefieras a tu libreta mediante la tarjeta de abajo para comenzar a trabajar directamente con ellas.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-filtering-aggregation\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-filtering-aggregation\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos técnicos y tutoriales sobre SQL, filtrado y agregación de datos\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Reporte de investigación: Filtering & Aggregation en SQL\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQ1YWFmOGIxMC02MjQ3LTRhYmMtYjFhMi0wMDI5NjI1M2ZhOGISCxIHEPnP8YvcBhgB&filename=Reporte_de_investigacion_Filtering__Aggregation_en_SQL.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Reporte de investigación\",\n          \"summary\": \"Reporte completo con 6 fuentes sobre WHERE, GROUP BY, HAVING y funciones agregadas.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"Filtering Aggregated Results with HAVING Clause\",\n          \"url\": \"https://apxml.com/courses/sql-for-data-science/chapter-4-aggregating-data/filtering-groups-having\",\n          \"sourceName\": \"ApX Machine Learning\",\n          \"summary\": \"Explicación detallada de la diferencia entre el filtro de filas individuales (WHERE) y el filtro de grupos (HAVING).\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"How to Use HAVING With Aggregate Functions in SQL?\",\n          \"url\": \"https://www.geeksforgeeks.org/sql/how-to-use-having-with-aggregate-functions-in-sql/\",\n          \"sourceName\": \"GeeksforGeeks\",\n          \"summary\": \"Guía práctica con ejemplos de sintaxis para combinar funciones como SUM, AVG y COUNT con HAVING.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"SELECT, Filtering and Aggregation\",\n          \"url\": \"https://pickntech.com/sql/select-basics/\",\n          \"sourceName\": \"PickNTech\",\n          \"summary\": \"Tutorial sobre la estructura de consultas SELECT y el orden lógico de ejecución en SQL.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"SQL HAVING Clause: GROUP BY Filters and HAVING vs WHERE\",\n          \"url\": \"https://dbschema.com/blog/tutorials/sql-having-clause/\",\n          \"sourceName\": \"DbSchema\",\n          \"summary\": \"Análisis de comportamientos entre distintos motores SQL y errores comunes al agrupar datos.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"SQL GROUP BY and Aggregate Functions: Summarize Your Data\",\n          \"url\": \"https://www.dbgate.io/news/2026-04-08-sql-group-by-tutorial/\",\n          \"sourceName\": \"DbGate\",\n          \"summary\": \"Cómo transformar el grano de los datos y resumir información combinando GROUP BY con JOINs.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Aquí tienes lo que encontré sobre **Filtering & Aggregation** en bases de datos y SQL:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Todavía no se han importado las fuentes encontradas a tu libreta. \n\n¿Quieres que importe el reporte y las fuentes que investigamos? Una vez añadidas a tu libreta, podré responder a tus preguntas sobre la relación entre `WHERE`, `GROUP BY`, `HAVING`, funciones agregadas y `JOINs` basándome directamente en ellas.\n\n*(También puedes hacer clic en el botón de importar dentro de la tarjeta de la investigación más arriba).*",
+      "claims": [
+        {
+          "text": "Todavía no se han importado las fuentes encontradas a tu libreta. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "e14489d1-a974-435b-b03f-7427a288d1ab",
+  "duration_ms": 59246,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-05-filtering-aggregation\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

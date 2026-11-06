@@ -1,0 +1,10 @@
+{
+  "concept_id": "03-backend-22-observabilidad",
+  "is_valid": true,
+  "issues": [],
+  "warnings": [],
+  "score": 1.0,
+  "checked_at": "2026-11-05T19:55:30.973907+00:00",
+  "blocking_failures": [],
+  "verdict": "approved"
+}

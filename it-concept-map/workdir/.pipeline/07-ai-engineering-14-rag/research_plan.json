@@ -1,0 +1,44 @@
+{
+  "questions": [],
+  "concept_id": "07-ai-engineering-14-rag",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es RAG y para que sirve (Retrieval-Augmented Generation)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de RAG en AI Engineering"
+    ],
+    "context": [
+      "Como se usa RAG en el contexto profesional de AI Engineering"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Embeddings",
+      "ask": "Como se relaciona RAG con Embeddings?"
+    },
+    {
+      "with": "Vector Databases",
+      "ask": "Como se relaciona RAG con Vector Databases?"
+    },
+    {
+      "with": "Context Engineering",
+      "ask": "Como se relaciona RAG con Context Engineering?"
+    }
+  ],
+  "queries": [
+    "site:arxiv.org RAG",
+    "site:huggingface.co RAG",
+    "site:pytorch.org RAG",
+    "site:d2l.ai RAG",
+    "site:platform.openai.com RAG",
+    "site:docs.claude.com RAG",
+    "site:ai.google.dev RAG",
+    "site:deeplearning.ai RAG"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

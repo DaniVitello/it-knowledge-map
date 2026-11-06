@@ -1,0 +1,29 @@
+{
+  "concept_id": "02-frontend-17-formularios",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\02-frontend-17-formularios\\sources.json",
+    "notebook_id": "38607616-377e-48dc-aa12-f8ed32ab7953",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\02-frontend-17-formularios\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\02-frontend-17-formularios\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\02-frontend-17-formularios\\17 - Formularios.md.20261030T051847Z-4012bf.bak",
+      "outside_hash": "9c683019b605683d48c67fd508954fe3c996f67f5a921c9840f4b7f7d19baa72",
+      "inside_hash": "d78b72b0bb4d9a01526d9379ecc4f0c88b711e57366b720279da636e08751ddb",
+      "written_at": "2026-10-30T05:18:47.695992+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:18:12.487893+00:00",
+  "updated_at": "2026-10-30T05:18:47.720074+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T05:18:47.720074+00:00",
+    "created_at": "2026-10-30T05:18:12.487893+00:00"
+  },
+  "schema_version": "1.0.0"
+}

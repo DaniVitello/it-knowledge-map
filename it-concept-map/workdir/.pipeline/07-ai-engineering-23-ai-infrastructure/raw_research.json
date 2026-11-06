@@ -1,0 +1,50 @@
+{
+  "concept_id": "07-ai-engineering-23-ai-infrastructure",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "**No tienes fuentes cargadas en tu cuaderno aún.** Como mis respuestas se fundamentan exclusivamente en los materiales de tu cuaderno para garantizar información verificable, no puedo responder directamente a tu pregunta sin fuentes.\n\n¿Te gustaría que realice una **investigación en la web** sobre qué es la **infraestructura de IA** (GPUs, servidores de inferencia, colas, caching y escalado) y para qué sirve?",
+      "claims": [
+        {
+          "text": "**No tienes fuentes cargadas en tu cuaderno aún.** Como mis respuestas se fundamentan exclusivamente en los materiales de tu cuaderno para garantizar información verificable, no puedo responder direct",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Sigo sin tener fuentes guardadas en tu cuaderno sobre la **infraestructura de IA en AI Engineering** (GPUs, servidores de inferencia, colas, caching, escalado, etc.). Para garantizar respuestas 100% verificables y respaldadas por materiales, no puedo responder directamente a partir de conocimiento general sin fuentes.\n\n¿Te gustaría que realice una **investigación en la web** sobre cómo funciona la infraestructura de IA y cómo se integran sus componentes en AI Engineering? Si me confirmas, realizaré la búsqueda, te explicaré el tema en detalle y te ofreceré importar las fuentes encontradas a tu cuaderno.",
+      "claims": [
+        {
+          "text": "Sigo sin tener fuentes guardadas en tu cuaderno sobre la **infraestructura de IA en AI Engineering** (GPUs, servidores de inferencia, colas, caching, escalado, etc.). Para garantizar respuestas 100% v",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no cuentas con fuentes cargadas en tu cuaderno sobre el **estado actual y las relaciones de AI Infrastructure** (GPUs, servidores de inferencia, colas, caching, escalado, CI/CD, contenedores, virtualización y fine-tuning de LLMs). Para asegurar información verificable, no puedo responder utilizando conocimiento general sin materiales en el cuaderno.\n\n¿Te gustaría que realice una **investigación en la web** enfocada en el panorama actual de la infraestructura de IA y cómo se articulan todas estas tecnologías? Si me confirmas, investigaré el tema a fondo, te presentaré la respuesta y te daré la opción de importar las fuentes a tu cuaderno.",
+      "claims": [
+        {
+          "text": "Aún no cuentas con fuentes cargadas en tu cuaderno sobre el **estado actual y las relaciones de AI Infrastructure** (GPUs, servidores de inferencia, colas, caching, escalado, CI/CD, contenedores, virt",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "b0c391e3-8091-4db2-9b74-297e9916b458",
+  "duration_ms": 38914,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\07-ai-engineering-23-ai-infrastructure\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

@@ -17,7 +17,6 @@ tags: [concepto, it/frontend]
 
 ## Mis notas
 <!-- ai:start -->
-# Comprehensive Study Guide: CSS Cascade, Specificity, Box Model, and Value Processing Architecture
 <!-- ai:end -->
 
 ---

@@ -1,0 +1,50 @@
+{
+  "concept_id": "05-networking-internet-09-mac-ethernet",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "**No tienes fuentes en tu libreta** sobre MAC / Ethernet ni sobre la comunicación en redes locales.\n\nPara mantener la precisión y garantizar que las respuestas estén fundamentadas en tus documentos, no genero respuestas a partir de conocimiento externo sin contar con material de origen. \n\n¿Te gustaría que realice una **investigación en la web** sobre **MAC, Ethernet y su relación con ARP y DHCP** para responder a tu pregunta? Si lo deseas, al finalizar te mostraré los resultados y podrás decidir si quieres agregarlos como fuentes a tu libreta.",
+      "claims": [
+        {
+          "text": "**No tienes fuentes en tu libreta** sobre MAC / Ethernet ni sobre la comunicación en redes locales.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Here's what I found on **MAC, Ethernet, and local network communication**:\n\nIn local area networks (LANs), communication relies on **Layer 2 (Data Link)** hardware addressing via **Ethernet** frames, combined with **Layer 3 (Network)** logical IP addresses assigned dynamically by **DHCP** and mapped locally by **ARP**.\n\n**Key themes identified across sources:**\n\n1. **MAC Address & Ethernet (Layer 2)**: A MAC address is a unique 48-bit physical identifier burned into the Network Interface Card (NIC) by the manufacturer. Ethernet uses these MAC addresses (source and destination) to wrap data into frames and deliver them between devices connected on the same local physical network.\n2. **IP vs. MAC Addressing**: While IP addresses uniquely identify devices across routed networks (or the Internet), switches and devices within the same local subnet ultimately require the destination's physical MAC address to deliver Ethernet frames locally.\n3. **Role of DHCP (Dynamic Host Configuration Protocol)**: When a device connects to a LAN, DHCP automatically assigns it a logical IP address, subnet mask, default gateway (router IP), and DNS server settings so it can communicate on Layer 3.\n4. **Role of ARP (Address Resolution Protocol)**: ARP bridges Layer 3 (IP) and Layer 2 (MAC). When a device knows the target IP address but lacks its MAC address, it sends an *ARP Request* broadcast across the local network asking \"Who has this IP?\". The owner responds with an *ARP Reply* unicast containing its MAC address, which is then cached locally for future frame delivery.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-mac-ethernet\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-mac-ethernet\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos y guías técnicas sobre comunicación MAC, Ethernet, ARP y DHCP en redes locales\",\n      \"sources\": [\n        {\n          \"id\": \"src-1\",\n          \"title\": \"MAC y ARP: direcciones, tabla ARP y resolución IPv4\",\n          \"url\": \"https://subnetmaster.es/guia/fundamentos-de-redes/mac-arp/\",\n          \"sourceName\": \"SubnetMaster\",\n          \"summary\": \"Guía explicativa sobre la diferencia entre direccionamiento IP y MAC, la tabla ARP y cómo intervienen los switches en redes LAN.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"¿Qué es el ARP (Address Resolution Protocol)?\",\n          \"url\": \"https://www.ionos.mx/digitalguide/servidores/know-how/arp-resolucion-de-direcciones-en-la-red/\",\n          \"sourceName\": \"IONOS Digital Guide\",\n          \"summary\": \"Explicación detallada de la resolución de direcciones IP a direcciones físicas MAC dentro de tramas Ethernet y el papel de DHCP.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"ARP y RARP: vincular direcciones IP con MAC\",\n          \"url\": \"https://www.tutorialesprogramacionya.com/protocolosredes/capadered/tema6.html\",\n          \"sourceName\": \"Tutoriales Programación Ya\",\n          \"summary\": \"Tutorial enfocado en el flujo de trabajo entre solicitudes ARP Request por broadcast y respuestas ARP Reply por unicast.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"Capítulo 7: Ethernet, ARP y Switching\",\n          \"url\": \"https://sedici.unlp.edu.ar/bitstream/handle/10915/167127/Documento_completo.pdf\",\n          \"sourceName\": \"SEDICI - UNLP\",\n          \"summary\": \"Documento académico que repasa las tramas Ethernet, la estructura de las direcciones físicas de 48 bits y la tabla de aprendizaje de switches.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"MAC vs IP, ARP y DHCP\",\n          \"url\": \"https://www.librebits.info/1asir/redes-mac-ip-arp-dhcp/\",\n          \"sourceName\": \"Librebits\",\n          \"summary\": \"Artículo formativo sobre el comportamiento de la Capa 2 (MAC) frente a la Capa 3 (IP) y la interacción práctica con DHCP.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Here's what I found on **MAC, Ethernet, and local network communication**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "**Aún no he importado esas fuentes a tu libreta.**\n\n¿Quieres que las importe primero? Una vez importadas, podré responder a tus preguntas de forma detallada y fundamentada en su contenido. También puedes desplazarte hacia arriba en la conversación hasta la tarjeta de resultados de investigación e importar directamente las fuentes que prefieras.",
+      "claims": [
+        {
+          "text": "**Aún no he importado esas fuentes a tu libreta.**",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "972fd1d4-7159-41fb-9cbf-c88570d5fd47",
+  "duration_ms": 67715,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-09-mac-ethernet\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

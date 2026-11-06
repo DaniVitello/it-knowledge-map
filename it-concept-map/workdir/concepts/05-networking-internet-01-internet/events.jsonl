@@ -1,0 +1,30 @@
+{"ts": "2026-11-05T15:35:35.057163+00:00", "run_id": "run-20261105-123535-aa7b46", "concept_id": "05-networking-internet-01-internet", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-11-05T15:36:39.685496+00:00", "run_id": "run-20261105-123535-aa7b46", "concept_id": "05-networking-internet-01-internet", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T15:36:43.565284+00:00", "run_id": "run-20261105-123535-aa7b46", "concept_id": "05-networking-internet-01-internet", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T15:36:43.606825+00:00", "run_id": "run-20261105-123535-aa7b46", "concept_id": "05-networking-internet-01-internet", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T15:36:43.630416+00:00", "run_id": "run-20261105-123535-aa7b46", "concept_id": "05-networking-internet-01-internet", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T15:36:43.647971+00:00", "run_id": "run-20261105-123535-aa7b46", "concept_id": "05-networking-internet-01-internet", "event": "notebook_delete_failed", "notebook_id": "968775c7-7770-4f79-b0cd-8a2216c822fb", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T15:36:43.657263+00:00", "run_id": "run-20261105-123535-aa7b46", "concept_id": "05-networking-internet-01-internet", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T16:59:18.319089+00:00", "run_id": "run-20261105-135918-040092", "concept_id": "05-networking-internet-01-internet", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-11-05T16:59:18.351100+00:00", "run_id": "run-20261105-135918-040092", "concept_id": "05-networking-internet-01-internet", "event": "idempotency_hash_mismatch", "stored": "b207d94b2fba2e58abceccfc5426891f245afdf16af69657caa85ea5f15e0421", "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+{"ts": "2026-11-05T16:59:18.352690+00:00", "run_id": "run-20261105-135918-040092", "concept_id": "05-networking-internet-01-internet", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T17:13:04.084155+00:00", "run_id": "run-20261105-141304-38ca4d", "concept_id": "05-networking-internet-01-internet", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T17:14:52.009876+00:00", "run_id": "run-20261105-141452-0c1462", "concept_id": "05-networking-internet-01-internet", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T17:14:58.976487+00:00", "run_id": "run-20261105-141452-0c1462", "concept_id": "05-networking-internet-01-internet", "event": "phase_failed", "phase": "research", "error": "Transicion invalida: researching -> researching"}
+{"ts": "2026-11-05T17:15:14.943588+00:00", "run_id": "run-20261105-141304-38ca4d", "concept_id": "05-networking-internet-01-internet", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T17:15:39.731293+00:00", "run_id": "run-20261105-141304-38ca4d", "concept_id": "05-networking-internet-01-internet", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T17:15:39.763026+00:00", "run_id": "run-20261105-141304-38ca4d", "concept_id": "05-networking-internet-01-internet", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T17:15:39.790117+00:00", "run_id": "run-20261105-141304-38ca4d", "concept_id": "05-networking-internet-01-internet", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T17:15:39.807942+00:00", "run_id": "run-20261105-141304-38ca4d", "concept_id": "05-networking-internet-01-internet", "event": "notebook_delete_failed", "notebook_id": "faaf9509-35b1-4351-b77d-07f03609ad87", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T17:15:39.817869+00:00", "run_id": "run-20261105-141304-38ca4d", "concept_id": "05-networking-internet-01-internet", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T17:16:44.749214+00:00", "run_id": "run-20261105-141644-9d1ecd", "concept_id": "05-networking-internet-01-internet", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-11-05T17:17:47.131114+00:00", "run_id": "run-20261105-141644-9d1ecd", "concept_id": "05-networking-internet-01-internet", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T17:17:51.154592+00:00", "run_id": "run-20261105-141644-9d1ecd", "concept_id": "05-networking-internet-01-internet", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T17:17:51.191631+00:00", "run_id": "run-20261105-141644-9d1ecd", "concept_id": "05-networking-internet-01-internet", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T17:17:51.219781+00:00", "run_id": "run-20261105-141644-9d1ecd", "concept_id": "05-networking-internet-01-internet", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T17:17:51.237383+00:00", "run_id": "run-20261105-141644-9d1ecd", "concept_id": "05-networking-internet-01-internet", "event": "notebook_delete_failed", "notebook_id": "c0cf29a8-fb2c-4b95-b698-391152455072", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T17:17:51.246005+00:00", "run_id": "run-20261105-141644-9d1ecd", "concept_id": "05-networking-internet-01-internet", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T23:10:26.716742+00:00", "run_id": "run-20261105-201026-0a44b6", "concept_id": "05-networking-internet-01-internet", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:10:26.756239+00:00", "run_id": "run-20261105-201026-0a44b6", "concept_id": "05-networking-internet-01-internet", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T23:19:24.194009+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-01-internet", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:19:24.234106+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-01-internet", "event": "run_end", "status": "completed"}

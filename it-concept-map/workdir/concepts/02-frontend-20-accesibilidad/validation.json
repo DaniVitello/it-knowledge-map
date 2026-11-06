@@ -1,0 +1,10 @@
+{
+  "concept_id": "02-frontend-20-accesibilidad",
+  "is_valid": true,
+  "issues": [],
+  "warnings": [],
+  "score": 1.0,
+  "checked_at": "2026-10-30T05:20:09.687829+00:00",
+  "blocking_failures": [],
+  "verdict": "approved"
+}

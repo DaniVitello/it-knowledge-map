@@ -1,0 +1,10 @@
+{
+  "concept_id": "06-operating-systems-linux-01-operating-system",
+  "is_valid": true,
+  "issues": [],
+  "warnings": [],
+  "score": 1.0,
+  "checked_at": "2026-11-05T17:04:01.031281+00:00",
+  "blocking_failures": [],
+  "verdict": "approved"
+}

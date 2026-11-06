@@ -1,0 +1,50 @@
+{
+  "concept_id": "07-ai-engineering-14-rag",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No hay fuentes guardadas en tu libreta sobre **Retrieval-Augmented Generation (RAG)**.\n\nComo todas mis respuestas deben estar respaldadas por tus materiales, no puedo responder basándome en conocimiento general fuera de tus fuentes. \n\n¿Te gustaría que realice una investigación en la web sobre **RAG**, su utilidad y temas relacionados como **Embeddings**, **Vector Databases** y **Context Engineering** para responder a tu pregunta?",
+      "claims": [
+        {
+          "text": "No hay fuentes guardadas en tu libreta sobre **Retrieval-Augmented Generation (RAG)**.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Esto es lo que encontré sobre **Retrieval-Augmented Generation (RAG) en AI Engineering**:\n\nRAG es un patrón arquitectónico en ingeniería de IA que conecta un modelo de lenguaje grande (LLM) con fuentes de conocimiento externas en tiempo de inferencia, garantizando respuestas precisas, actualizadas y fundamentadas en datos reales sin necesidad de reentrenar el modelo.\n\n**Temas clave identificados:**\n1. **Flujo de Ingesta y Embeddings**: Los documentos o bases de datos se dividen en fragmentos (*chunks*) y se convierten mediante modelos de *embedding* en vectores numéricos que capturan el significado semántico del texto.\n2. **Almacenamiento y Recuperación (Vector Databases)**: Una base de datos vectorial almacena los embeddings y permite realizar búsquedas de similitud (k-NN / ANN) o búsquedas híbridas (vectorial + palabras clave BM25) para encontrar los fragmentos más relevantes ante la consulta del usuario.\n3. **Ingeniería de Contexto y Generación (*Context Engineering*)**: Los datos recuperados se inyectan dinámicamente en el *prompt* enviado al LLM, permitiendo al modelo generar una respuesta coherente, fundamentada y libre de alucinaciones.\n4. **Eficiencia frente a Fine-Tuning**: RAG es la alternativa preferida en la industria para personalizar IA corporativa, ya que evita los altos costos de reentrenar modelos cuando la información cambia.\n\n📥 El informe completo de investigación está incluido como la primera fuente en la tarjeta de importación a continuación; impórtalo para consultar los hallazgos directamente.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-rag-ai-engineering\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-rag-ai-engineering\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos técnicos, guías de arquitectura y documentación sobre RAG, Embeddings y Bases de Datos Vectoriales\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Informe de Investigación: RAG en AI Engineering\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQyZDc4MDk1OC03MGNjLTQ5NzItYTZmOC03N2ViOWY0NTdmMTQSCxIHEPnP8YvcBhgB&filename=Informe_de_Investigacion_RAG_en_AI_Engineering.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Informe de Investigación\",\n          \"summary\": \"Informe completo de investigación con 8 fuentes sobre la arquitectura RAG y sus componentes.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"End-to-End RAG Workflow: How Retrieval Augmented Generation Works\",\n          \"url\": \"https://www.databricks.com/blog/rag-workflow\",\n          \"sourceName\": \"Databricks Blog\",\n          \"summary\": \"Guía completa del pipeline de RAG, desde la ingesta de datos hasta la búsqueda híbrida y diseño de prompts.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"RAG Architecture Explained: How Retrieval-Augmented Generation Actually Works\",\n          \"url\": \"https://bigdataboutique.com/blog/rag-architecture-explained-how-retrieval-augmented-generation-works\",\n          \"sourceName\": \"Big Data Boutique\",\n          \"summary\": \"Análisis profundo de la arquitectura RAG, comparando patrones simples, avanzados y basados en agentes.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"RAG Explained: What Is Retrieval-Augmented Generation and How It Works\",\n          \"url\": \"https://www.coderhouse.com/articles/rag-retrieval-augmented-generation-what-is-ai-agents\",\n          \"sourceName\": \"Coderhouse\",\n          \"summary\": \"Explicación del rol de RAG en agentes de IA modernos y asistentes corporativos.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"How to use a Vector Database for Context Engineering\",\n          \"url\": \"https://contextengineering.ai/blog/vector-database-for-context-engineering/\",\n          \"sourceName\": \"Context Engineering Blog\",\n          \"summary\": \"Rol de las bases de datos vectoriales como memoria de alto rendimiento para modelos de lenguaje.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"What is RAG? - Retrieval-Augmented Generation AI Explained\",\n          \"url\": \"https://aws.amazon.com/what-is/retrieval-augmented-generation/\",\n          \"sourceName\": \"AWS\",\n          \"summary\": \"Visión general de AWS sobre el proceso de augmentación de prompts y actualización de datos externos.\"\n        },\n        {\n          \"id\": \"src-6\",\n          \"title\": \"What is RAG (Retrieval Augmented Generation)?\",\n          \"url\": \"https://www.ibm.com/think/topics/retrieval-augmented-generation\",\n          \"sourceName\": \"IBM\",\n          \"summary\": \"Explicación de IBM sobre los beneficios empresariales de RAG frente al fine-tuning.\"\n        },\n        {\n          \"id\": \"src-7\",\n          \"title\": \"RAG Context Engineering\",\n          \"url\": \"https://donaldmcgillivray.com/2025/09/RAG_Context_Engineering.html\",\n          \"sourceName\": \"McGillivray LAB\",\n          \"summary\": \"Exposición de RAG como pilar técnico para la ingeniería de contexto y control de guardarraíles.\"\n        },\n        {\n          \"id\": \"src-8\",\n          \"title\": \"Our POV - Context Engineering for AI\",\n          \"url\": \"https://www.factored.ai/our-pov/context-engineering-ai-systems\",\n          \"sourceName\": \"Factored AI\",\n          \"summary\": \"Patrones avanzados de búsqueda híbrida combinando embeddings densos e índices esparsos BM25.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Esto es lo que encontré sobre **Retrieval-Augmented Generation (RAG) en AI Engineering**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no he importado las fuentes de la investigación previa a tu libreta. \n\n¿Quieres que las importe primero? Así podré responder a tus preguntas sobre el estado actual y las relaciones de RAG fundamentándome directamente en el contenido de esas fuentes. También puedes desplazarte hacia arriba hasta la tarjeta de resultados e importarlas directamente desde allí.",
+      "claims": [
+        {
+          "text": "Aún no he importado las fuentes de la investigación previa a tu libreta. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "db1cf79b-6f11-4201-8440-27e827e924c5",
+  "duration_ms": 72727,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\07-ai-engineering-14-rag\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

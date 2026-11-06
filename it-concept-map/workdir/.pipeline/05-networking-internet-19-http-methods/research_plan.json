@@ -1,0 +1,51 @@
+{
+  "questions": [],
+  "concept_id": "05-networking-internet-19-http-methods",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es HTTP Methods y para que sirve (GET, POST, PUT, PATCH, DELETE)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de HTTP Methods en Networking / Internet"
+    ],
+    "context": [
+      "Como se usa HTTP Methods en el contexto profesional de Networking / Internet"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Internet & Web",
+      "ask": "Como se relaciona HTTP Methods con Internet & Web?"
+    },
+    {
+      "with": "HTTP",
+      "ask": "Como se relaciona HTTP Methods con HTTP?"
+    },
+    {
+      "with": "Request / Response",
+      "ask": "Como se relaciona HTTP Methods con Request / Response?"
+    },
+    {
+      "with": "HTTP Status Codes",
+      "ask": "Como se relaciona HTTP Methods con HTTP Status Codes?"
+    },
+    {
+      "with": "Headers / Cookies",
+      "ask": "Como se relaciona HTTP Methods con Headers / Cookies?"
+    }
+  ],
+  "queries": [
+    "site:rfc-editor.org HTTP Methods",
+    "site:datatracker.ietf.org HTTP Methods",
+    "site:developer.mozilla.org HTTP Methods",
+    "site:cloudflare.com HTTP Methods",
+    "site:beej.us HTTP Methods",
+    "site:hpbn.co HTTP Methods",
+    "site:man7.org HTTP Methods"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

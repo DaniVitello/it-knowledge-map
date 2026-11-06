@@ -1,0 +1,19 @@
+{
+  "concept_id": "frontend-01-internet-web",
+  "status": "synthesized",
+  "last_good_state": "researched",
+  "checkpoint": null,
+  "phase_data": {
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\tests\\.tmp-workdir-synth\\concepts\\frontend-01-internet-web\\synthesis.json"
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-06T19:24:38.874566+00:00",
+  "updated_at": "2026-11-06T19:24:38.921078+00:00",
+  "timestamps": {
+    "created_at": "2026-11-06T19:24:38.874566+00:00",
+    "updated_at": "2026-11-06T19:24:38.888714+00:00"
+  },
+  "schema_version": "1.0.0"
+}

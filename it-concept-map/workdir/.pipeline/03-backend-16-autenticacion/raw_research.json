@@ -1,0 +1,50 @@
+{
+  "concept_id": "03-backend-16-autenticacion",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No tienes fuentes guardadas en tu libreta sobre la **autenticación** (sesiones, cookies, JWT, OAuth).\n\n¿Te gustaría que haga una **investigación en la web** sobre este tema para responder a tu pregunta?",
+      "claims": [
+        {
+          "text": "No tienes fuentes guardadas en tu libreta sobre la **autenticación** (sesiones, cookies, JWT, OAuth).",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "La autenticación en el **backend** es el proceso mediante el cual el servidor verifica la identidad de un usuario que intenta realizar peticiones. HTTP por naturaleza no tiene estado (*stateless*), por lo que el backend necesita un mecanismo para recordar quién es el usuario en cada solicitud.\n\n### 1. Sesiones y Cookies (El enfoque clásico / *Stateful*)\n* **Cómo funciona:** Cuando el usuario inicia sesión (usuario y contraseña), el backend valida las credenciales y crea un registro de sesión en el servidor (almacenado en memoria o bases de datos como Redis), asignándole un **ID de sesión único**.\n* **El rol de las cookies:** El backend envía este ID al navegador dentro del encabezado `Set-Cookie`. En las siguientes peticiones, el navegador adjunta automáticamente la cookie y el backend busca el ID en su base de datos para confirmar la identidad del usuario.\n* **Ventajas y desventajas:** Permite revocar sesiones al instante borrando el registro en el backend, pero requiere almacenamiento en servidor y es más complejo de escalar horizontalmente en microservicios.\n\n### 2. JWT (JSON Web Tokens) (El enfoque moderno / *Stateless*)\n* **Cómo funciona:** El backend valida las credenciales y genera un **token digital firmado criptográficamente** (con clave secreta o clave pública/privada). Este token contiene la identidad del usuario y una fecha de expiración.\n* **Procesamiento en Backend:** El cliente almacena el JWT y lo envía en el encabezado `Authorization: Bearer <token>`. El backend no necesita consultar ninguna base de datos: simplemente verifica la firma del token con su clave secreta. Si la firma es válida y no ha expirado, autoriza la petición.\n* **Ventajas y desventajas:** Altamente escalable y excelente para microservicios y apps móviles. Su principal reto es la revocación antes de que expire (requiere listas negras o tokens de refresco de vida corta).\n\n### 3. OAuth 2.0 (Autenticación y Autorización Delegada)\n* **Cómo funciona:** En lugar de gestionar usuarios y contraseñas internamente, el backend delega la autenticación a un proveedor de identidad externo (Google, GitHub, Auth0).\n* **El flujo:** El usuario se autentica en el proveedor externo; este devuelve un *código de autorización* al backend, y el backend intercambia dicho código por un token de acceso directamente con el servidor del proveedor.\n* **Ventajas:** El usuario no comparte su contraseña con tu aplicación y el backend puede integrar inicio de sesión único (SSO).\n\n### 🔒 Integración y Seguridad (Cookies + JWT)\nPara evitar que un atacante robe un JWT mediante código malicioso (*XSS* si se guarda en `localStorage`), la mejor práctica actual en el backend es **enviar el JWT dentro de una cookie configurada con las directivas `HttpOnly`, `Secure` y `SameSite`**, o utilizar arquitecturas como **Backend-for-Frontend (BFF)**.\n\n---\n\n📥 El informe de investigación completo se incluye como la primera fuente en la tarjeta de importación a continuación; impórtalo para consultar los detalles directamente en tu libreta.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-autenticacion-backend\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-autenticacion-backend\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos técnicos y guías sobre arquitectura de autenticación en backend (Sesiones, Cookies, JWT, OAuth)\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Reporte de investigación: Autenticación Backend\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQ2MTExNmNhNy0zODNiLTQ3NDItOTQzNS00ZDVkYjIxOTViZTESCxIHEPnP8YvcBhgB&filename=Reporte_de_investigacion_Autenticacion_Backend.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Reporte de Investigación\",\n          \"summary\": \"Informe completo con 5 fuentes sobre sesiones en servidor, firmas de JWT, cookies de seguridad y flujos OAuth2.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"JWT vs OAuth2 vs Session Cookies: A Complete Authentication Strategy Breakdown\",\n          \"url\": \"https://dev.to/crit3cal/jwt-vs-oauth2-vs-session-cookies-a-complete-authentication-strategy-breakdown-for-full-stack-1639\",\n          \"sourceName\": \"DEV Community\",\n          \"summary\": \"Guía completa sobre arquitectura de sesiones, tokens firmados, OAuth2 y patrones híbridos como BFF.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"JWT vs OAuth2 vs Session Cookies — What's Best for Your Backend?\",\n          \"url\": \"https://systemweakness.com/jwt-vs-oauth2-vs-session-cookies-whats-best-for-your-backend-389539a6a80a\",\n          \"sourceName\": \"System Weakness\",\n          \"summary\": \"Comparativa de escalabilidad y seguridad entre almacenamiento en servidor y tokens sin estado.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"Cookies vs JWT Authentication: Developer Guide\",\n          \"url\": \"https://crosscheck.cloud/blogs/cookies-vs-jwt-authentication-2026/\",\n          \"sourceName\": \"Crosscheck\",\n          \"summary\": \"Explicación sobre el uso de cookies HttpOnly para proteger JWTs en navegadores modernos.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"¿Qué es JWT y cómo se diferencia de Cookies y Sesiones?\",\n          \"url\": \"https://programacionymas.com/blog/jwt-vs-cookies-y-sesiones\",\n          \"sourceName\": \"Programación y Más\",\n          \"summary\": \"Análisis en español de ventajas y desventajas de autenticación por tokens frente a sesiones en servidor.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "La autenticación en el **backend** es el proceso mediante el cual el servidor verifica la identidad de un usuario que intenta realizar peticiones. HTTP por naturaleza no tiene estado (*stateless*), po",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no he importado las fuentes de la investigación a tu libreta. ¿Te gustaría que las importe ahora? Una vez importadas, podré responder a tus preguntas en detalle basándome en su contenido. \n\nTambién puedes desplazarte hacia arriba al mensaje anterior e importarlas directamente desde la tarjeta de importación.",
+      "claims": [
+        {
+          "text": "Aún no he importado las fuentes de la investigación a tu libreta. ¿Te gustaría que las importe ahora? Una vez importadas, podré responder a tus preguntas en detalle basándome en su contenido. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "fcee97ae-984c-4291-9f3e-ffa5eed58a8b",
+  "duration_ms": 54146,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\03-backend-16-autenticacion\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

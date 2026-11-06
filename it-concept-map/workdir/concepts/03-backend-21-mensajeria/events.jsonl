@@ -1,0 +1,12 @@
+{"ts": "2026-10-30T05:33:16.476699+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-21-mensajeria", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:33:32.817865+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-21-mensajeria", "event": "phase_failed", "phase": "research", "error": "research (56094526-4879-4299-93fd-2398f7fbbd76): Chat request was rate limited or rejected by the API. Wait a few seconds and try again."}
+{"ts": "2026-11-05T19:33:39.646439+00:00", "run_id": "run-20261105-162522-4ca118", "concept_id": "03-backend-21-mensajeria", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T19:34:49.398928+00:00", "run_id": "run-20261105-162522-4ca118", "concept_id": "03-backend-21-mensajeria", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T19:34:55.572185+00:00", "run_id": "run-20261105-162522-4ca118", "concept_id": "03-backend-21-mensajeria", "event": "phase_failed", "phase": "synthesis", "error": "No se proporciono LLM para la sintesis"}
+{"ts": "2026-11-05T19:53:46.302619+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-21-mensajeria", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T19:54:45.265544+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-21-mensajeria", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T19:54:48.985276+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-21-mensajeria", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T19:54:49.077771+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-21-mensajeria", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T19:54:49.154922+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-21-mensajeria", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T19:54:49.189520+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-21-mensajeria", "event": "notebook_delete_failed", "notebook_id": "eb34e12d-3d4e-4972-97b6-88697e297819", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T19:54:49.207227+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-21-mensajeria", "event": "run_end", "status": "completed"}

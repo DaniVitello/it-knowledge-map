@@ -1,0 +1,33 @@
+{
+  "total": 1,
+  "completed": 1,
+  "failed": 0,
+  "skipped": 0,
+  "success_rate": 1.0,
+  "avg_duration_ms": 179.0,
+  "total_duration_ms": 181,
+  "metrics": [
+    {
+      "concept_id": "frontend-01-internet-web",
+      "status": "completed",
+      "duration_ms": 179,
+      "phases_completed": [
+        "research",
+        "synthesis",
+        "validation",
+        "writing"
+      ],
+      "error": null,
+      "synthesis_chars": 580,
+      "validation_score": 1.0,
+      "source_count": 0
+    }
+  ],
+  "errors": [],
+  "calibration": {
+    "avg_duration_ms": 179.0,
+    "success_rate": 1.0,
+    "suggested_pacing_s": 10,
+    "suggested_timeout_s": 900
+  }
+}

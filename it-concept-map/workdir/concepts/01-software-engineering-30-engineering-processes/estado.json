@@ -1,0 +1,29 @@
+{
+  "concept_id": "01-software-engineering-30-engineering-processes",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\01-software-engineering-30-engineering-processes\\sources.json",
+    "notebook_id": "c01c7d97-2c02-4337-87ad-f9d483a1d908",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-30-engineering-processes\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-30-engineering-processes\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\01-software-engineering-30-engineering-processes\\30 - Engineering Processes.md.20261030T045835Z-feb573.bak",
+      "outside_hash": "edbfb477f193c6728c2442c9328286c8ca11a9f7969fd18836b35bcfb8f6fff5",
+      "inside_hash": "82d772ab2fd34597e3ec155009495fc741c63cb6194393193516fbdbb52f5542",
+      "written_at": "2026-10-30T04:58:35.503874+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T04:57:35.974904+00:00",
+  "updated_at": "2026-10-30T04:58:35.525132+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T04:58:35.525132+00:00",
+    "created_at": "2026-10-30T04:57:35.974904+00:00"
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,50 @@
+{
+  "concept_id": "05-networking-internet-07-dns",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No veo fuentes cargadas en tu cuaderno todavía para responder a tu pregunta sobre DNS. \n\n¿Quieres que realice una **investigación en la web** para recopilar información sobre qué es el DNS y para qué sirve?",
+      "claims": [
+        {
+          "text": "No veo fuentes cargadas en tu cuaderno todavía para responder a tu pregunta sobre DNS. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Aquí tienes lo que encontré sobre el **funcionamiento de DNS en Networking e Internet**:\n\nEl **DNS** (*Domain Name System* o Sistema de Nombres de Dominio) es la infraestructura jerárquica y distribuida que traduce los nombres de dominio legibles por humanos (como `google.com`) en las direcciones IP numéricas (como `142.250.185.46`) que utilizan los dispositivos de red para localizarse y transmitir datos.\n\n**Temas clave identificados en la investigación:**\n\n1. **La \"guía telefónica\" de Internet**: Los routers, servidores y protocolos de red se comunican exclusivamente mediante direcciones IP. El DNS actúa como una capa de traducción para que los usuarios no tengan que memorizar secuencias numéricas complejas.\n2. **Proceso de resolución jerárquica**: Cuando un usuario introduce un dominio, la solicitud no llega a un único servidor central, sino que recorre una cadena ordenada de 4 servidores:\n   - **DNS Resolver (Recursivo)**: Recibe la petición inicial del cliente y gestiona la búsqueda.\n   - **Servidores Raíz (*Root Servers*)**: Orientan la búsqueda hacia la extensión correspondiente (`.com`, `.org`, `.es`).\n   - **Servidores TLD (*Top-Level Domain*)**: Indican la ubicación del servidor de nombres encargado del dominio específico.\n   - **Servidor Autoritativo**: Devuelve la dirección IP final asociada al dominio solicitado.\n3. **Caché y velocidad de respuesta**: Para evitar realizar este recorrido completo en cada clic, tanto los sistemas operativos como los servidores DNS recursivos guardan temporalmente las respuestas en memoria caché durante un periodo determinado (*TTL* o *Time To Live*).\n\n📥 El informe completo de la investigación se encuentra como la primera fuente en la tarjeta a continuación. Si deseas realizar consultas o trabajar con esta información, puedes importarla directamente a tus fuentes.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-dns-networking\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-dns-networking\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos técnicos y guías sobre el funcionamiento de DNS en redes e Internet\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Informe de investigación: DNS en Networking e Internet\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQ5YzIyZTA4OC0xMDU1LTQ3YjEtODMwZS1hNDA3ZWMzYTA1YzgSCxIHEPnP8YvcBhgB&filename=Informe_de_investigacin_DNS_en_Networking_e_Internet.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Informe de investigación\",\n          \"summary\": \"Informe completo con fuentes explicativas sobre la arquitectura y resolución DNS en redes.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"¿Qué es el Sistema de nombres de dominio (DNS)?\",\n          \"url\": \"https://www.fortinet.com/lat/resources/cyberglossary/what-is-dns\",\n          \"sourceName\": \"Fortinet\",\n          \"summary\": \"Explicación técnica de la resolución DNS a través de los cuatro tipos de servidores de red.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"Explicación de servidor DNS\",\n          \"url\": \"https://www.ibm.com/es-es/think/topics/dns-server\",\n          \"sourceName\": \"IBM\",\n          \"summary\": \"Detalla el rol de los servidores recursivos y autoritativos en la infraestructura global de Internet.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"¿Qué es DNS? | Cómo Funciona el Sistema de Nombres de Dominio\",\n          \"url\": \"https://www.azion.com/es/learning/dns/que-es-el-dns/\",\n          \"sourceName\": \"Azion\",\n          \"summary\": \"Describe la traducción a direcciones IP, tipos de registros y gestión de TTL.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"DNS (Domain Name System)\",\n          \"url\": \"https://www.lacnic.net/498/1/lacnic/dns-domain-name-system\",\n          \"sourceName\": \"LACNIC\",\n          \"summary\": \"Explica la base de datos distribuida y la estructura jerárquica administrada a nivel global.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"¿Qué es el DNS y cómo funciona? el traductor invisible de Internet\",\n          \"url\": \"https://networktechnology.blog/2026/01/02/que-es-el-dns-y-como-funciona/\",\n          \"sourceName\": \"Network Technology Blog\",\n          \"summary\": \"Análisis sobre la jerarquía de dominios, tipos de consultas y los principales registros de red.\"\n        },\n        {\n          \"id\": \"src-6\",\n          \"title\": \"Servidores DNS: Qué son, configuración y funcionamiento\",\n          \"url\": \"https://www.godaddy.com/resources/latam/tecnologia/entendiendo-un-servidor-dns\",\n          \"sourceName\": \"GoDaddy\",\n          \"summary\": \"Guía práctica sobre la resolución de nombres de dominio y conectividad de hosting.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Aquí tienes lo que encontré sobre el **funcionamiento de DNS en Networking e Internet**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no he importado esas fuentes a tu cuaderno. **¿Quieres que las importe primero?** De ese modo podré responder a tus preguntas con base en el contenido de las fuentes. También puedes desplazarte hacia arriba hasta la tarjeta de la investigación e importarlas directamente desde allí.",
+      "claims": [
+        {
+          "text": "Aún no he importado esas fuentes a tu cuaderno. **¿Quieres que las importe primero?** De ese modo podré responder a tus preguntas con base en el contenido de las fuentes. También puedes desplazarte ha",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "9d01c3e9-fb05-47d7-a7a4-d7ab2d19c4d1",
+  "duration_ms": 59157,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-07-dns\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

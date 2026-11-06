@@ -1,0 +1,29 @@
+{
+  "concept_id": "02-frontend-11-json-apis",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\02-frontend-11-json-apis\\sources.json",
+    "notebook_id": "600b9338-87ec-4441-be05-850892a494e8",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\02-frontend-11-json-apis\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\02-frontend-11-json-apis\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\02-frontend-11-json-apis\\11 - JSON & APIs.md.20261030T051501Z-3abe6a.bak",
+      "outside_hash": "0cf660123b5958f6c2a15c35e6eeda34f9dbdb5ba84e6125bdbdfb5fd20a7197",
+      "inside_hash": "b0de9c94bc4dbc1dafaa98aaa81f6813e4f69e77c0a46118800989ab588e469d",
+      "written_at": "2026-10-30T05:15:01.209757+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:14:23.914233+00:00",
+  "updated_at": "2026-10-30T05:15:01.230014+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T05:15:01.230014+00:00",
+    "created_at": "2026-10-30T05:14:23.914233+00:00"
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,12 @@
+{"ts": "2026-10-30T05:19:35.186772+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-20-accesibilidad", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:20:05.856698+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-20-accesibilidad", "event": "phase_done", "phase": "research"}
+{"ts": "2026-10-30T05:20:09.676502+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-20-accesibilidad", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-10-30T05:20:09.706189+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-20-accesibilidad", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-10-30T05:20:09.737627+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-20-accesibilidad", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-10-30T05:20:09.758849+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-20-accesibilidad", "event": "notebook_delete_failed", "notebook_id": "c1c9c622-7717-460f-a727-b680fe254d9b", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-10-30T05:20:09.769254+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-20-accesibilidad", "event": "run_end", "status": "completed"}
+{"ts": "2026-10-30T05:20:18.936642+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-20-accesibilidad", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:20:18.986465+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-20-accesibilidad", "event": "idempotency_hash_mismatch", "stored": "bbe6c30474f820d68393f9024f98b21a716d0b33acd246d384079922ea8608a0", "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+{"ts": "2026-10-30T05:20:18.988580+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-20-accesibilidad", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T22:40:01.859829+00:00", "run_id": "run-20261105-193941-b2c223", "concept_id": "02-frontend-20-accesibilidad", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T22:40:01.922081+00:00", "run_id": "run-20261105-193941-b2c223", "concept_id": "02-frontend-20-accesibilidad", "event": "run_end", "status": "completed"}

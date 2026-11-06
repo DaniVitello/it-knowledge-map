@@ -1,0 +1,29 @@
+{
+  "concept_id": "05-networking-internet-02-ip",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-02-ip\\sources.json",
+    "notebook_id": "5e470282-5f4b-442e-9f4b-a1c240440661",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-02-ip\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-02-ip\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\05-networking-internet-02-ip\\02 - IP.md.20261105T231136Z-4ebb9a.bak",
+      "outside_hash": "c9b30896e314fafbb70db7ed74ce6af773175ee884ff6a4a1f302b93937317c4",
+      "inside_hash": "4dbb2b09b1eae2a07469301d93d3574e9f00a5a4308543dd54ecb9e8a1171d58",
+      "written_at": "2026-11-05T23:11:36.129178+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:10:28.686729+00:00",
+  "updated_at": "2026-11-05T23:11:36.147695+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:11:36.147695+00:00",
+    "created_at": "2026-11-05T23:10:28.686729+00:00"
+  },
+  "schema_version": "1.0.0"
+}

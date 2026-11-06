@@ -1,0 +1,12 @@
+{"ts": "2026-10-30T05:16:17.584557+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-14-frameworks-ui", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:16:47.567402+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-14-frameworks-ui", "event": "phase_done", "phase": "research"}
+{"ts": "2026-10-30T05:16:51.560491+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-14-frameworks-ui", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-10-30T05:16:51.599217+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-14-frameworks-ui", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-10-30T05:16:51.640179+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-14-frameworks-ui", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-10-30T05:16:51.664125+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-14-frameworks-ui", "event": "notebook_delete_failed", "notebook_id": "6442fcb8-f06d-4343-a805-c464d78cacaf", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-10-30T05:16:51.680431+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-14-frameworks-ui", "event": "run_end", "status": "completed"}
+{"ts": "2026-10-30T05:18:01.566117+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-14-frameworks-ui", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:18:01.588017+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-14-frameworks-ui", "event": "idempotency_hash_mismatch", "stored": "987b6517345a9da6a6a8a5c66fa2cde781aa543e04241ad3ca76f07dd4cc452c", "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+{"ts": "2026-10-30T05:18:01.589568+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-14-frameworks-ui", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T22:39:55.460291+00:00", "run_id": "run-20261105-193941-b2c223", "concept_id": "02-frontend-14-frameworks-ui", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T22:39:55.527485+00:00", "run_id": "run-20261105-193941-b2c223", "concept_id": "02-frontend-14-frameworks-ui", "event": "run_end", "status": "completed"}

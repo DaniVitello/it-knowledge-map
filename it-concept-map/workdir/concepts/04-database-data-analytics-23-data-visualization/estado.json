@@ -1,0 +1,29 @@
+{
+  "concept_id": "04-database-data-analytics-23-data-visualization",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-23-data-visualization\\sources.json",
+    "notebook_id": "fd19aa5b-1674-471a-bd41-9da0d77c8450",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-23-data-visualization\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-23-data-visualization\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\04-database-data-analytics-23-data-visualization\\23 - Data Visualization.md.20261105T230717Z-2f5f61.bak",
+      "outside_hash": "cc5c475b59479db0452edf5c51d99d5788e48c015ab64ee1f0f15849a79b6584",
+      "inside_hash": "ccd4e7c4fc04da6dd556226f25f74f9431b900ccb4425f065aa7bc1dac2659d9",
+      "written_at": "2026-11-05T23:07:17.281048+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:06:24.678266+00:00",
+  "updated_at": "2026-11-05T23:07:17.300338+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:07:17.300338+00:00",
+    "created_at": "2026-11-05T23:06:24.678266+00:00"
+  },
+  "schema_version": "1.0.0"
+}

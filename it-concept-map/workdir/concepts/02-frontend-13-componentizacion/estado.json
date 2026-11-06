@@ -1,0 +1,29 @@
+{
+  "concept_id": "02-frontend-13-componentizacion",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\02-frontend-13-componentizacion\\sources.json",
+    "notebook_id": "d37e55ef-69e0-43b2-bbe8-326b52427ea2",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\02-frontend-13-componentizacion\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\02-frontend-13-componentizacion\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\02-frontend-13-componentizacion\\13 - Componentización.md.20261030T051616Z-8b6c0c.bak",
+      "outside_hash": "aa4ec7fd4c7275d32e6da6eb93fd871d0b0a33e17979c3c6bac749bb5e553361",
+      "inside_hash": "e46d194e9af83a3d73cec6b233ce81a7c5a91a0a6ea4a57e35916e940c62b769",
+      "written_at": "2026-10-30T05:16:16.524588+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:15:35.307040+00:00",
+  "updated_at": "2026-10-30T05:16:16.543881+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T05:16:16.543881+00:00",
+    "created_at": "2026-10-30T05:15:35.307040+00:00"
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,12 @@
+{"ts": "2026-10-30T05:15:35.278334+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-13-componentizacion", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:16:12.693361+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-13-componentizacion", "event": "phase_done", "phase": "research"}
+{"ts": "2026-10-30T05:16:16.464996+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-13-componentizacion", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-10-30T05:16:16.501501+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-13-componentizacion", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-10-30T05:16:16.530978+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-13-componentizacion", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-10-30T05:16:16.550868+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-13-componentizacion", "event": "notebook_delete_failed", "notebook_id": "d37e55ef-69e0-43b2-bbe8-326b52427ea2", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-10-30T05:16:16.575698+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-13-componentizacion", "event": "run_end", "status": "completed"}
+{"ts": "2026-10-30T05:18:00.533910+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-13-componentizacion", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:18:00.553421+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-13-componentizacion", "event": "idempotency_hash_mismatch", "stored": "e46d194e9af83a3d73cec6b233ce81a7c5a91a0a6ea4a57e35916e940c62b769", "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+{"ts": "2026-10-30T05:18:00.554806+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-13-componentizacion", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T22:39:54.390343+00:00", "run_id": "run-20261105-193941-b2c223", "concept_id": "02-frontend-13-componentizacion", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T22:39:54.442468+00:00", "run_id": "run-20261105-193941-b2c223", "concept_id": "02-frontend-13-componentizacion", "event": "run_end", "status": "completed"}

@@ -1,0 +1,12 @@
+{"ts": "2026-10-30T05:32:08.689002+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-17-autorizacion", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:32:24.076476+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-17-autorizacion", "event": "phase_failed", "phase": "research", "error": "research (815b9e63-5aba-49a1-ad50-29c2bb44f208): Chat request was rate limited or rejected by the API. Wait a few seconds and try again."}
+{"ts": "2026-11-05T18:23:41.754261+00:00", "run_id": "run-20261105-151942-eb6f22", "concept_id": "03-backend-17-autorizacion", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-11-05T19:30:25.325446+00:00", "run_id": "run-20261105-162522-4ca118", "concept_id": "03-backend-17-autorizacion", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T19:30:31.438551+00:00", "run_id": "run-20261105-162522-4ca118", "concept_id": "03-backend-17-autorizacion", "event": "phase_failed", "phase": "research", "error": "Transicion invalida: researching -> researching"}
+{"ts": "2026-11-05T19:50:00.751790+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-17-autorizacion", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T19:51:19.920643+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-17-autorizacion", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T19:51:23.607667+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-17-autorizacion", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T19:51:23.675315+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-17-autorizacion", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T19:51:23.719382+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-17-autorizacion", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T19:51:23.742318+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-17-autorizacion", "event": "notebook_delete_failed", "notebook_id": "e7522a10-c2ec-4d41-81c2-310096d4b2c1", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T19:51:23.755921+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-17-autorizacion", "event": "run_end", "status": "completed"}

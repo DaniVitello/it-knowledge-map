@@ -1,0 +1,50 @@
+{
+  "concept_id": "07-ai-engineering-12-llm-apis-model-serving",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "**No encontré fuentes en tu cuaderno** sobre **LLM APIs & Model Serving** (APIs, SDKs, inferencia y streaming).\n\nPara garantizar respuestas precisas y totalmente trazables a tus documentos, no genero explicaciones a partir de conocimiento externo sin contar con material de origen en el cuaderno.\n\n¿Te gustaría que realice una **investigación en la web** sobre las APIs de LLM y el model serving para darte un resumen completo y ofrecerte fuentes para importar?",
+      "claims": [
+        {
+          "text": "**No encontré fuentes en tu cuaderno** sobre **LLM APIs & Model Serving** (APIs, SDKs, inferencia y streaming).",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Aquí está lo que encontré sobre **LLM APIs & Model Serving en AI Engineering**:\n\nEn la ingeniería de IA, **LLM APIs & Model Serving** constituye la infraestructura fundamental para consumir, desplegar y escalar modelos de lenguaje en aplicaciones de producción, abarcando desde la integración con servicios SaaS en la nube hasta el alojamiento optimizado en servidores dedicados.\n\n**Aspectos clave identificados:**\n1. **LLM APIs y SDKs**: Las APIs estandarizan la interfaz de comunicación HTTP/REST con los modelos, mientras que los SDKs (en bibliotecas de Python o TypeScript) abstraen la autenticación, reintentos automáticos, gestión de límites de velocidad y estructuración de respuestas (JSON mode, llamadas a funciones/herramientas).\n2. **Inferencia (Model Inference)**: Es el proceso mediante el cual el modelo procesa las entradas (*prefill*) y genera nuevos tokens de texto (*decode*) ejecutándose sobre hardware GPU/TPU.\n3. **Model Serving Engines**: Motores de alojamiento como vLLM, TGI (Text Generation Inference) u Ollama optimizan la inferencia a escala utilizando técnicas avanzadas como *continuous batching*, *PagedAttention* y gestión eficiente de la memoria caché de claves/valores (*KV cache*).\n4. **Streaming (Server-Sent Events / SSE)**: Técnica esencial para transmitir tokens de texto de forma incremental a medida que la GPU los calcula en tiempo real, reduciendo la latencia percibida (*Time to First Token - TTFT*) en interfaces de chat y agentes interactivos.\n5. **Gateways y Enrutamiento Unificado**: Herramientas como LiteLLM u OpenRouter permiten conectar múltiples proveedores mediante una interfaz compatible con OpenAI, gestionando el balanceo de carga, *failover* y optimización de costos.\n\n📥 El informe completo de investigación se incluye como la primera fuente en la tarjeta de importación a continuación; impórtalo si deseas tener los hallazgos directamente en tu cuaderno para analizarlos y formular preguntas basadas en ellos.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-llm-apis-model-serving\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-llm-apis-model-serving\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos y recursos técnicos sobre LLM APIs, SDKs, inferencia y model serving\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Informe de investigación: LLM APIs & Model Serving\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQ1NjlmODdmZC00NjhjLTQ3OTMtOTIxMy01MGM2MWUxNTI5ZGQSCxIHEPnP8YvcBhgB&filename=Informe_de_investigacion_LLM_APIs_Model_Serving.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Informe de Investigación\",\n          \"summary\": \"Informe completo de investigación con 6 fuentes sobre LLM APIs, SDKs, inferencia y streaming.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"AI Engineer Roadmap: Prompt Engineering & Model Serving\",\n          \"url\": \"https://github.com/Hardik-369/ROADMAP/blob/master/AI-Engineer-Roadmap.md\",\n          \"sourceName\": \"GitHub / AI Engineer Roadmap\",\n          \"summary\": \"Roadmap técnico sobre la integración de APIs de LLM, streaming, SDKs y servidores de inferencia como vLLM y Ollama.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"Top 5 AI Gateways for Routing Between vLLM, Ollama, and Cloud LLMs\",\n          \"url\": \"https://dev.to/kuldeep_paul/top-5-ai-gateways-for-routing-between-vllm-ollama-and-cloud-llms-2026-1i68\",\n          \"sourceName\": \"DEV Community\",\n          \"summary\": \"Guía de patrones de API Gateways para enrutar y gestionar peticiones entre modelos locales y APIs en la nube.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"From LLM Inference to Agentic Workloads: Characterization and Serving Systems\",\n          \"url\": \"https://arxiv.org/html/2608.15127v1\",\n          \"sourceName\": \"arXiv\",\n          \"summary\": \"Estudio académico sobre optimización de memoria (PagedAttention, KV Cache) e infraestructura de inferencia.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"9 Best LLM API Providers for Developers\",\n          \"url\": \"https://www.digitalocean.com/resources/articles/llm-api-providers\",\n          \"sourceName\": \"DigitalOcean\",\n          \"summary\": \"Análisis comparativo de proveedores de APIs de LLM y enrutadores como OpenRouter y Fireworks AI.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"Top Inference Platforms: A Buyer's Guide for Enterprise AI Teams\",\n          \"url\": \"https://www.bentoml.com/blog/how-to-vet-inference-platforms\",\n          \"sourceName\": \"BentoML\",\n          \"summary\": \"Evaluación de plataformas de inferencia dedicadas frente a APIs SaaS para entornos empresariales.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Aquí está lo que encontré sobre **LLM APIs & Model Serving en AI Engineering**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no he importado a tu cuaderno las fuentes encontradas en la investigación anterior. \n\n¿Quieres que las importe primero? Una vez añadidas a tu cuaderno, podré analizar en detalle el **estado actual y las relaciones de LLM APIs & Model Serving** basándome directamente en el contenido de las fuentes. \n\nTambién puedes desplazarte hacia arriba hasta la tarjeta de importación e importarlas directamente desde allí.",
+      "claims": [
+        {
+          "text": "Aún no he importado a tu cuaderno las fuentes encontradas en la investigación anterior. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "56147250-502b-47cd-a8ed-e7c03e304556",
+  "duration_ms": 66519,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\07-ai-engineering-12-llm-apis-model-serving\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

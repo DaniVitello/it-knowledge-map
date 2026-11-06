@@ -1,0 +1,39 @@
+{
+  "questions": [],
+  "concept_id": "06-operating-systems-linux-20-daemons-services",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Daemons / Services y para que sirve (Procesos que funcionan como servicios)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Daemons / Services en Operating Systems / Linux"
+    ],
+    "context": [
+      "Como se usa Daemons / Services en el contexto profesional de Operating Systems / Linux"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Servidor",
+      "ask": "Como se relaciona Daemons / Services con Servidor?"
+    },
+    {
+      "with": "Processes",
+      "ask": "Como se relaciona Daemons / Services con Processes?"
+    }
+  ],
+  "queries": [
+    "site:man7.org Daemons / Services",
+    "site:kernel.org Daemons / Services",
+    "site:ostep.org Daemons / Services",
+    "site:wiki.archlinux.org Daemons / Services",
+    "site:gnu.org Daemons / Services",
+    "site:docs.docker.com Daemons / Services",
+    "site:opencontainers.org Daemons / Services"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

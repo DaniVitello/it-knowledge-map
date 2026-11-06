@@ -1,0 +1,31 @@
+{
+  "concept_id": "04-database-data-analytics-09-indexes",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "failed_phase": "researching",
+    "failed_reason": "error",
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-09-indexes\\sources.json",
+    "notebook_id": "49bef68f-694f-4c90-bb2b-70f18dcc915f",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-09-indexes\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-09-indexes\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\04-database-data-analytics-09-indexes\\09 - Indexes.md.20261105T225422Z-a5f29d.bak",
+      "outside_hash": "a5c06eb6645478afb5a4a9b48c69e25392fa9e139c8971adcf3fcf5a2a53dfe1",
+      "inside_hash": "eb020cb3acb8e6e075f55ac3bcabbb8c7b56fb706bd90263f9afa158cbf7f73a",
+      "written_at": "2026-11-05T22:54:22.981353+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T18:22:41.086576+00:00",
+  "updated_at": "2026-11-05T22:54:22.999618+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T22:54:22.999618+00:00",
+    "created_at": "2026-11-05T18:22:41.086576+00:00"
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,50 @@
+{
+  "concept_id": "07-ai-engineering-01-ai-ml-fundamentals",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No veo fuentes cargadas en tu cuaderno sobre **AI / ML Fundamentals** (modelos, entrenamiento, inferencia y datos). \n\n¿Te gustaría que realice una **investigación en la web** sobre este tema para responder a tu pregunta?",
+      "claims": [
+        {
+          "text": "No veo fuentes cargadas en tu cuaderno sobre **AI / ML Fundamentals** (modelos, entrenamiento, inferencia y datos). ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Esto es lo que encontré sobre **AI / ML Fundamentals en AI Engineering**:\n\nEn el campo del AI Engineering (Ingeniería de IA), los cuatro pilares fundamentales —**datos, entrenamiento, inferencia y modelos**— forman el ciclo de vida técnico necesario para llevar modelos conceptuales o experimentales hacia sistemas de producción estables, escalables y seguros.\n\n**Temas clave identificados:**\n\n1. **Modelos e Inferencia en Producción**: A diferencia de la investigación experimental, el rol del *AI Engineer* se enfoca intensamente en la inferencia: garantizar que el modelo previamente entrenado responda a solicitudes del usuario en tiempo real con baja latencia, costo controlado y alta disponibilidad.\n2. **Pipelines de Datos e Ingeniería de Características**: Los datos sin procesar deben seleccionarse, limpiarse y transformarse continuamente (*feature engineering*) para mantener la consistencia semántica y alimentar tanto el entrenamiento como las predicciones en producción.\n3. **Diferenciación de Infraestructura (Entrenamiento vs. Inferencia)**: El entrenamiento ajusta de forma iterativa los parámetros internos (pesos y sesgos) mediante un cómputo intensivo en GPU/TPU sobre datos históricos, mientras que la inferencia opera sobre datos dinámicos en vivo para generar predicciones o contenidos.\n\n📥 El informe completo de investigación se incluye como la primera fuente en la tarjeta de importación a continuación; puedes importarlo para consultar y chatear directamente sobre estos hallazgos en tu cuaderno.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-ai-ml-fundamentals\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-ai-ml-fundamentals\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos técnicos e informes sobre el ciclo de vida de datos, entrenamiento e inferencia en AI Engineering\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Informe de investigación: AI / ML Fundamentals en AI Engineering\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQ5OGE1MTVmNi0xZTdiLTQ5M2UtYTBjOC01NjQwZmJiN2YzMTASCxIHENqe1-OQCxgB&filename=Informe_de_investigacion_AI_ML_Fundamentals_en_AI_Engineerin.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Informe de investigación\",\n          \"summary\": \"Informe completo con 6 fuentes sobre la aplicación de modelos, entrenamiento e inferencia en producción.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"AI Engineering: Construir modelos de Inteligencia Artificial\",\n          \"url\": \"https://www.ironhack.com/es/blog/ai-engineering-construir-modelos-de-inteligencia-artificial\",\n          \"sourceName\": \"Ironhack\",\n          \"summary\": \"Explica el paso del diseño de modelos al despliegue en productos y aplicaciones reales.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"Ingeniería de datos para AI: una guía práctica para profesionales de datos\",\n          \"url\": \"https://www.databricks.com/es/blog/data-engineering-for-ai\",\n          \"sourceName\": \"Databricks\",\n          \"summary\": \"Aborda la importancia de los datos, metadatos e ingeniería de características para IA.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"Entrenamiento vs inferencia en IA: guía completa\",\n          \"url\": \"https://www.lenovo.com/ar/es/knowledgebase/ai-training-vs-inference-a-comprehensive-guide/\",\n          \"sourceName\": \"Lenovo\",\n          \"summary\": \"Analiza las exigencias técnicas y computacionales entre entrenar un modelo y ejecutarlo.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"¿Qué es la inferencia de IA? Cómo funciona y ejemplos\",\n          \"url\": \"https://cloud.google.com/discover/what-is-ai-inference?hl=es-419\",\n          \"sourceName\": \"Google Cloud\",\n          \"summary\": \"Detalla cómo la inferencia genera valor empresarial al procesar datos nuevos en tiempo real.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"¿Qué es la inferencia de la IA?\",\n          \"url\": \"https://www.ibm.com/es-es/think/topics/ai-inference\",\n          \"sourceName\": \"IBM\",\n          \"summary\": \"Describe cómo los modelos entrenados aplican patrones aprendidos a escenarios del mundo real.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Esto es lo que encontré sobre **AI / ML Fundamentals en AI Engineering**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no he importado a tu cuaderno las fuentes que encontramos en la investigación anterior. \n\n¿Quieres que las importe primero? Una vez agregadas, podré responder en detalle sobre el estado actual y las relaciones entre **datos**, **entrenamiento**, **modelos** e **inferencia** fundamentándome directamente en ellas. También puedes desplazarte hacia arriba hasta la tarjeta de investigación e importar individualmente las que prefieras.",
+      "claims": [
+        {
+          "text": "Aún no he importado a tu cuaderno las fuentes que encontramos en la investigación anterior. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "b5b78bc2-2790-46c3-affd-eb72df7b00d5",
+  "duration_ms": 59202,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\07-ai-engineering-01-ai-ml-fundamentals\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

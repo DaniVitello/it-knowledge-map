@@ -1,0 +1,47 @@
+{
+  "questions": [],
+  "concept_id": "05-networking-internet-08-dhcp",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es DHCP y para que sirve (Asignación automática de configuración de red)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de DHCP en Networking / Internet"
+    ],
+    "context": [
+      "Como se usa DHCP en el contexto profesional de Networking / Internet"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "IP",
+      "ask": "Como se relaciona DHCP con IP?"
+    },
+    {
+      "with": "IPv4 / IPv6",
+      "ask": "Como se relaciona DHCP con IPv4 / IPv6?"
+    },
+    {
+      "with": "ARP",
+      "ask": "Como se relaciona DHCP con ARP?"
+    },
+    {
+      "with": "Subnetting / CIDR",
+      "ask": "Como se relaciona DHCP con Subnetting / CIDR?"
+    }
+  ],
+  "queries": [
+    "site:rfc-editor.org DHCP",
+    "site:datatracker.ietf.org DHCP",
+    "site:developer.mozilla.org DHCP",
+    "site:cloudflare.com DHCP",
+    "site:beej.us DHCP",
+    "site:hpbn.co DHCP",
+    "site:man7.org DHCP"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,52 @@
+{
+  "questions": [],
+  "concept_id": "03-backend-13-modelado-de-datos",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Modelado de datos y para que sirve (Relaciones, normalización, constraints)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Modelado de datos en Backend"
+    ],
+    "context": [
+      "Como se usa Modelado de datos en el contexto profesional de Backend"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "ORM / Data Access",
+      "ask": "Como se relaciona Modelado de datos con ORM / Data Access?"
+    },
+    {
+      "with": "Data Modeling",
+      "ask": "Como se relaciona Modelado de datos con Data Modeling?"
+    },
+    {
+      "with": "Relational Databases",
+      "ask": "Como se relaciona Modelado de datos con Relational Databases?"
+    },
+    {
+      "with": "Keys & Constraints",
+      "ask": "Como se relaciona Modelado de datos con Keys & Constraints?"
+    },
+    {
+      "with": "Normalization",
+      "ask": "Como se relaciona Modelado de datos con Normalization?"
+    }
+  ],
+  "queries": [
+    "site:developer.mozilla.org Modelado de datos",
+    "site:rfc-editor.org Modelado de datos",
+    "site:datatracker.ietf.org Modelado de datos",
+    "site:owasp.org Modelado de datos",
+    "site:postgresql.org Modelado de datos",
+    "site:redis.io Modelado de datos",
+    "site:12factor.net Modelado de datos",
+    "site:learn.microsoft.com Modelado de datos"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

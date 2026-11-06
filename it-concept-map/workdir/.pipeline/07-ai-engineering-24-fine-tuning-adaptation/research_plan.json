@@ -1,0 +1,40 @@
+{
+  "questions": [],
+  "concept_id": "07-ai-engineering-24-fine-tuning-adaptation",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Fine-tuning & Adaptation y para que sirve (Fine-tuning, LoRA, distillation, model adaptation)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Fine-tuning & Adaptation en AI Engineering"
+    ],
+    "context": [
+      "Como se usa Fine-tuning & Adaptation en el contexto profesional de AI Engineering"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "LLMs",
+      "ask": "Como se relaciona Fine-tuning & Adaptation con LLMs?"
+    },
+    {
+      "with": "AI Infrastructure",
+      "ask": "Como se relaciona Fine-tuning & Adaptation con AI Infrastructure?"
+    }
+  ],
+  "queries": [
+    "site:arxiv.org Fine-tuning & Adaptation",
+    "site:huggingface.co Fine-tuning & Adaptation",
+    "site:pytorch.org Fine-tuning & Adaptation",
+    "site:d2l.ai Fine-tuning & Adaptation",
+    "site:platform.openai.com Fine-tuning & Adaptation",
+    "site:docs.claude.com Fine-tuning & Adaptation",
+    "site:ai.google.dev Fine-tuning & Adaptation",
+    "site:deeplearning.ai Fine-tuning & Adaptation"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,31 @@
+{
+  "concept_id": "04-database-data-analytics-05-filtering-aggregation",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "failed_phase": "researching",
+    "failed_reason": "error",
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-05-filtering-aggregation\\sources.json",
+    "notebook_id": "e14489d1-a974-435b-b03f-7427a288d1ab",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-05-filtering-aggregation\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-05-filtering-aggregation\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\04-database-data-analytics-05-filtering-aggregation\\05 - Filtering & Aggregation.md.20261105T225001Z-2cc58b.bak",
+      "outside_hash": "8d4dc96cf7b200af5eb6217c418c7c5915085930d5c5436ca060e16df7cfd974",
+      "inside_hash": "fe39faa05a68606e823c40d62f072629632ec931bdd02f637812272074610029",
+      "written_at": "2026-11-05T22:50:01.143837+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:35:58.851619+00:00",
+  "updated_at": "2026-11-05T22:50:01.163537+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T22:50:01.163537+00:00",
+    "created_at": "2026-10-30T05:35:58.851619+00:00"
+  },
+  "schema_version": "1.0.0"
+}

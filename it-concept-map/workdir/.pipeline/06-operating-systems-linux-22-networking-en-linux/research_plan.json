@@ -1,0 +1,43 @@
+{
+  "questions": [],
+  "concept_id": "06-operating-systems-linux-22-networking-en-linux",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Networking en Linux y para que sirve (Interfaces, puertos, rutas, sockets)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Networking en Linux en Operating Systems / Linux"
+    ],
+    "context": [
+      "Como se usa Networking en Linux en el contexto profesional de Operating Systems / Linux"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "TCP",
+      "ask": "Como se relaciona Networking en Linux con TCP?"
+    },
+    {
+      "with": "Puertos",
+      "ask": "Como se relaciona Networking en Linux con Puertos?"
+    },
+    {
+      "with": "Sockets",
+      "ask": "Como se relaciona Networking en Linux con Sockets?"
+    }
+  ],
+  "queries": [
+    "site:man7.org Networking en Linux",
+    "site:kernel.org Networking en Linux",
+    "site:ostep.org Networking en Linux",
+    "site:wiki.archlinux.org Networking en Linux",
+    "site:gnu.org Networking en Linux",
+    "site:docs.docker.com Networking en Linux",
+    "site:opencontainers.org Networking en Linux"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

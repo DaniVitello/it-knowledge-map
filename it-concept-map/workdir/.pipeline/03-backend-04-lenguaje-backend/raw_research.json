@@ -1,0 +1,50 @@
+{
+  "concept_id": "03-backend-04-lenguaje-backend",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No tienes fuentes en tu libreta que expliquen qué es un lenguaje backend y para qué sirve.\n\n¿Te gustaría que haga una **búsqueda en la web** sobre este tema?",
+      "claims": [
+        {
+          "text": "No tienes fuentes en tu libreta que expliquen qué es un lenguaje backend y para qué sirve.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Aquí tienes la explicación sobre cómo funciona un **lenguaje de programación backend** en el servidor:\n\n### ¿Cómo funciona un Lenguaje Backend?\n\nUn **lenguaje backend** es el código que se ejecuta en el **servidor** (fuera del navegador del usuario) para procesar solicitudes, aplicar la **lógica de negocio**, gestionar la seguridad y comunicarse con las bases de datos.\n\nEl flujo de funcionamiento sigue estos pasos clave:\n\n1. **Recepción de la Petición (Request):** Cuando un usuario realiza una acción en una aplicación (como iniciar sesión o realizar una compra), el frontend (cliente) envía una solicitud HTTP/HTTPS al servidor.\n2. **Entorno de Ejecución (Runtime):** El servidor recibe la petición y la entrega al **entorno de ejecución** del lenguaje backend:\n   - **Compilados a binario (Go, C++):** Se ejecutan directamente a nivel del sistema operativo con baja latencia y alta concurrencia.\n   - **Máquinas Virtuales / Bytecode (Java, C#):** Se compilan a código intermedio que corre sobre entornos gestionados (**JVM** o **.NET CLR**), ofreciendo portabilidad y gestión automática de memoria (Garbage Collector).\n   - **Interpretados / Runtimes dinámicos (Python, JavaScript/TypeScript con Node.js):** Se traducen o interpretan al vuelo mediante motores de alto rendimiento (como V8 en Node.js o CPython en Python).\n3. **Lógica de Negocio y Base de Datos:** El código valida los datos, ejecuta reglas operativas y realiza consultas a bases de datos (SQL como PostgreSQL/MySQL o NoSQL como MongoDB).\n4. **Respuesta (Response):** El lenguaje empaqueta la información procesada (generalmente en formato **JSON** o **XML**) y la envía de vuelta al cliente a través de una **API** (REST, GraphQL o gRPC).\n\n---\n\n**Temas clave identificados en la investigación:**\n\n1. **Gestión de Concurrencia y Rendimiento:** Lenguajes como **Go** y **Java** están optimizados para manejar miles de peticiones simultáneas con procesos ligeros o hilos.\n2. **Tipado y Mantenibilidad:** Lenguajes de tipado estático (**Java, C#, Go, TypeScript**) previenen errores en tiempo de compilación en sistemas complejos, mientras que **Python** y **JavaScript** destacan por su rapidez de desarrollo y flexibilidad.\n3. **Ecosistema de Servidor:** Cada lenguaje backend proporciona frameworks robustos (Spring Boot para Java, ASP.NET para C#, FastAPI/Django para Python, Express/NestJS para Node.js, Gin para Go) para construir servicios web escalables.\n\n---\n\n📥 **El informe completo de investigación está incluido como la primera fuente en la tarjeta a continuación; puedes importarlo para profundizar en los detalles.**\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-funcionamiento-lenguajes-backend\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-funcionamiento-lenguajes-backend\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos técnicos y guías sobre funcionamiento y lenguajes de programación backend\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Informe de investigación: Funcionamiento de Lenguajes Backend\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiRmOWViNGVlNy1mMTBhLTRlMzctYTdjNC01MDAyYzYxZTNmMmMSCxIHENqe1-OQCxgB&filename=Informe_de_investigacion_-_Funcionamiento_de_Lenguajes_Backe.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Informe de investigación\",\n          \"summary\": \"Informe estructurado con 5 fuentes clave sobre lenguajes backend, entornos de ejecución y lógica de servidor\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"Lenguaje Backend y Frontend: Conceptos y Diferencias\",\n          \"url\": \"https://miguelgomezsa.com/blog/lenguajes-backend-y-frontend\",\n          \"sourceName\": \"Miguel Gómez\",\n          \"summary\": \"Explicación clara del funcionamiento del servidor, la lógica de negocio y la comunicación con el frontend vía APIs.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"Lenguajes de programación backend más utilizados\",\n          \"url\": \"https://keepcoding.io/blog/lenguajes-de-programacion-backend-mas-usados/\",\n          \"sourceName\": \"KeepCoding\",\n          \"summary\": \"Panorama general de los principales lenguajes servidor como Python, JavaScript (Node.js), Java, C# y Go.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"Go para backend: por qué y cómo empezar\",\n          \"url\": \"https://www.coderhouse.com/coderlibrary/golang-backend-por-que-lo-eligen-como-empezar-desde-js-python\",\n          \"sourceName\": \"Coderhouse\",\n          \"summary\": \"Análisis sobre la compilación a binarios, concurrencia nativa y rendimiento en aplicaciones cloud de alto volumen.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"Lenguaje de programación: qué es y tipos de lenguaje más usados\",\n          \"url\": \"https://hostingplus.ar/blog/lenguaje-de-programacion-que-es-y-tipos-de-lenguaje-mas-usados/\",\n          \"sourceName\": \"Hosting Plus\",\n          \"summary\": \"Guía sobre entornos de ejecución en servidores, gestión de seguridad y bases de datos.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"Para Qué se Usa Cada Lenguaje de Programación Backend\",\n          \"url\": \"https://www.youtube.com/watch?v=pqfAvZC5clw\",\n          \"sourceName\": \"Deivchoi Tech\",\n          \"summary\": \"Desglose práctico de las características, modelos de memoria y casos de uso de cada lenguaje backend.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Aquí tienes la explicación sobre cómo funciona un **lenguaje de programación backend** en el servidor:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Todavía no he importado a tu libreta las fuentes de la investigación anterior. \n\n¿Quieres que las importe ahora? Una vez agregadas, podré responderte en detalle sobre el estado actual y las relaciones entre los lenguajes backend basándome directamente en ese contenido. También puedes importarlas en cualquier momento seleccionándolas en la tarjeta de la respuesta anterior.",
+      "claims": [
+        {
+          "text": "Todavía no he importado a tu libreta las fuentes de la investigación anterior. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "ddde888a-1994-4feb-a45a-12cd3aba8321",
+  "duration_ms": 52598,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\03-backend-04-lenguaje-backend\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

@@ -1,0 +1,29 @@
+{
+  "concept_id": "01-software-engineering-25-ci-cd",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\01-software-engineering-25-ci-cd\\sources.json",
+    "notebook_id": "f509ec58-c505-4567-856c-f5104bb07e4b",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-25-ci-cd\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-25-ci-cd\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\01-software-engineering-25-ci-cd\\25 - CI-CD.md.20261030T045415Z-ac2f96.bak",
+      "outside_hash": "faa813a5f410186764268aacd7577cb26540ae948bc972dd3fea778b1e22bd77",
+      "inside_hash": "2664515bd719c7384bd7f4c6e5605632a605d5539b76de10f06122051db5ce9d",
+      "written_at": "2026-10-30T04:54:15.250823+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T04:53:43.381320+00:00",
+  "updated_at": "2026-10-30T04:54:15.273439+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T04:54:15.273439+00:00",
+    "created_at": "2026-10-30T04:53:43.381320+00:00"
+  },
+  "schema_version": "1.0.0"
+}

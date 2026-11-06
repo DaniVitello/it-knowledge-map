@@ -1,0 +1,29 @@
+{
+  "concept_id": "07-ai-engineering-20-evaluation",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\07-ai-engineering-20-evaluation\\sources.json",
+    "notebook_id": "ac44eee7-b008-44f2-bb2d-43608b81c8b8",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\07-ai-engineering-20-evaluation\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\07-ai-engineering-20-evaluation\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\07-ai-engineering-20-evaluation\\20 - Evaluation.md.20261106T211723Z-54301a.bak",
+      "outside_hash": "9c17cb8265948b4dc2a519f7ce1e2eaecd7479039e767b0c546dadd420e7a796",
+      "inside_hash": "0a11385af0669faf8a56286bfc6a317a941ab905380c8ad7f3669258e800fbf7",
+      "written_at": "2026-11-06T21:17:23.772963+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-06T21:16:18.619575+00:00",
+  "updated_at": "2026-11-06T21:17:23.790489+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-06T21:17:23.790489+00:00",
+    "created_at": "2026-11-06T21:16:18.619575+00:00"
+  },
+  "schema_version": "1.0.0"
+}

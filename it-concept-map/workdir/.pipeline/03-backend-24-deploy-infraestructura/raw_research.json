@@ -1,0 +1,50 @@
+{
+  "concept_id": "03-backend-24-deploy-infraestructura",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No veo fuentes en tu cuaderno **Deploy & Infraestructura** para responder a esta consulta. \n\nPara poder darte una respuesta detallada y fundamentada, ¿quieres que realice una **investigación en la web** sobre qué es y para qué sirve Deploy e Infraestructura (cubriendo Linux, Docker, CI/CD y Cloud)?",
+      "claims": [
+        {
+          "text": "No veo fuentes en tu cuaderno **Deploy & Infraestructura** para responder a esta consulta. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Aún no cuentas con fuentes guardadas en tu cuaderno para explicar el funcionamiento de **Deploy & Infraestructura en Backend**.\n\nPara poder darte una respuesta fundamentada con información precisa sobre cómo interactúan **Linux**, **Docker**, **CI/CD** y la **Nube** en entornos backend, ¿te gustaría que realice una **investigación en la web** sobre este tema?",
+      "claims": [
+        {
+          "text": "Aún no cuentas con fuentes guardadas en tu cuaderno para explicar el funcionamiento de **Deploy & Infraestructura en Backend**.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Tampoco encuentro información en tu cuaderno sobre el **estado actual y las relaciones** de Deploy e Infraestructura (cubriendo la interacción entre Linux, Docker, CI/CD, Nube, Virtualización e Infraestructura de IA).\n\nPara poder ofrecerte una explicación detallada y fundamentada sobre cómo se conectan y evolucionan hoy en día estas tecnologías, ¿te gustaría que realice una **investigación en la web** sobre este tema?",
+      "claims": [
+        {
+          "text": "Tampoco encuentro información en tu cuaderno sobre el **estado actual y las relaciones** de Deploy e Infraestructura (cubriendo la interacción entre Linux, Docker, CI/CD, Nube, Virtualización e Infrae",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "393c7dce-54a4-480f-805c-344bb03ed382",
+  "duration_ms": 30929,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\03-backend-24-deploy-infraestructura\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

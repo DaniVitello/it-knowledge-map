@@ -1,0 +1,55 @@
+{
+  "questions": [],
+  "concept_id": "06-operating-systems-linux-14-sockets",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Sockets y para que sirve (Comunicación entre procesos/red)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Sockets en Operating Systems / Linux"
+    ],
+    "context": [
+      "Como se usa Sockets en el contexto profesional de Operating Systems / Linux"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "TCP",
+      "ask": "Como se relaciona Sockets con TCP?"
+    },
+    {
+      "with": "Puertos",
+      "ask": "Como se relaciona Sockets con Puertos?"
+    },
+    {
+      "with": "WebSockets",
+      "ask": "Como se relaciona Sockets con WebSockets?"
+    },
+    {
+      "with": "Processes IPC",
+      "ask": "Como se relaciona Sockets con Processes IPC?"
+    },
+    {
+      "with": "Signals",
+      "ask": "Como se relaciona Sockets con Signals?"
+    },
+    {
+      "with": "Networking en Linux",
+      "ask": "Como se relaciona Sockets con Networking en Linux?"
+    }
+  ],
+  "queries": [
+    "site:man7.org Sockets",
+    "site:kernel.org Sockets",
+    "site:ostep.org Sockets",
+    "site:wiki.archlinux.org Sockets",
+    "site:gnu.org Sockets",
+    "site:docs.docker.com Sockets",
+    "site:opencontainers.org Sockets"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,29 @@
+{
+  "concept_id": "05-networking-internet-22-websockets",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-22-websockets\\sources.json",
+    "notebook_id": "88f42cd9-e5d4-4e13-8a63-4ead3a8c793c",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-22-websockets\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-22-websockets\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\05-networking-internet-22-websockets\\22 - WebSockets.md.20261105T233358Z-d537b9.bak",
+      "outside_hash": "8334d70f1ac5c8c3a1a4c4093001375afb2464b495bc8ed7995c4c780e10955b",
+      "inside_hash": "aa9b5d6af38184c13e47fcce2d4bb84dfe1f1fac376254e6b97d7e7014d86054",
+      "written_at": "2026-11-05T23:33:58.993841+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:33:26.014226+00:00",
+  "updated_at": "2026-11-05T23:33:59.012497+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:33:59.012497+00:00",
+    "created_at": "2026-11-05T23:33:26.014226+00:00"
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,40 @@
+{
+  "questions": [],
+  "concept_id": "07-ai-engineering-12-llm-apis-model-serving",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es LLM APIs & Model Serving y para que sirve (APIs, SDKs, inference, streaming)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de LLM APIs & Model Serving en AI Engineering"
+    ],
+    "context": [
+      "Como se usa LLM APIs & Model Serving en el contexto profesional de AI Engineering"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "API Design",
+      "ask": "Como se relaciona LLM APIs & Model Serving con API Design?"
+    },
+    {
+      "with": "APIs",
+      "ask": "Como se relaciona LLM APIs & Model Serving con APIs?"
+    }
+  ],
+  "queries": [
+    "site:arxiv.org LLM APIs & Model Serving",
+    "site:huggingface.co LLM APIs & Model Serving",
+    "site:pytorch.org LLM APIs & Model Serving",
+    "site:d2l.ai LLM APIs & Model Serving",
+    "site:platform.openai.com LLM APIs & Model Serving",
+    "site:docs.claude.com LLM APIs & Model Serving",
+    "site:ai.google.dev LLM APIs & Model Serving",
+    "site:deeplearning.ai LLM APIs & Model Serving"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

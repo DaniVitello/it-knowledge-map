@@ -1,0 +1,39 @@
+{
+  "questions": [],
+  "concept_id": "04-database-data-analytics-05-filtering-aggregation",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Filtering & Aggregation y para que sirve (WHERE, GROUP BY, HAVING, funciones agregadas)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Filtering & Aggregation en Database / Data Analytics"
+    ],
+    "context": [
+      "Como se usa Filtering & Aggregation en el contexto profesional de Database / Data Analytics"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "SQL",
+      "ask": "Como se relaciona Filtering & Aggregation con SQL?"
+    },
+    {
+      "with": "JOINs",
+      "ask": "Como se relaciona Filtering & Aggregation con JOINs?"
+    }
+  ],
+  "queries": [
+    "site:postgresql.org Filtering & Aggregation",
+    "site:sqlite.org Filtering & Aggregation",
+    "site:dev.mysql.com Filtering & Aggregation",
+    "site:use-the-index-luke.com Filtering & Aggregation",
+    "site:learn.microsoft.com Filtering & Aggregation",
+    "site:docs.snowflake.com Filtering & Aggregation",
+    "site:openstax.org Filtering & Aggregation"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

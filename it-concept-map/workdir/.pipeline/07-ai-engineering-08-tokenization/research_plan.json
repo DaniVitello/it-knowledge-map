@@ -1,0 +1,48 @@
+{
+  "questions": [],
+  "concept_id": "07-ai-engineering-08-tokenization",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Tokenization y para que sirve (Tokens, token budgets, context)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Tokenization en AI Engineering"
+    ],
+    "context": [
+      "Como se usa Tokenization en el contexto profesional de AI Engineering"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Neural Networks",
+      "ask": "Como se relaciona Tokenization con Neural Networks?"
+    },
+    {
+      "with": "Transformers",
+      "ask": "Como se relaciona Tokenization con Transformers?"
+    },
+    {
+      "with": "LLMs",
+      "ask": "Como se relaciona Tokenization con LLMs?"
+    },
+    {
+      "with": "Embeddings",
+      "ask": "Como se relaciona Tokenization con Embeddings?"
+    }
+  ],
+  "queries": [
+    "site:arxiv.org Tokenization",
+    "site:huggingface.co Tokenization",
+    "site:pytorch.org Tokenization",
+    "site:d2l.ai Tokenization",
+    "site:platform.openai.com Tokenization",
+    "site:docs.claude.com Tokenization",
+    "site:ai.google.dev Tokenization",
+    "site:deeplearning.ai Tokenization"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

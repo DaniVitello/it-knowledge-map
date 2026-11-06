@@ -1,0 +1,29 @@
+{
+  "concept_id": "04-database-data-analytics-24-bi-reporting",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-24-bi-reporting\\sources.json",
+    "notebook_id": "43917f5e-4c70-4495-88d2-c66c9c820bdb",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-24-bi-reporting\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-24-bi-reporting\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\04-database-data-analytics-24-bi-reporting\\24 - BI & Reporting.md.20261105T230752Z-d67bb8.bak",
+      "outside_hash": "3df4178b43d3baced280b8afa891994afea78ab4183e93d3326d1b8fd90e9a2d",
+      "inside_hash": "0b55080385ddf16d8b5f117b4fac74269dcd6377c6c24335bbb2a464665844b7",
+      "written_at": "2026-11-05T23:07:52.077799+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:07:18.421785+00:00",
+  "updated_at": "2026-11-05T23:07:52.108779+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:07:52.108779+00:00",
+    "created_at": "2026-11-05T23:07:18.421785+00:00"
+  },
+  "schema_version": "1.0.0"
+}

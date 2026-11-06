@@ -1,0 +1,44 @@
+{
+  "questions": [],
+  "concept_id": "07-ai-engineering-16-agents",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Agents y para que sirve (Planning, tools, loops, state, autonomous workflows)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Agents en AI Engineering"
+    ],
+    "context": [
+      "Como se usa Agents en el contexto profesional de AI Engineering"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Tool Calling",
+      "ask": "Como se relaciona Agents con Tool Calling?"
+    },
+    {
+      "with": "AI Workflows",
+      "ask": "Como se relaciona Agents con AI Workflows?"
+    },
+    {
+      "with": "Memory",
+      "ask": "Como se relaciona Agents con Memory?"
+    }
+  ],
+  "queries": [
+    "site:arxiv.org Agents",
+    "site:huggingface.co Agents",
+    "site:pytorch.org Agents",
+    "site:d2l.ai Agents",
+    "site:platform.openai.com Agents",
+    "site:docs.claude.com Agents",
+    "site:ai.google.dev Agents",
+    "site:deeplearning.ai Agents"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

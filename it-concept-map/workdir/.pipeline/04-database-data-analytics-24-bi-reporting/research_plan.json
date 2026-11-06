@@ -1,0 +1,51 @@
+{
+  "questions": [],
+  "concept_id": "04-database-data-analytics-24-bi-reporting",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es BI & Reporting y para que sirve (Dashboards, reports, self-service analytics)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de BI & Reporting en Database / Data Analytics"
+    ],
+    "context": [
+      "Como se usa BI & Reporting en el contexto profesional de Database / Data Analytics"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Data Analysis",
+      "ask": "Como se relaciona BI & Reporting con Data Analysis?"
+    },
+    {
+      "with": "Statistics",
+      "ask": "Como se relaciona BI & Reporting con Statistics?"
+    },
+    {
+      "with": "Analytics Metrics",
+      "ask": "Como se relaciona BI & Reporting con Analytics Metrics?"
+    },
+    {
+      "with": "Data Visualization",
+      "ask": "Como se relaciona BI & Reporting con Data Visualization?"
+    },
+    {
+      "with": "Visual Hierarchy",
+      "ask": "Como se relaciona BI & Reporting con Visual Hierarchy?"
+    }
+  ],
+  "queries": [
+    "site:postgresql.org BI & Reporting",
+    "site:sqlite.org BI & Reporting",
+    "site:dev.mysql.com BI & Reporting",
+    "site:use-the-index-luke.com BI & Reporting",
+    "site:learn.microsoft.com BI & Reporting",
+    "site:docs.snowflake.com BI & Reporting",
+    "site:openstax.org BI & Reporting"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

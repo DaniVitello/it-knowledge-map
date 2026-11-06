@@ -1,0 +1,48 @@
+{
+  "questions": [],
+  "concept_id": "07-ai-engineering-06-transformers",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Transformers y para que sirve (Attention, tokens, embeddings, architecture)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Transformers en AI Engineering"
+    ],
+    "context": [
+      "Como se usa Transformers en el contexto profesional de AI Engineering"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Neural Networks",
+      "ask": "Como se relaciona Transformers con Neural Networks?"
+    },
+    {
+      "with": "LLMs",
+      "ask": "Como se relaciona Transformers con LLMs?"
+    },
+    {
+      "with": "Tokenization",
+      "ask": "Como se relaciona Transformers con Tokenization?"
+    },
+    {
+      "with": "Embeddings",
+      "ask": "Como se relaciona Transformers con Embeddings?"
+    }
+  ],
+  "queries": [
+    "site:arxiv.org Transformers",
+    "site:huggingface.co Transformers",
+    "site:pytorch.org Transformers",
+    "site:d2l.ai Transformers",
+    "site:platform.openai.com Transformers",
+    "site:docs.claude.com Transformers",
+    "site:ai.google.dev Transformers",
+    "site:deeplearning.ai Transformers"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

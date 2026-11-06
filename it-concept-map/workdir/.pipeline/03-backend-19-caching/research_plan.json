@@ -1,0 +1,44 @@
+{
+  "questions": [],
+  "concept_id": "03-backend-19-caching",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Caching y para que sirve (Redis, HTTP cache, invalidación)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Caching en Backend"
+    ],
+    "context": [
+      "Como se usa Caching en el contexto profesional de Backend"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Data fetching",
+      "ask": "Como se relaciona Caching con Data fetching?"
+    },
+    {
+      "with": "Performance",
+      "ask": "Como se relaciona Caching con Performance?"
+    },
+    {
+      "with": "CDN / Load Balancing",
+      "ask": "Como se relaciona Caching con CDN / Load Balancing?"
+    }
+  ],
+  "queries": [
+    "site:developer.mozilla.org Caching",
+    "site:rfc-editor.org Caching",
+    "site:datatracker.ietf.org Caching",
+    "site:owasp.org Caching",
+    "site:postgresql.org Caching",
+    "site:redis.io Caching",
+    "site:12factor.net Caching",
+    "site:learn.microsoft.com Caching"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

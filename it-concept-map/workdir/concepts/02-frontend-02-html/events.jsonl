@@ -1,0 +1,12 @@
+{"ts": "2026-10-30T05:07:50.387703+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-02-html", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:08:20.973061+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-02-html", "event": "phase_done", "phase": "research"}
+{"ts": "2026-10-30T05:08:23.953430+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-02-html", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-10-30T05:08:23.995228+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-02-html", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-10-30T05:08:24.082144+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-02-html", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-10-30T05:08:24.109584+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-02-html", "event": "notebook_delete_failed", "notebook_id": "7efcf541-7bcc-4b77-a8e6-0ac0d3becee5", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-10-30T05:08:24.127151+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-02-html", "event": "run_end", "status": "completed"}
+{"ts": "2026-10-30T05:17:49.065863+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-02-html", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:17:49.093716+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-02-html", "event": "idempotency_hash_mismatch", "stored": "9fa6eddada4f08613e41552a44f2ee6dd7eb96b4bd9032c9acdd904272327fd4", "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+{"ts": "2026-10-30T05:17:49.095090+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-02-html", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T22:39:42.591923+00:00", "run_id": "run-20261105-193941-b2c223", "concept_id": "02-frontend-02-html", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T22:39:42.657043+00:00", "run_id": "run-20261105-193941-b2c223", "concept_id": "02-frontend-02-html", "event": "run_end", "status": "completed"}

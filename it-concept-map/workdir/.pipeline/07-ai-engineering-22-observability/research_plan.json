@@ -1,0 +1,52 @@
+{
+  "questions": [],
+  "concept_id": "07-ai-engineering-22-observability",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Observability y para que sirve (Traces, latency, token usage, failures, monitoring)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Observability en AI Engineering"
+    ],
+    "context": [
+      "Como se usa Observability en el contexto profesional de AI Engineering"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Observability",
+      "ask": "Como se relaciona Observability con Observability?"
+    },
+    {
+      "with": "Observabilidad",
+      "ask": "Como se relaciona Observability con Observabilidad?"
+    },
+    {
+      "with": "Logs & System Monitoring",
+      "ask": "Como se relaciona Observability con Logs & System Monitoring?"
+    },
+    {
+      "with": "Evaluation",
+      "ask": "Como se relaciona Observability con Evaluation?"
+    },
+    {
+      "with": "AI Safety & Security",
+      "ask": "Como se relaciona Observability con AI Safety & Security?"
+    }
+  ],
+  "queries": [
+    "site:arxiv.org Observability",
+    "site:huggingface.co Observability",
+    "site:pytorch.org Observability",
+    "site:d2l.ai Observability",
+    "site:platform.openai.com Observability",
+    "site:docs.claude.com Observability",
+    "site:ai.google.dev Observability",
+    "site:deeplearning.ai Observability"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

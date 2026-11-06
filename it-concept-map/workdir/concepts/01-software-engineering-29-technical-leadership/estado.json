@@ -1,0 +1,29 @@
+{
+  "concept_id": "01-software-engineering-29-technical-leadership",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\01-software-engineering-29-technical-leadership\\sources.json",
+    "notebook_id": "1a0c66bc-7fde-498f-906d-ace97244966a",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-29-technical-leadership\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-29-technical-leadership\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\01-software-engineering-29-technical-leadership\\29 - Technical Leadership.md.20261030T045734Z-22319d.bak",
+      "outside_hash": "b10e6c0e258538356c9c9b678b76702ec324e5872a4777b36e9fb2b1708ac5af",
+      "inside_hash": "a7534e67419efc2309c9d0b37f1b4926038d8f7556f35ae378879bef1969a2c0",
+      "written_at": "2026-10-30T04:57:34.887372+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T04:56:32.259166+00:00",
+  "updated_at": "2026-10-30T04:57:34.909522+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T04:57:34.909522+00:00",
+    "created_at": "2026-10-30T04:56:32.259166+00:00"
+  },
+  "schema_version": "1.0.0"
+}

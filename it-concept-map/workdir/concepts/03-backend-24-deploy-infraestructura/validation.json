@@ -1,0 +1,10 @@
+{
+  "concept_id": "03-backend-24-deploy-infraestructura",
+  "is_valid": true,
+  "issues": [],
+  "warnings": [],
+  "score": 1.0,
+  "checked_at": "2026-11-05T19:57:19.638789+00:00",
+  "blocking_failures": [],
+  "verdict": "approved"
+}

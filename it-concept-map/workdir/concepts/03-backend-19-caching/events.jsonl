@@ -1,0 +1,12 @@
+{"ts": "2026-10-30T05:32:42.133975+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-19-caching", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:32:58.978457+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-19-caching", "event": "phase_failed", "phase": "research", "error": "research (73b4da6d-c4ca-4038-9c56-e3d3707e00f0): Chat request was rate limited or rejected by the API. Wait a few seconds and try again."}
+{"ts": "2026-11-05T19:31:13.117824+00:00", "run_id": "run-20261105-162522-4ca118", "concept_id": "03-backend-19-caching", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T19:32:15.103098+00:00", "run_id": "run-20261105-162522-4ca118", "concept_id": "03-backend-19-caching", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T19:32:21.262933+00:00", "run_id": "run-20261105-162522-4ca118", "concept_id": "03-backend-19-caching", "event": "phase_failed", "phase": "synthesis", "error": "No se proporciono LLM para la sintesis"}
+{"ts": "2026-11-05T19:51:58.429871+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-19-caching", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T19:52:59.013791+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-19-caching", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T19:53:03.047515+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-19-caching", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T19:53:03.128740+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-19-caching", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T19:53:03.204850+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-19-caching", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T19:53:03.243994+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-19-caching", "event": "notebook_delete_failed", "notebook_id": "848e94f2-1a7e-4cf2-8d04-7eb7c84f5710", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T19:53:03.268177+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-19-caching", "event": "run_end", "status": "completed"}

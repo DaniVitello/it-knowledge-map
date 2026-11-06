@@ -1,0 +1,43 @@
+{
+  "questions": [],
+  "concept_id": "06-operating-systems-linux-17-linux-cli",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Linux CLI y para que sirve (Comandos, pipes, redirecciones)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Linux CLI en Operating Systems / Linux"
+    ],
+    "context": [
+      "Como se usa Linux CLI en el contexto profesional de Operating Systems / Linux"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Shell",
+      "ask": "Como se relaciona Linux CLI con Shell?"
+    },
+    {
+      "with": "Bash / Shell Scripting",
+      "ask": "Como se relaciona Linux CLI con Bash / Shell Scripting?"
+    },
+    {
+      "with": "Signals",
+      "ask": "Como se relaciona Linux CLI con Signals?"
+    }
+  ],
+  "queries": [
+    "site:man7.org Linux CLI",
+    "site:kernel.org Linux CLI",
+    "site:ostep.org Linux CLI",
+    "site:wiki.archlinux.org Linux CLI",
+    "site:gnu.org Linux CLI",
+    "site:docs.docker.com Linux CLI",
+    "site:opencontainers.org Linux CLI"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

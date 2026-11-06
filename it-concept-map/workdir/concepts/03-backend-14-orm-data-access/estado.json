@@ -1,0 +1,31 @@
+{
+  "concept_id": "03-backend-14-orm-data-access",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "failed_phase": "synthesizing",
+    "failed_reason": "error",
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\03-backend-14-orm-data-access\\sources.json",
+    "notebook_id": "7a468197-f638-429a-952a-849a57b7044b",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\03-backend-14-orm-data-access\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\03-backend-14-orm-data-access\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\03-backend-14-orm-data-access\\14 - ORM - Data Access.md.20261105T194758Z-e50983.bak",
+      "outside_hash": "3ff1aa741b9475bea25a88a9771e77d38579abc43edb82fd414a0ff62f3be414",
+      "inside_hash": "66453e65e31bf686fc48c27e16969182b4f71eda8b7876709b52208c3471b08d",
+      "written_at": "2026-11-05T19:47:58.487510+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:31:18.594053+00:00",
+  "updated_at": "2026-11-05T19:47:58.505408+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T19:47:58.505408+00:00",
+    "created_at": "2026-10-30T05:31:18.594053+00:00"
+  },
+  "schema_version": "1.0.0"
+}

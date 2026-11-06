@@ -1,0 +1,50 @@
+{
+  "concept_id": "03-backend-07-apis",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "**No tienes fuentes guardadas en tu cuaderno** sobre este tema. Para asegurar respuestas precisas y fundamentadas, no puedo responder directamente sin información de origen.\n\n¿Quieres que realice una **búsqueda en la web** sobre **APIs, REST, RPC, GraphQL y contratos** para recopilar información sobre el tema?",
+      "claims": [
+        {
+          "text": "**No tienes fuentes guardadas en tu cuaderno** sobre este tema. Para asegurar respuestas precisas y fundamentadas, no puedo responder directamente sin información de origen.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "**Tu cuaderno no contiene fuentes** sobre cómo funcionan las APIs en el Backend (REST, RPC, GraphQL, contratos, etc.).\n\n¿Te gustaría que realice una **búsqueda en la web** sobre cómo funcionan las APIs en el Backend (incluyendo REST, RPC, GraphQL y contratos) para responder a tu consulta?",
+      "claims": [
+        {
+          "text": "**Tu cuaderno no contiene fuentes** sobre cómo funcionan las APIs en el Backend (REST, RPC, GraphQL, contratos, etc.).",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "**Tu cuaderno continúa sin fuentes** sobre el estado actual y las relaciones entre las distintas arquitecturas de APIs (REST, RPC, GraphQL, contratos, etc.).\n\n¿Te gustaría que realice una **búsqueda en la web** sobre el estado actual de las APIs y cómo se relacionan estos enfoques para recopilar información e importarla a tu cuaderno?",
+      "claims": [
+        {
+          "text": "**Tu cuaderno continúa sin fuentes** sobre el estado actual y las relaciones entre las distintas arquitecturas de APIs (REST, RPC, GraphQL, contratos, etc.).",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "b53b4980-6d94-494b-98cf-ffd3e0fa64be",
+  "duration_ms": 30373,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\03-backend-07-apis\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

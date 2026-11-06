@@ -691,6 +691,11 @@ def _map_library_error(exc: BaseException, op: str, target: str) -> BackendError
         if isinstance(exc, nlm.ConfigurationError):
             return BackendConfigError(f"{op}: {exc}")
         if isinstance(exc, (nlm.ServerError, nlm.RPCError, nlm.NetworkError)):
+            msg = str(exc).lower()
+            if "exhausted" in msg or "quota" in msg:
+                return BackendRateLimitError(
+                    f"{op} ({target}): NotebookLM quota agotada - {exc}"
+                )
             return BackendNetworkError(f"{op} ({target}): {exc}")
         if isinstance(exc, nlm.NotebookLMError):
             return BackendError(f"{op} ({target}): {exc}")
@@ -725,6 +730,7 @@ class NotebookLMBackend:
         *,
         workdir: str | Path | None = None,
         auth_file: str | Path | None = None,
+        auth_files: Sequence[str | Path] | None = None,
         max_retries: int | None = None,
         backoff_seconds: Sequence[float] | None = None,
         circuit_breaker_threshold: int = 3,
@@ -751,13 +757,22 @@ class NotebookLMBackend:
         self.workdir = state.resolve_workdir(workdir, config)
 
         # Credenciales: auth_file configurado -> env var que lee from_storage().
-        configured_auth = auth_file or _cfg(config, "backend", "notebooklm", "auth_file")
-        if configured_auth:
-            self.auth_file = Path(os.path.expanduser(str(configured_auth))).resolve()
-            # La libreria soporta storage custom via NOTEBOOKLM_AUTH_JSON.
-            os.environ.setdefault("NOTEBOOKLM_AUTH_JSON", str(self.auth_file))
+        # Soporte multi-cuenta: auth_files (lista) o auth_file (unico).
+        if auth_files:
+            configured_auths = list(auth_files)
         else:
-            self.auth_file = None
+            configured_auths = _cfg(config, "backend", "notebooklm", "auth_files", default=None)
+        if not configured_auths:
+            single = auth_file or _cfg(config, "backend", "notebooklm", "auth_file")
+            configured_auths = [single] if single else []
+        self._auth_files = [
+            Path(os.path.expanduser(str(a))).resolve()
+            for a in configured_auths if a
+        ]
+        self._current_auth_idx = 0
+        self.auth_file = self._auth_files[0] if self._auth_files else None
+        if self.auth_file:
+            os.environ.setdefault("NOTEBOOKLM_AUTH_JSON", str(self.auth_file))
 
         backoff_cfg = _cfg(config, "pacing", "backoff_seconds", default=None)
         retries_cfg = _cfg(config, "pacing", "max_retries", default=None)
@@ -812,17 +827,29 @@ class NotebookLMBackend:
             sem = self._semaphore = asyncio.Semaphore(self.max_concurrent_notebooks)
 
         started = time.perf_counter()
-        async with sem:
+        # Rotacion de cuentas: si una cuenta se agota, probar la siguiente.
+        auth_count = len(self._auth_files) if self._auth_files else 1
+        last_exc = None
+        for _acct in range(auth_count):
+            self._current_auth_idx = _acct
             try:
-                result = await self._research_locked(req, started)
+                async with sem:
+                    result = await self._research_locked(req, started)
+                self.consecutive_failures = 0
+                return result
+            except BackendRateLimitError as exc:
+                last_exc = exc
+                if _acct < auth_count - 1:
+                    continue
+                raise
             except _TRANSIENT as exc:
-                # Fallos de red consecutivos abren el circuit breaker.
                 self.consecutive_failures += 1
                 raise
             except Exception:
                 raise
-        self.consecutive_failures = 0
-        return result
+        if last_exc is not None:
+            raise last_exc
+        raise BackendRateLimitError("Todas las cuentas de NotebookLM agotadas")
 
     async def _research_locked(
         self, req: ResearchRequest, started: float
@@ -893,7 +920,14 @@ class NotebookLMBackend:
         )
 
     def _client_context(self) -> Any:
-        """Context manager del cliente notebooklm (con auth configurada)."""
+        """Context manager del cliente notebooklm (con auth configurada).
+
+        Soporta rotacion de cuentas: usa el auth file actual.
+        """
+        if self._auth_files and self._current_auth_idx < len(self._auth_files):
+            os.environ["NOTEBOOKLM_AUTH_JSON"] = str(
+                self._auth_files[self._current_auth_idx]
+            )
         return self._nlm.NotebookLMClient.from_storage()
 
     async def _create_notebook(self, client: Any, req: ResearchRequest) -> str:

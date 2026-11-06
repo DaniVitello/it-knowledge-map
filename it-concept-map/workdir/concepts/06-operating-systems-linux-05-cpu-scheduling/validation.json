@@ -1,0 +1,10 @@
+{
+  "concept_id": "06-operating-systems-linux-05-cpu-scheduling",
+  "is_valid": true,
+  "issues": [],
+  "warnings": [],
+  "score": 1.0,
+  "checked_at": "2026-11-05T23:44:15.656217+00:00",
+  "blocking_failures": [],
+  "verdict": "approved"
+}

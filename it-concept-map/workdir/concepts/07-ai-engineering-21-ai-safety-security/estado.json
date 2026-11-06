@@ -1,0 +1,29 @@
+{
+  "concept_id": "07-ai-engineering-21-ai-safety-security",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\07-ai-engineering-21-ai-safety-security\\sources.json",
+    "notebook_id": "447a2a0e-121a-4a40-99ef-9c4e1c92401b",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\07-ai-engineering-21-ai-safety-security\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\07-ai-engineering-21-ai-safety-security\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\07-ai-engineering-21-ai-safety-security\\21 - AI Safety & Security.md.20261106T211840Z-b17594.bak",
+      "outside_hash": "398a5d7f08fd2c677dcf8941862a8506543600216996c3895f5a8a45efeba968",
+      "inside_hash": "8dffa128b6334f3bca077797a827d588049eaee1f1da96786c3c05ffbb8047c0",
+      "written_at": "2026-11-06T21:18:40.082631+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-06T21:17:23.871282+00:00",
+  "updated_at": "2026-11-06T21:18:40.101385+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-06T21:18:40.101385+00:00",
+    "created_at": "2026-11-06T21:17:23.871282+00:00"
+  },
+  "schema_version": "1.0.0"
+}

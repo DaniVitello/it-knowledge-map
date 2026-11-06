@@ -1,0 +1,51 @@
+{
+  "questions": [],
+  "concept_id": "06-operating-systems-linux-19-signals",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Signals y para que sirve (Comunicación/control de procesos)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Signals en Operating Systems / Linux"
+    ],
+    "context": [
+      "Como se usa Signals en el contexto profesional de Operating Systems / Linux"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Processes IPC",
+      "ask": "Como se relaciona Signals con Processes IPC?"
+    },
+    {
+      "with": "Sockets",
+      "ask": "Como se relaciona Signals con Sockets?"
+    },
+    {
+      "with": "Shell",
+      "ask": "Como se relaciona Signals con Shell?"
+    },
+    {
+      "with": "Linux CLI",
+      "ask": "Como se relaciona Signals con Linux CLI?"
+    },
+    {
+      "with": "Bash / Shell Scripting",
+      "ask": "Como se relaciona Signals con Bash / Shell Scripting?"
+    }
+  ],
+  "queries": [
+    "site:man7.org Signals",
+    "site:kernel.org Signals",
+    "site:ostep.org Signals",
+    "site:wiki.archlinux.org Signals",
+    "site:gnu.org Signals",
+    "site:docs.docker.com Signals",
+    "site:opencontainers.org Signals"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

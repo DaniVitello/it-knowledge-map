@@ -1,0 +1,50 @@
+{
+  "concept_id": "03-backend-05-runtime",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No veo fuentes ni documentos guardados en esta libreta que traten sobre el concepto de **Runtime** (como JVM, Node.js, .NET o el runtime de Python).\n\n¿Quieres que realice una investigación en la web sobre este tema para responder a tu pregunta?",
+      "claims": [
+        {
+          "text": "No veo fuentes ni documentos guardados en esta libreta que traten sobre el concepto de **Runtime** (como JVM, Node.js, .NET o el runtime de Python).",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Tampoco cuento con fuentes guardadas en esta libreta que expliquen cómo funciona un **Runtime en el backend** (como JVM, Node.js, .NET o el runtime de Python).\n\nPara poder darte una respuesta detallada y fundamentada, ¿te gustaría que haga una investigación en la web sobre este tema?",
+      "claims": [
+        {
+          "text": "Tampoco cuento con fuentes guardadas en esta libreta que expliquen cómo funciona un **Runtime en el backend** (como JVM, Node.js, .NET o el runtime de Python).",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Esta libreta sigue sin contener fuentes o documentos que traten sobre el estado actual y las relaciones de los **Runtimes** (como JVM, Node.js, .NET, Python runtime, etc.).\n\n¿Te gustaría que realice una investigación en la web para buscar información detallada sobre este tema?",
+      "claims": [
+        {
+          "text": "Esta libreta sigue sin contener fuentes o documentos que traten sobre el estado actual y las relaciones de los **Runtimes** (como JVM, Node.js, .NET, Python runtime, etc.).",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "6c142130-5bed-4ed3-a85d-47c607885ce5",
+  "duration_ms": 28762,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\03-backend-05-runtime\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

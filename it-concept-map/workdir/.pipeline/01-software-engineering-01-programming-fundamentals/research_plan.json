@@ -12,20 +12,7 @@
       "Como se usa Programming Fundamentals en el contexto profesional de Software Engineering"
     ]
   },
-  "relation_questions": [
-    {
-      "with": "Lenguaje Backend",
-      "ask": "Como se relaciona Programming Fundamentals con Lenguaje Backend?"
-    },
-    {
-      "with": "Runtime",
-      "ask": "Como se relaciona Programming Fundamentals con Runtime?"
-    },
-    {
-      "with": "Python & Programming",
-      "ask": "Como se relaciona Programming Fundamentals con Python & Programming?"
-    }
-  ],
+  "relation_questions": [],
   "queries": [
     "site:martinfowler.com Programming Fundamentals",
     "site:sre.google Programming Fundamentals",

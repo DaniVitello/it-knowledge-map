@@ -1,0 +1,2 @@
+{"ts": "2026-11-06T19:24:38.138503+00:00", "run_id": "run-20261106-162438-5b75f5", "event": "run_start", "total": 1}
+{"ts": "2026-11-06T19:24:38.296819+00:00", "run_id": "run-20261106-162438-5b75f5", "event": "run_end", "completed": 1, "failed": 0, "duration_ms": 157}

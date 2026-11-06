@@ -1,0 +1,29 @@
+{
+  "concept_id": "04-database-data-analytics-19-data-cleaning",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-19-data-cleaning\\sources.json",
+    "notebook_id": "2545bdbf-45a7-4520-a37d-4828a16e8eb9",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-19-data-cleaning\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-19-data-cleaning\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\04-database-data-analytics-19-data-cleaning\\19 - Data Cleaning.md.20261105T230354Z-b9f700.bak",
+      "outside_hash": "3b890546c35c7fe15df3012aa673a02ab5a09d29b57f9964df2f09ced3d38e91",
+      "inside_hash": "715c39b6d97e068e1fad1528834b8075eae4f9ad833b0c9fd45218fab594c864",
+      "written_at": "2026-11-05T23:03:54.027803+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:03:10.576302+00:00",
+  "updated_at": "2026-11-05T23:03:54.047468+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:03:54.047468+00:00",
+    "created_at": "2026-11-05T23:03:10.576302+00:00"
+  },
+  "schema_version": "1.0.0"
+}

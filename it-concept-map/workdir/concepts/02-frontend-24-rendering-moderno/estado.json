@@ -1,0 +1,29 @@
+{
+  "concept_id": "02-frontend-24-rendering-moderno",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\02-frontend-24-rendering-moderno\\sources.json",
+    "notebook_id": "9887a13f-c6e9-45d3-9692-2a4b8c533b5b",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\02-frontend-24-rendering-moderno\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\02-frontend-24-rendering-moderno\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\02-frontend-24-rendering-moderno\\24 - Rendering moderno.md.20261030T052158Z-24bebf.bak",
+      "outside_hash": "0ec88d6ffa35b97cb64d1551d11a56cbbc99a7fa93f3ad8f5b9bb09ef22cbd1d",
+      "inside_hash": "52877bf5831380115fd9cf3513561acc89ec2241c6d1ef90b2a2f1c7ab87a1a3",
+      "written_at": "2026-10-30T05:21:58.251997+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:21:23.572402+00:00",
+  "updated_at": "2026-10-30T05:21:58.273669+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T05:21:58.273669+00:00",
+    "created_at": "2026-10-30T05:21:23.572402+00:00"
+  },
+  "schema_version": "1.0.0"
+}

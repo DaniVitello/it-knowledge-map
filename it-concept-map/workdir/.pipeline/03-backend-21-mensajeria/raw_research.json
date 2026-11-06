@@ -1,0 +1,50 @@
+{
+  "concept_id": "03-backend-21-mensajeria",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No veo ninguna fuente en tu libreta **Mensajería** para responder a esta pregunta.\n\n¿Quieres que realice una **investigación en la web** sobre qué es la mensajería en sistemas distribuidos (colas/queues, eventos, brokers, pub/sub) y para qué sirve?",
+      "claims": [
+        {
+          "text": "No veo ninguna fuente en tu libreta **Mensajería** para responder a esta pregunta.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "No veo fuentes en tu libreta **Mensajería** sobre cómo funciona la mensajería en backend (queues, events, brokers, pub/sub).\n\n¿Quieres que realice una **investigación en la web** para obtener información sobre este tema y presentarte los resultados?",
+      "claims": [
+        {
+          "text": "No veo fuentes en tu libreta **Mensajería** sobre cómo funciona la mensajería en backend (queues, events, brokers, pub/sub).",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Tu libreta **Mensajería** aún no contiene fuentes que cubran el estado actual y las relaciones de los sistemas de mensajería (colas, eventos, brokers, pub/sub).\n\n¿Quieres que realice una **investigación en la web** sobre el estado actual de estas tecnologías y cómo se relacionan entre sí en arquitecturas distribuidas?",
+      "claims": [
+        {
+          "text": "Tu libreta **Mensajería** aún no contiene fuentes que cubran el estado actual y las relaciones de los sistemas de mensajería (colas, eventos, brokers, pub/sub).",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "eb34e12d-3d4e-4972-97b6-88697e297819",
+  "duration_ms": 58789,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\03-backend-21-mensajeria\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

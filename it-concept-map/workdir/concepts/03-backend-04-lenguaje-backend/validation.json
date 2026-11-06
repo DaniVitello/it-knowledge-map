@@ -1,0 +1,10 @@
+{
+  "concept_id": "03-backend-04-lenguaje-backend",
+  "is_valid": true,
+  "issues": [],
+  "warnings": [],
+  "score": 1.0,
+  "checked_at": "2026-10-30T05:25:59.922817+00:00",
+  "blocking_failures": [],
+  "verdict": "approved"
+}

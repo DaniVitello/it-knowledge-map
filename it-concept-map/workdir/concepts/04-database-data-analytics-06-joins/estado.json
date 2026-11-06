@@ -1,0 +1,31 @@
+{
+  "concept_id": "04-database-data-analytics-06-joins",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "failed_phase": "researching",
+    "failed_reason": "error",
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-06-joins\\sources.json",
+    "notebook_id": "9463006f-fbb0-4263-af4b-aa9f67678a01",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-06-joins\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-06-joins\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\04-database-data-analytics-06-joins\\06 - JOINs.md.20261105T225117Z-40e53e.bak",
+      "outside_hash": "f5e0e6425b2e492c337f9c221ce858159425c2fe836e76aae6e72eb53fa74864",
+      "inside_hash": "6c70c8574ea58cdac61009de4cf699434b2376fd0868a9259e4f3b600c98d5f8",
+      "written_at": "2026-11-05T22:51:17.731691+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:36:15.264817+00:00",
+  "updated_at": "2026-11-05T22:51:17.751521+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T22:51:17.751521+00:00",
+    "created_at": "2026-10-30T05:36:15.264817+00:00"
+  },
+  "schema_version": "1.0.0"
+}

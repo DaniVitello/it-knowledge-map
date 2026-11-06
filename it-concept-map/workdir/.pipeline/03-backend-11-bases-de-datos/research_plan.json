@@ -1,0 +1,48 @@
+{
+  "questions": [],
+  "concept_id": "03-backend-11-bases-de-datos",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Bases de datos y para que sirve (Persistencia, tablas, documentos, relaciones)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Bases de datos en Backend"
+    ],
+    "context": [
+      "Como se usa Bases de datos en el contexto profesional de Backend"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Relational Databases",
+      "ask": "Como se relaciona Bases de datos con Relational Databases?"
+    },
+    {
+      "with": "Indexes",
+      "ask": "Como se relaciona Bases de datos con Indexes?"
+    },
+    {
+      "with": "Database Architecture",
+      "ask": "Como se relaciona Bases de datos con Database Architecture?"
+    },
+    {
+      "with": "NoSQL",
+      "ask": "Como se relaciona Bases de datos con NoSQL?"
+    }
+  ],
+  "queries": [
+    "site:developer.mozilla.org Bases de datos",
+    "site:rfc-editor.org Bases de datos",
+    "site:datatracker.ietf.org Bases de datos",
+    "site:owasp.org Bases de datos",
+    "site:postgresql.org Bases de datos",
+    "site:redis.io Bases de datos",
+    "site:12factor.net Bases de datos",
+    "site:learn.microsoft.com Bases de datos"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

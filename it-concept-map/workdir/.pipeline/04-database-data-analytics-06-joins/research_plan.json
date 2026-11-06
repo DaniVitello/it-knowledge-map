@@ -1,0 +1,39 @@
+{
+  "questions": [],
+  "concept_id": "04-database-data-analytics-06-joins",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es JOINs y para que sirve (INNER, LEFT, RIGHT, relaciones entre tablas)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de JOINs en Database / Data Analytics"
+    ],
+    "context": [
+      "Como se usa JOINs en el contexto profesional de Database / Data Analytics"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "SQL",
+      "ask": "Como se relaciona JOINs con SQL?"
+    },
+    {
+      "with": "Filtering & Aggregation",
+      "ask": "Como se relaciona JOINs con Filtering & Aggregation?"
+    }
+  ],
+  "queries": [
+    "site:postgresql.org JOINs",
+    "site:sqlite.org JOINs",
+    "site:dev.mysql.com JOINs",
+    "site:use-the-index-luke.com JOINs",
+    "site:learn.microsoft.com JOINs",
+    "site:docs.snowflake.com JOINs",
+    "site:openstax.org JOINs"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,47 @@
+{
+  "questions": [],
+  "concept_id": "05-networking-internet-06-puertos",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Puertos y para que sirve (Cómo los servicios reciben conexiones)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Puertos en Networking / Internet"
+    ],
+    "context": [
+      "Como se usa Puertos en el contexto profesional de Networking / Internet"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "TCP",
+      "ask": "Como se relaciona Puertos con TCP?"
+    },
+    {
+      "with": "UDP",
+      "ask": "Como se relaciona Puertos con UDP?"
+    },
+    {
+      "with": "Sockets",
+      "ask": "Como se relaciona Puertos con Sockets?"
+    },
+    {
+      "with": "Networking en Linux",
+      "ask": "Como se relaciona Puertos con Networking en Linux?"
+    }
+  ],
+  "queries": [
+    "site:rfc-editor.org Puertos",
+    "site:datatracker.ietf.org Puertos",
+    "site:developer.mozilla.org Puertos",
+    "site:cloudflare.com Puertos",
+    "site:beej.us Puertos",
+    "site:hpbn.co Puertos",
+    "site:man7.org Puertos"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

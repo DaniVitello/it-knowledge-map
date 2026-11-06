@@ -1,0 +1,29 @@
+{
+  "concept_id": "02-frontend-06-javascript",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\02-frontend-06-javascript\\sources.json",
+    "notebook_id": "bd7650d7-8319-4d9c-aa8f-2cda078845e9",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\02-frontend-06-javascript\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\02-frontend-06-javascript\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\02-frontend-06-javascript\\06 - JavaScript.md.20261030T051137Z-484da6.bak",
+      "outside_hash": "a534067cc295d3443de970f55ea21d3669e0e5a754cf0a0c3b88b469813ef4a9",
+      "inside_hash": "e054a306e52ff7ce6a688b50da3384574663494770745a490434a4c66203debe",
+      "written_at": "2026-10-30T05:11:38.004557+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:11:08.459789+00:00",
+  "updated_at": "2026-10-30T05:11:38.021251+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T05:11:38.021251+00:00",
+    "created_at": "2026-10-30T05:11:08.459789+00:00"
+  },
+  "schema_version": "1.0.0"
+}

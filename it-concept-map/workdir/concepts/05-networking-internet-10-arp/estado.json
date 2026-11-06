@@ -1,0 +1,29 @@
+{
+  "concept_id": "05-networking-internet-10-arp",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-10-arp\\sources.json",
+    "notebook_id": "bc691845-eeca-4f22-9805-fb9f2d5f9782",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-10-arp\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-10-arp\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\05-networking-internet-10-arp\\10 - ARP.md.20261105T232308Z-678eab.bak",
+      "outside_hash": "b74d71b9d984e57c6d079d46be00c08328635d2bd73e406a95199255d90c5f32",
+      "inside_hash": "5ffab6164d199d0ae6232ec6688dfc0f8e81ecfc2c633b7105d9327878dbfc0e",
+      "written_at": "2026-11-05T23:23:08.491124+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:22:01.397632+00:00",
+  "updated_at": "2026-11-05T23:23:08.509524+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:23:08.509524+00:00",
+    "created_at": "2026-11-05T23:22:01.397632+00:00"
+  },
+  "schema_version": "1.0.0"
+}

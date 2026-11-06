@@ -1,0 +1,9 @@
+{"ts": "2026-11-05T23:10:27.771587+00:00", "run_id": "run-20261105-201026-0a44b6", "concept_id": "05-networking-internet-02-ip", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:11:31.999273+00:00", "run_id": "run-20261105-201026-0a44b6", "concept_id": "05-networking-internet-02-ip", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T23:11:36.059882+00:00", "run_id": "run-20261105-201026-0a44b6", "concept_id": "05-networking-internet-02-ip", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T23:11:36.108546+00:00", "run_id": "run-20261105-201026-0a44b6", "concept_id": "05-networking-internet-02-ip", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T23:11:36.136195+00:00", "run_id": "run-20261105-201026-0a44b6", "concept_id": "05-networking-internet-02-ip", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T23:11:36.155262+00:00", "run_id": "run-20261105-201026-0a44b6", "concept_id": "05-networking-internet-02-ip", "event": "notebook_delete_failed", "notebook_id": "5e470282-5f4b-442e-9f4b-a1c240440661", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T23:11:36.165456+00:00", "run_id": "run-20261105-201026-0a44b6", "concept_id": "05-networking-internet-02-ip", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T23:19:25.236485+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-02-ip", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:19:25.297084+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-02-ip", "event": "run_end", "status": "completed"}

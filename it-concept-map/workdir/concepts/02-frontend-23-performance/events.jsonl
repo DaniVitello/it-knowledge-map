@@ -1,0 +1,11 @@
+{"ts": "2026-10-30T05:20:59.105954+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-23-performance", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:21:16.414826+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-23-performance", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:21:22.503520+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-23-performance", "event": "phase_failed", "phase": "research", "error": "Transicion invalida: researching -> researching"}
+{"ts": "2026-10-30T05:21:28.357591+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-23-performance", "event": "phase_done", "phase": "research"}
+{"ts": "2026-10-30T05:21:32.608019+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-23-performance", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-10-30T05:21:32.642109+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-23-performance", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-10-30T05:21:32.699001+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-23-performance", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-10-30T05:21:32.719773+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-23-performance", "event": "notebook_delete_failed", "notebook_id": "be1cae22-acd2-4f9a-b602-b9cddec9ee36", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-10-30T05:21:32.732605+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-23-performance", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T22:40:05.046133+00:00", "run_id": "run-20261105-193941-b2c223", "concept_id": "02-frontend-23-performance", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T22:40:05.120623+00:00", "run_id": "run-20261105-193941-b2c223", "concept_id": "02-frontend-23-performance", "event": "run_end", "status": "completed"}

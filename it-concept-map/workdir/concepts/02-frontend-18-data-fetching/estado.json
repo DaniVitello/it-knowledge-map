@@ -1,0 +1,29 @@
+{
+  "concept_id": "02-frontend-18-data-fetching",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\02-frontend-18-data-fetching\\sources.json",
+    "notebook_id": "587ce685-4a1f-43c1-b3bf-c4f51fab504b",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\02-frontend-18-data-fetching\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\02-frontend-18-data-fetching\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\02-frontend-18-data-fetching\\18 - Data fetching.md.20261030T051926Z-90735a.bak",
+      "outside_hash": "b38509e6bf7ee83731e72fcc7cf8c26b71ea92ff54318eb0e6981ba3808a86d9",
+      "inside_hash": "bf4086934dc6684bb827902a08852520221cd56f2ad422c8331af7b13b88036b",
+      "written_at": "2026-10-30T05:19:26.981659+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:18:48.772325+00:00",
+  "updated_at": "2026-10-30T05:19:27.002404+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T05:19:27.002404+00:00",
+    "created_at": "2026-10-30T05:18:48.772325+00:00"
+  },
+  "schema_version": "1.0.0"
+}

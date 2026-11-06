@@ -1,0 +1,31 @@
+{
+  "concept_id": "04-database-data-analytics-08-normalization",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "failed_phase": "researching",
+    "failed_reason": "error",
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-08-normalization\\sources.json",
+    "notebook_id": "ed4e6935-3b90-4730-aa48-da4f34918945",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-08-normalization\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-08-normalization\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\04-database-data-analytics-08-normalization\\08 - Normalization.md.20261105T225323Z-a070a8.bak",
+      "outside_hash": "1ce309c2b6c2f943a82f632465e976d7a1d1eaaaf975f2c3c34dd0994f7f93cd",
+      "inside_hash": "e61640c5d2e1c72158adabd501fd315e832888c54dde0fc26dee941bb7a80365",
+      "written_at": "2026-11-05T22:53:23.620694+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:36:48.161710+00:00",
+  "updated_at": "2026-11-05T22:53:23.641627+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T22:53:23.641627+00:00",
+    "created_at": "2026-10-30T05:36:48.161710+00:00"
+  },
+  "schema_version": "1.0.0"
+}

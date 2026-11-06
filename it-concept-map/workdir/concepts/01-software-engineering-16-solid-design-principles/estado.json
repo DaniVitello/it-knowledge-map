@@ -1,0 +1,29 @@
+{
+  "concept_id": "01-software-engineering-16-solid-design-principles",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\01-software-engineering-16-solid-design-principles\\sources.json",
+    "notebook_id": "163ebc73-6fbd-4d8e-ad09-68dbe9e04bca",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-16-solid-design-principles\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-16-solid-design-principles\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\01-software-engineering-16-solid-design-principles\\16 - SOLID & Design Principles.md.20261030T044806Z-523e4e.bak",
+      "outside_hash": "0923b42c96320ea31cd0819256769f570a3449936a0c5d9c2fcdd65009ed4954",
+      "inside_hash": "b6d45088c552f64e28a17caf2cd9017e05de58ee887ba5726a7b7d03462bd6f3",
+      "written_at": "2026-10-30T04:48:06.113524+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T04:47:03.734175+00:00",
+  "updated_at": "2026-10-30T04:48:06.135843+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T04:48:06.135843+00:00",
+    "created_at": "2026-10-30T04:47:03.734175+00:00"
+  },
+  "schema_version": "1.0.0"
+}

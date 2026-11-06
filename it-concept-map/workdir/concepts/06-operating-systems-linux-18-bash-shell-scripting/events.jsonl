@@ -1,0 +1,2 @@
+{"ts": "2026-11-05T23:48:46.277916+00:00", "run_id": "run-20261105-204002-56e07b", "concept_id": "06-operating-systems-linux-18-bash-shell-scripting", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:49:03.925954+00:00", "run_id": "run-20261105-204002-56e07b", "concept_id": "06-operating-systems-linux-18-bash-shell-scripting", "event": "phase_failed", "phase": "research", "error": "research (c62cc068-71a4-40b1-8e3c-dc698545fbc5): Chat request was rate limited or rejected by the API. Wait a few seconds and try again."}

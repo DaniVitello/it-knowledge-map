@@ -1,0 +1,10 @@
+{
+  "concept_id": "03-backend-01-cliente-servidor",
+  "is_valid": true,
+  "issues": [],
+  "warnings": [],
+  "score": 1.0,
+  "checked_at": "2026-11-05T16:57:06.188344+00:00",
+  "blocking_failures": [],
+  "verdict": "approved"
+}

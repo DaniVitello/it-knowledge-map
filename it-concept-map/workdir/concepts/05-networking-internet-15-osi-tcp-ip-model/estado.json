@@ -1,0 +1,29 @@
+{
+  "concept_id": "05-networking-internet-15-osi-tcp-ip-model",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-15-osi-tcp-ip-model\\sources.json",
+    "notebook_id": "8d7982a4-bb8a-4e5e-9b56-e5139a9ab1b9",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-15-osi-tcp-ip-model\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-15-osi-tcp-ip-model\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\05-networking-internet-15-osi-tcp-ip-model\\15 - OSI - TCP-IP Model.md.20261105T232805Z-c2835c.bak",
+      "outside_hash": "d63249323c551b761d446fe4f5f6be6a5e3be755649b2811c096ae2d939f6c6a",
+      "inside_hash": "ce4b6f6e96e5129accd2b3bbea9f6de5ed27bd16def12a36bf9d18b7c66bca8e",
+      "written_at": "2026-11-05T23:28:05.786161+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:27:07.256887+00:00",
+  "updated_at": "2026-11-05T23:28:05.803654+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:28:05.803654+00:00",
+    "created_at": "2026-11-05T23:27:07.256887+00:00"
+  },
+  "schema_version": "1.0.0"
+}

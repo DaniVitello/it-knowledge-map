@@ -1,0 +1,51 @@
+{
+  "questions": [],
+  "concept_id": "05-networking-internet-18-request-response",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Request / Response y para que sirve (Modelo de comunicación web)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Request / Response en Networking / Internet"
+    ],
+    "context": [
+      "Como se usa Request / Response en el contexto profesional de Networking / Internet"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Internet & Web",
+      "ask": "Como se relaciona Request / Response con Internet & Web?"
+    },
+    {
+      "with": "HTTP",
+      "ask": "Como se relaciona Request / Response con HTTP?"
+    },
+    {
+      "with": "HTTP Methods",
+      "ask": "Como se relaciona Request / Response con HTTP Methods?"
+    },
+    {
+      "with": "HTTP Status Codes",
+      "ask": "Como se relaciona Request / Response con HTTP Status Codes?"
+    },
+    {
+      "with": "Headers / Cookies",
+      "ask": "Como se relaciona Request / Response con Headers / Cookies?"
+    }
+  ],
+  "queries": [
+    "site:rfc-editor.org Request / Response",
+    "site:datatracker.ietf.org Request / Response",
+    "site:developer.mozilla.org Request / Response",
+    "site:cloudflare.com Request / Response",
+    "site:beej.us Request / Response",
+    "site:hpbn.co Request / Response",
+    "site:man7.org Request / Response"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

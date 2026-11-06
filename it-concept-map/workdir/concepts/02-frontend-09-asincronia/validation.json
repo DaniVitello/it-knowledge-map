@@ -1,0 +1,10 @@
+{
+  "concept_id": "02-frontend-09-asincronia",
+  "is_valid": true,
+  "issues": [],
+  "warnings": [],
+  "score": 1.0,
+  "checked_at": "2026-10-30T05:13:50.640689+00:00",
+  "blocking_failures": [],
+  "verdict": "approved"
+}

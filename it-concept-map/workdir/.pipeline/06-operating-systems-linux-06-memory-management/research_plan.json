@@ -1,0 +1,39 @@
+{
+  "questions": [],
+  "concept_id": "06-operating-systems-linux-06-memory-management",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Memory Management y para que sirve (RAM, memoria virtual, páginas)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Memory Management en Operating Systems / Linux"
+    ],
+    "context": [
+      "Como se usa Memory Management en el contexto profesional de Operating Systems / Linux"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Processes",
+      "ask": "Como se relaciona Memory Management con Processes?"
+    },
+    {
+      "with": "Stack & Heap",
+      "ask": "Como se relaciona Memory Management con Stack & Heap?"
+    }
+  ],
+  "queries": [
+    "site:man7.org Memory Management",
+    "site:kernel.org Memory Management",
+    "site:ostep.org Memory Management",
+    "site:wiki.archlinux.org Memory Management",
+    "site:gnu.org Memory Management",
+    "site:docs.docker.com Memory Management",
+    "site:opencontainers.org Memory Management"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

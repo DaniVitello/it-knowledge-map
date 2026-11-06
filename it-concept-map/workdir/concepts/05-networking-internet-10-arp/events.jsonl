@@ -1,0 +1,7 @@
+{"ts": "2026-11-05T23:22:01.306259+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-10-arp", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:23:04.099670+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-10-arp", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T23:23:08.436417+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-10-arp", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T23:23:08.471717+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-10-arp", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T23:23:08.498136+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-10-arp", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T23:23:08.517347+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-10-arp", "event": "notebook_delete_failed", "notebook_id": "bc691845-eeca-4f22-9805-fb9f2d5f9782", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T23:23:08.526771+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-10-arp", "event": "run_end", "status": "completed"}

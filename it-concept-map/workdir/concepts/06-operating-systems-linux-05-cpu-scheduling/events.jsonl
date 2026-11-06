@@ -1,0 +1,7 @@
+{"ts": "2026-11-05T23:43:13.936767+00:00", "run_id": "run-20261105-204002-56e07b", "concept_id": "06-operating-systems-linux-05-cpu-scheduling", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:44:11.490722+00:00", "run_id": "run-20261105-204002-56e07b", "concept_id": "06-operating-systems-linux-05-cpu-scheduling", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T23:44:15.642876+00:00", "run_id": "run-20261105-204002-56e07b", "concept_id": "06-operating-systems-linux-05-cpu-scheduling", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T23:44:15.671912+00:00", "run_id": "run-20261105-204002-56e07b", "concept_id": "06-operating-systems-linux-05-cpu-scheduling", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T23:44:15.699319+00:00", "run_id": "run-20261105-204002-56e07b", "concept_id": "06-operating-systems-linux-05-cpu-scheduling", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T23:44:15.716044+00:00", "run_id": "run-20261105-204002-56e07b", "concept_id": "06-operating-systems-linux-05-cpu-scheduling", "event": "notebook_delete_failed", "notebook_id": "669afeb9-493e-4679-b0a4-7aa10bc3b561", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T23:44:15.725298+00:00", "run_id": "run-20261105-204002-56e07b", "concept_id": "06-operating-systems-linux-05-cpu-scheduling", "event": "run_end", "status": "completed"}

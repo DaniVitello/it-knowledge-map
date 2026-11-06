@@ -1,0 +1,50 @@
+{
+  "concept_id": "04-database-data-analytics-22-analytics-metrics",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No encuentro fuentes en tu libreta sobre **Analytics Metrics** (KPIs, métricas, dimensiones y ratios).\n\n¿Quieres que haga una investigación en la web sobre este tema para darte una explicación detallada?",
+      "claims": [
+        {
+          "text": "No encuentro fuentes en tu libreta sobre **Analytics Metrics** (KPIs, métricas, dimensiones y ratios).",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Tu libreta aún no contiene fuentes sobre cómo funcionan las **Analytics Metrics** (KPIs, métricas, dimensiones y ratios) en el contexto de **Database / Data Analytics**.\n\n¿Quieres que haga una investigación en la web sobre este tema para darte una explicación detallada?",
+      "claims": [
+        {
+          "text": "Tu libreta aún no contiene fuentes sobre cómo funcionan las **Analytics Metrics** (KPIs, métricas, dimensiones y ratios) en el contexto de **Database / Data Analytics**.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Tampoco encuentro fuentes en tu libreta sobre el estado actual y las relaciones de **Analytics Metrics** (KPIs, métricas, dimensiones, ratios y disciplinas relacionadas como Data Analysis, BI & Reporting, UX/Product Metrics, etc.).\n\n¿Quieres que haga una investigación en la web sobre este tema para analizar sus relaciones y estado actual?",
+      "claims": [
+        {
+          "text": "Tampoco encuentro fuentes en tu libreta sobre el estado actual y las relaciones de **Analytics Metrics** (KPIs, métricas, dimensiones, ratios y disciplinas relacionadas como Data Analysis, BI & Report",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "a9208f75-6ed7-4fe4-ae67-6b2b77c95223",
+  "duration_ms": 29292,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-22-analytics-metrics\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

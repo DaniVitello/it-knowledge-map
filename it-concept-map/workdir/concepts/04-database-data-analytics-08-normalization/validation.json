@@ -1,0 +1,10 @@
+{
+  "concept_id": "04-database-data-analytics-08-normalization",
+  "is_valid": true,
+  "issues": [],
+  "warnings": [],
+  "score": 1.0,
+  "checked_at": "2026-11-05T22:53:23.578824+00:00",
+  "blocking_failures": [],
+  "verdict": "approved"
+}

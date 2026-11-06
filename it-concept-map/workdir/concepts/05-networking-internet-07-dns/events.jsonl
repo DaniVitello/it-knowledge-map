@@ -1,0 +1,9 @@
+{"ts": "2026-11-05T23:15:22.264107+00:00", "run_id": "run-20261105-201026-0a44b6", "concept_id": "05-networking-internet-07-dns", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:16:21.532942+00:00", "run_id": "run-20261105-201026-0a44b6", "concept_id": "05-networking-internet-07-dns", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T23:16:25.324455+00:00", "run_id": "run-20261105-201026-0a44b6", "concept_id": "05-networking-internet-07-dns", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T23:16:25.358111+00:00", "run_id": "run-20261105-201026-0a44b6", "concept_id": "05-networking-internet-07-dns", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T23:16:25.385681+00:00", "run_id": "run-20261105-201026-0a44b6", "concept_id": "05-networking-internet-07-dns", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T23:16:25.403923+00:00", "run_id": "run-20261105-201026-0a44b6", "concept_id": "05-networking-internet-07-dns", "event": "notebook_delete_failed", "notebook_id": "9d01c3e9-fb05-47d7-a7a4-d7ab2d19c4d1", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T23:16:25.412887+00:00", "run_id": "run-20261105-201026-0a44b6", "concept_id": "05-networking-internet-07-dns", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T23:20:40.228037+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-07-dns", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:20:40.289321+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-07-dns", "event": "run_end", "status": "completed"}

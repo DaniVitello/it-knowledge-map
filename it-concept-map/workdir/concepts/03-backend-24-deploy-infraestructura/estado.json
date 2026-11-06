@@ -1,0 +1,31 @@
+{
+  "concept_id": "03-backend-24-deploy-infraestructura",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "failed_phase": "synthesizing",
+    "failed_reason": "error",
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\03-backend-24-deploy-infraestructura\\sources.json",
+    "notebook_id": "393c7dce-54a4-480f-805c-344bb03ed382",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\03-backend-24-deploy-infraestructura\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\03-backend-24-deploy-infraestructura\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\03-backend-24-deploy-infraestructura\\24 - Deploy & Infraestructura.md.20261105T195719Z-bf7013.bak",
+      "outside_hash": "83c00e6cc3ab40bc70d271b049b273c5b14cdf83455528c7e786b74f66170284",
+      "inside_hash": "7718216ff2499766547ad3c5a54fc0b4ec51572d242f9bdf6963d77fd7110077",
+      "written_at": "2026-11-05T19:57:19.674635+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:34:07.146621+00:00",
+  "updated_at": "2026-11-05T19:57:19.693484+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T19:57:19.693484+00:00",
+    "created_at": "2026-10-30T05:34:07.146621+00:00"
+  },
+  "schema_version": "1.0.0"
+}

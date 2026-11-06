@@ -1,0 +1,50 @@
+{
+  "concept_id": "05-networking-internet-21-headers-cookies",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No encontré fuentes guardadas en tu cuaderno sobre **Headers / Cookies (Metadata y estado de comunicación)**.\n\n¿Te gustaría que realice una investigación en la web sobre este tema?",
+      "claims": [
+        {
+          "text": "No encontré fuentes guardadas en tu cuaderno sobre **Headers / Cookies (Metadata y estado de comunicación)**.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Esto es lo que encontré sobre **Headers / Cookies (Metadata y estado de comunicación)**:\n\nLos **HTTP Headers** y las **Cookies** son los componentes fundamentales que permiten estructurar y mantener la comunicación entre navegadores y servidores en la web. Dado que el protocolo HTTP es por naturaleza *stateless* (sin estado), los headers transmiten la metainformación necesaria para procesar las solicitudes (como formato, credenciales y seguridad), mientras que las cookies permiten preservar el contexto de una sesión activa a lo largo del tiempo.\n\n**Temas clave identificados:**\n\n1. **Headers como Metadatos de Comunicación:** Actúan como pares clave-valor en solicitudes y respuestas HTTP para indicar tipo de contenido (`Content-Type`), credenciales de autorización, políticas de almacenamiento en caché y medidas de seguridad.\n2. **Manejo de Estado mediante Cookies:** El servidor envía la cabecera `Set-Cookie` para almacenar pequeños fragmentos de información en el cliente, los cuales el navegador reenvía automáticamente en el header `Cookie` en peticiones futuras.\n3. **Gestión de Sesión y Autenticación:** Permiten a las aplicaciones web identificar usuarios autenticados, guardar preferencias y mantener carritos de compras activos entre diferentes descargas de páginas.\n\n---\n\n📥 El reporte de investigación completo está disponible en la tarjeta a continuación. Si deseas realizar consultas detalladas y fundamentadas directamente en tu cuaderno sobre este tema, puedes importar los recursos que prefieras.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-headers-cookies\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-headers-cookies\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Documentación técnica y guías sobre HTTP Headers, Cookies y gestión de estado en la web\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Reporte de investigación: Headers y Cookies\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQxNWVlMjk3NS0zMWFkLTRkYWItODYyNy1jMTRhZjI2YTBiZjgSCxIHEPnP8YvcBhgB&filename=Reporte_de_investigacion_Headers_y_Cookies.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Reporte de investigación\",\n          \"summary\": \"Reporte estructurado con 5 fuentes clave sobre el funcionamiento de cabeceras HTTP y cookies.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"Using HTTP cookies\",\n          \"url\": \"https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Cookies\",\n          \"sourceName\": \"MDN Web Docs\",\n          \"summary\": \"Guía técnica de Mozilla sobre cómo las cookies mantienen el estado en el protocolo HTTP.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"Cookies: HTTP State Management Mechanism\",\n          \"url\": \"https://www.ietf.org/archive/id/draft-ietf-httpbis-rfc6265bis-09.html\",\n          \"sourceName\": \"IETF\",\n          \"summary\": \"Especificación oficial del IETF para las cabeceras Cookie y Set-Cookie.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"What Are HTTP Headers? A Simple Guide to Understanding Their Role\",\n          \"url\": \"https://iproyal.com/blog/what-are-http-headers/\",\n          \"sourceName\": \"IPRoyal\",\n          \"summary\": \"Explicación práctica sobre la función de las cabeceras HTTP como transmisoras de metadatos.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"HTTP Headers Overview\",\n          \"url\": \"https://www.geeksforgeeks.org/web-tech/http-headers/\",\n          \"sourceName\": \"GeeksforGeeks\",\n          \"summary\": \"Desglose de los tipos de headers en solicitudes y respuestas web y su impacto en seguridad y rendimiento.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Esto es lo que encontré sobre **Headers / Cookies (Metadata y estado de comunicación)**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no he importado esas fuentes a tu cuaderno. **¿Te gustaría que las importe primero?** \n\nUna vez importadas, podré responder a todas tus preguntas detalladas sobre el estado actual y las relaciones de **Headers** y **Cookies** basándome directamente en el contenido de las fuentes. También puedes desplazarte hacia arriba a la tarjeta de investigación anterior e importarlas directamente desde allí.",
+      "claims": [
+        {
+          "text": "Aún no he importado esas fuentes a tu cuaderno. **¿Te gustaría que las importe primero?** ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "29f509cd-8f70-4ecc-8511-f046a45f6d44",
+  "duration_ms": 53769,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-21-headers-cookies\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

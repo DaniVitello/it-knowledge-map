@@ -1,0 +1,31 @@
+{
+  "concept_id": "03-backend-13-modelado-de-datos",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "failed_phase": "synthesizing",
+    "failed_reason": "error",
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\03-backend-13-modelado-de-datos\\sources.json",
+    "notebook_id": "25496921-eacb-4945-a25e-6d67b23f77aa",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\03-backend-13-modelado-de-datos\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\03-backend-13-modelado-de-datos\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\03-backend-13-modelado-de-datos\\13 - Modelado de datos.md.20261105T194642Z-e0aa2a.bak",
+      "outside_hash": "1cada70f9bda2d4edf387ead5ad58aa524ca54fff64d1d0d09b5bcdbe662b94f",
+      "inside_hash": "8e7ec0e325d939e76bc323fe5872d83f800b2a0691aef4f1b9cb732d54c85f5c",
+      "written_at": "2026-11-05T19:46:42.682849+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:31:01.527565+00:00",
+  "updated_at": "2026-11-05T19:46:42.707068+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T19:46:42.707068+00:00",
+    "created_at": "2026-10-30T05:31:01.527565+00:00"
+  },
+  "schema_version": "1.0.0"
+}

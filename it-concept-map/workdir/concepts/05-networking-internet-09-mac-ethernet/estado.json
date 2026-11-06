@@ -1,0 +1,29 @@
+{
+  "concept_id": "05-networking-internet-09-mac-ethernet",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-09-mac-ethernet\\sources.json",
+    "notebook_id": "972fd1d4-7159-41fb-9cbf-c88570d5fd47",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-09-mac-ethernet\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-09-mac-ethernet\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\05-networking-internet-09-mac-ethernet\\09 - MAC - Ethernet.md.20261105T232200Z-7c67d1.bak",
+      "outside_hash": "06c2e5490dd32d8272a65e4547d0810c3b1c3a76dbaf7d53327f94d5fb6b8f4b",
+      "inside_hash": "7df7be2e93943bf6cf918afadcefb4b2578f961b717d24269465b01659ae88e6",
+      "written_at": "2026-11-05T23:22:00.255646+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:20:48.445985+00:00",
+  "updated_at": "2026-11-05T23:22:00.274647+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:22:00.274647+00:00",
+    "created_at": "2026-11-05T23:20:48.445985+00:00"
+  },
+  "schema_version": "1.0.0"
+}

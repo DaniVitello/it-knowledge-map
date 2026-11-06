@@ -17,9 +17,6 @@ tags: [concepto, it/frontend]
 
 ## Mis notas
 <!-- ai:start -->
-# Web Architecture & Accessibility: Comprehensive Study Guide
-
-This study guide provides a systematic, highly technical synthesis of modern web architecture, HTML document structure, script execution mechanics, and web accessibility standards aligned with the Web Content Accessibility Guidelines (WCAG) 2.2 and WAI-ARIA standards.
 <!-- ai:end -->
 
 ---

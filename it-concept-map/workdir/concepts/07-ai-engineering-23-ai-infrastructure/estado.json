@@ -1,0 +1,29 @@
+{
+  "concept_id": "07-ai-engineering-23-ai-infrastructure",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\07-ai-engineering-23-ai-infrastructure\\sources.json",
+    "notebook_id": "b0c391e3-8091-4db2-9b74-297e9916b458",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\07-ai-engineering-23-ai-infrastructure\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\07-ai-engineering-23-ai-infrastructure\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\07-ai-engineering-23-ai-infrastructure\\23 - AI Infrastructure.md.20261106T212252Z-499218.bak",
+      "outside_hash": "f238b149c70d7f064f95802fd9e24dcba3608bdfc8aa898cf74100bc070619f9",
+      "inside_hash": "87736957905ec5f015a20736db78f510bd122cdb8ed95c2db2e84af72efb1c1b",
+      "written_at": "2026-11-06T21:22:52.047774+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-06T21:22:08.418210+00:00",
+  "updated_at": "2026-11-06T21:22:52.065664+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-06T21:22:52.065664+00:00",
+    "created_at": "2026-11-06T21:22:08.418210+00:00"
+  },
+  "schema_version": "1.0.0"
+}

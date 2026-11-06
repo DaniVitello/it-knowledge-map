@@ -1,0 +1,47 @@
+{
+  "questions": [],
+  "concept_id": "04-database-data-analytics-02-data-modeling",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Data Modeling y para que sirve (Modelar entidades, relaciones y estructuras)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Data Modeling en Database / Data Analytics"
+    ],
+    "context": [
+      "Como se usa Data Modeling en el contexto profesional de Database / Data Analytics"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Modelado de datos",
+      "ask": "Como se relaciona Data Modeling con Modelado de datos?"
+    },
+    {
+      "with": "Relational Databases",
+      "ask": "Como se relaciona Data Modeling con Relational Databases?"
+    },
+    {
+      "with": "Keys & Constraints",
+      "ask": "Como se relaciona Data Modeling con Keys & Constraints?"
+    },
+    {
+      "with": "Normalization",
+      "ask": "Como se relaciona Data Modeling con Normalization?"
+    }
+  ],
+  "queries": [
+    "site:postgresql.org Data Modeling",
+    "site:sqlite.org Data Modeling",
+    "site:dev.mysql.com Data Modeling",
+    "site:use-the-index-luke.com Data Modeling",
+    "site:learn.microsoft.com Data Modeling",
+    "site:docs.snowflake.com Data Modeling",
+    "site:openstax.org Data Modeling"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

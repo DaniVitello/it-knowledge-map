@@ -1,0 +1,50 @@
+{
+  "concept_id": "07-ai-engineering-19-memory",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No veo fuentes cargadas en tu libreta sobre **Memory (estado de la conversación, memoria a largo plazo y recuperación)**.\n\n¿Te gustaría que realice una **investigación en la web** sobre este tema para darte una respuesta detallada?",
+      "claims": [
+        {
+          "text": "No veo fuentes cargadas en tu libreta sobre **Memory (estado de la conversación, memoria a largo plazo y recuperación)**.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Realicé una investigación sobre **Memory en AI Engineering** para explicar su arquitectura, funcionamiento y componentes clave.\n\n---\n\n### ¿Qué es Memory y para qué sirve en AI Engineering?\n\nPor naturaleza, los modelos de lenguaje (LLM) son **stateless** (sin estado): cada llamada al modelo es independiente y no recuerda las interacciones anteriores. En ingeniería de IA, **Memory** es el conjunto de arquitecturas, almacenes de datos y algoritmos externos que otorgan persistencia y continuidad a los sistemas y agentes de IA.\n\nSirve para que los sistemas de IA puedan construir contexto continuo, personalizar interacciones entre sesiones, aprender de errores pasados y ejecutar tareas complejas de larga duración sin perder el hilo.\n\n---\n\n### Componentes y Funcionamiento Técnico\n\n#### 1. **Conversation State (Memoria a Corto Plazo / Working Memory)**\n* **Qué es:** El historial ordenado y activo de la interacción actual (mensajes del usuario, respuestas del asistente y resultados de **Tool Calling**).\n* **Para qué sirve:** Permite al modelo responder preguntas de seguimiento (por ejemplo, cuando el usuario dice *\"hazlo más resumido\"* o *\"usa el segundo dato\"*).\n* **Cómo funciona:** Se gestiona mediante **Context Engineering**. Como la ventana de contexto del LLM es finita y costosa, el runtime aplica técnicas de compresión, ventanas deslizantes (*sliding window*) y resúmenes periódicos para no saturar los tokens de entrada.\n\n#### 2. **Long-Term Memory (Memoria a Largo Plazo)**\nPermite que el agente recuerde información a través de diferentes días, sesiones o proyectos. Se divide principalmente en:\n* **Memoria Factual / Semántica:** Almacena hechos, perfiles de usuario y reglas de negocio (ej. *\"El usuario prefiere código en Python y tono técnico\"*).\n* **Memoria Episódica / Experiencial:** Guarda trazas de ejecuciones pasadas, planes anteriores y errores cometidos. Esto permite que el agente consulte en el futuro qué estrategia le funcionó para una tarea similar.\n\n#### 3. **Retrieval (Mecanismo de Recuperación)**\n* **Qué es:** El proceso de buscar y extraer los recuerdos relevantes del almacenamiento de memoria largo e inyectarlos en el prompt justo antes de que el LLM genere una respuesta.\n* **Cómo funciona:**\n  * **Políticas de Escritura (Write Policy):** Cuando ocurre una conversación, un paso del agente usa **Structured Outputs** (JSON) para extraer únicamente datos relevantes e ignorar ruido conversational antes de guardarlos.\n  * **Almacenamiento:** Se utilizan bases de datos vectoriales, almacenes de grafos temporales (como Zep o Mem0) o bases relacionales.\n  * **Búsqueda y Filtro:** Se combinan búsquedas híbridas (búsqueda semántica vectorial + palabra clave BM25 + *reranking* + decaimiento por tiempo) para seleccionar únicamente los recuerdos que aportan al paso actual.\n\n---\n\n### Relación con el Stack de AI Engineering\n\n* **Agentes y AI Workflows:** Separación clara entre el **LLM** (el motor de razonamiento estático) y el **Runtime/Agente** (el verdadero dueño del estado y la base de datos).\n* **Tool Calling:** Los agentes utilizan herramientas explícitas (ej. `remember_fact`, `search_memory`) para interactuar activamente con su almacenamiento de memoria.\n* **Context Engineering:** La memoria recuperada se formatea estructuralmente e inyecta en la ventana de contexto de manera óptima para no confundir al modelo con hechos desactualizados o contradictorios.\n\n---\n\n📥 El reporte de investigación completo está incluido como la primera fuente en la tarjeta de importación a continuación. Si deseas chatear sobre estos artículos o usarlos como base en tu libreta, puedes importarlos directamente.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-memory-ai-engineering\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-memory-ai-engineering\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos técnicos, investigaciones y guías de arquitectura sobre memoria en agentes de IA\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Reporte de Investigación: Memory en AI Engineering\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQwNDllNzQ5NS01ZWM2LTQ3MDQtODAzYy02NjA2NDJiMGYzYTISCxIHEPnP8YvcBhgB&filename=Reporte_de_Investigacion_Memory_en_AI_Engineering.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Reporte de Investigación\",\n          \"summary\": \"Reporte estructurado con 5 fuentes sobre arquitectura de memoria a corto/largo plazo y patrones de retrieval.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"Memory in the Age of AI Agents\",\n          \"url\": \"https://arxiv.org/abs/2512.13564\",\n          \"sourceName\": \"arXiv\",\n          \"summary\": \"Estudio que establece la taxonomía unificada de memoria en agentes (Working, Factual, Experiential).\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"Context vs. Memory Engineering in Agentic AI Systems\",\n          \"url\": \"https://machinelearningmastery.com/context-vs-memory-engineering-in-agentic-ai-systems/\",\n          \"sourceName\": \"Machine Learning Mastery\",\n          \"summary\": \"Analiza las decisiones de ingeniería de contexto e ingeniería de memoria en la frontera de retrieval.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"AI Agent Memory Architecture & Guide\",\n          \"url\": \"https://mem0.ai/library/agent-memory/memory-in-agents-what-why-and-how\",\n          \"sourceName\": \"Mem0\",\n          \"summary\": \"Guía sobre capas de memoria persistente para agentes y patrones de extracción single-pass.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"How to Give an AI Agent Long-Term Memory\",\n          \"url\": \"https://www.getzep.com/ai-agents/how-to-give-ai-agents-long-term-memory/\",\n          \"sourceName\": \"Zep\",\n          \"summary\": \"Explicación sobre el uso de grafos de conocimiento temporales para evitar recuerdos desactualizados.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>\n\n💡 Una vez que importes las fuentes que necesites, ¿te gustaría que elaboremos un **diagrama o guía escrita** sobre cómo implementar este patrón en frameworks como LangGraph o Mem0?",
+      "claims": [
+        {
+          "text": "Realicé una investigación sobre **Memory en AI Engineering** para explicar su arquitectura, funcionamiento y componentes clave.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no he importado esas fuentes a tu libreta. **¿Quieres que las importe primero?** De esta manera podré responder a tus preguntas y analizar el estado actual y las relaciones de **Memory** basándome directamente en el contenido de tus fuentes.\n\nTambién puedes desplazarte hacia arriba al reporte de investigación de la respuesta anterior y hacer clic en **Importar** en las fuentes que prefieras.",
+      "claims": [
+        {
+          "text": "Aún no he importado esas fuentes a tu libreta. **¿Quieres que las importe primero?** De esta manera podré responder a tus preguntas y analizar el estado actual y las relaciones de **Memory** basándome",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "594c963f-a09a-4dbc-ba70-9966d1b8d1de",
+  "duration_ms": 69639,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\07-ai-engineering-19-memory\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

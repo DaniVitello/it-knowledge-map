@@ -1,0 +1,29 @@
+{
+  "concept_id": "02-frontend-22-testing",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\02-frontend-22-testing\\sources.json",
+    "notebook_id": "01ea0011-3bd1-4e5a-96b9-2f3fc83022ce",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\02-frontend-22-testing\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\02-frontend-22-testing\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\02-frontend-22-testing\\22 - Testing.md.20261030T052058Z-d5db22.bak",
+      "outside_hash": "7ddbfdc8c9cfd5f5d869929bf941746d108a23d184a5fcedc7ac7f51efd6e3bb",
+      "inside_hash": "77ed25608412259a095e3160c4f7279935c75643545672af11446c36e1e37f90",
+      "written_at": "2026-10-30T05:20:58.060274+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:20:27.109715+00:00",
+  "updated_at": "2026-10-30T05:20:58.079476+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T05:20:58.079476+00:00",
+    "created_at": "2026-10-30T05:20:27.109715+00:00"
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,39 @@
+{
+  "questions": [],
+  "concept_id": "05-networking-internet-23-proxies-reverse-proxies",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Proxies / Reverse Proxies y para que sirve (Intermediarios entre clientes y servidores)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Proxies / Reverse Proxies en Networking / Internet"
+    ],
+    "context": [
+      "Como se usa Proxies / Reverse Proxies en el contexto profesional de Networking / Internet"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Firewalls",
+      "ask": "Como se relaciona Proxies / Reverse Proxies con Firewalls?"
+    },
+    {
+      "with": "CDN / Load Balancing",
+      "ask": "Como se relaciona Proxies / Reverse Proxies con CDN / Load Balancing?"
+    }
+  ],
+  "queries": [
+    "site:rfc-editor.org Proxies / Reverse Proxies",
+    "site:datatracker.ietf.org Proxies / Reverse Proxies",
+    "site:developer.mozilla.org Proxies / Reverse Proxies",
+    "site:cloudflare.com Proxies / Reverse Proxies",
+    "site:beej.us Proxies / Reverse Proxies",
+    "site:hpbn.co Proxies / Reverse Proxies",
+    "site:man7.org Proxies / Reverse Proxies"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

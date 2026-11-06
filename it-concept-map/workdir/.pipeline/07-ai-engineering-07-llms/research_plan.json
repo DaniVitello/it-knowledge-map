@@ -1,0 +1,56 @@
+{
+  "questions": [],
+  "concept_id": "07-ai-engineering-07-llms",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es LLMs y para que sirve (Pretraining, inference, context windows, capabilities)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de LLMs en AI Engineering"
+    ],
+    "context": [
+      "Como se usa LLMs en el contexto profesional de AI Engineering"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Neural Networks",
+      "ask": "Como se relaciona LLMs con Neural Networks?"
+    },
+    {
+      "with": "Transformers",
+      "ask": "Como se relaciona LLMs con Transformers?"
+    },
+    {
+      "with": "Tokenization",
+      "ask": "Como se relaciona LLMs con Tokenization?"
+    },
+    {
+      "with": "Embeddings",
+      "ask": "Como se relaciona LLMs con Embeddings?"
+    },
+    {
+      "with": "AI Infrastructure",
+      "ask": "Como se relaciona LLMs con AI Infrastructure?"
+    },
+    {
+      "with": "Fine-tuning & Adaptation",
+      "ask": "Como se relaciona LLMs con Fine-tuning & Adaptation?"
+    }
+  ],
+  "queries": [
+    "site:arxiv.org LLMs",
+    "site:huggingface.co LLMs",
+    "site:pytorch.org LLMs",
+    "site:d2l.ai LLMs",
+    "site:platform.openai.com LLMs",
+    "site:docs.claude.com LLMs",
+    "site:ai.google.dev LLMs",
+    "site:deeplearning.ai LLMs"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

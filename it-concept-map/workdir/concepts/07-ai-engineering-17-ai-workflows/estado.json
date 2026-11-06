@@ -1,0 +1,29 @@
+{
+  "concept_id": "07-ai-engineering-17-ai-workflows",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\07-ai-engineering-17-ai-workflows\\sources.json",
+    "notebook_id": "fefcbc69-384e-4a06-b789-9101daafca82",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\07-ai-engineering-17-ai-workflows\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\07-ai-engineering-17-ai-workflows\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\07-ai-engineering-17-ai-workflows\\17 - AI Workflows.md.20261106T211405Z-3627f5.bak",
+      "outside_hash": "ba81942a8ac14a46e1dae7c30c96b4042d22ca97981a652c79a236f9721e8f0c",
+      "inside_hash": "7c144e7e17e70f84c7f5a36d204ea32872f5dac714c3d4bb12db460e760e9ad4",
+      "written_at": "2026-11-06T21:14:05.762008+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-06T21:12:56.701560+00:00",
+  "updated_at": "2026-11-06T21:14:05.785218+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-06T21:14:05.785218+00:00",
+    "created_at": "2026-11-06T21:12:56.701560+00:00"
+  },
+  "schema_version": "1.0.0"
+}

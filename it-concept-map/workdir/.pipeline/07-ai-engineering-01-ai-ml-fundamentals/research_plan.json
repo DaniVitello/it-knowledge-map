@@ -1,0 +1,31 @@
+{
+  "questions": [],
+  "concept_id": "07-ai-engineering-01-ai-ml-fundamentals",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es AI / ML Fundamentals y para que sirve (Modelos, entrenamiento, inferencia, datos)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de AI / ML Fundamentals en AI Engineering"
+    ],
+    "context": [
+      "Como se usa AI / ML Fundamentals en el contexto profesional de AI Engineering"
+    ]
+  },
+  "relation_questions": [],
+  "queries": [
+    "site:arxiv.org AI / ML Fundamentals",
+    "site:huggingface.co AI / ML Fundamentals",
+    "site:pytorch.org AI / ML Fundamentals",
+    "site:d2l.ai AI / ML Fundamentals",
+    "site:platform.openai.com AI / ML Fundamentals",
+    "site:docs.claude.com AI / ML Fundamentals",
+    "site:ai.google.dev AI / ML Fundamentals",
+    "site:deeplearning.ai AI / ML Fundamentals"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

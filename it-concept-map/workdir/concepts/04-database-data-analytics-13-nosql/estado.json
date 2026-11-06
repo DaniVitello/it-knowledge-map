@@ -1,0 +1,29 @@
+{
+  "concept_id": "04-database-data-analytics-13-nosql",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-13-nosql\\sources.json",
+    "notebook_id": "50a25981-56fb-40b7-a571-157650d5f5d3",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-13-nosql\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-13-nosql\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\04-database-data-analytics-13-nosql\\13 - NoSQL.md.20261105T225817Z-56b965.bak",
+      "outside_hash": "8a0377be4efcb237a5c5ed050b65c2b882c907eec8ab75ab55e80cacf5b36c79",
+      "inside_hash": "101f7452ae4a87d972e4af68cdd52081f3ab8d949f706f7db1bd349fe46a35a0",
+      "written_at": "2026-11-05T22:58:17.921671+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T22:57:48.939460+00:00",
+  "updated_at": "2026-11-05T22:58:17.942189+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T22:58:17.942189+00:00",
+    "created_at": "2026-11-05T22:57:48.939460+00:00"
+  },
+  "schema_version": "1.0.0"
+}

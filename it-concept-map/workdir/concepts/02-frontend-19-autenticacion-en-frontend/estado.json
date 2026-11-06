@@ -1,0 +1,29 @@
+{
+  "concept_id": "02-frontend-19-autenticacion-en-frontend",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\02-frontend-19-autenticacion-en-frontend\\sources.json",
+    "notebook_id": "63a7d775-d984-48f3-9ed8-231ff2374f95",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\02-frontend-19-autenticacion-en-frontend\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\02-frontend-19-autenticacion-en-frontend\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\02-frontend-19-autenticacion-en-frontend\\19 - Autenticación en Frontend.md.20261030T052017Z-c435ce.bak",
+      "outside_hash": "67a3833d0ba7c9e6401595d2ab1fa3156eacbd5dc89184679cf2e196d22ff35a",
+      "inside_hash": "4ec03af054495ba052d863b72520de8b24266110cca310027fc02cb88e664e47",
+      "written_at": "2026-10-30T05:20:17.880569+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:19:15.814195+00:00",
+  "updated_at": "2026-10-30T05:20:17.899771+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T05:20:17.899771+00:00",
+    "created_at": "2026-10-30T05:19:15.814195+00:00"
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,9 @@
+{"ts": "2026-11-05T18:23:13.637909+00:00", "run_id": "run-20261105-151808-34f931", "concept_id": "04-database-data-analytics-10-transactions", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-11-05T18:23:45.376056+00:00", "run_id": "run-20261105-151808-34f931", "concept_id": "04-database-data-analytics-10-transactions", "event": "phase_failed", "phase": "research", "error": "create_notebook (04-database-data-analytics-10-transactions): The server rejected this request (resource exhausted)."}
+{"ts": "2026-11-05T22:54:24.030082+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-10-transactions", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T22:55:19.261582+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-10-transactions", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T22:55:23.134970+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-10-transactions", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T22:55:23.170803+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-10-transactions", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T22:55:23.199768+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-10-transactions", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T22:55:23.217723+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-10-transactions", "event": "notebook_delete_failed", "notebook_id": "20064a85-ccde-4be5-b748-80249a53b102", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T22:55:23.228455+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-10-transactions", "event": "run_end", "status": "completed"}

@@ -1,0 +1,20 @@
+{
+  "concept_id": "06-operating-systems-linux-24-containers",
+  "status": "failed",
+  "last_good_state": "researching",
+  "checkpoint": null,
+  "phase_data": {
+    "failed_phase": "researching",
+    "failed_reason": "error"
+  },
+  "error": "research (3f32fc4f-0b46-4e39-b25e-214410070a69): Chat request was rate limited or rejected by the API. Wait a few seconds and try again.",
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:50:42.559267+00:00",
+  "updated_at": "2026-11-05T23:51:01.311005+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:51:01.310979+00:00",
+    "created_at": "2026-11-05T23:50:42.559267+00:00"
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,29 @@
+{
+  "concept_id": "05-networking-internet-03-ipv4-ipv6",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-03-ipv4-ipv6\\sources.json",
+    "notebook_id": "257476ab-8c85-428b-8ce6-46276a129fa6",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-03-ipv4-ipv6\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-03-ipv4-ipv6\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\05-networking-internet-03-ipv4-ipv6\\03 - IPv4 - IPv6.md.20261105T231237Z-f21d0e.bak",
+      "outside_hash": "104f405bd8ff36d5ffca3000e58a9d20b0ce26a532439fc71b06cda0e50f9b59",
+      "inside_hash": "75460e850e45caa7c85f1dc0f60a30cb5b06f569d1d655d416368679bc8aaa68",
+      "written_at": "2026-11-05T23:12:37.914166+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:11:37.253754+00:00",
+  "updated_at": "2026-11-05T23:12:37.931659+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:12:37.931659+00:00",
+    "created_at": "2026-11-05T23:11:37.253754+00:00"
+  },
+  "schema_version": "1.0.0"
+}

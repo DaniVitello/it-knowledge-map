@@ -1,0 +1,50 @@
+{
+  "concept_id": "04-database-data-analytics-20-data-analysis",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "**No veo fuentes cargadas en tu libreta** que traten sobre este tema. Para asegurar que todas las respuestas estén verdaderamente respaldadas y sean verificables, no genero explicaciones a partir de conocimiento general fuera de tus materiales.\n\n¿Te gustaría que realice una **investigación en la web** sobre el Análisis de Datos (exploración, patrones, tendencias, correlaciones y conceptos relacionados) para presentarte la información y evaluar si deseas incorporarla a tus fuentes?",
+      "claims": [
+        {
+          "text": "**No veo fuentes cargadas en tu libreta** que traten sobre este tema. Para asegurar que todas las respuestas estén verdaderamente respaldadas y sean verificables, no genero explicaciones a partir de c",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Aún **no veo fuentes cargadas en tu libreta** para responder a esta pregunta sobre cómo funciona el **Análisis de Datos en Bases de Datos / Data Analytics**.\n\n¿Quieres que realice una **investigación en la web** sobre este tema (abarcando exploración de datos, detección de patrones y tendencias, correlaciones y su relación con Data Quality, Data Cleaning, Estadística y BI) para presentarte la información y evaluar si deseas agregarla a tus fuentes?",
+      "claims": [
+        {
+          "text": "Aún **no veo fuentes cargadas en tu libreta** para responder a esta pregunta sobre cómo funciona el **Análisis de Datos en Bases de Datos / Data Analytics**.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "**Tu libreta aún no contiene fuentes** que aborden el estado actual del Análisis de Datos ni sus relaciones con Data Quality, Data Cleaning, Estadística, Métricas, Visualización de Datos o BI & Reporting.\n\n¿Deseas que realice una **investigación en la web** sobre el estado actual y estas relaciones para presentarte los hallazgos y evaluar si quieres agregarlos a tus fuentes?",
+      "claims": [
+        {
+          "text": "**Tu libreta aún no contiene fuentes** que aborden el estado actual del Análisis de Datos ni sus relaciones con Data Quality, Data Cleaning, Estadística, Métricas, Visualización de Datos o BI & Report",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "288819dd-f3b1-485d-9755-35b9d890a1fa",
+  "duration_ms": 31252,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-20-data-analysis\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

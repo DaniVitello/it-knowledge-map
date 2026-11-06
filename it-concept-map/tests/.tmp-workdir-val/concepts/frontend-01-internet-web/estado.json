@@ -1,0 +1,19 @@
+{
+  "concept_id": "frontend-01-internet-web",
+  "status": "validated",
+  "last_good_state": "synthesized",
+  "checkpoint": null,
+  "phase_data": {
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\tests\\.tmp-workdir-val\\concepts\\frontend-01-internet-web\\validation.json"
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-06T19:24:39.213721+00:00",
+  "updated_at": "2026-11-06T19:24:39.238909+00:00",
+  "timestamps": {
+    "created_at": "2026-11-06T19:24:39.213721+00:00",
+    "updated_at": "2026-11-06T19:24:39.238882+00:00"
+  },
+  "schema_version": "1.0.0"
+}

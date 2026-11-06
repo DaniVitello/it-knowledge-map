@@ -1,0 +1,29 @@
+{
+  "concept_id": "01-software-engineering-06-functional-programming",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\01-software-engineering-06-functional-programming\\sources.json",
+    "notebook_id": "3d24025b-4c1e-45f8-91cc-990539e8c3e1",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-06-functional-programming\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-06-functional-programming\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\01-software-engineering-06-functional-programming\\06 - Functional Programming.md.20261030T043909Z-db03c6.bak",
+      "outside_hash": "8a73eb9d8ce85e78628815895aaec565ff8a26df26ceed106a1d5ea976e775c9",
+      "inside_hash": "42281a7947034425763d3123df4393d0fd7abc560f36cdb06f60d3a3fa69ef8a",
+      "written_at": "2026-10-30T04:39:09.645622+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T04:38:01.283652+00:00",
+  "updated_at": "2026-10-30T04:39:09.668134+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T04:39:09.668134+00:00",
+    "created_at": "2026-10-30T04:38:01.283652+00:00"
+  },
+  "schema_version": "1.0.0"
+}

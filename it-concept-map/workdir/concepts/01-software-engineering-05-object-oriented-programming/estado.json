@@ -1,0 +1,29 @@
+{
+  "concept_id": "01-software-engineering-05-object-oriented-programming",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\01-software-engineering-05-object-oriented-programming\\sources.json",
+    "notebook_id": "08cbb6d8-0c1b-4907-88d2-db9f8736cfa4",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-05-object-oriented-programming\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-05-object-oriented-programming\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\01-software-engineering-05-object-oriented-programming\\05 - Object-Oriented Programming.md.20261030T043800Z-b80b16.bak",
+      "outside_hash": "313f0a8ee5ad960ef47d65e179f4fe33e58a9feb34ded5a1a1eee8e73e779c4a",
+      "inside_hash": "4c0ef57d552144030af72d010877e39ecab53ff7c9608837c83848e45b4a6089",
+      "written_at": "2026-10-30T04:38:00.214756+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T04:36:59.069934+00:00",
+  "updated_at": "2026-10-30T04:38:00.233890+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T04:38:00.233890+00:00",
+    "created_at": "2026-10-30T04:36:59.069934+00:00"
+  },
+  "schema_version": "1.0.0"
+}

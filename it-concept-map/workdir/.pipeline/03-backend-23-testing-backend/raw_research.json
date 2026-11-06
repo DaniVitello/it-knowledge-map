@@ -1,0 +1,50 @@
+{
+  "concept_id": "03-backend-23-testing-backend",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No encuentro fuentes guardadas en tu cuaderno que traten sobre **Testing Backend** (Unit, Integration, API, E2E).\n\n¿Quieres que realice una **investigación en la web** sobre qué es y para qué sirve cada tipo de prueba en el backend?",
+      "claims": [
+        {
+          "text": "No encuentro fuentes guardadas en tu cuaderno que traten sobre **Testing Backend** (Unit, Integration, API, E2E).",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Aquí tienes información sobre **Testing Backend (Unit, Integration, API, E2E)** a partir de la investigación realizada:\n\nEl **Testing Backend** abarca el conjunto de pruebas enfocadas en validar la lógica de negocio, la persistencia de datos, la seguridad y la integración de componentes en el servidor, garantizando que el sistema sea estable, confiable y seguro independientemente de la interfaz gráfica.\n\n**Puntos clave y funcionamiento de cada nivel:**\n\n1. **Pruebas Unitarias (Unit Testing):** Prueban unidades individuales de código (funciones, métodos o clases) de forma aislada. Para evitar depender de elementos externos (como bases de datos o red), se utilizan simulaciones (*mocks* o *stubs*). Son extremadamente rápidas de ejecutar y representan la base de la pirámide de testing.\n2. **Pruebas de Integración (Integration Testing):** Verifican cómo interactúan dos o más módulos o servicios entre sí (por ejemplo, comprobar que un servicio de backend guarde y recupere datos correctamente de una base de datos real o de una caché como Redis).\n3. **Pruebas de API (API Testing):** Comprueban directamente los *endpoints* del servidor (REST, GraphQL, gRPC). Validan que las peticiones reciban los códigos de estado HTTP correctos (200, 400, 404, 500), que las respuestas cumplan con los esquemas de datos esperados y que la autenticación/seguridad funcione de forma estricta.\n4. **Pruebas End-to-End (E2E Testing):** Simulan flujos de trabajo completos tal como los experimentaría un usuario real, atravesando toda la pila tecnológica (desde la interfaz de usuario en el frontend hasta las bases de datos y microservicios en el backend).\n\n📥 Si deseas profundizar en estos conceptos o realizar preguntas sobre estas fuentes en el cuaderno, puedes seleccionar e importar las que te interesen a través de la siguiente tarjeta:\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-testing-backend\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-testing-backend\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos técnicos y guías sobre Testing Backend (Unit, Integration, API, E2E)\",\n      \"sources\": [\n        {\n          \"id\": \"src-1\",\n          \"title\": \"Backend Testing Explained: Unit vs Integration vs E2E\",\n          \"url\": \"https://vickybytes.com/blog/backend-testing-explained\",\n          \"sourceName\": \"VickyBytes\",\n          \"summary\": \"Explicación práctica sobre la pirámide de pruebas automatizadas y patrones de pruebas en el servidor.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"Backend testing: Qué es y sus tipos\",\n          \"url\": \"https://bambu-techservices.com/backend-testing-que-es-y-sus-tipos/\",\n          \"sourceName\": \"Bambú Tech Services\",\n          \"summary\": \"Análisis sobre la importancia de verificar la lógica de servidor, bases de datos y seguridad en el backend.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"Tipos de testing en aplicaciones web: unitario, integración, end to end\",\n          \"url\": \"https://martagonzalez.dev/wp/blog/tipos-de-testing-aplicaciones-web-unitario-integracion-e2e/\",\n          \"sourceName\": \"Marta González Dev\",\n          \"summary\": \"Guía sobre los distintos niveles de pruebas en aplicaciones web y cómo estructurar una estrategia sólida.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"Types of Software Testing: Unit vs Integration vs E2E\",\n          \"url\": \"https://yeeply.com/en/blog/digitalizacion/types-of-software-testing-unit-testing-vs-integration-testing-vs-end-to-end-testing-e2e/\",\n          \"sourceName\": \"Yeeply\",\n          \"summary\": \"Comparación entre la primera línea de defensa (unit tests), interacción de componentes e integración completa.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"The different types of software testing\",\n          \"url\": \"https://www.atlassian.com/continuous-delivery/software-testing/types-of-software-testing\",\n          \"sourceName\": \"Atlassian\",\n          \"summary\": \"Visión general de las pruebas de software en la integración continua (CI/CD) y desarrollo ágil.\"\n        },\n        {\n          \"id\": \"src-6\",\n          \"title\": \"Unit, Integration, and End-to-End Testing: What's the Difference?\",\n          \"url\": \"https://www.twilio.com/en-us/blog/unit-integration-end-to-end-testing-difference\",\n          \"sourceName\": \"Twilio\",\n          \"summary\": \"Explicación de pruebas de contrato, interacciones con bases de datos y la diferencia entre niveles de pruebas.\"\n        },\n        {\n          \"id\": \"src-7\",\n          \"title\": \"¿Qué son las pruebas integrales (E2E)?\",\n          \"url\": \"https://www.ibm.com/es-es/think/topics/end-to-end-testing\",\n          \"sourceName\": \"IBM\",\n          \"summary\": \"Visión empresarial sobre la validación de flujos de trabajo completos simulando usuarios reales.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Aquí tienes información sobre **Testing Backend (Unit, Integration, API, E2E)** a partir de la investigación realizada:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no se han importado las fuentes de la investigación a tu cuaderno.\n\n¿Quieres que importe las fuentes encontradas para poder analizar y responder en detalle sobre el **estado actual y las relaciones** entre los distintos tipos de pruebas (Unit, Integration, API, E2E)? \n\nTambién puedes desplazarte hacia arriba en la conversación e importar directamente las fuentes que prefieras desde la tarjeta de resultados.",
+      "claims": [
+        {
+          "text": "Aún no se han importado las fuentes de la investigación a tu cuaderno.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "893cc37a-3d47-4505-b3ca-f4b2ef974893",
+  "duration_ms": 66489,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\03-backend-23-testing-backend\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

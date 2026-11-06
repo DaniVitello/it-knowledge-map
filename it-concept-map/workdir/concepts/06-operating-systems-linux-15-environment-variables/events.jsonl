@@ -1,0 +1,2 @@
+{"ts": "2026-11-05T23:47:51.055361+00:00", "run_id": "run-20261105-204002-56e07b", "concept_id": "06-operating-systems-linux-15-environment-variables", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:48:08.383025+00:00", "run_id": "run-20261105-204002-56e07b", "concept_id": "06-operating-systems-linux-15-environment-variables", "event": "phase_failed", "phase": "research", "error": "research (a1d70736-2e6b-4867-a95a-4bae274da11d): Chat request was rate limited or rejected by the API. Wait a few seconds and try again."}

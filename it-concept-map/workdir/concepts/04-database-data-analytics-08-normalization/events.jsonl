@@ -1,0 +1,10 @@
+{"ts": "2026-10-30T05:36:48.113298+00:00", "run_id": "run-20261030-023451-bcc569", "concept_id": "04-database-data-analytics-08-normalization", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-11-05T18:22:08.178775+00:00", "run_id": "run-20261105-151808-34f931", "concept_id": "04-database-data-analytics-08-normalization", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-11-05T18:22:39.995914+00:00", "run_id": "run-20261105-151808-34f931", "concept_id": "04-database-data-analytics-08-normalization", "event": "phase_failed", "phase": "research", "error": "create_notebook (04-database-data-analytics-08-normalization): The server rejected this request (resource exhausted)."}
+{"ts": "2026-11-05T22:52:12.894636+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-08-normalization", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T22:53:19.835501+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-08-normalization", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T22:53:23.564067+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-08-normalization", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T22:53:23.597521+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-08-normalization", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T22:53:23.629845+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-08-normalization", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T22:53:23.648780+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-08-normalization", "event": "notebook_delete_failed", "notebook_id": "ed4e6935-3b90-4730-aa48-da4f34918945", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T22:53:23.657772+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-08-normalization", "event": "run_end", "status": "completed"}

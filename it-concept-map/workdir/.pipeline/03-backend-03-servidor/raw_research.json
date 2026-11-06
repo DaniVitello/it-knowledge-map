@@ -1,0 +1,50 @@
+{
+  "concept_id": "03-backend-03-servidor",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "**No veo ninguna fuente en tu libreta** sobre qué es un servidor ni sobre los conceptos de procesos, puertos, conexiones y ciclo de vida. \n\n¿Quieres que realice una **búsqueda en la web** para investigar sobre este tema y responder a tu pregunta?",
+      "claims": [
+        {
+          "text": "**No veo ninguna fuente en tu libreta** sobre qué es un servidor ni sobre los conceptos de procesos, puertos, conexiones y ciclo de vida. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Un **servidor en el backend** es un programa o proceso de software que se ejecuta continuamente en una máquina (física, virtual o contenedor) con el objetivo de escuchar peticiones de clientes (como navegadores web, apps móviles u otros servicios) y responder a ellas procesando lógica de negocio y datos.\n\n---\n\n### 1. Procesos, Demonios y Servicios (*Processes, Daemons / Services*)\n* **Proceso (*Process*):** En el sistema operativo, un proceso es una instancia en ejecución de un programa con su propio espacio de memoria aislado, identificador único (PID) y recursos asignados.\n* **Demonio / Servicio (*Daemon / Service*):** Es un proceso que corre en **segundo plano** (*background*) sin una interfaz de usuario o terminal interactiva adjunta. En Linux/Unix se conocen como *daemons* (habitualmente terminados en `d`, como `sshd` o `httpd`), y en Windows como *Servicios*. Son administrados por gestores del sistema como `systemd`, los cuales aseguran que el servidor arranque al encender el equipo, se mantenga vivo y se reinicie automáticamente si llega a fallar.\n* **Estrategias de Concurrencia:**\n  * **Multi-proceso / Prefork:** El servidor principal crea procesos hijo (*workers*) independientes para procesar peticiones en paralelo (ej. Nginx, Gunicorn).\n  * **Event Loop (I/O Asíncrono):** Un solo proceso atiende miles de peticiones concurrentes de forma no bloqueante mediante eventos (ej. Node.js).\n  * **Multi-hilo (*Threads*):** Un mismo proceso comparte memoria entre múltiples hilos de ejecución (ej. Java, Go).\n\n---\n\n### 2. Puertos y Sockets (*Ports & Sockets*)\n* **Puerto:** Es una dirección numérica lógica (del 0 al 65535) en la interfaz de red que permite canalizar el tráfico hacia el proceso adecuado. Por ejemplo, el puerto `80` se usa para HTTP, `443` para HTTPS y puertos como `3000` u `8000` para APIs de desarrollo.\n* **Binding & Listening:** Durante su arranque, el proceso del servidor ejecuta la llamada al sistema `bind()` para adueñarse de un puerto específico en una dirección IP, y luego `listen()` para indicar al sistema operativo que está listo para aceptar tráfico en ese puerto.\n\n---\n\n### 3. Conexiones (*Connections*)\n* **Handshake TCP:** Cuando un cliente intenta comunicarse, se realiza el saludo de tres vías (SYN, SYN-ACK, ACK) a nivel de red para establecer un canal confiable.\n* **Accept Loop:** El proceso servidor ejecuta un bucle continuo invocando `accept()`. Cuando entra una nueva conexión, el sistema operativo le entrega un descriptor de socket exclusivo para esa sesión.\n* **Intercambio de datos:** A través de esa conexión se lee la petición HTTP/gRPC/WebSocket, el servidor ejecuta la lógica requerida (consultas a base de datos, validaciones) y devuelve la respuesta correspondiente antes de cerrar la conexión o mantenerla abierta (mediante *Keep-Alive* o WebSockets).\n\n---\n\n### 4. Ciclo de Vida del Servidor (*Lifecycle*)\n1. **Inicialización (*Startup*):** Carga configuraciones y variables de entorno, establece conexiones iniciales (como el pool de la base de datos) y se vincula (*bind*) al puerto de red.\n2. **Ejecución (*Running / Accept Loop*):** Se mantiene escuchando y procesando peticiones de forma continua.\n3. **Manejo de Señales (*Signals*):** El sistema operativo puede enviarle señales como `SIGTERM` o `SIGINT` (para apagarlo) o `SIGHUP` (para recargar configuraciones en caliente sin detener el servicio).\n4. **Apagado Elegante (*Graceful Shutdown*):** Al recibir la orden de apagar:\n   * Deja de aceptar nuevas conexiones entrantes.\n   * Espera a que las peticiones en curso terminen de procesarse.\n   * Cierra ordenadamente las conexiones a bases de datos y archivos.\n   * Libera el puerto y finaliza el proceso de forma limpia.\n\n---\n\n📥 Puedes importar la investigación completa y las fuentes encontradas mediante la tarjeta a continuación:\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-servidor-backend\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-servidor-backend\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos técnicos y documentación sobre arquitectura de servidores en backend\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Reporte de Investigación: Funcionamiento de un Servidor Backend\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiRhNTJkMzNmNi1kN2RjLTQzNDktYmQ2OS1mNzJiOTA2YzQwZTESCxIHENqe1-OQCxgB&filename=Reporte_de_Investigacion_Funcionamiento_de_un_Servidor_Backe.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Reporte de Investigación\",\n          \"summary\": \"Reporte completo con la explicación de procesos, puertos, conexiones, demonios y ciclo de vida de un servidor.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"How Daemons Work\",\n          \"url\": \"https://digitalgarden.bhekani.com/how-daemons-work/\",\n          \"sourceName\": \"Digital Garden\",\n          \"summary\": \"Explicación detallada del ciclo de vida de un proceso demonio, desde la terminal hasta la gestión de sockets y graceful shutdown.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"What is a Daemon?\",\n          \"url\": \"https://www.techtarget.com/whatis/definition/daemon\",\n          \"sourceName\": \"TechTarget\",\n          \"summary\": \"Definición y concepto de procesos en segundo plano (daemons) en sistemas operativos.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"Daemons and Services Architecture\",\n          \"url\": \"https://faq.computersciencewiki.org/index.php/home/article/daemons\",\n          \"sourceName\": \"Computer Science Wiki\",\n          \"summary\": \"Explicación de modelos de concurrencia en servidores y supervisión mediante systemd.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Un **servidor en el backend** es un programa o proceso de software que se ejecuta continuamente en una máquina (física, virtual o contenedor) con el objetivo de escuchar peticiones de clientes (como n",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no he importado las fuentes de la investigación previa a tu libreta. \n\n¿Quieres que las importe para poder responder a tus preguntas basándome en el contenido oficial de tus fuentes? También puedes desplazarte hacia arriba hasta la tarjeta de importación y hacer clic en **Importar**.",
+      "claims": [
+        {
+          "text": "Aún no he importado las fuentes de la investigación previa a tu libreta. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "c9d7742f-4624-4287-b986-27cbf4f2afea",
+  "duration_ms": 54035,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\03-backend-03-servidor\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

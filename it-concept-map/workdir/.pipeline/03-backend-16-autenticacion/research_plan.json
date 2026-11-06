@@ -1,0 +1,48 @@
+{
+  "questions": [],
+  "concept_id": "03-backend-16-autenticacion",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Autenticación y para que sirve (Sessions, cookies, JWT, OAuth)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Autenticación en Backend"
+    ],
+    "context": [
+      "Como se usa Autenticación en el contexto profesional de Backend"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Security Engineering",
+      "ask": "Como se relaciona Autenticación con Security Engineering?"
+    },
+    {
+      "with": "Autenticación en Frontend",
+      "ask": "Como se relaciona Autenticación con Autenticación en Frontend?"
+    },
+    {
+      "with": "Autorización",
+      "ask": "Como se relaciona Autenticación con Autorización?"
+    },
+    {
+      "with": "Seguridad",
+      "ask": "Como se relaciona Autenticación con Seguridad?"
+    }
+  ],
+  "queries": [
+    "site:developer.mozilla.org Autenticación",
+    "site:rfc-editor.org Autenticación",
+    "site:datatracker.ietf.org Autenticación",
+    "site:owasp.org Autenticación",
+    "site:postgresql.org Autenticación",
+    "site:redis.io Autenticación",
+    "site:12factor.net Autenticación",
+    "site:learn.microsoft.com Autenticación"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

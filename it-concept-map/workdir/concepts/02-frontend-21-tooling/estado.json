@@ -1,0 +1,29 @@
+{
+  "concept_id": "02-frontend-21-tooling",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\02-frontend-21-tooling\\sources.json",
+    "notebook_id": "977dbdaf-04a7-48a4-9cf5-c4243470cce5",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\02-frontend-21-tooling\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\02-frontend-21-tooling\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\02-frontend-21-tooling\\21 - Tooling.md.20261030T052114Z-44e3e9.bak",
+      "outside_hash": "797f62c1b2ad8ec168895ec3600114aaa2ab480e3212325c30d5b42b764591d1",
+      "inside_hash": "20c0e427ca80b6160d51a0ebaea28ebd7b58b74e803598e54a4077b6c213f9d9",
+      "written_at": "2026-10-30T05:21:14.296603+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:20:10.808470+00:00",
+  "updated_at": "2026-10-30T05:21:14.319058+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T05:21:14.319058+00:00",
+    "created_at": "2026-10-30T05:20:10.808470+00:00"
+  },
+  "schema_version": "1.0.0"
+}

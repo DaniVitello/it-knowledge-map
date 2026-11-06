@@ -1,0 +1,50 @@
+{
+  "concept_id": "03-backend-09-validacion",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "**No veo fuentes cargadas en tu libreta** para responder sobre la validación de datos (input validation, esquemas, sanitización, manejo de errores y middleware). \n\n¿Te gustaría que haga una búsqueda en la web para investigar este tema?",
+      "claims": [
+        {
+          "text": "**No veo fuentes cargadas en tu libreta** para responder sobre la validación de datos (input validation, esquemas, sanitización, manejo de errores y middleware). ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Aún no tienes fuentes agregadas en tu libreta sobre **validación en el backend**. \n\n¿Quieres que haga una búsqueda en la web para investigar cómo funciona este proceso (incluyendo esquemas, sanitización, middleware y manejo de errores)?",
+      "claims": [
+        {
+          "text": "Aún no tienes fuentes agregadas en tu libreta sobre **validación en el backend**. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Tu libreta sigue sin contener fuentes sobre la **validación y sus relaciones** (como esquemas, sanitización, middleware o manejo de errores).\n\n¿Te gustaría que haga una búsqueda en la web para obtener información sobre este tema?",
+      "claims": [
+        {
+          "text": "Tu libreta sigue sin contener fuentes sobre la **validación y sus relaciones** (como esquemas, sanitización, middleware o manejo de errores).",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "32b05886-db91-4c6e-b514-0920ae487402",
+  "duration_ms": 26472,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\03-backend-09-validacion\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

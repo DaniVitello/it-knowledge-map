@@ -1,0 +1,29 @@
+{
+  "concept_id": "01-software-engineering-15-design-patterns",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\01-software-engineering-15-design-patterns\\sources.json",
+    "notebook_id": "3a36fd1c-9d27-4954-968c-77d007c9043c",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-15-design-patterns\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-15-design-patterns\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\01-software-engineering-15-design-patterns\\15 - Design Patterns.md.20261030T044702Z-e0a3ed.bak",
+      "outside_hash": "bf46ca89990d25e5932021847ef127a244f00b5d82dd9062e7de652ae6fd646f",
+      "inside_hash": "c6b27e65307dabdaaab9fa528fa223796fbcfed0848011ac249c9b5daa3e4697",
+      "written_at": "2026-10-30T04:47:02.648111+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T04:46:32.512369+00:00",
+  "updated_at": "2026-10-30T04:47:02.677464+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T04:47:02.677464+00:00",
+    "created_at": "2026-10-30T04:46:32.512369+00:00"
+  },
+  "schema_version": "1.0.0"
+}

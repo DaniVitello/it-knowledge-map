@@ -1,0 +1,29 @@
+{
+  "concept_id": "05-networking-internet-25-cdn-load-balancing",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-25-cdn-load-balancing\\sources.json",
+    "notebook_id": "64d9e692-8f0f-443a-a7b1-d7bb354ec03c",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-25-cdn-load-balancing\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-25-cdn-load-balancing\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\05-networking-internet-25-cdn-load-balancing\\25 - CDN - Load Balancing.md.20261105T233650Z-28c2a0.bak",
+      "outside_hash": "39aa8e963ba94eae38d9388e3ec7052d9c24e988582593470685366797402a55",
+      "inside_hash": "f68e686548112a2458b9688cce00f679bf9b8a0f63b184d0de9a9eaccd1de9df",
+      "written_at": "2026-11-05T23:36:50.127810+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:35:42.693311+00:00",
+  "updated_at": "2026-11-05T23:36:50.147150+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:36:50.147150+00:00",
+    "created_at": "2026-11-05T23:35:42.693311+00:00"
+  },
+  "schema_version": "1.0.0"
+}

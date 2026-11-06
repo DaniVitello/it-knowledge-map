@@ -1,0 +1,29 @@
+{
+  "concept_id": "01-software-engineering-26-observability",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\01-software-engineering-26-observability\\sources.json",
+    "notebook_id": "ef5a95a0-229e-4ec5-bb45-1b97c53ba18a",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-26-observability\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-26-observability\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\01-software-engineering-26-observability\\26 - Observability.md.20261030T045446Z-bc1fb9.bak",
+      "outside_hash": "b57023a614d3f2b9d23d5198e084a3f8590b4d6782a4b3974b407d99cbe381dd",
+      "inside_hash": "62806750a0d71d8c23e6492cece3757b02d5fd67615fe6e1a87bd96af39d000e",
+      "written_at": "2026-10-30T04:54:46.991030+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T04:54:16.325097+00:00",
+  "updated_at": "2026-10-30T04:54:47.008105+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T04:54:47.008105+00:00",
+    "created_at": "2026-10-30T04:54:16.325097+00:00"
+  },
+  "schema_version": "1.0.0"
+}

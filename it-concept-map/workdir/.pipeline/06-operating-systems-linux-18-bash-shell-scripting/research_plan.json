@@ -1,0 +1,43 @@
+{
+  "questions": [],
+  "concept_id": "06-operating-systems-linux-18-bash-shell-scripting",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Bash / Shell Scripting y para que sirve (Automatización mediante scripts)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Bash / Shell Scripting en Operating Systems / Linux"
+    ],
+    "context": [
+      "Como se usa Bash / Shell Scripting en el contexto profesional de Operating Systems / Linux"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Shell",
+      "ask": "Como se relaciona Bash / Shell Scripting con Shell?"
+    },
+    {
+      "with": "Linux CLI",
+      "ask": "Como se relaciona Bash / Shell Scripting con Linux CLI?"
+    },
+    {
+      "with": "Signals",
+      "ask": "Como se relaciona Bash / Shell Scripting con Signals?"
+    }
+  ],
+  "queries": [
+    "site:man7.org Bash / Shell Scripting",
+    "site:kernel.org Bash / Shell Scripting",
+    "site:ostep.org Bash / Shell Scripting",
+    "site:wiki.archlinux.org Bash / Shell Scripting",
+    "site:gnu.org Bash / Shell Scripting",
+    "site:docs.docker.com Bash / Shell Scripting",
+    "site:opencontainers.org Bash / Shell Scripting"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

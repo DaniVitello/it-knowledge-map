@@ -1,0 +1,39 @@
+{
+  "questions": [],
+  "concept_id": "05-networking-internet-09-mac-ethernet",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es MAC / Ethernet y para que sirve (Comunicación dentro de una red local)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de MAC / Ethernet en Networking / Internet"
+    ],
+    "context": [
+      "Como se usa MAC / Ethernet en el contexto profesional de Networking / Internet"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "DHCP",
+      "ask": "Como se relaciona MAC / Ethernet con DHCP?"
+    },
+    {
+      "with": "ARP",
+      "ask": "Como se relaciona MAC / Ethernet con ARP?"
+    }
+  ],
+  "queries": [
+    "site:rfc-editor.org MAC / Ethernet",
+    "site:datatracker.ietf.org MAC / Ethernet",
+    "site:developer.mozilla.org MAC / Ethernet",
+    "site:cloudflare.com MAC / Ethernet",
+    "site:beej.us MAC / Ethernet",
+    "site:hpbn.co MAC / Ethernet",
+    "site:man7.org MAC / Ethernet"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,10 @@
+{
+  "concept_id": "05-networking-internet-12-routers",
+  "is_valid": true,
+  "issues": [],
+  "warnings": [],
+  "score": 1.0,
+  "checked_at": "2026-11-05T23:24:57.261720+00:00",
+  "blocking_failures": [],
+  "verdict": "approved"
+}

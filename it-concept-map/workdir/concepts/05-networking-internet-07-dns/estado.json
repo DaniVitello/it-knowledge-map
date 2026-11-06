@@ -1,0 +1,29 @@
+{
+  "concept_id": "05-networking-internet-07-dns",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-07-dns\\sources.json",
+    "notebook_id": "9d01c3e9-fb05-47d7-a7a4-d7ab2d19c4d1",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-07-dns\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-07-dns\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\05-networking-internet-07-dns\\07 - DNS.md.20261105T231625Z-03675e.bak",
+      "outside_hash": "fa20ad82a4f71e626a9249bc93a4cbc884b2863deee564906d063aafed0ce11b",
+      "inside_hash": "72f6042117f9ce817913f79e0f3cf2d3b60d473810e91ab717a0fe6a10133de0",
+      "written_at": "2026-11-05T23:16:25.377571+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:15:22.344215+00:00",
+  "updated_at": "2026-11-05T23:16:25.396744+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:16:25.396744+00:00",
+    "created_at": "2026-11-05T23:15:22.344215+00:00"
+  },
+  "schema_version": "1.0.0"
+}

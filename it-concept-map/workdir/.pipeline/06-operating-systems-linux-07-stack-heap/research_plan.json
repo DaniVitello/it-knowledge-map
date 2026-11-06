@@ -1,0 +1,39 @@
+{
+  "questions": [],
+  "concept_id": "06-operating-systems-linux-07-stack-heap",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Stack & Heap y para que sirve (Organización de memoria de los procesos)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Stack & Heap en Operating Systems / Linux"
+    ],
+    "context": [
+      "Como se usa Stack & Heap en el contexto profesional de Operating Systems / Linux"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Processes",
+      "ask": "Como se relaciona Stack & Heap con Processes?"
+    },
+    {
+      "with": "Memory Management",
+      "ask": "Como se relaciona Stack & Heap con Memory Management?"
+    }
+  ],
+  "queries": [
+    "site:man7.org Stack & Heap",
+    "site:kernel.org Stack & Heap",
+    "site:ostep.org Stack & Heap",
+    "site:wiki.archlinux.org Stack & Heap",
+    "site:gnu.org Stack & Heap",
+    "site:docs.docker.com Stack & Heap",
+    "site:opencontainers.org Stack & Heap"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

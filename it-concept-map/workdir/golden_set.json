@@ -1,0 +1,242 @@
+[
+  {
+    "id": "01 - Software Engineering/01 - Programming Fundamentals",
+    "path": "01 - Software Engineering/01 - Programming Fundamentals.md",
+    "area": "01 - Software Engineering",
+    "has_marker": true,
+    "trazabilidad": null,
+    "has_pipeline_dir": false,
+    "status": "marked",
+    "phases": {
+      "research": {
+        "status": "pending",
+        "artifact": null
+      },
+      "synthesis": {
+        "status": "pending",
+        "artifact": null
+      },
+      "validation": {
+        "status": "pending",
+        "score": null,
+        "issues": []
+      },
+      "write": {
+        "status": "pending",
+        "file": "01 - Software Engineering/01 - Programming Fundamentals.md"
+      }
+    },
+    "last_error": null,
+    "last_run": null
+  },
+  {
+    "id": "02 - Frontend/01 - Internet & Web",
+    "path": "02 - Frontend/01 - Internet & Web.md",
+    "area": "02 - Frontend",
+    "has_marker": true,
+    "trazabilidad": "run-20261030-020634-64efe8",
+    "has_pipeline_dir": false,
+    "status": "legacy",
+    "phases": {
+      "research": {
+        "status": "done",
+        "artifact": null
+      },
+      "synthesis": {
+        "status": "pending",
+        "artifact": null
+      },
+      "validation": {
+        "status": "pending",
+        "score": null,
+        "issues": []
+      },
+      "write": {
+        "status": "done",
+        "file": "02 - Frontend/01 - Internet & Web.md"
+      }
+    },
+    "last_error": null,
+    "last_run": null
+  },
+  {
+    "id": "03 - Backend/01 - Cliente-Servidor",
+    "path": "03 - Backend/01 - Cliente-Servidor.md",
+    "area": "03 - Backend",
+    "has_marker": true,
+    "trazabilidad": "run-20261030-022226-127d25",
+    "has_pipeline_dir": false,
+    "status": "legacy",
+    "phases": {
+      "research": {
+        "status": "done",
+        "artifact": null
+      },
+      "synthesis": {
+        "status": "pending",
+        "artifact": null
+      },
+      "validation": {
+        "status": "pending",
+        "score": null,
+        "issues": []
+      },
+      "write": {
+        "status": "done",
+        "file": "03 - Backend/01 - Cliente-Servidor.md"
+      }
+    },
+    "last_error": null,
+    "last_run": null
+  },
+  {
+    "id": "04 - Database & Data Analytics/01 - Data Fundamentals",
+    "path": "04 - Database & Data Analytics/01 - Data Fundamentals.md",
+    "area": "04 - Database & Data Analytics",
+    "has_marker": true,
+    "trazabilidad": null,
+    "has_pipeline_dir": false,
+    "status": "marked",
+    "phases": {
+      "research": {
+        "status": "pending",
+        "artifact": null
+      },
+      "synthesis": {
+        "status": "pending",
+        "artifact": null
+      },
+      "validation": {
+        "status": "pending",
+        "score": null,
+        "issues": []
+      },
+      "write": {
+        "status": "pending",
+        "file": "04 - Database & Data Analytics/01 - Data Fundamentals.md"
+      }
+    },
+    "last_error": null,
+    "last_run": null
+  },
+  {
+    "id": "05 - Networking & Internet/01 - Internet",
+    "path": "05 - Networking & Internet/01 - Internet.md",
+    "area": "05 - Networking & Internet",
+    "has_marker": true,
+    "trazabilidad": null,
+    "has_pipeline_dir": false,
+    "status": "marked",
+    "phases": {
+      "research": {
+        "status": "pending",
+        "artifact": null
+      },
+      "synthesis": {
+        "status": "pending",
+        "artifact": null
+      },
+      "validation": {
+        "status": "pending",
+        "score": null,
+        "issues": []
+      },
+      "write": {
+        "status": "pending",
+        "file": "05 - Networking & Internet/01 - Internet.md"
+      }
+    },
+    "last_error": null,
+    "last_run": null
+  },
+  {
+    "id": "06 - Operating Systems & Linux/01 - Operating System",
+    "path": "06 - Operating Systems & Linux/01 - Operating System.md",
+    "area": "06 - Operating Systems & Linux",
+    "has_marker": true,
+    "trazabilidad": null,
+    "has_pipeline_dir": false,
+    "status": "marked",
+    "phases": {
+      "research": {
+        "status": "pending",
+        "artifact": null
+      },
+      "synthesis": {
+        "status": "pending",
+        "artifact": null
+      },
+      "validation": {
+        "status": "pending",
+        "score": null,
+        "issues": []
+      },
+      "write": {
+        "status": "pending",
+        "file": "06 - Operating Systems & Linux/01 - Operating System.md"
+      }
+    },
+    "last_error": null,
+    "last_run": null
+  },
+  {
+    "id": "07 - AI Engineering/01 - AI - ML Fundamentals",
+    "path": "07 - AI Engineering/01 - AI - ML Fundamentals.md",
+    "area": "07 - AI Engineering",
+    "has_marker": true,
+    "trazabilidad": null,
+    "has_pipeline_dir": false,
+    "status": "marked",
+    "phases": {
+      "research": {
+        "status": "pending",
+        "artifact": null
+      },
+      "synthesis": {
+        "status": "pending",
+        "artifact": null
+      },
+      "validation": {
+        "status": "pending",
+        "score": null,
+        "issues": []
+      },
+      "write": {
+        "status": "pending",
+        "file": "07 - AI Engineering/01 - AI - ML Fundamentals.md"
+      }
+    },
+    "last_error": null,
+    "last_run": null
+  },
+  {
+    "id": "08 - UX & UI/01 - Human-Centered Design",
+    "path": "08 - UX & UI/01 - Human-Centered Design.md",
+    "area": "08 - UX & UI",
+    "has_marker": true,
+    "trazabilidad": null,
+    "has_pipeline_dir": false,
+    "status": "marked",
+    "phases": {
+      "research": {
+        "status": "pending",
+        "artifact": null
+      },
+      "synthesis": {
+        "status": "pending",
+        "artifact": null
+      },
+      "validation": {
+        "status": "pending",
+        "score": null,
+        "issues": []
+      },
+      "write": {
+        "status": "pending",
+        "file": "08 - UX & UI/01 - Human-Centered Design.md"
+      }
+    },
+    "last_error": null,
+    "last_run": null
+  }
+]

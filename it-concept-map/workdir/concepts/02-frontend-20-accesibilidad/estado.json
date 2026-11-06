@@ -1,0 +1,29 @@
+{
+  "concept_id": "02-frontend-20-accesibilidad",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\02-frontend-20-accesibilidad\\sources.json",
+    "notebook_id": "c1c9c622-7717-460f-a727-b680fe254d9b",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\02-frontend-20-accesibilidad\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\02-frontend-20-accesibilidad\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\02-frontend-20-accesibilidad\\20 - Accesibilidad.md.20261030T052009Z-1df273.bak",
+      "outside_hash": "26b0d3d276dd2bcf53a8b987ca006d01d9c0fcd8829e3077f6a9b74b5847ff46",
+      "inside_hash": "bbe6c30474f820d68393f9024f98b21a716d0b33acd246d384079922ea8608a0",
+      "written_at": "2026-10-30T05:20:09.730555+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:19:35.219826+00:00",
+  "updated_at": "2026-10-30T05:20:09.752599+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T05:20:09.752599+00:00",
+    "created_at": "2026-10-30T05:19:35.219826+00:00"
+  },
+  "schema_version": "1.0.0"
+}

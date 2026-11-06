@@ -1,0 +1,7 @@
+{"ts": "2026-11-06T21:17:23.809721+00:00", "run_id": "run-20261106-181723-daf11c", "concept_id": "07-ai-engineering-21-ai-safety-security", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-11-06T21:18:36.518117+00:00", "run_id": "run-20261106-181723-daf11c", "concept_id": "07-ai-engineering-21-ai-safety-security", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-06T21:18:40.030617+00:00", "run_id": "run-20261106-181723-daf11c", "concept_id": "07-ai-engineering-21-ai-safety-security", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-06T21:18:40.063328+00:00", "run_id": "run-20261106-181723-daf11c", "concept_id": "07-ai-engineering-21-ai-safety-security", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-06T21:18:40.089629+00:00", "run_id": "run-20261106-181723-daf11c", "concept_id": "07-ai-engineering-21-ai-safety-security", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-06T21:18:40.108229+00:00", "run_id": "run-20261106-181723-daf11c", "concept_id": "07-ai-engineering-21-ai-safety-security", "event": "notebook_delete_failed", "notebook_id": "447a2a0e-121a-4a40-99ef-9c4e1c92401b", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-06T21:18:40.117099+00:00", "run_id": "run-20261106-181723-daf11c", "concept_id": "07-ai-engineering-21-ai-safety-security", "event": "run_end", "status": "completed"}

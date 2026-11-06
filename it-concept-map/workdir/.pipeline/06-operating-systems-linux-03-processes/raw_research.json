@@ -1,0 +1,50 @@
+{
+  "concept_id": "06-operating-systems-linux-03-processes",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "**No tienes fuentes agregadas en tu libreta** sobre **Processes (Programas ejecutándose y su ciclo de vida)**.\n\n¿Te gustaría que realice una **investigación en la web** para recopilar información sobre qué son los procesos, su ciclo de vida y cómo se relacionan con hilos, planificación de CPU y gestión de memoria?",
+      "claims": [
+        {
+          "text": "**No tienes fuentes agregadas en tu libreta** sobre **Processes (Programas ejecutándose y su ciclo de vida)**.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "**Tu libreta aún no contiene fuentes** sobre el funcionamiento de los procesos en Linux y Sistemas Operativos.\n\n¿Te gustaría que realice una **investigación en la web** sobre la ejecución de procesos en Linux (ciclo de vida, estados, `fork`/`exec`, PCB, gestión de memoria y relación con hilos y planificación de CPU) para presentarte la información y guardar las fuentes en tu libreta?",
+      "claims": [
+        {
+          "text": "**Tu libreta aún no contiene fuentes** sobre el funcionamiento de los procesos en Linux y Sistemas Operativos.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "**Tu libreta \"Processes\" aún no cuenta con fuentes cargadas** sobre el ciclo de vida de los procesos y sus relaciones con *Threads*, gestión de memoria (*Stack & Heap*), planificación de CPU, concurrencia y servicios.\n\nPara garantizar respuestas precisas y rastreables a materiales verificables, no desarrollo explicaciones teóricas sin fuentes presentes en tu proyecto.\n\n¿Quieres que realice una **investigación en la web** sobre los procesos en sistemas operativos y sus conexiones clave para traerte un resumen y ofrecerte agregar las fuentes a tu libreta? Si estás de acuerdo, solo responde **\"Sí\"** o **\"Investiga\"** para iniciar la búsqueda.",
+      "claims": [
+        {
+          "text": "**Tu libreta \"Processes\" aún no cuenta con fuentes cargadas** sobre el ciclo de vida de los procesos y sus relaciones con *Threads*, gestión de memoria (*Stack & Heap*), planificación de CPU, concurre",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "5e0ff604-5a16-4bba-afa3-e24e55dc0ad3",
+  "duration_ms": 39330,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\06-operating-systems-linux-03-processes\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

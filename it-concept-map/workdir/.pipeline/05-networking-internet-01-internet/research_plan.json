@@ -1,0 +1,30 @@
+{
+  "questions": [],
+  "concept_id": "05-networking-internet-01-internet",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Internet y para que sirve (Red de redes y modelo cliente-servidor)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Internet en Networking / Internet"
+    ],
+    "context": [
+      "Como se usa Internet en el contexto profesional de Networking / Internet"
+    ]
+  },
+  "relation_questions": [],
+  "queries": [
+    "site:rfc-editor.org Internet",
+    "site:datatracker.ietf.org Internet",
+    "site:developer.mozilla.org Internet",
+    "site:cloudflare.com Internet",
+    "site:beej.us Internet",
+    "site:hpbn.co Internet",
+    "site:man7.org Internet"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,31 @@
+{
+  "concept_id": "03-backend-18-seguridad",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "failed_phase": "synthesizing",
+    "failed_reason": "error",
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\03-backend-18-seguridad\\sources.json",
+    "notebook_id": "9b9d92f0-2d17-44c6-9354-10cf463cb490",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\03-backend-18-seguridad\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\03-backend-18-seguridad\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\03-backend-18-seguridad\\18 - Seguridad.md.20261105T195157Z-f8f114.bak",
+      "outside_hash": "96b4ba07fd0c8d798777ede5c92e0fb8078994a20fd21a1b5d388a5ca122f768",
+      "inside_hash": "5e9e4b8a955cd7def7ad526b2ca5e1a525f44f839879f1cfb758b6015c6a55bb",
+      "written_at": "2026-11-05T19:51:57.378831+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:32:25.144981+00:00",
+  "updated_at": "2026-11-05T19:51:57.402275+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T19:51:57.402275+00:00",
+    "created_at": "2026-10-30T05:32:25.144981+00:00"
+  },
+  "schema_version": "1.0.0"
+}

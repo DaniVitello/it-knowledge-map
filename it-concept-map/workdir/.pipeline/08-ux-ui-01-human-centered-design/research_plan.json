@@ -1,0 +1,30 @@
+{
+  "questions": [],
+  "concept_id": "08-ux-ui-01-human-centered-design",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Human-Centered Design y para que sirve (Diseñar alrededor de necesidades, capacidades y contexto humano)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Human-Centered Design en UX / UI"
+    ],
+    "context": [
+      "Como se usa Human-Centered Design en el contexto profesional de UX / UI"
+    ]
+  },
+  "relation_questions": [],
+  "queries": [
+    "site:nngroup.com Human-Centered Design",
+    "site:w3.org Human-Centered Design",
+    "site:m3.material.io Human-Centered Design",
+    "site:developer.apple.com Human-Centered Design",
+    "site:lawsofux.com Human-Centered Design",
+    "site:baymard.com Human-Centered Design",
+    "site:interaction-design.org Human-Centered Design"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

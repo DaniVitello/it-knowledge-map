@@ -1,0 +1,12 @@
+{"ts": "2026-10-30T05:32:25.088463+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-18-seguridad", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:32:41.128112+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-18-seguridad", "event": "phase_failed", "phase": "research", "error": "research (5ca950bc-a41c-49f3-91d0-d6b91b996dcb): Chat request was rate limited or rejected by the API. Wait a few seconds and try again."}
+{"ts": "2026-11-05T19:30:32.457562+00:00", "run_id": "run-20261105-162522-4ca118", "concept_id": "03-backend-18-seguridad", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T19:31:05.913749+00:00", "run_id": "run-20261105-162522-4ca118", "concept_id": "03-backend-18-seguridad", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T19:31:12.113711+00:00", "run_id": "run-20261105-162522-4ca118", "concept_id": "03-backend-18-seguridad", "event": "phase_failed", "phase": "synthesis", "error": "No se proporciono LLM para la sintesis"}
+{"ts": "2026-11-05T19:51:24.763768+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-18-seguridad", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T19:51:53.101117+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-18-seguridad", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T19:51:57.266050+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-18-seguridad", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T19:51:57.329708+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-18-seguridad", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T19:51:57.388639+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-18-seguridad", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T19:51:57.412137+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-18-seguridad", "event": "notebook_delete_failed", "notebook_id": "9b9d92f0-2d17-44c6-9354-10cf463cb490", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T19:51:57.425377+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-18-seguridad", "event": "run_end", "status": "completed"}

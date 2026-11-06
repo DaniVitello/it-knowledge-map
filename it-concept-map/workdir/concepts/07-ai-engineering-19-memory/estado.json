@@ -1,0 +1,29 @@
+{
+  "concept_id": "07-ai-engineering-19-memory",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\07-ai-engineering-19-memory\\sources.json",
+    "notebook_id": "594c963f-a09a-4dbc-ba70-9966d1b8d1de",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\07-ai-engineering-19-memory\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\07-ai-engineering-19-memory\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\07-ai-engineering-19-memory\\19 - Memory.md.20261106T211618Z-74f528.bak",
+      "outside_hash": "a12adf675e18d80c4dc0e3ab80fca387242a750b4cb67c181695ccf67705c989",
+      "inside_hash": "0f92144a6e9435cc88cc1908e6e4f3f4f3c1c5a3a58aa4c1cb60acb5827db0e9",
+      "written_at": "2026-11-06T21:16:18.521390+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-06T21:15:04.615942+00:00",
+  "updated_at": "2026-11-06T21:16:18.538839+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-06T21:16:18.538839+00:00",
+    "created_at": "2026-11-06T21:15:04.615942+00:00"
+  },
+  "schema_version": "1.0.0"
+}

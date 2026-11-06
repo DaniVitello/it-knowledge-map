@@ -1,0 +1,50 @@
+{
+  "concept_id": "04-database-data-analytics-23-data-visualization",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "**No veo fuentes cargadas en tu libreta** sobre este tema. \n\nComo me baso estrictamente en tus materiales de origen para responder, no genero definiciones ni explicaciones a partir de conocimiento externo sin fuentes cargadas. \n\n¿Te gustaría que realice una **investigación en la web** sobre **Data Visualization** (charts, dashboards, visual encoding, BI y conceptos relacionados) para recopilar la información y responder a tu consulta?",
+      "claims": [
+        {
+          "text": "**No veo fuentes cargadas en tu libreta** sobre este tema. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Esto es lo que encontré sobre **Data Visualization en Analytics y Bases de Datos**:\n\nLa visualización de datos actúa como el puente entre el almacenamiento en bases de datos (SQL, data warehouses) y la toma de decisiones humanas, traduciendo tablas y variables numéricas en atributos gráficos que el cerebro procesa de forma rápida e intuitiva.\n\n**Temas clave que identifiqué:**\n1. **Codificación visual (Visual Encoding)**: Es el proceso fundamental de mapear atributos de datos (cantidades, categorías, fechas) a propiedades visuales (posición en ejes, longitud, color, forma, área). Canales como la posición espacial y la longitud ofrecen la mayor precisión perceptiva según la jerarquía visual humana.\n2. **Flujo desde la Base de Datos a la Analítica**: Las consultas en bases de datos agregan y filtran volúmenes masivos de información que luego alimentan capas semánticas de Business Intelligence (BI), convirtiendo filas y columnas en gráficos (*charts*) individuales.\n3. **Dashboards como superficies de decisión**: Los tableros de control integran múltiples visualizaciones interactivas en una sola vista, permitiendo a los usuarios monitorear KPIs globales y filtrar datos en tiempo real.\n4. **Jerarquía visual y carga cognitiva**: El diseño estructurado prioriza los elementos clave para guiar la atención del usuario (desde la métrica principal a primera vista hasta el desglose detallado mediante interacción).\n\n📥 El informe completo de investigación está incluido como la primera fuente en la tarjeta de importación a continuación; impórtalo para agregar estos contenidos directamente a tu libreta y poder hacer preguntas sobre ellos.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-data-visualization-analytics\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-data-visualization-analytics\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos e informes sobre Data Visualization, codificación visual y dashboards en Data Analytics\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Informe de investigación: Data Visualization en Data Analytics\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQ3Yzk2ODlhMS0wMDAzLTRjOWYtYjc5OC0xNGJiNmRhNzM1NjUSCxIHEPnP8YvcBhgB&filename=Informe_de_investigacin_Data_Visualization_en_Data_Analytics.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Informe de investigación\",\n          \"summary\": \"Informe estructurado con 7 fuentes sobre codificación visual, gráficos, dashboards y jerarquía visual\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"Data Types, Graphical Marks, and Visual Encoding Channels\",\n          \"url\": \"https://idl.uw.edu/visualization-curriculum/altair-marks-encoding/\",\n          \"sourceName\": \"UW Interactive Data Lab\",\n          \"summary\": \"Mapeo de datos cuantitativos, categóricos y temporales a canales de codificación visual\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"Understanding Visual Data Encoding: Position, Length, Angle, Area\",\n          \"url\": \"https://www.quanthub.com/understanding-visual-data-encoding-position-length-angle-slope-area-and-volume/\",\n          \"sourceName\": \"QuantHub\",\n          \"summary\": \"Análisis de la precisión perceptiva de los canales visuales para storytelling con datos\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"The Complete Guide to Data Visualization Dashboards\",\n          \"url\": \"https://www.damcogroup.com/blogs/data-visualization-dashboards-guide\",\n          \"sourceName\": \"Damco Group\",\n          \"summary\": \"Metodología de diseño de dashboards como superficies de decisión operativa e interactiva\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"Data Visualization Dashboard: Types, Tips, and Examples\",\n          \"url\": \"https://www.domo.com/learn/article/data-visualization-dashboards\",\n          \"sourceName\": \"Domo\",\n          \"summary\": \"Consolidación de métricas desde múltiples fuentes de datos en interfaces de control de BI\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"Data visualization best practices for Power BI reports\",\n          \"url\": \"https://tabulareditor.com/blog/data-visualization-best-practices-for-power-bi-reports\",\n          \"sourceName\": \"Tabular Editor\",\n          \"summary\": \"Principios de jerarquía visual y modelo de datos para acelerar la comprensión de informes de BI\"\n        },\n        {\n          \"id\": \"src-6\",\n          \"title\": \"Visual Encoding: Definition, Types, and Hierarchy\",\n          \"url\": \"https://julius.ai/glossary/visual-encoding\",\n          \"sourceName\": \"Julius AI\",\n          \"summary\": \"Conceptos clave sobre la traducción de variables abstractas a formas visuales perceptibles\"\n        },\n        {\n          \"id\": \"src-7\",\n          \"title\": \"What Is Data Visualization? Definition, Examples, and Learning Resources\",\n          \"url\": \"https://www.tableau.com/visualization/what-is-data-visualization\",\n          \"sourceName\": \"Tableau\",\n          \"summary\": \"Fundamentos y valor de la representación gráfica para la analítica empresarial en Big Data\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Esto es lo que encontré sobre **Data Visualization en Analytics y Bases de Datos**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no se han importado a tu libreta las fuentes resultantes de la investigación anterior. \n\n¿Te gustaría que importe esas fuentes a la libreta ahora mismo? Una vez agregadas, podré responder de forma detallada sobre el estado actual y las relaciones de **Data Visualization** basándome directamente en ese contenido.\n\n*(También puedes hacer clic directamente en **Importar** en la tarjeta de fuentes que aparece más arriba).*",
+      "claims": [
+        {
+          "text": "Aún no se han importado a tu libreta las fuentes resultantes de la investigación anterior. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "fd19aa5b-1674-471a-bd41-9da0d77c8450",
+  "duration_ms": 48806,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-23-data-visualization\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

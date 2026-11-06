@@ -1,0 +1,29 @@
+{
+  "concept_id": "05-networking-internet-19-http-methods",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-19-http-methods\\sources.json",
+    "notebook_id": "4048ebe8-deef-4198-9fb4-0a55a13ad24e",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-19-http-methods\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-19-http-methods\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\05-networking-internet-19-http-methods\\19 - HTTP Methods.md.20261105T233122Z-979235.bak",
+      "outside_hash": "58324e493dcd9b8e2d9cfc5285626db455d3ff21c871d10328a33e1b42179dd6",
+      "inside_hash": "ff3df2a39338b63926bf4610d30c77c44d9c2c46ad95aa022b20140761623d40",
+      "written_at": "2026-11-05T23:31:22.645069+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:30:22.041274+00:00",
+  "updated_at": "2026-11-05T23:31:22.663397+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:31:22.663397+00:00",
+    "created_at": "2026-11-05T23:30:22.041274+00:00"
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,26 @@
+{"ts": "2026-10-30T05:06:34.665077+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-01-internet-web", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:07:45.666463+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-01-internet-web", "event": "phase_done", "phase": "research"}
+{"ts": "2026-10-30T05:07:49.251928+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-01-internet-web", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-10-30T05:07:49.292291+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-01-internet-web", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-10-30T05:07:49.343078+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-01-internet-web", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-10-30T05:07:49.362680+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-01-internet-web", "event": "notebook_delete_failed", "notebook_id": "56056fd9-20ec-4090-a435-35ade9d36b1f", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-10-30T05:07:49.376031+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-01-internet-web", "event": "run_end", "status": "completed"}
+{"ts": "2026-10-30T05:17:48.034597+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-01-internet-web", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:17:48.059038+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-01-internet-web", "event": "idempotency_hash_mismatch", "stored": "bc73190c0dbd220b9e62e8a3c5e69aebe84aa34a7ccb25cfff7d828185d185db", "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+{"ts": "2026-10-30T05:17:48.060691+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-01-internet-web", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T15:29:18.412230+00:00", "run_id": "run-20261105-122918-71b64e", "concept_id": "02-frontend-01-internet-web", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-11-05T15:30:17.313761+00:00", "run_id": "run-20261105-122918-71b64e", "concept_id": "02-frontend-01-internet-web", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T15:30:20.831364+00:00", "run_id": "run-20261105-122918-71b64e", "concept_id": "02-frontend-01-internet-web", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T15:30:20.870027+00:00", "run_id": "run-20261105-122918-71b64e", "concept_id": "02-frontend-01-internet-web", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T15:30:20.910955+00:00", "run_id": "run-20261105-122918-71b64e", "concept_id": "02-frontend-01-internet-web", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T15:30:20.929299+00:00", "run_id": "run-20261105-122918-71b64e", "concept_id": "02-frontend-01-internet-web", "event": "notebook_delete_failed", "notebook_id": "39252637-45b6-45e2-b0e2-fcdbb4c92995", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T15:30:20.938143+00:00", "run_id": "run-20261105-122918-71b64e", "concept_id": "02-frontend-01-internet-web", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T16:54:42.637018+00:00", "run_id": "run-20261105-135442-4f7aea", "concept_id": "02-frontend-01-internet-web", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T16:55:43.010146+00:00", "run_id": "run-20261105-135442-4f7aea", "concept_id": "02-frontend-01-internet-web", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T16:55:46.345775+00:00", "run_id": "run-20261105-135442-4f7aea", "concept_id": "02-frontend-01-internet-web", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T16:55:46.380384+00:00", "run_id": "run-20261105-135442-4f7aea", "concept_id": "02-frontend-01-internet-web", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T16:55:46.423129+00:00", "run_id": "run-20261105-135442-4f7aea", "concept_id": "02-frontend-01-internet-web", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T16:55:46.440115+00:00", "run_id": "run-20261105-135442-4f7aea", "concept_id": "02-frontend-01-internet-web", "event": "notebook_delete_failed", "notebook_id": "37d4bd66-5705-4b00-a1fd-d1877ccdd0f5", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T16:55:46.449543+00:00", "run_id": "run-20261105-135442-4f7aea", "concept_id": "02-frontend-01-internet-web", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T22:39:41.542678+00:00", "run_id": "run-20261105-193941-b2c223", "concept_id": "02-frontend-01-internet-web", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T22:39:41.575552+00:00", "run_id": "run-20261105-193941-b2c223", "concept_id": "02-frontend-01-internet-web", "event": "run_end", "status": "completed"}

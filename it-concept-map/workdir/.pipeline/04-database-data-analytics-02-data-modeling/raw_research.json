@@ -1,0 +1,50 @@
+{
+  "concept_id": "04-database-data-analytics-02-data-modeling",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No tienes fuentes agregadas a tu libreta para responder sobre **Data Modeling** (modelado de entidades, relaciones, estructuras, bases de datos relacionales, claves y normalización).\n\n¿Te gustaría que realice una **investigación en la web** sobre este tema para brindarte la información?",
+      "claims": [
+        {
+          "text": "No tienes fuentes agregadas a tu libreta para responder sobre **Data Modeling** (modelado de entidades, relaciones, estructuras, bases de datos relacionales, claves y normalización).",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Tu libreta aún no cuenta con fuentes cargadas sobre **Data Modeling en bases de datos y analítica de datos** (entidades, relaciones, estructuras, claves y normalización). Para garantizar que toda la información esté debidamente respaldada en tus documentos, no genero respuestas a partir de conocimiento general.\n\n¿Te gustaría que realice una **investigación en la web** sobre cómo funciona el modelado de datos en este contexto? Si estás de acuerdo, buscaré la información relevante, te responderé en detalle y te presentaré los recursos encontrados por si deseas agregarlos a tu libreta.",
+      "claims": [
+        {
+          "text": "Tu libreta aún no cuenta con fuentes cargadas sobre **Data Modeling en bases de datos y analítica de datos** (entidades, relaciones, estructuras, claves y normalización). Para garantizar que toda la i",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Tu libreta no contiene fuentes sobre el **estado actual y las relaciones en Data Modeling** (modelado de datos, bases de datos relacionales, claves, restricciones y normalización). Para mantener la precisión y asegurar que la información provenga de fuentes verificables, no genero respuestas a partir de conocimiento general.\n\n¿Te gustaría que realice una **investigación en la web** sobre las estructuras, relaciones y el estado actual del modelado de datos?",
+      "claims": [
+        {
+          "text": "Tu libreta no contiene fuentes sobre el **estado actual y las relaciones en Data Modeling** (modelado de datos, bases de datos relacionales, claves, restricciones y normalización). Para mantener la pr",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "6ffcf730-3810-4ebf-84d5-215ad9c2016e",
+  "duration_ms": 39724,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-02-data-modeling\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

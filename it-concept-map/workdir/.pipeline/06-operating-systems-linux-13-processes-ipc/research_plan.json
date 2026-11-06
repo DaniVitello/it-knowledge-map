@@ -1,0 +1,39 @@
+{
+  "questions": [],
+  "concept_id": "06-operating-systems-linux-13-processes-ipc",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Processes IPC y para que sirve (Comunicación entre procesos)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Processes IPC en Operating Systems / Linux"
+    ],
+    "context": [
+      "Como se usa Processes IPC en el contexto profesional de Operating Systems / Linux"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Sockets",
+      "ask": "Como se relaciona Processes IPC con Sockets?"
+    },
+    {
+      "with": "Signals",
+      "ask": "Como se relaciona Processes IPC con Signals?"
+    }
+  ],
+  "queries": [
+    "site:man7.org Processes IPC",
+    "site:kernel.org Processes IPC",
+    "site:ostep.org Processes IPC",
+    "site:wiki.archlinux.org Processes IPC",
+    "site:gnu.org Processes IPC",
+    "site:docs.docker.com Processes IPC",
+    "site:opencontainers.org Processes IPC"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

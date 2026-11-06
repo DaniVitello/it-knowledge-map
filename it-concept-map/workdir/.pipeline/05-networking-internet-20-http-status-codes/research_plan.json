@@ -1,0 +1,51 @@
+{
+  "questions": [],
+  "concept_id": "05-networking-internet-20-http-status-codes",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es HTTP Status Codes y para que sirve (2xx, 3xx, 4xx, 5xx)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de HTTP Status Codes en Networking / Internet"
+    ],
+    "context": [
+      "Como se usa HTTP Status Codes en el contexto profesional de Networking / Internet"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Internet & Web",
+      "ask": "Como se relaciona HTTP Status Codes con Internet & Web?"
+    },
+    {
+      "with": "HTTP",
+      "ask": "Como se relaciona HTTP Status Codes con HTTP?"
+    },
+    {
+      "with": "Request / Response",
+      "ask": "Como se relaciona HTTP Status Codes con Request / Response?"
+    },
+    {
+      "with": "HTTP Methods",
+      "ask": "Como se relaciona HTTP Status Codes con HTTP Methods?"
+    },
+    {
+      "with": "Headers / Cookies",
+      "ask": "Como se relaciona HTTP Status Codes con Headers / Cookies?"
+    }
+  ],
+  "queries": [
+    "site:rfc-editor.org HTTP Status Codes",
+    "site:datatracker.ietf.org HTTP Status Codes",
+    "site:developer.mozilla.org HTTP Status Codes",
+    "site:cloudflare.com HTTP Status Codes",
+    "site:beej.us HTTP Status Codes",
+    "site:hpbn.co HTTP Status Codes",
+    "site:man7.org HTTP Status Codes"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,43 @@
+{
+  "questions": [],
+  "concept_id": "05-networking-internet-15-osi-tcp-ip-model",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es OSI / TCP-IP Model y para que sirve (Capas y responsabilidades de networking)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de OSI / TCP-IP Model en Networking / Internet"
+    ],
+    "context": [
+      "Como se usa OSI / TCP-IP Model en el contexto profesional de Networking / Internet"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "IP",
+      "ask": "Como se relaciona OSI / TCP-IP Model con IP?"
+    },
+    {
+      "with": "TCP",
+      "ask": "Como se relaciona OSI / TCP-IP Model con TCP?"
+    },
+    {
+      "with": "HTTP",
+      "ask": "Como se relaciona OSI / TCP-IP Model con HTTP?"
+    }
+  ],
+  "queries": [
+    "site:rfc-editor.org OSI / TCP-IP Model",
+    "site:datatracker.ietf.org OSI / TCP-IP Model",
+    "site:developer.mozilla.org OSI / TCP-IP Model",
+    "site:cloudflare.com OSI / TCP-IP Model",
+    "site:beej.us OSI / TCP-IP Model",
+    "site:hpbn.co OSI / TCP-IP Model",
+    "site:man7.org OSI / TCP-IP Model"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

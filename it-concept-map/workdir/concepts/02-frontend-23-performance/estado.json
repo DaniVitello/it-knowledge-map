@@ -1,0 +1,29 @@
+{
+  "concept_id": "02-frontend-23-performance",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\02-frontend-23-performance\\sources.json",
+    "notebook_id": "be1cae22-acd2-4f9a-b602-b9cddec9ee36",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\02-frontend-23-performance\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\02-frontend-23-performance\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\02-frontend-23-performance\\23 - Performance.md.20261030T052132Z-d91359.bak",
+      "outside_hash": "7b3e22a519a6cf53f2e8e3969539679274815859b96aee1d97764e4cdb7499e7",
+      "inside_hash": "10388fa65734a822c4caa546cefdafe133b04335e3f7cabed0c3d5e485846b38",
+      "written_at": "2026-10-30T05:21:32.681206+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:20:59.142788+00:00",
+  "updated_at": "2026-10-30T05:21:32.713573+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T05:21:32.713573+00:00",
+    "created_at": "2026-10-30T05:20:59.142788+00:00"
+  },
+  "schema_version": "1.0.0"
+}

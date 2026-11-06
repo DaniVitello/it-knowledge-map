@@ -1,0 +1,31 @@
+{
+  "concept_id": "04-database-data-analytics-03-relational-databases",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "failed_phase": "researching",
+    "failed_reason": "error",
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-03-relational-databases\\sources.json",
+    "notebook_id": "de255005-adf4-47ac-9c8c-5031def521d5",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-03-relational-databases\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-03-relational-databases\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\04-database-data-analytics-03-relational-databases\\03 - Relational Databases.md.20261105T181942Z-b40634.bak",
+      "outside_hash": "1328664583e5d584d0a76a634585c3df1c8dfd4df1122bf2649ccd1b138e6344",
+      "inside_hash": "b651c1bc6d8c38c39a23954bb7fef79d8b82fa3c1e7a8222a8b87f657e771007",
+      "written_at": "2026-11-05T18:19:42.527815+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:35:25.828450+00:00",
+  "updated_at": "2026-11-05T18:19:42.549235+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T18:19:42.549235+00:00",
+    "created_at": "2026-10-30T05:35:25.828450+00:00"
+  },
+  "schema_version": "1.0.0"
+}

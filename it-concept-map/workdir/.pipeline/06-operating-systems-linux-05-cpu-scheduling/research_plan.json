@@ -1,0 +1,43 @@
+{
+  "questions": [],
+  "concept_id": "06-operating-systems-linux-05-cpu-scheduling",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es CPU & Scheduling y para que sirve (Cómo el SO distribuye tiempo de CPU)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de CPU & Scheduling en Operating Systems / Linux"
+    ],
+    "context": [
+      "Como se usa CPU & Scheduling en el contexto profesional de Operating Systems / Linux"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Concurrency",
+      "ask": "Como se relaciona CPU & Scheduling con Concurrency?"
+    },
+    {
+      "with": "Processes",
+      "ask": "Como se relaciona CPU & Scheduling con Processes?"
+    },
+    {
+      "with": "Threads",
+      "ask": "Como se relaciona CPU & Scheduling con Threads?"
+    }
+  ],
+  "queries": [
+    "site:man7.org CPU & Scheduling",
+    "site:kernel.org CPU & Scheduling",
+    "site:ostep.org CPU & Scheduling",
+    "site:wiki.archlinux.org CPU & Scheduling",
+    "site:gnu.org CPU & Scheduling",
+    "site:docs.docker.com CPU & Scheduling",
+    "site:opencontainers.org CPU & Scheduling"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

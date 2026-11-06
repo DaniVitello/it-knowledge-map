@@ -1,0 +1,7 @@
+{"ts": "2026-11-05T22:58:18.964737+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-14-data-warehouses", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T22:59:17.679357+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-14-data-warehouses", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T22:59:21.445734+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-14-data-warehouses", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T22:59:21.483627+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-14-data-warehouses", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T22:59:21.511853+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-14-data-warehouses", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T22:59:21.529567+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-14-data-warehouses", "event": "notebook_delete_failed", "notebook_id": "1156c287-2e4b-4e83-bb12-7962c99ea33e", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T22:59:21.538881+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-14-data-warehouses", "event": "run_end", "status": "completed"}

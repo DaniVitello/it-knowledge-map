@@ -1,0 +1,29 @@
+{
+  "concept_id": "01-software-engineering-18-debugging",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\01-software-engineering-18-debugging\\sources.json",
+    "notebook_id": "9514a965-a07e-4e57-bc8e-6d0d76960a99",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-18-debugging\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-18-debugging\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\01-software-engineering-18-debugging\\18 - Debugging.md.20261030T044916Z-9495e7.bak",
+      "outside_hash": "61d24a1bcfa85fe2ee7c62b047e066eafae02f2732015e755de88f8b524964ee",
+      "inside_hash": "4a405c8471c38353ac4b25aa8eba46c256a5110bb4fc9ea2a7f5541eef755e6e",
+      "written_at": "2026-10-30T04:49:16.717431+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T04:48:40.179889+00:00",
+  "updated_at": "2026-10-30T04:49:16.737052+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T04:49:16.737052+00:00",
+    "created_at": "2026-10-30T04:48:40.179889+00:00"
+  },
+  "schema_version": "1.0.0"
+}

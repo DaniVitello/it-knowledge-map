@@ -1,0 +1,7 @@
+{"ts": "2026-11-05T23:30:21.944336+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-19-http-methods", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:31:18.925903+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-19-http-methods", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T23:31:22.585644+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-19-http-methods", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T23:31:22.622318+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-19-http-methods", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T23:31:22.652375+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-19-http-methods", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T23:31:22.671072+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-19-http-methods", "event": "notebook_delete_failed", "notebook_id": "4048ebe8-deef-4198-9fb4-0a55a13ad24e", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T23:31:22.682470+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-19-http-methods", "event": "run_end", "status": "completed"}

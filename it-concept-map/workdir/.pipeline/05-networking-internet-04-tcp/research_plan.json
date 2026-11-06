@@ -1,0 +1,59 @@
+{
+  "questions": [],
+  "concept_id": "05-networking-internet-04-tcp",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es TCP y para que sirve (Comunicación confiable orientada a conexión)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de TCP en Networking / Internet"
+    ],
+    "context": [
+      "Como se usa TCP en el contexto profesional de Networking / Internet"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "IP",
+      "ask": "Como se relaciona TCP con IP?"
+    },
+    {
+      "with": "UDP",
+      "ask": "Como se relaciona TCP con UDP?"
+    },
+    {
+      "with": "Puertos",
+      "ask": "Como se relaciona TCP con Puertos?"
+    },
+    {
+      "with": "OSI / TCP-IP Model",
+      "ask": "Como se relaciona TCP con OSI / TCP-IP Model?"
+    },
+    {
+      "with": "HTTP",
+      "ask": "Como se relaciona TCP con HTTP?"
+    },
+    {
+      "with": "Sockets",
+      "ask": "Como se relaciona TCP con Sockets?"
+    },
+    {
+      "with": "Networking en Linux",
+      "ask": "Como se relaciona TCP con Networking en Linux?"
+    }
+  ],
+  "queries": [
+    "site:rfc-editor.org TCP",
+    "site:datatracker.ietf.org TCP",
+    "site:developer.mozilla.org TCP",
+    "site:cloudflare.com TCP",
+    "site:beej.us TCP",
+    "site:hpbn.co TCP",
+    "site:man7.org TCP"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,50 @@
+{
+  "concept_id": "05-networking-internet-03-ipv4-ipv6",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No veo ninguna fuente guardada en tu libreta que cubra **IPv4 e IPv6**. \n\n¿Te gustaría que realice una investigación en la web sobre las versiones del protocolo IP (IPv4 / IPv6) y sus conceptos relacionados (IP, DHCP, ARP, Subnetting / CIDR) para responder a tu consulta?",
+      "claims": [
+        {
+          "text": "No veo ninguna fuente guardada en tu libreta que cubra **IPv4 e IPv6**. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Esto es lo que encontré sobre **IPv4, IPv6 y el funcionamiento de los protocolos de red**:\n\nEl protocolo de Internet (IP) opera en la capa de red (Capa 3) para etiquetar y enrutar paquetes de datos entre dispositivos. La transición de IPv4 (direcciones de 32 bits en notación decimal) a IPv6 (direcciones de 128 bits en hexadecimal) resuelve el problema del agotamiento global de direcciones IP, eliminando la dependencia de mecanismos como NAT y agregando autoconfiguración y seguridad nativas.\n\n**Temas clave identificados:**\n1. **Estructura y Direccionamiento (IPv4 vs. IPv6)**: IPv4 proporciona ~4.300 millones de direcciones (`192.168.1.1`), mientras que IPv6 ofrece 340 sextillones (`2001:db8::1`), permitiendo asignación directa punto a punto para cada dispositivo.\n2. **Asignación y Resolución (DHCP y ARP)**: En IPv4, DHCP asigna direcciones dinámicamente y ARP mapea direcciones IP a direcciones MAC en la red local. En IPv6, la autoconfiguración sin estado (SLAAC) e ICMPv6 reemplazan estas funciones de forma nativa.\n3. **Optimización de Red (Subnetting y CIDR)**: El subnetting y la notación CIDR (ejemplo: `/24`) permiten segmentar redes eficazmente, reduciendo el desperdicio de direcciones IP y mejorando el rendimiento del enrutamiento.\n\n📥 El reporte de investigación completo y las fuentes encontradas están disponibles en la tarjeta a continuación. Si deseas analizarlos o realizar preguntas grounded directamente en tus notas, selecciona las fuentes e impórtalas a tu libreta.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-ipv4-ipv6\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-ipv4-ipv6\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos técnicos y guías sobre IPv4, IPv6, DHCP, ARP y Subnetting / CIDR\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Reporte de investigación: IPv4 y IPv6\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQyYThmOWQzMi0zMTc1LTQ3ODctOTE4MC1iMDAzZjgyYjRkMWQSCxIHEPnP8YvcBhgB&filename=Reporte_de_investigacin_IPv4_y_IPv6.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Reporte de investigación\",\n          \"summary\": \"Informe completo de investigación con 6 fuentes sobre IPv4, IPv6, DHCP, ARP y Subnetting.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"IPv4 vs IPv6: Diferencia entre las versiones del protocolo de Internet\",\n          \"url\": \"https://aws.amazon.com/es/compare/the-difference-between-ipv4-and-ipv6/\",\n          \"sourceName\": \"AWS\",\n          \"summary\": \"Comparativa técnica sobre direcciones de 32 bits vs 128 bits, agotamiento de IPv4 y autoconfiguración en IPv6.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"Guía para principiantes sobre IPv4 e IPv6\",\n          \"url\": \"https://dataimpulse.com/es/blog/beginners-guide-on-ipv4-and-ipv6/\",\n          \"sourceName\": \"DataImpulse\",\n          \"summary\": \"Explicación del direccionamiento IP, rol del protocolo DHCP, traducción NAT y autoconfiguración SLAAC.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"Direccionamiento IP: IPv4, IPv6, Subnetting y CIDR\",\n          \"url\": \"https://subnetmaster.es/guia/direccionamiento-ip/\",\n          \"sourceName\": \"SubnetMaster\",\n          \"summary\": \"Guía completa sobre la división en subredes, notación CIDR, máscaras de red y arquitectura IPv4 e IPv6.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"IPv4 vs IPv6: diferencias, ventajas y transición\",\n          \"url\": \"https://www.captaindns.com/es/blog/ipv4-vs-ipv6\",\n          \"sourceName\": \"CaptainDNS\",\n          \"summary\": \"Análisis del espacio de direcciones, coexistencia Dual-Stack, registros DNS (A y AAAA) y rendimiento de red.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"Protocolos de la capa de red: IPv4, IPv6, ARP, DHCP, CIDR\",\n          \"url\": \"https://www.tutorialesprogramacionya.com/protocolosredes/capadered/\",\n          \"sourceName\": \"Tutoriales Programación Ya\",\n          \"summary\": \"Tutorial interactivo sobre encapsulación en la Capa 3, protocolo ARP, DHCP, NAT y superneteo CIDR.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Esto es lo que encontré sobre **IPv4, IPv6 y el funcionamiento de los protocolos de red**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Todavía no he añadido las fuentes que investigamos a tu libreta. \n\n¿Quieres que las importe ahora? Una vez guardadas en tus fuentes, podré responder detalladamente a tus preguntas sobre el estado actual y las relaciones entre IPv4, IPv6, DHCP, ARP y Subnetting / CIDR basándome directamente en ellas.\n\n*(También puedes importarlas en cualquier momento seleccionándolas en la tarjeta de investigación del mensaje anterior).*",
+      "claims": [
+        {
+          "text": "Todavía no he añadido las fuentes que investigamos a tu libreta. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "257476ab-8c85-428b-8ce6-46276a129fa6",
+  "duration_ms": 56804,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-03-ipv4-ipv6\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

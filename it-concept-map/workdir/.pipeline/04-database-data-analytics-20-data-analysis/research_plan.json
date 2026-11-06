@@ -1,0 +1,55 @@
+{
+  "questions": [],
+  "concept_id": "04-database-data-analytics-20-data-analysis",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Data Analysis y para que sirve (Exploración, patrones, tendencias, correlaciones)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Data Analysis en Database / Data Analytics"
+    ],
+    "context": [
+      "Como se usa Data Analysis en el contexto profesional de Database / Data Analytics"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Data Quality",
+      "ask": "Como se relaciona Data Analysis con Data Quality?"
+    },
+    {
+      "with": "Data Cleaning",
+      "ask": "Como se relaciona Data Analysis con Data Cleaning?"
+    },
+    {
+      "with": "Statistics",
+      "ask": "Como se relaciona Data Analysis con Statistics?"
+    },
+    {
+      "with": "Analytics Metrics",
+      "ask": "Como se relaciona Data Analysis con Analytics Metrics?"
+    },
+    {
+      "with": "Data Visualization",
+      "ask": "Como se relaciona Data Analysis con Data Visualization?"
+    },
+    {
+      "with": "BI & Reporting",
+      "ask": "Como se relaciona Data Analysis con BI & Reporting?"
+    }
+  ],
+  "queries": [
+    "site:postgresql.org Data Analysis",
+    "site:sqlite.org Data Analysis",
+    "site:dev.mysql.com Data Analysis",
+    "site:use-the-index-luke.com Data Analysis",
+    "site:learn.microsoft.com Data Analysis",
+    "site:docs.snowflake.com Data Analysis",
+    "site:openstax.org Data Analysis"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

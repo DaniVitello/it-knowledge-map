@@ -1,0 +1,50 @@
+{
+  "concept_id": "05-networking-internet-18-request-response",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No veo fuentes en tu cuaderno que traten sobre el modelo **Request / Response** (Petición / Respuesta) ni sobre protocolos web. \n\nPara mantener la precisión y respaldar todas las respuestas en tus propias fuentes, no respondo desde conocimientos externos sin material de origen. ¿Te gustaría que haga una **investigación en la web** sobre el modelo de comunicación Request / Response y los conceptos relacionados (HTTP, métodos, encabezados, etc.)?",
+      "claims": [
+        {
+          "text": "No veo fuentes en tu cuaderno que traten sobre el modelo **Request / Response** (Petición / Respuesta) ni sobre protocolos web. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Tu cuaderno sigue sin contener fuentes sobre el funcionamiento del modelo **Request / Response** en redes e Internet. \n\nPara poder ofrecerte una explicación precisa y fundamentada sin recurrir a información no verificada de mi entrenamiento previo, ¿te gustaría que haga una **investigación en la web** sobre cómo funciona este modelo (arquitectura cliente-servidor, HTTP, métodos, códigos de estado, encabezados, etc.) y te presente los hallazgos?",
+      "claims": [
+        {
+          "text": "Tu cuaderno sigue sin contener fuentes sobre el funcionamiento del modelo **Request / Response** en redes e Internet. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Tu cuaderno sigue sin fuentes que cubran el estado actual ni las relaciones del modelo **Request / Response** (como protocolos HTTP, métodos HTTP, códigos de estado, encabezados o cookies).\n\nComo todas las respuestas en Gemini Notebook deben estar respaldadas por tus materiales, no puedo explicártelo usando conocimiento externo sin fuentes. ¿Quieres que realice una **investigación en la web** sobre el modelo Request / Response y sus conceptos relacionados para presentar los hallazgos?",
+      "claims": [
+        {
+          "text": "Tu cuaderno sigue sin fuentes que cubran el estado actual ni las relaciones del modelo **Request / Response** (como protocolos HTTP, métodos HTTP, códigos de estado, encabezados o cookies).",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "bc843adb-7fd8-427f-be23-ecabd396e212",
+  "duration_ms": 33862,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-18-request-response\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

@@ -1,0 +1,29 @@
+{
+  "concept_id": "05-networking-internet-04-tcp",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-04-tcp\\sources.json",
+    "notebook_id": "a01bbeed-d4f3-4d39-ae00-e1b2b11faa15",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-04-tcp\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-04-tcp\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\05-networking-internet-04-tcp\\04 - TCP.md.20261105T231314Z-e1b864.bak",
+      "outside_hash": "d2ad34ba39349dc4deb59a264500eadeb8d9ea94b0a632ac17d21307485450fc",
+      "inside_hash": "84440f4e6dcf756f7e2b5f3c4bf9e8d52045c31b0c0325fd400b391b97bebc86",
+      "written_at": "2026-11-05T23:13:14.573603+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:12:39.062707+00:00",
+  "updated_at": "2026-11-05T23:13:14.591874+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:13:14.591874+00:00",
+    "created_at": "2026-11-05T23:12:39.062707+00:00"
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,20 @@
+{
+  "concept_id": "06-operating-systems-linux-17-linux-cli",
+  "status": "failed",
+  "last_good_state": "researching",
+  "checkpoint": null,
+  "phase_data": {
+    "failed_phase": "researching",
+    "failed_reason": "error"
+  },
+  "error": "research (f3f30a80-28e5-4dc6-ae76-3641c463ce53): Chat request was rate limited or rejected by the API. Wait a few seconds and try again.",
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:48:28.034636+00:00",
+  "updated_at": "2026-11-05T23:48:45.246301+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:48:45.246276+00:00",
+    "created_at": "2026-11-05T23:48:28.034636+00:00"
+  },
+  "schema_version": "1.0.0"
+}

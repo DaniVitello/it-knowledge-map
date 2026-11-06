@@ -1,0 +1,31 @@
+{
+  "concept_id": "04-database-data-analytics-07-keys-constraints",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "failed_phase": "researching",
+    "failed_reason": "error",
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-07-keys-constraints\\sources.json",
+    "notebook_id": "f6862f55-21e6-4da8-8bf1-6d768ab8278e",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-07-keys-constraints\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-07-keys-constraints\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\04-database-data-analytics-07-keys-constraints\\07 - Keys & Constraints.md.20261105T225211Z-7350e9.bak",
+      "outside_hash": "40c3e5c0e52a6fb9eef3fd516d0e4b6f7f5126018afabad18b8ee6b4ccbd2424",
+      "inside_hash": "ad8a435dc62a6d8911b41983806a7f30263a9947064995d0815063a760d330fb",
+      "written_at": "2026-11-05T22:52:11.849669+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:36:31.976794+00:00",
+  "updated_at": "2026-11-05T22:52:11.868246+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T22:52:11.868246+00:00",
+    "created_at": "2026-10-30T05:36:31.976794+00:00"
+  },
+  "schema_version": "1.0.0"
+}

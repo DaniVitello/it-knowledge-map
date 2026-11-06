@@ -1,0 +1,51 @@
+{
+  "questions": [],
+  "concept_id": "04-database-data-analytics-13-nosql",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es NoSQL y para que sirve (Document, key-value, wide-column, graph databases)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de NoSQL en Database / Data Analytics"
+    ],
+    "context": [
+      "Como se usa NoSQL en el contexto profesional de Database / Data Analytics"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Bases de datos",
+      "ask": "Como se relaciona NoSQL con Bases de datos?"
+    },
+    {
+      "with": "Relational Databases",
+      "ask": "Como se relaciona NoSQL con Relational Databases?"
+    },
+    {
+      "with": "Database Architecture",
+      "ask": "Como se relaciona NoSQL con Database Architecture?"
+    },
+    {
+      "with": "Embeddings",
+      "ask": "Como se relaciona NoSQL con Embeddings?"
+    },
+    {
+      "with": "Vector Databases",
+      "ask": "Como se relaciona NoSQL con Vector Databases?"
+    }
+  ],
+  "queries": [
+    "site:postgresql.org NoSQL",
+    "site:sqlite.org NoSQL",
+    "site:dev.mysql.com NoSQL",
+    "site:use-the-index-luke.com NoSQL",
+    "site:learn.microsoft.com NoSQL",
+    "site:docs.snowflake.com NoSQL",
+    "site:openstax.org NoSQL"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

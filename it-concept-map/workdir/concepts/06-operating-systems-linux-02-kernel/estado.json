@@ -1,0 +1,29 @@
+{
+  "concept_id": "06-operating-systems-linux-02-kernel",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\06-operating-systems-linux-02-kernel\\sources.json",
+    "notebook_id": "24ab1166-3e1d-4cfb-9e3f-54dba09bcda6",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\06-operating-systems-linux-02-kernel\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\06-operating-systems-linux-02-kernel\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\06-operating-systems-linux-02-kernel\\02 - Kernel.md.20261105T234102Z-0404da.bak",
+      "outside_hash": "85dc7002b408ae3e2488acad6edc42c7383d84531a3b9aa5b003080d9d60342e",
+      "inside_hash": "5f69f4f19c3ec9b1f218d04fa4967b1410a848e8e2f99aa2999185bf962ad863",
+      "written_at": "2026-11-05T23:41:03.011006+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:40:04.193599+00:00",
+  "updated_at": "2026-11-05T23:41:03.029081+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:41:03.029081+00:00",
+    "created_at": "2026-11-05T23:40:04.193599+00:00"
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,50 @@
+{
+  "concept_id": "05-networking-internet-01-internet",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "**No veo fuentes cargadas en tu libreta** sobre este tema. Para asegurar que toda la información esté debidamente fundamentada y verificable en tus materiales, no puedo responder directamente desde mi conocimiento general.\n\n¿Te gustaría que realice una **investigación en la web** sobre **qué es Internet, la red de redes, el modelo cliente-servidor y para qué sirve**?",
+      "claims": [
+        {
+          "text": "**No veo fuentes cargadas en tu libreta** sobre este tema. Para asegurar que toda la información esté debidamente fundamentada y verificable en tus materiales, no puedo responder directamente desde mi",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Aquí tienes lo que encontré sobre **Internet, la red de redes y el modelo cliente-servidor**:\n\nInternet funciona como una gran infraestructura global descentralizada que interconecta redes individuales de todo el mundo mediante protocolos estandarizados (como TCP/IP). En esta estructura, el modelo cliente-servidor es el principio clave que permite solicitar y servir información de forma eficiente entre los dispositivos de los usuarios y las computadoras centralizadas que almacenan los datos.\n\n**Temas clave identificados:**\n1. **Infraestructura de Red de Redes:** Conexión global de dispositivos y redes locales interconectadas bajo reglas comunes de comunicación.\n2. **Modelo Cliente-Servidor:** Arquitectura distribuida donde los clientes (navegadores o apps) envían peticiones y los servidores procesan y entregan las respuestas.\n3. **Mecanismo de Comunicación:** Uso de direcciones IP, servidores DNS para traducir nombres de dominio y protocolos de transporte/aplicación (TCP/IP, HTTP/HTTPS).\n4. **Propósito y Servicios:** Facilita el acceso a páginas web, servicios en la nube, streaming de video, correo electrónico e intercambio de datos.\n\n📥 El reporte de investigación completo se incluye como la primera fuente en la tarjeta de importación a continuación; impórtalo para poder analizar estos hallazgos directamente en tu libreta.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-internet-cliente-servidor\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-internet-cliente-servidor\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos técnicos y guías sobre el funcionamiento de Internet y el modelo cliente-servidor\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Reporte de investigación: Internet y modelo cliente-servidor\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiRkZTA2Nzk2Ny04NmQ1LTRiYzktYTQ5OS0zODI3MWMwOGQzYjUSCxIHENqe1-OQCxgB&filename=Reporte_de_investigacion_Internet.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Reporte de Investigación\",\n          \"summary\": \"Reporte completo de investigación con 5 fuentes sobre la arquitectura cliente-servidor y la red de redes.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"¿Cómo funciona el modelo cliente-servidor?\",\n          \"url\": \"https://www.ionos.com/es-us/digitalguide/servidores/know-how/modelo-cliente-servidor/\",\n          \"sourceName\": \"IONOS\",\n          \"summary\": \"Explicación del principio cliente-servidor y la distribución de tareas entre clientes y servidores.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"Arquitectura cliente-servidor: qué es, tipos y ejemplos\",\n          \"url\": \"https://www.arsys.es/blog/todo-sobre-la-arquitectura-cliente-servidor\",\n          \"sourceName\": \"Arsys\",\n          \"summary\": \"Análisis detallado de componentes frontend y backend en aplicaciones web y de red.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"¿Qué es una red cliente-servidor?\",\n          \"url\": \"https://www.lenovo.com/ar/es/glosario/red-cliente-servidor/\",\n          \"sourceName\": \"Lenovo\",\n          \"summary\": \"Revisión de la centralización de recursos, seguridad y ventajas operativas del modelo.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"¿Qué es el modelo cliente/servidor?\",\n          \"url\": \"https://www.akamai.com/es/glossary/what-is-the-client-server-model\",\n          \"sourceName\": \"Akamai\",\n          \"summary\": \"Definición del modelo cliente-servidor como fundamento del cloud computing y solicitudes HTTP.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"Cómo funciona el cliente-servidor en Internet\",\n          \"url\": \"https://www.loading.es/blog/arquitectura-cliente-servidor-internet/\",\n          \"sourceName\": \"Loading\",\n          \"summary\": \"Guía sobre el flujo de comunicación, protocolos de red y ejemplos cotidianos de uso.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Aquí tienes lo que encontré sobre **Internet, la red de redes y el modelo cliente-servidor**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún **no se han importado a tu libreta** las fuentes que encontramos en la investigación anterior. \n\nPara poder responder a tus preguntas con detalle y asegurar que toda la información quede fundamentada en tus materiales, ¿te gustaría que **importe ahora mismo las fuentes** que encontramos? También puedes hacer clic directamente en la tarjeta de fuentes que aparece más arriba para importarlas.",
+      "claims": [
+        {
+          "text": "Aún **no se han importado a tu libreta** las fuentes que encontramos en la investigación anterior. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "c0cf29a8-fb2c-4b95-b698-391152455072",
+  "duration_ms": 61559,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-01-internet\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

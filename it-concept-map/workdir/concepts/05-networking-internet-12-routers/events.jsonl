@@ -1,0 +1,7 @@
+{"ts": "2026-11-05T23:24:17.199314+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-12-routers", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:24:53.613260+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-12-routers", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T23:24:57.244295+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-12-routers", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T23:24:57.276686+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-12-routers", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T23:24:57.304105+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-12-routers", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T23:24:57.323397+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-12-routers", "event": "notebook_delete_failed", "notebook_id": "584a4225-898a-49b3-a544-6e5a01cc3057", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T23:24:57.333686+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-12-routers", "event": "run_end", "status": "completed"}

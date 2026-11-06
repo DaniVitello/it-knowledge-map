@@ -1,0 +1,50 @@
+{
+  "concept_id": "05-networking-internet-06-puertos",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No hay fuentes ni documentos guardados en tu cuaderno sobre **los puertos y cómo reciben conexiones los servicios**.\n\n¿Quieres que haga una **investigación en la web** sobre qué son los puertos de red, su función con TCP/UDP, sockets y networking en Linux?",
+      "claims": [
+        {
+          "text": "No hay fuentes ni documentos guardados en tu cuaderno sobre **los puertos y cómo reciben conexiones los servicios**.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Esto es lo que encontré sobre **cómo funcionan los puertos en redes y la recepción de conexiones por los servicios**:\n\nUn **puerto** es un identificador numérico (del 0 al 65535) en la capa de transporte del modelo de red que permite multiplexar el tráfico. Mientras que la dirección IP identifica a un dispositivo específico en la red, el puerto determina qué aplicación o servicio en esa máquina debe recibir y procesar los datos.\n\n**Temas clave identificados en la investigación:**\n\n1. **Dirección IP vs. Puerto**: La IP funciona como la dirección de un edificio de apartamentos, mientras que el puerto equivale al número de apartamento exacto donde vive el destinatario.\n2. **Diferencia entre TCP y UDP**: TCP es un protocolo orientado a conexión que realiza un proceso de negociación en 3 pasos (*three-way handshake*) para garantizar que los datos lleguen completos y en orden (ideal para la web o SSH). UDP es no orientado a conexión, enviando paquetes directamente sin comprobaciones de entrega para lograr la máxima velocidad (ideal para juegos en línea o *streaming*).\n3. **El rol de los Sockets y la API en Linux**: En entornos tipo Unix/Linux, un *socket* es el punto final de una conexión definido por la tupla `IP:Puerto`. Los servicios (como un servidor web Nginx o Apache) solicitan un puerto mediante llamadas al sistema como `bind()` para asociarse a él, y `listen()` / `accept()` para quedar a la espera de peticiones entrantes.\n4. **La 5-tupla de Red**: Cada conexión activa en el sistema queda registrada y aislada unívocamente mediante cinco elementos: *Protocolo (TCP/UDP), IP Origen, Puerto Origen, IP Destino y Puerto Destino*.\n\n📥 Puedes revisar y seleccionar las fuentes encontradas a continuación para importarlas a tu cuaderno:\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-puertos-networking\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-puertos-networking\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos técnicos y manuales sobre puertos, TCP/UDP, sockets y networking en Linux\",\n      \"sources\": [\n        {\n          \"id\": \"src-1\",\n          \"title\": \"TCP, UDP y sockets\",\n          \"url\": \"https://www.tutorialesprogramacionya.com/electronicaparaprogramadores/comunicacionentredispositivos/tema31.html\",\n          \"sourceName\": \"Tutoriales Programación Ya\",\n          \"summary\": \"Explicación del rol de los puertos en la capa de transporte para entregar paquetes al programa adecuado.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"Explicación de Puertos TCP y UDP\",\n          \"url\": \"https://osint.com.ar/explicacion-de-puertos-tcp-y-udp/\",\n          \"sourceName\": \"OSINT Argentina\",\n          \"summary\": \"Detalla cómo los servidores se vinculan (bind) a un puerto local como TCP 80 para escuchar conexiones entrantes.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"Manual de Sockets en C\",\n          \"url\": \"https://ocw.unican.es/pluginfile.php/2343/course/section/2300/PIR-Practica4_ManualSocketsC.pdf\",\n          \"sourceName\": \"Universidad de Cantabria\",\n          \"summary\": \"Manual técnico sobre la API de Berkeley Sockets, definiendo la asociación IP + Puerto y la comunicación entre procesos.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"Sockets UDP cliente-servidor en Linux\",\n          \"url\": \"https://www.coddykit.com/es/courses/linux_networking/udp-client-server-sockets-1833380\",\n          \"sourceName\": \"CoddyKit\",\n          \"summary\": \"Lección sobre las diferencias entre comunicaciones orientadas a conexión con TCP y no orientadas a conexión con UDP.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"Cómo funcionan realmente los sockets en Linux\",\n          \"url\": \"https://www.reddit.com/r/eli5_programming/comments/15wpdh0/can_someone_explain_how_sockets_really_work/\",\n          \"sourceName\": \"Reddit r/eli5_programming\",\n          \"summary\": \"Explicación conceptual de los sockets como descriptores de archivo en Unix/Linux gestionados por llamadas del sistema.\"\n        },\n        {\n          \"id\": \"src-6\",\n          \"title\": \"Introducción a Sockets y Puntos de Acceso\",\n          \"url\": \"https://aulavirtual.fio.unam.edu.ar/mod/book/view.php?id=67617&chapterid=2436&lang=es\",\n          \"sourceName\": \"FIO UNaM\",\n          \"summary\": \"Explicación de la 5-tupla que define unívocamente cualquier conexión de red activa.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Esto es lo que encontré sobre **cómo funcionan los puertos en redes y la recepción de conexiones por los servicios**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no se han importado a tu cuaderno las fuentes que encontramos en la búsqueda anterior.\n\n¿Quieres que las importe ahora? Una vez añadidas, podré responder a tus preguntas y profundizar en el estado y las relaciones de los puertos basándome directamente en el contenido de los documentos. También puedes importarlas tú mismo seleccionándolas en la tarjeta de resultados de arriba.",
+      "claims": [
+        {
+          "text": "Aún no se han importado a tu cuaderno las fuentes que encontramos en la búsqueda anterior.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "ecf987fd-1adc-4b0d-8621-55d7fa78854b",
+  "duration_ms": 64287,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-06-puertos\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

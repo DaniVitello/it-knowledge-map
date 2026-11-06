@@ -1,0 +1,10 @@
+{
+  "concept_id": "06-operating-systems-linux-04-threads",
+  "is_valid": true,
+  "issues": [],
+  "warnings": [],
+  "score": 1.0,
+  "checked_at": "2026-11-05T23:43:12.849937+00:00",
+  "blocking_failures": [],
+  "verdict": "approved"
+}

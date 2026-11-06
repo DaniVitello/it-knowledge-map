@@ -1,0 +1,29 @@
+{
+  "concept_id": "04-database-data-analytics-22-analytics-metrics",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-22-analytics-metrics\\sources.json",
+    "notebook_id": "a9208f75-6ed7-4fe4-ae67-6b2b77c95223",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-22-analytics-metrics\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-22-analytics-metrics\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\04-database-data-analytics-22-analytics-metrics\\22 - Analytics Metrics.md.20261105T230623Z-4bfac5.bak",
+      "outside_hash": "2c5f3e49435446fe84659422816ed8fbc97f15cf53da5e91498941185264f371",
+      "inside_hash": "960336da680744846db849a690e69d58c306c3d781ccd22c9c5e676b5ff8be15",
+      "written_at": "2026-11-05T23:06:23.551458+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:05:50.257340+00:00",
+  "updated_at": "2026-11-05T23:06:23.568781+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:06:23.568781+00:00",
+    "created_at": "2026-11-05T23:05:50.257340+00:00"
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,31 @@
+{
+  "concept_id": "03-backend-22-observabilidad",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "failed_phase": "synthesizing",
+    "failed_reason": "error",
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\03-backend-22-observabilidad\\sources.json",
+    "notebook_id": "96edf7a2-2d6c-4546-a12c-17f4e60ed172",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\03-backend-22-observabilidad\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\03-backend-22-observabilidad\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\03-backend-22-observabilidad\\22 - Observabilidad.md.20261105T195531Z-592523.bak",
+      "outside_hash": "8e11f94ac19629e4a60011bf416e2afc52cfe9bc565b6f16820e7c0b4202f059",
+      "inside_hash": "e39583758538a9b8805da115c0bf26a3b4834458c8d0140cfb94393ab0d77eb0",
+      "written_at": "2026-11-05T19:55:31.248972+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:33:33.882265+00:00",
+  "updated_at": "2026-11-05T19:55:31.279291+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T19:55:31.279291+00:00",
+    "created_at": "2026-10-30T05:33:33.882265+00:00"
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,48 @@
+{
+  "questions": [],
+  "concept_id": "07-ai-engineering-04-machine-learning-fundamentals",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Machine Learning Fundamentals y para que sirve (Features, labels, training, validation, generalization)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Machine Learning Fundamentals en AI Engineering"
+    ],
+    "context": [
+      "Como se usa Machine Learning Fundamentals en el contexto profesional de AI Engineering"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Statistics",
+      "ask": "Como se relaciona Machine Learning Fundamentals con Statistics?"
+    },
+    {
+      "with": "AI / ML Fundamentals",
+      "ask": "Como se relaciona Machine Learning Fundamentals con AI / ML Fundamentals?"
+    },
+    {
+      "with": "Linear Algebra & Probability",
+      "ask": "Como se relaciona Machine Learning Fundamentals con Linear Algebra & Probability?"
+    },
+    {
+      "with": "Neural Networks",
+      "ask": "Como se relaciona Machine Learning Fundamentals con Neural Networks?"
+    }
+  ],
+  "queries": [
+    "site:arxiv.org Machine Learning Fundamentals",
+    "site:huggingface.co Machine Learning Fundamentals",
+    "site:pytorch.org Machine Learning Fundamentals",
+    "site:d2l.ai Machine Learning Fundamentals",
+    "site:platform.openai.com Machine Learning Fundamentals",
+    "site:docs.claude.com Machine Learning Fundamentals",
+    "site:ai.google.dev Machine Learning Fundamentals",
+    "site:deeplearning.ai Machine Learning Fundamentals"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

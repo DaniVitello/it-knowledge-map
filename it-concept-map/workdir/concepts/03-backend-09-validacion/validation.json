@@ -1,0 +1,10 @@
+{
+  "concept_id": "03-backend-09-validacion",
+  "is_valid": true,
+  "issues": [],
+  "warnings": [],
+  "score": 1.0,
+  "checked_at": "2026-10-30T05:29:16.415180+00:00",
+  "blocking_failures": [],
+  "verdict": "approved"
+}

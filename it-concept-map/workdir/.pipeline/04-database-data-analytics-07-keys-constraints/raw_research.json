@@ -1,0 +1,50 @@
+{
+  "concept_id": "04-database-data-analytics-07-keys-constraints",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "**No hay fuentes en tu libreta** que contengan información sobre **Keys & Constraints** (Primary keys, Foreign keys, Unique, Constraints).\n\nDado que mis respuestas se basan únicamente en el material de tus fuentes para garantizar información exacta y verificable, **no puedo responder a esta pregunta directamente desde tu libreta**.\n\n¿Te gustaría que realice una **investigación en la web** sobre este tema?",
+      "claims": [
+        {
+          "text": "**No hay fuentes en tu libreta** que contengan información sobre **Keys & Constraints** (Primary keys, Foreign keys, Unique, Constraints).",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Esto es lo que encontré sobre **Keys & Constraints en Bases de Datos y Data Analytics**:\n\nLas **Constraints (restricciones)** son reglas definidas a nivel de base de datos que garantizan la **integridad, precisión y consistencia** de la información. Impiden la inserción o modificación de datos corruptos o duplicados directamente desde la base de datos, asegurando que cualquier aplicación o análisis de datos consuma información confiable.\n\n**Temas clave identificados en las fuentes:**\n\n1. **Primary Key (Clave Primaria)**: Es el identificador único e irrepetible de cada fila en una tabla (por ejemplo, `id_cliente`). No permite valores nulos (`NULL`) y asegura que no existan registros duplicados.\n2. **Foreign Key (Clave Foránea)**: Es una columna que referencia la Primary Key de otra tabla. Enombra la relación entre ambas tablas (por ejemplo, relacionar un `pedido` con un `id_cliente`) y garantiza la **integridad referencial**, evitando registros \"huérfanos\".\n3. **Restricción UNIQUE**: Garantiza que todos los valores de una columna sean distintos entre sí (como un correo electrónico o un número de identificación social). A diferencia de la Primary Key, una tabla puede tener múltiples restricciones `UNIQUE` y estas sí admiten valores nulos.\n4. **Importancia en Data Analytics y Modelado**: En el diseño de bases de datos relacionales y procesos de normalización, las restricciones son la columna vertebral que mantiene la estructura del esquema limpia, libre de redundancias y optimizada para consultas relacionales complejas.\n\n📥 El informe de investigación completo se incluye como la primera fuente en la tarjeta de importación a continuación: impórtalo para guardar estos hallazgos en tu libreta y poder chatear directamente sobre ellos.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-keys-and-constraints\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-keys-and-constraints\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos técnicos y documentación sobre Keys y Constraints en Bases de Datos\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Reporte de investigación: Keys & Constraints en Bases de Datos\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQxOTlhMjYwNC1iYTE1LTQ4MDktYjU3YS05YTA1NDU3MTJkZGQSCxIHEPnP8YvcBhgB&filename=Reporte_de_investigacin_Keys_y_Constraints_en_Bases_de_Datos.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Reporte de Investigación\",\n          \"summary\": \"Informe completo con 6 fuentes sobre Primary Keys, Foreign Keys, Unique y Constraints en bases de datos.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"What Is a Relational Data Model? Key Concepts & Uses\",\n          \"url\": \"https://www.databricks.com/blog/what-is-a-relational-data-model\",\n          \"sourceName\": \"Databricks Blog\",\n          \"summary\": \"Explicación del modelo relacional y cómo las restricciones mantienen la integridad de datos en pipelines analíticos.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"Database Keys Explained - Primary, Foreign & More\",\n          \"url\": \"https://sqldbm.com/blog/the-secret-life-of-keys/\",\n          \"sourceName\": \"SqlDBM\",\n          \"summary\": \"Guía sobre la definición y funcionamiento de las claves primarias, foráneas y restricciones en el diseño de datos.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"How Relational Database Constraints Work and Why They're Important\",\n          \"url\": \"https://www.freecodecamp.org/news/how-relational-database-constraints-work-and-why-theyre-important/\",\n          \"sourceName\": \"freeCodeCamp\",\n          \"summary\": \"Explicación integral sobre reglas de integridad (Domain, Key, Entity y Referential Constraints) en SQL.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"Primary and Foreign Key Constraints\",\n          \"url\": \"https://learn.microsoft.com/en-us/sql/relational-databases/tables/primary-and-foreign-key-constraints?view=sql-server-ver17\",\n          \"sourceName\": \"Microsoft Learn\",\n          \"summary\": \"Documentación oficial sobre implementación de claves primarias y foráneas para integridad referencial en SQL Server.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"Data Integrity and Constraints\",\n          \"url\": \"https://docs.oracle.com/en/database/oracle/oracle-database/21/cncpt/data-integrity.html\",\n          \"sourceName\": \"Oracle Help Center\",\n          \"summary\": \"Conceptos de Oracle sobre restricciones de base de datos para garantizar precisión y consistencia lógica de los datos.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Esto es lo que encontré sobre **Keys & Constraints en Bases de Datos y Data Analytics**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no he importado las fuentes de la investigación a tu libreta. \n\n¿Quieres que las importe primero? Una vez añadidas a la libreta, podré analizar a fondo el estado actual y las relaciones entre **Primary Keys, Foreign Keys, Unique y Constraints** basándome directamente en el contenido de esos documentos. \n\nTambién puedes desplazarte hacia arriba hasta la tarjeta de investigación de la respuesta anterior e importarlas con un solo clic.",
+      "claims": [
+        {
+          "text": "Aún no he importado las fuentes de la investigación a tu libreta. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "f6862f55-21e6-4da8-8bf1-6d768ab8278e",
+  "duration_ms": 49059,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-07-keys-constraints\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

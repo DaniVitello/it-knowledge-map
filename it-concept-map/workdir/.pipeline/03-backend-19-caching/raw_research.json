@@ -1,0 +1,50 @@
+{
+  "concept_id": "03-backend-19-caching",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "**No tienes fuentes en tu cuaderno** sobre este tema aún. \n\nComo mis respuestas se basan estrictamente en tus materiales y no cuento con información al respecto, ¿te gustaría que realice una **investigación en la web** sobre **Caching (Redis, HTTP cache e invalidación)** para responder a tu pregunta?",
+      "claims": [
+        {
+          "text": "**No tienes fuentes en tu cuaderno** sobre este tema aún. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Esto es lo que encontré sobre **Caching en Backend**:\n\nEl **caching en backend** es una técnica fundamental de optimización que almacena copias de datos o respuestas frecuentemente solicitadas en capas de acceso ultrarrápido (como memoria RAM o redes distribuídas), reduciendo drásticamente la latencia y aliviando la carga sobre la base de datos principal.\n\n**Temas principales identificados:**\n1. **Reducción de Latencia con Redis**: Al usar soluciones en memoria como **Redis**, el backend puede responder consultas en menos de un milisegundo en lugar de realizar consultas pesadas en disco a bases de datos SQL o NoSQL.\n2. **Patrones de Caching (Cache-Aside, Write-Through)**: Estrategias de arquitectura que definen si la aplicación busca primero en la caché (Cache-Aside) o si la caché se actualiza automáticamente al escribir nuevos datos en la base de datos.\n3. **Desafíos de Invalidación de Caché**: La invalidación es el proceso de eliminar o refrescar datos desactualizados (*stale data*). Se gestiona mediante tiempos de vida (**TTL**) o purgas explícitas tras modificaciones en la fuente principal.\n4. **Caching Multicapa y CDN / HTTP Cache**: Integración de encabezados HTTP (`Cache-Control`) y redes **CDN** para responder peticiones desde el borde de la red (Edge), disminuyendo el tráfico que llega al backend.\n\n📥 El reporte completo de investigación se incluye como la primera fuente en la tarjeta a continuación. Si deseas agregarlas a tu cuaderno para profundizar en ellas, selecciona e importa las fuentes que prefieras.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-caching-en-backend\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-caching-en-backend\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos y guías técnicas sobre caching en backend, Redis, HTTP cache e invalidación\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Reporte de investigación: Caching en Backend\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQ3ZDViNTVmMS0yYmJjLTRlNTctOTRlMy04ODYxYTI4ZDk0NDASCxIHEPnP8YvcBhgB&filename=Reporte_de_investigacin_Caching_en_Backend.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Reporte de Investigación\",\n          \"summary\": \"Reporte completo de investigación con 8 fuentes seleccionadas sobre caching en backend, Redis e invalidación.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"Understanding cache invalidation for fast apps\",\n          \"url\": \"https://redis.io/glossary/cache-invalidation/\",\n          \"sourceName\": \"Redis\",\n          \"summary\": \"Explicación de conceptos e importancia de la invalidación de caché para mantener la consistencia de datos.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"Redis Caching Strategies for Web Applications\",\n          \"url\": \"https://danubedata.ro/blog/redis-caching-strategies-for-web-applications\",\n          \"sourceName\": \"DanubeData\",\n          \"summary\": \"Patrones de caching como Cache-Aside y Write-Through usando Redis para optimizar el backend.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"Caching in System Design: Redis, CDN & Cache Strategies Explained\",\n          \"url\": \"https://vickybytes.com/blog/caching-in-system-design\",\n          \"sourceName\": \"VickyBytes\",\n          \"summary\": \"Guía de arquitectura sobre capas de caching (CDN, Redis), estrategias de evacuación (LRU) e invalidación.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"Arquitectura backend: Estrategias avanzadas de caché e invalidation\",\n          \"url\": \"https://www.itdo.com/blog/arquitectura-backend-estrategias-avanzadas-de-cache-e-invalidation/\",\n          \"sourceName\": \"ITDO\",\n          \"summary\": \"Estrategias avanzadas de caching multicapa y manejo de Cache Stampede en backend.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"Redis y caché: cómo invalidar datos sin mostrar información vieja\",\n          \"url\": \"https://ardumaker.com/blog/redis-y-cache-como-invalidar-datos-sin-mostrar-informacion-vieja\",\n          \"sourceName\": \"ArduMaker Blog\",\n          \"summary\": \"Cómo gestionar la expiración (TTL) e invalidación en Redis tras escrituras en la base de datos principal.\"\n        },\n        {\n          \"id\": \"src-6\",\n          \"title\": \"CDN Caching and Invalidation\",\n          \"url\": \"https://dev.to/godofgeeks/cdn-caching-and-invalidation-14mh\",\n          \"sourceName\": \"DEV Community\",\n          \"summary\": \"Explicación del funcionamiento de las redes CDN y el proceso de purga/invalidación de contenido en el borde.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Esto es lo que encontré sobre **Caching en Backend**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "**Aún no he importado las fuentes encontradas a tu cuaderno.**\n\n¿Te gustaría que **importe las fuentes** que descubrí en la investigación anterior? Una vez agregadas a tu cuaderno, podré responder a tus preguntas sobre el estado actual y las relaciones del caching basándome formalmente en tu material. \n\nTambién puedes desplazarte hacia arriba hasta la tarjeta de investigación e importar directamente las fuentes que prefieras.",
+      "claims": [
+        {
+          "text": "**Aún no he importado las fuentes encontradas a tu cuaderno.**",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "848e94f2-1a7e-4cf2-8d04-7eb7c84f5710",
+  "duration_ms": 60453,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\03-backend-19-caching\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

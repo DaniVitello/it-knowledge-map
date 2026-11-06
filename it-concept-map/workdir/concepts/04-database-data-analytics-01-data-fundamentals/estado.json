@@ -1,0 +1,29 @@
+{
+  "concept_id": "04-database-data-analytics-01-data-fundamentals",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-01-data-fundamentals\\sources.json",
+    "notebook_id": "665ba779-2709-4609-a353-518fe72646b9",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-01-data-fundamentals\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-01-data-fundamentals\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\04-database-data-analytics-01-data-fundamentals\\01 - Data Fundamentals.md.20261105T171157Z-5fdd6e.bak",
+      "outside_hash": "4905b69a261f237e30bd7d6861bcf80c7928aaf108937b3f11ca102bab1ecdd7",
+      "inside_hash": "3f946189041a1da502c44f6a4fbe4c397e40c4d33ed02c68b6800145c821b5e2",
+      "written_at": "2026-11-05T17:11:57.224799+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T17:11:17.248290+00:00",
+  "updated_at": "2026-11-05T17:11:57.241684+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T17:11:57.241684+00:00",
+    "created_at": "2026-11-05T17:11:17.248290+00:00"
+  },
+  "schema_version": "1.0.0"
+}

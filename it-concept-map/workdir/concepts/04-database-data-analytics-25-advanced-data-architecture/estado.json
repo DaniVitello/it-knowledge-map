@@ -1,0 +1,29 @@
+{
+  "concept_id": "04-database-data-analytics-25-advanced-data-architecture",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-25-advanced-data-architecture\\sources.json",
+    "notebook_id": "b7e9f580-4d8c-4301-aff9-f9ab3ddd3d2c",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-25-advanced-data-architecture\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-25-advanced-data-architecture\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\04-database-data-analytics-25-advanced-data-architecture\\25 - Advanced Data Architecture.md.20261105T230852Z-fa69a9.bak",
+      "outside_hash": "bfe98b62366b4af2c60c1cbd56f277cf3988965df7258d6698db9793314c5f05",
+      "inside_hash": "eef5d782b03e6b72057a5bfee2f105214cde89df397fa740c2f55bd0d8c4d2bc",
+      "written_at": "2026-11-05T23:08:52.097508+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:07:53.266029+00:00",
+  "updated_at": "2026-11-05T23:08:52.117509+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:08:52.117509+00:00",
+    "created_at": "2026-11-05T23:07:53.266029+00:00"
+  },
+  "schema_version": "1.0.0"
+}

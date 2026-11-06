@@ -1,0 +1,39 @@
+{
+  "questions": [],
+  "concept_id": "06-operating-systems-linux-12-i-o",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es I/O y para que sirve (Input/output, dispositivos y streams)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de I/O en Operating Systems / Linux"
+    ],
+    "context": [
+      "Como se usa I/O en el contexto profesional de Operating Systems / Linux"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "System Calls",
+      "ask": "Como se relaciona I/O con System Calls?"
+    },
+    {
+      "with": "Processes IPC",
+      "ask": "Como se relaciona I/O con Processes IPC?"
+    }
+  ],
+  "queries": [
+    "site:man7.org I/O",
+    "site:kernel.org I/O",
+    "site:ostep.org I/O",
+    "site:wiki.archlinux.org I/O",
+    "site:gnu.org I/O",
+    "site:docs.docker.com I/O",
+    "site:opencontainers.org I/O"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,10 @@
+{
+  "concept_id": "03-backend-20-asincronia-concurrencia",
+  "is_valid": true,
+  "issues": [],
+  "warnings": [],
+  "score": 1.0,
+  "checked_at": "2026-11-05T19:53:45.151972+00:00",
+  "blocking_failures": [],
+  "verdict": "approved"
+}

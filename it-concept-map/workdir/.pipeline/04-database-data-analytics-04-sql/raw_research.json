@@ -1,0 +1,50 @@
+{
+  "concept_id": "04-database-data-analytics-04-sql",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No tienes fuentes en tu libreta todavía sobre **SQL**. Dado que todas mis respuestas se fundamentan estrictamente en tus materiales para garantizar información precisa y verificable, no puedo responder sin fuentes cargadas.\n\n¿Quieres que haga una **investigación en la web** sobre qué es SQL y cómo funcionan sus comandos principales (`SELECT`, `INSERT`, `UPDATE`, `DELETE`)?",
+      "claims": [
+        {
+          "text": "No tienes fuentes en tu libreta todavía sobre **SQL**. Dado que todas mis respuestas se fundamentan estrictamente en tus materiales para garantizar información precisa y verificable, no puedo responde",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Tu libreta **SQL** aún no contiene fuentes ni documentos sobre este tema. \n\nPara poder responderte con información verificable, ¿te gustaría que realice una **investigación en la web** sobre cómo funciona SQL (`SELECT`, `INSERT`, `UPDATE`, `DELETE`, `JOINs`, filtrado y agregaciones) en el ámbito de las bases de datos y la analítica de datos?",
+      "claims": [
+        {
+          "text": "Tu libreta **SQL** aún no contiene fuentes ni documentos sobre este tema. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Sigues sin tener fuentes cargadas en tu libreta **SQL**. Para cumplir con la garantía de ofrecer únicamente información verificable y fundamentada en tus propios materiales, no puedo responder esta consulta con mi conocimiento previo.\n\n¿Quieres que realice una **investigación en la web** sobre el estado actual de SQL y la relación entre sus comandos principales (`SELECT`, `INSERT`, `UPDATE`, `DELETE`, `JOINs`, filtrado y agregación)?",
+      "claims": [
+        {
+          "text": "Sigues sin tener fuentes cargadas en tu libreta **SQL**. Para cumplir con la garantía de ofrecer únicamente información verificable y fundamentada en tus propios materiales, no puedo responder esta co",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "86b622bf-7a13-4e82-8a6e-f9149f159f9b",
+  "duration_ms": 42034,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-04-sql\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

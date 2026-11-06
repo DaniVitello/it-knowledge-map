@@ -1,0 +1,16 @@
+{"ts": "2026-11-05T15:39:49.467683+00:00", "run_id": "run-20261105-123949-c78d1a", "concept_id": "07-ai-engineering-01-ai-ml-fundamentals", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-11-05T15:40:27.180663+00:00", "run_id": "run-20261105-123949-c78d1a", "concept_id": "07-ai-engineering-01-ai-ml-fundamentals", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T15:40:31.292687+00:00", "run_id": "run-20261105-123949-c78d1a", "concept_id": "07-ai-engineering-01-ai-ml-fundamentals", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T15:40:31.325058+00:00", "run_id": "run-20261105-123949-c78d1a", "concept_id": "07-ai-engineering-01-ai-ml-fundamentals", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T15:40:31.351105+00:00", "run_id": "run-20261105-123949-c78d1a", "concept_id": "07-ai-engineering-01-ai-ml-fundamentals", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T15:40:31.367048+00:00", "run_id": "run-20261105-123949-c78d1a", "concept_id": "07-ai-engineering-01-ai-ml-fundamentals", "event": "notebook_delete_failed", "notebook_id": "3747c7d1-c327-429b-8445-5b813b919a5a", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T15:40:31.377064+00:00", "run_id": "run-20261105-123949-c78d1a", "concept_id": "07-ai-engineering-01-ai-ml-fundamentals", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T17:04:43.467575+00:00", "run_id": "run-20261105-140443-ee37b4", "concept_id": "07-ai-engineering-01-ai-ml-fundamentals", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T17:05:43.521239+00:00", "run_id": "run-20261105-140443-ee37b4", "concept_id": "07-ai-engineering-01-ai-ml-fundamentals", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T17:06:08.145464+00:00", "run_id": "run-20261105-140443-ee37b4", "concept_id": "07-ai-engineering-01-ai-ml-fundamentals", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T17:06:08.172175+00:00", "run_id": "run-20261105-140443-ee37b4", "concept_id": "07-ai-engineering-01-ai-ml-fundamentals", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T17:06:08.198657+00:00", "run_id": "run-20261105-140443-ee37b4", "concept_id": "07-ai-engineering-01-ai-ml-fundamentals", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T17:06:08.215834+00:00", "run_id": "run-20261105-140443-ee37b4", "concept_id": "07-ai-engineering-01-ai-ml-fundamentals", "event": "notebook_delete_failed", "notebook_id": "b5b78bc2-2790-46c3-affd-eb72df7b00d5", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T17:06:08.226446+00:00", "run_id": "run-20261105-140443-ee37b4", "concept_id": "07-ai-engineering-01-ai-ml-fundamentals", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T23:54:26.197224+00:00", "run_id": "run-20261105-205426-a51c08", "concept_id": "07-ai-engineering-01-ai-ml-fundamentals", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:54:26.244174+00:00", "run_id": "run-20261105-205426-a51c08", "concept_id": "07-ai-engineering-01-ai-ml-fundamentals", "event": "run_end", "status": "completed"}

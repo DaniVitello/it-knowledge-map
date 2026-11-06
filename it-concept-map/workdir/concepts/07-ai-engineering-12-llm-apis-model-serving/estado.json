@@ -1,0 +1,29 @@
+{
+  "concept_id": "07-ai-engineering-12-llm-apis-model-serving",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\07-ai-engineering-12-llm-apis-model-serving\\sources.json",
+    "notebook_id": "56147250-502b-47cd-a8ed-e7c03e304556",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\07-ai-engineering-12-llm-apis-model-serving\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\07-ai-engineering-12-llm-apis-model-serving\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\07-ai-engineering-12-llm-apis-model-serving\\12 - LLM APIs & Model Serving.md.20261106T210605Z-8c1e7b.bak",
+      "outside_hash": "b520a3ddb0192a597e0c87254774a0e630d8841756503506b86796d72f42ea26",
+      "inside_hash": "078ba5c647258ac3b63dc9968a19e56d4ffe27cf142944561d9c2735c8c9c468",
+      "written_at": "2026-11-06T21:06:05.728548+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-06T21:04:55.633545+00:00",
+  "updated_at": "2026-11-06T21:06:05.746826+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-06T21:06:05.746826+00:00",
+    "created_at": "2026-11-06T21:04:55.633545+00:00"
+  },
+  "schema_version": "1.0.0"
+}

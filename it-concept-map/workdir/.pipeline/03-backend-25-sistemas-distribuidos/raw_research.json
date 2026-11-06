@@ -1,0 +1,50 @@
+{
+  "concept_id": "03-backend-25-sistemas-distribuidos",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No veo fuentes guardadas en tu cuaderno sobre **sistemas distribuidos** ni sobre sus conceptos clave (**balanceo de carga, escalabilidad, replicación y consistencia**).\n\n¿Quieres que realice una **investigación en la web** sobre este tema para responder a tu pregunta y presentarte fuentes que puedas importar a tu cuaderno?",
+      "claims": [
+        {
+          "text": "No veo fuentes guardadas en tu cuaderno sobre **sistemas distribuidos** ni sobre sus conceptos clave (**balanceo de carga, escalabilidad, replicación y consistencia**).",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "He realizado una investigación sobre **cómo funcionan los sistemas distribuidos en el backend**:\n\nEn el backend, un sistema distribuido coordina múltiples servidores o nodos independientes que colaboran para ofrecer un servicio unificado, garantizando alta disponibilidad, tolerancia a fallos y capacidad para manejar volúmenes elevados de tráfico.\n\n**Temas clave identificados:**\n1. **Load Balancing (Balanceo de Carga)**: Actúa como la puerta de entrada (en Capa 4 o Capa 7) que reparte de forma equitativa las solicitudes de los usuarios entre los diferentes servidores backend disponibles para evitar sobrecargas.\n2. **Escalabilidad (Scaling)**: Permite incrementar la capacidad del sistema mediante escalado horizontal (añadir más nodos al clúster) para responder a variaciones en la demanda de tráfico.\n3. **Replicación (Replication)**: Duplica datos y servicios a través de varios servidores (de forma síncrona o asíncrona) para asegurar que el sistema siga operando aunque falle un servidor y para agilizar el tiempo de lectura.\n4. **Consistencia y Teorema CAP**: Define cómo se sincroniza la información entre nodos. Frente a particiones de red, el Teorema CAP establece que los sistemas deben priorizar entre consistencia estricta (todos los nodos ven los mismos datos al instante) o alta disponibilidad (el sistema responde aunque los datos estén ligeramente desactualizados).\n\n📥 El informe de investigación completo se incluye como la primera fuente en la tarjeta a continuación. Si deseas importarlo a tu cuaderno (junto con los artículos técnicos seleccionados), podrás hacer preguntas directamente sobre este contenido.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-sistemas-distribuidos-backend\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-sistemas-distribuidos-backend\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos técnicos y guías de arquitectura sobre sistemas distribuidos en backend\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Informe de investigación: Sistemas Distribuidos en Backend\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQ2NDYxNzAzMC1jNTFjLTQwNDEtYjQwYi1mMTAxMjE4NzYxM2YSCxIHEPnP8YvcBhgB&filename=Informe_de_investigacion_Sistemas_Distribuidos_en_Backend.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Informe de Investigación\",\n          \"summary\": \"Informe completo de investigación con 4 fuentes sobre balanceo de carga, escalabilidad, replicación y consistencia.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"Qué es CAP Theorem y cuál es su Influencia en Sistemas Distribuídos\",\n          \"url\": \"https://bravedeveloper.com/2025/05/18/que-es-cap-theorem-y-cual-es-su-influencia-en-sistemas-distribuidos-explicados-con-un-caso-real/\",\n          \"sourceName\": \"Brave Developer\",\n          \"summary\": \"Explicación práctica del Teorema CAP y sus compromisos en arquitecturas backend de microservicios.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"The CAP Theorem Explained: Consistency, Availability, and Partition Tolerance\",\n          \"url\": \"https://www.mongodb.com/resources/basics/databases/cap-theorem\",\n          \"sourceName\": \"MongoDB\",\n          \"summary\": \"Guía sobre almacenamiento distribuido, replicación de nodos y tolerancia a fallos.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"Scalability Patterns for Modern Distributed Systems\",\n          \"url\": \"https://blog.bytebytego.com/p/scalability-patterns-for-modern-distributed\",\n          \"sourceName\": \"ByteByteGo\",\n          \"summary\": \"Patrones clave para escalado horizontal, distribución de lectura/escritura y estrategias de caché.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"Replicated Load-Balanced Services (RLBS) in Distributed Systems\",\n          \"url\": \"https://www.geeksforgeeks.org/system-design/replicated-load-balanced-services-rlbs-in-distributed-systems/\",\n          \"sourceName\": \"GeeksforGeeks\",\n          \"summary\": \"Integración de replicación de servicios y balanceo de carga para sistemas backend de alto rendimiento.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "He realizado una investigación sobre **cómo funcionan los sistemas distribuidos en el backend**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no he importado esas fuentes a tu cuaderno. **¿Quieres que las importe primero?** \n\nUna vez importadas, podré responder en detalle sobre el estado actual y las relaciones de los sistemas distribuidos basándome directamente en el contenido de las fuentes. También puedes desplazarte hacia arriba hasta la tarjeta de investigación previa e importarlas directamente desde allí.",
+      "claims": [
+        {
+          "text": "Aún no he importado esas fuentes a tu cuaderno. **¿Quieres que las importe primero?** ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "3e4916de-6bd9-47dc-8750-10fcf21a9b8d",
+  "duration_ms": 66493,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\03-backend-25-sistemas-distribuidos\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

@@ -1,0 +1,10 @@
+{
+  "concept_id": "02-frontend-01-internet-web",
+  "is_valid": true,
+  "issues": [],
+  "warnings": [],
+  "score": 1.0,
+  "checked_at": "2026-11-05T16:55:46.364708+00:00",
+  "blocking_failures": [],
+  "verdict": "approved"
+}

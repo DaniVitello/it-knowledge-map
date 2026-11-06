@@ -1,0 +1,7 @@
+{"ts": "2026-11-06T21:22:52.084342+00:00", "run_id": "run-20261106-182252-4820ad", "concept_id": "07-ai-engineering-24-fine-tuning-adaptation", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-11-06T21:23:51.873105+00:00", "run_id": "run-20261106-182252-4820ad", "concept_id": "07-ai-engineering-24-fine-tuning-adaptation", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-06T21:23:55.437347+00:00", "run_id": "run-20261106-182252-4820ad", "concept_id": "07-ai-engineering-24-fine-tuning-adaptation", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-06T21:23:55.473833+00:00", "run_id": "run-20261106-182252-4820ad", "concept_id": "07-ai-engineering-24-fine-tuning-adaptation", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-06T21:23:55.500164+00:00", "run_id": "run-20261106-182252-4820ad", "concept_id": "07-ai-engineering-24-fine-tuning-adaptation", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-06T21:23:55.517075+00:00", "run_id": "run-20261106-182252-4820ad", "concept_id": "07-ai-engineering-24-fine-tuning-adaptation", "event": "notebook_delete_failed", "notebook_id": "1a5fac07-63ba-4e4e-8cba-37454860403a", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-06T21:23:55.525757+00:00", "run_id": "run-20261106-182252-4820ad", "concept_id": "07-ai-engineering-24-fine-tuning-adaptation", "event": "run_end", "status": "completed"}

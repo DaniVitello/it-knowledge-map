@@ -1,0 +1,29 @@
+{
+  "concept_id": "01-software-engineering-22-architecture",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\01-software-engineering-22-architecture\\sources.json",
+    "notebook_id": "276f7e1e-9b3f-4af9-b9a5-cd935402b02c",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-22-architecture\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-22-architecture\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\01-software-engineering-22-architecture\\22 - Architecture.md.20261030T045233Z-ebb68d.bak",
+      "outside_hash": "235a0a3b3f351487edf9f8f7adf6674565211704881c1658f47e2d0f1319974b",
+      "inside_hash": "9d2268cd7ad03ddd42f920223926fe2359639438741eb05a6e9fb663b1ddbf51",
+      "written_at": "2026-10-30T04:52:33.093772+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T04:51:57.968907+00:00",
+  "updated_at": "2026-10-30T04:52:33.117827+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T04:52:33.117827+00:00",
+    "created_at": "2026-10-30T04:51:57.968907+00:00"
+  },
+  "schema_version": "1.0.0"
+}

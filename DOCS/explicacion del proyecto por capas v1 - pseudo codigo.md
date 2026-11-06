@@ -427,12 +427,12 @@ El study guide generado debe contener, como minimo, estas secciones (en este ord
 - errores_comunes: pitfalls y como evitarlos (3-6 errores tipicos con sintoma, causa raiz, correccion)
 - fundamento: base estable (invariantes, historia, estandares; NO versiones ni herramientas)
 - practica: estado del arte, versiones, herramientas actuales, qué se considera obsoleto
-- relacionados: cross-links a conceptos vecinos (wikilinks)
+- relacionados: seccion vacia en v1 (sin wikilinks generados por el LLM). Los cross-links se agregaran en v2 con control de generacion.
 
 Reglas: las secciones son obligatorias salvo config (required_sections configurable, default todas). Si falta una → la validacion la marca como error (no se escribe). El orden canonico es el de REQUIRED_SECTIONS; el modelo puede agregar subsecciones, pero las canonicas deben existir con ese heading exacto. fundamento y practica son la separacion clave del diseño: fundamento estable (cambia cada 90d) vs practica moderna (cambia cada 7-30d). Permite re-sintetizar solo la parte practica cuando hay nueva info sin tocar el fundamento. Cada afirmación factual debe llevar cita [src-N] apuntando a un source_id de sources.json. Las afirmaciones sin cita se marcan [UNVERIFIED] (la validacion las penaliza).
 
-### Conexion con conceptos vecinos (cross-links)
-Los cross-links conectan el concepto sintetizado con sus vecinos (de concept.connections y del indice del vault). Se generan como wikilinks de Obsidian con una frase explicativa, y se validan contra el vault (no se inventan conceptos).
+### Conexion con conceptos vecinos (cross-links) - PENDIENTE v2
+En v1 NO se generan wikilinks. La seccion "Relacionados" queda vacia (los wikilinks manuales del autor se preservan). Los cross-links como wikilinks se agregaran en v2 con control de generacion y validacion. En v1, solo se generan las key_ideas y el contenido factual.
 - Solo se generan wikilinks a conceptos que existen en el indice del vault (o se marcan como "pendiente de crear"). Nunca se inventan titulos de conceptos.
 - Los wikilinks usan el concept_id (slug del path) como target, con alias al titulo: [[concept_id|Título]]. Esto garantiza que Obsidian resuelva el link aunque el archivo se renombre.
 - Si un concepto vecino no existe, el wikilink queda "roto" intencionalmente (Obsidian lo muestra como no creado) y se marca como pendiente. La validacion lo reporta como warning, no error.
@@ -489,9 +489,9 @@ Deterministas:
 4. V_CONTENT_MIN_LENGTH — error/warn — longitud mínima por sección (palabras).
 5. V_CONTENT_NO_PLACEHOLDERS — error — sin placeholders/TODO/XXX/[...]/lorem.
 6. V_CONTENT_CODE_FENCES — warn — code fences cerrados y con lenguaje declarado.
-7. V_LINKS_RESOLVE — warn — cross-links resuelven o están marcados pendiente.
-8. V_LINKS_NO_INVENTED — error — no se inventan conceptos (wikilink a inexistente no marcado).
-9. V_LINKS_FORMAT — warn — formato [[concept_id|Título]].
+7. V_LINKS_RESOLVE (pendiente v2) — warn — cross-links resuelven o están marcados pendiente.
+8. V_LINKS_NO_INVENTED (pendiente v2) — error — no se inventan conceptos (wikilink a inexistente no marcado).
+9. V_LINKS_FORMAT (pendiente v2) — warn — formato [[concept_id|Título]].
 10. V_FRONTMATTER_PARSE — error — frontmatter parseable (YAML válido).
 11. V_FRONTMATTER_FIELDS — error — campos requeridos presentes (title, area).
 12. V_FRONTMATTER_MATCH — error — frontmatter coincide con el ConceptMeta.
@@ -518,9 +518,9 @@ Semanticos:
 - PLACEHOLDER_PATTERNS se carga de config para permitir agregar patrones por proyecto.
 
 ### Validacion de cross-links (conceptos existentes)
-- V_LINKS_RESOLVE es warning: los wikilinks rotos son validos SI están marcados como pendiente de crear (Obsidian los muestra como no creados). Sin marcar → se reporta pero no bloquea por si solo.
-- V_LINKS_NO_INVENTED es error: un wikilink a un concepto inexistente NO marcado como pendiente se considera un concepto inventado por el modelo → bloquea. Proteccion contra alucinacion de conceptos vecinos.
-- V_LINKS_FORMAT es warning: el formato canonico es [[concept_id|Título]] (alias al titulo). Sin alias, Obsidian usa el id como texto visible (menos legible) pero no rompe.
+- V_LINKS_RESOLVE (pendiente v2) es warning: los wikilinks rotos son validos SI están marcados como pendiente de crear (Obsidian los muestra como no creados). Sin marcar → se reporta pero no bloquea por si solo.
+- V_LINKS_NO_INVENTED (pendiente v2) es error: un wikilink a un concepto inexistente NO marcado como pendiente se considera un concepto inventado por el modelo → bloquea. Proteccion contra alucinacion de conceptos vecinos.
+- V_LINKS_FORMAT (pendiente v2) es warning: el formato canonico es [[concept_id|Título]] (alias al titulo). Sin alias, Obsidian usa el id como texto visible (menos legible) pero no rompe.
 - La validacion cruza contra vault_index (indice de conceptos del scan de Capa 2), no contra el filesystem en tiempo real.
 - Los wikilinks a conceptos inexistentes marcados como pendiente se cuentan en broken_links del PersistedSynthesis (Capa 7) y se reportan al final del lote para crearlos.
 

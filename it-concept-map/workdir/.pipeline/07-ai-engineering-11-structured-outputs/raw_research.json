@@ -1,0 +1,50 @@
+{
+  "concept_id": "07-ai-engineering-11-structured-outputs",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "Actualmente **no tienes ninguna fuente agregada a este cuaderno** para responder a tu consulta sobre **Structured Outputs** (JSON schemas, constrained generation, typed outputs).\n\nPara garantizar que todas las respuestas estén correctamente fundamentadas y puedas verificar la información, no genero explicaciones desde conocimiento general sin fuentes. **¿Te gustaría que realice una investigación en la web** sobre este tema para responder a tu pregunta y mostrarte las fuentes encontradas?",
+      "claims": [
+        {
+          "text": "Actualmente **no tienes ninguna fuente agregada a este cuaderno** para responder a tu consulta sobre **Structured Outputs** (JSON schemas, constrained generation, typed outputs).",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Aquí tienes lo que encontré sobre **Structured Outputs en AI Engineering**:\n\nLos **Structured Outputs** (salidas estructuradas) son una técnica y capacidad en la ingeniería de IA que fuerza a un Modelo de Lenguaje (LLM) a generar respuestas que se adhieren estrictamente a una estructura definida (normalmente un **JSON Schema** o clases fuertemente tipadas en código como Pydantic/TypeScript), garantizando validez sintáctica absoluta sin necesidad de reintentos ni parsing manual con expresiones regulares.\n\n**Aspectos clave de su funcionamiento y utilidad:**\n\n1. **Decodificación Restringida (Constrained Decoding)**: A nivel de infraestructura de inferencia, el motor aplica una máscara sobre la distribución de probabilidad de tokens en cada paso de generación. Si un token rompería la validez del esquema (por ejemplo, una coma donde se espera un cierre de comillas), su logit se fija en \\\\(-\\infty\\\\) (probabilidad cero), haciendo imposible que el modelo elija un token no válido.\n2. **Garantía de Tipos (Typed Outputs)**: Transforma texto no estructurado en estructuras de datos con tipos fuertemente definidos (`string`, `integer`, `boolean`, `enum`, etc.) listos para ser consumidos directamente por funciones o bases de datos en código cliente.\n3. **Relación con Tool Calling y Agentes**: Constituye el mecanismo técnico subyacente de la llamada a herramientas (Function Calling), donde los parámetros requeridos por una función se transmiten al modelo en forma de esquema para garantizar llamadas válidas.\n4. **Casos de Uso Principales**:\n   - **Extracción de datos**: Extracción limpia de entidades desde texto no estructurado hacia esquemas definidos.\n   - **Clasificación y Enrutamiento**: Clasificación rígida mediante valores `enum` garantizados.\n   - **Flujos de Agentes Autónomos**: Generación segura de instrucciones tipadas para interactuar con APIs externas.\n5. **Consideraciones de Producción**: La restricción sintáctica asegura que la forma del JSON sea válida, pero no garantiza por sí sola que el contenido conceptual sea correcto. Además, en modelos con capacidad de razonamiento, se suele permitir generación de texto libre en la etapa interna de pensamiento antes de aplicar las restricciones al JSON final.\n\n---\n\n📥 **Puedes importar el informe completo de investigación o las fuentes individuales directamente a tu cuaderno utilizando la tarjeta a continuación:**\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-structured-outputs\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-structured-outputs\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos técnicos, blogs de ingeniería e informes sobre Structured Outputs y Constrained Decoding\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Informe de investigación: Structured Outputs en AI Engineering\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiRmOGI1ODY2Mi1iNTQ1LTQ0NDYtOTY4Zi1mNDQ3MDhiMDFjN2ESCxIHEPnP8YvcBhgB&filename=Informe_de_investigacin_Structured_Outputs_en_AI_Engineering.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Informe de Investigación\",\n          \"summary\": \"Informe completo de investigación con 6 fuentes sobre Structured Outputs, decodificación restringida y JSON Schema.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"Structured outputs & JSON mode\",\n          \"url\": \"https://docs.together.ai/learn/structured-outputs\",\n          \"sourceName\": \"Together AI Docs\",\n          \"summary\": \"Explicación técnica de la decodificación restringida a nivel de sampler y enmascaramiento de logits.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"Structured outputs on Amazon Bedrock\",\n          \"url\": \"https://aws.amazon.com/blogs/machine-learning/structured-outputs-on-amazon-bedrock-schema-compliant-ai-responses/\",\n          \"sourceName\": \"AWS Blog\",\n          \"summary\": \"Uso de respuestas estructuradas en Bedrock, arquitecturas sin reintentos y validación de herramientas.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"Enforce, Validate, Observe: 3 LLM Structured Output Patterns\",\n          \"url\": \"https://mlflow.org/articles/structured-outputs-llm/\",\n          \"sourceName\": \"MLflow\",\n          \"summary\": \"Patrones de diseño de esquemas en producción, observabilidad y manejo de fallos.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"Generating Structured Outputs from Language Models: Benchmark and Studies\",\n          \"url\": \"https://arxiv.org/html/2501.10868v1\",\n          \"sourceName\": \"arXiv\",\n          \"summary\": \"Estudio de rendimiento y evaluación del benchmark JSONSchemaBench para frameworks de decodificación restringida.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"Outlines for Structured Generation - Constrained LLM Output Guide\",\n          \"url\": \"https://zenvanriel.com/ai-engineer-blog/outlines-structured-generation/\",\n          \"sourceName\": \"AI Engineering Blog\",\n          \"summary\": \"Guía práctica de generación estructurada con Outlines, expresiones regulares y gramáticas.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Aquí tienes lo que encontré sobre **Structured Outputs en AI Engineering**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no he agregado las fuentes de la investigación anterior a tu cuaderno. \n\n**¿Quieres que las importe ahora?** Una vez importadas, podré responder en detalle a tus preguntas sobre el estado actual y la relación de **Structured Outputs** con Prompt Engineering, Tool Calling, Context Engineering y Memory basándome directamente en ellas. \n\nTambién puedes hacer clic en **Importar** directamente en la tarjeta de fuentes de la respuesta anterior.",
+      "claims": [
+        {
+          "text": "Aún no he agregado las fuentes de la investigación anterior a tu cuaderno. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "ab7b22f6-9943-47ee-8ddb-05d1a03f36f4",
+  "duration_ms": 63542,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\07-ai-engineering-11-structured-outputs\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

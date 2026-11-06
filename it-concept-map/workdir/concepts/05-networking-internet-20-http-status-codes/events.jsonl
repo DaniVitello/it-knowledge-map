@@ -1,0 +1,7 @@
+{"ts": "2026-11-05T23:31:23.695047+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-20-http-status-codes", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:32:22.261587+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-20-http-status-codes", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T23:32:26.079938+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-20-http-status-codes", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T23:32:26.115325+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-20-http-status-codes", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T23:32:26.144273+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-20-http-status-codes", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T23:32:26.162710+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-20-http-status-codes", "event": "notebook_delete_failed", "notebook_id": "7b3da991-3d99-4cc3-b814-c1a1715e5240", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T23:32:26.174163+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-20-http-status-codes", "event": "run_end", "status": "completed"}

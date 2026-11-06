@@ -1,0 +1,7 @@
+{"ts": "2026-11-05T23:27:07.173355+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-15-osi-tcp-ip-model", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:28:01.784626+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-15-osi-tcp-ip-model", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T23:28:05.725689+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-15-osi-tcp-ip-model", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T23:28:05.763887+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-15-osi-tcp-ip-model", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T23:28:05.793829+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-15-osi-tcp-ip-model", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T23:28:05.811436+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-15-osi-tcp-ip-model", "event": "notebook_delete_failed", "notebook_id": "8d7982a4-bb8a-4e5e-9b56-e5139a9ab1b9", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T23:28:05.820497+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-15-osi-tcp-ip-model", "event": "run_end", "status": "completed"}

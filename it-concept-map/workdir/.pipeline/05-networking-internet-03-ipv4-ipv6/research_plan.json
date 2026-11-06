@@ -1,0 +1,47 @@
+{
+  "questions": [],
+  "concept_id": "05-networking-internet-03-ipv4-ipv6",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es IPv4 / IPv6 y para que sirve (Versiones del protocolo IP)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de IPv4 / IPv6 en Networking / Internet"
+    ],
+    "context": [
+      "Como se usa IPv4 / IPv6 en el contexto profesional de Networking / Internet"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "IP",
+      "ask": "Como se relaciona IPv4 / IPv6 con IP?"
+    },
+    {
+      "with": "DHCP",
+      "ask": "Como se relaciona IPv4 / IPv6 con DHCP?"
+    },
+    {
+      "with": "ARP",
+      "ask": "Como se relaciona IPv4 / IPv6 con ARP?"
+    },
+    {
+      "with": "Subnetting / CIDR",
+      "ask": "Como se relaciona IPv4 / IPv6 con Subnetting / CIDR?"
+    }
+  ],
+  "queries": [
+    "site:rfc-editor.org IPv4 / IPv6",
+    "site:datatracker.ietf.org IPv4 / IPv6",
+    "site:developer.mozilla.org IPv4 / IPv6",
+    "site:cloudflare.com IPv4 / IPv6",
+    "site:beej.us IPv4 / IPv6",
+    "site:hpbn.co IPv4 / IPv6",
+    "site:man7.org IPv4 / IPv6"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

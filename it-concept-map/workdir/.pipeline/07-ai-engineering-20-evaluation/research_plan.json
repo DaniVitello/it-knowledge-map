@@ -1,0 +1,40 @@
+{
+  "questions": [],
+  "concept_id": "07-ai-engineering-20-evaluation",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Evaluation y para que sirve (Accuracy, relevance, groundedness, task-specific evals)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Evaluation en AI Engineering"
+    ],
+    "context": [
+      "Como se usa Evaluation en el contexto profesional de AI Engineering"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "AI Safety & Security",
+      "ask": "Como se relaciona Evaluation con AI Safety & Security?"
+    },
+    {
+      "with": "Observability",
+      "ask": "Como se relaciona Evaluation con Observability?"
+    }
+  ],
+  "queries": [
+    "site:arxiv.org Evaluation",
+    "site:huggingface.co Evaluation",
+    "site:pytorch.org Evaluation",
+    "site:d2l.ai Evaluation",
+    "site:platform.openai.com Evaluation",
+    "site:docs.claude.com Evaluation",
+    "site:ai.google.dev Evaluation",
+    "site:deeplearning.ai Evaluation"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

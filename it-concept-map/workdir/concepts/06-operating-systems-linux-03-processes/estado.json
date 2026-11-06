@@ -1,0 +1,31 @@
+{
+  "concept_id": "06-operating-systems-linux-03-processes",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\06-operating-systems-linux-03-processes\\sources.json",
+    "notebook_id": "5e0ff604-5a16-4bba-afa3-e24e55dc0ad3",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\06-operating-systems-linux-03-processes\\synthesis.json",
+    "failed_phase": "synthesizing",
+    "failed_reason": "error",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\06-operating-systems-linux-03-processes\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\06-operating-systems-linux-03-processes\\03 - Processes.md.20261106T203213Z-b82970.bak",
+      "outside_hash": "e006fd0d194a5b45640c06df7896f7323fe58c93ed3108eb766f571e919f9d84",
+      "inside_hash": "c9e73a2206b7962ad8854f8f38ba3b92a0a5c170ec484feece11f348b6176655",
+      "written_at": "2026-11-06T20:32:13.955530+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:41:04.116893+00:00",
+  "updated_at": "2026-11-06T20:32:13.973195+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-06T20:32:13.973195+00:00",
+    "created_at": "2026-11-05T23:41:04.116893+00:00"
+  },
+  "schema_version": "1.0.0"
+}

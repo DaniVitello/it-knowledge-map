@@ -1,0 +1,10 @@
+{
+  "concept_id": "02-frontend-18-data-fetching",
+  "is_valid": true,
+  "issues": [],
+  "warnings": [],
+  "score": 1.0,
+  "checked_at": "2026-10-30T05:19:26.929609+00:00",
+  "blocking_failures": [],
+  "verdict": "approved"
+}

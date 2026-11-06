@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "concept_id": "frontend-01-internet-web",
+  "generated_at": "2026-11-06T19:24:26.997023+00:00",
+  "backend_provider": "fake",
+  "count": 2,
+  "failed_count": 0,
+  "low_sources": true,
+  "min_sources": 4,
+  "sources": [
+    {
+      "source_id": "src-1",
+      "url": "https://developer.mozilla.org",
+      "title": "MDN",
+      "snippet": null,
+      "kind": "url",
+      "preferred": false,
+      "seed": false,
+      "domain": "",
+      "level": null,
+      "is_preferred_domain": false,
+      "is_seed": false,
+      "covers": [],
+      "retrieved_at": null,
+      "published_or_updated": null,
+      "content_hash": null,
+      "kept": true,
+      "evaluation": {},
+      "schema_version": "1.0.0"
+    },
+    {
+      "source_id": "src-2",
+      "url": null,
+      "title": "Nota del autor",
+      "snippet": "resumen manual",
+      "kind": "text",
+      "preferred": false,
+      "seed": false,
+      "domain": "",
+      "level": null,
+      "is_preferred_domain": false,
+      "is_seed": false,
+      "covers": [],
+      "retrieved_at": null,
+      "published_or_updated": null,
+      "content_hash": null,
+      "kept": true,
+      "evaluation": {},
+      "schema_version": "1.0.0"
+    }
+  ],
+  "failed_sources": []
+}

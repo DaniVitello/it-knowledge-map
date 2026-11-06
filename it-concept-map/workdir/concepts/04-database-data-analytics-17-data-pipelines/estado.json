@@ -1,0 +1,29 @@
+{
+  "concept_id": "04-database-data-analytics-17-data-pipelines",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-17-data-pipelines\\sources.json",
+    "notebook_id": "5db2328d-d115-4502-a9cf-d39fcaf33a62",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-17-data-pipelines\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-17-data-pipelines\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\04-database-data-analytics-17-data-pipelines\\17 - Data Pipelines.md.20261105T230200Z-b2d59a.bak",
+      "outside_hash": "eb9254558b3c1b715400dabc76bf394e90706f87f6f7be10d2c8705764413326",
+      "inside_hash": "f40332fae3a80168f79a5ce0fcdd073039bca1a716e3a468f07a09b8b725b3d8",
+      "written_at": "2026-11-05T23:02:00.718863+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:01:21.344825+00:00",
+  "updated_at": "2026-11-05T23:02:00.736867+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:02:00.736867+00:00",
+    "created_at": "2026-11-05T23:01:21.344825+00:00"
+  },
+  "schema_version": "1.0.0"
+}

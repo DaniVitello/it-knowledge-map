@@ -1,0 +1,7 @@
+{"ts": "2026-11-05T23:42:09.469116+00:00", "run_id": "run-20261105-204002-56e07b", "concept_id": "06-operating-systems-linux-04-threads", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:43:08.335458+00:00", "run_id": "run-20261105-204002-56e07b", "concept_id": "06-operating-systems-linux-04-threads", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T23:43:12.831173+00:00", "run_id": "run-20261105-204002-56e07b", "concept_id": "06-operating-systems-linux-04-threads", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T23:43:12.867510+00:00", "run_id": "run-20261105-204002-56e07b", "concept_id": "06-operating-systems-linux-04-threads", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T23:43:12.893073+00:00", "run_id": "run-20261105-204002-56e07b", "concept_id": "06-operating-systems-linux-04-threads", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T23:43:12.911118+00:00", "run_id": "run-20261105-204002-56e07b", "concept_id": "06-operating-systems-linux-04-threads", "event": "notebook_delete_failed", "notebook_id": "7119f28d-e903-46c8-82df-bb468f5f7d46", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T23:43:12.921475+00:00", "run_id": "run-20261105-204002-56e07b", "concept_id": "06-operating-systems-linux-04-threads", "event": "run_end", "status": "completed"}

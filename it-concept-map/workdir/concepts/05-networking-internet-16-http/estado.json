@@ -1,0 +1,29 @@
+{
+  "concept_id": "05-networking-internet-16-http",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-16-http\\sources.json",
+    "notebook_id": "ed112025-f363-4c41-ac50-50b56c18c540",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-16-http\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-16-http\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\05-networking-internet-16-http\\16 - HTTP.md.20261105T232840Z-f342f8.bak",
+      "outside_hash": "27e9fdcd312c05839fcfa3d97bae9d0f3aa84185408fa14eaddc3935fc48cb45",
+      "inside_hash": "f80f3d7f5f058d134318eec578c18f32a7ea3faadb5b362c916e242546ddcdc0",
+      "written_at": "2026-11-05T23:28:40.088987+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:28:06.914808+00:00",
+  "updated_at": "2026-11-05T23:28:40.112804+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:28:40.112804+00:00",
+    "created_at": "2026-11-05T23:28:06.914808+00:00"
+  },
+  "schema_version": "1.0.0"
+}

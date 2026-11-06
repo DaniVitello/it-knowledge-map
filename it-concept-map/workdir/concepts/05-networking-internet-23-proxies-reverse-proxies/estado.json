@@ -1,0 +1,24 @@
+{
+  "concept_id": "05-networking-internet-23-proxies-reverse-proxies",
+  "status": "failed",
+  "last_good_state": "synthesized",
+  "checkpoint": null,
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-23-proxies-reverse-proxies\\sources.json",
+    "notebook_id": "28c90c29-2a86-422b-b876-5b854c89ba21",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-23-proxies-reverse-proxies\\synthesis.json",
+    "failed_phase": "validating",
+    "failed_reason": "validation",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-23-proxies-reverse-proxies\\validation.json"
+  },
+  "error": "Encabezado faltante: ## Objetivo; Encabezado faltante: ## Esqueleto (el 20% esencial); Encabezado faltante: ## Como funciona; Encabezado faltante: ## Detalles; Encabezado faltante: ## Ejemplo minimo; Encabezado faltante: ## Errores comunes; Encabezado faltante: ## Estado actual; Encabezado faltante: ## Conexiones; Encabezado faltante: ## Ruta de estudio; Encabezado faltante: ## Preguntas de repaso",
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:34:00.115573+00:00",
+  "updated_at": "2026-11-05T23:34:52.019532+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:34:52.019491+00:00",
+    "created_at": "2026-11-05T23:34:00.115573+00:00"
+  },
+  "schema_version": "1.0.0"
+}

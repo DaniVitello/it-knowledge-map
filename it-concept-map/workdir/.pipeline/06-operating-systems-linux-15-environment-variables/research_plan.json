@@ -1,0 +1,39 @@
+{
+  "questions": [],
+  "concept_id": "06-operating-systems-linux-15-environment-variables",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Environment Variables y para que sirve (Configuración del entorno de ejecución)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Environment Variables en Operating Systems / Linux"
+    ],
+    "context": [
+      "Como se usa Environment Variables en el contexto profesional de Operating Systems / Linux"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Shell",
+      "ask": "Como se relaciona Environment Variables con Shell?"
+    },
+    {
+      "with": "Package Management",
+      "ask": "Como se relaciona Environment Variables con Package Management?"
+    }
+  ],
+  "queries": [
+    "site:man7.org Environment Variables",
+    "site:kernel.org Environment Variables",
+    "site:ostep.org Environment Variables",
+    "site:wiki.archlinux.org Environment Variables",
+    "site:gnu.org Environment Variables",
+    "site:docs.docker.com Environment Variables",
+    "site:opencontainers.org Environment Variables"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

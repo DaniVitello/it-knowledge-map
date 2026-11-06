@@ -1,0 +1,7 @@
+{"ts": "2026-11-05T23:00:14.717772+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-16-etl-elt", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:01:15.642333+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-16-etl-elt", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T23:01:20.131764+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-16-etl-elt", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T23:01:20.179688+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-16-etl-elt", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T23:01:20.211162+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-16-etl-elt", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T23:01:20.230841+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-16-etl-elt", "event": "notebook_delete_failed", "notebook_id": "20a619b5-15bf-4e63-9f84-48060465bf66", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T23:01:20.241758+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-16-etl-elt", "event": "run_end", "status": "completed"}

@@ -1,0 +1,47 @@
+{
+  "questions": [],
+  "concept_id": "04-database-data-analytics-16-etl-elt",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es ETL / ELT y para que sirve (Extract, Transform, Load)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de ETL / ELT en Database / Data Analytics"
+    ],
+    "context": [
+      "Como se usa ETL / ELT en el contexto profesional de Database / Data Analytics"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Data Warehouses",
+      "ask": "Como se relaciona ETL / ELT con Data Warehouses?"
+    },
+    {
+      "with": "OLTP vs OLAP",
+      "ask": "Como se relaciona ETL / ELT con OLTP vs OLAP?"
+    },
+    {
+      "with": "Data Pipelines",
+      "ask": "Como se relaciona ETL / ELT con Data Pipelines?"
+    },
+    {
+      "with": "AI Workflows",
+      "ask": "Como se relaciona ETL / ELT con AI Workflows?"
+    }
+  ],
+  "queries": [
+    "site:postgresql.org ETL / ELT",
+    "site:sqlite.org ETL / ELT",
+    "site:dev.mysql.com ETL / ELT",
+    "site:use-the-index-luke.com ETL / ELT",
+    "site:learn.microsoft.com ETL / ELT",
+    "site:docs.snowflake.com ETL / ELT",
+    "site:openstax.org ETL / ELT"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

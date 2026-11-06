@@ -1,0 +1,50 @@
+{
+  "concept_id": "07-ai-engineering-18-context-engineering",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No veo fuentes guardadas en tu libreta sobre **Context Engineering**. \n\n¿Quieres que realice una investigación en la web sobre este tema (qué información recibe el modelo, cuándo y para qué sirve) para explicártelo y mostrarte las fuentes encontradas?",
+      "claims": [
+        {
+          "text": "No veo fuentes guardadas en tu libreta sobre **Context Engineering**. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Esto es lo que encontré sobre **Context Engineering en AI Engineering**:\n\n**Context Engineering** es la disciplina de diseñar, curar y administrar el conjunto dinámico de información (*tokens*) que un modelo de lenguaje (LLM) ve en la ventana de contexto en el momento exacto de la inferencia (*runtime*). A diferencia de *Prompt Engineering* (que se enfoca en cómo redactar la pregunta o instrucción), Context Engineering administra el ecosistema completo de información: qué datos entran, cuándo se inyectan, cómo se estructuran y cómo se comprime la memoria para que el modelo actúe de forma precisa y costo-eficiente.\n\n**Conceptos clave identificados:**\n1. **La metáfora CPU vs. RAM**: Un LLM actúa como el procesador (CPU), mientras que la ventana de contexto es la memoria RAM limitada de trabajo. Context Engineering consiste en cargar en esa memoria únicamente los datos de alta señal necesarios para el paso actual.\n2. **Qué información recibe y cuándo (*Capas del contexto*)**:\n   - **En la inicialización / System Prompt**: Instrucciones permanentes sobre rol, reglas de negocio y restricciones.\n   - **En cada turno**: El mensaje del usuario actual y el historial reciente de conversación (*short-term memory*).\n   - **Bajo demanda (*Runtime / RAG*)**: Información relevante extraída de bases de datos vectoriales mediante *Embeddings* cuando la consulta lo requiere.\n   - **Durante el bucle del agente (*Tool Calling*)**: Esquemas de herramientas disponibles y los resultados devueltos por ejecuciones previas (APIs, código, búsquedas).\n   - **Estructuración de salida (*Structured Outputs*)**: Contratos y esquemas JSON para asegurar que la respuesta del modelo sea determinista y reutilizable en pasos posteriores.\n3. **Para qué sirve**: Evita la \"contaminación\" de la ventana de contexto, reduce alucinaciones, optimiza el consumo de tokens en tareas complejas o multi-agente y permite la persistencia de estado (*long-term memory*).\n\n📥 **El reporte completo de investigación se incluye como la primera fuente en la tarjeta de abajo — impórtalo para poder chatear directamente con esta información y explorar los conceptos en profundidad.**\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-context-engineering\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-context-engineering\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos técnicos, documentaciones de frameworks y guías de arquitectura sobre Context Engineering en AI\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Reporte de investigación: Context Engineering en AI Engineering\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiRlYThmNGRjYy0xMjMxLTQ0NjktYWU2Yi0wODBjNmFlYmNkNzESCxIHEPnP8YvcBhgB&filename=Reporte_de_investigacin_Context_Engineering_en_AI_Engineerin.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Reporte de Investigación\",\n          \"summary\": \"Reporte completo de investigación con 6 fuentes sobre Context Engineering en AI Engineering.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"Context Engineering for AI Agents: A Practical Guide\",\n          \"url\": \"https://mastra.ai/articles/context-engineering\",\n          \"sourceName\": \"Mastra AI\",\n          \"summary\": \"Guía práctica sobre la curación de tokens, gestión de memoria RAM vs. CPU (LLM) y estrategias de aislamiento de contexto.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"What is context engineering? Components, techniques, and best practices\",\n          \"url\": \"https://www.elastic.co/search-labs/blog/context-engineering-overview\",\n          \"sourceName\": \"Elasticsearch Labs\",\n          \"summary\": \"Desglose de los componentes principales del contexto (System Prompt, RAG, Memoria, Tools) y optimización en producción.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"Context Engineering for Agents\",\n          \"url\": \"https://www.langchain.com/blog/context-engineering-for-agents\",\n          \"sourceName\": \"LangChain\",\n          \"summary\": \"Estrategias de selección, compresión y aislamiento de contexto para agentes de IA en tareas extensas.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"Context Engineering for AI Agents\",\n          \"url\": \"https://www.agensi.io/learn/context-engineering-ai-agents\",\n          \"sourceName\": \"Agensi.io\",\n          \"summary\": \"Principios para mover información fuera de la ventana activa y recuperarla dinámicamente mediante patrones como ReAct.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"What Is Context Engineering?\",\n          \"url\": \"https://www.educative.io/courses/prompt-engineering-guide/what-is-context-engineering\",\n          \"sourceName\": \"Educative.io\",\n          \"summary\": \"Comparación estructural entre Prompt Engineering ('cómo pedir') y Context Engineering ('qué información proveer').\"\n        },\n        {\n          \"id\": \"src-6\",\n          \"title\": \"Context engineering guide for AI teams 2026\",\n          \"url\": \"https://logic.inc/resources/context-engineering-guide-for-ai-teams\",\n          \"sourceName\": \"Logic.inc\",\n          \"summary\": \"Análisis de las 7 capas dinámicas que conforman el contexto de un agente inteligente en producción.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Esto es lo que encontré sobre **Context Engineering en AI Engineering**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no he importado esas fuentes de investigación a tu libreta. \n\n¿Quieres que las importe por ti? Una vez agregadas a la libreta, podré responder a tus preguntas sobre el estado actual y las relaciones de **Context Engineering** basándome directamente en ellas. También puedes desplazarte hacia arriba a la tarjeta de investigación e importar las que prefieras.",
+      "claims": [
+        {
+          "text": "Aún no he importado esas fuentes de investigación a tu libreta. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "7d6208ab-1160-4f9d-bb44-ff54272eb709",
+  "duration_ms": 55136,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\07-ai-engineering-18-context-engineering\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

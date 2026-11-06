@@ -1,0 +1,50 @@
+{
+  "concept_id": "06-operating-systems-linux-06-memory-management",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No hay fuentes agregadas en tu libreta sobre la **gestión de memoria (Memory Management)**. Para garantizar respuestas precisas y verificables, únicamente respondo basándome en los materiales y fuentes que subas a tu libreta.\n\n¿Te gustaría que haga una **investigación en la web** sobre **RAM, memoria virtual, páginas, procesos, Stack y Heap** para obtener información y fuentes sobre este tema?",
+      "claims": [
+        {
+          "text": "No hay fuentes agregadas en tu libreta sobre la **gestión de memoria (Memory Management)**. Para garantizar respuestas precisas y verificables, únicamente respondo basándome en los materiales y fuente",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Esto es lo que encontré sobre **Memory Management en Linux y Sistemas Operativos**:\n\nLa gestión de memoria es el subsistema del sistema operativo encargado de coordinar, abstraer y optimizar el acceso a la memoria RAM física. A través de la **Memoria Virtual**, el sistema garantiza el aislamiento de cada proceso, la protección del kernel y un espacio de direccionamiento continuo.\n\n**Temas clave identificados en las fuentes:**\n1. **Memoria Virtual y MMU**: Cada proceso opera dentro de su propio espacio de direcciones virtuales independiente. La unidad de gestión de memoria del hardware (**MMU**) traduce en tiempo real las direcciones virtuales a direcciones físicas en la RAM.\n2. **Paginación y Tablas de Páginas**: La memoria física y virtual se divide en bloques de tamaño fijo llamados **páginas** (normalmente de 4 KB). Linux gestiona la traducción mediante tablas de páginas multinivel (PGD, PUD, PMD, PTE) y acelera la búsqueda usando el caché **TLB** (*Translation Lookaside Buffer*).\n3. **Estructura de Memoria del Proceso (Stack & Heap)**: El espacio virtual de cada proceso se organiza en segmentos bien definidos:\n   - **Stack (Pila)**: Almacena parámetros de funciones, direcciones de retorno y variables locales. Crece hacia abajo.\n   - **Heap (Montículo)**: Destinado a la asignación dinámica de memoria mediante llamadas como `malloc`. Crece hacia arriba.\n   - **Text, Data & BSS**: Almacenan el código ejecutable y las variables globales/estáticas.\n4. **Page Cache y Swapping**: El kernel de Linux diferencia entre páginas respaldadas por archivos (*Page Cache*, para agilizar E/S) y páginas anónimas. Cuando la RAM física está bajo presión, el kernel evacúa las páginas anónimas inactivas hacia el espacio de intercambio en disco (**Swap**).\n\n📥 El informe completo de investigación está incluido como la primera fuente en la tarjeta a continuación. Importa las fuentes que desees agregar a tu libreta para analizarlas o generar resúmenes grounded a partir de ellas.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-memory-management-linux\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-memory-management-linux\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Documentación técnica y artículos sobre Memory Management, Memoria Virtual, Paginación, Stack y Heap en Linux\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Reporte de investigación: Memory Management en Linux\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQ4Zjc3MWZjOC05YjlkLTQ0ZDQtOTdmNy01MGEwZWU5YTQ1YjUSCxIHEPnP8YvcBhgB&filename=Reporte_de_investigacion_Memory_Management_en_Linux.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Reporte de investigación\",\n          \"summary\": \"Informe consolidado con 6 fuentes sobre la gestión de memoria en sistemas operativos y el kernel de Linux.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"Concepts overview - The Linux Kernel documentation\",\n          \"url\": \"https://docs.kernel.org/admin-guide/mm/concepts.html\",\n          \"sourceName\": \"Linux Kernel Documentation\",\n          \"summary\": \"Documentación oficial del kernel sobre paginación, zonas de memoria (DMA, Normal, HighMem), TLB y HugePages.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"Linux Memory Management: Virtual Memory, Paging, and Beyond\",\n          \"url\": \"https://www.abhik.ai/concepts/systems/memory-management\",\n          \"sourceName\": \"Abhik Sarkar\",\n          \"summary\": \"Explicación detallada sobre la traducción de direcciones virtuales a físicas, tablas de páginas multinivel y fallos de página.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"Memory Management — The Linux Kernel documentation\",\n          \"url\": \"https://linux-kernel-labs.github.io/refs/pull/274/merge/lectures/memory-management.html\",\n          \"sourceName\": \"Linux Kernel Labs\",\n          \"summary\": \"Guía sobre la estructura `struct page`, el asignador Buddy Allocator y la gestión de memoria física en sistemas Linux.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"Linux Memory Management: Understanding Page Tables, Swapping, and Memory Allocation\",\n          \"url\": \"https://www.linuxjournal.com/content/linux-memory-management-understanding-page-tables-swapping-and-memory-allocation\",\n          \"sourceName\": \"Linux Journal\",\n          \"summary\": \"Artículo sobre aislamiento de procesos, protección de memoria, tablas de páginas y el mecanismo de swapping.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"Understanding Linux Kernel Memory Statistics\",\n          \"url\": \"https://blogs.oracle.com/linux/understanding-linux-kernel-memory-statistics\",\n          \"sourceName\": \"Oracle Blogs\",\n          \"summary\": \"Análisis de estadísticas de memoria del kernel, diferencia entre paginación anónima y Page Cache, y políticas LRU.\"\n        },\n        {\n          \"id\": \"src-6\",\n          \"title\": \"Linux Process Memory Layout Explained: Text, Data, BSS, Heap, Stack, and mmap\",\n          \"url\": \"https://eeengineer.com/en/linux-process-memory-layout-2/\",\n          \"sourceName\": \"EE Engineer\",\n          \"summary\": \"Explicación visual de los segmentos del espacio de memoria de un proceso: Stack, Heap, BSS, Data y Text.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Esto es lo que encontré sobre **Memory Management en Linux y Sistemas Operativos**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "**Aún no he importado las fuentes de la investigación a tu libreta.**\n\n¿Quieres que las importe ahora? Una vez agregadas a tu libreta, podré analizar en detalle la relación entre la RAM, la memoria virtual, las páginas, los procesos, el Stack y el Heap basándome directamente en el contenido de los documentos.\n\nTambién puedes desplazarte hacia arriba hasta la tarjeta de investigación y hacer clic en **Importar** en las fuentes que prefieras.",
+      "claims": [
+        {
+          "text": "**Aún no he importado las fuentes de la investigación a tu libreta.**",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "d1ca0a19-5784-4380-8add-da38aff7cb01",
+  "duration_ms": 59542,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\06-operating-systems-linux-06-memory-management\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

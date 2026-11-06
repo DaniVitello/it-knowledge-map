@@ -1,0 +1,20 @@
+{"ts": "2026-10-30T05:28:10.657508+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-08-middleware", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:28:40.889538+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-08-middleware", "event": "phase_done", "phase": "research"}
+{"ts": "2026-10-30T05:28:44.963786+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-08-middleware", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-10-30T05:28:44.999976+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-08-middleware", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-10-30T05:28:45.027928+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-08-middleware", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-10-30T05:28:45.047910+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-08-middleware", "event": "notebook_delete_failed", "notebook_id": "d87c1fc4-4a0c-46e1-b6fb-8c33028117d2", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-10-30T05:28:45.060550+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-08-middleware", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T18:19:50.360650+00:00", "run_id": "run-20261105-151942-eb6f22", "concept_id": "03-backend-08-middleware", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-11-05T18:19:50.434087+00:00", "run_id": "run-20261105-151942-eb6f22", "concept_id": "03-backend-08-middleware", "event": "idempotency_hash_mismatch", "stored": "5fba4cd40170336420cbc66db775e1cdd8ce4726f1b0d823feb202712c50cabe", "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+{"ts": "2026-11-05T18:19:50.436325+00:00", "run_id": "run-20261105-151942-eb6f22", "concept_id": "03-backend-08-middleware", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T18:20:32.144445+00:00", "run_id": "run-20261105-152024-1e1855", "concept_id": "03-backend-08-middleware", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-11-05T18:20:32.181182+00:00", "run_id": "run-20261105-152024-1e1855", "concept_id": "03-backend-08-middleware", "event": "idempotency_hash_mismatch", "stored": "5fba4cd40170336420cbc66db775e1cdd8ce4726f1b0d823feb202712c50cabe", "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+{"ts": "2026-11-05T18:20:32.182918+00:00", "run_id": "run-20261105-152024-1e1855", "concept_id": "03-backend-08-middleware", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T18:27:28.926491+00:00", "run_id": "run-20261105-152721-dfc835", "concept_id": "03-backend-08-middleware", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-11-05T18:27:28.984473+00:00", "run_id": "run-20261105-152721-dfc835", "concept_id": "03-backend-08-middleware", "event": "idempotency_hash_mismatch", "stored": "5fba4cd40170336420cbc66db775e1cdd8ce4726f1b0d823feb202712c50cabe", "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+{"ts": "2026-11-05T18:27:28.986274+00:00", "run_id": "run-20261105-152721-dfc835", "concept_id": "03-backend-08-middleware", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T19:25:30.181283+00:00", "run_id": "run-20261105-162522-4ca118", "concept_id": "03-backend-08-middleware", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T19:25:30.244110+00:00", "run_id": "run-20261105-162522-4ca118", "concept_id": "03-backend-08-middleware", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T19:43:49.297115+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-08-middleware", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T19:43:49.373050+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-08-middleware", "event": "run_end", "status": "completed"}

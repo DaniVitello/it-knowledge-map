@@ -1,0 +1,11 @@
+{"ts": "2026-10-30T05:20:10.776523+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-21-tooling", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:20:19.995255+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-21-tooling", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:20:26.063020+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-21-tooling", "event": "phase_failed", "phase": "research", "error": "Transicion invalida: researching -> researching"}
+{"ts": "2026-10-30T05:21:09.244943+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-21-tooling", "event": "phase_done", "phase": "research"}
+{"ts": "2026-10-30T05:21:14.239950+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-21-tooling", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-10-30T05:21:14.272059+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-21-tooling", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-10-30T05:21:14.304756+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-21-tooling", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-10-30T05:21:14.325326+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-21-tooling", "event": "notebook_delete_failed", "notebook_id": "977dbdaf-04a7-48a4-9cf5-c4243470cce5", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-10-30T05:21:14.336714+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-21-tooling", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T22:40:02.928741+00:00", "run_id": "run-20261105-193941-b2c223", "concept_id": "02-frontend-21-tooling", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T22:40:02.994736+00:00", "run_id": "run-20261105-193941-b2c223", "concept_id": "02-frontend-21-tooling", "event": "run_end", "status": "completed"}

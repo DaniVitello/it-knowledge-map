@@ -1,0 +1,39 @@
+{
+  "questions": [],
+  "concept_id": "06-operating-systems-linux-02-kernel",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Kernel y para que sirve (Núcleo que conecta software y hardware)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Kernel en Operating Systems / Linux"
+    ],
+    "context": [
+      "Como se usa Kernel en el contexto profesional de Operating Systems / Linux"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Operating System",
+      "ask": "Como se relaciona Kernel con Operating System?"
+    },
+    {
+      "with": "System Calls",
+      "ask": "Como se relaciona Kernel con System Calls?"
+    }
+  ],
+  "queries": [
+    "site:man7.org Kernel",
+    "site:kernel.org Kernel",
+    "site:ostep.org Kernel",
+    "site:wiki.archlinux.org Kernel",
+    "site:gnu.org Kernel",
+    "site:docs.docker.com Kernel",
+    "site:opencontainers.org Kernel"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

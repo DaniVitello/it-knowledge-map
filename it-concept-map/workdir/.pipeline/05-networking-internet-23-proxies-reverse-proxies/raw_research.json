@@ -1,0 +1,50 @@
+{
+  "concept_id": "05-networking-internet-23-proxies-reverse-proxies",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "**No tienes fuentes agregadas en tu libreta** sobre Proxies y Reverse Proxies. \n\n¿Te gustaría que realice una **investigación en la web** sobre este tema para responder a tu pregunta y mostrarte las fuentes encontradas?",
+      "claims": [
+        {
+          "text": "**No tienes fuentes agregadas en tu libreta** sobre Proxies y Reverse Proxies. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "He realizado una investigación en la web sobre **Proxies y Reverse Proxies en Networking e Internet**.\n\nUn **servidor proxy** actúa como un intermediario que intercepta las peticiones de red entre un cliente (como un navegador) y un servidor de destino. La diferencia fundamental entre un **Forward Proxy** (proxy directo) y un **Reverse Proxy** (proxy inverso) radica en a cuál de las dos partes representa y protege:\n\n1. **Forward Proxy (Proxy Directo)**: Se ubica **delante del cliente**. Cuando un usuario solicita un recurso en Internet, la petición pasa primero por el proxy, el cual realiza la solicitud en nombre del cliente. Oculta la dirección IP real del usuario, permite aplicar políticas de filtrado de contenido corporativo y almacena respuestas en caché.\n2. **Reverse Proxy (Proxy Inverso)**: Se ubica **delante de uno o varios servidores de origen**. Cuando los usuarios externos acceden a un sitio o servicio web, la petición llega primero al proxy inverso, el cual la redirige al servidor interno adecuado. Oculta la estructura interna de los servidores de backend, protege contra ataques (como DDoS), maneja el cifrado SSL/TLS y optimiza la carga de trabajo.\n\n**Temas clave identificados en las fuentes:**\n- **Dirección del tráfico**: El Forward Proxy gestiona el tráfico *saliente* (del cliente a Internet), mientras que el Reverse Proxy gestiona el tráfico *entrante* (de Internet hacia la infraestructura backend).\n- **Relación con Load Balancers y CDN**: Herramientas populares como NGINX o HAProxy combinan las funciones de Reverse Proxy con balanceo de carga para distribuir el tráfico entre múltiples servidores. Asimismo, una CDN (Content Delivery Network) funciona conceptualmente como una red global distribuida de reverse proxies.\n- **Seguridad e integración con Firewalls**: Mientras que los firewalls tradicionales inspeccionan paquetes a nivel de red, los proxies trabajan a nivel de aplicación (Capa 7), lo que permite inspeccionar contenidos, gestionar la terminación SSL y prevenir vulnerabilidades web (WAF).\n\n---\n\n📥 **El reporte completo de la investigación se encuentra disponible en la primera tarjeta a continuación.** Si deseas profundizar en estos conceptos dentro de tu libreta, puedes seleccionar e importar los recursos que prefieras.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-proxies-reverse-proxies\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-proxies-reverse-proxies\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos técnicos y guías de arquitectura sobre Proxies, Reverse Proxies y balanceo de carga\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Reporte de investigación: Proxies y Reverse Proxies\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQ4MmVjZDUxMy1hMTFhLTQ0MWYtOTA4OC0wZDNhM2YyODA4MmYSCxIHEPnP8YvcBhgB&filename=Reporte_de_investigacion_Proxies_y_Reverse_Proxies.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Reporte de Investigación\",\n          \"summary\": \"Reporte completo con 10 fuentes sobre Forward Proxy, Reverse Proxy, CDN y Load Balancing.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"En qué consisten los servidores proxy inversos\",\n          \"url\": \"https://www.cloudflare.com/es-es/learning/cdn/glossary/reverse-proxy/\",\n          \"sourceName\": \"Cloudflare\",\n          \"summary\": \"Explicación detallada de la intermediación, seguridad y rendimiento de un proxy inverso.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"Forward proxy vs reverse proxy\",\n          \"url\": \"https://firewall-chile.cl/2023/05/10/forward-proxy-vs-reverse-proxy/\",\n          \"sourceName\": \"Firewall Chile\",\n          \"summary\": \"Comparación clave del flujo de tráfico cliente-servidor y casos de uso.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"¿Qué es un proxy inverso (reverse proxy)?\",\n          \"url\": \"https://www.ionos.mx/digitalguide/servidores/know-how/que-es-un-servidor-proxy-inverso/\",\n          \"sourceName\": \"IONOS\",\n          \"summary\": \"Flujo paso a paso de peticiones HTTP/HTTPS en la zona desmilitarizada (DMZ).\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"Load Balancer vs Reverse Proxy: Differences, Overlap & When to Use Each\",\n          \"url\": \"https://contabo.com/blog/load-balancer-vs-reverse-proxy/\",\n          \"sourceName\": \"Contabo\",\n          \"summary\": \"Análisis de la superposición entre balanceadores de carga y proxies inversos como NGINX.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"API Gateway vs Reverse Proxy vs Load Balancer\",\n          \"url\": \"https://api7.ai/es/learning-center/api-gateway-guide/api-gateway-vs-reverse-proxy-vs-load-balancer\",\n          \"sourceName\": \"API7.ai\",\n          \"summary\": \"Diferencias clave en arquitecturas de microservicios y gestión de APIs.\"\n        },\n        {\n          \"id\": \"src-6\",\n          \"title\": \"Proxy frente a VPN: diferencia entre tecnologías intermediarias\",\n          \"url\": \"https://aws.amazon.com/es/compare/the-difference-between-proxy-and-vpn/\",\n          \"sourceName\": \"AWS\",\n          \"summary\": \"Explicación de cómo interactúan los intermediarios en redes corporativas e Internet.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "He realizado una investigación en la web sobre **Proxies y Reverse Proxies en Networking e Internet**.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no se han importado a tu libreta las fuentes encontradas en la investigación anterior. \n\n¿Quieres que las importe primero? Una vez agregadas, podré responder en detalle a tus preguntas sobre el estado actual y las relaciones de los Proxies y Reverse Proxies (con Firewalls, CDN y Load Balancing) basándome en su contenido. \n\nTambién puedes desplazarte hacia arriba a la tarjeta de resultados de la respuesta anterior e importarlas directamente desde allí.",
+      "claims": [
+        {
+          "text": "Aún no se han importado a tu libreta las fuentes encontradas en la investigación anterior. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "28c90c29-2a86-422b-b876-5b854c89ba21",
+  "duration_ms": 48096,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-23-proxies-reverse-proxies\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

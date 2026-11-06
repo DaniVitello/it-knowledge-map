@@ -1,0 +1,29 @@
+{
+  "concept_id": "07-ai-engineering-14-rag",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\07-ai-engineering-14-rag\\sources.json",
+    "notebook_id": "db1cf79b-6f11-4201-8440-27e827e924c5",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\07-ai-engineering-14-rag\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\07-ai-engineering-14-rag\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\07-ai-engineering-14-rag\\14 - RAG.md.20261106T210822Z-b8658f.bak",
+      "outside_hash": "c3e3694fea1b1b4f440f99d566e6d4a4edd26e43aa70fa63f8fae4d1fa97dc77",
+      "inside_hash": "44afad53e60998f05776d674ab2868d153fb035cc3a8bda8ab58352ec97d1b3c",
+      "written_at": "2026-11-06T21:08:23.007532+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-06T21:07:06.172551+00:00",
+  "updated_at": "2026-11-06T21:08:23.026375+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-06T21:08:23.026375+00:00",
+    "created_at": "2026-11-06T21:07:06.172551+00:00"
+  },
+  "schema_version": "1.0.0"
+}

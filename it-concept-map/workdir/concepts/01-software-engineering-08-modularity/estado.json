@@ -1,0 +1,29 @@
+{
+  "concept_id": "01-software-engineering-08-modularity",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\01-software-engineering-08-modularity\\sources.json",
+    "notebook_id": "6a625c3c-ae7e-4671-810d-76d93de4c1b1",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-08-modularity\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-08-modularity\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\01-software-engineering-08-modularity\\08 - Modularity.md.20261030T044048Z-43c066.bak",
+      "outside_hash": "d77c7e5eaea071eca528b294b85b78f734d20e5e4447afab3b4383a4571e55b7",
+      "inside_hash": "8d8fbc0d0240336bde9512d0e356b422af125fb204972e1316d9073e0ab45571",
+      "written_at": "2026-10-30T04:40:48.231502+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T04:39:47.293861+00:00",
+  "updated_at": "2026-10-30T04:40:48.251543+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T04:40:48.251543+00:00",
+    "created_at": "2026-10-30T04:39:47.293861+00:00"
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,43 @@
+{
+  "questions": [],
+  "concept_id": "04-database-data-analytics-25-advanced-data-architecture",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Advanced Data Architecture y para que sirve (Lakehouse, streaming, distributed systems, governance)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Advanced Data Architecture en Database / Data Analytics"
+    ],
+    "context": [
+      "Como se usa Advanced Data Architecture en el contexto profesional de Database / Data Analytics"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Distributed Systems",
+      "ask": "Como se relaciona Advanced Data Architecture con Distributed Systems?"
+    },
+    {
+      "with": "Mensajería",
+      "ask": "Como se relaciona Advanced Data Architecture con Mensajería?"
+    },
+    {
+      "with": "Sistemas distribuidos",
+      "ask": "Como se relaciona Advanced Data Architecture con Sistemas distribuidos?"
+    }
+  ],
+  "queries": [
+    "site:postgresql.org Advanced Data Architecture",
+    "site:sqlite.org Advanced Data Architecture",
+    "site:dev.mysql.com Advanced Data Architecture",
+    "site:use-the-index-luke.com Advanced Data Architecture",
+    "site:learn.microsoft.com Advanced Data Architecture",
+    "site:docs.snowflake.com Advanced Data Architecture",
+    "site:openstax.org Advanced Data Architecture"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

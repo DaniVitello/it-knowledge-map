@@ -1,0 +1,29 @@
+{
+  "concept_id": "01-software-engineering-04-complexity-analysis",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\01-software-engineering-04-complexity-analysis\\sources.json",
+    "notebook_id": "7025e8ab-20bd-446a-ab7f-97bff21e94ef",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-04-complexity-analysis\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-04-complexity-analysis\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\01-software-engineering-04-complexity-analysis\\04 - Complexity Analysis.md.20261030T043657Z-e1900a.bak",
+      "outside_hash": "c171cb6539087d07565257509d40906d504b2a48199fa1effe708e5a1f856f77",
+      "inside_hash": "9694d5f4701937843d650c3fe55adc13ae693b408d185f35cc20121981cb942d",
+      "written_at": "2026-10-30T04:36:57.995130+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T04:35:59.121084+00:00",
+  "updated_at": "2026-10-30T04:36:58.014863+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T04:36:58.014863+00:00",
+    "created_at": "2026-10-30T04:35:59.121084+00:00"
+  },
+  "schema_version": "1.0.0"
+}

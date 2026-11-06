@@ -1,0 +1,10 @@
+{
+  "concept_id": "03-backend-19-caching",
+  "is_valid": true,
+  "issues": [],
+  "warnings": [],
+  "score": 1.0,
+  "checked_at": "2026-11-05T19:53:03.074929+00:00",
+  "blocking_failures": [],
+  "verdict": "approved"
+}

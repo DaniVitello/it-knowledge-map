@@ -1,0 +1,44 @@
+{
+  "questions": [],
+  "concept_id": "03-backend-20-asincronia-concurrencia",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Asincronía & Concurrencia y para que sirve (Threads, async, queues, workers)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Asincronía & Concurrencia en Backend"
+    ],
+    "context": [
+      "Como se usa Asincronía & Concurrencia en el contexto profesional de Backend"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Concurrency",
+      "ask": "Como se relaciona Asincronía & Concurrencia con Concurrency?"
+    },
+    {
+      "with": "Asincronía",
+      "ask": "Como se relaciona Asincronía & Concurrencia con Asincronía?"
+    },
+    {
+      "with": "Threads",
+      "ask": "Como se relaciona Asincronía & Concurrencia con Threads?"
+    }
+  ],
+  "queries": [
+    "site:developer.mozilla.org Asincronía & Concurrencia",
+    "site:rfc-editor.org Asincronía & Concurrencia",
+    "site:datatracker.ietf.org Asincronía & Concurrencia",
+    "site:owasp.org Asincronía & Concurrencia",
+    "site:postgresql.org Asincronía & Concurrencia",
+    "site:redis.io Asincronía & Concurrencia",
+    "site:12factor.net Asincronía & Concurrencia",
+    "site:learn.microsoft.com Asincronía & Concurrencia"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,60 @@
+{
+  "questions": [],
+  "concept_id": "07-ai-engineering-05-neural-networks",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Neural Networks y para que sirve (Layers, activations, backpropagation, optimization)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Neural Networks en AI Engineering"
+    ],
+    "context": [
+      "Como se usa Neural Networks en el contexto profesional de AI Engineering"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "AI / ML Fundamentals",
+      "ask": "Como se relaciona Neural Networks con AI / ML Fundamentals?"
+    },
+    {
+      "with": "Linear Algebra & Probability",
+      "ask": "Como se relaciona Neural Networks con Linear Algebra & Probability?"
+    },
+    {
+      "with": "Machine Learning Fundamentals",
+      "ask": "Como se relaciona Neural Networks con Machine Learning Fundamentals?"
+    },
+    {
+      "with": "Transformers",
+      "ask": "Como se relaciona Neural Networks con Transformers?"
+    },
+    {
+      "with": "LLMs",
+      "ask": "Como se relaciona Neural Networks con LLMs?"
+    },
+    {
+      "with": "Tokenization",
+      "ask": "Como se relaciona Neural Networks con Tokenization?"
+    },
+    {
+      "with": "Embeddings",
+      "ask": "Como se relaciona Neural Networks con Embeddings?"
+    }
+  ],
+  "queries": [
+    "site:arxiv.org Neural Networks",
+    "site:huggingface.co Neural Networks",
+    "site:pytorch.org Neural Networks",
+    "site:d2l.ai Neural Networks",
+    "site:platform.openai.com Neural Networks",
+    "site:docs.claude.com Neural Networks",
+    "site:ai.google.dev Neural Networks",
+    "site:deeplearning.ai Neural Networks"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

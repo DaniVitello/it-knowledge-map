@@ -1,0 +1,12 @@
+{"ts": "2026-10-30T05:33:50.709146+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-23-testing-backend", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:34:06.083052+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-23-testing-backend", "event": "phase_failed", "phase": "research", "error": "research (845e12c9-b518-494d-91f3-989271d296c7): Chat request was rate limited or rejected by the API. Wait a few seconds and try again."}
+{"ts": "2026-11-05T19:35:35.932418+00:00", "run_id": "run-20261105-162522-4ca118", "concept_id": "03-backend-23-testing-backend", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T19:36:36.738696+00:00", "run_id": "run-20261105-162522-4ca118", "concept_id": "03-backend-23-testing-backend", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T19:36:42.968380+00:00", "run_id": "run-20261105-162522-4ca118", "concept_id": "03-backend-23-testing-backend", "event": "phase_failed", "phase": "synthesis", "error": "No se proporciono LLM para la sintesis"}
+{"ts": "2026-11-05T19:55:32.322271+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-23-testing-backend", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T19:56:39.005347+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-23-testing-backend", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T19:56:42.676894+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-23-testing-backend", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T19:56:42.720969+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-23-testing-backend", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T19:56:42.767708+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-23-testing-backend", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T19:56:42.789810+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-23-testing-backend", "event": "notebook_delete_failed", "notebook_id": "893cc37a-3d47-4505-b3ca-f4b2ef974893", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T19:56:42.801929+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-23-testing-backend", "event": "run_end", "status": "completed"}

@@ -1,0 +1,10 @@
+{
+  "concept_id": "03-backend-15-transacciones",
+  "is_valid": true,
+  "issues": [],
+  "warnings": [],
+  "score": 1.0,
+  "checked_at": "2026-11-05T19:48:58.938232+00:00",
+  "blocking_failures": [],
+  "verdict": "approved"
+}

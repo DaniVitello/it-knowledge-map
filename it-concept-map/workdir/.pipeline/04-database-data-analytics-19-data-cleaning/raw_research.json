@@ -1,0 +1,50 @@
+{
+  "concept_id": "04-database-data-analytics-19-data-cleaning",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No encuentro fuentes en tu libreta sobre **Data Cleaning** ni sobre conceptos relacionados (**normalización**, **transformación**, **deduplicación**, **calidad de datos** o **análisis de datos**).\n\n¿Te gustaría que realice una **investigación en la web** sobre este tema?",
+      "claims": [
+        {
+          "text": "No encuentro fuentes en tu libreta sobre **Data Cleaning** ni sobre conceptos relacionados (**normalización**, **transformación**, **deduplicación**, **calidad de datos** o **análisis de datos**).",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Tu libreta aún no cuenta con fuentes cargadas para responder sobre cómo funciona el **Data Cleaning** en bases de datos y análisis de datos (incluyendo normalización, transformación y deduplicación).\n\n¿Te gustaría que realice una **investigación en la web** sobre este tema para recopilar fuentes y responder a tu consulta con base en esa información?",
+      "claims": [
+        {
+          "text": "Tu libreta aún no cuenta con fuentes cargadas para responder sobre cómo funciona el **Data Cleaning** en bases de datos y análisis de datos (incluyendo normalización, transformación y deduplicación).",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Tu libreta todavía no contiene fuentes sobre el estado actual de **Data Cleaning** ni sobre sus relaciones con la **normalización**, **transformación**, **deduplicación**, **calidad de datos (Data Quality)** o **análisis de datos (Data Analysis)**.\n\n¿Quieres que realice una **investigación en la web** sobre estos temas para recopilar información y responder a tu consulta?",
+      "claims": [
+        {
+          "text": "Tu libreta todavía no contiene fuentes sobre el estado actual de **Data Cleaning** ni sobre sus relaciones con la **normalización**, **transformación**, **deduplicación**, **calidad de datos (Data Qua",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "2545bdbf-45a7-4520-a37d-4828a16e8eb9",
+  "duration_ms": 39651,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-19-data-cleaning\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

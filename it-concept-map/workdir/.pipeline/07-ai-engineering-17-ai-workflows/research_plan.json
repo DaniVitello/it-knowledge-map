@@ -1,0 +1,52 @@
+{
+  "questions": [],
+  "concept_id": "07-ai-engineering-17-ai-workflows",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es AI Workflows y para que sirve (Pipelines, orchestration, routing, parallelization)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de AI Workflows en AI Engineering"
+    ],
+    "context": [
+      "Como se usa AI Workflows en el contexto profesional de AI Engineering"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "ETL / ELT",
+      "ask": "Como se relaciona AI Workflows con ETL / ELT?"
+    },
+    {
+      "with": "Data Pipelines",
+      "ask": "Como se relaciona AI Workflows con Data Pipelines?"
+    },
+    {
+      "with": "Tool Calling",
+      "ask": "Como se relaciona AI Workflows con Tool Calling?"
+    },
+    {
+      "with": "Agents",
+      "ask": "Como se relaciona AI Workflows con Agents?"
+    },
+    {
+      "with": "Memory",
+      "ask": "Como se relaciona AI Workflows con Memory?"
+    }
+  ],
+  "queries": [
+    "site:arxiv.org AI Workflows",
+    "site:huggingface.co AI Workflows",
+    "site:pytorch.org AI Workflows",
+    "site:d2l.ai AI Workflows",
+    "site:platform.openai.com AI Workflows",
+    "site:docs.claude.com AI Workflows",
+    "site:ai.google.dev AI Workflows",
+    "site:deeplearning.ai AI Workflows"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

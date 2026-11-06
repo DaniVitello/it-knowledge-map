@@ -1,0 +1,31 @@
+{
+  "concept_id": "03-backend-19-caching",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "failed_phase": "synthesizing",
+    "failed_reason": "error",
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\03-backend-19-caching\\sources.json",
+    "notebook_id": "848e94f2-1a7e-4cf2-8d04-7eb7c84f5710",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\03-backend-19-caching\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\03-backend-19-caching\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\03-backend-19-caching\\19 - Caching.md.20261105T195303Z-a25978.bak",
+      "outside_hash": "89a3369aa42a8c01dd3e7dbcfba068bb2e2cb3844c9b369abcb3af845d7ce025",
+      "inside_hash": "f31e5479be99d9691935e9291f5700d01931823a780dd1a128e6cc5a3883b69c",
+      "written_at": "2026-11-05T19:53:03.189179+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:32:42.463122+00:00",
+  "updated_at": "2026-11-05T19:53:03.227757+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T19:53:03.227757+00:00",
+    "created_at": "2026-10-30T05:32:42.463122+00:00"
+  },
+  "schema_version": "1.0.0"
+}

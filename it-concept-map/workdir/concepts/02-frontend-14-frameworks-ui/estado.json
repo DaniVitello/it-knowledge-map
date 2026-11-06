@@ -1,0 +1,29 @@
+{
+  "concept_id": "02-frontend-14-frameworks-ui",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\02-frontend-14-frameworks-ui\\sources.json",
+    "notebook_id": "6442fcb8-f06d-4343-a805-c464d78cacaf",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\02-frontend-14-frameworks-ui\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\02-frontend-14-frameworks-ui\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\02-frontend-14-frameworks-ui\\14 - Frameworks UI.md.20261030T051651Z-e9fc7d.bak",
+      "outside_hash": "e64751cdae8a39d8230e5cd0543699f3cc8ee799de2cf83b40eb0bc83bd9c2ec",
+      "inside_hash": "987b6517345a9da6a6a8a5c66fa2cde781aa543e04241ad3ca76f07dd4cc452c",
+      "written_at": "2026-10-30T05:16:51.632143+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:16:17.636046+00:00",
+  "updated_at": "2026-10-30T05:16:51.656604+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T05:16:51.656604+00:00",
+    "created_at": "2026-10-30T05:16:17.636046+00:00"
+  },
+  "schema_version": "1.0.0"
+}

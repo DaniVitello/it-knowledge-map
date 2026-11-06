@@ -1,0 +1,20 @@
+{"ts": "2026-10-30T05:24:04.241733+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-03-servidor", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:24:58.359809+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-03-servidor", "event": "phase_done", "phase": "research"}
+{"ts": "2026-10-30T05:25:01.762731+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-03-servidor", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-10-30T05:25:01.792242+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-03-servidor", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-10-30T05:25:01.824332+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-03-servidor", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-10-30T05:25:01.845270+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-03-servidor", "event": "notebook_delete_failed", "notebook_id": "c9d7742f-4624-4287-b986-27cbf4f2afea", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-10-30T05:25:01.854551+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-03-servidor", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T18:19:45.009598+00:00", "run_id": "run-20261105-151942-eb6f22", "concept_id": "03-backend-03-servidor", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-11-05T18:19:45.074954+00:00", "run_id": "run-20261105-151942-eb6f22", "concept_id": "03-backend-03-servidor", "event": "idempotency_hash_mismatch", "stored": "8f76de93f3c7aab5a332d035aa1ad340f8aeb58a1b8142f40ee264f505928c9d", "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+{"ts": "2026-11-05T18:19:45.076408+00:00", "run_id": "run-20261105-151942-eb6f22", "concept_id": "03-backend-03-servidor", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T18:20:26.753309+00:00", "run_id": "run-20261105-152024-1e1855", "concept_id": "03-backend-03-servidor", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-11-05T18:20:26.792900+00:00", "run_id": "run-20261105-152024-1e1855", "concept_id": "03-backend-03-servidor", "event": "idempotency_hash_mismatch", "stored": "8f76de93f3c7aab5a332d035aa1ad340f8aeb58a1b8142f40ee264f505928c9d", "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+{"ts": "2026-11-05T18:20:26.794364+00:00", "run_id": "run-20261105-152024-1e1855", "concept_id": "03-backend-03-servidor", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T18:27:23.528815+00:00", "run_id": "run-20261105-152721-dfc835", "concept_id": "03-backend-03-servidor", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-11-05T18:27:23.592096+00:00", "run_id": "run-20261105-152721-dfc835", "concept_id": "03-backend-03-servidor", "event": "idempotency_hash_mismatch", "stored": "8f76de93f3c7aab5a332d035aa1ad340f8aeb58a1b8142f40ee264f505928c9d", "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+{"ts": "2026-11-05T18:27:23.593539+00:00", "run_id": "run-20261105-152721-dfc835", "concept_id": "03-backend-03-servidor", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T19:25:24.789760+00:00", "run_id": "run-20261105-162522-4ca118", "concept_id": "03-backend-03-servidor", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T19:25:24.852171+00:00", "run_id": "run-20261105-162522-4ca118", "concept_id": "03-backend-03-servidor", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T19:43:43.898192+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-03-servidor", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T19:43:43.980223+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-03-servidor", "event": "run_end", "status": "completed"}

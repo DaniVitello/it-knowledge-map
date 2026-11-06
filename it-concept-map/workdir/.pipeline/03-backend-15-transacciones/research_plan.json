@@ -1,0 +1,40 @@
+{
+  "questions": [],
+  "concept_id": "03-backend-15-transacciones",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Transacciones y para que sirve (ACID, isolation, locks, consistency)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Transacciones en Backend"
+    ],
+    "context": [
+      "Como se usa Transacciones en el contexto profesional de Backend"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Transactions",
+      "ask": "Como se relaciona Transacciones con Transactions?"
+    },
+    {
+      "with": "ACID & Isolation",
+      "ask": "Como se relaciona Transacciones con ACID & Isolation?"
+    }
+  ],
+  "queries": [
+    "site:developer.mozilla.org Transacciones",
+    "site:rfc-editor.org Transacciones",
+    "site:datatracker.ietf.org Transacciones",
+    "site:owasp.org Transacciones",
+    "site:postgresql.org Transacciones",
+    "site:redis.io Transacciones",
+    "site:12factor.net Transacciones",
+    "site:learn.microsoft.com Transacciones"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

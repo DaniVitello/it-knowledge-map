@@ -1,0 +1,50 @@
+{
+  "concept_id": "03-backend-14-orm-data-access",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "Actualmente no hay fuentes agregadas a este cuaderno sobre **ORM (Object-Relational Mapping) y acceso a datos**. \n\n¿Te gustaría que realice una investigación en la web sobre este tema para explicarte qué es, para qué sirve y mostrarte ejemplos de tecnologías como Prisma, Hibernate, SQLAlchemy y Entity Framework?",
+      "claims": [
+        {
+          "text": "Actualmente no hay fuentes agregadas a este cuaderno sobre **ORM (Object-Relational Mapping) y acceso a datos**. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Esto es lo que encontré sobre **ORM y Acceso a Datos en Backend**:\n\nUn ORM (*Object-Relational Mapping*) es una herramienta de software que actúa como puente entre la programación orientada a objetos en el backend y las bases de datos relacionales. Su función principal es abstraer la sintaxis manual de SQL, permitiendo a los desarrolladores interactuar con tablas y filas directamente mediante clases y objetos en su lenguaje de programación.\n\n**Temas clave identificados:**\n\n1. **Resolución del desajuste de impedancia (*Impedance Mismatch*)**: Modela y traduce de forma automática las diferencias estructurales entre la orientación a objetos (clases, instancias y referencias) y el modelo relacional (tablas, filas y claves foráneas).\n2. **Patrones arquitectónicos principales**:\n   - **Active Record**: El propio modelo encapsula tanto los datos como la lógica de acceso a la base de datos (por ejemplo, en Django ORM o Laravel Eloquent).\n   - **Data Mapper / Unit of Work**: Separa el modelo de dominio de la capa de persistencia a través de repositorios o un gestor de contexto (`DbContext` / `EntityManager`), patrón utilizado por **Hibernate** (Java), **SQLAlchemy** (Python) y **Entity Framework Core** (.NET).\n3. **Abstracción, seguridad y migraciones**: Los ORM parametrizan las consultas automáticamente para evitar inyecciones SQL, facilitan el control de versiones del esquema (migraciones) y permiten cambiar de motor relacional (PostgreSQL, MySQL, SQLite, SQL Server) con ajustes mínimos.\n4. **Variaciones de enfoque moderno**: Herramientas más recientes como **Prisma** (TypeScript/Node.js) utilizan un esquema declarativo unificado y generan un cliente fuertemente tipado para optimizar la experiencia de desarrollo.\n\n📥 El informe de investigación completo está incluido como la primera fuente en la tarjeta de importación a continuación; impórtalo para consultar los detalles directamente o hacer preguntas grounded sobre estas fuentes.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-orm-data-access\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-orm-data-access\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos técnicos e investigación sobre ORM y acceso a datos en backend\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Informe de investigación: ORM y Acceso a Datos en Backend\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQ3NDc4ZjViYS05ZWViLTRmZTAtOTQ2MS04ZWEyODIzYjI1OTkSCxIHEPnP8YvcBhgB&filename=Informe_de_investigacin_ORM_y_Acceso_a_Datos_en_Backend.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Informe de Investigación\",\n          \"summary\": \"Informe técnico completo con 5 fuentes clasificadas sobre ORM y patrones de acceso a datos.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"What is Object-Relational Mapping (ORM)?\",\n          \"url\": \"https://aws.amazon.com/what-is/object-relational-mapping/\",\n          \"sourceName\": \"AWS\",\n          \"summary\": \"Visión general de cómo la capa ORM abstrae la conexión entre entidades del código y bases de datos relacionales.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"Object-Relational Mapping (ORM) Explained with Examples\",\n          \"url\": \"https://www.altexsoft.com/blog/orm-object-relational-mapping/\",\n          \"sourceName\": \"AltexSoft\",\n          \"summary\": \"Explicación práctica del desajuste de impedancia y las diferencias entre manipulación de datos con SQL directo y ORM.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"Decoding ORM: A Deep Dive into Object-Relational Mapping\",\n          \"url\": \"https://dev.to/ibrahimhyazouri/decoding-orm-a-deep-dive-into-object-relational-mapping-16dl\",\n          \"sourceName\": \"DEV Community\",\n          \"summary\": \"Análisis de relaciones entre tablas, prevención de inyección SQL y mantenibilidad en proyectos backend.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"ORM Patterns: The Trade-Offs of Active Record and Data Mappers\",\n          \"url\": \"https://www.thoughtfulcode.com/orm-active-record-vs-data-mapper/\",\n          \"sourceName\": \"Thoughtful Code\",\n          \"summary\": \"Comparativa de patrones entre Active Record (Django, Eloquent) y Data Mapper (Hibernate, SQLAlchemy, EF Core).\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"Active Record and Data Mapper - A Deep Dive into Python's ORM Paradigms\",\n          \"url\": \"https://leapcell.io/blog/active-record-and-data-mapper-a-deep-dive-into-python-s-orm-paradigms\",\n          \"sourceName\": \"Leapcell\",\n          \"summary\": \"Estudio detallado sobre patrones de persistencia, ciclo de vida de objetos y modelos de datos en backend.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Esto es lo que encontré sobre **ORM y Acceso a Datos en Backend**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Todavía no se han importado a tu cuaderno las fuentes que encontramos en la investigación anterior.\n\n¿Te gustaría que las importe primero? Una vez añadidas, podré analizar y responder detalladamente a tus preguntas sobre el estado actual y las relaciones de los ORM basándome en su contenido. \n\n*(También puedes revisar la tarjeta de resultados más arriba e importar directamente las fuentes que prefieras).*",
+      "claims": [
+        {
+          "text": "Todavía no se han importado a tu cuaderno las fuentes que encontramos en la investigación anterior.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "7a468197-f638-429a-952a-849a57b7044b",
+  "duration_ms": 70569,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\03-backend-14-orm-data-access\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

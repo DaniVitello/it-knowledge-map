@@ -1,0 +1,140 @@
+{
+  "concept_id": "frontend-01-internet-web",
+  "researched_at": "2026-11-06T19:24:26.997023+00:00",
+  "volatility": "semi_stable",
+  "freshness_window_days": 30,
+  "plan": {
+    "questions": [
+      {
+        "qid": "a1",
+        "group": "a",
+        "text": "Que es Internet y la Web",
+        "schema_version": "1.0.0"
+      },
+      {
+        "qid": "b1",
+        "group": "b",
+        "text": "Estado del arte de Internet y la Web",
+        "schema_version": "1.0.0"
+      },
+      {
+        "qid": "c1",
+        "group": "c",
+        "text": "Relaciones de Internet y la Web",
+        "schema_version": "1.0.0"
+      }
+    ],
+    "concept_id": "frontend-01-internet-web",
+    "questions_by_dim": {},
+    "relation_questions": [],
+    "queries": [],
+    "source_requirements": {},
+    "schema_version": "1.0.0"
+  },
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "**a1 (a) — Fundamento estable.**\n\nRespuesta determinista del FakeBackend para 'Internet & Web' (area Frontend). Pregunta: Que es Internet y la Web\n\nFuentes simuladas consultadas: MDN, Nota del autor.",
+      "claims": [
+        {
+          "text": "**a1 (a) — Fundamento estable.**",
+          "source_ids": [
+            "src-1",
+            "src-2"
+          ],
+          "unverified": false,
+          "claim_id": "",
+          "status": "",
+          "schema_version": "1.0.0"
+        },
+        {
+          "text": "Fuentes simuladas consultadas: MDN, Nota del autor.",
+          "source_ids": [
+            "src-1",
+            "src-2"
+          ],
+          "unverified": false,
+          "claim_id": "",
+          "status": "",
+          "schema_version": "1.0.0"
+        }
+      ],
+      "schema_version": "1.0.0"
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "**b1 (b) — Practica moderna.**\n\nRespuesta determinista del FakeBackend para 'Internet & Web' (area Frontend). Pregunta: Estado del arte de Internet y la Web\n\nFuentes simuladas consultadas: MDN, Nota del autor.",
+      "claims": [
+        {
+          "text": "**b1 (b) — Practica moderna.**",
+          "source_ids": [
+            "src-1",
+            "src-2"
+          ],
+          "unverified": false,
+          "claim_id": "",
+          "status": "",
+          "schema_version": "1.0.0"
+        },
+        {
+          "text": "Fuentes simuladas consultadas: MDN, Nota del autor.",
+          "source_ids": [
+            "src-1",
+            "src-2"
+          ],
+          "unverified": false,
+          "claim_id": "",
+          "status": "",
+          "schema_version": "1.0.0"
+        }
+      ],
+      "schema_version": "1.0.0"
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "**c1 (c) — Relaciones y casos de uso.**\n\nRespuesta determinista del FakeBackend para 'Internet & Web' (area Frontend). Pregunta: Relaciones de Internet y la Web\n\nFuentes simuladas consultadas: MDN, Nota del autor.",
+      "claims": [
+        {
+          "text": "**c1 (c) — Relaciones y casos de uso.**",
+          "source_ids": [
+            "src-1",
+            "src-2"
+          ],
+          "unverified": false,
+          "claim_id": "",
+          "status": "",
+          "schema_version": "1.0.0"
+        },
+        {
+          "text": "Fuentes simuladas consultadas: MDN, Nota del autor.",
+          "source_ids": [
+            "src-1",
+            "src-2"
+          ],
+          "unverified": false,
+          "claim_id": "",
+          "status": "",
+          "schema_version": "1.0.0"
+        }
+      ],
+      "schema_version": "1.0.0"
+    }
+  ],
+  "coverage": 1.0,
+  "low_coverage": false,
+  "low_sources": true,
+  "gap_pass_done": false,
+  "gaps_detected": 0,
+  "gaps_resolved": 0,
+  "notebook_id": null,
+  "source_ids": [
+    "src-1",
+    "src-2"
+  ],
+  "duration_ms": 0,
+  "backend_provider": "fake",
+  "schema_version": "1.0.0"
+}

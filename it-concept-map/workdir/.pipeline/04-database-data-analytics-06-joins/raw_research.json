@@ -1,0 +1,50 @@
+{
+  "concept_id": "04-database-data-analytics-06-joins",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "**No tienes fuentes agregadas en tu libreta** para responder a tu pregunta sobre los **JOINs en SQL (INNER, LEFT, RIGHT y relaciones entre tablas)**.\n\n¿Te gustaría que realice una **investigación en la web** sobre este tema para explicártelo en detalle?",
+      "claims": [
+        {
+          "text": "**No tienes fuentes agregadas en tu libreta** para responder a tu pregunta sobre los **JOINs en SQL (INNER, LEFT, RIGHT y relaciones entre tablas)**.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Esto es lo que encontré sobre **SQL JOINs y relaciones entre tablas en bases de datos y analítica de datos**:\n\nUn **JOIN** es una cláusula fundamental en SQL que permite consultar y combinar columnas de dos o más tablas en una base de datos relacional a través de una columna común o clave (como una *Primary Key* conectada a una *Foreign Key*). En Data Analytics, se utilizan para consolidar información que ha sido dividida en diferentes tablas para evitar duplicaciones y mantener la integridad del modelo de datos.\n\n**Temas clave identificados:**\n\n1. **Relación entre tablas (Llaves PK/FK)**: Las bases de datos organizan los datos en tablas separadas (por ejemplo, `Clientes` y `Pedidos`). La clave primaria (*Primary Key*) identifica unívocamente una fila en su propia tabla, mientras que la clave foránea (*Foreign Key*) hace referencia a esa clave en otra tabla.\n2. **INNER JOIN**: Retorna únicamente las filas que tienen coincidencia en **ambas** tablas. Si un cliente no tiene pedidos registrados, o un pedido no está asignado a un cliente, no aparecerá en el resultado.\n3. **LEFT JOIN (LEFT OUTER JOIN)**: Retorna **todas** las filas de la tabla izquierda (la primera que se menciona) y las coincidencias de la tabla derecha. Si no hay coincidencia a la derecha, completa los campos con valores `NULL`.\n4. **RIGHT JOIN (RIGHT OUTER JOIN)**: Es el reflejo del `LEFT JOIN`. Retorna **todas** las filas de la tabla derecha y únicamente los registros coincidentes de la tabla izquierda, rellenando con `NULL` donde no haya cruce.\n5. **Uso en Analítica de Datos**: Permite unir tablas operativas para realizar filtrados, agrupaciones (`GROUP BY`) y agregaciones (como calcular el total vendido por cliente o país).\n\n📥 El informe completo de la investigación se encuentra como la primera fuente en la tarjeta de importación a continuación — puedes importarlo para consultar todos los detalles o guardar las fuentes individuales en tu libreta.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-sql-joins\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-sql-joins\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos y guías explicativas sobre SQL JOINs y relaciones entre tablas\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Informe de investigación: SQL JOINs y Relaciones entre Tablas\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQxNmFhN2Y2Yi1jMGJiLTQwNmUtYTgxNy0xNDE2NTc0NjYwMGQSCxIHEPnP8YvcBhgB&filename=Gua_de_investigacin_SQL_JOINs_y_Relaciones_entre_Tablas.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Informe de investigación\",\n          \"summary\": \"Informe estructurado con 4 fuentes clasificadas sobre INNER, LEFT, RIGHT JOIN y modelos de datos.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"SQL Joins: INNER, LEFT, RIGHT, and FULL JOIN\",\n          \"url\": \"https://www.boot.dev/blog/backend/sql-joins\",\n          \"sourceName\": \"Boot.dev\",\n          \"summary\": \"Explicación práctica de la combinación de datos entre tablas mediante la cláusula ON y claves de enlace.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"Understanding SQL JOINs: INNER, LEFT, and RIGHT Join Explained\",\n          \"url\": \"https://www.freecodecamp.org/news/understanding-sql-joins/\",\n          \"sourceName\": \"freeCodeCamp\",\n          \"summary\": \"Guía conceptual sobre cómo consultar tablas relacionales combinando registros según su condición.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"SQL Joins Explained: INNER, LEFT, RIGHT, and FULL JOIN Diagrams\",\n          \"url\": \"https://dbschema.com/blog/tutorials/sql-joins-explained/\",\n          \"sourceName\": \"DbSchema\",\n          \"summary\": \"Tutorial visual con diagramas de conjuntos para entender la intersección y unión de tablas en SQL.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"SQL JOIN - Complete Guide to Database Table Relationships\",\n          \"url\": \"https://www.dawiso.com/glossary/sql-join-complete-guide-to-database-table-relationships\",\n          \"sourceName\": \"Dawiso\",\n          \"summary\": \"Guía técnica sobre la vinculación de tablas mediante llaves primarias/foráneas y optimización de consultas.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Esto es lo que encontré sobre **SQL JOINs y relaciones entre tablas en bases de datos y analítica de datos**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no he importado las fuentes de la investigación a tu libreta. \n\n¿Quieres que las **importe ahora**? Una vez añadidas a tus fuentes, podré responder a tus preguntas en detalle y profundizar en las relaciones de los JOINs basándome directamente en ellas. También puedes hacer clic en el botón de importar en la **tarjeta de fuentes** de la respuesta anterior.",
+      "claims": [
+        {
+          "text": "Aún no he importado las fuentes de la investigación a tu libreta. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "9463006f-fbb0-4263-af4b-aa9f67678a01",
+  "duration_ms": 71875,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-06-joins\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

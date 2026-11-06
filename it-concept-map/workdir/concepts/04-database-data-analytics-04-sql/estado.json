@@ -1,0 +1,31 @@
+{
+  "concept_id": "04-database-data-analytics-04-sql",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "failed_phase": "researching",
+    "failed_reason": "error",
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-04-sql\\sources.json",
+    "notebook_id": "86b622bf-7a13-4e82-8a6e-f9149f159f9b",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-04-sql\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-04-sql\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\04-database-data-analytics-04-sql\\04 - SQL.md.20261105T182029Z-5aa0b1.bak",
+      "outside_hash": "d60804beff06806b1b534f4572ca7db97d2a8184fef19b5c885a8310ef0e22d1",
+      "inside_hash": "6951842b8f786fd16bf57e62b7effcc72b3b7b48c13266a9f5c3ffd96f9c8389",
+      "written_at": "2026-11-05T18:20:29.365499+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:35:42.163554+00:00",
+  "updated_at": "2026-11-05T18:20:29.382962+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T18:20:29.382962+00:00",
+    "created_at": "2026-10-30T05:35:42.163554+00:00"
+  },
+  "schema_version": "1.0.0"
+}

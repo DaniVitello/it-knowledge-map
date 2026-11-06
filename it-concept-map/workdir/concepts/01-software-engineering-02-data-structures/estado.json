@@ -1,0 +1,29 @@
+{
+  "concept_id": "01-software-engineering-02-data-structures",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\01-software-engineering-02-data-structures\\sources.json",
+    "notebook_id": "38047b8b-7897-44ee-b26d-e61de8c0f96c",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-02-data-structures\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-02-data-structures\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\01-software-engineering-02-data-structures\\02 - Data Structures.md.20261030T041242Z-38e633.bak",
+      "outside_hash": "512e49b59c46f77d695400c48591ee72deb57fc0f301de1f9ca7a681853c9ff4",
+      "inside_hash": "0b7234a1394b5a93c316f1ad45f4a04a01d25fdcd9229127c91c9ea40fd43107",
+      "written_at": "2026-10-30T04:12:42.330203+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T04:12:04.202101+00:00",
+  "updated_at": "2026-10-30T04:12:42.357696+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T04:12:42.357696+00:00",
+    "created_at": "2026-10-30T04:12:04.202101+00:00"
+  },
+  "schema_version": "1.0.0"
+}

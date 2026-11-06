@@ -1,0 +1,16 @@
+{"ts": "2026-11-05T23:41:04.058648+00:00", "run_id": "run-20261105-204002-56e07b", "concept_id": "06-operating-systems-linux-03-processes", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:42:04.557093+00:00", "run_id": "run-20261105-204002-56e07b", "concept_id": "06-operating-systems-linux-03-processes", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T23:42:08.427279+00:00", "run_id": "run-20261105-204002-56e07b", "concept_id": "06-operating-systems-linux-03-processes", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T23:42:08.458110+00:00", "run_id": "run-20261105-204002-56e07b", "concept_id": "06-operating-systems-linux-03-processes", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T23:58:03.022476+00:00", "run_id": "run-20261105-205803-cb63d9", "concept_id": "06-operating-systems-linux-03-processes", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:58:25.063313+00:00", "run_id": "run-20261105-205803-cb63d9", "concept_id": "06-operating-systems-linux-03-processes", "event": "phase_failed", "phase": "research", "error": "research (7d118cb0-24c6-4508-b099-8adb1fb0d616): Chat request was rate limited or rejected by the API. Wait a few seconds and try again."}
+{"ts": "2026-11-06T20:27:57.401836+00:00", "run_id": "run-20261106-172757-a865a0", "concept_id": "06-operating-systems-linux-03-processes", "event": "run_start", "force": true, "dry_run": true}
+{"ts": "2026-11-06T20:29:01.747917+00:00", "run_id": "run-20261106-172757-a865a0", "concept_id": "06-operating-systems-linux-03-processes", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-06T20:29:07.948283+00:00", "run_id": "run-20261106-172757-a865a0", "concept_id": "06-operating-systems-linux-03-processes", "event": "phase_failed", "phase": "synthesis", "error": "No se proporciono LLM para la sintesis"}
+{"ts": "2026-11-06T20:31:29.688995+00:00", "run_id": "run-20261106-173129-f8ea4e", "concept_id": "06-operating-systems-linux-03-processes", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-06T20:32:09.886024+00:00", "run_id": "run-20261106-173129-f8ea4e", "concept_id": "06-operating-systems-linux-03-processes", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-06T20:32:13.905204+00:00", "run_id": "run-20261106-173129-f8ea4e", "concept_id": "06-operating-systems-linux-03-processes", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-06T20:32:13.938273+00:00", "run_id": "run-20261106-173129-f8ea4e", "concept_id": "06-operating-systems-linux-03-processes", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-06T20:32:13.962921+00:00", "run_id": "run-20261106-173129-f8ea4e", "concept_id": "06-operating-systems-linux-03-processes", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-06T20:32:13.980300+00:00", "run_id": "run-20261106-173129-f8ea4e", "concept_id": "06-operating-systems-linux-03-processes", "event": "notebook_delete_failed", "notebook_id": "5e0ff604-5a16-4bba-afa3-e24e55dc0ad3", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-06T20:32:13.989225+00:00", "run_id": "run-20261106-173129-f8ea4e", "concept_id": "06-operating-systems-linux-03-processes", "event": "run_end", "status": "completed"}

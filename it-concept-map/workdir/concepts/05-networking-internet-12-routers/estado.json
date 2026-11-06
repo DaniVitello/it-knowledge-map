@@ -1,0 +1,29 @@
+{
+  "concept_id": "05-networking-internet-12-routers",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-12-routers\\sources.json",
+    "notebook_id": "584a4225-898a-49b3-a544-6e5a01cc3057",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-12-routers\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-12-routers\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\05-networking-internet-12-routers\\12 - Routers.md.20261105T232457Z-7586a4.bak",
+      "outside_hash": "83174b1132f9c18815fcd8cfd92a61e5bffefda6b30a21a4bd172f5ee01941e8",
+      "inside_hash": "6c7baf0b24d736127a8e3fb98fa29b0602762debb23904ca4377a127442c1723",
+      "written_at": "2026-11-05T23:24:57.296291+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:24:17.258264+00:00",
+  "updated_at": "2026-11-05T23:24:57.315835+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:24:57.315835+00:00",
+    "created_at": "2026-11-05T23:24:17.258264+00:00"
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,29 @@
+{
+  "concept_id": "04-database-data-analytics-21-statistics",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-21-statistics\\sources.json",
+    "notebook_id": "41a31770-1c27-4da9-bdbc-48bba63dece6",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-21-statistics\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-21-statistics\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\04-database-data-analytics-21-statistics\\21 - Statistics.md.20261105T230549Z-432890.bak",
+      "outside_hash": "ac6e1e05ae6bc5e5fd3e38f489e522ac42dfa3041569622a4075a37bbf9d6991",
+      "inside_hash": "cd8e113aa18b53b543d23d7d4cd5a394bfe702ab6617645971477e6d449a8a3a",
+      "written_at": "2026-11-05T23:05:49.105854+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:04:31.227796+00:00",
+  "updated_at": "2026-11-05T23:05:49.133748+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:05:49.133748+00:00",
+    "created_at": "2026-11-05T23:04:31.227796+00:00"
+  },
+  "schema_version": "1.0.0"
+}

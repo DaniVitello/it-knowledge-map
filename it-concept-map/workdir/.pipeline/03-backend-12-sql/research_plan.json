@@ -1,0 +1,44 @@
+{
+  "questions": [],
+  "concept_id": "03-backend-12-sql",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es SQL y para que sirve (SELECT, JOIN, índices, transacciones)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de SQL en Backend"
+    ],
+    "context": [
+      "Como se usa SQL en el contexto profesional de Backend"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "SQL",
+      "ask": "Como se relaciona SQL con SQL?"
+    },
+    {
+      "with": "Filtering & Aggregation",
+      "ask": "Como se relaciona SQL con Filtering & Aggregation?"
+    },
+    {
+      "with": "JOINs",
+      "ask": "Como se relaciona SQL con JOINs?"
+    }
+  ],
+  "queries": [
+    "site:developer.mozilla.org SQL",
+    "site:rfc-editor.org SQL",
+    "site:datatracker.ietf.org SQL",
+    "site:owasp.org SQL",
+    "site:postgresql.org SQL",
+    "site:redis.io SQL",
+    "site:12factor.net SQL",
+    "site:learn.microsoft.com SQL"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

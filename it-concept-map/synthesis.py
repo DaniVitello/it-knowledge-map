@@ -110,7 +110,8 @@ CONCEPTOS CONECTADOS: {connections}
 ESTABILIDAD: {volatility}
 
 REGLAS INNEGOCIABLES
-1. Usa SOLO las fuentes del notebook. Si las fuentes no permiten afirmar algo, escribi "sin verificar" o "?? verificar".
+1. Usa SOLO las fuentes del notebook. Si las fuentes no permiten afirmar algo, NO lo incluyas en el texto. No escribas "sin verificar" ni "??" en el texto visible.
+1b. PROHIBIDO escribir "(sin verificar)", "??", "sin verificar" o cualquier marcador de incertidumbre en el texto. Si no tienes fuente, omiti la afirmacion. Este marcador es metadata interna y NUNCA aparece en el output.
 2. No inventes URLs, versiones, fechas, estadisticas, estandares, funcionalidades ni relaciones.
 3. Contexto antes que definicion: explica que significa y para que sirve DENTRO del area {area}.
 4. Principio 20/80: primero las 3 a 5 ideas que dan el modelo mental.
@@ -118,6 +119,8 @@ REGLAS INNEGOCIABLES
 6. Menciona conceptos conectados por nombre (sin usar [[...]]). Explica la naturaleza de la relacion.
 7. Espanol claro y directo; terminos tecnicos en ingles cuando son el estandar.
 8. Respondé SOLO con las secciones pedidas, cada una con su encabezado de nivel 2 EXACTO (## Nombre). Sin introduccion ni cierre.
+9. Usa acentos correctos en español (á, é, í, ó, ú, ñ, ü). No generes caracteres corruptos.
+10. Máximo 6000 caracteres en total para todas las secciones combinadas.
 
 FUENTES DISPONIBLES:
 {sources_list}
@@ -129,16 +132,16 @@ TAREA: escribi unicamente estas secciones, con estos encabezados exactos y en es
 {chr(10).join('## ' + s for s in CONTRACT_SECTIONS)}
 
 GUA POR SECCION
-- Objetivo: NO empieces con una definicion. Responde: para que lo uso?, que problema resuelve?, donde aparece en el trabajo de un {main_role}?, que puedo hacer despues de entenderlo?, cuando no necesito preocuparme por el? La definicion formal va despues.
-- Esqueleto (el 20% esencial): entre 3 y 5 ideas fundamentales, como lista numerada, cada una con una o dos frases.
+- Objetivo: Redacta un parrafo corrido (no bullets, no preguntas) que responda en prosa natural: para que lo uso, que problema resuelve, donde aparece en el trabajo de un {main_role}, que puedo hacer despues de entenderlo, cuando no necesito preocuparme. Primera persona ("Utilizo...", "Resuelvo..."). Maximo 200 palabras. La definicion formal va despues.
+- Esqueleto (el 20% esencial): entre 3 y 5 ideas fundamentales, como lista numerada, cada una con una o dos frases. Las IDEAS PRINCIPALES del autor (listadas en el contexto) son la base: el esqueleto debe cubrir al menos esas ideas, aunque puede expandirlas o reorganizarlas.
 - Como funciona: que ocurre cuando se usa, paso a paso, conectado a las ideas del esqueleto.
 - Detalles: progresion de lo basico a lo intermedio y lo avanzado, colgando de las ideas del esqueleto.
-- Ejemplo minimo: el ejemplo mas chico que muestre el concepto funcionando. Si no hay ejemplo respaldado por las fuentes, escribilo igual de simple y marca "?? verificar".
+- Ejemplo minimo: el ejemplo mas chico que muestre el concepto funcionando. Siempre incluir un bloque de codigo. Si no hay ejemplo respaldado por las fuentes, escribilo igual de simple.
 - Errores comunes: los errores y malentendidos reales, con una linea sobre como evitarlos.
-- Estado actual: separa fundamentos estables de practica moderna. Cada afirmacion sensible al tiempo debe salir de una fuente. Lo que no puedas respaldar escribilo como "sin verificar" o "?? verificar".
-- Conexiones: lista de conceptos conectados por nombre (sin [[...]]) y, para cada uno, una frase que explique la naturaleza de la relacion.
-- Ruta de estudio: que conviene saber antes (prerrequisitos) y como avanzar despues, de fundamentos a avanzado.
-- Preguntas de repaso: al menos 5 preguntas, mezclando comprension y aplicacion. Cada pregunta termina con "?".
+- Estado actual: separa fundamentos estables de practica moderna. Cada afirmacion sensible al tiempo debe salir de una fuente. Si no puedes respaldar una afirmacion, omitila por completo. NUNCA escribas "(sin verificar)" ni "??" ni parentesis similares en el texto. Es metadata interna, no contenido visible.
+- Conexiones: exactamente 3 conceptos conectados por nombre (sin [[...]]), priorizando conceptos de OTRAS areas. Para cada uno, una frase que explique la naturaleza de la relacion.
+- Ruta de estudio: que conviene saber antes (prerrequisitos) y como avanzar despues, de fundamentos a avanzado. Debe ser especifico del tema, no generico.
+- Preguntas de repaso: exactamente 5 preguntas, mezclando comprension y aplicacion. Cada pregunta termina con "?".
 """
     return prompt
 
@@ -234,6 +237,10 @@ class SynthesisPhase:
         t0 = time.monotonic()
         try:
             markdown = await self._call_llm(prompt)
+            # Post-procesamiento: eliminar marcadores de incertidumbre del texto visible.
+            import re as _re
+            markdown = _re.sub(r'\s*\(sin verificar\)', '', markdown)
+            markdown = _re.sub(r'\s*\?\?', '', markdown)
         except Exception as e:
             st.transition_to(state.ConceptStatus.FAILED)
             st.phase_data["failed_phase"] = "synthesizing"

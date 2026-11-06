@@ -1,0 +1,47 @@
+{
+  "questions": [],
+  "concept_id": "05-networking-internet-10-arp",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es ARP y para que sirve (Resolución IP → MAC en IPv4)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de ARP en Networking / Internet"
+    ],
+    "context": [
+      "Como se usa ARP en el contexto profesional de Networking / Internet"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "IP",
+      "ask": "Como se relaciona ARP con IP?"
+    },
+    {
+      "with": "IPv4 / IPv6",
+      "ask": "Como se relaciona ARP con IPv4 / IPv6?"
+    },
+    {
+      "with": "DHCP",
+      "ask": "Como se relaciona ARP con DHCP?"
+    },
+    {
+      "with": "Subnetting / CIDR",
+      "ask": "Como se relaciona ARP con Subnetting / CIDR?"
+    }
+  ],
+  "queries": [
+    "site:rfc-editor.org ARP",
+    "site:datatracker.ietf.org ARP",
+    "site:developer.mozilla.org ARP",
+    "site:cloudflare.com ARP",
+    "site:beej.us ARP",
+    "site:hpbn.co ARP",
+    "site:man7.org ARP"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

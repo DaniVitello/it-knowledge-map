@@ -1,0 +1,2 @@
+{"ts": "2026-11-05T23:49:24.146474+00:00", "run_id": "run-20261105-204002-56e07b", "concept_id": "06-operating-systems-linux-20-daemons-services", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:49:41.695339+00:00", "run_id": "run-20261105-204002-56e07b", "concept_id": "06-operating-systems-linux-20-daemons-services", "event": "phase_failed", "phase": "research", "error": "research (b87aa7b5-de52-48a8-ba41-cd2c1960a763): Chat request was rate limited or rejected by the API. Wait a few seconds and try again."}

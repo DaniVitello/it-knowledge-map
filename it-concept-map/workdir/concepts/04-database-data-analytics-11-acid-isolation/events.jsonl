@@ -1,0 +1,8 @@
+{"ts": "2026-11-05T18:23:46.389864+00:00", "run_id": "run-20261105-151808-34f931", "concept_id": "04-database-data-analytics-11-acid-isolation", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-11-05T22:55:24.239589+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-11-acid-isolation", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T22:56:14.707719+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-11-acid-isolation", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T22:56:18.877117+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-11-acid-isolation", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T22:56:18.906090+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-11-acid-isolation", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T22:56:18.932985+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-11-acid-isolation", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T22:56:18.951719+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-11-acid-isolation", "event": "notebook_delete_failed", "notebook_id": "c446e33b-d04d-44bb-b387-19f20e043888", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T22:56:18.962936+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-11-acid-isolation", "event": "run_end", "status": "completed"}

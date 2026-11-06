@@ -1,0 +1,50 @@
+{
+  "concept_id": "03-backend-15-transacciones",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No encuentro fuentes en tu libreta sobre **Transacciones (ACID, aislamiento, bloqueos y consistencia)**. \n\n¿Te gustaría que realice una **investigación en la web** sobre este tema para brindarte una explicación detallada y encontrar fuentes relevantes?",
+      "claims": [
+        {
+          "text": "No encuentro fuentes en tu libreta sobre **Transacciones (ACID, aislamiento, bloqueos y consistencia)**. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "He realizado una investigación web sobre **Transacciones en Backend** (ACID, niveles de aislamiento, bloqueos y consistencia).\n\nUna **transacción en backend** es una unidad lógica de trabajo que agrupa múltiples operaciones en la base de datos (como lecturas, escrituras y actualizaciones) para garantizar que se ejecuten como un conjunto indivisible: o **todas se completan con éxito** o **ninguna aplica cambios**.\n\n---\n\n### **Puntos clave encontrados:**\n\n1. **Garantías ACID**:\n   * **Atomicidad (Atomicity)**: Principio del \"todo o nada\". Si falla cualquier paso (ej. la deducción de saldo), se ejecuta un *rollback* que revierte el estado.\n   * **Consistencia (Consistency)**: La base de datos pasa de un estado válido a otro, respetando reglas de integridad, claves foráneas y restricciones.\n   * **Aislamiento (Isolation)**: Determina cómo las transacciones concurrentes se ven entre sí para evitar interferencias y datos inconsistentes.\n   * **Durabilidad (Durability)**: Una vez confirmada (*commit*), la información persiste ante fallos del sistema o caídas del servidor (habitualmente mediante registros *Write-Ahead Logging*).\n\n2. **Niveles de Aislamiento y Anomalías**:\n   * **Read Uncommitted**: Nivel más bajo; permite *lecturas sucias* (leer datos no confirmados por otra transacción).\n   * **Read Committed**: Solo permite ver datos ya confirmados (evita lecturas sucias).\n   * **Repeatable Read**: Garantiza que volver a leer la misma fila devuelva el mismo valor durante toda la transacción.\n   * **Serializable**: Máximo aislamiento; simula la ejecución estricta una tras otra para prevenir *lecturas fantasma* y anomalías de actualización.\n\n3. **Mecanismos de Concurrencia y Bloqueos (Locks)**:\n   * **Bloqueos Pesimistas**: Usan bloqueos compartidos (*shared locks* para lectura) y exclusivos (*exclusive locks* para escritura) o protocolos como *Two-Phase Locking* (2PL).\n   * **Control de Concurrencia Multiversión (MVCC)**: Motores como PostgreSQL crean versiones de las filas para permitir que las lecturas no bloqueen a las escrituras y viceversa.\n   * **Bloqueos Optimistas**: No bloquean filas preventivamente; verifican un número de versión o *timestamp* al momento de guardar para detectar conflictos.\n\n---\n\n📥 **El reporte completo de la investigación se incluye como la primera fuente en la tarjeta de importación a continuación.** Puedes seleccionar qué fuentes deseas importar a tu libreta para seguir haciendo preguntas grounded en ellas.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-transacciones-backend\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-transacciones-backend\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos técnicos y guías sobre transacciones ACID, niveles de aislamiento y bloqueos en backend\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Reporte de investigación: Transacciones en Backend\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiRhNGJlNjc0ZS0yYzFiLTQ1NjAtYWVjMi04MDhkZDRkYmIwYTUSCxIHEPnP8YvcBhgB&filename=Research_report_Transacciones_en_Backend.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Reporte de Investigación\",\n          \"summary\": \"Informe completo con 6 fuentes sobre transacciones ACID, aislamientos y bloqueos en bases de datos.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"A Guide to Database Transactions: From ACID to Concurrency Control\",\n          \"url\": \"https://blog.bytebytego.com/p/a-guide-to-database-transactions\",\n          \"sourceName\": \"ByteByteGo\",\n          \"summary\": \"Explicación clara de cómo las transacciones garantizan la consistencia y evitan inconsistencias financieras o de reservas.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"SQL Transactions — The Complete Guide\",\n          \"url\": \"https://dev.to/farhadrahimiklie/understanding-transactions-in-sql-databases-a-complete-guide-for-developers-2ah6\",\n          \"sourceName\": \"DEV Community\",\n          \"summary\": \"Guía sobre Write-Ahead Logging (WAL), bloqueos compartidos/exclusivos y control de concurrencia multiversión (MVCC).\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"Database Concurrency in PostgreSQL\",\n          \"url\": \"https://www.red-gate.com/simple-talk/databases/postgresql/database-concurrency-in-postgresql/\",\n          \"sourceName\": \"Simple Talk\",\n          \"summary\": \"Detalle de los niveles de aislamiento en PostgreSQL y cómo gestiona la concurrencia sin lecturas sucias.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"Database Transaction And How To Handle It In NodeJS With Prisma\",\n          \"url\": \"https://saigontechnology.com/blog/database-transaction-and-how-to-handle-it-in-nodejs-with-prisma/\",\n          \"sourceName\": \"Saigon Technology\",\n          \"summary\": \"Ejemplos prácticos de cómo ejecutar operaciones dentro de una transacción en backend con Node.js.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"Guía Database: Fundamentos y Concurrencia\",\n          \"url\": \"https://learn-stack-seven.vercel.app/guides/database\",\n          \"sourceName\": \"LearnStack\",\n          \"summary\": \"Explicación pedagógica en español de los niveles de aislamiento, anomalías de concurrencia y mecanismos de bloqueo.\"\n        },\n        {\n          \"id\": \"src-6\",\n          \"title\": \"Chapter 7: Transactions & Concurrency Anomalies\",\n          \"url\": \"https://www.codedump.info/dist-system-en/transaction/\",\n          \"sourceName\": \"System Design Notes\",\n          \"summary\": \"Análisis profundo sobre lecturas sucias, lecturas fantasma y el protocolo de bloqueo de dos fases (2PL).\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>\n\n💡 Una vez que importes las fuentes que prefieras, ¿te gustaría que elabore una guía o reporte sobre cómo implementar transacciones y manejo de bloqueos en un lenguaje/ORM específico (como Node.js/Prisma, Python/SQLAlchemy o Java/Spring)?",
+      "claims": [
+        {
+          "text": "He realizado una investigación web sobre **Transacciones en Backend** (ACID, niveles de aislamiento, bloqueos y consistencia).",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no se han importado las fuentes de la investigación a tu libreta. ¿Quieres que las importe para poder responder a tus preguntas basándome en el contenido de las fuentes? \n\nTambién puedes desplazarte hacia arriba hasta la tarjeta de resultados de la investigación e importarlas directamente desde allí.",
+      "claims": [
+        {
+          "text": "Aún no se han importado las fuentes de la investigación a tu libreta. ¿Quieres que las importe para poder responder a tus preguntas basándome en el contenido de las fuentes? ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "d47dbff2-7e00-4e1f-9d62-79c4b1adb651",
+  "duration_ms": 55749,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\03-backend-15-transacciones\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

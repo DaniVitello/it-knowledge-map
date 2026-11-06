@@ -18,9 +18,6 @@ tags: [concepto, it/frontend]
 
 ## Mis notas
 <!-- ai:start -->
-# Modern JavaScript Fundamentals & Architecture: Comprehensive Study Guide
-
-This study guide provides a detailed synthesis of core JavaScript mechanisms, memory models, execution contexts, variable lifecycles, object-oriented semantics, and collection operations based on the ECMAScript specifications and standard developer reference materials.
 <!-- ai:end -->
 
 ---

@@ -1,0 +1,39 @@
+{
+  "questions": [],
+  "concept_id": "06-operating-systems-linux-10-users-groups",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Users & Groups y para que sirve (Identidad y separación de privilegios)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Users & Groups en Operating Systems / Linux"
+    ],
+    "context": [
+      "Como se usa Users & Groups en el contexto profesional de Operating Systems / Linux"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "File Systems",
+      "ask": "Como se relaciona Users & Groups con File Systems?"
+    },
+    {
+      "with": "File Permissions",
+      "ask": "Como se relaciona Users & Groups con File Permissions?"
+    }
+  ],
+  "queries": [
+    "site:man7.org Users & Groups",
+    "site:kernel.org Users & Groups",
+    "site:ostep.org Users & Groups",
+    "site:wiki.archlinux.org Users & Groups",
+    "site:gnu.org Users & Groups",
+    "site:docs.docker.com Users & Groups",
+    "site:opencontainers.org Users & Groups"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

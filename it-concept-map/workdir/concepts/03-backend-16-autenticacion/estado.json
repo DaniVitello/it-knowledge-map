@@ -1,0 +1,31 @@
+{
+  "concept_id": "03-backend-16-autenticacion",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "failed_phase": "researching",
+    "failed_reason": "error",
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\03-backend-16-autenticacion\\sources.json",
+    "notebook_id": "fcee97ae-984c-4291-9f3e-ffa5eed58a8b",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\03-backend-16-autenticacion\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\03-backend-16-autenticacion\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\03-backend-16-autenticacion\\16 - Autenticación.md.20261105T194959Z-02fc62.bak",
+      "outside_hash": "6ed00aceee2055bcabbffbaa12b43c6c65fe8c013765655ff2c041e2f962be75",
+      "inside_hash": "43d3d5a6cdfb71b5fe6f413705415817a5474ba82a71c78bdcb4bbf6aba9c5d2",
+      "written_at": "2026-11-05T19:49:59.705217+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:31:52.184043+00:00",
+  "updated_at": "2026-11-05T19:49:59.726329+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T19:49:59.726329+00:00",
+    "created_at": "2026-10-30T05:31:52.184043+00:00"
+  },
+  "schema_version": "1.0.0"
+}

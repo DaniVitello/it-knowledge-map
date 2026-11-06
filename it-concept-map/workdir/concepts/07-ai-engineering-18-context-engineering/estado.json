@@ -1,0 +1,29 @@
+{
+  "concept_id": "07-ai-engineering-18-context-engineering",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\07-ai-engineering-18-context-engineering\\sources.json",
+    "notebook_id": "7d6208ab-1160-4f9d-bb44-ff54272eb709",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\07-ai-engineering-18-context-engineering\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\07-ai-engineering-18-context-engineering\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\07-ai-engineering-18-context-engineering\\18 - Context Engineering.md.20261106T211504Z-5d9ab2.bak",
+      "outside_hash": "9f72a3c436a06d650ebf6e68babbda019ab0cf87b596e5620d21fbbc0c36a12a",
+      "inside_hash": "7abbf147153bc47a45537e5c0a9de767580eaf7224922283085de34a38e1682b",
+      "written_at": "2026-11-06T21:15:04.517028+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-06T21:14:05.899568+00:00",
+  "updated_at": "2026-11-06T21:15:04.535365+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-06T21:15:04.535365+00:00",
+    "created_at": "2026-11-06T21:14:05.899568+00:00"
+  },
+  "schema_version": "1.0.0"
+}

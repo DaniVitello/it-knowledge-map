@@ -1,0 +1,7 @@
+{"ts": "2026-11-05T23:35:42.625098+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-25-cdn-load-balancing", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:36:45.897576+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-25-cdn-load-balancing", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T23:36:50.077185+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-25-cdn-load-balancing", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T23:36:50.106380+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-25-cdn-load-balancing", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T23:36:50.135351+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-25-cdn-load-balancing", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T23:36:50.154763+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-25-cdn-load-balancing", "event": "notebook_delete_failed", "notebook_id": "64d9e692-8f0f-443a-a7b1-d7bb354ec03c", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T23:36:50.164565+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-25-cdn-load-balancing", "event": "run_end", "status": "completed"}

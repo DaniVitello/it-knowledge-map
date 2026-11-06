@@ -1,0 +1,50 @@
+{
+  "concept_id": "06-operating-systems-linux-01-operating-system",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No veo fuentes agregadas en tu libreta sobre qué es un **sistema operativo**, cómo administra el hardware o para qué sirve.\n\n¿Te gustaría que realice una investigación en la web sobre este tema para explicártelo?",
+      "claims": [
+        {
+          "text": "No veo fuentes agregadas en tu libreta sobre qué es un **sistema operativo**, cómo administra el hardware o para qué sirve.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Aún **no tienes fuentes** cargadas en tu libreta sobre **Sistemas Operativos** o **Linux**. \n\n¿Te gustaría que realice una **investigación en la web** sobre cómo funciona un Sistema Operativo en Linux y cómo administra el hardware para explicártelo?",
+      "claims": [
+        {
+          "text": "Aún **no tienes fuentes** cargadas en tu libreta sobre **Sistemas Operativos** o **Linux**. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Tu libreta todavía no contiene fuentes ni notas sobre el estado actual, las funciones o la administración de hardware de un **sistema operativo**.\n\n¿Te gustaría que haga una **investigación en la web** sobre este tema?",
+      "claims": [
+        {
+          "text": "Tu libreta todavía no contiene fuentes ni notas sobre el estado actual, las funciones o la administración de hardware de un **sistema operativo**.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "6e5151f2-2a6e-4f12-af5f-e149035d8e7f",
+  "duration_ms": 30593,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\06-operating-systems-linux-01-operating-system\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

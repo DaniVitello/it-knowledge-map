@@ -1,0 +1,10 @@
+{
+  "concept_id": "05-networking-internet-05-udp",
+  "is_valid": true,
+  "issues": [],
+  "warnings": [],
+  "score": 1.0,
+  "checked_at": "2026-11-05T23:14:10.992958+00:00",
+  "blocking_failures": [],
+  "verdict": "approved"
+}

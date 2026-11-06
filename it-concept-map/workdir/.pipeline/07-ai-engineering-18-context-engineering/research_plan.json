@@ -1,0 +1,60 @@
+{
+  "questions": [],
+  "concept_id": "07-ai-engineering-18-context-engineering",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Context Engineering y para que sirve (Qué información recibe el modelo y cuándo)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Context Engineering en AI Engineering"
+    ],
+    "context": [
+      "Como se usa Context Engineering en el contexto profesional de AI Engineering"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Embeddings",
+      "ask": "Como se relaciona Context Engineering con Embeddings?"
+    },
+    {
+      "with": "Prompt Engineering",
+      "ask": "Como se relaciona Context Engineering con Prompt Engineering?"
+    },
+    {
+      "with": "Structured Outputs",
+      "ask": "Como se relaciona Context Engineering con Structured Outputs?"
+    },
+    {
+      "with": "Tool Calling",
+      "ask": "Como se relaciona Context Engineering con Tool Calling?"
+    },
+    {
+      "with": "RAG",
+      "ask": "Como se relaciona Context Engineering con RAG?"
+    },
+    {
+      "with": "Vector Databases",
+      "ask": "Como se relaciona Context Engineering con Vector Databases?"
+    },
+    {
+      "with": "Memory",
+      "ask": "Como se relaciona Context Engineering con Memory?"
+    }
+  ],
+  "queries": [
+    "site:arxiv.org Context Engineering",
+    "site:huggingface.co Context Engineering",
+    "site:pytorch.org Context Engineering",
+    "site:d2l.ai Context Engineering",
+    "site:platform.openai.com Context Engineering",
+    "site:docs.claude.com Context Engineering",
+    "site:ai.google.dev Context Engineering",
+    "site:deeplearning.ai Context Engineering"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

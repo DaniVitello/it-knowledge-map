@@ -1,0 +1,20 @@
+{
+  "concept_id": "06-operating-systems-linux-13-processes-ipc",
+  "status": "failed",
+  "last_good_state": "researching",
+  "checkpoint": null,
+  "phase_data": {
+    "failed_phase": "researching",
+    "failed_reason": "error"
+  },
+  "error": "research (e597072f-b4ad-4fa0-84b6-bf0eb8a4626f): Chat request was rate limited or rejected by the API. Wait a few seconds and try again.",
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:47:14.682607+00:00",
+  "updated_at": "2026-11-05T23:47:31.847515+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:47:31.847487+00:00",
+    "created_at": "2026-11-05T23:47:14.682607+00:00"
+  },
+  "schema_version": "1.0.0"
+}

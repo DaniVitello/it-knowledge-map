@@ -1,0 +1,2 @@
+{"ts": "2026-11-05T23:51:02.352744+00:00", "run_id": "run-20261105-204002-56e07b", "concept_id": "06-operating-systems-linux-25-virtualization-infrastructure", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:51:20.839243+00:00", "run_id": "run-20261105-204002-56e07b", "concept_id": "06-operating-systems-linux-25-virtualization-infrastructure", "event": "phase_failed", "phase": "research", "error": "research (10bde4f5-3b06-4eb5-85ee-531b363581e0): Chat request was rate limited or rejected by the API. Wait a few seconds and try again."}

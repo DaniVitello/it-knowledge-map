@@ -1,0 +1,44 @@
+{
+  "questions": [],
+  "concept_id": "07-ai-engineering-02-python-programming",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Python & Programming y para que sirve (Python, estructuras, APIs, async, tooling)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Python & Programming en AI Engineering"
+    ],
+    "context": [
+      "Como se usa Python & Programming en el contexto profesional de AI Engineering"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Programming Fundamentals",
+      "ask": "Como se relaciona Python & Programming con Programming Fundamentals?"
+    },
+    {
+      "with": "Lenguaje Backend",
+      "ask": "Como se relaciona Python & Programming con Lenguaje Backend?"
+    },
+    {
+      "with": "Runtime",
+      "ask": "Como se relaciona Python & Programming con Runtime?"
+    }
+  ],
+  "queries": [
+    "site:arxiv.org Python & Programming",
+    "site:huggingface.co Python & Programming",
+    "site:pytorch.org Python & Programming",
+    "site:d2l.ai Python & Programming",
+    "site:platform.openai.com Python & Programming",
+    "site:docs.claude.com Python & Programming",
+    "site:ai.google.dev Python & Programming",
+    "site:deeplearning.ai Python & Programming"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

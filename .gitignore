@@ -1,34 +1,25 @@
 # Python
-.venv/
 __pycache__/
 *.pyc
 *.pyo
-*.egg-info/
-dist/
-build/
+.venv/
+venv/
+.pytest_cache/
 
-# Environment
-.env
-.env.local
+# Junk / temp
+*.bak
+*.log
+*.pid
+*.tmp
+tmp_*
+progress.json
 
-# IDE
-.vscode/
-.idea/
+# Node (if any)
+node_modules/
 
 # OS
 .DS_Store
 Thumbs.db
 
-# Agents
-.agents/
-
-# Test files
-test_write.txt
-
-# Large binaries
-*.zip
-*.tar.gz
-
-# Test temp dirs
-**/.tmp*
-
+# OpenCode internals (keep out of repo)
+.local/

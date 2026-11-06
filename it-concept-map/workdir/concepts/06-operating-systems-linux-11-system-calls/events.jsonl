@@ -1,0 +1,2 @@
+{"ts": "2026-11-05T23:46:36.422085+00:00", "run_id": "run-20261105-204002-56e07b", "concept_id": "06-operating-systems-linux-11-system-calls", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:46:54.389512+00:00", "run_id": "run-20261105-204002-56e07b", "concept_id": "06-operating-systems-linux-11-system-calls", "event": "phase_failed", "phase": "research", "error": "research (ff02a830-79b4-4ea9-94a5-56a4a2c8f231): Chat request was rate limited or rejected by the API. Wait a few seconds and try again."}

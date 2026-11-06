@@ -1,0 +1,50 @@
+{
+  "concept_id": "03-backend-08-middleware",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No tienes fuentes agregadas en tu libreta para responder a esta pregunta.\n\n¿Quieres que haga una **búsqueda en la web** para investigar qué es el **Middleware** (pipeline, logging, autenticación, validación, errores) y para qué sirve?",
+      "claims": [
+        {
+          "text": "No tienes fuentes agregadas en tu libreta para responder a esta pregunta.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Tampoco encuentro fuentes registradas en tu libreta para responder a esta pregunta sobre **Middleware en Backend**.\n\n¿Quieres que realice una **búsqueda en la web** para investigar cómo funciona la cadena/pipeline de middleware, así como su uso en *logging*, autenticación (*auth*), validación y manejo de errores?",
+      "claims": [
+        {
+          "text": "Tampoco encuentro fuentes registradas en tu libreta para responder a esta pregunta sobre **Middleware en Backend**.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no tienes fuentes agregadas en tu libreta sobre el **estado actual y las relaciones del Middleware** (pipeline, logging, autenticación, validación y manejo de errores).\n\n¿Quieres que realice una **búsqueda en la web** para investigar cómo se relacionan estos componentes y traerte la información?",
+      "claims": [
+        {
+          "text": "Aún no tienes fuentes agregadas en tu libreta sobre el **estado actual y las relaciones del Middleware** (pipeline, logging, autenticación, validación y manejo de errores).",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "d87c1fc4-4a0c-46e1-b6fb-8c33028117d2",
+  "duration_ms": 30124,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\03-backend-08-middleware\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

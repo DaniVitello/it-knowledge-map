@@ -1,0 +1,31 @@
+{
+  "concept_id": "03-backend-10-arquitectura-de-aplicaciones",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "failed_phase": "synthesizing",
+    "failed_reason": "error",
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\03-backend-10-arquitectura-de-aplicaciones\\sources.json",
+    "notebook_id": "03ed85c1-599b-4f17-8305-fda1aeeb75ae",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\03-backend-10-arquitectura-de-aplicaciones\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\03-backend-10-arquitectura-de-aplicaciones\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\03-backend-10-arquitectura-de-aplicaciones\\10 - Arquitectura de aplicaciones.md.20261105T194438Z-77ecfa.bak",
+      "outside_hash": "44fa0c80a96426f26c8d0c6048a54583e70ee7821bea8de89fdf7efcfe103126",
+      "inside_hash": "d4269bf891bc6588043d5aee73e02165925f8416806a5573a8f9063314ae66fd",
+      "written_at": "2026-11-05T19:44:38.399044+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:29:17.567968+00:00",
+  "updated_at": "2026-11-05T19:44:38.424848+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T19:44:38.424848+00:00",
+    "created_at": "2026-10-30T05:29:17.567968+00:00"
+  },
+  "schema_version": "1.0.0"
+}

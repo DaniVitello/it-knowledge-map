@@ -1,0 +1,7 @@
+{"ts": "2026-11-06T21:18:40.118764+00:00", "run_id": "run-20261106-181840-405d11", "concept_id": "07-ai-engineering-22-observability", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-11-06T21:19:44.932818+00:00", "run_id": "run-20261106-181840-405d11", "concept_id": "07-ai-engineering-22-observability", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-06T21:19:48.532478+00:00", "run_id": "run-20261106-181840-405d11", "concept_id": "07-ai-engineering-22-observability", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-06T21:19:48.564638+00:00", "run_id": "run-20261106-181840-405d11", "concept_id": "07-ai-engineering-22-observability", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-06T21:19:48.591070+00:00", "run_id": "run-20261106-181840-405d11", "concept_id": "07-ai-engineering-22-observability", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-06T21:19:48.609083+00:00", "run_id": "run-20261106-181840-405d11", "concept_id": "07-ai-engineering-22-observability", "event": "notebook_delete_failed", "notebook_id": "2287dedb-7dbb-4f73-ac2c-6d5831cddbea", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-06T21:19:48.618927+00:00", "run_id": "run-20261106-181840-405d11", "concept_id": "07-ai-engineering-22-observability", "event": "run_end", "status": "completed"}

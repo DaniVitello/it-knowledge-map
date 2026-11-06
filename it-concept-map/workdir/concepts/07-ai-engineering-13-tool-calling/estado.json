@@ -1,0 +1,29 @@
+{
+  "concept_id": "07-ai-engineering-13-tool-calling",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\07-ai-engineering-13-tool-calling\\sources.json",
+    "notebook_id": "894ab968-0147-4c6c-85d9-f0c15e2742c0",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\07-ai-engineering-13-tool-calling\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\07-ai-engineering-13-tool-calling\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\07-ai-engineering-13-tool-calling\\13 - Tool Calling.md.20261106T210706Z-256f22.bak",
+      "outside_hash": "85f53510f300fa20287110f5476b3fe76da322f9222dc8687f3398a097f13ab1",
+      "inside_hash": "49bce16e5dd7a9103586b4f873c8d534aac9665cf4509abc867115c4c94c947c",
+      "written_at": "2026-11-06T21:07:06.072323+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-06T21:06:05.834593+00:00",
+  "updated_at": "2026-11-06T21:07:06.091229+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-06T21:07:06.091229+00:00",
+    "created_at": "2026-11-06T21:06:05.834593+00:00"
+  },
+  "schema_version": "1.0.0"
+}

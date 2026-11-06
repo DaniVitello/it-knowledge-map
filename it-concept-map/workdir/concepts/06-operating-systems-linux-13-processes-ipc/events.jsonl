@@ -1,0 +1,2 @@
+{"ts": "2026-11-05T23:47:14.581046+00:00", "run_id": "run-20261105-204002-56e07b", "concept_id": "06-operating-systems-linux-13-processes-ipc", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:47:31.865694+00:00", "run_id": "run-20261105-204002-56e07b", "concept_id": "06-operating-systems-linux-13-processes-ipc", "event": "phase_failed", "phase": "research", "error": "research (e597072f-b4ad-4fa0-84b6-bf0eb8a4626f): Chat request was rate limited or rejected by the API. Wait a few seconds and try again."}

@@ -1,0 +1,29 @@
+{
+  "concept_id": "04-database-data-analytics-14-data-warehouses",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-14-data-warehouses\\sources.json",
+    "notebook_id": "1156c287-2e4b-4e83-bb12-7962c99ea33e",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-14-data-warehouses\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-14-data-warehouses\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\04-database-data-analytics-14-data-warehouses\\14 - Data Warehouses.md.20261105T225921Z-8fee7b.bak",
+      "outside_hash": "38f22cda33a14d5e1633fe3286b0efdd0123cc709dfb4fd4cde5d6db97bdd6d6",
+      "inside_hash": "38b504d6fa382ce36ef40228b57483f24259d7eaae3a4bcbe79cb368c9ca0c96",
+      "written_at": "2026-11-05T22:59:21.504951+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T22:58:19.032642+00:00",
+  "updated_at": "2026-11-05T22:59:21.522067+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T22:59:21.522067+00:00",
+    "created_at": "2026-11-05T22:58:19.032642+00:00"
+  },
+  "schema_version": "1.0.0"
+}

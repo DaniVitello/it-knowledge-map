@@ -1,0 +1,47 @@
+{
+  "questions": [],
+  "concept_id": "05-networking-internet-11-routing",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Routing y para que sirve (Cómo los paquetes encuentran su destino)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Routing en Networking / Internet"
+    ],
+    "context": [
+      "Como se usa Routing en el contexto profesional de Networking / Internet"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Routing",
+      "ask": "Como se relaciona Routing con Routing?"
+    },
+    {
+      "with": "Routers",
+      "ask": "Como se relaciona Routing con Routers?"
+    },
+    {
+      "with": "NAT",
+      "ask": "Como se relaciona Routing con NAT?"
+    },
+    {
+      "with": "Subnetting / CIDR",
+      "ask": "Como se relaciona Routing con Subnetting / CIDR?"
+    }
+  ],
+  "queries": [
+    "site:rfc-editor.org Routing",
+    "site:datatracker.ietf.org Routing",
+    "site:developer.mozilla.org Routing",
+    "site:cloudflare.com Routing",
+    "site:beej.us Routing",
+    "site:hpbn.co Routing",
+    "site:man7.org Routing"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

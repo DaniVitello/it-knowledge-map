@@ -1,0 +1,7 @@
+{"ts": "2026-11-05T23:07:53.180899+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-25-advanced-data-architecture", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:08:47.946547+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-25-advanced-data-architecture", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T23:08:52.030169+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-25-advanced-data-architecture", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T23:08:52.071570+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-25-advanced-data-architecture", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T23:08:52.105609+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-25-advanced-data-architecture", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T23:08:52.125489+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-25-advanced-data-architecture", "event": "notebook_delete_failed", "notebook_id": "b7e9f580-4d8c-4301-aff9-f9ab3ddd3d2c", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T23:08:52.138583+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-25-advanced-data-architecture", "event": "run_end", "status": "completed"}

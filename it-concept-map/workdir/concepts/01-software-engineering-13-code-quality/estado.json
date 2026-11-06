@@ -1,0 +1,29 @@
+{
+  "concept_id": "01-software-engineering-13-code-quality",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\01-software-engineering-13-code-quality\\sources.json",
+    "notebook_id": "9ab4b27a-8188-49f6-8c91-4eb45a5d1c62",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-13-code-quality\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-13-code-quality\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\01-software-engineering-13-code-quality\\13 - Code Quality.md.20261030T044530Z-3d0e60.bak",
+      "outside_hash": "73d3ab912ac98b0f6ee745254238aa1cdef12aa7b3e21fd8a48760dbe349781d",
+      "inside_hash": "dec0f17fb1b4eeb9a75a48848c6652eda264578a435a9d969238f71fede06d89",
+      "written_at": "2026-10-30T04:45:30.665548+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T04:44:23.514432+00:00",
+  "updated_at": "2026-10-30T04:45:30.692106+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T04:45:30.692106+00:00",
+    "created_at": "2026-10-30T04:44:23.514432+00:00"
+  },
+  "schema_version": "1.0.0"
+}

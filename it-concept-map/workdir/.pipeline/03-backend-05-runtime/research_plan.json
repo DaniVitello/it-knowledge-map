@@ -1,0 +1,44 @@
+{
+  "questions": [],
+  "concept_id": "03-backend-05-runtime",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Runtime y para que sirve (JVM, Node.js, .NET, Python runtime, etc.)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Runtime en Backend"
+    ],
+    "context": [
+      "Como se usa Runtime en el contexto profesional de Backend"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Programming Fundamentals",
+      "ask": "Como se relaciona Runtime con Programming Fundamentals?"
+    },
+    {
+      "with": "Lenguaje Backend",
+      "ask": "Como se relaciona Runtime con Lenguaje Backend?"
+    },
+    {
+      "with": "Python & Programming",
+      "ask": "Como se relaciona Runtime con Python & Programming?"
+    }
+  ],
+  "queries": [
+    "site:developer.mozilla.org Runtime",
+    "site:rfc-editor.org Runtime",
+    "site:datatracker.ietf.org Runtime",
+    "site:owasp.org Runtime",
+    "site:postgresql.org Runtime",
+    "site:redis.io Runtime",
+    "site:12factor.net Runtime",
+    "site:learn.microsoft.com Runtime"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,55 @@
+{
+  "questions": [],
+  "concept_id": "05-networking-internet-24-firewalls",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Firewalls y para que sirve (Control de tráfico de red)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Firewalls en Networking / Internet"
+    ],
+    "context": [
+      "Como se usa Firewalls en el contexto profesional de Networking / Internet"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Security Engineering",
+      "ask": "Como se relaciona Firewalls con Security Engineering?"
+    },
+    {
+      "with": "Seguridad",
+      "ask": "Como se relaciona Firewalls con Seguridad?"
+    },
+    {
+      "with": "HTTPS / TLS",
+      "ask": "Como se relaciona Firewalls con HTTPS / TLS?"
+    },
+    {
+      "with": "Proxies / Reverse Proxies",
+      "ask": "Como se relaciona Firewalls con Proxies / Reverse Proxies?"
+    },
+    {
+      "with": "CDN / Load Balancing",
+      "ask": "Como se relaciona Firewalls con CDN / Load Balancing?"
+    },
+    {
+      "with": "AI Safety & Security",
+      "ask": "Como se relaciona Firewalls con AI Safety & Security?"
+    }
+  ],
+  "queries": [
+    "site:rfc-editor.org Firewalls",
+    "site:datatracker.ietf.org Firewalls",
+    "site:developer.mozilla.org Firewalls",
+    "site:cloudflare.com Firewalls",
+    "site:beej.us Firewalls",
+    "site:hpbn.co Firewalls",
+    "site:man7.org Firewalls"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

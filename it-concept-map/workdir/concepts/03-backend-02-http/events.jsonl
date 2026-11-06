@@ -1,0 +1,23 @@
+{"ts": "2026-10-30T05:23:31.735754+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-02-http", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:23:59.567325+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-02-http", "event": "phase_done", "phase": "research"}
+{"ts": "2026-10-30T05:24:03.107144+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-02-http", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-10-30T05:24:03.144604+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-02-http", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-10-30T05:24:03.198060+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-02-http", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-10-30T05:24:03.221389+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-02-http", "event": "notebook_delete_failed", "notebook_id": "6e20844b-9250-4bd6-8321-7bed442f8337", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-10-30T05:24:03.238898+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-02-http", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T18:19:43.910683+00:00", "run_id": "run-20261105-151942-eb6f22", "concept_id": "03-backend-02-http", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-11-05T18:19:43.993356+00:00", "run_id": "run-20261105-151942-eb6f22", "concept_id": "03-backend-02-http", "event": "idempotency_hash_mismatch", "stored": "d3052866d002b6f7e95f60f3a9dceafbc9da948f9d414ba676985b3ebd07ca5e", "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+{"ts": "2026-11-05T18:19:43.994809+00:00", "run_id": "run-20261105-151942-eb6f22", "concept_id": "03-backend-02-http", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T18:20:25.688531+00:00", "run_id": "run-20261105-152024-1e1855", "concept_id": "03-backend-02-http", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-11-05T18:20:25.744378+00:00", "run_id": "run-20261105-152024-1e1855", "concept_id": "03-backend-02-http", "event": "idempotency_hash_mismatch", "stored": "d3052866d002b6f7e95f60f3a9dceafbc9da948f9d414ba676985b3ebd07ca5e", "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+{"ts": "2026-11-05T18:20:25.745834+00:00", "run_id": "run-20261105-152024-1e1855", "concept_id": "03-backend-02-http", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T18:24:27.210393+00:00", "run_id": "run-20261105-152427-d8052b", "concept_id": "03-backend-02-http", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-11-05T18:24:27.269991+00:00", "run_id": "run-20261105-152427-d8052b", "concept_id": "03-backend-02-http", "event": "idempotency_hash_mismatch", "stored": "d3052866d002b6f7e95f60f3a9dceafbc9da948f9d414ba676985b3ebd07ca5e", "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+{"ts": "2026-11-05T18:24:27.271486+00:00", "run_id": "run-20261105-152427-d8052b", "concept_id": "03-backend-02-http", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T18:27:22.451807+00:00", "run_id": "run-20261105-152721-dfc835", "concept_id": "03-backend-02-http", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-11-05T18:27:22.517051+00:00", "run_id": "run-20261105-152721-dfc835", "concept_id": "03-backend-02-http", "event": "idempotency_hash_mismatch", "stored": "d3052866d002b6f7e95f60f3a9dceafbc9da948f9d414ba676985b3ebd07ca5e", "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+{"ts": "2026-11-05T18:27:22.518488+00:00", "run_id": "run-20261105-152721-dfc835", "concept_id": "03-backend-02-http", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T19:25:23.708749+00:00", "run_id": "run-20261105-162522-4ca118", "concept_id": "03-backend-02-http", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T19:25:23.775220+00:00", "run_id": "run-20261105-162522-4ca118", "concept_id": "03-backend-02-http", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T19:43:42.817021+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-02-http", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T19:43:42.889666+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-02-http", "event": "run_end", "status": "completed"}

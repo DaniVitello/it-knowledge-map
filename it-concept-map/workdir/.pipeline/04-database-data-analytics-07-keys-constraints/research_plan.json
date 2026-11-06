@@ -1,0 +1,47 @@
+{
+  "questions": [],
+  "concept_id": "04-database-data-analytics-07-keys-constraints",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Keys & Constraints y para que sirve (Primary keys, foreign keys, unique, constraints)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Keys & Constraints en Database / Data Analytics"
+    ],
+    "context": [
+      "Como se usa Keys & Constraints en el contexto profesional de Database / Data Analytics"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Modelado de datos",
+      "ask": "Como se relaciona Keys & Constraints con Modelado de datos?"
+    },
+    {
+      "with": "Data Modeling",
+      "ask": "Como se relaciona Keys & Constraints con Data Modeling?"
+    },
+    {
+      "with": "Relational Databases",
+      "ask": "Como se relaciona Keys & Constraints con Relational Databases?"
+    },
+    {
+      "with": "Normalization",
+      "ask": "Como se relaciona Keys & Constraints con Normalization?"
+    }
+  ],
+  "queries": [
+    "site:postgresql.org Keys & Constraints",
+    "site:sqlite.org Keys & Constraints",
+    "site:dev.mysql.com Keys & Constraints",
+    "site:use-the-index-luke.com Keys & Constraints",
+    "site:learn.microsoft.com Keys & Constraints",
+    "site:docs.snowflake.com Keys & Constraints",
+    "site:openstax.org Keys & Constraints"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

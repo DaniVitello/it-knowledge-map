@@ -1,0 +1,29 @@
+{
+  "concept_id": "03-backend-09-validacion",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\03-backend-09-validacion\\sources.json",
+    "notebook_id": "32b05886-db91-4c6e-b514-0920ae487402",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\03-backend-09-validacion\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\03-backend-09-validacion\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\03-backend-09-validacion\\09 - Validación.md.20261030T052916Z-19fbf7.bak",
+      "outside_hash": "d4d2dc96510345b91e6b618eaa8e6eb3acb0f171fd0df8eb9eb380083fcd2e15",
+      "inside_hash": "8f80304abd7bb79fc5b85d39ddebcc64be19d495bff329ea3b2ecffdee6f8ecf",
+      "written_at": "2026-10-30T05:29:16.461487+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:28:46.117928+00:00",
+  "updated_at": "2026-10-30T05:29:16.481720+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T05:29:16.481720+00:00",
+    "created_at": "2026-10-30T05:28:46.117928+00:00"
+  },
+  "schema_version": "1.0.0"
+}

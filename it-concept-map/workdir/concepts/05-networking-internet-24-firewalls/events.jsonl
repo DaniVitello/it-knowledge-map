@@ -1,0 +1,7 @@
+{"ts": "2026-11-05T23:34:53.037628+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-24-firewalls", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:35:37.229972+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-24-firewalls", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T23:35:41.511585+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-24-firewalls", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T23:35:41.554064+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-24-firewalls", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T23:35:41.583622+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-24-firewalls", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T23:35:41.601093+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-24-firewalls", "event": "notebook_delete_failed", "notebook_id": "ccc78687-b3e7-4654-a22e-9c9ed3ab4b88", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T23:35:41.611451+00:00", "run_id": "run-20261105-201924-3a3814", "concept_id": "05-networking-internet-24-firewalls", "event": "run_end", "status": "completed"}

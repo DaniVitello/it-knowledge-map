@@ -1,0 +1,29 @@
+{
+  "concept_id": "02-frontend-10-web-apis",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\02-frontend-10-web-apis\\sources.json",
+    "notebook_id": "732e2cbb-be53-40cb-8655-83e0e56d8ca8",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\02-frontend-10-web-apis\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\02-frontend-10-web-apis\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\02-frontend-10-web-apis\\10 - Web APIs.md.20261030T051422Z-876670.bak",
+      "outside_hash": "11308851b15bc3bbd86812240fe58c1731ff8f3d8999be3d20aadbd7055988bb",
+      "inside_hash": "ea20d5b87736bebc5b131c7006fc683a6b57448405e21fa6ba30079e3b9f709c",
+      "written_at": "2026-10-30T05:14:22.828260+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:13:51.790496+00:00",
+  "updated_at": "2026-10-30T05:14:22.852675+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T05:14:22.852675+00:00",
+    "created_at": "2026-10-30T05:13:51.790496+00:00"
+  },
+  "schema_version": "1.0.0"
+}

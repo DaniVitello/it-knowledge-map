@@ -1,0 +1,39 @@
+{
+  "questions": [],
+  "concept_id": "04-database-data-analytics-19-data-cleaning",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Data Cleaning y para que sirve (Normalización, transformación, deduplicación)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Data Cleaning en Database / Data Analytics"
+    ],
+    "context": [
+      "Como se usa Data Cleaning en el contexto profesional de Database / Data Analytics"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Data Quality",
+      "ask": "Como se relaciona Data Cleaning con Data Quality?"
+    },
+    {
+      "with": "Data Analysis",
+      "ask": "Como se relaciona Data Cleaning con Data Analysis?"
+    }
+  ],
+  "queries": [
+    "site:postgresql.org Data Cleaning",
+    "site:sqlite.org Data Cleaning",
+    "site:dev.mysql.com Data Cleaning",
+    "site:use-the-index-luke.com Data Cleaning",
+    "site:learn.microsoft.com Data Cleaning",
+    "site:docs.snowflake.com Data Cleaning",
+    "site:openstax.org Data Cleaning"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

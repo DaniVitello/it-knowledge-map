@@ -1,0 +1,29 @@
+{
+  "concept_id": "05-networking-internet-20-http-status-codes",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-20-http-status-codes\\sources.json",
+    "notebook_id": "7b3da991-3d99-4cc3-b814-c1a1715e5240",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-20-http-status-codes\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-20-http-status-codes\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\05-networking-internet-20-http-status-codes\\20 - HTTP Status Codes.md.20261105T233226Z-457858.bak",
+      "outside_hash": "1c2eb45ccf1789b9068660f6d040ee1a5140fefb49a589f15404a892d7899520",
+      "inside_hash": "366320a70d14de13a09ae6ae7a93aae16cc07f8bbd5737f9151cf07947efa4ab",
+      "written_at": "2026-11-05T23:32:26.137250+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:31:23.783950+00:00",
+  "updated_at": "2026-11-05T23:32:26.155693+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:32:26.155693+00:00",
+    "created_at": "2026-11-05T23:31:23.783950+00:00"
+  },
+  "schema_version": "1.0.0"
+}

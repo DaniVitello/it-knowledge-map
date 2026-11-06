@@ -1,0 +1,39 @@
+{
+  "questions": [],
+  "concept_id": "04-database-data-analytics-10-transactions",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Transactions y para que sirve (Commit, rollback, atomicidad)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Transactions en Database / Data Analytics"
+    ],
+    "context": [
+      "Como se usa Transactions en el contexto profesional de Database / Data Analytics"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Transacciones",
+      "ask": "Como se relaciona Transactions con Transacciones?"
+    },
+    {
+      "with": "ACID & Isolation",
+      "ask": "Como se relaciona Transactions con ACID & Isolation?"
+    }
+  ],
+  "queries": [
+    "site:postgresql.org Transactions",
+    "site:sqlite.org Transactions",
+    "site:dev.mysql.com Transactions",
+    "site:use-the-index-luke.com Transactions",
+    "site:learn.microsoft.com Transactions",
+    "site:docs.snowflake.com Transactions",
+    "site:openstax.org Transactions"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

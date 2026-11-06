@@ -1,0 +1,43 @@
+{
+  "questions": [],
+  "concept_id": "04-database-data-analytics-14-data-warehouses",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Data Warehouses y para que sirve (Sistemas optimizados para análisis)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Data Warehouses en Database / Data Analytics"
+    ],
+    "context": [
+      "Como se usa Data Warehouses en el contexto profesional de Database / Data Analytics"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "OLTP vs OLAP",
+      "ask": "Como se relaciona Data Warehouses con OLTP vs OLAP?"
+    },
+    {
+      "with": "ETL / ELT",
+      "ask": "Como se relaciona Data Warehouses con ETL / ELT?"
+    },
+    {
+      "with": "Data Pipelines",
+      "ask": "Como se relaciona Data Warehouses con Data Pipelines?"
+    }
+  ],
+  "queries": [
+    "site:postgresql.org Data Warehouses",
+    "site:sqlite.org Data Warehouses",
+    "site:dev.mysql.com Data Warehouses",
+    "site:use-the-index-luke.com Data Warehouses",
+    "site:learn.microsoft.com Data Warehouses",
+    "site:docs.snowflake.com Data Warehouses",
+    "site:openstax.org Data Warehouses"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

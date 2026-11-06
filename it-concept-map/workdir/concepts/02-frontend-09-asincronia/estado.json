@@ -1,0 +1,29 @@
+{
+  "concept_id": "02-frontend-09-asincronia",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\02-frontend-09-asincronia\\sources.json",
+    "notebook_id": "17872331-3473-4fc7-a2f3-3c8c14ba5e3e",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\02-frontend-09-asincronia\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\02-frontend-09-asincronia\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\02-frontend-09-asincronia\\09 - Asincronía.md.20261030T051350Z-b59fbc.bak",
+      "outside_hash": "bcfb192b34641db368c742bca89d56dfbb822aa5b7cd0986463dd4372c587eb5",
+      "inside_hash": "77af97759865913543ca4a706b4bc36c44477bbb0abd1c7e528b03c1bd834789",
+      "written_at": "2026-10-30T05:13:50.694818+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:12:52.013645+00:00",
+  "updated_at": "2026-10-30T05:13:50.716928+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T05:13:50.716928+00:00",
+    "created_at": "2026-10-30T05:12:52.013645+00:00"
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,14 @@
+{"ts": "2026-11-05T15:41:55.925393+00:00", "run_id": "run-20261105-124155-b4f0cd", "concept_id": "08-ux-ui-01-human-centered-design", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-11-05T15:42:43.214836+00:00", "run_id": "run-20261105-124155-b4f0cd", "concept_id": "08-ux-ui-01-human-centered-design", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T15:43:07.914694+00:00", "run_id": "run-20261105-124155-b4f0cd", "concept_id": "08-ux-ui-01-human-centered-design", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T15:43:07.939327+00:00", "run_id": "run-20261105-124155-b4f0cd", "concept_id": "08-ux-ui-01-human-centered-design", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T15:43:07.966377+00:00", "run_id": "run-20261105-124155-b4f0cd", "concept_id": "08-ux-ui-01-human-centered-design", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T15:43:07.983031+00:00", "run_id": "run-20261105-124155-b4f0cd", "concept_id": "08-ux-ui-01-human-centered-design", "event": "notebook_delete_failed", "notebook_id": "bf319d5e-74b8-4197-bcec-1ea24f796814", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T15:43:07.992645+00:00", "run_id": "run-20261105-124155-b4f0cd", "concept_id": "08-ux-ui-01-human-centered-design", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T17:06:36.856275+00:00", "run_id": "run-20261105-140636-4d873a", "concept_id": "08-ux-ui-01-human-centered-design", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T17:07:08.141520+00:00", "run_id": "run-20261105-140636-4d873a", "concept_id": "08-ux-ui-01-human-centered-design", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T17:07:11.692118+00:00", "run_id": "run-20261105-140636-4d873a", "concept_id": "08-ux-ui-01-human-centered-design", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T17:07:11.726742+00:00", "run_id": "run-20261105-140636-4d873a", "concept_id": "08-ux-ui-01-human-centered-design", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T17:07:11.759613+00:00", "run_id": "run-20261105-140636-4d873a", "concept_id": "08-ux-ui-01-human-centered-design", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T17:07:11.782221+00:00", "run_id": "run-20261105-140636-4d873a", "concept_id": "08-ux-ui-01-human-centered-design", "event": "notebook_delete_failed", "notebook_id": "6ba6fb73-640e-438d-b029-b26185b80817", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T17:07:11.794623+00:00", "run_id": "run-20261105-140636-4d873a", "concept_id": "08-ux-ui-01-human-centered-design", "event": "run_end", "status": "completed"}

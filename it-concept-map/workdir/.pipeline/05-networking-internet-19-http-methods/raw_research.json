@@ -1,0 +1,50 @@
+{
+  "concept_id": "05-networking-internet-19-http-methods",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No veo fuentes en tu libreta sobre los **métodos HTTP (GET, POST, PUT, PATCH, DELETE)** y para qué sirven.\n\n¿Quieres que realice una **investigación en la web** sobre este tema para responder a tu pregunta?",
+      "claims": [
+        {
+          "text": "No veo fuentes en tu libreta sobre los **métodos HTTP (GET, POST, PUT, PATCH, DELETE)** y para qué sirven.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Aquí tienes el resumen de lo que encontré sobre **métodos HTTP** y su funcionamiento en Internet y redes web:\n\nLos **métodos HTTP** (también conocidos como verbos HTTP) definen la acción exacta que un cliente (como un navegador o aplicación) solicita realizar sobre un recurso en el servidor a través del protocolo HTTP. Forman el pilar de la comunicación cliente-servidor y de las APIs RESTful:\n\n- **GET**: Solicita y recupera información del servidor sin modificar ningún dato (**operación de solo lectura**).\n- **POST**: Envíos de datos al servidor para **crear un nuevo recurso** o procesar información (puede generar efectos secundarios).\n- **PUT**: Reemplaza o sobrescribe **completamente** un recurso existente con los nuevos datos enviados.\n- **PATCH**: Aplica **modificaciones parciales** a un recurso (actualiza solo los campos especificados sin reemplazar todo el objeto).\n- **DELETE**: Solicita la **eliminación** de un recurso específico en el servidor.\n\n---\n\n### Temas clave identificados en las fuentes:\n\n1. **Semántica Cliente-Servidor (CRUD)**: Los métodos HTTP mapean directamente el modelo CRUD (Create, Read, Update, Delete) en la web, guiando la interacción con URLs, cabeceras (headers) y códigos de estado (Status Codes).\n2. **Diferencia entre PUT y PATCH**: Mientras que `PUT` envía la representación completa del recurso para sustituirlo, `PATCH` envía instrucciones o campos específicos para modificar solo una parte del recurso.\n3. **Seguridad e Idempotencia**: Métodos como **GET** son considerados \"seguros\" porque no alteran el estado del servidor. Métodos como **GET, PUT y DELETE** son \"idempotentes\" porque realizar la misma petición múltiples veces produce idéntico resultado final en el servidor.\n\n---\n\n📥 **El informe de investigación completo y las fuentes de documentación técnica están disponibles en la tarjeta a continuación. Puedes importarlos a tu libreta para seguir consultándolos en nuestro chat.**\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-http-methods\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-http-methods\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Documentos y artículos técnicos sobre métodos HTTP (GET, POST, PUT, PATCH, DELETE) y arquitectura web\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Informe de investigación: Métodos HTTP (GET, POST, PUT, PATCH, DELETE)\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiRmNDdiZGIzOS1mODkwLTQ4YTYtYWYwYi1jOWIyOGFmZWUwNzgSCxIHEPnP8YvcBhgB&filename=Informe_de_investigacin_Mtodos_HTTP_GET_POST_PUT_PATCH_DELET.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Informe de investigación\",\n          \"summary\": \"Informe completo con 6 fuentes sintetizadas sobre el funcionamiento y propiedades de los métodos HTTP.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"Métodos de petición HTTP\",\n          \"url\": \"https://developer.mozilla.org/es/docs/Web/HTTP/Reference/Methods\",\n          \"sourceName\": \"MDN Web Docs\",\n          \"summary\": \"Especificación oficial en español sobre verbos HTTP, idempotencia y seguridad de peticiones.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"API Methods: GET, POST, PUT, PATCH, DELETE Explained\",\n          \"url\": \"https://www.moesif.com/blog/technical/api-methods/\",\n          \"sourceName\": \"Moesif Blog\",\n          \"summary\": \"Explicación detallada de los métodos en APIs REST y sus diferencias conceptuales.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"PATCH request method\",\n          \"url\": \"https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/PATCH\",\n          \"sourceName\": \"MDN Web Docs\",\n          \"summary\": \"Documentación técnica sobre las diferencias de modificación entre PATCH y PUT.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"HTTP Request Methods Explained: GET, POST, PUT, DELETE & More\",\n          \"url\": \"https://dev.to/sudiip__17/-http-request-methods-explained-get-post-put-delete-more-3h90\",\n          \"sourceName\": \"DEV Community\",\n          \"summary\": \"Guía práctica sobre la aplicación de los métodos HTTP en arquitectura cliente-servidor.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"What is difference between HTTP methods GET, POST, PUT and DELETE\",\n          \"url\": \"https://stackoverflow.com/questions/18395523/what-is-difference-between-http-methods-get-post-put-and-delete\",\n          \"sourceName\": \"Stack Overflow\",\n          \"summary\": \"Discusión técnica sobre idempotencia y comportamientos del navegador según el método.\"\n        },\n        {\n          \"id\": \"src-6\",\n          \"title\": \"HTTP methods in 10 Minutes | GET, POST, PUT, PATCH, DELETE Made Easy\",\n          \"url\": \"https://www.youtube.com/watch?v=ijvvTl6I9VY\",\n          \"sourceName\": \"YouTube\",\n          \"summary\": \"Tutorial visual rápido sobre cómo utilizar y probar métodos HTTP en servicios web.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Aquí tienes el resumen de lo que encontré sobre **métodos HTTP** y su funcionamiento en Internet y redes web:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no he importado esas fuentes a tu libreta. ¿Quieres que las importe primero? De esa manera podré responder a tus preguntas basándome en el contenido de las fuentes en tu libreta. \n\nTambién puedes desplazarte hacia arriba hasta la tarjeta de investigación e importarlas directamente desde allí.",
+      "claims": [
+        {
+          "text": "Aún no he importado esas fuentes a tu libreta. ¿Quieres que las importe primero? De esa manera podré responder a tus preguntas basándome en el contenido de las fuentes en tu libreta. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "4048ebe8-deef-4198-9fb4-0a55a13ad24e",
+  "duration_ms": 56849,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-19-http-methods\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

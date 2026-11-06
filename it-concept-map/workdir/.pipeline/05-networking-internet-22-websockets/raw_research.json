@@ -1,0 +1,50 @@
+{
+  "concept_id": "05-networking-internet-22-websockets",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "**Tu libreta no contiene fuentes** sobre WebSockets todavía. Como todas mis respuestas se basan estrictamente en tus materiales de origen, no puedo responder basándome en fuentes cargadas.\n\n¿Quieres que realice una **investigación en la web** sobre **WebSockets, la comunicación bidireccional persistente y su relación con HTTP, TLS, Headers/Cookies y Sockets**?",
+      "claims": [
+        {
+          "text": "**Tu libreta no contiene fuentes** sobre WebSockets todavía. Como todas mis respuestas se basan estrictamente en tus materiales de origen, no puedo responder basándome en fuentes cargadas.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "**Tu libreta aún no contiene fuentes** sobre el funcionamiento de WebSockets en redes e Internet. Como me baso exclusivamente en tus materiales de origen, no puedo responder a esta pregunta sin fuentes cargadas.\n\n¿Te gustaría que realice una **investigación en la web** sobre cómo funciona WebSockets (incluyendo el *handshake* mediante HTTP/HTTPS, el uso de encabezados/cookies y la conexión persistente sobre Sockets TCP) para explicártelo detalladamente?",
+      "claims": [
+        {
+          "text": "**Tu libreta aún no contiene fuentes** sobre el funcionamiento de WebSockets en redes e Internet. Como me baso exclusivamente en tus materiales de origen, no puedo responder a esta pregunta sin fuente",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "**Tu libreta no contiene fuentes** que aborden el estado actual de WebSockets ni sus relaciones con HTTP, HTTPS/TLS, Headers/Cookies y Sockets. Como mis respuestas deben fundamentarse exclusivamente en tus materiales cargados, no puedo proporcionar esta información desde la libreta.\n\n¿Quieres que realice una **investigación en la web** sobre el estado actual de WebSockets y cómo interactúa con HTTP, TLS, cookies y sockets TCP para responder a tu consulta?",
+      "claims": [
+        {
+          "text": "**Tu libreta no contiene fuentes** que aborden el estado actual de WebSockets ni sus relaciones con HTTP, HTTPS/TLS, Headers/Cookies y Sockets. Como mis respuestas deben fundamentarse exclusivamente e",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "88f42cd9-e5d4-4e13-8a63-4ead3a8c793c",
+  "duration_ms": 29132,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-22-websockets\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

@@ -1,0 +1,50 @@
+{
+  "concept_id": "05-networking-internet-11-routing",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No veo fuentes en tu cuaderno sobre **Routing** (cómo los paquetes encuentran su destino). Como mis respuestas se basan estrictamente en tus fuentes, no puedo responder usando mi conocimiento general.\n\n¿Te gustaría que haga una **investigación en la web** sobre **Routing, Routers, NAT y Subnetting / CIDR** para responder a tu pregunta?",
+      "claims": [
+        {
+          "text": "No veo fuentes en tu cuaderno sobre **Routing** (cómo los paquetes encuentran su destino). Como mis respuestas se basan estrictamente en tus fuentes, no puedo responder usando mi conocimiento general.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Esto es lo que encontré sobre **cómo funciona el Routing en Redes e Internet**:\n\nEl enrutamiento (*Routing*) es el proceso mediante el cual los paquetes de datos de la capa de red (IP) viajan desde un origen hasta un destino a través de múltiples redes interconectadas.\n\n**Temas clave identificados:**\n\n1. **Reenvío de paquetes y Tablas de Enrutamiento**: Cada paquete contiene en su encabezado la IP de origen y de destino. Los routers consultan sus tablas de enrutamiento y utilizan la regla del prefijo más específico (*Longest Prefix Match*) para decidir el **siguiente salto (*next hop*)** hacia el destino.\n2. **Subnetting y Notación CIDR**: La máscara de subred (o el sufijo CIDR como `/24`) divide la dirección IP en el **ID de red** y el **ID de host**. Esto permite a los routers saber si el destino está en la red local o si debe enviarse al *default gateway* (puerta de enlace), además de reducir el tamaño de las tablas globales mediante sumarización.\n3. **Traducción de Direcciones de Red (NAT)**: En el borde de la red, NAT permite que múltiples dispositivos internos con direcciones IP privadas (ej. `192.168.x.x`) compartan una única dirección IP pública para navegar en Internet, mitigando el agotamiento de IPv4 y añadiendo una capa de aislamiento de seguridad.\n\n📥 **El reporte completo de investigación está incluido como la primera fuente en la tarjeta de importación a continuación.** Puedes importarlo (junto con las fuentes individuales) a tu cuaderno para que tus respuestas queden guardadas y podamos profundizar en los detalles técnicos.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-routing-en-redes\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-routing-en-redes\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos y documentación técnica sobre enrutamiento IP, Subnetting, CIDR y NAT\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Reporte de investigación: Routing en Redes e Internet\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQyOTY2NTMyZC05NGQ5LTQ5ZGEtOGUyNi03NjZmMmRiZjUzNjUSCxIHEPnP8YvcBhgB&filename=Reporte_de_investigacion_Routing_en_Redes_e_Internet.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Reporte de Investigación\",\n          \"summary\": \"Reporte completo con 7 fuentes sobre Routing, Routers, Subnetting, CIDR y NAT\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"¿Qué es el enrutamiento?\",\n          \"url\": \"https://aws.amazon.com/es/what-is/routing/\",\n          \"sourceName\": \"AWS\",\n          \"summary\": \"Explicación sobre la selección de rutas en redes y las funciones principales de los routers.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"¿Qué es el enrutamiento? | Enrutamiento IP\",\n          \"url\": \"https://www.cloudflare.com/es-es/learning/network-layer/what-is-routing/\",\n          \"sourceName\": \"Cloudflare\",\n          \"summary\": \"Conceptos de enrutamiento IP en la capa de red y uso de tablas de enrutamiento.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"Routing IP: tablas, rutas, next hop y Longest Prefix Match\",\n          \"url\": \"https://subnetmaster.es/guia/routing/\",\n          \"sourceName\": \"SubnetMaster\",\n          \"summary\": \"Guía técnica sobre la toma de decisiones en enrutamiento, el siguiente salto (next hop) y prefijos de red.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"¿Qué es subnetting? CIDR, máscaras de subred, y cómo funciona\",\n          \"url\": \"https://www.azion.com/es/learning/network-layer/que-es-subnetting/\",\n          \"sourceName\": \"Azion\",\n          \"summary\": \"Detalles sobre cómo dividir redes en subredes y la notación CIDR.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"CIDR: el classless inter-domain routing en detalle\",\n          \"url\": \"https://www.ionos.es/digitalguide/servidores/know-how/classless-inter-domain-routing/\",\n          \"sourceName\": \"IONOS\",\n          \"summary\": \"Explicación de la notación de sufijos CIDR y máscaras de subred.\"\n        },\n        {\n          \"id\": \"src-6\",\n          \"title\": \"¿Qué es NAT y cómo funciona?\",\n          \"url\": \"https://www.manageengine.com/latam/blog/general/nat-como-funciona.html\",\n          \"sourceName\": \"ManageEngine\",\n          \"summary\": \"Funcionamiento de Network Address Translation para la conservación de direcciones IPv4.\"\n        },\n        {\n          \"id\": \"src-7\",\n          \"title\": \"¿Qué es la traducción de direcciones de red (NAT)?\",\n          \"url\": \"https://www.fortinet.com/lat/resources/cyberglossary/network-address-translation\",\n          \"sourceName\": \"Fortinet\",\n          \"summary\": \"Uso de NAT en routers y firewalls para seguridad y compartición de IP públicas.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Esto es lo que encontré sobre **cómo funciona el Routing en Redes e Internet**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no he importado esas fuentes a tu cuaderno. ¿Te gustaría que las importe primero? Así podré responder a tus preguntas basándome formalmente en el contenido de tus fuentes. \n\nTambién puedes desplazarte hacia arriba en la conversación hasta la tarjeta con los resultados de la investigación e importar el reporte o las fuentes individuales que prefieras desde allí.",
+      "claims": [
+        {
+          "text": "Aún no he importado esas fuentes a tu cuaderno. ¿Te gustaría que las importe primero? Así podré responder a tus preguntas basándome formalmente en el contenido de tus fuentes. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "e7ddc20e-bcfb-4ab4-9ed6-d2b569c812d6",
+  "duration_ms": 62329,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-11-routing\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

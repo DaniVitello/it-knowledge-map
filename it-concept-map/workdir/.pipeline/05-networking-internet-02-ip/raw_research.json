@@ -1,0 +1,50 @@
+{
+  "concept_id": "05-networking-internet-02-ip",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No hay fuentes guardadas en tu cuaderno sobre el **direccionamiento IP** ni sobre los temas de red relacionados (como IPv4/IPv6, TCP, DNS, DHCP o Subnetting). \n\n¿Quieres que realice una **investigación en la web** sobre qué es una dirección IP, para qué sirve y cómo se relaciona con estos conceptos?",
+      "claims": [
+        {
+          "text": "No hay fuentes guardadas en tu cuaderno sobre el **direccionamiento IP** ni sobre los temas de red relacionados (como IPv4/IPv6, TCP, DNS, DHCP o Subnetting). ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Esto es lo que encontré sobre **el funcionamiento de IP y el direccionamiento en redes**:\n\nEl Protocolo de Internet (IP) es la pieza central del modelo TCP/IP que asigna una dirección lógica y única a cada dispositivo para identificarlo y guiar el enrutamiento de paquetes de datos a través de redes locales e Internet.\n\n**Temas clave identificados:**\n1. **Identificación y Enrutamiento (IPv4 / IPv6)**: Las direcciones IP (32 bits en IPv4 y 128 bits en IPv6) actúan como una dirección postal digital en la capa de red del modelo OSI/TCP-IP, permitiendo que los routers dirijan los paquetes de origen a destino.\n2. **Segmentación y Eficiencia (Subnetting / CIDR)**: Permiten dividir redes en subredes lógicas utilizando máscaras de subred y notación CIDR para optimizar la distribución del espacio de direcciones y el tráfico de red.\n3. **Automatización y Resolución (DHCP / ARP / DNS)**: DHCP asigna automáticamente la configuración IP a los dispositivos, ARP vincula la dirección IP lógica con la dirección MAC física en la red local, y DNS traduce nombres de dominio legibles (ej. google.com) a direcciones IP.\n4. **Transporte y Aplicación (TCP / HTTP)**: IP se encarga del direccionamiento y enrutamiento paquete por paquete, mientras que TCP proporciona un canal de comunicación confiable sobre el cual operan protocolos de aplicación como HTTP/HTTPS.\n\n📥 El informe completo de investigación se incluye como la primera fuente en la tarjeta de importación a continuación; impórtalo para chatear directamente con los hallazgos.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-ip-networking\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-ip-networking\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos técnicos, guías de documentación y recursos sobre IP y protocolos de red\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Informe de investigación: Funcionamiento de IP y Protocolos de Red\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiRmYTBjMTZiMC05M2I4LTRkZjItYjBhZi01ZWJiNmNiNGVlNzgSCxIHEPnP8YvcBhgB&filename=Informe_de_investigacin_Funcionamiento_de_IP_y_Protocolos_de.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Informe de investigación\",\n          \"summary\": \"Informe completo con 10 fuentes sobre direccionamiento IP, IPv4/IPv6, TCP, DNS, DHCP, ARP y Subnetting.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"¿Qué es una dirección IP? Cómo funciona, tipos y ejemplos\",\n          \"url\": \"https://www.azion.com/es/learning/network-layer/que-es-una-direccion-ip/\",\n          \"sourceName\": \"Azion\",\n          \"summary\": \"Explicación técnica de direcciones IP, IPv4 vs IPv6 y enrutamiento en la capa de red.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"¿Qué es una dirección IP? ¿Cómo funciona?\",\n          \"url\": \"https://www.fortinet.com/lat/resources/cyberglossary/what-is-ip-address\",\n          \"sourceName\": \"Fortinet\",\n          \"summary\": \"Conceptos clave sobre la estructura de IPv4, rangos de IP reservadas y clases de red.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"IPv4 vs IPv6: Diferencia entre las versiones del protocolo de Internet\",\n          \"url\": \"https://aws.amazon.com/es/compare/the-difference-between-ipv4-and-ipv6/\",\n          \"sourceName\": \"AWS\",\n          \"summary\": \"Comparativa detallada del formato de 32 bits vs 128 bits y la transición hacia IPv6.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"Direccionamiento IP: IPv4, IPv6, Subnetting y CIDR\",\n          \"url\": \"https://subnetmaster.es/guia/direccionamiento-ip/\",\n          \"sourceName\": \"SubnetMaster\",\n          \"summary\": \"Guía práctica de direccionamiento IP, notación CIDR, VLSM y división de subredes.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"Protocolos de Red: HTTP, DNS, DHCP, TCP y UDP Explicados\",\n          \"url\": \"https://www.aprender21.com/blog/protocolos-de-red-guia\",\n          \"sourceName\": \"Aprender21\",\n          \"summary\": \"Visión general del funcionamiento coordinado de HTTP, DNS, DHCP y TCP en redes.\"\n        },\n        {\n          \"id\": \"src-6\",\n          \"title\": \"Conceptos básicos de DHCP (protocolo de configuración dinámica de host)\",\n          \"url\": \"https://learn.microsoft.com/es-es/windows-server/troubleshoot/dynamic-host-configuration-protocol-basics\",\n          \"sourceName\": \"Microsoft Learn\",\n          \"summary\": \"Funcionamiento interno del servidor DHCP y la negociación de IP cliente-servidor.\"\n        },\n        {\n          \"id\": \"src-7\",\n          \"title\": \"Network Protocols: How IP, ARP, ICMP, and DHCP Work\",\n          \"url\": \"https://www.youtube.com/watch?v=evt1yLGdujI\",\n          \"sourceName\": \"YouTube (AulaTech FP)\",\n          \"summary\": \"Explicación audiovisual paso a paso de la interacción entre IP, ARP, ICMP y DHCP.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Esto es lo que encontré sobre **el funcionamiento de IP y el direccionamiento en redes**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no se han añadido a tu cuaderno las fuentes que encontré en la investigación anterior. \n\n¿Quieres que las importe ahora a tu cuaderno para analizar a fondo el estado actual y las relaciones del direccionamiento IP basándome en su contenido? También puedes hacer clic en el botón **Importar** de la tarjeta de arriba.",
+      "claims": [
+        {
+          "text": "Aún no se han añadido a tu cuaderno las fuentes que encontré en la investigación anterior. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "5e470282-5f4b-442e-9f4b-a1c240440661",
+  "duration_ms": 63278,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-02-ip\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

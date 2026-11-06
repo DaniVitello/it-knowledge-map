@@ -1,0 +1,67 @@
+{
+  "questions": [],
+  "concept_id": "05-networking-internet-02-ip",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es IP y para que sirve (Direccionamiento de dispositivos)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de IP en Networking / Internet"
+    ],
+    "context": [
+      "Como se usa IP en el contexto profesional de Networking / Internet"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Internet",
+      "ask": "Como se relaciona IP con Internet?"
+    },
+    {
+      "with": "IPv4 / IPv6",
+      "ask": "Como se relaciona IP con IPv4 / IPv6?"
+    },
+    {
+      "with": "TCP",
+      "ask": "Como se relaciona IP con TCP?"
+    },
+    {
+      "with": "DNS",
+      "ask": "Como se relaciona IP con DNS?"
+    },
+    {
+      "with": "DHCP",
+      "ask": "Como se relaciona IP con DHCP?"
+    },
+    {
+      "with": "ARP",
+      "ask": "Como se relaciona IP con ARP?"
+    },
+    {
+      "with": "Subnetting / CIDR",
+      "ask": "Como se relaciona IP con Subnetting / CIDR?"
+    },
+    {
+      "with": "OSI / TCP-IP Model",
+      "ask": "Como se relaciona IP con OSI / TCP-IP Model?"
+    },
+    {
+      "with": "HTTP",
+      "ask": "Como se relaciona IP con HTTP?"
+    }
+  ],
+  "queries": [
+    "site:rfc-editor.org IP",
+    "site:datatracker.ietf.org IP",
+    "site:developer.mozilla.org IP",
+    "site:cloudflare.com IP",
+    "site:beej.us IP",
+    "site:hpbn.co IP",
+    "site:man7.org IP"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

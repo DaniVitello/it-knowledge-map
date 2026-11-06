@@ -1,0 +1,30 @@
+{
+  "questions": [],
+  "concept_id": "06-operating-systems-linux-01-operating-system",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Operating System y para que sirve (Qué hace un SO y cómo administra el hardware)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Operating System en Operating Systems / Linux"
+    ],
+    "context": [
+      "Como se usa Operating System en el contexto profesional de Operating Systems / Linux"
+    ]
+  },
+  "relation_questions": [],
+  "queries": [
+    "site:man7.org Operating System",
+    "site:kernel.org Operating System",
+    "site:ostep.org Operating System",
+    "site:wiki.archlinux.org Operating System",
+    "site:gnu.org Operating System",
+    "site:docs.docker.com Operating System",
+    "site:opencontainers.org Operating System"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,10 @@
+{
+  "concept_id": "06-operating-systems-linux-03-processes",
+  "is_valid": true,
+  "issues": [],
+  "warnings": [],
+  "score": 1.0,
+  "checked_at": "2026-11-06T20:32:13.921014+00:00",
+  "blocking_failures": [],
+  "verdict": "approved"
+}

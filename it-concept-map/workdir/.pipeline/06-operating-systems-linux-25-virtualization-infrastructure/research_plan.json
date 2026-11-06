@@ -1,0 +1,47 @@
+{
+  "questions": [],
+  "concept_id": "06-operating-systems-linux-25-virtualization-infrastructure",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Virtualization & Infrastructure y para que sirve (VMs, hypervisors, cloud infrastructure)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Virtualization & Infrastructure en Operating Systems / Linux"
+    ],
+    "context": [
+      "Como se usa Virtualization & Infrastructure en el contexto profesional de Operating Systems / Linux"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "CI/CD",
+      "ask": "Como se relaciona Virtualization & Infrastructure con CI/CD?"
+    },
+    {
+      "with": "Deploy & Infraestructura",
+      "ask": "Como se relaciona Virtualization & Infrastructure con Deploy & Infraestructura?"
+    },
+    {
+      "with": "Containers",
+      "ask": "Como se relaciona Virtualization & Infrastructure con Containers?"
+    },
+    {
+      "with": "AI Infrastructure",
+      "ask": "Como se relaciona Virtualization & Infrastructure con AI Infrastructure?"
+    }
+  ],
+  "queries": [
+    "site:man7.org Virtualization & Infrastructure",
+    "site:kernel.org Virtualization & Infrastructure",
+    "site:ostep.org Virtualization & Infrastructure",
+    "site:wiki.archlinux.org Virtualization & Infrastructure",
+    "site:gnu.org Virtualization & Infrastructure",
+    "site:docs.docker.com Virtualization & Infrastructure",
+    "site:opencontainers.org Virtualization & Infrastructure"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

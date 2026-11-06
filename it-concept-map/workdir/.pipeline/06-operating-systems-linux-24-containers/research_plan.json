@@ -1,0 +1,47 @@
+{
+  "questions": [],
+  "concept_id": "06-operating-systems-linux-24-containers",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Containers y para que sirve (Namespaces, isolation, Docker)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Containers en Operating Systems / Linux"
+    ],
+    "context": [
+      "Como se usa Containers en el contexto profesional de Operating Systems / Linux"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "CI/CD",
+      "ask": "Como se relaciona Containers con CI/CD?"
+    },
+    {
+      "with": "Deploy & Infraestructura",
+      "ask": "Como se relaciona Containers con Deploy & Infraestructura?"
+    },
+    {
+      "with": "Virtualization & Infrastructure",
+      "ask": "Como se relaciona Containers con Virtualization & Infrastructure?"
+    },
+    {
+      "with": "AI Infrastructure",
+      "ask": "Como se relaciona Containers con AI Infrastructure?"
+    }
+  ],
+  "queries": [
+    "site:man7.org Containers",
+    "site:kernel.org Containers",
+    "site:ostep.org Containers",
+    "site:wiki.archlinux.org Containers",
+    "site:gnu.org Containers",
+    "site:docs.docker.com Containers",
+    "site:opencontainers.org Containers"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

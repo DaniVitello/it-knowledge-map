@@ -1,0 +1,48 @@
+{
+  "questions": [],
+  "concept_id": "03-backend-07-apis",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es APIs y para que sirve (REST, RPC, GraphQL, contratos)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de APIs en Backend"
+    ],
+    "context": [
+      "Como se usa APIs en el contexto profesional de Backend"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "API Design",
+      "ask": "Como se relaciona APIs con API Design?"
+    },
+    {
+      "with": "Web APIs",
+      "ask": "Como se relaciona APIs con Web APIs?"
+    },
+    {
+      "with": "JSON & APIs",
+      "ask": "Como se relaciona APIs con JSON & APIs?"
+    },
+    {
+      "with": "LLM APIs & Model Serving",
+      "ask": "Como se relaciona APIs con LLM APIs & Model Serving?"
+    }
+  ],
+  "queries": [
+    "site:developer.mozilla.org APIs",
+    "site:rfc-editor.org APIs",
+    "site:datatracker.ietf.org APIs",
+    "site:owasp.org APIs",
+    "site:postgresql.org APIs",
+    "site:redis.io APIs",
+    "site:12factor.net APIs",
+    "site:learn.microsoft.com APIs"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

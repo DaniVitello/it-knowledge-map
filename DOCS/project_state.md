@@ -367,3 +367,16 @@ Capa D (contexto por area): OK
 - Observacion: research.py y validation.py no inyectan contexto de area (solo synthesis). Pendiente para futura iteracion.
 
 Tests: 116 passed, 37 warnings. py_compile OK en todos los modulos.
+
+
+## Leccion de orquestacion (2026-10-30)
+
+**Agency levels por fase:**
+- ☆☆☆ Simple processor: ejecutar pipeline, monitorear, verificar (cero decisiones)
+- ★☆☆ Router: detectar si algo fallo (decision binaria: atascado o no)
+- ★★☆ Tool caller: diagnosticar causa (elegir herramienta)
+- ★★★ Multi-step Agent: decidir accion (reintentar, abortar, pedir ayuda)
+
+**Regla:** No mezclar fases en tiempo real. Ejecutar lo determinista sin decisiones. Cuando haya que decidir (★★★), hacerlo con un plan predefinido, no ad-hoc.
+
+**Leccion:** Self-questioning es valioso pero se convierte en autosabotaje cuando consume energia/tokens sin producir output accionable. Claridad sobre agency levels por tarea previene sobrecargar con demasiadas tareas simultaneas.

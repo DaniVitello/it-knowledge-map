@@ -1,0 +1,29 @@
+{
+  "concept_id": "03-backend-02-http",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\03-backend-02-http\\sources.json",
+    "notebook_id": "6e20844b-9250-4bd6-8321-7bed442f8337",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\03-backend-02-http\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\03-backend-02-http\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\03-backend-02-http\\02 - HTTP.md.20261030T052403Z-46f86c.bak",
+      "outside_hash": "ad39e8321f4a8d4163bc611aa5167bb3b00cd56ef364a75157ffab800ff83d1b",
+      "inside_hash": "d3052866d002b6f7e95f60f3a9dceafbc9da948f9d414ba676985b3ebd07ca5e",
+      "written_at": "2026-10-30T05:24:03.186653+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:23:31.769082+00:00",
+  "updated_at": "2026-10-30T05:24:03.214062+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T05:24:03.214062+00:00",
+    "created_at": "2026-10-30T05:23:31.769082+00:00"
+  },
+  "schema_version": "1.0.0"
+}

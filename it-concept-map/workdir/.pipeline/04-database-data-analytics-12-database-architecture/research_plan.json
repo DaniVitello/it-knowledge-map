@@ -1,0 +1,47 @@
+{
+  "questions": [],
+  "concept_id": "04-database-data-analytics-12-database-architecture",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Database Architecture y para que sirve (Storage engine, query engine, connections)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Database Architecture en Database / Data Analytics"
+    ],
+    "context": [
+      "Como se usa Database Architecture en el contexto profesional de Database / Data Analytics"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Bases de datos",
+      "ask": "Como se relaciona Database Architecture con Bases de datos?"
+    },
+    {
+      "with": "Relational Databases",
+      "ask": "Como se relaciona Database Architecture con Relational Databases?"
+    },
+    {
+      "with": "Indexes",
+      "ask": "Como se relaciona Database Architecture con Indexes?"
+    },
+    {
+      "with": "NoSQL",
+      "ask": "Como se relaciona Database Architecture con NoSQL?"
+    }
+  ],
+  "queries": [
+    "site:postgresql.org Database Architecture",
+    "site:sqlite.org Database Architecture",
+    "site:dev.mysql.com Database Architecture",
+    "site:use-the-index-luke.com Database Architecture",
+    "site:learn.microsoft.com Database Architecture",
+    "site:docs.snowflake.com Database Architecture",
+    "site:openstax.org Database Architecture"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

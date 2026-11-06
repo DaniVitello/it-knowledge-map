@@ -1,0 +1,50 @@
+{
+  "concept_id": "03-backend-13-modelado-de-datos",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "**No tienes fuentes en tu cuaderno** que traten sobre el **modelado de datos** (relaciones, normalización y restricciones).\n\nComo Gemini Notebook responde basándose estrictamente en tus materiales para garantizar información verificable, no puedo responder utilizando conocimientos externos sin tu confirmación.\n\n¿Te gustaría que realice una **investigación en la web** sobre este tema? Si es así, buscaré la información para explicarte qué es y para qué sirve, y luego te ofreceré agregar esas fuentes a tu cuaderno.",
+      "claims": [
+        {
+          "text": "**No tienes fuentes en tu cuaderno** que traten sobre el **modelado de datos** (relaciones, normalización y restricciones).",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "**Aún no tienes fuentes en tu cuaderno** para responder sobre cómo funciona el **modelado de datos en el backend** (relaciones, ORM, normalización y restricciones).\n\nComo Gemini Notebook solo responde con información estrictamente fundamentada en tus materiales, no puedo responder utilizando conocimientos externos sin tu autorización.\n\n¿Te gustaría que realice una **investigación en la web** sobre cómo funciona el modelado de datos en el backend (bases de datos relacionales, ORMs, claves, restricciones y normalización)? Si me confirmas, buscaré la información, te explicaré el tema y te ofreceré la opción de importar esas fuentes a tu cuaderno.",
+      "claims": [
+        {
+          "text": "**Aún no tienes fuentes en tu cuaderno** para responder sobre cómo funciona el **modelado de datos en el backend** (relaciones, ORM, normalización y restricciones).",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "**Tu cuaderno aún no contiene fuentes** sobre el **modelado de datos**, sus relaciones, normalización o restricciones.\n\nPara garantizar información verificable y respaldada por tus materiales, Gemini Notebook no responde desde conocimiento general fuera de tus fuentes sin tu autorización.\n\n¿Te gustaría que realice una **investigación en la web** sobre el estado actual y las relaciones en el modelado de datos (incluyendo bases de datos relacionales, normalización, restricciones y ORM)? Si me das tu confirmación, buscaré la información y te ofreceré la opción de importar las fuentes encontradas a tu cuaderno.",
+      "claims": [
+        {
+          "text": "**Tu cuaderno aún no contiene fuentes** sobre el **modelado de datos**, sus relaciones, normalización o restricciones.",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "25496921-eacb-4945-a25e-6d67b23f77aa",
+  "duration_ms": 36279,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\03-backend-13-modelado-de-datos\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

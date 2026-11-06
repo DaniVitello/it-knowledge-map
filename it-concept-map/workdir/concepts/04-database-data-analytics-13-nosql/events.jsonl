@@ -1,0 +1,7 @@
+{"ts": "2026-11-05T22:57:48.860099+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-13-nosql", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T22:58:14.416836+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-13-nosql", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T22:58:17.876177+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-13-nosql", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T22:58:17.903013+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-13-nosql", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T22:58:17.928800+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-13-nosql", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T22:58:17.949539+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-13-nosql", "event": "notebook_delete_failed", "notebook_id": "50a25981-56fb-40b7-a571-157650d5f5d3", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T22:58:17.960048+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-13-nosql", "event": "run_end", "status": "completed"}

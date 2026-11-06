@@ -18,7 +18,6 @@ tags: [concepto, it/frontend]
 
 ## Mis notas
 <!-- ai:start -->
-- 
 <!-- ai:end -->
 
 ---

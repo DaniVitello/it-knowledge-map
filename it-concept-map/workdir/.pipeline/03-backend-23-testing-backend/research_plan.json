@@ -1,0 +1,36 @@
+{
+  "questions": [],
+  "concept_id": "03-backend-23-testing-backend",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Testing Backend y para que sirve (Unit, integration, API, E2E)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Testing Backend en Backend"
+    ],
+    "context": [
+      "Como se usa Testing Backend en el contexto profesional de Backend"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Testing",
+      "ask": "Como se relaciona Testing Backend con Testing?"
+    }
+  ],
+  "queries": [
+    "site:developer.mozilla.org Testing Backend",
+    "site:rfc-editor.org Testing Backend",
+    "site:datatracker.ietf.org Testing Backend",
+    "site:owasp.org Testing Backend",
+    "site:postgresql.org Testing Backend",
+    "site:redis.io Testing Backend",
+    "site:12factor.net Testing Backend",
+    "site:learn.microsoft.com Testing Backend"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

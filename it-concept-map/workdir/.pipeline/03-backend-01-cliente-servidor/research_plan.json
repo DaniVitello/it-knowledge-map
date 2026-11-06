@@ -1,0 +1,31 @@
+{
+  "questions": [],
+  "concept_id": "03-backend-01-cliente-servidor",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Cliente-Servidor y para que sirve (Request/response, responsabilidades, comunicación)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Cliente-Servidor en Backend"
+    ],
+    "context": [
+      "Como se usa Cliente-Servidor en el contexto profesional de Backend"
+    ]
+  },
+  "relation_questions": [],
+  "queries": [
+    "site:developer.mozilla.org Cliente-Servidor",
+    "site:rfc-editor.org Cliente-Servidor",
+    "site:datatracker.ietf.org Cliente-Servidor",
+    "site:owasp.org Cliente-Servidor",
+    "site:postgresql.org Cliente-Servidor",
+    "site:redis.io Cliente-Servidor",
+    "site:12factor.net Cliente-Servidor",
+    "site:learn.microsoft.com Cliente-Servidor"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

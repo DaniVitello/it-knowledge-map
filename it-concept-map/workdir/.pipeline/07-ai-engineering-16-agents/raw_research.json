@@ -1,0 +1,50 @@
+{
+  "concept_id": "07-ai-engineering-16-agents",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "**No veo ninguna fuente cargada en tu cuaderno** sobre **Agentes de IA** y sus componentes clave (**Planning**, **Tools**, **Loops**, **State**, **Autonomous Workflows**). \n\nPara mantener la precisión y asegurar que todas las respuestas estén basadas en fuentes verificables, no genero explicaciones desde conocimiento externo sin tu consentimiento. \n\n**¿Te gustaría que realice una investigación en la web** sobre qué son los agentes de IA, cómo funcionan sus componentes principales y para qué sirven, para presentarte un informe y darte la opción de guardar esas fuentes en tu libreta?",
+      "claims": [
+        {
+          "text": "**No veo ninguna fuente cargada en tu cuaderno** sobre **Agentes de IA** y sus componentes clave (**Planning**, **Tools**, **Loops**, **State**, **Autonomous Workflows**). ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "He realizado una investigación en la web sobre cómo funcionan los **Agentes de IA en AI Engineering** y sus componentes fundamentales (**Planning, Tools, Loops, State y Autonomous Workflows**).\n\nEn la ingeniería de inteligencia artificial, un **agente** no es simplemente un modelo de lenguaje (LLM), sino un sistema de software donde el LLM actúa como cerebro de razonamiento dentro de un entorno que le permite interactuar con herramientas, mantener memoria y tomar decisiones dinámicas.\n\n**Temas clave identificados:**\n\n1. **El bucle del agente (Agent Loop / ReAct)**: Es la estructura central (usualmente un bucle `while` del tipo *Observe-Think-Act-Reflect*) que permite al agente evaluar resultados intermedios, corregir errores y decidir el siguiente paso en tiempo de ejecución, superando el esquema tradicional de consulta-respuesta de un solo turno.\n2. **Planning y Tool Calling**: La planificación permite descomponer objetivos complejos en tareas secundarias ejecutables, mientras que el uso de herramientas (*Tool Calling*) le otorga al agente la capacidad de ejecutar código, consultar APIs o buscar información externa para resolver la tarea.\n3. **Estado (State) y Memoria**: La gestión de estado preserva el contexto de la ejecución a lo largo de múltiples ciclos, permitiendo que el agente recuerde resultados anteriores, mantenga variables de entorno y gestione fallos sin perder el progreso.\n4. **Autonomous Workflows vs. Pipelines Tradicionales**: Mientras que un flujo de trabajo tradicional sigue una secuencia fija definida previamente por un programador, un flujo autónomo delega al modelo la elección del camino de ejecución según lo que observe en cada iteración.\n\n📥 El **reporte completo de investigación** y las fuentes web detalladas están incluidos en la tarjeta de abajo. Si deseas utilizarlos como base para consultar o generar documentos en tu libreta, impórtalos seleccionando los elementos deseados.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-agentes-ai-engineering\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-agentes-ai-engineering\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos e investigaciones sobre arquitectura de Agentes de IA, loops, planificación y flujos autónomos\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Informe de investigación: Arquitectura de Agentes en AI Engineering\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiRlMWZjMmQyNC1jNDk4LTQyNGMtYTUwNC0zMTFjNDhiN2U1M2ISCxIHEPnP8YvcBhgB&filename=Informe_de_investigacion_-_Arquitectura_de_Agentes_en_AI_Eng.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Informe de Investigación\",\n          \"summary\": \"Reporte completo con 5 fuentes sobre la arquitectura técnica y los componentes centrales de los agentes de IA\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"What Is the AI Agent Loop? The Core Architecture Behind Autonomous AI Systems\",\n          \"url\": \"https://blogs.oracle.com/developers/what-is-the-ai-agent-loop-the-core-architecture-behind-autonomous-ai-systems\",\n          \"sourceName\": \"Oracle Developers\",\n          \"summary\": \"Análisis del ciclo de ejecución del agente (ReAct / OTAR) y comparativa de patrones de implementación en la industria\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"AI agent architecture: patterns, components, and production design\",\n          \"url\": \"https://mastra.ai/articles/ai-agent-architecture\",\n          \"sourceName\": \"Mastra AI\",\n          \"summary\": \"Guía sobre arquitectura de producción para agentes, gestión de estado, límites de bucle y observabilidad\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"AI Agent Architecture: A Comprehensive Developer's Guide\",\n          \"url\": \"https://goclaw.sh/blog/ai-agent-architecture\",\n          \"sourceName\": \"GoClaw Blog\",\n          \"summary\": \"Desglose de los 4 pilares centrales: cerebro LLM, memoria, planificación y herramientas/APIs\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"The 4 Levels of AI Agents: When to Use Workflows vs Autonomous Systems\",\n          \"url\": \"https://www.barnacle.ai/blog/2025-09-25-agents-intro\",\n          \"sourceName\": \"Barnacle Labs\",\n          \"summary\": \"Diferenciación arquitectónica entre flujos deterministas y sistemas autónomos guiados por bucles\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"What Is an AI Agent Loop? How Autonomous Agents Plan, Act, and Self-Correct\",\n          \"url\": \"https://pexo.ai/blog/what-is-an-ai-agent-loop-2316\",\n          \"sourceName\": \"Pexo AI\",\n          \"summary\": \"Explicación del bucle `while` que sostiene el estado y la autocorrección continua del agente\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "He realizado una investigación en la web sobre cómo funcionan los **Agentes de IA en AI Engineering** y sus componentes fundamentales (**Planning, Tools, Loops, State y Autonomous Workflows**).",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no he importado las fuentes encontradas a tu libreta. **¿Quieres que las importe por ti?** De esa forma podré analizar y responder a tus preguntas sobre el estado actual y las relaciones de los agentes basándome directamente en su contenido.\n\nTambién puedes desplazarte hacia arriba en el chat hasta la **tarjeta de importación** e importar manualmente las fuentes que prefieras.",
+      "claims": [
+        {
+          "text": "Aún no he importado las fuentes encontradas a tu libreta. **¿Quieres que las importe por ti?** De esa forma podré analizar y responder a tus preguntas sobre el estado actual y las relaciones de los ag",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "fd9ead3c-6741-43dd-9b0e-b9577bab9979",
+  "duration_ms": 61412,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\07-ai-engineering-16-agents\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

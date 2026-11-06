@@ -1,0 +1,10 @@
+{
+  "concept_id": "05-networking-internet-18-request-response",
+  "is_valid": true,
+  "issues": [],
+  "warnings": [],
+  "score": 1.0,
+  "checked_at": "2026-11-05T23:30:20.860223+00:00",
+  "blocking_failures": [],
+  "verdict": "approved"
+}

@@ -1,0 +1,2 @@
+{"ts": "2026-11-05T23:56:24.609297+00:00", "run_id": "run-20261105-205426-a51c08", "concept_id": "07-ai-engineering-08-tokenization", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T23:56:42.473979+00:00", "run_id": "run-20261105-205426-a51c08", "concept_id": "07-ai-engineering-08-tokenization", "event": "phase_failed", "phase": "research", "error": "research (7acaf244-df29-42e6-af91-9fff6fa5a536): Chat request was rate limited or rejected by the API. Wait a few seconds and try again."}

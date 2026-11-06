@@ -1,0 +1,47 @@
+{
+  "questions": [],
+  "concept_id": "05-networking-internet-22-websockets",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es WebSockets y para que sirve (Comunicación bidireccional persistente)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de WebSockets en Networking / Internet"
+    ],
+    "context": [
+      "Como se usa WebSockets en el contexto profesional de Networking / Internet"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "HTTP",
+      "ask": "Como se relaciona WebSockets con HTTP?"
+    },
+    {
+      "with": "HTTPS / TLS",
+      "ask": "Como se relaciona WebSockets con HTTPS / TLS?"
+    },
+    {
+      "with": "Headers / Cookies",
+      "ask": "Como se relaciona WebSockets con Headers / Cookies?"
+    },
+    {
+      "with": "Sockets",
+      "ask": "Como se relaciona WebSockets con Sockets?"
+    }
+  ],
+  "queries": [
+    "site:rfc-editor.org WebSockets",
+    "site:datatracker.ietf.org WebSockets",
+    "site:developer.mozilla.org WebSockets",
+    "site:cloudflare.com WebSockets",
+    "site:beej.us WebSockets",
+    "site:hpbn.co WebSockets",
+    "site:man7.org WebSockets"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

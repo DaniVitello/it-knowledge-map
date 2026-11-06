@@ -1,0 +1,29 @@
+{
+  "concept_id": "05-networking-internet-05-udp",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-05-udp\\sources.json",
+    "notebook_id": "7b186f13-faf7-42d7-ac6c-d54645a26c5f",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-05-udp\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-05-udp\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\05-networking-internet-05-udp\\05 - UDP.md.20261105T231411Z-552f6d.bak",
+      "outside_hash": "247efc47ff3f39236a98c25b79cb7e4108f4396dff3a35fb44ac93168b712b0c",
+      "inside_hash": "4811a1df8b0bdc192f3f9b1d7b98d2bec6c2167acb9ee704f07d74a1729add6f",
+      "written_at": "2026-11-05T23:14:11.030090+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:13:15.703787+00:00",
+  "updated_at": "2026-11-05T23:14:11.050690+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:14:11.050690+00:00",
+    "created_at": "2026-11-05T23:13:15.703787+00:00"
+  },
+  "schema_version": "1.0.0"
+}

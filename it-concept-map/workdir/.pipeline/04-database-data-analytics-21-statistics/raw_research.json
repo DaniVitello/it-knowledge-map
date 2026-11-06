@@ -1,0 +1,50 @@
+{
+  "concept_id": "04-database-data-analytics-21-statistics",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No encuentro fuentes en tu libreta sobre **Estadística** (media, mediana, distribución, varianza y probabilidad).\n\n¿Quieres que realice una investigación en la web sobre este tema para responder a tu pregunta?",
+      "claims": [
+        {
+          "text": "No encuentro fuentes en tu libreta sobre **Estadística** (media, mediana, distribución, varianza y probabilidad).",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Here's what I found on **Estadística en Database y Data Analytics**:\n\nLa estadística es el motor central de la analítica de datos y las bases de datos modernas, ya que convierte datos crudos almacenados en tablas en métricas descriptivas, patrones de distribución e inferencias predictivas para la toma de decisiones.\n\n**Key themes I noticed:**\n1. **Medidas de Tendencia Central (Media y Mediana):** Utilizadas en SQL (`AVG()`, percentiles) y BI para resumir la ubicación del conjunto de datos; la mediana resulta indispensable cuando existen valores atípicos (*outliers*).\n2. **Medidas de Dispersión (Varianza y Desviación Estándar):** Miden el nivel de variabilidad o riesgo en las métricas de negocio, permitiendo evaluar la estabilidad de un proceso o variable.\n3. **Distribuciones de Probabilidad:** Fundamentos para modelar comportamientos de datos (como la distribución normal o de Poisson) y validar los supuestos de los algoritmos analíticos.\n4. **Probabilidad e Inferencia en Machine Learning:** Base teórica para pruebas A/B, estimación de incertidumbre, preprocesamiento de características y optimización de modelos predictivos.\n\n📥 The full research report is included as the first source in the import card below — import it to chat with the findings directly.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-estadistica-data-analytics\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-estadistica-data-analytics\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos de investigación, guías técnicas y reportes sobre estadística aplicada a bases de datos y analítica\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Reporte de investigación: Estadística en Database y Data Analytics\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQ4OWQyNDA1NS1hZGVmLTRjY2YtODY0Ny00NTQwYmUyYzkyYzESCxIHEPnP8YvcBhgB&filename=Reporte_de_investigacin_Estadstica_en_Database_y_Data_Analyt.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Reporte de investigación\",\n          \"summary\": \"Reporte completo con 8 fuentes sobre estadística aplicada a bases de datos, BI y machine learning\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"An Introduction to Statistics – Data Types, Distributions and Summarizing Data\",\n          \"url\": \"https://pmc.ncbi.nlm.nih.gov/articles/PMC6707495/\",\n          \"sourceName\": \"PMC / NIH\",\n          \"summary\": \"Explicación de tipos de datos, distribuciones y resumen de medidas estadísticas en muestras.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"Probability and Statistics for Data Science\",\n          \"url\": \"https://cims.nyu.edu/~cfgranda/pages/stuff/probability_stats_for_DS.pdf\",\n          \"sourceName\": \"NYU CIMS\",\n          \"summary\": \"Fundamentos teóricos de probabilidad y estadística en la formulación de modelos de ciencia de datos.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"4 Probability Distributions Every Data Scientist Needs to Know\",\n          \"url\": \"https://builtin.com/data-science/probability-distributions-data-science\",\n          \"sourceName\": \"Built In\",\n          \"summary\": \"Guía sobre distribuciones normales, binomiales y de Poisson aplicadas a la analítica.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"Estadística en Python: media, mediana, varianza, percentiles\",\n          \"url\": \"https://blog.adrianistan.eu/estadistica-python-media-mediana-varianza-percentiles-parte-iii/\",\n          \"sourceName\": \"Adrianistán Blog\",\n          \"summary\": \"Implementación práctica de cálculo de media, mediana y varianza con Pandas y SciPy.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"¿Cómo se utiliza las estadísticas en Machine Learning?\",\n          \"url\": \"https://aprendeia.com/2022/09/01/como-se-utiliza-las-estadisticas-en-machine-learning/\",\n          \"sourceName\": \"AprendeIA\",\n          \"summary\": \"Aplicación de medidas de dispersión y distribuciones en el preprocesamiento de datos e IA.\"\n        },\n        {\n          \"id\": \"src-6\",\n          \"title\": \"Varianza: Qué es, fórmula, ejemplo y cómo se calcula\",\n          \"url\": \"https://www.questionpro.com/blog/es/varianza/\",\n          \"sourceName\": \"QuestionPro\",\n          \"summary\": \"Cálculo automático e integración de varianza y desviación estándar en motores de Business Intelligence.\"\n        },\n        {\n          \"id\": \"src-7\",\n          \"title\": \"6 Conceptos de Estadística Avanzada en Data Science\",\n          \"url\": \"https://www.datasource.ai/es/data-science-articles/6-conceptos-de-estadistica-avanzada-en-data-science\",\n          \"sourceName\": \"DataSource.ai\",\n          \"summary\": \"Uso de cuantiles y gráficos Q-Q para validar la distribución de variables cuantitativas.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Here's what I found on **Estadística en Database y Data Analytics**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no he importado a tu libreta las fuentes encontradas en la investigación anterior. \n\n¿Quieres que las importe primero? Así podré responder a tus preguntas sobre el estado actual y las relaciones de la estadística basándome directamente en su contenido. También puedes desplazarte hacia arriba a la tarjeta de resultados e importarlas desde allí.",
+      "claims": [
+        {
+          "text": "Aún no he importado a tu libreta las fuentes encontradas en la investigación anterior. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "41a31770-1c27-4da9-bdbc-48bba63dece6",
+  "duration_ms": 73654,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-21-statistics\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

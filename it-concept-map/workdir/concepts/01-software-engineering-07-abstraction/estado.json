@@ -1,0 +1,29 @@
+{
+  "concept_id": "01-software-engineering-07-abstraction",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\01-software-engineering-07-abstraction\\sources.json",
+    "notebook_id": "b23624d8-1515-4893-a693-a013a0f13493",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-07-abstraction\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-07-abstraction\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\01-software-engineering-07-abstraction\\07 - Abstraction.md.20261030T043946Z-05d66a.bak",
+      "outside_hash": "0dd5c4056f61537e2f4ad1e13df1762072eec77e63359e12d8a5cff41ae948c2",
+      "inside_hash": "02413e03f304abde34a6fab53f1599a8d753bda72120fe093aa5c9ea71083dca",
+      "written_at": "2026-10-30T04:39:46.210622+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T04:39:10.723938+00:00",
+  "updated_at": "2026-10-30T04:39:46.234761+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T04:39:46.234761+00:00",
+    "created_at": "2026-10-30T04:39:10.723938+00:00"
+  },
+  "schema_version": "1.0.0"
+}

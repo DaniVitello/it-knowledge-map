@@ -1,0 +1,50 @@
+{
+  "concept_id": "03-backend-06-routing",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No encuentro fuentes ni información guardada en tu libreta sobre **Routing (endpoints, parámetros y middleware)**. \n\n¿Quieres que realice una **búsqueda en la web** para investigar este tema y traerte la información?",
+      "claims": [
+        {
+          "text": "No encuentro fuentes ni información guardada en tu libreta sobre **Routing (endpoints, parámetros y middleware)**. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "El **Routing (o enrutamiento)** en el backend es el mecanismo encargado de recibir una solicitud HTTP entrante (como una petición desde una web o aplicación móvil) y **dirigirla hacia la función o lógica específica de servidor** (*handler*) que debe procesarla.\n\nFunciona como un \"sistema de correo\" dentro del servidor: evalúa **qué quiere hacer** el cliente (método HTTP) y **dónde lo quiere hacer** (la ruta URL), enviando la solicitud al lugar indicado.\n\n---\n\n### Componentes fundamentales del Routing\n\n1. **Endpoints (Puntos de entrada)**\n   * **¿Qué es?** Es la combinación de un **método HTTP** (`GET`, `POST`, `PUT`, `DELETE`) y una **ruta URL** (`/api/usuarios`).\n   * **¿Para qué sirve?** Define los accesos específicos a las funciones de tu aplicación. Por ejemplo:\n     * `GET /api/productos` → Obtiene la lista de productos.\n     * `POST /api/productos` → Crea un nuevo producto.\n\n2. **Parámetros**\n   * **¿Qué es?** Son valores dinámicos que se envían dentro de la solicitud para personalizar la respuesta.\n   * **Tipos principales:**\n     * **Parámetros de Ruta (*Path Parameters*):** Identifican recursos específicos en la URL (ej. `/usuarios/:id` → `/usuarios/42`).\n     * **Parámetros de Consulta (*Query Parameters*):** Filtran o modifican la búsqueda (ej. `/productos?categoria=electronica&limite=10`).\n     * **Cuerpo de la Petición (*Body*):** Datos estructurados (usualmente JSON) enviados en peticiones `POST` o `PUT` (ej. los datos de un formulario de registro).\n\n3. **Middleware**\n   * **¿Qué es?** Son funciones intermedias que se ejecutan **antes** de que la petición llegue al controlador final o endpoint.\n   * **¿Para qué sirve?** Actúan como un filtro o inspección en cadena. Se usan para:\n     * **Autenticación y Autorización:** Verificar si el usuario tiene sesión activa o permisos antes de responder.\n     * **Validación de datos:** Comprobar que los parámetros recibidos sean válidos.\n     * **Registro y Logs:** Guardar un registro de cada petición entrante.\n     * **Manejo global de errores:** Capturar fallos inesperados y devolver respuestas estructuradas.\n\n---\n\n### Resumen de temas clave\n\n1. **Mapeo de Peticiones:** El router asocia `Método HTTP + URL` con una función ejecutadora.\n2. **Dinaminismo:** Los parámetros permiten construir rutas reutilizables para cualquier ID o filtro.\n3. **Seguridad y Flujo:** Los middlewares garantizan que solo las solicitudes válidas y autorizadas lleguen a la lógica principal.\n\n---\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-routing-backend\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-routing-backend\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos y guías sobre enrutamiento, endpoints, parámetros y middleware en backend\",\n      \"sources\": [\n        {\n          \"id\": \"src-1\",\n          \"title\": \"Routing in Backend Development — The Complete Developer's Guide\",\n          \"url\": \"https://dev.to/prabhanshtiwari/routing-in-backend-development-the-complete-developers-guide-3mnd\",\n          \"sourceName\": \"DEV Community\",\n          \"summary\": \"Guía completa sobre cómo un servidor mapea peticiones HTTP a funciones manejadoras mediante endpoints y middleware.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"Enrutamiento y middleware en Express\",\n          \"url\": \"https://www.coddykit.com/es/courses/nodejs/routing-middleware-in-express-1422\",\n          \"sourceName\": \"CoddyKit\",\n          \"summary\": \"Explicación práctica de enrutamiento estático, parámetros dinámicos y middleware en Node.js/Express.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"Qué es un middleware y para qué sirve en el desarrollo backend\",\n          \"url\": \"https://escueladeprogramacion.net/blog/que-es-un-middleware-y-para-que-sirve-en-el-desarrollo-backend\",\n          \"sourceName\": \"Escuela de Programación\",\n          \"summary\": \"Artículo paso a paso sobre el papel del middleware en la interceptación de solicitudes backend y autenticación.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"Enrutamiento en ASP.NET Core\",\n          \"url\": \"https://learn.microsoft.com/es-es/aspnet/core/fundamentals/routing\",\n          \"sourceName\": \"Microsoft Learn\",\n          \"summary\": \"Documentación oficial sobre coincidencia de rutas, endpoints y canalización de middleware.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "El **Routing (o enrutamiento)** en el backend es el mecanismo encargado de recibir una solicitud HTTP entrante (como una petición desde una web o aplicación móvil) y **dirigirla hacia la función o lóg",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no he importado las fuentes de la investigación anterior a tu libreta. ¿Quieres que las importe primero? Así podré responder a tus preguntas sobre el estado actual y las relaciones del Routing basándome en el contenido de las fuentes.\n\nTambién puedes desplazarte hacia arriba hasta la tarjeta de resultados e importarlas directamente desde allí.",
+      "claims": [
+        {
+          "text": "Aún no he importado las fuentes de la investigación anterior a tu libreta. ¿Quieres que las importe primero? Así podré responder a tus preguntas sobre el estado actual y las relaciones del Routing bas",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "8ef8d7da-ba4b-45a3-867f-a429da01db60",
+  "duration_ms": 54300,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\03-backend-06-routing\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

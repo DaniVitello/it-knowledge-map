@@ -1,0 +1,7 @@
+{"ts": "2026-11-06T19:24:29.617471+00:00", "run_id": "run-20261106-162429-cdb6c7", "concept_id": "frontend-01-internet-web", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-11-06T19:24:29.646689+00:00", "run_id": "run-20261106-162429-cdb6c7", "concept_id": "frontend-01-internet-web", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-06T19:24:29.687336+00:00", "run_id": "run-20261106-162429-cdb6c7", "concept_id": "frontend-01-internet-web", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-06T19:24:29.714913+00:00", "run_id": "run-20261106-162429-cdb6c7", "concept_id": "frontend-01-internet-web", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-06T19:24:29.768081+00:00", "run_id": "run-20261106-162429-cdb6c7", "concept_id": "frontend-01-internet-web", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-06T19:24:29.785397+00:00", "run_id": "run-20261106-162429-cdb6c7", "concept_id": "frontend-01-internet-web", "event": "notebook_delete_failed", "notebook_id": "fake-nb-1", "error": "asyncio.run() cannot be called from a running event loop"}
+{"ts": "2026-11-06T19:24:29.795533+00:00", "run_id": "run-20261106-162429-cdb6c7", "concept_id": "frontend-01-internet-web", "event": "run_end", "status": "completed"}

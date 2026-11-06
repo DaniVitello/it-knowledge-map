@@ -1,0 +1,50 @@
+{
+  "concept_id": "04-database-data-analytics-08-normalization",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No veo fuentes agregadas en tu cuaderno sobre **Normalización (Reducción de redundancia y anomalías)**. \n\n¿Te gustaría que realice una **investigación en la web** sobre el modelado de datos y la normalización en bases de datos relacionales?",
+      "claims": [
+        {
+          "text": "No veo fuentes agregadas en tu cuaderno sobre **Normalización (Reducción de redundancia y anomalías)**. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "La **Normalización de Bases de Datos** es un proceso estructurado de diseño relacional que consiste en descomponer tablas complejas en tablas más pequeñas y vinculadas entre sí. Su objetivo principal es **eliminar la redundancia de datos** (duplicación innecesaria) y **garantizar la integridad de los datos**, evitando inconsistencias operativas.\n\n---\n\n### ¿Cómo funciona la Normalización?\n\nLa normalización evalúa las dependencias entre los atributos (columnas) de una tabla y aplica un conjunto de reglas progresivas llamadas **Formas Normales (Normal Forms)**. \n\n#### 1. Prevención de Anomalías de Datos\nSin normalización, modificar o consultar información suele generar tres anomalías clásicas:\n* **Anomalía de Inserción (*Insert Anomaly*):** Ocurre cuando no es posible registrar un nuevo dato sin antes agregar obligatoriamente información no relacionada (por ejemplo, no poder registrar un nuevo cliente sin que haya realizado aún una compra).\n* **Anomalía de Actualización (*Update Anomaly*):** Ocurre cuando un mismo dato está duplicado en múltiples filas. Si se actualiza en una fila pero no en las demás, la base de datos entra en un estado inconsistente o contradictorio.\n* **Anomalía de Borrado (*Delete Anomaly*):** Ocurre cuando la eliminación de un registro elimina involuntariamente la única copia existente de otra información relevante (por ejemplo, borrar un pedido y perder la información del producto asociado).\n\n#### 2. Las Formas Normales Principales\n* **1NF (Primera Forma Normal - Atomicidad):** Exige que todos los valores de las celdas sean atómicos (un solo valor por celda, sin listas ni arreglos) y que cada fila sea identificable de forma única mediante una **clave primaria (*Primary Key*)**.\n* **2NF (Segunda Forma Normal - Dependencia Total):** Cumple 1NF y elimina las **dependencias parciales**. Todos los atributos no clave deben depender de la clave primaria completa (relevante cuando la clave es compuesta).\n* **3NF (Tercera Forma Normal - Eliminación de Transitividad):** Cumple 2NF y elimina las **dependencias transitivas**. Ningún atributo no clave debe depender de otro atributo no clave (la regla clásica: *\"cada atributo debe depender de la clave, de toda la clave y nada más que de la clave\"*).\n* **BCNF (Forma Normal de Boyce-Codd):** Versión más estricta de la 3NF que resuelve casos especiales con múltiples claves candidatas superpuestas.\n\n---\n\n### Normalización en Bases de Datos (OLTP) vs. Analytics (OLAP)\n\n* **Bases de Datos Transaccionales (OLTP):** Priorizan un alto nivel de normalización (generalmente 3NF). Esto optimiza las operaciones frecuentes de escritura (`INSERT`, `UPDATE`, `DELETE`), ahorra espacio y asegura que las restricciones (*foreign keys*, *check constraints*) mantengan la integridad referencial.\n* **Data Analytics & Data Warehousing (OLAP):** En entornos analíticos se aplica frecuentemente la **desnormalización**. Al combinar deliberadamente tablas en esquemas multidimensionales (como el *Estrella* o *Copo de Nieve*), se reduce la cantidad de uniones (*JOINs*) complejas, acelerando la lectura de grandes volúmenes de datos e informes.\n\n---\n\n### Resumen de la investigación web\n\nHe realizado una investigación en la web sobre **Normalización de Bases de Datos** y he reunido **5 fuentes de referencia**:\n\n1. **Concepto e Historia:** Desarrollado por Edgar F. Codd (IBM) en la década de 1970 para evitar dependencias indeseadas en modelos relacionales.\n2. **Impacto en Sistemas Real-time:** Protege la consistencia operacional en sistemas transaccionales críticos.\n3. **Modelado Relacional:** Conecta entidades mediante claves primarias y foráneas, reduciendo el acoplamiento y el espacio de almacenamiento.\n\n📥 **El informe completo de investigación está incluido en la tarjeta interactiva de abajo.** Puedes revisar y seleccionar las fuentes que desees importar a tu cuaderno para trabajar con ellas directamente.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-database-normalization\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-database-normalization\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos técnicos y guías sobre normalización de bases de datos y modelado relacional\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Informe de investigación: Normalización de Bases de Datos\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQ4N2UwZmViOC05ZWU5LTQ0NjgtOThiOC0wOTViNDFjNjhlNmYSCxIHEPnP8YvcBhgB&filename=Informe_de_investigacin_Normalizacin_de_Bases_de_Datos.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Informe de investigación\",\n          \"summary\": \"Informe completo de investigación con 5 fuentes sobre normalización, formas normales y prevención de anomalías.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"Database Normalization Explained: 1NF, 2NF, 3NF & BCNF Guide\",\n          \"url\": \"https://www.centron.de/en/tutorials/database-normalization-explained-1nf-2nf-3nf-bcnf-guide\",\n          \"sourceName\": \"centron GmbH\",\n          \"summary\": \"Guía completa sobre diseño de esquemas relacionales, formas normales y eliminación de redundancias.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"What Is Database Normalization?\",\n          \"url\": \"https://www.ibm.com/think/topics/database-normalization\",\n          \"sourceName\": \"IBM\",\n          \"summary\": \"Explicación conceptual de IBM sobre integridad de datos, antecedentes históricos y beneficios empresariales.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"Database Normalization: 1NF, 2NF, 3NF & BCNF Examples\",\n          \"url\": \"https://www.digitalocean.com/community/tutorials/database-normalization\",\n          \"sourceName\": \"DigitalOcean\",\n          \"summary\": \"Tutorial práctico con ejemplos paso a paso sobre la jerarquía de reglas de normalización.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"Database Normalization: 1NF, 2NF, and 3NF\",\n          \"url\": \"https://www.boot.dev/blog/backend/database-normalization\",\n          \"sourceName\": \"Boot.dev\",\n          \"summary\": \"Análisis sobre dependencias funcionales y cómo prevenir las anomalías de inserción, borrado y actualización.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"Database Normalization Explained: 1NF, 2NF, 3NF, and BCNF with examples\",\n          \"url\": \"https://www.alessandroferrini.com/posts/relational-normalization-part-1/\",\n          \"sourceName\": \"Alessandro Ferrini\",\n          \"summary\": \"Guía de diseño de bases de datos con ejemplos de transformaciones de tablas antes y después.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>\n\n💡 Una vez que importes las fuentes a tu cuaderno, ¿te gustaría que desarrollemos un ejemplo práctico paso a paso de cómo normalizar una tabla desnormalizada desde 1NF hasta 3NF?",
+      "claims": [
+        {
+          "text": "La **Normalización de Bases de Datos** es un proceso estructurado de diseño relacional que consiste en descomponer tablas complejas en tablas más pequeñas y vinculadas entre sí. Su objetivo principal ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no he importado esas fuentes a tu cuaderno. **¿Quieres que las importe primero?** Así podré responder tus preguntas y analizar en detalle el estado actual y sus relaciones con base en el contenido de las fuentes. \n\nTambién puedes desplazarte hacia arriba hasta los resultados de la investigación anterior e importarlas directamente desde la tarjeta.",
+      "claims": [
+        {
+          "text": "Aún no he importado esas fuentes a tu cuaderno. **¿Quieres que las importe primero?** Así podré responder tus preguntas y analizar en detalle el estado actual y sus relaciones con base en el contenido",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "ed4e6935-3b90-4730-aa48-da4f34918945",
+  "duration_ms": 66832,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-08-normalization\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

@@ -1,0 +1,11 @@
+{"ts": "2026-10-30T05:35:42.117514+00:00", "run_id": "run-20261030-023451-bcc569", "concept_id": "04-database-data-analytics-04-sql", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:35:57.787773+00:00", "run_id": "run-20261030-023451-bcc569", "concept_id": "04-database-data-analytics-04-sql", "event": "phase_failed", "phase": "research", "error": "research (96015fff-46c4-454a-baaa-e0af343c1e46): Chat request was rate limited or rejected by the API. Wait a few seconds and try again."}
+{"ts": "2026-11-05T18:19:43.581520+00:00", "run_id": "run-20261105-151808-34f931", "concept_id": "04-database-data-analytics-04-sql", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-11-05T18:20:25.692081+00:00", "run_id": "run-20261105-151808-34f931", "concept_id": "04-database-data-analytics-04-sql", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T18:20:29.300655+00:00", "run_id": "run-20261105-151808-34f931", "concept_id": "04-database-data-analytics-04-sql", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T18:20:29.342781+00:00", "run_id": "run-20261105-151808-34f931", "concept_id": "04-database-data-analytics-04-sql", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T18:20:29.372698+00:00", "run_id": "run-20261105-151808-34f931", "concept_id": "04-database-data-analytics-04-sql", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T18:20:29.390460+00:00", "run_id": "run-20261105-151808-34f931", "concept_id": "04-database-data-analytics-04-sql", "event": "notebook_delete_failed", "notebook_id": "86b622bf-7a13-4e82-8a6e-f9149f159f9b", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T18:20:29.400468+00:00", "run_id": "run-20261105-151808-34f931", "concept_id": "04-database-data-analytics-04-sql", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T22:48:55.966935+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-04-sql", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T22:48:56.039345+00:00", "run_id": "run-20261105-194852-06b315", "concept_id": "04-database-data-analytics-04-sql", "event": "run_end", "status": "completed"}

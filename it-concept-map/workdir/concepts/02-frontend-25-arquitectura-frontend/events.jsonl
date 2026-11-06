@@ -1,0 +1,11 @@
+{"ts": "2026-10-30T05:21:40.824459+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-25-arquitectura-frontend", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:21:59.313106+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-25-arquitectura-frontend", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:22:05.384948+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-25-arquitectura-frontend", "event": "phase_failed", "phase": "research", "error": "Transicion invalida: researching -> researching"}
+{"ts": "2026-10-30T05:22:10.739987+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-25-arquitectura-frontend", "event": "phase_done", "phase": "research"}
+{"ts": "2026-10-30T05:22:14.691265+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-25-arquitectura-frontend", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-10-30T05:22:14.739539+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-25-arquitectura-frontend", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-10-30T05:22:14.783292+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-25-arquitectura-frontend", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-10-30T05:22:14.809000+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-25-arquitectura-frontend", "event": "notebook_delete_failed", "notebook_id": "632c9f5f-7135-44db-9403-e188f8dd1b5a", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-10-30T05:22:14.825377+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-25-arquitectura-frontend", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T22:40:07.219727+00:00", "run_id": "run-20261105-193941-b2c223", "concept_id": "02-frontend-25-arquitectura-frontend", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T22:40:07.289917+00:00", "run_id": "run-20261105-193941-b2c223", "concept_id": "02-frontend-25-arquitectura-frontend", "event": "run_end", "status": "completed"}

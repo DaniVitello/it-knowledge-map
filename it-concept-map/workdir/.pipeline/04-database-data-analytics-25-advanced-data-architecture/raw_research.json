@@ -1,0 +1,50 @@
+{
+  "concept_id": "04-database-data-analytics-25-advanced-data-architecture",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "**No veo ninguna fuente en tu cuaderno** para responder sobre **Arquitectura Avanzada de Datos** (Lakehouse, streaming, sistemas distribuidos y gobernanza).\n\n¿Te gustaría que realice una **investigación en la web** sobre este tema?",
+      "claims": [
+        {
+          "text": "**No veo ninguna fuente en tu cuaderno** para responder sobre **Arquitectura Avanzada de Datos** (Lakehouse, streaming, sistemas distribuidos y gobernanza).",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Aquí tienes lo que encontré sobre **Arquitectura Avanzada de Datos (Advanced Data Architecture)**:\n\nUna **Arquitectura Avanzada de Datos** es un enfoque moderno diseñado para procesar, almacenar y analizar grandes volúmenes de datos heterogéneos (estructurados y no estructurados) con alta velocidad, escalabilidad y seguridad. Integra procesamiento en tiempo real, almacenamiento escalable y gobierno centralizado para servir tanto analítica de negocio (BI) como modelos de Inteligencia Artificial y Machine Learning.\n\n**Temas clave identificados:**\n1. **Data Lakehouse**: Unifica la flexibilidad y bajo costo de almacenamiento de un *Data Lake* con el control transaccional ACID, la calidad de datos y el alto rendimiento de un *Data Warehouse* (utilizando formatos de tabla abierta como Delta Lake, Apache Iceberg o Apache Hudi).\n2. **Procesamiento Streaming y Mensajería**: Integra motores de eventos continuos en tiempo real (como Apache Kafka, RabbitMQ o Apache Flink) para ingerir y analizar datos al instante antes de archivarlos.\n3. **Sistemas Distribuidos y Desacoplamiento**: Separa por completo el almacenamiento (como Amazon S3, Google Cloud Storage o Azure ADLS) del cómputo (Spark, Trino, Snowflake), permitiendo escalar cada recurso de forma independiente.\n4. **Gobernanza y Linaje de Datos**: Aplica catálogos unificados de metadatos (como Unity Catalog o Apache Atlas) para garantizar el control de acceso, la seguridad, la calidad de los datos y el rastreo de su origen (*data lineage*).\n5. **Arquitectura de Medallón (Bronze, Silver, Gold)**: Organiza el flujo de datos en capas lógicas de refinamiento, desde la ingesta en bruto (Bronze), pasando por la limpieza y consolidación (Silver), hasta las tablas optimizadas para analítica (Gold).\n\n---\n\n📥 El informe completo de investigación se incluye como la primera fuente en la tarjeta a continuación. Si deseas realizar preguntas directamente sobre estas fuentes o generar análisis grounded, selecciona e impórtalas a tu cuaderno.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-advanced-data-architecture\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-advanced-data-architecture\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos técnicos e informes sobre Data Lakehouse, streaming, sistemas distribuidos y gobernanza\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Informe de Investigación: Arquitectura Avanzada de Datos\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiRmZWZjNTBjNS0xY2ZlLTQ5Y2YtYmJiZi1lMjczMzNmYzc3YjYSCxIHEPnP8YvcBhgB&filename=Investigacion_Arquitectura_Avanzada_Datos.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Informe de Investigación\",\n          \"summary\": \"Informe completo con 6 fuentes sobre Data Lakehouse, streaming, sistemas distribuidos y gobernanza.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"Data Lakehouse Architecture: Unify Data, Analytics and AI\",\n          \"url\": \"https://www.databricks.com/product/data-lakehouse\",\n          \"sourceName\": \"Databricks\",\n          \"summary\": \"Explicación detallada sobre la arquitectura Lakehouse unificada en fuentes open source como Delta Lake y Spark.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"What is a Data Lakehouse?\",\n          \"url\": \"https://aws.amazon.com/what-is/data-lakehouse/\",\n          \"sourceName\": \"AWS\",\n          \"summary\": \"Guía conceptual de AWS sobre la combinación de Data Lakes y Data Warehouses con gobernanza unificada.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"Modern Data Platform Architecture: Lakehouse & Scaling\",\n          \"url\": \"https://lumitech.co/insights/modern-data-platform-architecture\",\n          \"sourceName\": \"Lumitech\",\n          \"summary\": \"Análisis de la evolución de plataformas de datos hacia desacoplamiento de cómputo y streaming en tiempo real.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"What are the Layers of Data Lakehouse Architecture\",\n          \"url\": \"https://www.moderndata101.com/blogs/data-lakehouse-architecture-explained\",\n          \"sourceName\": \"Modern Data 101\",\n          \"summary\": \"Desglose por capas de la arquitectura Lakehouse: almacenamiento, gobernanza, motor de consultas y consumo.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"Data Lakehouse Architecture 101\",\n          \"url\": \"https://www.dataversity.net/articles/data-lakehouse-architecture-101/\",\n          \"sourceName\": \"Dataversity\",\n          \"summary\": \"Introducción a la integración de analítica en tiempo real (Kafka/Flink) y procesamiento batch en Lakehouse.\"\n        },\n        {\n          \"id\": \"src-6\",\n          \"title\": \"Data Lakehouse Architectures: Bridging Real-Time Streams and Analytical Intelligence\",\n          \"url\": \"https://www.irejournals.com/formatedpaper/1715610.pdf\",\n          \"sourceName\": \"IRE Journals\",\n          \"summary\": \"Artículo académico sobre ingesta continua, almacenamiento en objetos y motores de inteligencia analítica.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Aquí tienes lo que encontré sobre **Arquitectura Avanzada de Datos (Advanced Data Architecture)**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "**Aún no se han importado las fuentes de la investigación a tu cuaderno.**\n\n¿Quieres que importe las fuentes encontradas para responder a tus preguntas sobre el **estado actual y las relaciones de Advanced Data Architecture** basándome en su contenido? \n\n*(También puedes desplazarte hacia arriba hasta la tarjeta de resultados de investigación e importar directamente las fuentes que prefieras).*",
+      "claims": [
+        {
+          "text": "**Aún no se han importado las fuentes de la investigación a tu cuaderno.**",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "b7e9f580-4d8c-4301-aff9-f9ab3ddd3d2c",
+  "duration_ms": 54647,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-25-advanced-data-architecture\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

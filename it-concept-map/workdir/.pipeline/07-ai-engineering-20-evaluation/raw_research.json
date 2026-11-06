@@ -1,0 +1,50 @@
+{
+  "concept_id": "07-ai-engineering-20-evaluation",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No veo **ninguna fuente cargada en tu libreta** para poder responder a esta pregunta. Como todas mis respuestas se basan estrictamente en tus materiales para ofrecerte información verificable, no puedo responder utilizando conocimiento externo sin tu permiso.\n\n¿Quieres que realice una **investigación en la web** sobre la **evaluación de modelos de IA** (abarcando *accuracy*, *relevance*, *groundedness* y *task-specific evals*)?",
+      "claims": [
+        {
+          "text": "No veo **ninguna fuente cargada en tu libreta** para poder responder a esta pregunta. Como todas mis respuestas se basan estrictamente en tus materiales para ofrecerte información verificable, no pued",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Aquí tienes una síntesis sobre cómo funciona la **evaluación (*Evaluation*) en AI Engineering**, basada en la investigación que acabo de realizar:\n\nEn la ingeniería de IA, la **evaluación** es la disciplina estructurada de medir, validar y supervisar la calidad, seguridad y fiabilidad de sistemas basados en LLMs (como aplicaciones RAG o agentes autónomos) a lo largo de todo su ciclo de vida. Según análisis de plataformas especializadas como **Arize AI**, **Evidently AI** y **DeepEval**, su objetivo principal es sustituir las pruebas manuales o imprecisas (*vibe checks*) por métricas objetivas y repetibles.\n\n---\n\n### 1. Dimensiones Principales de Evaluación\n\n* **Accuracy (Precisión / Correctness):** Mide si la respuesta generada por el modelo es factualmente objetiva y correcta en comparación con una verdad de referencia (*ground truth*) o el objetivo de la tarea.\n* **Groundedness (Fidelidad / Fundamentación):** Crucial en arquitecturas RAG. Evalúa si cada afirmación o dato en la respuesta del modelo está estrictamente respaldado por los documentos recuperados del contexto, asegurando que el modelo no genere alucinaciones.\n* **Relevance (Relevancia):** Mide si el modelo responde de manera directa y concisa a la necesidad manifestada por el usuario, sin desviarse del tema ni incluir información irrelevante.\n* **Task-Specific Evals (Evaluaciones Específicas de Tarea):** Métricas diseñadas a la medida de la tarea concreta del negocio. Como destacan expertos como **Eugene Yan**, esto incluye validar el formato de extracción (JSON estructurado), la precisión en llamadas a herramientas (*tool calling*), o el porcentaje de éxito en flujos de agentes multi-paso.\n\n---\n\n### 2. Relación con Observabilidad y Seguridad (AI Safety & Security)\n\n* **Observabilidad (Observability):** Herramientas como **Datadog** o **Arize** capturan trazas (*traces*) de cada interacción en producción. La evaluación continua analiza esas trazas para detectar degradaciones de calidad (*regressions*), medir latencias y costos, y convertir fallos reales en nuevos casos de prueba.\n* **AI Safety & Security:** Integra guardrails automatizados que evalúan y bloquean salidas tóxicas, sesgadas o peligrosas, además de detectar ataques de inyección de instrucciones (*prompt injection*).\n\n---\n\n📥 El informe completo de investigación se encuentra como la primera fuente en la tarjeta de importación a continuación. Si deseas chatear directamente con el contenido de estos artículos en tu libreta, puedes seleccionarlos e importarlos desde la tarjeta.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-evaluation-ai-engineering\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-evaluation-ai-engineering\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos e investigaciones sobre métricas de evaluación de IA, RAG y observabilidad\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Informe de investigación: Evaluación en AI Engineering\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQ3ZmFiN2I4YS1mNzU0LTQzNjgtOTk3Mi0xNjYyYzFmN2U5MDASCxIHEPnP8YvcBhgB&filename=Informe_de_investigacin_Evaluacin_en_AI_Engineering.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Informe de investigación\",\n          \"summary\": \"Informe estructurado completo sobre métricas de evaluación de IA (Accuracy, Groundedness, Relevance, Task-Specific) y observabilidad.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"LLM evaluation metrics: correctness, groundedness, RAG & agent scores\",\n          \"url\": \"https://arize.com/resources/llm-evaluation/metrics/\",\n          \"sourceName\": \"Arize AI\",\n          \"summary\": \"Guía técnica sobre categorías de métricas fundamentales para evaluación de modelos, RAG y agentes.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"LLM evaluation metrics and methods, explained simply\",\n          \"url\": \"https://www.evidentlyai.com/llm-guide/llm-evaluation-metrics\",\n          \"sourceName\": \"Evidently AI\",\n          \"summary\": \"Explicación práctica de métodos con y sin referencia, y el uso de LLM como juez.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"Top 5 LLM Evaluation Frameworks in 2026, Compared\",\n          \"url\": \"https://deepeval.com/blog/top-5-llm-evaluation-frameworks\",\n          \"sourceName\": \"DeepEval\",\n          \"summary\": \"Comparativa de marcos de evaluación para pipelines RAG y sistemas multi-agente.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"Task-Specific LLM Evals that Do & Don't Work\",\n          \"url\": \"https://eugeneyan.com/writing/evals/\",\n          \"sourceName\": \"Eugene Yan\",\n          \"summary\": \"Análisis profundo sobre métricas específicas que aportan valor real en producción.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"Building an LLM evaluation framework: best practices\",\n          \"url\": \"https://www.datadoghq.com/blog/llm-evaluation-framework-best-practices/\",\n          \"sourceName\": \"Datadog\",\n          \"summary\": \"Mejores prácticas para integrar la evaluación continua con trazabilidad y monitoreo.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Aquí tienes una síntesis sobre cómo funciona la **evaluación (*Evaluation*) en AI Engineering**, basada en la investigación que acabo de realizar:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no he importado las fuentes de la investigación a tu libreta. ¿Quieres que las importe primero? Una vez añadidas a tus fuentes, podré responder en detalle a tus preguntas sobre el estado actual y las relaciones de Evaluation basándome directamente en el contenido de esos documentos.\n\nTambién puedes desplazarte hacia arriba e importarlas tú mismo seleccionándolas en la tarjeta de investigación.",
+      "claims": [
+        {
+          "text": "Aún no he importado las fuentes de la investigación a tu libreta. ¿Quieres que las importe primero? Una vez añadidas a tus fuentes, podré responder en detalle a tus preguntas sobre el estado actual y ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "ac44eee7-b008-44f2-bb2d-43608b81c8b8",
+  "duration_ms": 61799,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\07-ai-engineering-20-evaluation\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

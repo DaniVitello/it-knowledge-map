@@ -1,0 +1,52 @@
+{
+  "questions": [],
+  "concept_id": "03-backend-25-sistemas-distribuidos",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Sistemas distribuidos y para que sirve (Load balancing, scaling, replication, consistency)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Sistemas distribuidos en Backend"
+    ],
+    "context": [
+      "Como se usa Sistemas distribuidos en el contexto profesional de Backend"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Reliability",
+      "ask": "Como se relaciona Sistemas distribuidos con Reliability?"
+    },
+    {
+      "with": "Distributed Systems",
+      "ask": "Como se relaciona Sistemas distribuidos con Distributed Systems?"
+    },
+    {
+      "with": "Mensajería",
+      "ask": "Como se relaciona Sistemas distribuidos con Mensajería?"
+    },
+    {
+      "with": "Advanced Data Architecture",
+      "ask": "Como se relaciona Sistemas distribuidos con Advanced Data Architecture?"
+    },
+    {
+      "with": "CDN / Load Balancing",
+      "ask": "Como se relaciona Sistemas distribuidos con CDN / Load Balancing?"
+    }
+  ],
+  "queries": [
+    "site:developer.mozilla.org Sistemas distribuidos",
+    "site:rfc-editor.org Sistemas distribuidos",
+    "site:datatracker.ietf.org Sistemas distribuidos",
+    "site:owasp.org Sistemas distribuidos",
+    "site:postgresql.org Sistemas distribuidos",
+    "site:redis.io Sistemas distribuidos",
+    "site:12factor.net Sistemas distribuidos",
+    "site:learn.microsoft.com Sistemas distribuidos"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

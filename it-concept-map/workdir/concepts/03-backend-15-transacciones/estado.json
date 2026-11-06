@@ -1,0 +1,31 @@
+{
+  "concept_id": "03-backend-15-transacciones",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "failed_phase": "synthesizing",
+    "failed_reason": "error",
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\03-backend-15-transacciones\\sources.json",
+    "notebook_id": "d47dbff2-7e00-4e1f-9d62-79c4b1adb651",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\03-backend-15-transacciones\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\03-backend-15-transacciones\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\03-backend-15-transacciones\\15 - Transacciones.md.20261105T194858Z-ee4a3d.bak",
+      "outside_hash": "151b7ed8a978d0b2af23ed43b97f983d1d5a60093d53612c41c5991a6a0114c3",
+      "inside_hash": "f6552519c20e0928d723d78430de649d17b97be83865d021e927344caa6ef53f",
+      "written_at": "2026-11-05T19:48:59.018480+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:31:35.303383+00:00",
+  "updated_at": "2026-11-05T19:48:59.060593+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T19:48:59.060593+00:00",
+    "created_at": "2026-10-30T05:31:35.303383+00:00"
+  },
+  "schema_version": "1.0.0"
+}

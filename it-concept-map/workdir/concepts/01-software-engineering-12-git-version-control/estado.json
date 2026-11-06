@@ -1,0 +1,29 @@
+{
+  "concept_id": "01-software-engineering-12-git-version-control",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\01-software-engineering-12-git-version-control\\sources.json",
+    "notebook_id": "5fab4f1a-8c6d-4654-9846-bacadf94ce82",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-12-git-version-control\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-12-git-version-control\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\01-software-engineering-12-git-version-control\\12 - Git - Version Control.md.20261030T044422Z-c67bd4.bak",
+      "outside_hash": "97b9a3f987c0909f8d2fb089f3e5d851082178635a056e1f971147c3db5c15dc",
+      "inside_hash": "131b9aee5f29334112b5172c5926487388bb98966f39652525265b9c6e701aa9",
+      "written_at": "2026-10-30T04:44:22.402297+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T04:43:27.390238+00:00",
+  "updated_at": "2026-10-30T04:44:22.449310+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T04:44:22.449310+00:00",
+    "created_at": "2026-10-30T04:43:27.390238+00:00"
+  },
+  "schema_version": "1.0.0"
+}

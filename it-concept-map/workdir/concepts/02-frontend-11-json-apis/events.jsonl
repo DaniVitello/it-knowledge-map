@@ -1,0 +1,12 @@
+{"ts": "2026-10-30T05:14:23.884131+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-11-json-apis", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:14:56.881224+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-11-json-apis", "event": "phase_done", "phase": "research"}
+{"ts": "2026-10-30T05:15:01.153950+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-11-json-apis", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-10-30T05:15:01.183735+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-11-json-apis", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-10-30T05:15:01.216562+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-11-json-apis", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-10-30T05:15:01.236071+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-11-json-apis", "event": "notebook_delete_failed", "notebook_id": "600b9338-87ec-4441-be05-850892a494e8", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-10-30T05:15:01.249457+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-11-json-apis", "event": "run_end", "status": "completed"}
+{"ts": "2026-10-30T05:17:58.469499+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-11-json-apis", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:17:58.489118+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-11-json-apis", "event": "idempotency_hash_mismatch", "stored": "b0de9c94bc4dbc1dafaa98aaa81f6813e4f69e77c0a46118800989ab588e469d", "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+{"ts": "2026-10-30T05:17:58.490471+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-11-json-apis", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T22:39:52.210249+00:00", "run_id": "run-20261105-193941-b2c223", "concept_id": "02-frontend-11-json-apis", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T22:39:52.292799+00:00", "run_id": "run-20261105-193941-b2c223", "concept_id": "02-frontend-11-json-apis", "event": "run_end", "status": "completed"}

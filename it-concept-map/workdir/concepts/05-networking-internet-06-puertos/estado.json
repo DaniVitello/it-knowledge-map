@@ -1,0 +1,31 @@
+{
+  "concept_id": "05-networking-internet-06-puertos",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-06-puertos\\sources.json",
+    "notebook_id": "ecf987fd-1adc-4b0d-8621-55d7fa78854b",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-06-puertos\\synthesis.json",
+    "failed_phase": "validating",
+    "failed_reason": "validation",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-06-puertos\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\05-networking-internet-06-puertos\\06 - Puertos.md.20261105T232039Z-70aaa3.bak",
+      "outside_hash": "a03045090566b717f6351b0f205b0c33a7cf1d560510bf4221a9a12260b19f39",
+      "inside_hash": "fff97744f0a8a3edf5b4c64b0f86e54839fcb3fc54e1a1aa413ef4f6ebcd07bf",
+      "written_at": "2026-11-05T23:20:39.181200+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:14:12.140248+00:00",
+  "updated_at": "2026-11-05T23:20:39.198686+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:20:39.198686+00:00",
+    "created_at": "2026-11-05T23:14:12.140248+00:00"
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,59 @@
+{
+  "questions": [],
+  "concept_id": "04-database-data-analytics-22-analytics-metrics",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Analytics Metrics y para que sirve (KPIs, métricas, dimensiones, ratios)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Analytics Metrics en Database / Data Analytics"
+    ],
+    "context": [
+      "Como se usa Analytics Metrics en el contexto profesional de Database / Data Analytics"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Data Analysis",
+      "ask": "Como se relaciona Analytics Metrics con Data Analysis?"
+    },
+    {
+      "with": "Statistics",
+      "ask": "Como se relaciona Analytics Metrics con Statistics?"
+    },
+    {
+      "with": "Data Visualization",
+      "ask": "Como se relaciona Analytics Metrics con Data Visualization?"
+    },
+    {
+      "with": "BI & Reporting",
+      "ask": "Como se relaciona Analytics Metrics con BI & Reporting?"
+    },
+    {
+      "with": "UX Metrics",
+      "ask": "Como se relaciona Analytics Metrics con UX Metrics?"
+    },
+    {
+      "with": "Product Metrics",
+      "ask": "Como se relaciona Analytics Metrics con Product Metrics?"
+    },
+    {
+      "with": "Project Metrics",
+      "ask": "Como se relaciona Analytics Metrics con Project Metrics?"
+    }
+  ],
+  "queries": [
+    "site:postgresql.org Analytics Metrics",
+    "site:sqlite.org Analytics Metrics",
+    "site:dev.mysql.com Analytics Metrics",
+    "site:use-the-index-luke.com Analytics Metrics",
+    "site:learn.microsoft.com Analytics Metrics",
+    "site:docs.snowflake.com Analytics Metrics",
+    "site:openstax.org Analytics Metrics"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

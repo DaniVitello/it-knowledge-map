@@ -1,0 +1,29 @@
+{
+  "concept_id": "07-ai-engineering-11-structured-outputs",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\07-ai-engineering-11-structured-outputs\\sources.json",
+    "notebook_id": "ab7b22f6-9943-47ee-8ddb-05d1a03f36f4",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\07-ai-engineering-11-structured-outputs\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\07-ai-engineering-11-structured-outputs\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\07-ai-engineering-11-structured-outputs\\11 - Structured Outputs.md.20261106T210455Z-37b5fe.bak",
+      "outside_hash": "a03bfa4d8fd3a1983f88b5274307f4cfeff0819084ba612c23a8956986e6ce4f",
+      "inside_hash": "53cac31c3c9df00ba9c8576aa35a190646b73ac3990bb56d88f5ee83f1007f7c",
+      "written_at": "2026-11-06T21:04:55.526679+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-06T21:03:48.065819+00:00",
+  "updated_at": "2026-11-06T21:04:55.544826+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-06T21:04:55.544826+00:00",
+    "created_at": "2026-11-06T21:03:48.065819+00:00"
+  },
+  "schema_version": "1.0.0"
+}

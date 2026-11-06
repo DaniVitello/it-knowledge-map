@@ -1,0 +1,44 @@
+{
+  "questions": [],
+  "concept_id": "07-ai-engineering-03-linear-algebra-probability",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Linear Algebra & Probability y para que sirve (Vectores, matrices, distribuciones, probabilidad)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Linear Algebra & Probability en AI Engineering"
+    ],
+    "context": [
+      "Como se usa Linear Algebra & Probability en el contexto profesional de AI Engineering"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "AI / ML Fundamentals",
+      "ask": "Como se relaciona Linear Algebra & Probability con AI / ML Fundamentals?"
+    },
+    {
+      "with": "Machine Learning Fundamentals",
+      "ask": "Como se relaciona Linear Algebra & Probability con Machine Learning Fundamentals?"
+    },
+    {
+      "with": "Neural Networks",
+      "ask": "Como se relaciona Linear Algebra & Probability con Neural Networks?"
+    }
+  ],
+  "queries": [
+    "site:arxiv.org Linear Algebra & Probability",
+    "site:huggingface.co Linear Algebra & Probability",
+    "site:pytorch.org Linear Algebra & Probability",
+    "site:d2l.ai Linear Algebra & Probability",
+    "site:platform.openai.com Linear Algebra & Probability",
+    "site:docs.claude.com Linear Algebra & Probability",
+    "site:ai.google.dev Linear Algebra & Probability",
+    "site:deeplearning.ai Linear Algebra & Probability"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

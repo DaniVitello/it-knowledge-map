@@ -1,0 +1,63 @@
+{
+  "questions": [],
+  "concept_id": "04-database-data-analytics-03-relational-databases",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Relational Databases y para que sirve (Tablas, filas, columnas, relaciones)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Relational Databases en Database / Data Analytics"
+    ],
+    "context": [
+      "Como se usa Relational Databases en el contexto profesional de Database / Data Analytics"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Bases de datos",
+      "ask": "Como se relaciona Relational Databases con Bases de datos?"
+    },
+    {
+      "with": "Modelado de datos",
+      "ask": "Como se relaciona Relational Databases con Modelado de datos?"
+    },
+    {
+      "with": "ORM / Data Access",
+      "ask": "Como se relaciona Relational Databases con ORM / Data Access?"
+    },
+    {
+      "with": "Data Modeling",
+      "ask": "Como se relaciona Relational Databases con Data Modeling?"
+    },
+    {
+      "with": "Keys & Constraints",
+      "ask": "Como se relaciona Relational Databases con Keys & Constraints?"
+    },
+    {
+      "with": "Normalization",
+      "ask": "Como se relaciona Relational Databases con Normalization?"
+    },
+    {
+      "with": "Database Architecture",
+      "ask": "Como se relaciona Relational Databases con Database Architecture?"
+    },
+    {
+      "with": "NoSQL",
+      "ask": "Como se relaciona Relational Databases con NoSQL?"
+    }
+  ],
+  "queries": [
+    "site:postgresql.org Relational Databases",
+    "site:sqlite.org Relational Databases",
+    "site:dev.mysql.com Relational Databases",
+    "site:use-the-index-luke.com Relational Databases",
+    "site:learn.microsoft.com Relational Databases",
+    "site:docs.snowflake.com Relational Databases",
+    "site:openstax.org Relational Databases"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

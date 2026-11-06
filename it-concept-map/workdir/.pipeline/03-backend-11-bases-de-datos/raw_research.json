@@ -1,0 +1,50 @@
+{
+  "concept_id": "03-backend-11-bases-de-datos",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "**No veo fuentes en tu cuaderno** para responder sobre este tema. Como Gemini Notebook responde utilizando únicamente la información de tus fuentes cargadas, no puedo darte una definición basada en conocimiento general sin romper esa garantía de fundamentación.\n\n¿Quieres que haga una **investigación en la web** sobre **bases de datos, persistencia, tablas, documentos, relaciones y NoSQL** para responder a tu pregunta y sugerirte fuentes para agregar a tu cuaderno?",
+      "claims": [
+        {
+          "text": "**No veo fuentes en tu cuaderno** para responder sobre este tema. Como Gemini Notebook responde utilizando únicamente la información de tus fuentes cargadas, no puedo darte una definición basada en co",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Todavía **no cuentas con fuentes en tu cuaderno** sobre cómo funcionan las bases de datos en el backend. Como Gemini Notebook responde únicamente con base en el material que subes a tu cuaderno, no puedo generar una respuesta desde conocimiento general sin romper esa garantía de fundamentación.\n\n¿Quieres que realice una **investigación en la web** sobre **bases de datos en el backend, persistencia, arquitectura, modelos relacionales y NoSQL** para responder a tu consulta y mostrarte las fuentes encontradas?",
+      "claims": [
+        {
+          "text": "Todavía **no cuentas con fuentes en tu cuaderno** sobre cómo funcionan las bases de datos en el backend. Como Gemini Notebook responde únicamente con base en el material que subes a tu cuaderno, no pu",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Tu cuaderno sigue estando completamente **vacío y sin fuentes**. Debido a esto, no dispongo de material cargado para explicarte el estado actual y las relaciones en las bases de datos manteniendo la garantía de fundamentación.\n\n¿Quieres que realice una **investigación en la web** sobre el **estado actual de las bases de datos (relacionales vs. NoSQL, tablas, documentos, relaciones, índices y arquitectura)** para darte una respuesta detallada y proponerte fuentes para añadir a tu cuaderno?",
+      "claims": [
+        {
+          "text": "Tu cuaderno sigue estando completamente **vacío y sin fuentes**. Debido a esto, no dispongo de material cargado para explicarte el estado actual y las relaciones en las bases de datos manteniendo la g",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "a520b40f-28db-4c91-985a-62d8a7e5f796",
+  "duration_ms": 32335,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\03-backend-11-bases-de-datos\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

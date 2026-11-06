@@ -1,0 +1,29 @@
+{
+  "concept_id": "04-database-data-analytics-12-database-architecture",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\04-database-data-analytics-12-database-architecture\\sources.json",
+    "notebook_id": "32dc5c2d-5a29-4845-a2e1-3b6ee91220b2",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-12-database-architecture\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\04-database-data-analytics-12-database-architecture\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\04-database-data-analytics-12-database-architecture\\12 - Database Architecture.md.20261105T225747Z-cef656.bak",
+      "outside_hash": "11b72dac1fbbe190b2134bb82b1614bfe299d57b4adf3eec0f09191865b9b586",
+      "inside_hash": "74ce267ed4675ed249d4c7fc56b301916ab435535f72cd25cf46ee2776e0901b",
+      "written_at": "2026-11-05T22:57:47.809370+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T22:56:20.047811+00:00",
+  "updated_at": "2026-11-05T22:57:47.827224+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T22:57:47.827224+00:00",
+    "created_at": "2026-11-05T22:56:20.047811+00:00"
+  },
+  "schema_version": "1.0.0"
+}

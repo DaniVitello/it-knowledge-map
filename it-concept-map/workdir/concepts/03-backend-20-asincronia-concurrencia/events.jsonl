@@ -1,0 +1,12 @@
+{"ts": "2026-10-30T05:32:59.981181+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-20-asincronia-concurrencia", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:33:15.466003+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-20-asincronia-concurrencia", "event": "phase_failed", "phase": "research", "error": "research (8b6d528d-77db-45d4-be47-9f49bf803d87): Chat request was rate limited or rejected by the API. Wait a few seconds and try again."}
+{"ts": "2026-11-05T19:32:22.278627+00:00", "run_id": "run-20261105-162522-4ca118", "concept_id": "03-backend-20-asincronia-concurrencia", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T19:33:32.430819+00:00", "run_id": "run-20261105-162522-4ca118", "concept_id": "03-backend-20-asincronia-concurrencia", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T19:33:38.630046+00:00", "run_id": "run-20261105-162522-4ca118", "concept_id": "03-backend-20-asincronia-concurrencia", "event": "phase_failed", "phase": "synthesis", "error": "No se proporciono LLM para la sintesis"}
+{"ts": "2026-11-05T19:53:04.275796+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-20-asincronia-concurrencia", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T19:53:41.160291+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-20-asincronia-concurrencia", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T19:53:45.124040+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-20-asincronia-concurrencia", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T19:53:45.194392+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-20-asincronia-concurrencia", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T19:53:45.257126+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-20-asincronia-concurrencia", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T19:53:45.285481+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-20-asincronia-concurrencia", "event": "notebook_delete_failed", "notebook_id": "bb47cf23-d117-44fb-8ab4-86cd15a2fe5c", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T19:53:45.296953+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-20-asincronia-concurrencia", "event": "run_end", "status": "completed"}

@@ -1,0 +1,12 @@
+{"ts": "2026-10-30T05:11:39.044214+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-07-javascript-avanzado", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:12:09.953197+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-07-javascript-avanzado", "event": "phase_done", "phase": "research"}
+{"ts": "2026-10-30T05:12:13.663643+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-07-javascript-avanzado", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-10-30T05:12:13.696213+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-07-javascript-avanzado", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-10-30T05:12:13.730881+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-07-javascript-avanzado", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-10-30T05:12:13.747996+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-07-javascript-avanzado", "event": "notebook_delete_failed", "notebook_id": "08c04295-2181-4259-aed5-967ca79f6fe2", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-10-30T05:12:13.761452+00:00", "run_id": "run-20261030-020634-64efe8", "concept_id": "02-frontend-07-javascript-avanzado", "event": "run_end", "status": "completed"}
+{"ts": "2026-10-30T05:17:54.334754+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-07-javascript-avanzado", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:17:54.361327+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-07-javascript-avanzado", "event": "idempotency_hash_mismatch", "stored": "3ad36badb9c03cdf53bc18a243f1640ede0125ebd45c7fc03acd73876dad3698", "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+{"ts": "2026-10-30T05:17:54.362985+00:00", "run_id": "run-20261030-021747-132d09", "concept_id": "02-frontend-07-javascript-avanzado", "event": "run_end", "status": "completed"}
+{"ts": "2026-11-05T22:39:47.982784+00:00", "run_id": "run-20261105-193941-b2c223", "concept_id": "02-frontend-07-javascript-avanzado", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T22:39:48.034392+00:00", "run_id": "run-20261105-193941-b2c223", "concept_id": "02-frontend-07-javascript-avanzado", "event": "run_end", "status": "completed"}

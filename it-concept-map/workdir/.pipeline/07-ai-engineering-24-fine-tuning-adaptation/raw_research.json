@@ -1,0 +1,50 @@
+{
+  "concept_id": "07-ai-engineering-24-fine-tuning-adaptation",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No veo ninguna fuente cargada en tu cuaderno sobre **Fine-tuning & Adaptation** (Fine-tuning, LoRA, destilación y adaptación de modelos).\n\n¿Te gustaría que realice una **investigación en la web** sobre este tema para responder a tu consulta?",
+      "claims": [
+        {
+          "text": "No veo ninguna fuente cargada en tu cuaderno sobre **Fine-tuning & Adaptation** (Fine-tuning, LoRA, destilación y adaptación de modelos).",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Esto es lo que encontré sobre **Fine-tuning & Adaptation en AI Engineering**:\n\nEn la ingeniería de IA moderna, la adaptación de modelos de lenguaje (LLMs) permite ajustar modelos de propósito general (foundation models) para especializarlos en tareas concretas o formatos de negocio, optimizando tanto la precisión como el costo y la latencia en infraestructura de producción.\n\n**Temas clave detectados:**\n\n1. **Ajuste Fino Tradicional (Full Fine-Tuning)**: Reentrena todos los parámetros del modelo con un conjunto de datos específico. Ofrece máxima adaptación de estilo y formato, pero requiere gran cómputo y memoria GPU.\n2. **LoRA (Low-Rank Adaptation / PEFT)**: Congela los pesos del modelo base y solo entrena pequeñas matrices de rango bajo adicionales. Reduce el uso de memoria GPU hasta en un 70-90% y permite intercambiar diferentes adaptadores en un mismo servidor en producción.\n3. **Destilación de Conocimiento (Knowledge Distillation)**: Transfiere la inteligencia de un modelo \"maestro\" grande y costoso (ej. 70B parámetros) a un modelo \"estudiante\" pequeño y rápido (ej. 1B-3B), permitiendo ejecutar razonamiento especializado con baja latencia.\n4. **Escalera de Decisión en AI Infrastructure**: La adaptación no es el primer paso. Los ingenieros de IA siguen un orden de escalamiento: Prompting → Contexto/RAG → Fine-Tuning/LoRA → Destilación, usando siempre la opción menos costosa que resuelva el problema.\n\n📥 El informe de investigación completo se incluye como primera fuente en la tarjeta de importación a continuación. Puedes importarlo directamente a tu cuaderno para hacer preguntas detalladas sobre el contenido.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-fine-tuning-adaptation\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-fine-tuning-adaptation\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos e informes sobre Fine-Tuning, LoRA, Destilación y Adaptación de Modelos en AI Engineering\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Informe de investigación: Fine-tuning & Adaptation en AI Engineering\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQ3MGU3ODkxYy02MzE3LTRmMmItOWU3Ni1mZTFjNjgxZWE0YjMSCxIHEPnP8YvcBhgB&filename=Informe_de_investigacin_Fine-tuning_y_Adaptacin_en_AI_Engine.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Informe de Investigación\",\n          \"summary\": \"Informe estructurado con fuentes clave sobre Fine-Tuning, LoRA, Destilación y arquitectura de IA.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"The Customization Menu - AI Engineering Handbook\",\n          \"url\": \"https://github.com/handbook-academy/engineering-handbook/blob/main/content/ai-eng/part-10-deployment-and-cost/02-the-customization-menu.md\",\n          \"sourceName\": \"GitHub / Handbook Academy\",\n          \"summary\": \"Marco de decisión en ingeniería de IA para elegir entre Prompting, Fine-Tuning, LoRA y Destilación.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"A Practical Guide to LoRa Fine-Tuning for AI Models\",\n          \"url\": \"https://inference.net/content/lora-fine-tuning/\",\n          \"sourceName\": \"Inference.net\",\n          \"summary\": \"Explicación técnica de la adaptación por bajo rango (LoRA) y su impacto en inferencia e infraestructura.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"LLM adaptation techniques: Fine-tuning vs. LoRA\",\n          \"url\": \"https://community.hpe.com/t5/ai-unlocked/llm-adaptation-techniques-fine-tuning-vs-lora-what-you-need-to/ba-p/7263592\",\n          \"sourceName\": \"HPE AI Unlocked\",\n          \"summary\": \"Comparativa de capacidades y costos entre el ajuste fino completo y la adaptación PEFT con LoRA.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"Knowledge Distillation for LLMs: Compress GPT-4 into a 3B Model\",\n          \"url\": \"https://www.distillabs.ai/learn/knowledge-distillation-for-llms/\",\n          \"sourceName\": \"DistilLabs\",\n          \"summary\": \"Guía sobre la destilación de conocimiento para comprimir capacidades de modelos gigantes en modelos pequeños.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"Parameter-Efficient LLM Finetuning With Low-Rank Adaptation (LoRA)\",\n          \"url\": \"https://sebastianraschka.com/blog/2023/llm-finetuning-lora.html\",\n          \"sourceName\": \"Sebastian Raschka\",\n          \"summary\": \"Fundamentos teóricos sobre la dimensión intrínseca y la matemática de la descomposición de bajo rango.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Esto es lo que encontré sobre **Fine-tuning & Adaptation en AI Engineering**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no he importado las fuentes de la investigación anterior a tu cuaderno. ¿Te gustaría que las importe primero? Así podré responder detalladamente sobre el estado actual y las relaciones entre Fine-tuning, LoRA, destilación y adaptación basándome directamente en su contenido.\n\nTambién puedes desplazarte hacia arriba hasta la tarjeta de investigación e importarlas haciendo clic en el botón correspondiente.",
+      "claims": [
+        {
+          "text": "Aún no he importado las fuentes de la investigación anterior a tu cuaderno. ¿Te gustaría que las importe primero? Así podré responder detalladamente sobre el estado actual y las relaciones entre Fine-",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "1a5fac07-63ba-4e4e-8cba-37454860403a",
+  "duration_ms": 59694,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\07-ai-engineering-24-fine-tuning-adaptation\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

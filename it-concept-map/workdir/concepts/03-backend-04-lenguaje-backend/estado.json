@@ -1,0 +1,29 @@
+{
+  "concept_id": "03-backend-04-lenguaje-backend",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\03-backend-04-lenguaje-backend\\sources.json",
+    "notebook_id": "ddde888a-1994-4feb-a45a-12cd3aba8321",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\03-backend-04-lenguaje-backend\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\03-backend-04-lenguaje-backend\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\03-backend-04-lenguaje-backend\\04 - Lenguaje Backend.md.20261030T052559Z-5ea4cd.bak",
+      "outside_hash": "3c44bb6cb169ac263a1b9a800198380000cbde27c0d13b932d1777f67d0073f6",
+      "inside_hash": "9573a7f088e11e1be36e097efe2c5e00f8ae0a7f53d97319f474bbef407b566a",
+      "written_at": "2026-10-30T05:25:59.970427+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T05:25:02.909233+00:00",
+  "updated_at": "2026-10-30T05:25:59.993823+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T05:25:59.993823+00:00",
+    "created_at": "2026-10-30T05:25:02.909233+00:00"
+  },
+  "schema_version": "1.0.0"
+}

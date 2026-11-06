@@ -1,0 +1,12 @@
+{"ts": "2026-10-30T05:34:23.688020+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-25-sistemas-distribuidos", "event": "run_start", "force": false, "dry_run": false}
+{"ts": "2026-10-30T05:34:38.783308+00:00", "run_id": "run-20261030-022226-127d25", "concept_id": "03-backend-25-sistemas-distribuidos", "event": "phase_failed", "phase": "research", "error": "research (931a0838-754a-4857-b198-071e2dd94763): Chat request was rate limited or rejected by the API. Wait a few seconds and try again."}
+{"ts": "2026-11-05T19:37:20.927643+00:00", "run_id": "run-20261105-162522-4ca118", "concept_id": "03-backend-25-sistemas-distribuidos", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T19:38:24.131693+00:00", "run_id": "run-20261105-162522-4ca118", "concept_id": "03-backend-25-sistemas-distribuidos", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T19:38:30.286071+00:00", "run_id": "run-20261105-162522-4ca118", "concept_id": "03-backend-25-sistemas-distribuidos", "event": "phase_failed", "phase": "synthesis", "error": "No se proporciono LLM para la sintesis"}
+{"ts": "2026-11-05T19:57:20.717557+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-25-sistemas-distribuidos", "event": "run_start", "force": true, "dry_run": false}
+{"ts": "2026-11-05T19:58:27.377127+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-25-sistemas-distribuidos", "event": "phase_done", "phase": "research"}
+{"ts": "2026-11-05T19:58:31.051784+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-25-sistemas-distribuidos", "event": "phase_done", "phase": "synthesis"}
+{"ts": "2026-11-05T19:58:31.150879+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-25-sistemas-distribuidos", "event": "phase_done", "phase": "validation"}
+{"ts": "2026-11-05T19:58:31.206341+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-25-sistemas-distribuidos", "event": "phase_done", "phase": "writing"}
+{"ts": "2026-11-05T19:58:31.240518+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-25-sistemas-distribuidos", "event": "notebook_delete_failed", "notebook_id": "3e4916de-6bd9-47dc-8750-10fcf21a9b8d", "error": "'NotebookLMBackend' object has no attribute 'delete'"}
+{"ts": "2026-11-05T19:58:31.256309+00:00", "run_id": "run-20261105-164341-f091ab", "concept_id": "03-backend-25-sistemas-distribuidos", "event": "run_end", "status": "completed"}

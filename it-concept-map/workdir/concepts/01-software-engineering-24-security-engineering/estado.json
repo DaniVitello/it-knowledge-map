@@ -1,0 +1,29 @@
+{
+  "concept_id": "01-software-engineering-24-security-engineering",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\01-software-engineering-24-security-engineering\\sources.json",
+    "notebook_id": "299869f4-de3b-4647-be15-6da5995658fe",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-24-security-engineering\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-24-security-engineering\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\01-software-engineering-24-security-engineering\\24 - Security Engineering.md.20261030T045342Z-52b373.bak",
+      "outside_hash": "1c17e1f798ecc5f869811b714fe17c6b92cec61f3da69c69f53e679d96bd5785",
+      "inside_hash": "fe6406b4bce944e48ce920c64c62969deb6c524c506298aa81f722589772ceb3",
+      "written_at": "2026-10-30T04:53:42.299942+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T04:53:07.839561+00:00",
+  "updated_at": "2026-10-30T04:53:42.322328+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T04:53:42.322328+00:00",
+    "created_at": "2026-10-30T04:53:07.839561+00:00"
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,39 @@
+{
+  "questions": [],
+  "concept_id": "06-operating-systems-linux-08-file-systems",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es File Systems y para que sirve (Archivos, directorios, bloques, metadata)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de File Systems en Operating Systems / Linux"
+    ],
+    "context": [
+      "Como se usa File Systems en el contexto profesional de Operating Systems / Linux"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "File Permissions",
+      "ask": "Como se relaciona File Systems con File Permissions?"
+    },
+    {
+      "with": "Users & Groups",
+      "ask": "Como se relaciona File Systems con Users & Groups?"
+    }
+  ],
+  "queries": [
+    "site:man7.org File Systems",
+    "site:kernel.org File Systems",
+    "site:ostep.org File Systems",
+    "site:wiki.archlinux.org File Systems",
+    "site:gnu.org File Systems",
+    "site:docs.docker.com File Systems",
+    "site:opencontainers.org File Systems"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

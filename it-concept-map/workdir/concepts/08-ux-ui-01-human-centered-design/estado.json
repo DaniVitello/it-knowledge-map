@@ -1,0 +1,29 @@
+{
+  "concept_id": "08-ux-ui-01-human-centered-design",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\08-ux-ui-01-human-centered-design\\sources.json",
+    "notebook_id": "6ba6fb73-640e-438d-b029-b26185b80817",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\08-ux-ui-01-human-centered-design\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\08-ux-ui-01-human-centered-design\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\08-ux-ui-01-human-centered-design\\01 - Human-Centered Design.md.20261105T170711Z-d7c54c.bak",
+      "outside_hash": "b2477c589c8b29e9144588c1797c909c380c4a07fd4ce413f8a7cb5b8ae702ee",
+      "inside_hash": "ba86c2f31094a6d2afc8760aef9d606e3a61cf4b3a6847d726d8a193b2232f1a",
+      "written_at": "2026-11-05T17:07:11.751747+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T17:06:37.657654+00:00",
+  "updated_at": "2026-11-05T17:07:11.774581+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T17:07:11.774581+00:00",
+    "created_at": "2026-11-05T17:06:37.657654+00:00"
+  },
+  "schema_version": "1.0.0"
+}

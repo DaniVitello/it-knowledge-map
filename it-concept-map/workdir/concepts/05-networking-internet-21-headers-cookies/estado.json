@@ -1,0 +1,29 @@
+{
+  "concept_id": "05-networking-internet-21-headers-cookies",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-21-headers-cookies\\sources.json",
+    "notebook_id": "29f509cd-8f70-4ecc-8511-f046a45f6d44",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-21-headers-cookies\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\05-networking-internet-21-headers-cookies\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\05-networking-internet-21-headers-cookies\\21 - Headers - Cookies.md.20261105T233324Z-c864ba.bak",
+      "outside_hash": "8cb37c9d827b1eaecbbc190060a8a1b30b2f50372e0eb89d99669d25f8ced32a",
+      "inside_hash": "92010c1461b18cfe8e996e4e091352f58b480c8bc14795380e8640137613cc62",
+      "written_at": "2026-11-05T23:33:24.863069+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:32:27.255101+00:00",
+  "updated_at": "2026-11-05T23:33:24.880742+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:33:24.880742+00:00",
+    "created_at": "2026-11-05T23:32:27.255101+00:00"
+  },
+  "schema_version": "1.0.0"
+}

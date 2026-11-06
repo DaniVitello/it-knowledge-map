@@ -1,0 +1,20 @@
+{
+  "concept_id": "07-ai-engineering-02-python-programming",
+  "status": "failed",
+  "last_good_state": "researching",
+  "checkpoint": null,
+  "phase_data": {
+    "failed_phase": "researching",
+    "failed_reason": "error"
+  },
+  "error": "create_notebook (07-ai-engineering-02-python-programming): NotebookLM quota agotada - The server rejected this request (resource exhausted).",
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:54:28.102673+00:00",
+  "updated_at": "2026-11-06T21:33:10.232142+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-06T21:33:10.232115+00:00",
+    "created_at": "2026-11-05T23:54:28.102673+00:00"
+  },
+  "schema_version": "1.0.0"
+}

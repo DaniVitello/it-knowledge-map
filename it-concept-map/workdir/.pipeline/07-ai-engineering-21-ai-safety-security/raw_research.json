@@ -1,0 +1,50 @@
+{
+  "concept_id": "07-ai-engineering-21-ai-safety-security",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No tienes fuentes guardadas en tu libreta en este momento para responder a esta consulta. \n\n¿Te gustaría que realice una **investigación en la web** sobre **AI Safety & Security** (abarcando conceptos como *prompt injection*, *data leakage*, abuso, permisos y su relación con ingeniería de seguridad y observabilidad)?",
+      "claims": [
+        {
+          "text": "No tienes fuentes guardadas en tu libreta en este momento para responder a esta consulta. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Esto es lo que encontré sobre **AI Safety & Security en AI Engineering**:\n\nEn la ingeniería de IA moderna, la seguridad trasciende la infraestructura tradicional para enfocarse en la naturaleza probabilística del modelo. Dado que las instrucciones y los datos del usuario comparten el mismo canal de entrada en lenguaje natural, la seguridad se diseña bajo un esquema de contención (*blast radius containment*), principio de mínimo privilegio en el uso de herramientas (*tool calling*) y observabilidad en tiempo real.\n\n**Temas clave identificados:**\n\n1. **Prompt Injection (Directo e Indirecto):** Vulnerabilidad #1 según OWASP. Ocurre cuando entradas no confiables anulan las instrucciones del sistema; se mitiga delimitando fronteras de confianza (*trust boundaries*), aplicando guardrails de entrada y validando outputs.\n2. **Data Leakage & DLP:** Prevención de fugas involuntarias de PII, credenciales o secretos del prompt del sistema mediante inspección DLP, redacción previa al envío al LLM y filtrado de respuestas.\n3. **Abuso de Herramientas y Gestión de Permisos:** Protección para agentes de IA mediante el aislamiento de credenciales, límites estrictos a las APIs que pueden invocar y aprobación humana (*Human-in-the-Loop*) para acciones críticas o irreversibles.\n4. **Seguridad Tradicional vs. Observabilidad e Evaluación de IA:** Mientras que los Firewalls y HTTPS/TLS protegen las redes y transportes, la seguridad de la IA exige evaluación continua (*red teaming* automatizado) y rastreo (*tracing*) de la conducta del modelo durante la ejecución.\n\n📥 **El reporte completo de investigación se incluye como la primera fuente en la tarjeta desplegable a continuación. Puedes importar las fuentes que prefieras para guardarlas e interactuar con ellas directamente en tu libreta.**\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-ai-safety-security\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-ai-safety-security\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos y guías técnicas sobre AI Safety & Security, Prompt Injection y Observabilidad en AI Engineering\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Reporte de investigación: AI Safety & Security en AI Engineering\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiRiMThkMzgxMy0wN2I1LTQ4NjktYjc5Yy02M2NkNzcyMzFiZDESCxIHEPnP8YvcBhgB&filename=Reporte_de_Investigacion_AI_Safety_and_Security_en_AI_Engine.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Reporte de investigación\",\n          \"summary\": \"Reporte completo con 7 fuentes sobre vulnerabilidades, permisos, observabilidad y arquitectura de seguridad en IA.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"OWASP LLM01: Prompt Injection Vulnerability\",\n          \"url\": \"https://genai.owasp.org/llmrisk/llm01-prompt-injection/\",\n          \"sourceName\": \"OWASP GenAI Security Project\",\n          \"summary\": \"Clasificación y análisis detallado de inyecciones de prompt directas e indirectas en modelos de lenguaje.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"LLM Prompt Injection Prevention Cheat Sheet\",\n          \"url\": \"https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html\",\n          \"sourceName\": \"OWASP Cheat Sheet Series\",\n          \"summary\": \"Patrones y controles prácticos de código para prevenir manipulación de prompts y validar respuestas del LLM.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"AI Agent Security Cheat Sheet\",\n          \"url\": \"https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html\",\n          \"sourceName\": \"OWASP Cheat Sheet Series\",\n          \"summary\": \"Arquitectura de seguridad para agentes de IA autónomos, abuso de herramientas y mitigación de escalado de privilegios.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"Generative AI Security: Prompt Injection and Leaks\",\n          \"url\": \"https://www.devies.se/generative-ai-security/\",\n          \"sourceName\": \"Devies Engineering\",\n          \"summary\": \"Estrategias de contención y diseño seguro para aplicaciones LLM en entornos de producción.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"Data Leakage Through AI Prompts: Risks and Prevention\",\n          \"url\": \"https://www.huntress.com/generative-ai-guide/data-leakage-through-ai-prompts\",\n          \"sourceName\": \"Huntress\",\n          \"summary\": \"Riesgos de fuga de información confidencial, PII y credenciales a través de entradas y salidas de modelos de IA.\"\n        },\n        {\n          \"id\": \"src-6\",\n          \"title\": \"Securing the Prompt Layer with Check Point\",\n          \"url\": \"https://www.checkpoint.com/cyber-hub/cyber-security/what-is-ai-security/prompt-engineering/\",\n          \"sourceName\": \"Check Point Software\",\n          \"summary\": \"Implementación de límites de confianza (trust boundaries), filtrado DLP y gobernanza en la capa de prompts.\"\n        },\n        {\n          \"id\": \"src-7\",\n          \"title\": \"OWASP AI Testing Guide\",\n          \"url\": \"https://owasp.org/projects/ai-testing-guide\",\n          \"sourceName\": \"OWASP\",\n          \"summary\": \"Metodología unificada para la evaluación continua de fiabilidad, observabilidad y pruebas de robustez en sistemas de IA.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Esto es lo que encontré sobre **AI Safety & Security en AI Engineering**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no he importado las fuentes de la investigación a tu libreta. \n\n¿Quieres que importe las fuentes encontradas anteriormente para responder en detalle sobre el **estado actual y las relaciones de AI Safety & Security** basándome en su contenido? \n\n*(También puedes hacer clic en **Importar** directamente en la tarjeta de fuentes que aparece en el mensaje anterior).*",
+      "claims": [
+        {
+          "text": "Aún no he importado las fuentes de la investigación a tu libreta. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "447a2a0e-121a-4a40-99ef-9c4e1c92401b",
+  "duration_ms": 72619,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\07-ai-engineering-21-ai-safety-security\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

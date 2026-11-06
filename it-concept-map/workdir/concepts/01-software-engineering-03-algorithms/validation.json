@@ -1,0 +1,10 @@
+{
+  "concept_id": "01-software-engineering-03-algorithms",
+  "is_valid": true,
+  "issues": [],
+  "warnings": [],
+  "score": 1.0,
+  "checked_at": "2026-10-30T04:35:58.005487+00:00",
+  "blocking_failures": [],
+  "verdict": "approved"
+}

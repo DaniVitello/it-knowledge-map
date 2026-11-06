@@ -1,0 +1,50 @@
+{
+  "concept_id": "05-networking-internet-10-arp",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "**No hay fuentes cargadas en tu cuaderno** para responder sobre **ARP (Address Resolution Protocol)** y la resolución de IP a MAC en IPv4. \n\n¿Quieres que realice una **investigación en la web** sobre este tema para responder a tu pregunta?",
+      "claims": [
+        {
+          "text": "**No hay fuentes cargadas en tu cuaderno** para responder sobre **ARP (Address Resolution Protocol)** y la resolución de IP a MAC en IPv4. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Esto es lo que encontré sobre el **Protocolo ARP (Address Resolution Protocol)**:\n\nEl protocolo ARP actúa como puente entre la capa de red (direcciones lógicas IPv4 de 32 bits) y la capa de enlace de datos (direcciones físicas MAC de 48 bits), permitiendo que los dispositivos de una misma red local (LAN) se identifiquen y entreguen tramas de datos de manera precisa.\n\n**Temas clave identificados:**\n1. **Consulta Broadcast y Respuesta Unicast**: Cuando un origen necesita enviar datos a una IP pero desconoce su MAC, envía una solicitud (*ARP Request*) en modo difusión (Broadcast) a toda la red local; el equipo propietario de esa IP responde con un *ARP Reply* directo (Unicast) indicando su dirección MAC.\n2. **Caché y Tabla ARP**: Para evitar sobrecargar la red con consultas repetitivas, cada dispositivo guarda localmente las asociaciones IP → MAC recientemente resueltas en su tabla o caché ARP con un tiempo de vida limitado.\n3. **Enrutamiento fuera de la subred**: Si la IP de destino pertenece a otra red o Internet, ARP no busca la MAC del destinatario final, sino la dirección MAC del router o pasarela por defecto (*Default Gateway*).\n4. **Vulnerabilidades y Seguridad**: ARP no valida la autenticidad de las respuestas, lo que permite ataques de suplantación como *ARP Spoofing* o *ARP Poisoning* para interceptar tráfico de red.\n\n📥 El informe completo de la investigación se incluye como la primera fuente en la tarjeta a continuación; puedes importarlo a tu cuaderno si deseas guardar esta información y realizar consultas sobre ella.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-arp-protocol\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-arp-protocol\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos y documentos técnicos sobre el protocolo ARP y la resolución de direcciones IP a MAC en IPv4\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Informe de investigación: Protocolo ARP (IP a MAC)\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQ3Y2RiNjNlOC1mYjUyLTQyMDMtYWE3Mi0zOGUwOTNiZWU5MWESCxIHEPnP8YvcBhgB&filename=Informe_de_investigacin_Protocolo_ARP_IP_a_MAC.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Informe de investigación\",\n          \"summary\": \"Informe estructurado con los principios de funcionamiento, mensajes Broadcast/Unicast y tablas de caché del protocolo ARP.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"¿Qué es el ARP (Address Resolution Protocol)?\",\n          \"url\": \"https://www.ionos.com/es-us/digitalguide/servidores/know-how/arp-resolucion-de-direcciones-en-la-red/\",\n          \"sourceName\": \"IONOS Digital Guide\",\n          \"summary\": \"Explicación detallada de la resolución de direcciones IPv4 a MAC en tramas Ethernet y el estándar RFC 826.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"¿Qué es ARP y cómo funciona?\",\n          \"url\": \"https://www.fortinet.com/lat/resources/cyberglossary/what-is-arp\",\n          \"sourceName\": \"Fortinet\",\n          \"summary\": \"Visión general del protocolo ARP en el modelo OSI y sus consideraciones de ciberseguridad.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"ARP: Qué es, cómo funciona y su importancia en redes\",\n          \"url\": \"https://www.godaddy.com/resources/es/stories/arp-que-es\",\n          \"sourceName\": \"GoDaddy\",\n          \"summary\": \"Guía práctica sobre el flujo de petición (Request) y respuesta (Reply) entre dispositivos de red local.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"Principios básicos y funcionamiento de ARP\",\n          \"url\": \"https://www.qsfptek.com/es/qt-news/basic-principles-and-working-operation-of-arp\",\n          \"sourceName\": \"QSFPTEK\",\n          \"summary\": \"Artículo sobre variantes de ARP como Proxy ARP y Gratuitous ARP.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"El Protocolo ARP\",\n          \"url\": \"http://www.redtauros.com/Clases/Fundamentos_Redes/09_Protocolo_ARP_ICMP.pdf\",\n          \"sourceName\": \"RedTauros\",\n          \"summary\": \"Documento técnico que analiza la estructura del datagrama ARP y la interacción entre subredes.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Esto es lo que encontré sobre el **Protocolo ARP (Address Resolution Protocol)**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no he importado las fuentes de la investigación anterior a tu cuaderno. ¿Te gustaría que las importe primero para poder responder a tus preguntas sobre el **estado actual y las relaciones de ARP** basándome directamente en ellas?\n\nTambién puedes desplazarte hacia arriba a la tarjeta de la investigación previa e importar las fuentes que prefieras directamente desde allí.",
+      "claims": [
+        {
+          "text": "Aún no he importado las fuentes de la investigación anterior a tu cuaderno. ¿Te gustaría que las importe primero para poder responder a tus preguntas sobre el **estado actual y las relaciones de ARP**",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "bc691845-eeca-4f22-9805-fb9f2d5f9782",
+  "duration_ms": 62668,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-10-arp\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

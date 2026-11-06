@@ -1,0 +1,18 @@
+{
+  "concept_id": "frontend-01-internet-web",
+  "is_valid": true,
+  "issues": [],
+  "warnings": [
+    "Seccion corta: Como funciona",
+    "Seccion corta: Detalles",
+    "Seccion corta: Ejemplo minimo",
+    "Seccion corta: Errores comunes",
+    "Seccion corta: Estado actual",
+    "Seccion corta: Conexiones",
+    "Seccion corta: Ruta de estudio"
+  ],
+  "score": 1.0,
+  "checked_at": "2026-11-06T19:24:38.221975+00:00",
+  "blocking_failures": [],
+  "verdict": "approved"
+}

@@ -1,0 +1,59 @@
+{
+  "questions": [],
+  "concept_id": "05-networking-internet-14-subnetting-cidr",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Subnetting / CIDR y para que sirve (División y representación de redes)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Subnetting / CIDR en Networking / Internet"
+    ],
+    "context": [
+      "Como se usa Subnetting / CIDR en el contexto profesional de Networking / Internet"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "IP",
+      "ask": "Como se relaciona Subnetting / CIDR con IP?"
+    },
+    {
+      "with": "IPv4 / IPv6",
+      "ask": "Como se relaciona Subnetting / CIDR con IPv4 / IPv6?"
+    },
+    {
+      "with": "DHCP",
+      "ask": "Como se relaciona Subnetting / CIDR con DHCP?"
+    },
+    {
+      "with": "ARP",
+      "ask": "Como se relaciona Subnetting / CIDR con ARP?"
+    },
+    {
+      "with": "Routing",
+      "ask": "Como se relaciona Subnetting / CIDR con Routing?"
+    },
+    {
+      "with": "Routers",
+      "ask": "Como se relaciona Subnetting / CIDR con Routers?"
+    },
+    {
+      "with": "NAT",
+      "ask": "Como se relaciona Subnetting / CIDR con NAT?"
+    }
+  ],
+  "queries": [
+    "site:rfc-editor.org Subnetting / CIDR",
+    "site:datatracker.ietf.org Subnetting / CIDR",
+    "site:developer.mozilla.org Subnetting / CIDR",
+    "site:cloudflare.com Subnetting / CIDR",
+    "site:beej.us Subnetting / CIDR",
+    "site:hpbn.co Subnetting / CIDR",
+    "site:man7.org Subnetting / CIDR"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

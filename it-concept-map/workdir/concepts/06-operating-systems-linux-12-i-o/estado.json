@@ -1,0 +1,20 @@
+{
+  "concept_id": "06-operating-systems-linux-12-i-o",
+  "status": "failed",
+  "last_good_state": "researching",
+  "checkpoint": null,
+  "phase_data": {
+    "failed_phase": "researching",
+    "failed_reason": "error"
+  },
+  "error": "research (643f82b1-163f-4628-a103-b97e5ff3ee1c): Chat request was rate limited or rejected by the API. Wait a few seconds and try again.",
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:46:55.476831+00:00",
+  "updated_at": "2026-11-05T23:47:13.543174+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:47:13.543132+00:00",
+    "created_at": "2026-11-05T23:46:55.476831+00:00"
+  },
+  "schema_version": "1.0.0"
+}

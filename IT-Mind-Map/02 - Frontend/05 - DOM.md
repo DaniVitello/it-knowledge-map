@@ -16,7 +16,6 @@ tags: [concepto, it/frontend]
 
 ## Mis notas
 <!-- ai:start -->
-# Comprehensive Study Guide: Web Engineering, DOM Architecture, Observer APIs, and Event Mechanics
 <!-- ai:end -->
 
 ---

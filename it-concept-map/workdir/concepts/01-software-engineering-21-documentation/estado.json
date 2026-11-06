@@ -1,0 +1,29 @@
+{
+  "concept_id": "01-software-engineering-21-documentation",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\01-software-engineering-21-documentation\\sources.json",
+    "notebook_id": "e7b8a8ad-f1cb-4ed6-a835-f2a2386ff2c6",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-21-documentation\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-21-documentation\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\01-software-engineering-21-documentation\\21 - Documentation.md.20261030T045156Z-d63282.bak",
+      "outside_hash": "29d1e94eb9f624012c046693e314095a73d476010518935a0c38ad16801b8454",
+      "inside_hash": "edb19fc060f036ea97e741d22bce023d720a4d0db2e5ced493566b89394df602",
+      "written_at": "2026-10-30T04:51:56.897166+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T04:51:26.631291+00:00",
+  "updated_at": "2026-10-30T04:51:56.918450+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T04:51:56.918450+00:00",
+    "created_at": "2026-10-30T04:51:26.631291+00:00"
+  },
+  "schema_version": "1.0.0"
+}

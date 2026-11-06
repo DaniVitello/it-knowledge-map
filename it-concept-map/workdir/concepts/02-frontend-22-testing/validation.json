@@ -1,0 +1,10 @@
+{
+  "concept_id": "02-frontend-22-testing",
+  "is_valid": true,
+  "issues": [],
+  "warnings": [],
+  "score": 1.0,
+  "checked_at": "2026-10-30T05:20:58.014283+00:00",
+  "blocking_failures": [],
+  "verdict": "approved"
+}

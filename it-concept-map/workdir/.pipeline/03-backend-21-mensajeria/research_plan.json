@@ -1,0 +1,44 @@
+{
+  "questions": [],
+  "concept_id": "03-backend-21-mensajeria",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Mensajería y para que sirve (Queues, events, brokers, pub/sub)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Mensajería en Backend"
+    ],
+    "context": [
+      "Como se usa Mensajería en el contexto profesional de Backend"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Distributed Systems",
+      "ask": "Como se relaciona Mensajería con Distributed Systems?"
+    },
+    {
+      "with": "Sistemas distribuidos",
+      "ask": "Como se relaciona Mensajería con Sistemas distribuidos?"
+    },
+    {
+      "with": "Advanced Data Architecture",
+      "ask": "Como se relaciona Mensajería con Advanced Data Architecture?"
+    }
+  ],
+  "queries": [
+    "site:developer.mozilla.org Mensajería",
+    "site:rfc-editor.org Mensajería",
+    "site:datatracker.ietf.org Mensajería",
+    "site:owasp.org Mensajería",
+    "site:postgresql.org Mensajería",
+    "site:redis.io Mensajería",
+    "site:12factor.net Mensajería",
+    "site:learn.microsoft.com Mensajería"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

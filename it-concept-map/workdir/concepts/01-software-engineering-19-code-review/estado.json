@@ -1,0 +1,29 @@
+{
+  "concept_id": "01-software-engineering-19-code-review",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\01-software-engineering-19-code-review\\sources.json",
+    "notebook_id": "ef1fc1d0-6aa1-4494-b333-2e08c58d7b5b",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-19-code-review\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-19-code-review\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\01-software-engineering-19-code-review\\19 - Code Review.md.20261030T045022Z-a5eb2b.bak",
+      "outside_hash": "fa909725c79af09640fcefaf80f2f69292632ab9961e19b89a55d82a8b51c4c4",
+      "inside_hash": "45da94cca69a7a60966a6413e85461c552682cb2d97737c36b35ba61340dbb55",
+      "written_at": "2026-10-30T04:50:22.829718+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T04:49:17.799816+00:00",
+  "updated_at": "2026-10-30T04:50:22.851239+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T04:50:22.851239+00:00",
+    "created_at": "2026-10-30T04:49:17.799816+00:00"
+  },
+  "schema_version": "1.0.0"
+}

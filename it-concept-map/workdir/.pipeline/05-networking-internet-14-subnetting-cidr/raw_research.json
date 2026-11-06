@@ -1,0 +1,50 @@
+{
+  "concept_id": "05-networking-internet-14-subnetting-cidr",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "**No encuentro información sobre Subnetting y CIDR en tu libreta, ya que actualmente no tienes fuentes agregadas.**\n\n¿Te gustaría que realice una **investigación en la web** sobre este tema para responder a tu pregunta y mostrarte las fuentes encontradas por si deseas agregarlas a tu libreta?",
+      "claims": [
+        {
+          "text": "**No encuentro información sobre Subnetting y CIDR en tu libreta, ya que actualmente no tienes fuentes agregadas.**",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "Esto es lo que encontré sobre **Subnetting y CIDR (División y representación de redes)**:\n\nDescubrí que el **Subnetting (Subneteo)** es la técnica utilizada para dividir una red física o bloque IP grande en subredes lógicas más pequeñas y manejables, mientras que **CIDR (Classless Inter-Domain Routing)** es el mecanismo y la notación de prefijo (como `/24`) que permite definir estas subredes de manera flexible sin depender de las antiguas clases fijas de IP.\n\n**Temas clave identificados:**\n1. **División lógica y rendimiento**: El subnetting segmenta la red para reducir el tráfico de difusión (*broadcast*), mejorar la seguridad al aislar segmentos y optimizar el rendimiento global.\n2. **Notación CIDR y prefijos**: Reemplazó el direccionamiento con clases (A, B, C) introduciendo notaciones tipo `192.168.1.0/24`, donde el número tras la barra indica cuántos bits pertenecen a la red y cuántos a los equipos (*hosts*).\n3. **Eficiencia en el direccionamiento**: Permite asignar solo las direcciones estrictamente necesarias para cada subred, mitigando el agotamiento de IPv4 y estructurando el amplio espacio de direcciones IPv6.\n4. **Integración con la infraestructura**: La máscara de subred permite a los **Routers** tomar decisiones de enrutamiento (*Routing*), mientras que servicios como **DHCP** y **NAT** operan delimitados por los rangos definidos por la subred.\n\n📥 El informe de investigación completo se incluye como la primera fuente en la tarjeta de importación a continuación; impórtalo para consultar los hallazgos directamente.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-subnetting-cidr\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-subnetting-cidr\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Artículos técnicos, guías y tutoriales sobre Subnetting, CIDR y arquitectura de redes\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Informe de investigación: Subnetting y CIDR\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiQyZWI4MWJlOS04NmI5LTQ5ZWEtODRhZi1kNmY0OWJjMGJkMTQSCxIHEPnP8YvcBhgB&filename=Informe_de_investigacion_Subnetting_y_CIDR.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Informe de investigación\",\n          \"summary\": \"Informe completo con 6 fuentes analizadas sobre división y representación de redes\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"¿Qué es CIDR? - Explicación de los bloques y la notación CIDR\",\n          \"url\": \"https://aws.amazon.com/es/what-is/cidr/\",\n          \"sourceName\": \"AWS\",\n          \"summary\": \"Explicación técnica de la notación CIDR, agregación de bloques IP y superredes en IPv4 e IPv6.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"Guía para principiantes sobre la subredización de direcciones IPv4 e IPv6\",\n          \"url\": \"https://interlir.com/es/2024/12/26/guia-para-principiantes-sobre-la-subredizacion-de-direcciones-ipv4-e-ipv6/\",\n          \"sourceName\": \"InterLIR\",\n          \"summary\": \"Guía paso a paso sobre cálculo de máscaras de subred, tamaño de bloques y fórmula de asignación de hosts.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"Subnetting: ¿Qué es el Subneteo de una red e cómo funcionan las subredes?\",\n          \"url\": \"https://www.ionos.com/es-us/digitalguide/servidores/know-how/subnetting-como-funcionan-las-subredes/\",\n          \"sourceName\": \"IONOS\",\n          \"summary\": \"Conceptos fundamentales del subneteo, desgloses binarios de Net ID y Host ID en direcciones IP.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"CIDR: Conozca el enrutamiento entre dominios sin clases\",\n          \"url\": \"https://www.lenovo.com/es/es/glossary/cidr/\",\n          \"sourceName\": \"Lenovo\",\n          \"summary\": \"Visión general del direccionamiento sin clases, reducción del agotamiento de direcciones IP y uso de prefijos.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"Cómo Dividir tu Red como un Profesional: Guía Completa de Subnetting y CIDR\",\n          \"url\": \"https://www.youtube.com/watch?v=5XlgFt0Du08\",\n          \"sourceName\": \"YouTube\",\n          \"summary\": \"Video tutorial sobre cálculo práctico de subredes y notaciones CIDR desde /24 hasta /32.\"\n        },\n        {\n          \"id\": \"src-6\",\n          \"title\": \"Esquema de subredes y direccionamiento IPv4 e IPv6\",\n          \"url\": \"https://www.youtube.com/watch?v=oc-Rjf9gE8s\",\n          \"sourceName\": \"YouTube\",\n          \"summary\": \"Explicación audiovisual de la función del router, dominios de broadcast y asignación lógica de IP.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "Esto es lo que encontré sobre **Subnetting y CIDR (División y representación de redes)**:",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "**Aún no se han importado las fuentes encontradas a tu libreta.** \n\n¿Te gustaría que importe las fuentes de la investigación anterior? Una vez importadas, podré analizar y explicarte en detalle el estado actual de **Subnetting / CIDR** y todas sus relaciones con **IP, DHCP, ARP, Routing y NAT** basándome directamente en el contenido de las fuentes.\n\n*(También puedes desplazarte hacia arriba y hacer clic en el botón de importación de la tarjeta para agregarlas tú mismo).*",
+      "claims": [
+        {
+          "text": "**Aún no se han importado las fuentes encontradas a tu libreta.** ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "ee36649a-5857-45bd-a7ef-26101d4dc5e6",
+  "duration_ms": 56666,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-14-subnetting-cidr\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

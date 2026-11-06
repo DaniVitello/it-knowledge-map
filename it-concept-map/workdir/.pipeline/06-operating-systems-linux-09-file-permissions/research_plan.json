@@ -1,0 +1,39 @@
+{
+  "questions": [],
+  "concept_id": "06-operating-systems-linux-09-file-permissions",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es File Permissions y para que sirve (Users, groups, read/write/execute)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de File Permissions en Operating Systems / Linux"
+    ],
+    "context": [
+      "Como se usa File Permissions en el contexto profesional de Operating Systems / Linux"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "File Systems",
+      "ask": "Como se relaciona File Permissions con File Systems?"
+    },
+    {
+      "with": "Users & Groups",
+      "ask": "Como se relaciona File Permissions con Users & Groups?"
+    }
+  ],
+  "queries": [
+    "site:man7.org File Permissions",
+    "site:kernel.org File Permissions",
+    "site:ostep.org File Permissions",
+    "site:wiki.archlinux.org File Permissions",
+    "site:gnu.org File Permissions",
+    "site:docs.docker.com File Permissions",
+    "site:opencontainers.org File Permissions"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

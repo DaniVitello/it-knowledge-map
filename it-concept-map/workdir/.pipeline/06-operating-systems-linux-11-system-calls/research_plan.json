@@ -1,0 +1,39 @@
+{
+  "questions": [],
+  "concept_id": "06-operating-systems-linux-11-system-calls",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es System Calls y para que sirve (Interfaz entre programas y kernel)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de System Calls en Operating Systems / Linux"
+    ],
+    "context": [
+      "Como se usa System Calls en el contexto profesional de Operating Systems / Linux"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Operating System",
+      "ask": "Como se relaciona System Calls con Operating System?"
+    },
+    {
+      "with": "Kernel",
+      "ask": "Como se relaciona System Calls con Kernel?"
+    }
+  ],
+  "queries": [
+    "site:man7.org System Calls",
+    "site:kernel.org System Calls",
+    "site:ostep.org System Calls",
+    "site:wiki.archlinux.org System Calls",
+    "site:gnu.org System Calls",
+    "site:docs.docker.com System Calls",
+    "site:opencontainers.org System Calls"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

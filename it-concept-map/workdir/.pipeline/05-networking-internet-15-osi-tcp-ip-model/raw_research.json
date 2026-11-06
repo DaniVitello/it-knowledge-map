@@ -1,0 +1,50 @@
+{
+  "concept_id": "05-networking-internet-15-osi-tcp-ip-model",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "No hay fuentes agregadas en tu libreta sobre el **Modelo OSI / TCP-IP**. \n\n¿Quieres que realice una **investigación en la web** sobre las capas, responsabilidades de red y la relación con IP, TCP y HTTP para responder a tu consulta?",
+      "claims": [
+        {
+          "text": "No hay fuentes agregadas en tu libreta sobre el **Modelo OSI / TCP-IP**. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "He realizado una investigación en la web sobre el **Modelo OSI** y el **Modelo TCP/IP**. \n\n### Resumen de hallazgos\n\nLos modelos **OSI** y **TCP/IP** son marcos de referencia que estandarizan cómo se transmiten los datos entre dispositivos a través de una red dividiendo el proceso en capas especializadas.\n\n**Principales temas identificados:**\n\n1. **Modelo OSI (7 capas - Marco teórico)**: Diseñado por la ISO, organiza la comunicación desde el medio físico (**Capa 1: Física**) hasta la interacción con el usuario (**Capa 7: Aplicación**). Permite descomponer problemas complejos, aislar fallos de red y estandarizar la compatibilidad entre fabricantes.\n2. **Modelo TCP/IP (4 capas - Arquitectura práctica)**: Es la estructura real sobre la que funciona Internet. Agrupa las capas superiores (Aplicación, Presentación y Sesión) en una única **Capa de Aplicación** y las capas inferiores en la **Capa de Acceso a la Red**.\n3. **Flujo de comunicación (Encapsulación)**: Los datos bajan capa por capa en el emisor añadiendo encabezados (Headers), se transmiten como bits por el medio físico y se desempaquetan en orden inverso en el receptor.\n4. **Relación entre HTTP, TCP e IP**:\n   - **HTTP (Capa de Aplicación)**: Define el contenido y formato del mensaje (ej. solicitar una página web).\n   - **TCP (Capa de Transporte)**: Divide el mensaje en segmentos, garantiza que no se pierdan datos y gestiona los puertos de comunicación.\n   - **IP (Capa de Red/Internet)**: Añade las direcciones IP de origen y destino para enrutar los paquetes a través de los routers hasta su destino.\n\n---\n\n📥 **Importa las fuentes a tu libreta:** El primer elemento de la lista a continuación es el **Informe de investigación completo** elaborado durante la búsqueda. Importa las fuentes que prefieras para poder hacer preguntas directamente sobre su contenido en el chat.\n\n<a2ui-json>\n[\n  {\"version\": \"v0.9\", \"createSurface\": {\"surfaceId\": \"source-import-osi-tcpip-model\", \"catalogId\": \"notebooklm:nlm_v1\"}},\n  {\"version\": \"v0.9\", \"updateComponents\": {\n    \"surfaceId\": \"source-import-osi-tcpip-model\",\n    \"components\": [{\n      \"id\": \"root\",\n      \"component\": \"SourceImportCard\",\n      \"description\": \"Fuentes sobre el modelo OSI, TCP/IP, capas de red y protocolos HTTP, TCP e IP\",\n      \"sources\": [\n        {\n          \"id\": \"src-report\",\n          \"title\": \"Informe de investigación: Modelo OSI y TCP/IP\",\n          \"url\": \"https://contribution.usercontent.google.com/download?c=Cgpub3RlYm9va2xtEkASCWFydGlmYWN0cxozCiRiZTMxM2ZkZS0yY2Y0LTRhYzctYjY2ZS05MWE0NzQ4MjQxY2MSCxIHEPnP8YvcBhgB&filename=Informe_de_investigacion_Modelo_OSI_y_TCP_IP.md&opi=96797242\",\n          \"sourceType\": \"text\",\n          \"sourceName\": \"Informe de investigación\",\n          \"summary\": \"Informe resumido con 5 fuentes detallando la comparación OSI vs TCP/IP, responsabilidades de cada capa y el empaquetado de datos.\"\n        },\n        {\n          \"id\": \"src-1\",\n          \"title\": \"¿Qué son los modelos OSI y TCP/IP? Capas de red explicadas\",\n          \"url\": \"https://www.azion.com/es/learning/network-layer/que-son-los-modelos-osi-y-tcp-ip/\",\n          \"sourceName\": \"Azion\",\n          \"summary\": \"Explicación del modelo OSI de 7 capas, el modelo TCP/IP de 4 capas y su uso en el diagnóstico de redes.\"\n        },\n        {\n          \"id\": \"src-2\",\n          \"title\": \"Modelo OSI vs. TCP/IP: Comparativa, Capas y Protocolos Explicados\",\n          \"url\": \"https://www.aprender21.com/blog/modelo-osi-vs-tcpip-comparativa\",\n          \"sourceName\": \"Aprender21\",\n          \"summary\": \"Guía sobre la encapsulación de datos, PDU por capa y las diferencias entre el modelo teórico y el práctico.\"\n        },\n        {\n          \"id\": \"src-3\",\n          \"title\": \"¿Qué es el Modelo OSI? Las 7 capas explicadas\",\n          \"url\": \"https://www.trendmicro.com/es_es/what-is/it-security/osi-model.html\",\n          \"sourceName\": \"Trend Micro\",\n          \"summary\": \"Descripción conceptual de las 7 capas de OSI y la importancia de contar con un marco común en seguridad de redes.\"\n        },\n        {\n          \"id\": \"src-4\",\n          \"title\": \"¿Qué es el modelo OSI? - Explicación de 7 capas de OSI\",\n          \"url\": \"https://aws.amazon.com/es/what-is/osi-model/\",\n          \"sourceName\": \"AWS\",\n          \"summary\": \"Análisis del flujo descendente y ascendente de datos, funciones de cada nivel y su correspondencia con TCP/IP.\"\n        },\n        {\n          \"id\": \"src-5\",\n          \"title\": \"Modelo TCP/IP frente al modelo OSI: Similitudes y diferencias\",\n          \"url\": \"https://www.fortinet.com/lat/resources/cyberglossary/tcp-ip-model-vs-osi-model\",\n          \"sourceName\": \"Fortinet\",\n          \"summary\": \"Comparativa de arquitecturas de red, responsabilidades por capa y su aplicación directa en Internet.\"\n        }\n      ]\n    }]\n  }}\n]\n</a2ui-json>",
+      "claims": [
+        {
+          "text": "He realizado una investigación en la web sobre el **Modelo OSI** y el **Modelo TCP/IP**. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "Aún no se han importado las fuentes de la investigación a tu libreta. \n\n¿Quieres que las importe por ti? Una vez agregadas a la libreta, podré responder a tus preguntas detalladamente y con base en su contenido. También puedes desplazarte hacia arriba en la conversación hasta la tarjeta de resultados e importar las que prefieras directamente desde allí.",
+      "claims": [
+        {
+          "text": "Aún no se han importado las fuentes de la investigación a tu libreta. ",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "8d7982a4-bb8a-4e5e-9b56-e5139a9ab1b9",
+  "duration_ms": 54492,
+  "backend_provider": "notebooklm",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\05-networking-internet-15-osi-tcp-ip-model\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

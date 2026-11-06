@@ -1,0 +1,48 @@
+{
+  "questions": [],
+  "concept_id": "03-backend-24-deploy-infraestructura",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Deploy & Infraestructura y para que sirve (Linux, Docker, CI/CD, cloud)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Deploy & Infraestructura en Backend"
+    ],
+    "context": [
+      "Como se usa Deploy & Infraestructura en el contexto profesional de Backend"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "CI/CD",
+      "ask": "Como se relaciona Deploy & Infraestructura con CI/CD?"
+    },
+    {
+      "with": "Containers",
+      "ask": "Como se relaciona Deploy & Infraestructura con Containers?"
+    },
+    {
+      "with": "Virtualization & Infrastructure",
+      "ask": "Como se relaciona Deploy & Infraestructura con Virtualization & Infrastructure?"
+    },
+    {
+      "with": "AI Infrastructure",
+      "ask": "Como se relaciona Deploy & Infraestructura con AI Infrastructure?"
+    }
+  ],
+  "queries": [
+    "site:developer.mozilla.org Deploy & Infraestructura",
+    "site:rfc-editor.org Deploy & Infraestructura",
+    "site:datatracker.ietf.org Deploy & Infraestructura",
+    "site:owasp.org Deploy & Infraestructura",
+    "site:postgresql.org Deploy & Infraestructura",
+    "site:redis.io Deploy & Infraestructura",
+    "site:12factor.net Deploy & Infraestructura",
+    "site:learn.microsoft.com Deploy & Infraestructura"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

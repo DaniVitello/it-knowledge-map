@@ -1,0 +1,20 @@
+{
+  "concept_id": "06-operating-systems-linux-14-sockets",
+  "status": "failed",
+  "last_good_state": "researching",
+  "checkpoint": null,
+  "phase_data": {
+    "failed_phase": "researching",
+    "failed_reason": "error"
+  },
+  "error": "research (38b1e73d-ab88-452b-bf87-c2f111f15754): Chat request was rate limited or rejected by the API. Wait a few seconds and try again.",
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:47:32.970669+00:00",
+  "updated_at": "2026-11-05T23:47:50.033044+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:47:50.033024+00:00",
+    "created_at": "2026-11-05T23:47:32.970669+00:00"
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,43 @@
+{
+  "questions": [],
+  "concept_id": "05-networking-internet-12-routers",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Routers y para que sirve (Dispositivos que interconectan redes)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Routers en Networking / Internet"
+    ],
+    "context": [
+      "Como se usa Routers en el contexto profesional de Networking / Internet"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Routing",
+      "ask": "Como se relaciona Routers con Routing?"
+    },
+    {
+      "with": "NAT",
+      "ask": "Como se relaciona Routers con NAT?"
+    },
+    {
+      "with": "Subnetting / CIDR",
+      "ask": "Como se relaciona Routers con Subnetting / CIDR?"
+    }
+  ],
+  "queries": [
+    "site:rfc-editor.org Routers",
+    "site:datatracker.ietf.org Routers",
+    "site:developer.mozilla.org Routers",
+    "site:cloudflare.com Routers",
+    "site:beej.us Routers",
+    "site:hpbn.co Routers",
+    "site:man7.org Routers"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

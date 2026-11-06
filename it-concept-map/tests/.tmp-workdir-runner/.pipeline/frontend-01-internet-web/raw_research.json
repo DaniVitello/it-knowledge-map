@@ -1,0 +1,50 @@
+{
+  "concept_id": "frontend-01-internet-web",
+  "coverage": 1.0,
+  "answers": [
+    {
+      "qid": "a1",
+      "group": "a",
+      "answer_md": "**a1 (a) — Fundamento estable.**\n\nRespuesta determinista del FakeBackend para 'Internet & Web' (area Frontend). Pregunta: Que es Internet & Web (HTTP, HTTPS, URLs) y para que sirve\n\nFuentes simuladas consultadas: fuentes locales.",
+      "claims": [
+        {
+          "text": "**a1 (a) — Fundamento estable.**",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "b1",
+      "group": "b",
+      "answer_md": "**b1 (b) — Practica moderna.**\n\nRespuesta determinista del FakeBackend para 'Internet & Web' (area Frontend). Pregunta: Como funciona Internet & Web en Frontend\n\nFuentes simuladas consultadas: fuentes locales.",
+      "claims": [
+        {
+          "text": "**b1 (b) — Practica moderna.**",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    },
+    {
+      "qid": "c1",
+      "group": "c",
+      "answer_md": "**c1 (c) — Relaciones y casos de uso.**\n\nRespuesta determinista del FakeBackend para 'Internet & Web' (area Frontend). Pregunta: Estado actual y relaciones de Internet & Web\n\nFuentes simuladas consultadas: fuentes locales.",
+      "claims": [
+        {
+          "text": "**c1 (c) — Relaciones y casos de uso.**",
+          "source_ids": [],
+          "unverified": true
+        }
+      ]
+    }
+  ],
+  "source_ids": [],
+  "notebook_id": "fake-nb-1",
+  "duration_ms": 0,
+  "backend_provider": "fake",
+  "research_plan_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\tests\\.tmp-workdir-runner\\.pipeline\\frontend-01-internet-web\\research_plan.json",
+  "gap_pass_done": true,
+  "gaps_detected": 0,
+  "gaps_resolved": 0
+}

@@ -1,0 +1,40 @@
+{
+  "questions": [],
+  "concept_id": "03-backend-22-observabilidad",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Observabilidad y para que sirve (Logs, metrics, traces, monitoring)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Observabilidad en Backend"
+    ],
+    "context": [
+      "Como se usa Observabilidad en el contexto profesional de Backend"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Observability",
+      "ask": "Como se relaciona Observabilidad con Observability?"
+    },
+    {
+      "with": "Logs & System Monitoring",
+      "ask": "Como se relaciona Observabilidad con Logs & System Monitoring?"
+    }
+  ],
+  "queries": [
+    "site:developer.mozilla.org Observabilidad",
+    "site:rfc-editor.org Observabilidad",
+    "site:datatracker.ietf.org Observabilidad",
+    "site:owasp.org Observabilidad",
+    "site:postgresql.org Observabilidad",
+    "site:redis.io Observabilidad",
+    "site:12factor.net Observabilidad",
+    "site:learn.microsoft.com Observabilidad"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}

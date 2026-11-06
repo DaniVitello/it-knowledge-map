@@ -1,0 +1,29 @@
+{
+  "concept_id": "07-ai-engineering-24-fine-tuning-adaptation",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\07-ai-engineering-24-fine-tuning-adaptation\\sources.json",
+    "notebook_id": "1a5fac07-63ba-4e4e-8cba-37454860403a",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\07-ai-engineering-24-fine-tuning-adaptation\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\07-ai-engineering-24-fine-tuning-adaptation\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\07-ai-engineering-24-fine-tuning-adaptation\\24 - Fine-tuning & Adaptation.md.20261106T212355Z-6c385f.bak",
+      "outside_hash": "c3420d147d2cd217e8584f62659ab58377dc391d3c7b884f71363f20c6263fe9",
+      "inside_hash": "80f85eaf0f06f1e57fb1b70b2741a679fe9022a49767edfea75a22faa18cfc59",
+      "written_at": "2026-11-06T21:23:55.493288+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-06T21:22:52.151001+00:00",
+  "updated_at": "2026-11-06T21:23:55.509580+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-06T21:23:55.509580+00:00",
+    "created_at": "2026-11-06T21:22:52.151001+00:00"
+  },
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,29 @@
+{
+  "concept_id": "01-software-engineering-20-refactoring",
+  "status": "completed",
+  "last_good_state": "written",
+  "checkpoint": "writing",
+  "phase_data": {
+    "sources_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\.pipeline\\01-software-engineering-20-refactoring\\sources.json",
+    "notebook_id": "2aa18982-17d2-4ada-8c88-67bb7ba71c62",
+    "synthesis_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-20-refactoring\\synthesis.json",
+    "validation_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\concepts\\01-software-engineering-20-refactoring\\validation.json",
+    "write_result": {
+      "backup_path": "C:\\Users\\DGVit\\Proyectos\\IT Career\\it-concept-map\\workdir\\backups\\01-software-engineering-20-refactoring\\20 - Refactoring.md.20261030T045125Z-b9f7c5.bak",
+      "outside_hash": "2ac2cb2f8352ddfcde8a72cb70d5dfbcac56f4877612dd1853e5c045bf7fd6ba",
+      "inside_hash": "065017904d2d355379780f2d18e1af29125877b9f10d521bca47ed66506877d2",
+      "written_at": "2026-10-30T04:51:25.553636+00:00",
+      "writer_version": "1.0.0"
+    }
+  },
+  "error": null,
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-10-30T04:50:23.910801+00:00",
+  "updated_at": "2026-10-30T04:51:25.577171+00:00",
+  "timestamps": {
+    "updated_at": "2026-10-30T04:51:25.577171+00:00",
+    "created_at": "2026-10-30T04:50:23.910801+00:00"
+  },
+  "schema_version": "1.0.0"
+}

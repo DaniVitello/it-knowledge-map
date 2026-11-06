@@ -1,0 +1,19 @@
+{
+  "concept_id": "05-networking-internet-08-dhcp",
+  "status": "failed",
+  "last_good_state": "researching",
+  "checkpoint": null,
+  "phase_data": {
+    "failed_phase": "researching"
+  },
+  "error": "Transicion invalida: researching -> researching",
+  "retries": 0,
+  "failure": {},
+  "created_at": "2026-11-05T23:16:26.505175+00:00",
+  "updated_at": "2026-11-05T23:20:47.357480+00:00",
+  "timestamps": {
+    "updated_at": "2026-11-05T23:20:47.357480+00:00",
+    "created_at": "2026-11-05T23:16:26.505175+00:00"
+  },
+  "schema_version": "1.0.0"
+}

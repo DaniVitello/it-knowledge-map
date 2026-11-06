@@ -1,0 +1,51 @@
+{
+  "questions": [],
+  "concept_id": "06-operating-systems-linux-16-shell",
+  "questions_by_dim": {
+    "accuracy": [
+      "Que es Shell y para que sirve (Interfaz para interactuar con el sistema)"
+    ],
+    "currentness": [
+      "Estado actual y tendencias de Shell en Operating Systems / Linux"
+    ],
+    "context": [
+      "Como se usa Shell en el contexto profesional de Operating Systems / Linux"
+    ]
+  },
+  "relation_questions": [
+    {
+      "with": "Environment Variables",
+      "ask": "Como se relaciona Shell con Environment Variables?"
+    },
+    {
+      "with": "Linux CLI",
+      "ask": "Como se relaciona Shell con Linux CLI?"
+    },
+    {
+      "with": "Bash / Shell Scripting",
+      "ask": "Como se relaciona Shell con Bash / Shell Scripting?"
+    },
+    {
+      "with": "Signals",
+      "ask": "Como se relaciona Shell con Signals?"
+    },
+    {
+      "with": "Package Management",
+      "ask": "Como se relaciona Shell con Package Management?"
+    }
+  ],
+  "queries": [
+    "site:man7.org Shell",
+    "site:kernel.org Shell",
+    "site:ostep.org Shell",
+    "site:wiki.archlinux.org Shell",
+    "site:gnu.org Shell",
+    "site:docs.docker.com Shell",
+    "site:opencontainers.org Shell"
+  ],
+  "source_requirements": {
+    "min_level1_or_2": 2,
+    "min_context_sources": 1
+  },
+  "schema_version": "1.0.0"
+}
