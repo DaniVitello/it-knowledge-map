@@ -1,5 +1,5 @@
 
-import os, re, json
+import os, json
 from pathlib import Path
 from collections import Counter
 
@@ -23,20 +23,13 @@ for md in vault.rglob("*.md"):
     
     has_marker = "<!-- ai:start -->" in text
     
-    trazabilidad = None
-    m = re.search(r"trazabilidad.*?run_id[=\s]+([\w-]+)", text, re.IGNORECASE | re.DOTALL)
-    if m:
-        trazabilidad = m.group(1)
-    
     concept_id = str(rel).replace("\\", "/").replace(".md", "")
     area = parts.split("/")[0] if "/" in parts else "root"
     
     pipeline_dir = workdir / ".pipeline" / concept_id.replace("/", "-").replace(" ", "-")
     has_pipeline_dir = pipeline_dir.exists()
     
-    if trazabilidad:
-        status = "legacy"
-    elif has_marker:
+    if has_marker:
         status = "marked"
     else:
         status = "pending"
@@ -46,14 +39,13 @@ for md in vault.rglob("*.md"):
         "path": parts,
         "area": area,
         "has_marker": has_marker,
-        "trazabilidad": trazabilidad,
         "has_pipeline_dir": has_pipeline_dir,
         "status": status,
         "phases": {
-            "research": {"status": "done" if (has_pipeline_dir or trazabilidad) else "pending", "artifact": None},
+            "research": {"status": "done" if (has_pipeline_dir or has_marker) else "pending", "artifact": None},
             "synthesis": {"status": "pending", "artifact": None},
             "validation": {"status": "pending", "score": None, "issues": []},
-            "write": {"status": "done" if trazabilidad else "pending", "file": parts}
+            "write": {"status": "done" if has_marker else "pending", "file": parts}
         },
         "last_error": None,
         "last_run": None

@@ -152,9 +152,24 @@ class ResearchPhase:
         try:
             st.transition_to(state.ConceptStatus.RESEARCHING)
         except state.InvalidTransitionError:
-            if not force:
+            # Si quedo colgado en RESEARCHING (interrupcion), pasar a FAILED
+            # primero y luego a RESEARCHING (failed -> researching es valido).
+            if st.status == state.ConceptStatus.RESEARCHING:
+                st.transition_to(
+                    state.ConceptStatus.FAILED,
+                    checkpoint="researching",
+                    phase_data={
+                        "failed_phase": "researching",
+                        "failed_reason": "interrupted",
+                        "research_done": False,
+                    },
+                    error="Investigacion interrumpida (quedo en researching)",
+                )
+                st.status = state.ConceptStatus.FAILED
+                st.transition_to(state.ConceptStatus.RESEARCHING)
+            elif not force:
                 raise
-            if st.status in (state.ConceptStatus.RESEARCHED, state.ConceptStatus.FAILED, state.ConceptStatus.PENDING):
+            elif st.status in (state.ConceptStatus.RESEARCHED, state.ConceptStatus.FAILED, state.ConceptStatus.PENDING):
                 st.status = state.ConceptStatus.PENDING
                 st.transition_to(state.ConceptStatus.RESEARCHING)
             else:

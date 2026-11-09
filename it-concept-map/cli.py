@@ -75,22 +75,26 @@ def cmd_status(args):
     cfg = _load_cfg(args)
     workdir = cfg.get("workdir", "workdir")
     concept = getattr(args, "concept", None)
-    # If no concept, show manifest summary
+    # If no concept, show live status from estado.json (tiempo real)
     if not concept:
-        manifest_path = Path(workdir) / "manifest.json"
-        if not manifest_path.exists():
-            print("Sin manifest.json. Ejecutar build_manifest.py primero.")
-            return 1
-        m = json.loads(manifest_path.read_text(encoding="utf-8"))
-        print(f"Total conceptos: {m['total_concepts']}")
-        print(f"Status counts: {m['status_counts']}")
-        # Show by area
-        from collections import Counter
-        areas = Counter(c["area"] for c in m["concepts"])
-        print("\nPor area:")
-        for area, count in sorted(areas.items()):
-            statuses = Counter(c["status"] for c in m["concepts"] if c["area"] == area)
-            print(f"  {area}: {count} total | {dict(statuses)}")
+        concepts = _load_concepts(cfg)
+        from collections import Counter, defaultdict
+        by_area = defaultdict(Counter)
+        for c in concepts:
+            st_path = Path(workdir) / "concepts" / c.id / "estado.json"
+            st = json.loads(st_path.read_text(encoding="utf-8")) if st_path.exists() else {}
+            status = st.get("status", "pending")
+            by_area[c.area][status] += 1
+        total = Counter()
+        for area in sorted(by_area):
+            counts = by_area[area]
+            parts = [f"{k}:{v}" for k, v in sorted(counts.items())]
+            print(f"{area}: {', '.join(parts)}")
+            for k, v in counts.items():
+                total[k] += v
+        print()
+        print(f"TOTAL: {dict(sorted(total.items()))}")
+        print(f"Completados: {total.get('completed', 0)} de {len(concepts)}")
         return 0
     st = state.load_state(concept, workdir=workdir)
     if st is None:
@@ -157,12 +161,23 @@ def cmd_retry(args):
 
 
 def _get_failed_ids(workdir):
-    """Read manifest and return ids of failed or pending concepts."""
-    manifest_path = Path(workdir) / "manifest.json"
-    if not manifest_path.exists():
-        return set()
-    m = json.loads(manifest_path.read_text(encoding="utf-8"))
-    return set(c["id"] for c in m["concepts"] if c["status"] in ("marked", "pending", "failed"))
+    """Read estado.json files and return ids of failed concepts."""
+    failed = set()
+    concepts_dir = Path(workdir) / "concepts"
+    if concepts_dir.exists():
+        for d in concepts_dir.iterdir():
+            if not d.is_dir():
+                continue
+            st_file = d / "estado.json"
+            if not st_file.exists():
+                continue
+            try:
+                st = json.loads(st_file.read_text(encoding="utf-8"))
+            except Exception:
+                continue
+            if st.get("status") == "failed":
+                failed.add(st.get("concept_id") or d.name)
+    return failed
 
 
 def cmd_dry_run(args):

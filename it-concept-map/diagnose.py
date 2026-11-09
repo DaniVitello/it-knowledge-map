@@ -20,8 +20,8 @@ import cli
 
 cfg = cli._load_cfg(type("Args", (), {"config": "config.yaml", "workdir": None, "vault": None})())
 concepts = {c.id: c for c in cli._load_concepts(cfg)}
-vault = Path(cfg.vault_path)
-workdir = Path(cfg.workdir)
+vault = Path(cfg["vault_path"])
+workdir = Path(cfg["workdir"])
 progress_file = workdir / "progress.json"
 log_file = workdir / "run_all_areas.log"
 
@@ -39,6 +39,9 @@ FAILURE_PATTERNS = [
     ("Invalid API Key", "Groq API key invalid or expired. Check llm_groq.py and GROQ_API_KEY env var."),
     ("Request too large", "Groq request exceeds token limit. Reduce prompt size or switch model."),
     ("auth", "Authentication issue. NotebookLM cookies may have expired. Re-authenticate."),
+    ("Encabezado faltante", "Validacion fallo por secciones faltantes. Revisar sintesis o arreglar validador (trailing spaces)."),
+    ("interrupted", "Investigacion interrumpida (quedo en researching). Reintentar con --retry --failed."),
+    ("Transicion invalida", "Transicion de estado no permitida. Revisar logica de reanudacion en research.py."),
 ]
 
 def find_root_cause(error_text):
@@ -49,18 +52,23 @@ def find_root_cause(error_text):
 
 def diagnose_concept(concept_id):
     result = {"concept_id": concept_id, "issues": [], "root_causes": [], "state": None, "pipeline_files": []}
-    
+
+    concept = concepts.get(concept_id)
+
     # Check vault file
-    file_path = vault / concept_id
+    if concept is not None and getattr(concept, "note_path", None):
+        file_path = Path(concept.note_path)
+    else:
+        file_path = vault / concept_id
     if not file_path.exists():
         result["issues"].append("File not found in vault")
     else:
         content = file_path.read_text(encoding="utf-8")
         if "<!-- ai:start -->" not in content:
             result["issues"].append("AI block not written (pipeline did not complete write phase)")
-    
-    # Check pipeline state
-    state_file = workdir / ".pipeline" / concept_id / "state.json"
+
+    # Check pipeline state (estado.json en workdir/concepts/<id>/)
+    state_file = workdir / "concepts" / concept_id / "estado.json"
     if state_file.exists():
         try:
             state = json.loads(state_file.read_text(encoding="utf-8"))
@@ -68,17 +76,19 @@ def diagnose_concept(concept_id):
             status = state.get("status", "unknown")
             if status != "completed":
                 result["issues"].append(f"Pipeline status: {status}")
-                # Check for error in state
                 if "error" in state:
                     result["root_causes"].append(find_root_cause(state["error"]))
-                if "failure" in state:
+                if "failure" in state and state["failure"]:
                     result["root_causes"].append(find_root_cause(str(state["failure"])))
+                pd = state.get("phase_data", {}) or {}
+                if pd.get("failed_phase"):
+                    result["issues"].append(f"Failed phase: {pd['failed_phase']} ({pd.get('failed_reason', '')})")
         except json.JSONDecodeError:
-            result["issues"].append("Corrupt state.json")
+            result["issues"].append("Corrupt estado.json")
             result["root_causes"].append("JSON parse error in state file. Delete and re-run with --force.")
     else:
         result["issues"].append("No pipeline state file found")
-    
+
     # Check pipeline artifacts
     pipeline_dir = workdir / ".pipeline" / concept_id
     if pipeline_dir.exists():

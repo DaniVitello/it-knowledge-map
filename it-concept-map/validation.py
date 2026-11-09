@@ -139,11 +139,11 @@ def _check_structure(markdown: str) -> list[str]:
     issues = []
     # Verificar que los encabezados ## esten en orden correcto
     headings = re.findall(r"^## (.+)$", markdown, re.MULTILINE)
-    required_lower = [s.lower() for s in REQUIRED_SECTIONS]
-    found_lower = [h.lower() for h in headings]
+    # Normalizar: quitar espacios al final/inicio para tolerar trailing spaces
+    found_lower = [h.strip().lower() for h in headings]
     # Verificar que al menos las secciones requeridas esten presentes
     for s in REQUIRED_SECTIONS:
-        if s.lower() not in found_lower:
+        if s.strip().lower() not in found_lower:
             issues.append(f"Encabezado faltante: ## {s}")
     return issues
 

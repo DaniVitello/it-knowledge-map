@@ -767,12 +767,12 @@ class NotebookLMBackend:
             configured_auths = [single] if single else []
         self._auth_files = [
             Path(os.path.expanduser(str(a))).resolve()
-            for a in configured_auths if a
+            for a in configured_auths if a and Path(os.path.expanduser(str(a))).is_file()
         ]
         self._current_auth_idx = 0
         self.auth_file = self._auth_files[0] if self._auth_files else None
-        if self.auth_file:
-            os.environ.setdefault("NOTEBOOKLM_AUTH_JSON", str(self.auth_file))
+        # Auth se pasa via path= en from_storage(), no via env var.
+        # NOTEBOOKLM_AUTH_JSON es para JSON inline, no para paths.
 
         backoff_cfg = _cfg(config, "pacing", "backoff_seconds", default=None)
         retries_cfg = _cfg(config, "pacing", "max_retries", default=None)
@@ -867,41 +867,112 @@ class NotebookLMBackend:
         notebook_deleted = False
 
         async with self._client_context() as client:
-            notebook_id = await self._retry_op(
-                "create_notebook",
-                target,
-                lambda: self._create_notebook(client, req),
-            )
-            self._track(notebook_id, req.concept_id)
-            try:
-                uploaded, failed = await self._upload_sources(
-                    client, notebook_id, req
-                )
-
-                for question in req.questions:
-                    answers.append(
-                        await self._retry_op(
-                            f"research:{question.qid}",
-                            target,
-                            lambda q=question: self._ask(
-                                client, notebook_id, q, req
-                            ),
-                        )
+            # Reutilizacion: si ya hay un notebook vivo para este concepto,
+            # reutilizarlo en vez de crear uno nuevo.
+            reused_id = self._load_notebook_id(req.concept_id)
+            created_new = False
+            notebook_id = None
+            if reused_id:
+                try:
+                    await asyncio.wait_for(
+                        client.notebooks.get(reused_id), timeout=10.0
                     )
+                    notebook_id = reused_id
+                except Exception:  # noqa: BLE001 - notebook muerto o inaccesible
+                    reused_id = None
+                    self._delete_notebook_id_file(req.concept_id)
+
+            if notebook_id is None:
+                # Guardia de limite: no crear si la cuenta esta cerca del tope.
+                try:
+                    nbs = await asyncio.wait_for(
+                        client.notebooks.list(), timeout=10.0
+                    )
+                    if isinstance(nbs, (list, tuple)):
+                        count = len(nbs)
+                    else:
+                        count = len(getattr(nbs, "notebooks", []) or [])
+                except Exception:  # noqa: BLE001 - si no se puede contar, seguir
+                    count = 0
+                if count >= 90:
+                    raise BackendRateLimitError(
+                        f"cupo de notebooks casi lleno ({count}/100); "
+                        "limpiar huerfanos antes de seguir"
+                    )
+                notebook_id = await self._retry_op(
+                    "create_notebook",
+                    target,
+                    lambda: self._create_notebook(client, req),
+                )
+                created_new = True
+                self._track(notebook_id, req.concept_id)
+            else:
+                self._track(notebook_id, req.concept_id)
+
+            try:
+                if created_new:
+                    uploaded, failed = await self._upload_sources(
+                        client, notebook_id, req
+                    )
+                    # Persistir notebook_id solo tras subir fuentes OK, para
+                    # que un reintento pueda reutilizarlo con fuentes listas.
+                    self._save_notebook_id(req.concept_id, notebook_id)
+                else:
+                    # Reutilizado: fuentes ya subidas en la corrida anterior.
+                    uploaded = load_cached_sources(
+                        req.concept_id, workdir=self.workdir, config=None
+                    )
+                    failed = []
+
+                seen_source_ids: set[str] = set()
+                for question in req.questions:
+                    answer, ref_ids = await self._retry_op(
+                        f"research:{question.qid}",
+                        target,
+                        lambda q=question: self._ask(
+                            client, notebook_id, q, req
+                        ),
+                    )
+                    answers.append(answer)
+                    for sid in ref_ids:
+                        if not sid or sid in seen_source_ids:
+                            continue
+                        seen_source_ids.add(sid)
+                        try:
+                            src = await asyncio.wait_for(
+                                client.sources.get(notebook_id, sid), timeout=10.0
+                            )
+                            uploaded.append(
+                                Source(
+                                    source_id=str(src.id),
+                                    url=src.url,
+                                    title=str(src.title) if src.title else sid,
+                                    kind="url",
+                                )
+                            )
+                        except Exception:  # noqa: BLE001
+                            uploaded.append(
+                                Source(source_id=sid, url=None, title=sid, kind="url")
+                            )
 
                 if req.delete_notebook_after:
-                    notebook_deleted = await self._delete_best_effort(
-                        client, notebook_id
-                    )
+                    try:
+                        await self._delete_notebook(client, notebook_id)
+                        notebook_deleted = True
+                        self._untrack(notebook_id)
+                        self._delete_notebook_id_file(req.concept_id)
+                    except BackendError:
+                        notebook_deleted = False
             except BackendError:
-                # Fallo post-create: limpieza best-effort, sin propagar ese
-                # error nuevo (el original tiene prioridad y el notebook,
-                # si sigue vivo, queda en _pending para cleanup()).
-                try:
-                    await self._delete_notebook(client, notebook_id)
-                    self._untrack(notebook_id)
-                except BackendError:
-                    pass
+                # Fallo post-create: limpieza best-effort solo si fue creado
+                # en esta corrida (si fue reutilizado, se deja vivo para retry).
+                if created_new:
+                    try:
+                        await self._delete_notebook(client, notebook_id)
+                        self._untrack(notebook_id)
+                        self._delete_notebook_id_file(req.concept_id)
+                    except BackendError:
+                        pass
                 raise
 
         coverage = estimate_coverage(answers, len(req.questions))
@@ -925,8 +996,8 @@ class NotebookLMBackend:
         Soporta rotacion de cuentas: usa el auth file actual.
         """
         if self._auth_files and self._current_auth_idx < len(self._auth_files):
-            os.environ["NOTEBOOKLM_AUTH_JSON"] = str(
-                self._auth_files[self._current_auth_idx]
+            return self._nlm.NotebookLMClient.from_storage(
+                path=str(self._auth_files[self._current_auth_idx])
             )
         return self._nlm.NotebookLMClient.from_storage()
 
@@ -1029,7 +1100,7 @@ class NotebookLMBackend:
         notebook_id: str,
         question: ResearchQuestion,
         req: ResearchRequest,
-    ) -> ResearchAnswer:
+    ) -> tuple[ResearchAnswer, list[str]]:
         try:
             res = await asyncio.wait_for(
                 client.chat.ask(notebook_id, _user_text(question, req)),
@@ -1043,12 +1114,15 @@ class NotebookLMBackend:
             raise _map_library_error(exc, "research", notebook_id) from exc
 
         answer_md = str(getattr(res, "answer", "") or "")
+        refs = getattr(res, "references", None) or []
+        ref_ids = [str(getattr(r, "source_id", "") or "") for r in refs]
+        ref_ids = [sid for sid in ref_ids if sid]
         return ResearchAnswer(
             qid=question.qid,
             group=question.group,
             answer_md=answer_md,
             claims=self._claims_from_references(res, answer_md),
-        )
+        ), ref_ids
 
     @staticmethod
     def _claims_from_references(ask_result: Any, answer_md: str) -> list[Claim]:
@@ -1087,14 +1161,14 @@ class NotebookLMBackend:
                 return  # ya no existe: delete es idempotente
             raise mapped from exc
 
-    async def _delete_best_effort(self, client: Any, notebook_id: str) -> bool:
-        """Delete sin propagar errores; False si queda pendiente para cleanup()."""
-        try:
+    async def delete(self, notebook_id: str) -> None:
+        """Elimina un notebook por id. Idempotente (tolera NotFound).
+
+        Metodo publico esperado por runner.py y otros callers externos.
+        """
+        async with self._client_context() as client:
             await self._delete_notebook(client, notebook_id)
-            self._untrack(notebook_id)
-            return True
-        except BackendError:
-            return False  # queda en _pending; cleanup() lo reintentara
+        self._untrack(notebook_id)
 
     async def cleanup(self) -> None:
         """Elimina notebooks pendientes de borrar (best-effort, idempotente).
@@ -1168,6 +1242,70 @@ class NotebookLMBackend:
             state.register_notebook(notebook_id, concept_id, workdir=self.workdir)
         except OSError:
             pass  # best-effort: el registro es para reconciliar huerfanos
+
+    # -- Persistencia de notebook_id para reutilizacion ----------------------
+
+    def _notebook_id_path(self, concept_id: str) -> Path:
+        return pipeline_dir(concept_id, self.workdir) / "notebook_id.txt"
+
+    def _save_notebook_id(self, concept_id: str, notebook_id: str) -> None:
+        try:
+            p = self._notebook_id_path(concept_id)
+            p.parent.mkdir(parents=True, exist_ok=True)
+            p.write_text(notebook_id, encoding="utf-8")
+        except OSError:
+            pass  # best-effort
+
+    def _load_notebook_id(self, concept_id: str) -> str | None:
+        p = self._notebook_id_path(concept_id)
+        if not p.is_file():
+            return None
+        try:
+            val = p.read_text(encoding="utf-8").strip()
+            return val or None
+        except OSError:
+            return None
+
+    def _delete_notebook_id_file(self, concept_id: str) -> None:
+        p = self._notebook_id_path(concept_id)
+        try:
+            if p.exists():
+                p.unlink()
+        except OSError:
+            pass
+
+    async def reconcile_orphans(self) -> list[str]:
+        """Borra notebooks huerfanos de corridas anteriores (best-effort).
+
+        Usa state.reconcile_orphan_notebooks para detectarlos y los elimina
+        de NotebookLM. Devuelve la lista de ids borrados.
+        """
+        deleted: list[str] = []
+        try:
+            orphans = state.reconcile_orphan_notebooks(
+                workdir=self.workdir, config=None, delete=False
+            )
+        except Exception:  # noqa: BLE001
+            return deleted
+        if not orphans:
+            return deleted
+        try:
+            async with self._client_context() as client:
+                for nid in orphans:
+                    try:
+                        await self._delete_notebook(client, nid)
+                        deleted.append(nid)
+                    except BackendError:
+                        continue
+        except BackendError:
+            return deleted
+        try:
+            state.reconcile_orphan_notebooks(
+                workdir=self.workdir, config=None, delete=True
+            )
+        except Exception:  # noqa: BLE001
+            pass
+        return deleted
 
 
 # ---------------------------------------------------------------------------

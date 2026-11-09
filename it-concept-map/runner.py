@@ -578,9 +578,7 @@ class Runner:
 
                             backend_inst = backend.create_backend(self.cfg)
 
-                            import asyncio as _asyncio
-
-                            _asyncio.run(backend_inst.delete(nb_id))
+                            await backend_inst.delete(nb_id)
 
                             st.phase_data["notebook_id"] = None
 

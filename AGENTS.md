@@ -2,23 +2,19 @@
 
 ## Objetivo del proyecto
 
-Vault de Obsidian con ~255 conceptos de carrera IT. Cada concepto es un .md
+Vault de Obsidian con ~255 conceptos de carrera IT. Cada concepto es un `.md`
 con información verificada, estructurada y conectada con vecinos del vault.
 
-## Comandos
+El pipeline automatiza la investigación, síntesis, validación y escritura de
+cada concepto, usando NotebookLM como backend de investigación.
 
-### Pipeline
-- `python run_pipeline.py --area "AREA" --limit N` — procesar N conceptos de un área
-- `python run_pipeline.py --status` — estado por fase (pending/ok/failed)
-- `python run_pipeline.py --retry --failed` — reintentar conceptos fallidos
-- `python eval_concept.py --all` — evaluar calidad de todos los conceptos
-- `python diagnose.py --concept ID` — diagnosticar fallo de un concepto
-- `pytest` — 116 tests
+## Entorno
 
-### Áreas válidas
-Software Engineering, Frontend, Backend, Database / Data Analytics,
-Networking / Internet, Operating Systems / Linux, AI Engineering,
-UX / UI, Product Management, Project Management
+- OS: Windows 11
+- Python: usar siempre el launcher `py` (nunca `python` ni `python3`)
+- Terminales: PowerShell, CMD, GitBash
+- Editor: VS Code
+- Proyecto real: `C:\Users\DGVit\Proyectos\IT Career\`
 
 ## Estructura
 
@@ -31,7 +27,24 @@ IT Career/
 └── *.md                # Conceptos del vault
 ```
 
-## Reglas
+## Comandos
+
+### Pipeline
+
+- `py run_pipeline.py --area "AREA" --limit N` — procesar N conceptos de un área
+- `py run_pipeline.py --status` — estado por fase (pending/ok/failed)
+- `py run_pipeline.py --retry --failed` — reintentar conceptos fallidos
+- `py eval_concept.py --all` — evaluar calidad de todos los conceptos
+- `py diagnose.py --concept ID` — diagnosticar fallo de un concepto
+- `pytest` — ejecutar tests
+
+### Áreas válidas
+
+Software Engineering, Frontend, Backend, Database / Data Analytics,
+Networking / Internet, Operating Systems / Linux, AI Engineering,
+UX / UI, Product Management, Project Management.
+
+## Reglas de operación
 
 1. **No borrar ni modificar archivos sin orden explícita.**
 2. **Git push:** dry-run primero o push manual. Nunca push directo sin confirmación.
@@ -43,6 +56,7 @@ IT Career/
 ## Definición de "concepto terminado"
 
 Un concepto está terminado cuando:
+
 - [ ] Validación OK (score ≥ 70)
 - [ ] Fuentes citadas (cada afirmación tiene id de fuente válido)
 - [ ] Aprobación de muestra del lote (3 notas por lote revisadas a mano)
@@ -51,10 +65,11 @@ Un concepto está terminado cuando:
 ## Taxonomía de fallas
 
 Etiquetar conceptos malos con:
+
 - `generico` — contenido genérico, no específico del concepto
 - `alucinado` — afirma cosas no presentes en las fuentes
 - `no-fuentes` — no usa las fuentes de research
-- `ideas-ausentes` — ideas clave del .txt no aparecen en la nota
+- `ideas-ausentes` — ideas clave del `.txt` no aparecen en la nota
 - `relaciones-vagas` — wikilinks o relaciones sin justificación
 - `largo-inadecuado` — muy corto o muy largo
 
@@ -92,9 +107,18 @@ Hermes verifica → siguiente concepto
 - LLM judge solo sobre muestras (3 por lote), no sobre los 255
 - Pasada final de enlaces entre conceptos (determinista, por alias)
 
-## Estado
+## Notas de arquitectura
 
-- Manifest: workdir/manifest.json (a crear)
-- 61 conceptos legacy (prompt v1, calidad desconocida)
-- 194 pendientes
-- 116 tests pasando
+- El adaptador de NotebookLM está aislado detrás de la interfaz `ResearchBackend`.
+- Cada fase lee artefactos de la anterior y persiste los suyos en `workdir/.pipeline/<id>/`.
+- Escrituras atómicas: temp + `os.replace`.
+- Reintentos con backoff exponencial solo para errores transitorios.
+- Circuit breaker: N fallos de red consecutivos abortan rápido.
+- Limpieza de notebooks: best-effort, idempotente.
+
+## Restricciones de NotebookLM
+
+- Límite: 100 notebooks por cuenta (plan gratuito).
+- El notebook es temporal: se borra solo después de éxito completo.
+- Reconciliación de huérfanos al arrancar (ver `state.reconcile_orphan_notebooks`).
+- Guardia de límite: pausar si la cuenta se acerca a 100.

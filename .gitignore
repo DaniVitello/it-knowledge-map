@@ -23,3 +23,25 @@ Thumbs.db
 
 # OpenCode internals (keep out of repo)
 .local/
+
+# Pipeline artifacts (generated, not source)
+it-concept-map/workdir/.pipeline/
+it-concept-map/workdir/concepts/
+it-concept-map/workdir/notebooks.json
+it-concept-map/workdir/golden_set.json
+it-concept-map/workdir/progress.json
+it-concept-map/workdir/manifest.json
+it-concept-map/workdir/*.log
+it-concept-map/workdir/*.pid
+
+# Test temp dirs
+it-concept-map/tests/.tmp-*/
+it-concept-map/tests/.tmp-workdir/
+
+# Temp scripts / generated files
+it-concept-map/generate_pdf.py
+it-concept-map/delete_all_notebooks.py
+it-concept-map/explicacion_pipeline.pdf
+
+# Config con secrets (API keys)
+it-concept-map/config.yaml

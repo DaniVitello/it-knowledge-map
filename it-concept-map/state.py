@@ -59,7 +59,7 @@ TERMINAL_STATES: set[ConceptStatus] = {
 
 VALID_TRANSITIONS: dict[ConceptStatus, list[ConceptStatus]] = {
     ConceptStatus.PENDING: [ConceptStatus.RESEARCHING],
-    ConceptStatus.RESEARCHING: [ConceptStatus.RESEARCHED, ConceptStatus.FAILED],
+    ConceptStatus.RESEARCHING: [ConceptStatus.RESEARCHING, ConceptStatus.RESEARCHED, ConceptStatus.FAILED],
     ConceptStatus.RESEARCHED: [ConceptStatus.SYNTHESIZED, ConceptStatus.FAILED],
     ConceptStatus.SYNTHESIZED: [
         ConceptStatus.VALIDATED,
