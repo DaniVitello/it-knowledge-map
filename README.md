@@ -69,15 +69,8 @@ pytest  # 116 tests pasando
 | Vault | Obsidian (Markdown) |
 | Research | NotebookLM (via notebooklm-py) |
 | Synthesis LLM | Groq (gpt-oss-120b) |
-| Orquestación | Python (determinista) |
+| Orquestación | Hermes Agent ,OpenCode and Python (determinista) |
 | Persistencia | JSON + SQLite |
-
-## Estado
-
-- 61 conceptos con trazabilidad real del pipeline
-- 194 conceptos pendientes de procesamiento
-- 116 tests pasando
-- 12 capas de corrección (A-L) aplicadas
 
 ## Licencia
 
