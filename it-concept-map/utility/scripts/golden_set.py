@@ -25,6 +25,8 @@ def select_golden_set(manifest_path, n=8):
 
 if __name__ == "__main__":
     import sys
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../../main'))
     manifest = sys.argv[1] if len(sys.argv) > 1 else "workdir/manifest.json"
     n = int(sys.argv[2]) if len(sys.argv) > 2 else 8
     selected = select_golden_set(manifest, n)

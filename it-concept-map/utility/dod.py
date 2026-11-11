@@ -1,6 +1,8 @@
 """Capa I - Definition of Done (DoD) para conceptos del pipeline."""
 
 from __future__ import annotations
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../main'))
 
 from dataclasses import dataclass, field
 from pathlib import Path

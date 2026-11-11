@@ -13,10 +13,10 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
-import backend
-import state
-from models import ConceptMeta, ResearchAnswer, ResearchQuestion, Source, ResearchPlan, to_dict as model_to_dict
-from backend import ResearchResult
+from . import backend
+from . import state
+from .models import ConceptMeta, ResearchAnswer, ResearchQuestion, Source, ResearchPlan, to_dict as model_to_dict
+from .backend import ResearchResult
 
 SCHEMA_VERSION = "1.0.0"
 
@@ -132,7 +132,7 @@ class ResearchPhase:
                 pass
             answers = []
             for a in raw.get("answers", []):
-                from models import Claim
+                from .models import Claim
                 claims = [Claim(text=c.get("text", ""), source_ids=c.get("source_ids", []), unverified=c.get("unverified", False)) for c in a.get("claims", [])]
                 answers.append(ResearchAnswer(qid=a.get("qid", ""), group=a.get("group", ""), answer_md=a.get("answer_md", ""), claims=claims))
             return ResearchPhaseResult(

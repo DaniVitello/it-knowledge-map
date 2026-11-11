@@ -7,6 +7,8 @@ Output: JSON con estado actual (para Hermes leer via HTTP API)
 
 import json
 import sys
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../main'))
 from pathlib import Path
 from datetime import datetime
 

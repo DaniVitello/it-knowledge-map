@@ -21,8 +21,8 @@ from typing import Any
 
 import yaml
 
-import areas as areas_mod
-from models import (
+from . import areas as areas_mod
+from .models import (
     ConceptMeta,
     Volatility,
     ConceptModelError,

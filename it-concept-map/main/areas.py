@@ -26,7 +26,7 @@ from typing import Any
 
 import yaml
 
-from models import Volatility
+from .models import Volatility
 
 SCHEMA_VERSION = "1.0.0"
 

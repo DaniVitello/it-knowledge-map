@@ -13,10 +13,10 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Callable, Awaitable
 
-import state
-import backend
-import areas as areas_mod
-from models import ConceptMeta, Synthesis
+from . import state
+from . import backend
+from . import areas as areas_mod
+from .models import ConceptMeta, Synthesis
 
 SCHEMA_VERSION = "1.0.0"
 

@@ -12,7 +12,7 @@ SCHEMA_VERSION = "1.0.0"
 
 def now_iso():
     try:
-        import state as _state
+        from . import state as _state
         if hasattr(_state, "now_iso"):
             return _state.now_iso()
     except Exception:

@@ -1,5 +1,7 @@
 
 import os, json, csv, collections, datetime
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../main'))
 
 base = r"C:\Users\DGVit\Proyectos\IT Career\it-concept-map\workdir\concepts"
 out_csv = r"C:\Users\DGVit\Proyectos\IT Career\it-concept-map\workdir\audit.csv"

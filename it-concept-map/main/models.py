@@ -36,7 +36,7 @@ class Volatility(str, Enum):
 # ConceptStatus vive en state.py (fuente unica). Alias para compatibilidad.
 # (Capa A: se elimina el enum duplicado de models.py.)
 try:
-    from state import ConceptStatus as ConceptStatus
+    from .state import ConceptStatus as ConceptStatus
 except Exception:  # pragma: no cover
     ConceptStatus = None  # type: ignore
 

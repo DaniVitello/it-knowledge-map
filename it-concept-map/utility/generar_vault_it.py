@@ -23,6 +23,8 @@ import argparse
 import json
 import re
 import sys
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../main'))
 from collections import Counter, defaultdict
 from pathlib import Path
 

@@ -3,6 +3,8 @@ import subprocess
 import json
 import time
 import sys
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../main'))
 from pathlib import Path
 from datetime import datetime
 

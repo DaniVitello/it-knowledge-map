@@ -1,3 +1,5 @@
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../main'))
 """Tests de round-trip dataclass -> JSON -> dataclass para los contratos de Capa A."""
 import json
 from models import (

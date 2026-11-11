@@ -30,17 +30,17 @@ from typing import Any, Callable, Awaitable
 
 
 
-import backend
+from . import backend
 
-import research as R
+from . import research as R
 
-import state
+from . import state
 
-import synthesis as S
+from . import synthesis as S
 
-import validation as V
+from . import validation as V
 
-import writer
+from . import writer
 
 try:
     import dod
@@ -48,11 +48,11 @@ except Exception:
     dod = None
 
 try:
-    import log as _logmod
+    from . import log as _logmod
 except Exception:
     _logmod = None
 
-from models import ConceptMeta, Synthesis
+from .models import ConceptMeta, Synthesis
 
 
 
@@ -171,7 +171,7 @@ class Runner:
         self.max_phase_retries = int(self.cfg.get("max_phase_retries", 3)) if isinstance(self.cfg, dict) else 3
 
         try:
-            import log as _log
+            from . import log as _log
             self.logger = _log.RunLogger(self.workdir, self.run_id)
         except Exception:
             self.logger = None
@@ -410,7 +410,7 @@ class Runner:
 
                             try:
 
-                                from synthesis import SynthesisPhase
+                                from .synthesis import SynthesisPhase
 
                                 synth_phase = SynthesisPhase(llm=self.llm, cfg={"workdir": self.workdir, "concepts": self.cfg.get("concepts") or {}})
 
@@ -478,7 +478,7 @@ class Runner:
 
                     synth_data = json.loads((cdir / "synthesis.json").read_text(encoding="utf-8"))
 
-                    from models import Synthesis
+                    from .models import Synthesis
 
                     synth = Synthesis(
 
@@ -546,7 +546,7 @@ class Runner:
                     if not dry_run:
                         if _dod_ok:
                             try:
-                                import writer as _w
+                                from . import writer as _w
                                 st = _w.mark_completed(st, workdir=self.workdir, config={"vault_path": str(vault_path), "workdir": self.workdir})
                                 state.save_state(st, workdir=self.workdir)
                             except Exception as _e:

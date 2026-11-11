@@ -12,9 +12,9 @@ import json
 import sys
 from pathlib import Path
 
-import state
-import runner as RN
-from models import ConceptMeta
+from . import state
+from . import runner as RN
+from .models import ConceptMeta
 
 
 def _load_cfg(args):
@@ -30,7 +30,7 @@ def _load_cfg(args):
 
 
 def _load_concepts(cfg):
-    import registry
+    from . import registry
     try:
         return registry.load_concepts(cfg["vault_path"], cfg)
     except Exception:
@@ -196,7 +196,7 @@ def cmd_validate(args):
         concepts = [c for c in concepts if c.area == args.area]
     if args.limit:
         concepts = concepts[:args.limit]
-    import validation as V
+    from . import validation as V
     for c in concepts:
         cdir = None
         try:

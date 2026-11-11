@@ -15,9 +15,9 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
-import state
-import backend
-from models import ConceptMeta, ValidationReport, CheckResult, Severity
+from . import state
+from . import backend
+from .models import ConceptMeta, ValidationReport, CheckResult, Severity
 
 SCHEMA_VERSION = "1.0.0"
 

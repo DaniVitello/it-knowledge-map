@@ -502,7 +502,7 @@ def load_state(*args, **kwargs) -> ConceptState | None:
         return None
     # A3: validar artefacto de estado leido (skip si no existe / vacio / sin contenido).
     if data:
-        from backend import validate_artifact_schema
+        from .backend import validate_artifact_schema
 
         validate_artifact_schema(data, "state")
     return _from_dict(data)

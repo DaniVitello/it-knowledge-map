@@ -47,8 +47,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable, Mapping, Protocol, Sequence, runtime_checkable
 
-import state
-from models import (
+from . import state
+from .models import (
     SCHEMA_VERSION,
     Claim,
     ConceptMeta,
