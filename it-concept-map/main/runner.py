@@ -233,6 +233,13 @@ class Runner:
 
             st = state.ConceptState(concept_id=concept.id)
 
+        # Con force=True, re-ejecutar aunque este completed.
+        if force and st.status == state.ConceptStatus.COMPLETED:
+            st.status = state.ConceptStatus.FAILED
+            st.phase_data = st.phase_data or {}
+            st.phase_data["failed_phase"] = "none"
+            state.save_state(st, workdir=self.workdir)
+
         try:
 
             state.reconcile_orphan_notebooks(workdir=self.workdir, delete=False)
@@ -264,7 +271,7 @@ class Runner:
                         _txt = _note.read_text(encoding="utf-8")
                         # extraer bloque ai:start..ai:end
                         import re as _re
-                        _m = _re.search(r"ai:start\](.*?)\[ai:end", _txt, _re.S)
+                        _m = _re.search(r"<!--\s*ai:start\s*-->(.*?)<!--\s*ai:end\s*-->", _txt, _re.S)
                         _inside = _m.group(1).strip() if _m else ""
                         _h = _hl.sha256(_inside.encode("utf-8")).hexdigest()
                         if _h != stored_hash:
@@ -466,7 +473,8 @@ class Runner:
 
         # Fase 4: Writing.
 
-        if st.status in (state.ConceptStatus.VALIDATED, state.ConceptStatus.WRITTEN):
+        if st.status in (state.ConceptStatus.VALIDATED, state.ConceptStatus.WRITTEN) or \
+           (st.status == state.ConceptStatus.FAILED and (st.phase_data or {}).get("failed_phase") == "writing"):
 
             try:
 

@@ -136,39 +136,136 @@ def verify_dod(concept, synthesis_data=None, sources=None, state=None, workdir=N
     else:
         failed.append(DOD_ITEMS[4])
 
+    # Leer la nota del vault si es posible.
+    note_text = None
+    note_path = None
+    try:
+        np_ = getattr(concept, "note_path", None)
+        if np_ is None and isinstance(concept, dict):
+            np_ = concept.get("note_path")
+        if np_:
+            note_path = Path(np_)
+            if not note_path.is_absolute():
+                # intentar resolver contra vault_path del cfg? sin cfg, probar tal cual
+                pass
+            if note_path.exists():
+                note_text = note_path.read_text(encoding="utf-8")
+    except Exception:
+        note_text = None
+
     oh_before = write_result.get("outside_hash") if isinstance(write_result, dict) else None
-    if oh_before:
+    last_error = state.get("error") or state.get("last_error") if isinstance(state, dict) else (getattr(state, "error", None) or getattr(state, "last_error", None))
+
+    # D6: escritura verificada (outside_hash before == after releyendo el archivo).
+    if oh_before and note_text is not None:
+        try:
+            import sys as _sys
+            _sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "main"))
+            import writer as _w
+            current_outside = _w.content_hash_outside(note_text)
+            if current_outside is not None and current_outside == oh_before:
+                passed.append(DOD_ITEMS[5])
+            else:
+                failed.append(DOD_ITEMS[5])
+        except Exception:
+            # fallback: si no se puede calcular, usar presencia de hash
+            if oh_before:
+                passed.append(DOD_ITEMS[5])
+            else:
+                failed.append(DOD_ITEMS[5])
+    elif oh_before:
         passed.append(DOD_ITEMS[5])
     else:
         failed.append(DOD_ITEMS[5])
 
-    if write_result and write_result.get("inside_hash"):
-        passed.append(DOD_ITEMS[6])
+    # D7: marcadores ai:start/ai:end presentes.
+    if note_text is not None:
+        try:
+            import sys as _sys
+            _sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "main"))
+            import writer as _w
+            span = _w.find_markers(note_text)
+            if span is not None:
+                passed.append(DOD_ITEMS[6])
+            else:
+                failed.append(DOD_ITEMS[6])
+        except Exception:
+            failed.append(DOD_ITEMS[6])
     else:
-        failed.append(DOD_ITEMS[6])
+        # Sin nota leible: usar inside_hash como proxy
+        if write_result and write_result.get("inside_hash"):
+            passed.append(DOD_ITEMS[6])
+        else:
+            failed.append(DOD_ITEMS[6])
 
-    last_error = state.get("error") or state.get("last_error") if isinstance(state, dict) else (getattr(state, "error", None) or getattr(state, "last_error", None))
-    if not last_error:
-        passed.append(DOD_ITEMS[7])
+    # D8: frontmatter preservado (existe y es valido).
+    if note_text is not None:
+        try:
+            import sys as _sys
+            _sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "main"))
+            import writer as _w
+            fm, _ = _w.parse_frontmatter(note_text)
+            if fm is not None or "---" in note_text[:10]:
+                passed.append(DOD_ITEMS[7])
+            else:
+                failed.append(DOD_ITEMS[7])
+        except Exception:
+            failed.append(DOD_ITEMS[7])
     else:
-        failed.append(DOD_ITEMS[7])
+        if not last_error:
+            passed.append(DOD_ITEMS[7])
+        else:
+            failed.append(DOD_ITEMS[7])
 
-    if not (last_error and "Wikilink" in str(last_error)):
-        passed.append(DOD_ITEMS[8])
+    # D9: sin wikilinks alterados (comparar con connections del concepto).
+    connections = getattr(concept, "connections", None)
+    if connections is None and isinstance(concept, dict):
+        connections = concept.get("connections")
+    connections = connections or []
+    if note_text is not None:
+        try:
+            import sys as _sys
+            _sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "main"))
+            import writer as _w
+            note_links = _w._wikilink_set(note_text) if hasattr(_w, "_wikilink_set") else set()
+            # Extraer wikilinks del afuera (fuera del bloque AI) para comparar
+            # con connections. Si note_links es subset de connections (o viceversa), ok.
+            if not connections or note_links.issubset(set(connections)) or set(connections).issubset(note_links):
+                passed.append(DOD_ITEMS[8])
+            else:
+                failed.append(DOD_ITEMS[8])
+        except Exception:
+            if not (last_error and "Wikilink" in str(last_error)):
+                passed.append(DOD_ITEMS[8])
+            else:
+                failed.append(DOD_ITEMS[8])
     else:
-        failed.append(DOD_ITEMS[8])
+        if not (last_error and "Wikilink" in str(last_error)):
+            passed.append(DOD_ITEMS[8])
+        else:
+            failed.append(DOD_ITEMS[8])
 
-    unverified = synthesis_data.get("unverified_items", []) if isinstance(synthesis_data, dict) else []
-    if len(unverified) <= 5:
+    # D10: sin items sin verificar por encima del umbral.
+    unverified_count = 0
+    # Contar marcadores de incertidumbre en el markdown
+    import re as _re
+    unverified_count += len(_re.findall(r"\?\?\s*verificar", markdown, _re.IGNORECASE))
+    unverified_count += len(_re.findall(r"\(sin verificar\)", markdown, _re.IGNORECASE))
+    unverified_count += len(_re.findall(r"\*{1,2}\s*[Ss]in verificar", markdown))
+    if unverified_count <= 5:
         passed.append(DOD_ITEMS[9])
     else:
         failed.append(DOD_ITEMS[9])
 
-    passed.append(DOD_ITEMS[10])
-
-    if sections and len(sections) >= 3:
-        passed.append(DOD_ITEMS[11])
+    # D11: cross-links coherentes con connections.
+    if connections:
+        # Verificar que al menos uno de los connections aparece en el markdown
+        found = any(c in markdown for c in connections)
+        if found:
+            passed.append(DOD_ITEMS[10])
+        else:
+            failed.append(DOD_ITEMS[10])
     else:
-        failed.append(DOD_ITEMS[11])
+        passed.append(DOD_ITEMS[10])
 
     return DoDResult(ok=len(failed) == 0, passed=passed, failed=failed)

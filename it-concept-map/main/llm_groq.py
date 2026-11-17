@@ -100,7 +100,8 @@ async def groq_llm(prompt: str) -> str:
     }).encode("utf-8")
 
     last_exc = None
-    for _ in range(len(GROQ_KEYS)):
+    # Intentar con todas las keys, con espera si ambas estan en cooldown
+    for attempt in range(len(GROQ_KEYS) + 1):
         key = _current_key()
         req = urllib.request.Request(
             GROQ_URL,
@@ -128,7 +129,10 @@ async def groq_llm(prompt: str) -> str:
             if exc.code == 429:
                 if _rotate_key():
                     continue
-                raise RuntimeError("Todas las keys de Groq agotadas (429)") from exc
+                # Ambas keys en cooldown: esperar y reintentar desde la primera
+                await asyncio.sleep(65)
+                _current_key_idx = 0
+                continue
             raise
         except Exception as exc:
             last_exc = exc

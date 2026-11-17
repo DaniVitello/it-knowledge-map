@@ -235,16 +235,24 @@ class ResearchPhase:
         backend._atomic_write_json(sources_path, sources_data)
 
         # Conservacion local de fuentes (Capa F): sources_raw/<source_id>.txt.
-        try:
-            raw_dir = cdir / "sources_raw"
-            raw_dir.mkdir(parents=True, exist_ok=True)
-            for s in res.sources:
-                (raw_dir / f"{s.source_id}.txt").write_text(
-                    f"URL: {s.url}\nTITLE: {s.title}\nHASH: {s.content_hash}\n",
-                    encoding="utf-8",
-                )
-        except Exception:
-            pass
+        raw_dir = cdir / "sources_raw"
+        raw_dir.mkdir(parents=True, exist_ok=True)
+        for s in res.sources:
+            (raw_dir / f"{s.source_id}.txt").write_text(
+                f"URL: {s.url}\nTITLE: {s.title}\nHASH: {s.content_hash}\n",
+                encoding="utf-8",
+            )
+
+        # Evaluacion de fuentes (Capa E): verificar source_requirements.
+        min_l12 = (plan.source_requirements or {}).get("min_level1_or_2", 0)
+        min_ctx = (plan.source_requirements or {}).get("min_context_sources", 0)
+        l12_count = sum(1 for s in res.sources if getattr(s, "level", 99) <= 2)
+        ctx_count = sum(1 for s in res.sources if "context" in str(getattr(s, "covers", "")).lower())
+        gaps = []
+        if l12_count < min_l12:
+            gaps.append(f"fuentes nivel1/2: {l12_count}/{min_l12}")
+        if min_ctx > 0 and ctx_count < min_ctx:
+            gaps.append(f"fuentes de contexto: {ctx_count}/{min_ctx}")
 
         # Persistir raw_research.json.
         raw_data = {
@@ -261,8 +269,9 @@ class ResearchPhase:
             "backend_provider": res.backend_provider,
             "research_plan_path": str(plan_path),
             "gap_pass_done": True,
-            "gaps_detected": 0,
+            "gaps_detected": len(gaps),
             "gaps_resolved": 0,
+            "gaps": gaps,
         }
         # A3: validar schema antes de escribir (fail-fast con mensaje claro).
         backend.validate_artifact_schema(raw_data, "raw_research")

@@ -25,9 +25,9 @@ SCHEMA_VERSION = "1.0.0"
 REQUIRED_SECTIONS = [
     "Objetivo",
     "Esqueleto (el 20% esencial)",
-    "Como funciona",
+    "Cómo funciona",
     "Detalles",
-    "Ejemplo minimo",
+    "Ejemplo mínimo",
     "Errores comunes",
     "Estado actual",
     "Conexiones",
@@ -151,20 +151,65 @@ def _check_structure(markdown: str) -> list[str]:
 # --- Capa H: checks nombrados del diseno (10 dimensiones) ---
 
 def _check_contexto(markdown: str, concept: ConceptMeta) -> list[str]:
-    return []
+    issues = []
+    area = getattr(concept, "area", "") or ""
+    # El contenido debe mencionar el area o su contexto profesional.
+    if area and area.lower() not in markdown.lower():
+        # Tolerancia: aceptar variantes sin acentos / slug.
+        import unicodedata
+        def _norm(s):
+            s = unicodedata.normalize("NFKD", s)
+            s = "".join(c for c in s if not unicodedata.combining(c))
+            return s.lower()
+        if _norm(area) not in _norm(markdown):
+            issues.append(f"Contexto: el area '{area}' no aparece en el contenido")
+    return issues
 
 
 def _check_relaciones(markdown: str, concept: ConceptMeta) -> list[str]:
-    return []
+    issues = []
+    # Extraer la seccion Conexiones
+    m = re.search(r"^## Conexiones\s*\n(.*?)(?=^## |\Z)", markdown, re.MULTILINE | re.DOTALL)
+    section = m.group(1) if m else ""
+    # Debe mencionar al menos 2 conceptos conectados (nombres capitalizados o wikilinks)
+    links = re.findall(r"\[\[([^\]]+)\]\]", section)
+    # Si no hay wikilinks, contar nombres propios (palabras capitalizadas de >3 letras)
+    named = re.findall(r"\b[A-Z][a-zA-Z]{3,}\b", section)
+    if len(links) < 2 and len(named) < 3:
+        issues.append("Relaciones: la seccion Conexiones no menciona suficientes conceptos relacionados")
+    # Debe explicar la naturaleza de la relacion
+    nature_words = ["utiliza", "depende", "complementa", "se basa", "permite", "afecta",
+                    "implementa", "requiere", "provee", "facilita", "convierte"]
+    if not any(w in section.lower() for w in nature_words):
+        issues.append("Relaciones: no se explica la naturaleza de las conexiones")
+    return issues
 
 
 def _check_fuentes(markdown: str, sources: dict) -> list[str]:
-    # Disponibilidad de fuentes: solo advertencia si no hay ninguna fuente registrada.
-    return []
+    issues = []
+    src_list = sources.get("sources", []) if isinstance(sources, dict) else []
+    if not src_list:
+        issues.append("Fuentes: no hay fuentes registradas en sources.json")
+        return issues
+    # Jerarquia de fuentes: al menos 2 de nivel 1 o 2 (autoridad primaria/secundaria).
+    l12 = [s for s in src_list if isinstance(s, dict) and (s.get("level") or 99) <= 2]
+    if len(src_list) >= 3 and len(l12) < 2:
+        issues.append(f"Fuentes: solo {len(l12)} de nivel 1/2 (se esperan al menos 2)")
+    # Reusar check de URLs inventadas
+    issues.extend(_check_invented_urls(markdown, sources))
+    return issues
 
 
 def _check_actualidad(markdown: str) -> list[str]:
-    return []
+    issues = []
+    m = re.search(r"^## Estado actual\s*\n(.*?)(?=^## |\Z)", markdown, re.MULTILINE | re.DOTALL)
+    section = m.group(1) if m else ""
+    low = section.lower()
+    has_stable = "estable" in low or "fundamento" in low
+    has_modern = "moderna" in low or "actual" in low or "practica" in low or "práctica" in low
+    if not (has_stable and has_modern):
+        issues.append("Actualidad: el Estado actual no distingue fundamentos estables de practica moderna")
+    return issues
 
 
 def _check_profundidad(sections: dict) -> list[str]:
@@ -210,6 +255,40 @@ def _check_seguridad_archivo(concept: ConceptMeta) -> list[str]:
     return issues
 
 
+def _check_invented_data(markdown: str, sources: dict) -> list[str]:
+    issues = []
+    src_list = sources.get("sources", []) if isinstance(sources, dict) else []
+    if not src_list:
+        return issues  # sin fuentes, no se puede validar (ya cubierto por _check_fuentes)
+    # Texto combinado de fuentes
+    src_text = " ".join(str(s.get("title", "")) + " " + str(s.get("url", "")) for s in src_list if isinstance(s, dict)).lower()
+    # Detectar versiones (v1.2.3, version 2.0)
+    for m in re.finditer(r"\bv\d+\.\d+(?:\.\d+)?\b", markdown):
+        ver = m.group(0).lower()
+        if ver not in src_text:
+            issues.append(f"Datos inventados: version '{m.group(0)}' no encontrada en fuentes")
+            break  # un issue basta
+    # Detectar porcentajes
+    for m in re.finditer(r"\b\d{1,3}\s*%", markdown):
+        pct = m.group(0).replace(" ", "").lower()
+        if pct not in src_text:
+            issues.append(f"Datos inventados: porcentaje '{m.group(0)}' no encontrado en fuentes")
+            break
+    return issues
+    """Detecta marcadores de incertidumbre que no deberian aparecer en el output."""
+    issues = []
+    # ?? verificar (ejemplo basado en ...)
+    if re.search(r"\?\?\s*verificar", markdown, re.IGNORECASE):
+        issues.append("Marcador de incertidumbre: '?? verificar' encontrado en el texto.")
+    # **Sin verificar**: o *sin verificar*
+    if re.search(r"\*{1,2}\s*[Ss]in verificar\s*\*{0,2}\s*:", markdown):
+        issues.append("Marcador de incertidumbre: 'Sin verificar' encontrado en el texto.")
+    # (sin verificar)
+    if re.search(r"\(sin verificar\)", markdown, re.IGNORECASE):
+        issues.append("Marcador de incertidumbre: '(sin verificar)' encontrado en el texto.")
+    return issues
+
+
 def validate(concept: ConceptMeta, synthesis_data: dict, sources: dict) -> tuple[bool, list[str], list[str]]:
     """Valida la sintesis. Devuelve (is_valid, issues, warnings)."""
     markdown = synthesis_data.get("markdown", "")
@@ -223,6 +302,7 @@ def validate(concept: ConceptMeta, synthesis_data: dict, sources: dict) -> tuple
     issues.extend(_check_review_questions(sections))
     issues.extend(_check_structure(markdown))
     issues.extend(_check_invented_urls(markdown, sources))
+    issues.extend(_check_invented_data(markdown, sources))
     issues.extend(_check_copy_paste(markdown, sources))
     issues.extend(_check_cross_links(markdown, concept))
     issues.extend(_check_contexto(markdown, concept))
@@ -234,6 +314,7 @@ def validate(concept: ConceptMeta, synthesis_data: dict, sources: dict) -> tuple
     issues.extend(_check_integridad(markdown))
     issues.extend(_check_formato(markdown))
     issues.extend(_check_seguridad_archivo(concept))
+    issues.extend(_check_uncertainty_markers(markdown))
 
     # Warnings: secciones vacias o muy cortas
     for s, content in sections.items():
@@ -324,6 +405,20 @@ class ValidationPhase:
         passed = total_checks - len(issues)
         score = max(0.0, min(1.0, passed / total_checks))
 
+        # Metricas (punto 26 de la spec): cobertura, fuentes, contexto, etc.
+        sections_count = len(sections)
+        review_qs = sections.get("Preguntas de repaso", "").count("?")
+        src_list = sources.get("sources", []) if isinstance(sources, dict) else []
+        l12 = [s for s in src_list if isinstance(s, dict) and (s.get("level") or 99) <= 2]
+        metrics = {
+            "sections_count": sections_count,
+            "review_questions": review_qs,
+            "sources_total": len(src_list),
+            "sources_level_1_2": len(l12),
+            "has_urls_in_text": bool(re.search(r"https?://", markdown)),
+            "cross_area_mentions": sum(1 for a in ["Backend", "Frontend", "AI", "UX", "Database", "Networking", "Operating", "Product", "Project", "Software"] if a.lower() in markdown.lower() and a.lower() != (concept.area or "").lower()),
+        }
+
         # Persistir validation.json.
         blocking_failures = list(issues)
         if not issues:
@@ -341,6 +436,7 @@ class ValidationPhase:
             "checked_at": state.now_iso() if hasattr(state, "now_iso") else None,
             "blocking_failures": blocking_failures,
             "verdict": verdict,
+            "metrics": metrics,
         }
         # A3: validar schema antes de escribir (fail-fast con mensaje claro).
         backend.validate_artifact_schema(report, "validation")

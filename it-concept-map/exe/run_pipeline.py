@@ -4,10 +4,12 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-import cli
-import runner as RN
-from llm_groq import groq_llm
+import main.cli as cli
+import main.runner as RN
+import main.llm_groq as llm_groq_mod
+groq_llm = llm_groq_mod.groq_llm
 
 # Load config
 cfg = cli._load_cfg(type("Args", (), {"config": "config.yaml", "workdir": None, "vault": None})())

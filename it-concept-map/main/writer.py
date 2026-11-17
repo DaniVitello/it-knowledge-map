@@ -61,7 +61,7 @@ MARKER_START_DEFAULT = "<!-- ai:start -->"
 MARKER_END_DEFAULT = "<!-- ai:end -->"
 
 # Headings de la "voz del autor" que deben seguir presentes tras escribir.
-REQUIRED_HEADINGS: tuple[str, ...] = ("Que abarca", "Relacionados")
+REQUIRED_HEADINGS: tuple[str, ...] = ("Que abarca", "Relacionados", "Mis notas")
 
 
 def _cfg(config: Any, *keys: str, default: Any = None) -> Any:

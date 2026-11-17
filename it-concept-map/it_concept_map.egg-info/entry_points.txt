@@ -1,0 +1,2 @@
+[console_scripts]
+kpipe = cli:main

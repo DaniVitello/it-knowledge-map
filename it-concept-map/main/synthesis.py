@@ -24,9 +24,9 @@ SCHEMA_VERSION = "1.0.0"
 CONTRACT_SECTIONS = [
     "Objetivo",
     "Esqueleto (el 20% esencial)",
-    "Como funciona",
+    "Cómo funciona",
     "Detalles",
-    "Ejemplo minimo",
+    "Ejemplo mínimo",
     "Errores comunes",
     "Estado actual",
     "Conexiones",
@@ -121,6 +121,8 @@ REGLAS INNEGOCIABLES
 8. Respondé SOLO con las secciones pedidas, cada una con su encabezado de nivel 2 EXACTO (## Nombre). Sin introduccion ni cierre.
 9. Usa acentos correctos en español (á, é, í, ó, ú, ñ, ü). No generes caracteres corruptos.
 10. Máximo 6000 caracteres en total para todas las secciones combinadas.
+11. Cita la fuente (URL) cuando afirmes algo verificable, especialmente en "Estado actual" y datos concretos. No inventes URLs.
+12. En "Estado actual", solo menciona tecnologias, frameworks o herramientas que aparezcan en las fuentes. No inventes nombres.
 
 FUENTES DISPONIBLES:
 {sources_list}
@@ -134,12 +136,12 @@ TAREA: escribi unicamente estas secciones, con estos encabezados exactos y en es
 GUA POR SECCION
 - Objetivo: Redacta un parrafo corrido (no bullets, no preguntas) que responda en prosa natural: para que lo uso, que problema resuelve, donde aparece en el trabajo de un {main_role}, que puedo hacer despues de entenderlo, cuando no necesito preocuparme. Primera persona ("Utilizo...", "Resuelvo..."). Maximo 200 palabras. La definicion formal va despues.
 - Esqueleto (el 20% esencial): entre 3 y 5 ideas fundamentales, como lista numerada, cada una con una o dos frases. Las IDEAS PRINCIPALES del autor (listadas en el contexto) son la base: el esqueleto debe cubrir al menos esas ideas, aunque puede expandirlas o reorganizarlas.
-- Como funciona: que ocurre cuando se usa, paso a paso, conectado a las ideas del esqueleto.
+- Cómo funciona: que ocurre cuando se usa, paso a paso, conectado a las ideas del esqueleto.
 - Detalles: progresion de lo basico a lo intermedio y lo avanzado, colgando de las ideas del esqueleto.
-- Ejemplo minimo: el ejemplo mas chico que muestre el concepto funcionando. Siempre incluir un bloque de codigo. Si no hay ejemplo respaldado por las fuentes, escribilo igual de simple.
+- Ejemplo mínimo: el ejemplo mas chico que muestre el concepto funcionando. Siempre incluir un bloque de codigo. Si no hay ejemplo respaldado por las fuentes, escribilo igual de simple.
 - Errores comunes: los errores y malentendidos reales, con una linea sobre como evitarlos.
 - Estado actual: separa fundamentos estables de practica moderna. Cada afirmacion sensible al tiempo debe salir de una fuente. Si no puedes respaldar una afirmacion, omitila por completo. NUNCA escribas "(sin verificar)" ni "??" ni parentesis similares en el texto. Es metadata interna, no contenido visible.
-- Conexiones: exactamente 3 conceptos conectados por nombre (sin [[...]]), priorizando conceptos de OTRAS areas. Para cada uno, una frase que explique la naturaleza de la relacion.
+- Conexiones: exactamente 3 conceptos conectados por nombre (sin [[...]]), priorizando conceptos de OTRAS areas (al menos uno de otra area). Para cada uno, indica si es prerequisito, dependiente o complementario, y una frase que explique la naturaleza de la relacion.
 - Ruta de estudio: que conviene saber antes (prerrequisitos) y como avanzar despues, de fundamentos a avanzado. Debe ser especifico del tema, no generico.
 - Preguntas de repaso: exactamente 5 preguntas, mezclando comprension y aplicacion. Cada pregunta termina con "?".
 """
@@ -225,6 +227,18 @@ class SynthesisPhase:
             sources = json.loads(sources_path.read_text(encoding="utf-8"))
         except (json.JSONDecodeError, OSError, FileNotFoundError):
             sources = {}
+
+        # Fail-fast: no sintetizar sin investigación previa.
+        if not (isinstance(raw, dict) and raw.get("answers")):
+            raise RuntimeError(
+                "No hay investigación previa (raw_research.json vacío o inexistente). "
+                "Ejecutar la fase de research primero."
+            )
+        if not (isinstance(sources, dict) and sources.get("sources")):
+            raise RuntimeError(
+                "No hay fuentes registradas (sources.json vacío o inexistente). "
+                "Ejecutar la fase de research primero."
+            )
 
         # Construir prompt con contexto por area (Capa D).
         area_ctx = areas_mod.resolve_for_concept(

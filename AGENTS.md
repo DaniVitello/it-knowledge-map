@@ -20,22 +20,33 @@ cada concepto, usando NotebookLM como backend de investigación.
 
 ```
 IT Career/
-├── it-concept-map/     # Pipeline (NO tocar sin orden)
+├── it-concept-map/     # Pipeline
+│   ├── main/           # Core (backend, cli, research, runner, state, synthesis, validation, writer, models, registry, areas, llm_groq, log)
+│   ├── exe/            # Scripts de ejecución (run_pipeline, retry_failed, pilot, eval_concept, run_*)
+│   ├── test/           # Tests
+│   ├── utility/        # Scripts auxiliares (review_concepts, mark_issues_failed, diagnose, monitor, audit, etc.)
+│   ├── areas/          # Config de áreas (YAML)
+│   ├── workdir/        # Estado y artefactos (gitignored)
+│   └── config.yaml     # Config (gitignored, con secrets)
+├── IT-Mind-Map/        # Vault de Obsidian (conceptos generados)
+├── *.txt               # Fuentes por área (NO borrar)
 ├── docs/               # Documentación
 ├── explicaciones/      # Explicaciones por capa
-├── *.txt               # Fuentes por área (NO borrar)
-└── *.md                # Conceptos del vault
+└── AGENTS.md           # Este archivo
 ```
 
 ## Comandos
 
 ### Pipeline
 
-- `py run_pipeline.py --area "AREA" --limit N` — procesar N conceptos de un área
-- `py run_pipeline.py --status` — estado por fase (pending/ok/failed)
-- `py run_pipeline.py --retry --failed` — reintentar conceptos fallidos
-- `py eval_concept.py --all` — evaluar calidad de todos los conceptos
-- `py diagnose.py --concept ID` — diagnosticar fallo de un concepto
+- `py exe\run_pipeline.py --area "AREA" --limit N` — procesar N conceptos de un área
+- `py exe\run_pipeline.py --concept "ID" --force` — re-procesar un concepto específico
+- `py exe\retry_failed.py` — reintentar conceptos en estado failed
+- `py main\cli.py status` — estado en tiempo real de todos los conceptos
+- `py main\cli.py status <id>` — detalle de un concepto
+- `py utility\review_concepts.py --vault "IT-Mind-Map"` — revisar calidad de todos los conceptos
+- `py utility\mark_issues_failed.py` — marcar conceptos con issues como failed
+- `py utility\diagnose.py --concept ID` — diagnosticar fallo de un concepto
 - `pytest` — ejecutar tests
 
 ### Áreas válidas
@@ -53,72 +64,24 @@ UX / UI, Product Management, Project Management.
 5. **Cada lote en una rama de git + commit local** como punto de retorno.
 6. **Push manual** — nunca automático.
 
-## Definición de "concepto terminado"
+## Restricciones
 
-Un concepto está terminado cuando:
+- No tocar `.venv/`, `node_modules/`, `.git/`.
+- No modificar `config.yaml` (contiene secrets). Usar `config.yaml.example` para compartir.
+- No borrar archivos del vault (`IT-Mind-Map/`) sin orden explícita.
+- No borrar fuentes (`*.txt`) sin orden explícita.
 
-- [ ] Validación OK (score ≥ 70)
-- [ ] Fuentes citadas (cada afirmación tiene id de fuente válido)
-- [ ] Aprobación de muestra del lote (3 notas por lote revisadas a mano)
-- [ ] Commit local del lote
+## Convenciones de código
 
-## Taxonomía de fallas
+- Python: usar `py`, nunca `python` ni `python3`.
+- Encoding: UTF-8 sin BOM.
+- Imports: relativos dentro de `main/`, `sys.path` insert en `exe/`, `test/`, `utility/`.
+- Commits: en español, formato `tipo: descripción` (feat, fix, refactor, docs).
+- No modificar dependencias en `.venv/` ni `node_modules/`.
 
-Etiquetar conceptos malos con:
+## Recovery
 
-- `generico` — contenido genérico, no específico del concepto
-- `alucinado` — afirma cosas no presentes en las fuentes
-- `no-fuentes` — no usa las fuentes de research
-- `ideas-ausentes` — ideas clave del `.txt` no aparecen en la nota
-- `relaciones-vagas` — wikilinks o relaciones sin justificación
-- `largo-inadecuado` — muy corto o muy largo
-
-## Workflow del pipeline
-
-```
-concept_id + área
-  ↓
-[Research] → work/<id>/research.json (fuentes de NotebookLM)
-  ↓
-[Synthesis] → work/<id>/draft.json (contenido generado por LLM)
-  ↓
-[Validation] → work/<id>/validation.json (score + issues)
-  ↓ (si falla → vuelve a Synthesis con issues)
-[Writer] → vault/<concepto>.md (archivo final)
-  ↓
-Hermes verifica → siguiente concepto
-```
-
-## Reglas de orquestación
-
-- Hermes NO opera el batch en vivo. Solo llama `status` y `run`.
-- El runner es la única forma de ejecutar el pipeline.
-- Si un concepto falla, usar `retry --failed`, no re-lanzar todo.
-- Si la cuota de Groq se agota, el runner corta automáticamente y guarda estado.
-- Al día siguiente, `run --resume` continúa desde donde se quedó.
-- No improvisar: si no hay criterio claro, parar y preguntar.
-
-## Calidad
-
-- Golden set: 8-10 conceptos de áreas distintas (fáciles y difíciles)
-- Iterar prompt sobre golden set antes de escalar
-- 4 ejes de puntuación (1-5): fidelidad a fuentes, utilidad, conexiones, estructura
-- No escalar hasta que el golden set pase el umbral (≥4 en todos los ejes)
-- LLM judge solo sobre muestras (3 por lote), no sobre los 255
-- Pasada final de enlaces entre conceptos (determinista, por alias)
-
-## Notas de arquitectura
-
-- El adaptador de NotebookLM está aislado detrás de la interfaz `ResearchBackend`.
-- Cada fase lee artefactos de la anterior y persiste los suyos en `workdir/.pipeline/<id>/`.
-- Escrituras atómicas: temp + `os.replace`.
-- Reintentos con backoff exponencial solo para errores transitorios.
-- Circuit breaker: N fallos de red consecutivos abortan rápido.
-- Limpieza de notebooks: best-effort, idempotente.
-
-## Restricciones de NotebookLM
-
-- Límite: 100 notebooks por cuenta (plan gratuito).
-- El notebook es temporal: se borra solo después de éxito completo.
-- Reconciliación de huérfanos al arrancar (ver `state.reconcile_orphan_notebooks`).
-- Guardia de límite: pausar si la cuenta se acerca a 100.
+- Si un concepto falla: `py utility\diagnose.py --concept ID`
+- Si hay conceptos failed: `py exe\retry_failed.py`
+- Si el pipeline se corta: el estado se guarda en `workdir/concepts/<id>/estado.json`. Re-ejecutar con `--force`.
+- Si la cuota de Groq se agota: el runner corta automáticamente y guarda estado. Reintentar después de 10-15 min.

@@ -1,0 +1,7 @@
+pyyaml>=6.0
+
+[dev]
+pytest>=8.0
+
+[nlm]
+notebooklm-py>=0.8.4

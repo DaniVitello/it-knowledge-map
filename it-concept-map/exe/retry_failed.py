@@ -4,12 +4,14 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-import cli
-import runner as RN
-from llm_groq import groq_llm
+import main.cli as cli
+import main.runner as RN
+import main.llm_groq as llm_groq_mod
+groq_llm = llm_groq_mod.groq_llm
+import main.state as state
 import json
-import state
 
 cfg = cli._load_cfg(type("Args", (), {"config": "config.yaml", "workdir": None, "vault": None})())
 workdir = cfg.get("workdir")
@@ -52,4 +54,3 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
-PY
