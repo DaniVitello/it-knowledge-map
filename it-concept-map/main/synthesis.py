@@ -19,6 +19,7 @@ from . import areas as areas_mod
 from .models import ConceptMeta, Synthesis
 
 SCHEMA_VERSION = "1.0.0"
+PROMPT_VERSION = "1.0.0"
 
 # Secciones del contrato (punto 18 de la spec).
 CONTRACT_SECTIONS = [
@@ -293,6 +294,8 @@ class SynthesisPhase:
             "markdown": markdown,
             "sections": sections,
             "prompt": prompt,
+            "prompt_version": PROMPT_VERSION,
+            "unverified_items": [],
             "generated_at": state.now_iso() if hasattr(state, "now_iso") else datetime.datetime.now().isoformat(),
             "duration_ms": duration_ms,
         }

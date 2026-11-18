@@ -215,7 +215,7 @@ class Runner:
 
 
 
-    async def run_concept(self, concept: ConceptMeta, force: bool = False, dry_run: bool = False) -> RunReport:
+    async def run_concept(self, concept: ConceptMeta, force: bool = False, dry_run: bool = False, force_phase: str | None = None) -> RunReport:
 
         report = RunReport(concept_id=concept.id)
 
@@ -250,7 +250,23 @@ class Runner:
 
 
 
-        # Idempotencia: si ya esta completed, saltar (verificando hash del bloque AI).
+        # Forzar una fase específica: resetear estado al punto de entrada de esa fase.
+        if force_phase and st is not None:
+            phase_map = {
+                "research": state.ConceptStatus.PENDING,
+                "synthesis": state.ConceptStatus.RESEARCHED,
+                "validation": state.ConceptStatus.SYNTHESIZED,
+                "writing": state.ConceptStatus.VALIDATED,
+            }
+            target = phase_map.get(force_phase.lower())
+            if target is not None:
+                try:
+                    st.status = target
+                    st.checkpoint = force_phase.lower()
+                    state.save_state(st, workdir=self.workdir)
+                except Exception:
+                    pass
+            force = True
 
         if st.status == state.ConceptStatus.COMPLETED and not force and not dry_run:
 
@@ -277,6 +293,17 @@ class Runner:
                         if _h != stored_hash:
                             _skip = False
                             self._log_event(concept.id, "idempotency_hash_mismatch", stored=stored_hash, actual=_h)
+                            # Edicion manual detectada: marcar needs_review, no sobrescribir.
+                            try:
+                                st.transition_to(state.ConceptStatus.NEEDS_REVIEW)
+                                st.last_error = "Edicion manual detectada en el bloque AI"
+                                state.save_state(st, workdir=self.workdir)
+                            except Exception:
+                                pass
+                            report.status = "needs_review"
+                            report.error = "Edicion manual detectada en el bloque AI"
+                            report.duration_ms = int((__import__("time").monotonic() - t0) * 1000)
+                            return report
             except Exception:
                 _skip = True
 
@@ -497,6 +524,10 @@ class Runner:
                         markdown=synth_data.get("markdown", ""),
 
                         sections=synth_data.get("sections", {}),
+
+                        prompt_version=synth_data.get("prompt_version", ""),
+
+                        unverified_items=synth_data.get("unverified_items", []),
 
                     )
 

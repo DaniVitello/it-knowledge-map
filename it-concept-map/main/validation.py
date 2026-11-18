@@ -405,6 +405,20 @@ class ValidationPhase:
         passed = total_checks - len(issues)
         score = max(0.0, min(1.0, passed / total_checks))
 
+        # Checks por dimension (punto 21 del diseno tecnico).
+        checks = {
+            "contenido": "pass" if not any("Seccion" in i or "Contenido" in i for i in issues) else "fail",
+            "contexto": "pass" if not any("Contexto" in i for i in issues) else "fail",
+            "relaciones": "pass" if not any("Relaciones" in i for i in issues) else "fail",
+            "fuentes": "pass" if not any("Fuentes" in i or "URL" in i for i in issues) else "fail",
+            "actualidad": "pass" if not any("Actualidad" in i for i in issues) else "fail",
+            "profundidad": "pass" if not any("corta" in i.lower() for i in issues) else "fail",
+            "pedagogia": "pass" if not any("preguntas" in i.lower() for i in issues) else "fail",
+            "integridad": "pass" if not any("TODO" in i or "XXX" in i for i in issues) else "fail",
+            "formato": "pass" if not any("Encabezado" in i or "Sin encabezados" in i for i in issues) else "fail",
+            "seguridad_archivo": "pass" if not any("Directorio" in i for i in issues) else "fail",
+        }
+
         # Metricas (punto 26 de la spec): cobertura, fuentes, contexto, etc.
         sections_count = len(sections)
         review_qs = sections.get("Preguntas de repaso", "").count("?")
@@ -437,6 +451,7 @@ class ValidationPhase:
             "blocking_failures": blocking_failures,
             "verdict": verdict,
             "metrics": metrics,
+            "checks": checks,
         }
         # A3: validar schema antes de escribir (fail-fast con mensaje claro).
         backend.validate_artifact_schema(report, "validation")

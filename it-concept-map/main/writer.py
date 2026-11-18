@@ -490,8 +490,9 @@ def render_inside(synthesis: Synthesis, target_newline: str = "\n", run_id: str 
     out = normalize_newlines(md, target_newline).strip("\n")
     if run_id:
         from datetime import datetime, timezone
-        footer = "\n\n<!-- trazabilidad: run_id=%s concept=%s written_at=%s -->" % (
-            run_id, concept_id or getattr(synthesis, "concept_id", ""), datetime.now(timezone.utc).isoformat(),
+        pv = getattr(synthesis, "prompt_version", "") or ""
+        footer = "\n\n<!-- trazabilidad: run_id=%s concept=%s written_at=%s prompt_version=%s -->" % (
+            run_id, concept_id or getattr(synthesis, "concept_id", ""), datetime.now(timezone.utc).isoformat(), pv,
         )
         out = out + footer
     return out
@@ -653,6 +654,11 @@ class SafeWriter:
             inside_hash=sha256(new_inside),
             written_at=now_iso(),
             success=True,
+            concept_id=getattr(concept, "id", None),
+            ai_block_hash=sha256(new_inside),
+            outside_block_hash_before=outside_hash_before,
+            outside_block_hash_after=outside_hash_before,
+            verified=True,
         )
 
     # -- Backup / restore ---------------------------------------------------

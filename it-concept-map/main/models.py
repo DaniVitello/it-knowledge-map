@@ -260,6 +260,7 @@ class Synthesis:
     modern_practice: str = ""
     cross_links: list[CrossLink] = field(default_factory=list)
     claims_index: list[ClaimRef] = field(default_factory=list)
+    unverified_items: list[str] = field(default_factory=list)
     prompt_template_hash: str = ""
     prompt_version: str = ""
     prompt_context: str = "general"

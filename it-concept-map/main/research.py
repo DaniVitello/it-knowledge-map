@@ -18,7 +18,39 @@ from . import state
 from .models import ConceptMeta, ResearchAnswer, ResearchQuestion, Source, ResearchPlan, to_dict as model_to_dict
 from .backend import ResearchResult
 
-SCHEMA_VERSION = "1.0.0"
+def _evaluate_source(src, plan) -> dict:
+    """Puntuacion local de una fuente (punto 5.2 del diseno tecnico).
+
+    Ejes de 1 a 5: autoridad, relevancia, actualidad, ajuste al contexto.
+    Heuristica basada en nivel, cobertura, fecha y preferencia.
+    """
+    level = getattr(src, "level", None) or 4
+    authority = max(1, 6 - int(level))  # nivel 1 -> 5, nivel 4 -> 2
+    authority = min(5, authority)
+
+    covers = getattr(src, "covers", None) or []
+    if isinstance(covers, str):
+        covers = [covers]
+    # Relevancia: cuantas dimensiones cubre (accuracy/currentness/context)
+    relevance = min(5, max(1, len(covers) + 1))
+
+    pub = getattr(src, "published_or_updated", None)
+    currentness = 4 if pub and str(pub).lower() not in ("sin verificar", "none", "") else 2
+
+    context_fit = 2
+    if getattr(src, "is_preferred_domain", False):
+        context_fit += 2
+    if getattr(src, "is_seed", False):
+        context_fit += 1
+    context_fit = min(5, context_fit)
+
+    return {
+        "authority": authority,
+        "relevance": relevance,
+        "currentness": currentness,
+        "context_fit": context_fit,
+        "reason": "scoring local heuristico",
+    }
 
 
 # ---------------------------------------------------------------------------
@@ -207,7 +239,10 @@ class ResearchPhase:
 
         duration_ms = int((time.monotonic() - t0) * 1000)
 
-        # Backup si force y ya existia raw_research.
+        # Puntuacion local de fuentes (punto 5.2 del diseno tecnico).
+        for s in res.sources:
+            if not getattr(s, "evaluation", None):
+                s.evaluation = _evaluate_source(s, plan)
         if force and raw_path.exists():
             backups.mkdir(parents=True, exist_ok=True)
             ts = state.now_iso() if hasattr(state, "now_iso") else "backup"
@@ -281,6 +316,8 @@ class ResearchPhase:
         st.transition_to(state.ConceptStatus.RESEARCHED)
         st.phase_data["sources_path"] = str(sources_path)
         st.phase_data["notebook_id"] = res.notebook_id
+        st.phase_data["gaps"] = gaps
+        st.phase_data["gaps_critical"] = len(gaps) > 0
         st.updated_at = state.now_iso() if hasattr(state, "now_iso") else None
         state.save_state(st, workdir=workdir)
 
