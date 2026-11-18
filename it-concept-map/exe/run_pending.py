@@ -4,8 +4,8 @@ import asyncio, argparse, os, sys, json
 from pathlib import Path
 os.chdir(r"C:\Users\DGVit\Proyectos\IT Career\it-concept-map")
 sys.path.insert(0, os.getcwd())
-import cli, runner as RN
-from llm_groq import groq_llm
+from main import cli, runner as RN
+from main.llm_groq import groq_llm
 
 cfg = cli._load_cfg(type("Args", (), {"config": "config.yaml", "workdir": None, "vault": None})())
 concepts = cli._load_concepts(cfg)

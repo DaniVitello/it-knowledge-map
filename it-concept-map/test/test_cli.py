@@ -11,9 +11,9 @@ from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-import cli
-import state
-from models import ConceptMeta
+from main import cli
+from main import state
+from main.models import ConceptMeta
 
 WORK = Path(__file__).parent / ".tmp-workdir-cli"
 VAULT = Path(__file__).parent / ".tmp-vault-cli"
@@ -138,11 +138,11 @@ def test_cmd_run_dry_run():
     _seed_vault()
     cfg_path = _cfg_path()
     # monkeypatch run_concept to use mock llm
-    import runner as RN
+    from main import runner as RN
     orig = RN.Runner.run_concept
 
-    async def patched(self, concept, force=False, dry_run=False):
-        return await orig(self, concept, force=force, dry_run=True)
+    async def patched(self, concept, force=False, dry_run=False, **kwargs):
+        return await orig(self, concept, force=force, dry_run=True, **kwargs)
 
     RN.Runner.run_concept = patched
     args = type("Args", (), {})()
@@ -215,7 +215,7 @@ def test_cmd_status_con_estado():
     _reset()
     _seed_vault()
     # crear estado manualmente
-    import state
+    from main import state
     st = state.ConceptState(concept_id="frontend-01-internet-web")
     st.status = state.ConceptStatus.COMPLETED
     state.save_state(st, workdir=str(WORK))
@@ -232,7 +232,7 @@ def test_cmd_status_con_estado():
 def test_cmd_reset_con_estado():
     _reset()
     _seed_vault()
-    import state
+    from main import state
     st = state.ConceptState(concept_id="frontend-01-internet-web")
     state.save_state(st, workdir=str(WORK))
     cfg_path = _cfg_path()

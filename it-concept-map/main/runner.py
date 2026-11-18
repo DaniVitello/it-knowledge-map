@@ -285,11 +285,8 @@ class Runner:
                             _note = _P(_vp) / _note
                     if _note.exists():
                         _txt = _note.read_text(encoding="utf-8")
-                        # extraer bloque ai:start..ai:end
-                        import re as _re
-                        _m = _re.search(r"<!--\s*ai:start\s*-->(.*?)<!--\s*ai:end\s*-->", _txt, _re.S)
-                        _inside = _m.group(1).strip() if _m else ""
-                        _h = _hl.sha256(_inside.encode("utf-8")).hexdigest()
+                        # hash canonico del interior (misma funcion que el writer)
+                        _h = writer.content_hash_inside(_txt)
                         if _h != stored_hash:
                             _skip = False
                             self._log_event(concept.id, "idempotency_hash_mismatch", stored=stored_hash, actual=_h)

@@ -15,9 +15,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-import backend as B
-import state
-from models import ConceptMeta, ResearchQuestion, Source
+from main import backend as B
+from main import state
+from main.models import ConceptMeta, ResearchQuestion, Source
 
 WORK = Path(__file__).parent / ".tmp-workdir"
 

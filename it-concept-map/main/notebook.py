@@ -337,8 +337,10 @@ def _coerce_request(
     return req
 
 
-def _source_from_dict(raw: Mapping[str, Any]) -> Source | None:
-    """Construye un Source desde un dict (tolerante, schema de models.py)."""
+def _source_from_dict(raw: Mapping[str, Any] | str) -> Source | None:
+    """Construye un Source desde un dict o URL string (tolerante, schema de models.py)."""
+    if isinstance(raw, str):
+        raw = {"url": raw, "source_id": raw, "seed": True, "kind": "url"}
     if not isinstance(raw, Mapping):
         return None
     sid = str(raw.get("source_id") or raw.get("id") or "").strip()

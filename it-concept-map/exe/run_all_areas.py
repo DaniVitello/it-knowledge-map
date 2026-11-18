@@ -4,7 +4,7 @@ import json
 import time
 import sys
 import sys, os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../main'))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 from pathlib import Path
 from datetime import datetime
 

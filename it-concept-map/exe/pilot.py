@@ -7,7 +7,7 @@ fase, tasa de exito, errores, calidad de sintesis). Calibracion de parametros.
 
 from __future__ import annotations
 import sys, os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../main'))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 
 import asyncio
 import json
@@ -16,9 +16,9 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Callable
 
-import runner as RN
-import state
-from models import ConceptMeta
+from main import runner as RN
+from main import state
+from main.models import ConceptMeta
 
 SCHEMA_VERSION = "1.0.0"
 

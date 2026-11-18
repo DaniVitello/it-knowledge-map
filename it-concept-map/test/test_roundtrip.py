@@ -1,12 +1,12 @@
 import sys, os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../main'))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 """Tests de round-trip dataclass -> JSON -> dataclass para los contratos de Capa A."""
 import json
-from models import (
+from main.models import (
     ConceptMeta, Source, ResearchPlan, Synthesis, ValidationReport,
     WriteResult, ConceptState, Claim, Volatility, to_dict,
 )
-from state import ConceptStatus
+from main.state import ConceptStatus
 
 
 def _roundtrip(obj):
@@ -98,7 +98,7 @@ def test_conceptstate_roundtrip():
 
 
 def test_validate_artifact_schema():
-    from backend import validate_artifact_schema, SchemaError
+    from main.backend import validate_artifact_schema, SchemaError
     # valid
     validate_artifact_schema({"sources": []}, "sources")
     validate_artifact_schema({"concept_id": "c1", "answers": []}, "raw_research")

@@ -35,8 +35,8 @@ it-concept-map/workdir/*.log
 it-concept-map/workdir/*.pid
 
 # Test temp dirs
-it-concept-map/tests/.tmp-*/
-it-concept-map/tests/.tmp-workdir/
+it-concept-map/test/.tmp-*/
+it-concept-map/test/.tmp-workdir/
 
 # Temp scripts / generated files
 it-concept-map/generate_pdf.py

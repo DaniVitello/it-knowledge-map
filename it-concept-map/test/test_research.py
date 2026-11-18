@@ -10,10 +10,10 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-import backend as B
-import research as R
-import state
-from models import ConceptMeta
+from main import backend as B
+from main import research as R
+from main import state
+from main.models import ConceptMeta
 
 WORK = Path(__file__).parent / ".tmp-workdir-research"
 
@@ -44,7 +44,7 @@ def test_research_phase_persiste_artefactos():
     res = asyncio.run(phase.run(CONCEPT))
     st = state.load_state(CONCEPT.id, workdir=WORK)
     assert st.status is state.ConceptStatus.RESEARCHED
-    cdir = B.pipeline_dir(CONCEPT.id, WORK)
+    cdir = WORK / "concepts" / CONCEPT.id
     assert (cdir / "sources.json").is_file()
     assert (cdir / "raw_research.json").is_file()
     assert res.raw_path is not None and res.sources_path is not None

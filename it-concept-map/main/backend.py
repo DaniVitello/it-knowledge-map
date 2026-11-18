@@ -27,3 +27,8 @@ BackendNotFoundError = _nb.BackendNotFoundError
 BackendConfigError = _nb.BackendConfigError
 BackendCircuitOpenError = _nb.BackendCircuitOpenError
 ResearchPersistError = _nb.ResearchPersistError
+
+# Re-exportar helpers privados usados por tests/llamadores.
+for _name in ("_map_library_error", "_notebooklm_module"):
+    if hasattr(_nb, _name):
+        globals()[_name] = getattr(_nb, _name)

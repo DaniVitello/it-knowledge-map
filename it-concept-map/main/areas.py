@@ -31,7 +31,7 @@ from .models import Volatility
 SCHEMA_VERSION = "1.0.0"
 
 # Directorio por defecto: it-concept-map/areas/ (junto al modulo).
-AREAS_DIR = Path(__file__).resolve().parent / "areas"
+AREAS_DIR = Path(__file__).resolve().parent.parent / "areas"
 
 # Roles profesionales canonicos (punto 7.3 del diseno tecnico).
 CANONICAL_ROLES = {

@@ -15,7 +15,7 @@ from typing import Any
 
 from . import backend
 from . import state
-from .models import ConceptMeta, ResearchAnswer, ResearchQuestion, Source, ResearchPlan, to_dict as model_to_dict
+from .models import SCHEMA_VERSION, ConceptMeta, ResearchAnswer, ResearchQuestion, Source, ResearchPlan, to_dict as model_to_dict
 from .backend import ResearchResult
 
 def _evaluate_source(src, plan) -> dict:
@@ -90,7 +90,8 @@ class ResearchPhase:
         return self.cfg.get("workdir", "workdir")
 
     def _pipeline_dir(self, concept_id: str) -> Path:
-        return backend.pipeline_dir(concept_id, self._workdir())
+        from pathlib import Path
+        return Path(self._workdir()) / "concepts" / concept_id
 
     def _questions(self, concept: ConceptMeta) -> list[ResearchQuestion]:
         ideas = concept.key_ideas or []
@@ -281,7 +282,7 @@ class ResearchPhase:
         # Evaluacion de fuentes (Capa E): verificar source_requirements.
         min_l12 = (plan.source_requirements or {}).get("min_level1_or_2", 0)
         min_ctx = (plan.source_requirements or {}).get("min_context_sources", 0)
-        l12_count = sum(1 for s in res.sources if getattr(s, "level", 99) <= 2)
+        l12_count = sum(1 for s in res.sources if (getattr(s, "level", 99) or 99) <= 2)
         ctx_count = sum(1 for s in res.sources if "context" in str(getattr(s, "covers", "")).lower())
         gaps = []
         if l12_count < min_l12:
