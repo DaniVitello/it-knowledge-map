@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [main, "fix/**", "v2/**"]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: it-concept-map
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install pyyaml pytest ruff
+      - name: Syntax compile
+        run: python -m compileall -q main exe utility
+      - name: Lint (critical errors)
+        run: ruff check main exe utility --select E9,F63,F7,F82
+      - name: Tests
+        run: python -m pytest -q

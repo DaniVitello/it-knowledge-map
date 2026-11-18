@@ -35,7 +35,7 @@ def _load_concepts(cfg):
         return registry.load_concepts(cfg["vault_path"], cfg)
     except Exception as e:
         raise RuntimeError(
-            f"No se pudo cargar el vault '{cfg.get("vault_path")}': {e}"
+            f"No se pudo cargar el vault '{cfg.get('vault_path')}': {e}"
         ) from e
 
 

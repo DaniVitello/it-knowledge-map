@@ -1,4 +1,4 @@
-"""Genera audio overview (MP3) de cada explicacion en explicaciones/.
+r"""Genera audio overview (MP3) de cada explicacion en explicaciones/.
 
 USO: py utility\gen_audio_overview.py [--voice es-ES-AlvaroNeural]
 """

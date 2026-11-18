@@ -7,6 +7,8 @@ instalado. Los artefactos se escriben en ``tests/.tmp-workdir`` (desechable).
 
 from __future__ import annotations
 
+import pytest
+
 import asyncio
 import json
 import shutil
@@ -218,7 +220,7 @@ def test_factory() -> None:
 
 
 def test_map_errores_notebooklm() -> None:
-    import notebooklm as nlm
+    nlm = pytest.importorskip("notebooklm")
 
     assert isinstance(
         B._map_library_error(nlm.RateLimitError("429"), "op", "t"),
