@@ -33,8 +33,10 @@ def _load_concepts(cfg):
     from . import registry
     try:
         return registry.load_concepts(cfg["vault_path"], cfg)
-    except Exception:
-        return []
+    except Exception as e:
+        raise RuntimeError(
+            f"No se pudo cargar el vault '{cfg.get('vault_path')}': {e}"
+        ) from e
 
 
 def cmd_run(args):
@@ -58,7 +60,7 @@ def cmd_run(args):
         args.force = True
     runner = RN.Runner(cfg=cfg, llm=llm, workdir=cfg.get("workdir", "workdir"))
     if len(concepts) == 1:
-        rep = asyncio.run(runner.run_concept(concepts[0], force=args.force, dry_run=args.dry_run))
+        rep = asyncio.run(runner.run_concept(concepts[0], force=args.force, dry_run=args.dry_run, force_phase=getattr(args, "force_phase", None)))
         print(f"{rep.concept_id}: {rep.status} ({rep.duration_ms}ms) phases={rep.phases_completed}")
         if rep.error:
             print(f"  error: {rep.error}")

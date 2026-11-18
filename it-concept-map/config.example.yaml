@@ -1,0 +1,21 @@
+# Plantilla de configuracion. Copiar a config.yaml y completar.
+# config.yaml esta gitignored: contiene API keys y rutas de auth (secretos).
+workdir: workdir
+vault_path: ../IT-Mind-Map
+
+backend:
+  provider: fake          # fake (sin red, tests) | notebooklm (real)
+  notebooklm:
+    auth_files:
+      - path/to/cuenta_a.json
+      - path/to/cuenta_b.json
+    max_notebooks_per_account: 95
+    rotate_on_quota: true
+
+llm:
+  provider: groq
+  model: openai/gpt-oss-120b
+
+groq:
+  api_keys:
+    - gsk_REEMPLAZAR_CON_TU_KEY

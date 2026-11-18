@@ -15,7 +15,7 @@ import re
 from pathlib import Path
 
 sys.path.insert(0, r"C:\Users\DGVit\Proyectos\IT Career\it-concept-map")
-import cli
+from main import cli
 
 cfg = cli._load_cfg(type("Args", (), {"config": "config.yaml", "workdir": None, "vault": None})())
 concepts = {c.id: c for c in cli._load_concepts(cfg)}

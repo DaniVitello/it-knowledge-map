@@ -31,9 +31,14 @@ from .models import Volatility
 SCHEMA_VERSION = "1.0.0"
 
 # Directorio por defecto: it-concept-map/areas/ (junto al modulo).
-AREAS_DIR = Path(__file__).resolve().parent / "areas"
+AREAS_DIR = Path(__file__).resolve().parent.parent / "areas"
 
-# Areas definidas (10, desde areas.json). Usado por los tests de cobertura.
+# Roles profesionales canonicos (punto 7.3 del diseno tecnico).
+CANONICAL_ROLES = {
+    "Software Engineer", "Product Manager", "Project Manager",
+    "Frontend Developer", "Backend Developer", "Data Engineer",
+    "UX Designer", "DevOps Engineer", "QA Engineer",
+}
 EXPECTED_AREAS = sorted([
     "Software Engineering",
     "Frontend",

@@ -10,9 +10,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-import state
-import synthesis as S
-from models import ConceptMeta
+from main import state
+from main import synthesis as S
+from main.models import ConceptMeta
 
 WORK = Path(__file__).parent / ".tmp-workdir-synth"
 

@@ -11,9 +11,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-import areas as A
-import registry as R
-from models import Volatility
+from main import areas as A
+from main import registry as R
+from main.models import Volatility
 
 TMP = Path(__file__).parent / ".tmp-workdir-areas"
 
@@ -364,8 +364,8 @@ def test_areacontext_defaults_y_schema_version():
 # Integracion con sintesis: build_prompt inyecta el contexto del area
 # ---------------------------------------------------------------------------
 
-from models import ConceptMeta  # noqa: E402
-from synthesis import build_prompt  # noqa: E402
+from main.models import ConceptMeta  # noqa: E402
+from main.synthesis import build_prompt  # noqa: E402
 
 SYN_CONCEPT = ConceptMeta(
     id="frontend-01-internet-web",

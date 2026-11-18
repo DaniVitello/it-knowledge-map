@@ -309,7 +309,8 @@ def content_hash_inside(
     span = find_markers(text, marker_start, marker_end)
     if span is None:
         return None
-    return sha256(span.raw_inside)
+    normalized = span.raw_inside.replace("\r\n", "\n").replace("\r", "\n")
+    return sha256(normalized)
 
 
 def verify_outside_integrity(
@@ -466,9 +467,21 @@ def _wikilink_set(text: str) -> set[str]:
     return links
 
 
-def verify_wikilinks_preserved(original: str, written: str) -> None:
-    """Los wikilinks del afuera (seccion Relacionados manual) no cambian."""
-    if _wikilink_set(original) != _wikilink_set(written):
+def verify_wikilinks_preserved(
+    original: str,
+    written: str,
+    marker_start: str = MARKER_START_DEFAULT,
+    marker_end: str = MARKER_END_DEFAULT,
+) -> None:
+    """Los wikilinks del afuera (seccion Relacionados manual) no cambian.
+
+    Solo se compara la zona exterior al bloque ai:start/ai:end: el interior
+    generado por IA puede agregar/quitar wikilinks libremente (validados
+    contra concept.connections en la capa de validacion).
+    """
+    outside_before = extract_outside(original, marker_start, marker_end)
+    outside_after = extract_outside(written, marker_start, marker_end)
+    if _wikilink_set(outside_before) != _wikilink_set(outside_after):
         raise WikilinksChangedError(
             "Los wikilinks del afuera cambiaron tras escribir"
         )
@@ -490,8 +503,9 @@ def render_inside(synthesis: Synthesis, target_newline: str = "\n", run_id: str 
     out = normalize_newlines(md, target_newline).strip("\n")
     if run_id:
         from datetime import datetime, timezone
-        footer = "\n\n<!-- trazabilidad: run_id=%s concept=%s written_at=%s -->" % (
-            run_id, concept_id or getattr(synthesis, "concept_id", ""), datetime.now(timezone.utc).isoformat(),
+        pv = getattr(synthesis, "prompt_version", "") or ""
+        footer = "\n\n<!-- trazabilidad: run_id=%s concept=%s written_at=%s prompt_version=%s -->" % (
+            run_id, concept_id or getattr(synthesis, "concept_id", ""), datetime.now(timezone.utc).isoformat(), pv,
         )
         out = out + footer
     return out
@@ -650,9 +664,14 @@ class SafeWriter:
             path=path,
             backup_path=backup_path,
             outside_hash=outside_hash_before,
-            inside_hash=sha256(new_inside),
+            inside_hash=content_hash_inside(new_text),
             written_at=now_iso(),
             success=True,
+            concept_id=getattr(concept, "id", None),
+            ai_block_hash=sha256(new_inside),
+            outside_block_hash_before=outside_hash_before,
+            outside_block_hash_after=outside_hash_before,
+            verified=True,
         )
 
     # -- Backup / restore ---------------------------------------------------
@@ -773,7 +792,7 @@ class SafeWriter:
 
         # e) defensa en profundidad: headings y wikilinks del afuera.
         verify_headings_preserved(original_text, written)
-        verify_wikilinks_preserved(original_text, written)
+        verify_wikilinks_preserved(original_text, written, self.marker_start, self.marker_end)
 
     # -- Diagnostico de marcadores --------------------------------------------
 

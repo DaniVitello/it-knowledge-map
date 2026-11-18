@@ -10,11 +10,12 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-import pilot as P
-import state
-from models import ConceptMeta
+from exe import pilot as P
+from main import state
+from main.models import ConceptMeta
 
 WORK = Path(__file__).parent / ".tmp-workdir-pilot"
+VALID_SOURCES = {'count': 1, 'sources': [{'source_id': 'src-1', 'url': 'https://developer.mozilla.org/es/docs/Web/HTTP', 'title': 'MDN: HTTP', 'kind': 'url', 'level': 1, 'seed': True, 'preferred': True, 'domain': 'developer.mozilla.org', 'is_seed': True, 'is_preferred_domain': True, 'covers': ['HTTP'], 'kept': True, 'evaluation': {}}]}
 VAULT = Path(__file__).parent / ".tmp-vault-pilot"
 
 CONCEPTS = [
@@ -25,6 +26,7 @@ CONCEPTS = [
         note_path=Path("02 - Frontend/01 - Internet & Web.md"),
         key_ideas=["HTTP", "HTTPS", "URLs"],
         connections=["Cliente-Servidor", "HTTP"],
+    seed_urls=["https://developer.mozilla.org/es/docs/Web/HTTP"],
     ),
 ]
 
@@ -50,39 +52,7 @@ def _cfg():
     return {"workdir": str(WORK), "vault_path": str(VAULT), "backend": {"provider": "fake"}, "pacing": {"pause_between_concepts_s": 0}}
 
 
-MOCK_MD = """## Objetivo
-Para que sirve HTTP en el desarrollo web moderno.
-
-## Esqueleto (el 20% esencial)
-1. Request/response.
-2. Metodos y status codes.
-
-## Como funciona
-El cliente envia un request al servidor.
-
-## Detalles
-HTTP/1.1, HTTP/2, HTTP/3 con QUIC.
-
-## Ejemplo minimo
-GET / HTTP/1.1 con headers basicos.
-
-## Errores comunes
-Olvidar headers o status codes.
-
-## Estado actual
-HTTP/3 vigente y recomendado.
-
-## Conexiones
-HTTP complementa HTTPS en seguridad.
-
-## Ruta de estudio
-Antes: redes. Despues: APIs REST.
-
-## Preguntas de repaso
-1. Que es HTTP?
-2. Como funciona?
-3. Ejemplo?
-"""
+MOCK_MD = '## Objetivo\nHTTP es el protocolo base de la web en el desarrollo Frontend; transfiere recursos entre cliente y servidor.\n\n## Esqueleto (el 20% esencial)\nRequest/response, metodos y status codes, headers y cuerpo, URLs y recursos identificables.\n\n## Cómo funciona\nEl cliente Frontend envia un request HTTP y el servidor responde con un status code y el recurso pedido.\n\n## Detalles\nHTTP/1.1 usa conexiones persistentes, HTTP/2 multiplexa streams y HTTP/3 corre sobre QUIC para bajar latencia.\n\n## Ejemplo mínimo\nGET / HTTP/1.1 con headers Host y Accept; el servidor responde 200 OK con el HTML de la pagina.\n\n## Errores comunes\nOlvidar headers, ignorar status codes o mezclar contenido inseguro en paginas HTTPS del Frontend.\n\n## Estado actual\nLos fundamentos de HTTP son estables desde hace decadas; la practica moderna recomienda HTTP/3 y HTTPS.\n\n## Conexiones\nHTTP utiliza el modelo [[Cliente-Servidor]] y depende de [[HTTP]] como transporte; complementa a HTTPS.\n\n## Ruta de estudio\nAntes: redes y TCP/IP. Despues: APIs REST y seguridad web aplicada al Frontend.\n\n## Preguntas de repaso\n1. Que es HTTP?\n2. Como funciona el ciclo request/response?\n3. Da un ejemplo de status code?\n'
 
 
 def _mock_llm(prompt):

@@ -1,8 +1,8 @@
 import asyncio, sys
 from pathlib import Path
-sys.path.insert(0, str(Path(".").resolve()))
-import cli, runner as RN
-from llm_groq import groq_llm
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from main import cli, runner as RN
+from main.llm_groq import groq_llm
 cfg = cli._load_cfg(type("Args", (), {"config": "config.yaml", "workdir": None, "vault": None})())
 area = sys.argv[1] if len(sys.argv) > 1 else "Backend"
 concepts = cli._load_concepts(cfg)

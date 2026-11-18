@@ -10,11 +10,12 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-import state
-import validation as V
-from models import ConceptMeta
+from main import state
+from main import validation as V
+from main.models import ConceptMeta
 
 WORK = Path(__file__).parent / ".tmp-workdir-val"
+VALID_SOURCES = {'count': 1, 'sources': [{'source_id': 'src-1', 'url': 'https://developer.mozilla.org/es/docs/Web/HTTP', 'title': 'MDN: HTTP', 'kind': 'url', 'level': 1, 'seed': True, 'preferred': True, 'domain': 'developer.mozilla.org', 'is_seed': True, 'is_preferred_domain': True, 'covers': ['HTTP'], 'kept': True, 'evaluation': {}}]}
 
 CONCEPT = ConceptMeta(
     id="frontend-01-internet-web",
@@ -25,7 +26,7 @@ CONCEPT = ConceptMeta(
     connections=["Cliente-Servidor", "HTTP"],
 )
 
-GOOD_MD = "\n".join(f"## {s}\n" + ("Contenido suficiente para la seccion. " * 3) for s in V.REQUIRED_SECTIONS) + "\n## Preguntas de repaso\n1. Que es HTTP?\n2. Como funciona?\n3. Ejemplo?\n"
+GOOD_MD = '## Objetivo\nHTTP es el protocolo base de la web en el desarrollo Frontend; transfiere recursos entre cliente y servidor.\n\n## Esqueleto (el 20% esencial)\nRequest/response, metodos y status codes, headers y cuerpo, URLs y recursos identificables.\n\n## Cómo funciona\nEl cliente Frontend envia un request HTTP y el servidor responde con un status code y el recurso pedido.\n\n## Detalles\nHTTP/1.1 usa conexiones persistentes, HTTP/2 multiplexa streams y HTTP/3 corre sobre QUIC para bajar latencia.\n\n## Ejemplo mínimo\nGET / HTTP/1.1 con headers Host y Accept; el servidor responde 200 OK con el HTML de la pagina.\n\n## Errores comunes\nOlvidar headers, ignorar status codes o mezclar contenido inseguro en paginas HTTPS del Frontend.\n\n## Estado actual\nLos fundamentos de HTTP son estables desde hace decadas; la practica moderna recomienda HTTP/3 y HTTPS.\n\n## Conexiones\nHTTP utiliza el modelo [[Cliente-Servidor]] y depende de [[HTTP]] como transporte; complementa a HTTPS.\n\n## Ruta de estudio\nAntes: redes y TCP/IP. Despues: APIs REST y seguridad web aplicada al Frontend.\n\n## Preguntas de repaso\n1. Que es HTTP?\n2. Como funciona el ciclo request/response?\n3. Da un ejemplo de status code?\n'
 
 
 def _reset():
@@ -45,7 +46,7 @@ def _seed_synthesis():
         "markdown": GOOD_MD,
         "sections": {**{s: "Contenido suficiente para la seccion. " * 3 for s in V.REQUIRED_SECTIONS if s != "Preguntas de repaso"}, "Preguntas de repaso": "1. Que es HTTP?\n2. Como funciona?\n3. Ejemplo?"},
     }), encoding="utf-8")
-    (cdir / "sources.json").write_text(json.dumps({"count": 1, "sources": []}), encoding="utf-8")
+    (cdir / "sources.json").write_text(json.dumps(VALID_SOURCES), encoding="utf-8")
     st = state.ConceptState(concept_id=CONCEPT.id)
     st.status = state.ConceptStatus.SYNTHESIZED
     state.save_state(st, workdir=WORK)
@@ -58,7 +59,7 @@ def test_validate_pass_con_contenido_completo():
     synth = {"markdown": GOOD_MD, "sections": {s: ("Contenido suficiente para la seccion. " * 3) for s in V.REQUIRED_SECTIONS}}
     # asegurar 3 preguntas de repaso
     synth["sections"]["Preguntas de repaso"] = "1. Que es HTTP?\n2. Como funciona?\n3. Ejemplo?"
-    is_valid, issues, warnings = V.validate(CONCEPT, synth, {})
+    is_valid, issues, warnings = V.validate(CONCEPT, synth, VALID_SOURCES)
     assert is_valid is True
     assert issues == []
 

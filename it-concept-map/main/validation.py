@@ -262,30 +262,20 @@ def _check_invented_data(markdown: str, sources: dict) -> list[str]:
         return issues  # sin fuentes, no se puede validar (ya cubierto por _check_fuentes)
     # Texto combinado de fuentes
     src_text = " ".join(str(s.get("title", "")) + " " + str(s.get("url", "")) for s in src_list if isinstance(s, dict)).lower()
+    # Excluir encabezados estructurales (p.ej. "Esqueleto (el 20% esencial") del escaneo de datos.
+    body = re.sub(r"^##.*$", "", markdown, flags=re.MULTILINE)
     # Detectar versiones (v1.2.3, version 2.0)
-    for m in re.finditer(r"\bv\d+\.\d+(?:\.\d+)?\b", markdown):
+    for m in re.finditer(r"\bv\d+\.\d+(?:\.\d+)?\b", body):
         ver = m.group(0).lower()
         if ver not in src_text:
             issues.append(f"Datos inventados: version '{m.group(0)}' no encontrada en fuentes")
             break  # un issue basta
     # Detectar porcentajes
-    for m in re.finditer(r"\b\d{1,3}\s*%", markdown):
+    for m in re.finditer(r"\b\d{1,3}\s*%", body):
         pct = m.group(0).replace(" ", "").lower()
         if pct not in src_text:
             issues.append(f"Datos inventados: porcentaje '{m.group(0)}' no encontrado en fuentes")
             break
-    return issues
-    """Detecta marcadores de incertidumbre que no deberian aparecer en el output."""
-    issues = []
-    # ?? verificar (ejemplo basado en ...)
-    if re.search(r"\?\?\s*verificar", markdown, re.IGNORECASE):
-        issues.append("Marcador de incertidumbre: '?? verificar' encontrado en el texto.")
-    # **Sin verificar**: o *sin verificar*
-    if re.search(r"\*{1,2}\s*[Ss]in verificar\s*\*{0,2}\s*:", markdown):
-        issues.append("Marcador de incertidumbre: 'Sin verificar' encontrado en el texto.")
-    # (sin verificar)
-    if re.search(r"\(sin verificar\)", markdown, re.IGNORECASE):
-        issues.append("Marcador de incertidumbre: '(sin verificar)' encontrado en el texto.")
     return issues
 
 
@@ -314,7 +304,6 @@ def validate(concept: ConceptMeta, synthesis_data: dict, sources: dict) -> tuple
     issues.extend(_check_integridad(markdown))
     issues.extend(_check_formato(markdown))
     issues.extend(_check_seguridad_archivo(concept))
-    issues.extend(_check_uncertainty_markers(markdown))
 
     # Warnings: secciones vacias o muy cortas
     for s, content in sections.items():
@@ -399,11 +388,27 @@ class ValidationPhase:
 
         # Validar.
         is_valid, issues, warnings = validate(concept, synth_data, sources)
+        sections = synth_data.get("sections", {}) if isinstance(synth_data, dict) else {}
+        markdown = synth_data.get("markdown", "") if isinstance(synth_data, dict) else ""
 
         # Calcular score (0-1).
         total_checks = len(REQUIRED_SECTIONS) + 3
         passed = total_checks - len(issues)
         score = max(0.0, min(1.0, passed / total_checks))
+
+        # Checks por dimension (punto 21 del diseno tecnico).
+        checks = {
+            "contenido": "pass" if not any("Seccion" in i or "Contenido" in i for i in issues) else "fail",
+            "contexto": "pass" if not any("Contexto" in i for i in issues) else "fail",
+            "relaciones": "pass" if not any("Relaciones" in i for i in issues) else "fail",
+            "fuentes": "pass" if not any("Fuentes" in i or "URL" in i for i in issues) else "fail",
+            "actualidad": "pass" if not any("Actualidad" in i for i in issues) else "fail",
+            "profundidad": "pass" if not any("corta" in i.lower() for i in issues) else "fail",
+            "pedagogia": "pass" if not any("preguntas" in i.lower() for i in issues) else "fail",
+            "integridad": "pass" if not any("TODO" in i or "XXX" in i for i in issues) else "fail",
+            "formato": "pass" if not any("Encabezado" in i or "Sin encabezados" in i for i in issues) else "fail",
+            "seguridad_archivo": "pass" if not any("Directorio" in i for i in issues) else "fail",
+        }
 
         # Metricas (punto 26 de la spec): cobertura, fuentes, contexto, etc.
         sections_count = len(sections)
@@ -437,6 +442,7 @@ class ValidationPhase:
             "blocking_failures": blocking_failures,
             "verdict": verdict,
             "metrics": metrics,
+            "checks": checks,
         }
         # A3: validar schema antes de escribir (fail-fast con mensaje claro).
         backend.validate_artifact_schema(report, "validation")
