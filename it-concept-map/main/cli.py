@@ -33,8 +33,10 @@ def _load_concepts(cfg):
     from . import registry
     try:
         return registry.load_concepts(cfg["vault_path"], cfg)
-    except Exception:
-        return []
+    except Exception as e:
+        raise RuntimeError(
+            f"No se pudo cargar el vault '{cfg.get("vault_path")}': {e}"
+        ) from e
 
 
 def cmd_run(args):

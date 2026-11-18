@@ -43,7 +43,7 @@ from . import validation as V
 from . import writer
 
 try:
-    import dod
+    from utility import dod
 except Exception:
     dod = None
 
