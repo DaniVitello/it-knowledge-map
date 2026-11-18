@@ -1,4 +1,4 @@
-vault_path: "C:/Users/DGVit/Proyectos/IT Career/it-concept-map/tests/.tmp-vault-cli"
-workdir: "C:/Users/DGVit/Proyectos/IT Career/it-concept-map/tests/.tmp-workdir-cli"
+vault_path: "C:/Users/DGVit/Proyectos/IT Career/it-concept-map/test/.tmp-vault-cli"
+workdir: "C:/Users/DGVit/Proyectos/IT Career/it-concept-map/test/.tmp-workdir-cli"
 backend:
   provider: fake
