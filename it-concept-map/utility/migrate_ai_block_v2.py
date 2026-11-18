@@ -1,4 +1,4 @@
-"""Migracion v2: sacar el encabezado '## Mis notas' de delante del bloque AI
+r"""Migracion v2: sacar el encabezado '## Mis notas' de delante del bloque AI
 y ponerlo como seccion independiente despues del bloque (antes de Relacionados).
 
 USO: py utility\migrate_ai_block_v2.py --vault "IT-Mind-Map" [--dry-run|--apply]
