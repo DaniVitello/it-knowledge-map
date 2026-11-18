@@ -33,12 +33,25 @@ class Volatility(str, Enum):
     DYNAMIC = "dynamic"
 
 
-# ConceptStatus vive en state.py (fuente unica). Alias para compatibilidad.
-# (Capa A: se elimina el enum duplicado de models.py.)
-try:
-    from .state import ConceptStatus as ConceptStatus
-except Exception:  # pragma: no cover
-    ConceptStatus = None  # type: ignore
+class ConceptStatus(str, Enum):
+    """Estados del ciclo de vida de un concepto en el pipeline."""
+
+    PENDING = "pending"
+    RESEARCHING = "researching"
+    RESEARCHED = "researched"
+    SYNTHESIZED = "synthesized"
+    VALIDATED = "validated"
+    WRITTEN = "written"
+    COMPLETED = "completed"
+    FAILED = "failed"
+    NEEDS_REVIEW = "needs_review"
+
+
+# Aliases para compatibilidad con distintos nombres usados por callers/tests.
+StateStatus = ConceptStatus
+PipelineStatus = ConceptStatus
+ConceptStateStatus = ConceptStatus
+Status = ConceptStatus
 
 
 class Severity(str, Enum):
