@@ -428,7 +428,7 @@ def write(path, content, overwrite=True):
 
 def main():
     ap = argparse.ArgumentParser(description="Genera el vault de Obsidian del mind map IT.")
-    ap.add_argument("input", nargs="?", default=".", help="carpeta con los .txt (default: .)")
+    ap.add_argument("input", nargs="?", default="data/archive", help="carpeta con los .txt (default: data/archive)")
     ap.add_argument("-o", "--output", default="IT-Mind-Map", help="carpeta de salida (default: IT-Mind-Map)")
     ap.add_argument("--force", action="store_true", help="pisar notas de concepto existentes")
     args = ap.parse_args()

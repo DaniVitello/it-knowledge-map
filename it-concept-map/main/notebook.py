@@ -13,7 +13,7 @@ Componentes:
   (tests, dry-run, CI).
 - ``NotebookLMBackend``: adaptador async de ``notebooklm-py`` v0.8.4
   (API directa, sin subprocess: evita el bug de encoding del CLI en
-  Windows; ver DOCS/learnings.md).
+  Windows; ver docs/learnings.md).
 - ``run_research_phase``: integracion con state.py (transiciones
   researching -> researched / failed) y persistencia de fuentes y
   respuestas en ``workdir/.pipeline/<concept_id>/`` (sources.json,

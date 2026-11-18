@@ -37,8 +37,9 @@ El pipeline solo reemplaza lo que está entre `ai:start` y `ai:end`. Si el bloqu
 | `it-concept-map/exe/` | Puntos de entrada: run_pipeline, run_area, run_missing, retry_failed, pilot |
 | `it-concept-map/areas/` | Configuración de contexto por área (roles, dominios preferidos, volatilidad) |
 | `it-concept-map/utility/` | Scripts de revisión y mantenimiento del vault |
-| `docs/` | Especificación maestra, diseño técnico, auditoría y planes de mejora |
-| `explicaciones/` | Explicación del código capa por capa |
+| `docs/` | Documentación: auditoría, planes, explicaciones por capa (`docs/explicaciones/`), reportes históricos (`docs/archive/`) |
+| `data/archive/` | Fuentes `.txt` por área (obsoletas, ya generaron el vault) |
+| `scripts/archive/` | Scripts one-off históricos |
 
 ## Cómo funciona
 
@@ -62,7 +63,7 @@ Datos verificados el 16 de noviembre de 2026:
 
 - El vault tiene 266 archivos Markdown: 255 conceptos más los índices de área y el índice maestro.
 - El código está reorganizado en `main/`, `exe/` y `utility/`. Hay correcciones posteriores a la auditoría que se reconstruyen leyendo el código, no un archivo de estado público.
-- Los tests todavía no corren después de esa reorganización: al ejecutar `pytest` desde la raíz aparecen 10 errores de importación porque los tests siguen importando módulos con el layout anterior. Está en la lista de pendientes.
+- **Build verde:** 116 tests pasan (`pytest`), más ruff y compileall limpios. CI en `.github/workflows/ci.yml`. La remediación v1 corrigió los imports, el pipeline completo (research→synthesis→validation→writing), los ciclos de import y el hash de idempotencia.
 - Los números de tests que aparecen en documentos más viejos (82, 107, 108, 116) corresponden a estados distintos del proyecto. No los tomaron como estado vigente.
 
 ## Lo que pasó en el camino

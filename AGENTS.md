@@ -29,9 +29,9 @@ IT Career/
 │   ├── workdir/        # Estado y artefactos (gitignored)
 │   └── config.yaml     # Config (gitignored, con secrets)
 ├── IT-Mind-Map/        # Vault de Obsidian (conceptos generados)
-├── *.txt               # Fuentes por área (NO borrar)
-├── docs/               # Documentación
-├── explicaciones/      # Explicaciones por capa
+├── data/archive/       # Fuentes .txt por área (obsoletas, ya generaron el vault)
+├── docs/               # Documentación (archive/, explicaciones/, fix-capas/)
+├── scripts/archive/    # Scripts one-off históricos
 └── AGENTS.md           # Este archivo
 ```
 
@@ -67,9 +67,9 @@ UX / UI, Product Management, Project Management.
 ## Restricciones
 
 - No tocar `.venv/`, `node_modules/`, `.git/`.
-- No modificar `config.yaml` (contiene secrets). Usar `config.yaml.example` para compartir.
+- No modificar `config.yaml` (contiene secrets). Usar `config.example.yaml` para compartir.
 - No borrar archivos del vault (`IT-Mind-Map/`) sin orden explícita.
-- No borrar fuentes (`*.txt`) sin orden explícita.
+- No borrar fuentes (`data/archive/*.txt`) sin orden explícita.
 
 ## Convenciones de código
 

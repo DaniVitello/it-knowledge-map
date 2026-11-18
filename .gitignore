@@ -48,3 +48,6 @@ it-concept-map/config.yaml
 
 # All the local Concepts
 IT-Mind-Map
+
+# Audio overviews generados (media, no fuente)
+audios/

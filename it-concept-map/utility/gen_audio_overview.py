@@ -24,7 +24,7 @@ async def gen(text: str, out: Path, voice: str):
 async def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--voice", default="es-ES-AlvaroNeural")
-    ap.add_argument("--src", default="C:/Users/DGVit/Proyectos/IT Career/explicaciones")
+    ap.add_argument("--src", default=str(Path(__file__).resolve().parents[2] / "docs" / "explicaciones"))
     ap.add_argument("--out", default="C:/Users/DGVit/Proyectos/IT Career/audios")
     args = ap.parse_args()
     src = Path(args.src)
