@@ -1,0 +1,44 @@
+{
+  "additionalProperties": false,
+  "definitions": {
+    "TourTargetType": {
+      "enum": [
+        "concept",
+        "relation",
+        "record",
+        "view"
+      ],
+      "title": "TourTargetType",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "target": {
+      "$ref": "#/definitions/TourTargetType"
+    },
+    "text": {
+      "minLength": 1,
+      "title": "Text",
+      "type": "string"
+    },
+    "uid": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Uid"
+    }
+  },
+  "required": [
+    "target",
+    "text"
+  ],
+  "title": "TourStep",
+  "type": "object",
+  "x-entity-kind": "release"
+}

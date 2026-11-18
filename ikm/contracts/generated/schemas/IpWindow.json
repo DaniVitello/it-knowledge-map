@@ -1,0 +1,28 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "ip_hash": {
+      "minLength": 1,
+      "title": "Ip Hash",
+      "type": "string"
+    },
+    "requests": {
+      "default": 0,
+      "minimum": 0,
+      "title": "Requests",
+      "type": "integer"
+    },
+    "window_start": {
+      "format": "date-time",
+      "title": "Window Start",
+      "type": "string"
+    }
+  },
+  "required": [
+    "ip_hash",
+    "window_start"
+  ],
+  "title": "IpWindow",
+  "type": "object",
+  "x-entity-kind": "service"
+}

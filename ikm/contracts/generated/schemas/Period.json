@@ -1,0 +1,48 @@
+{
+  "additionalProperties": false,
+  "definitions": {
+    "PeriodBasis": {
+      "enum": [
+        "documented",
+        "confirmed_from_metadata"
+      ],
+      "title": "PeriodBasis",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "basis": {
+      "$ref": "#/definitions/PeriodBasis"
+    },
+    "end": {
+      "anyOf": [
+        {
+          "format": "date",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "End"
+    },
+    "precision": {
+      "title": "Precision",
+      "type": "string"
+    },
+    "start": {
+      "format": "date",
+      "title": "Start",
+      "type": "string"
+    }
+  },
+  "required": [
+    "start",
+    "precision",
+    "basis"
+  ],
+  "title": "Period",
+  "type": "object",
+  "x-entity-kind": "release"
+}

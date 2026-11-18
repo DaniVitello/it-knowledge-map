@@ -1,0 +1,115 @@
+{
+  "additionalProperties": false,
+  "definitions": {
+    "MessageRole": {
+      "enum": [
+        "user",
+        "assistant"
+      ],
+      "title": "MessageRole",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "blocks": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Blocks",
+      "type": "array"
+    },
+    "cached": {
+      "default": false,
+      "title": "Cached",
+      "type": "boolean"
+    },
+    "conversation_id": {
+      "minLength": 1,
+      "title": "Conversation Id",
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "degraded": {
+      "default": false,
+      "title": "Degraded",
+      "type": "boolean"
+    },
+    "expires_at": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Expires At"
+    },
+    "id": {
+      "minLength": 1,
+      "title": "Id",
+      "type": "string"
+    },
+    "retrieval_trace": {
+      "additionalProperties": true,
+      "title": "Retrieval Trace",
+      "type": "object"
+    },
+    "role": {
+      "$ref": "#/definitions/MessageRole"
+    },
+    "scope_class": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Scope Class"
+    },
+    "text": {
+      "default": "",
+      "title": "Text",
+      "type": "string"
+    },
+    "tokens_in": {
+      "default": 0,
+      "minimum": 0,
+      "title": "Tokens In",
+      "type": "integer"
+    },
+    "tokens_out": {
+      "default": 0,
+      "minimum": 0,
+      "title": "Tokens Out",
+      "type": "integer"
+    },
+    "ui_actions": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Ui Actions",
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "conversation_id",
+    "role",
+    "created_at"
+  ],
+  "title": "Message",
+  "type": "object",
+  "x-entity-kind": "service"
+}

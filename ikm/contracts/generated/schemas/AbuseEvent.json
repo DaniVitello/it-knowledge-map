@@ -1,0 +1,57 @@
+{
+  "additionalProperties": false,
+  "definitions": {
+    "AbuseKind": {
+      "enum": [
+        "rate_limit",
+        "offtopic",
+        "csrf",
+        "auth_failure",
+        "manual"
+      ],
+      "title": "AbuseKind",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "id": {
+      "minLength": 1,
+      "title": "Id",
+      "type": "string"
+    },
+    "ip_hash": {
+      "minLength": 1,
+      "title": "Ip Hash",
+      "type": "string"
+    },
+    "kind": {
+      "$ref": "#/definitions/AbuseKind"
+    },
+    "user_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "User Id"
+    }
+  },
+  "required": [
+    "id",
+    "ip_hash",
+    "kind",
+    "created_at"
+  ],
+  "title": "AbuseEvent",
+  "type": "object",
+  "x-entity-kind": "service"
+}

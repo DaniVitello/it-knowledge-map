@@ -1,0 +1,39 @@
+{
+  "additionalProperties": false,
+  "definitions": {
+    "ExplanationStatus": {
+      "enum": [
+        "quoted",
+        "authored",
+        "derived",
+        "reviewed",
+        "stale"
+      ],
+      "title": "ExplanationStatus",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "evidence_chunk_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Evidence Chunk Ids",
+      "type": "array"
+    },
+    "status": {
+      "$ref": "#/definitions/ExplanationStatus"
+    },
+    "text": {
+      "title": "Text",
+      "type": "string"
+    }
+  },
+  "required": [
+    "text",
+    "status"
+  ],
+  "title": "Explanation",
+  "type": "object",
+  "x-entity-kind": "release"
+}

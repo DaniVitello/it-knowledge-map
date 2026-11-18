@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ikm"
+version = "2.0.0"
+description = "IT Knowledge Map v2: contratos, pipeline de contenido, backend y web"
+requires-python = ">=3.11"
+dependencies = ["pydantic>=2,<3"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+include = ["ikm*"]
+where = [".."]
+
+[tool.pytest.ini_options]
+testpaths = ["ikm/tests"]
+addopts = "-q"

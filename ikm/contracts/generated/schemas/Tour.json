@@ -1,0 +1,72 @@
+{
+  "additionalProperties": false,
+  "definitions": {
+    "TourStep": {
+      "additionalProperties": false,
+      "properties": {
+        "target": {
+          "$ref": "#/definitions/TourTargetType"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "uid": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Uid"
+        }
+      },
+      "required": [
+        "target",
+        "text"
+      ],
+      "title": "TourStep",
+      "type": "object"
+    },
+    "TourTargetType": {
+      "enum": [
+        "concept",
+        "relation",
+        "record",
+        "view"
+      ],
+      "title": "TourTargetType",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "steps": {
+      "items": {
+        "$ref": "#/definitions/TourStep"
+      },
+      "title": "Steps",
+      "type": "array"
+    },
+    "title": {
+      "minLength": 1,
+      "title": "Title",
+      "type": "string"
+    },
+    "uid": {
+      "pattern": "^t_[0-9A-Z]{10}$",
+      "title": "Uid",
+      "type": "string"
+    }
+  },
+  "required": [
+    "uid",
+    "title"
+  ],
+  "title": "Tour",
+  "type": "object",
+  "x-entity-kind": "release"
+}

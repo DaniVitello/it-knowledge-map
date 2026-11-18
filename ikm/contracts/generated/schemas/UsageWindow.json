@@ -1,0 +1,54 @@
+{
+  "additionalProperties": false,
+  "definitions": {
+    "WindowKind": {
+      "enum": [
+        "hour",
+        "day"
+      ],
+      "title": "WindowKind",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "offtopic": {
+      "default": 0,
+      "minimum": 0,
+      "title": "Offtopic",
+      "type": "integer"
+    },
+    "requests": {
+      "default": 0,
+      "minimum": 0,
+      "title": "Requests",
+      "type": "integer"
+    },
+    "tokens": {
+      "default": 0,
+      "minimum": 0,
+      "title": "Tokens",
+      "type": "integer"
+    },
+    "user_id": {
+      "minLength": 1,
+      "title": "User Id",
+      "type": "string"
+    },
+    "window_kind": {
+      "$ref": "#/definitions/WindowKind"
+    },
+    "window_start": {
+      "format": "date-time",
+      "title": "Window Start",
+      "type": "string"
+    }
+  },
+  "required": [
+    "user_id",
+    "window_kind",
+    "window_start"
+  ],
+  "title": "UsageWindow",
+  "type": "object",
+  "x-entity-kind": "service"
+}

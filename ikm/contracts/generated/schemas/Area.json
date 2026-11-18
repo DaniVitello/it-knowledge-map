@@ -1,0 +1,40 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "color_token": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Color Token"
+    },
+    "name": {
+      "minLength": 1,
+      "title": "Name",
+      "type": "string"
+    },
+    "order": {
+      "minimum": 0,
+      "title": "Order",
+      "type": "integer"
+    },
+    "uid": {
+      "pattern": "^a_[0-9A-Z]{10}$",
+      "title": "Uid",
+      "type": "string"
+    }
+  },
+  "required": [
+    "uid",
+    "name",
+    "order"
+  ],
+  "title": "Area",
+  "type": "object",
+  "x-entity-kind": "release"
+}

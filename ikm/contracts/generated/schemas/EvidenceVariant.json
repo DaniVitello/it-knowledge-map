@@ -1,0 +1,38 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "height": {
+      "minimum": 1,
+      "title": "Height",
+      "type": "integer"
+    },
+    "mime": {
+      "title": "Mime",
+      "type": "string"
+    },
+    "size": {
+      "minimum": 0,
+      "title": "Size",
+      "type": "integer"
+    },
+    "storage_key": {
+      "title": "Storage Key",
+      "type": "string"
+    },
+    "width": {
+      "minimum": 1,
+      "title": "Width",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "width",
+    "height",
+    "storage_key",
+    "mime",
+    "size"
+  ],
+  "title": "EvidenceVariant",
+  "type": "object",
+  "x-entity-kind": "release"
+}

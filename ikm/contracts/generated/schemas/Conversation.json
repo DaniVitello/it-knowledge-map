@@ -1,0 +1,47 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "id": {
+      "minLength": 1,
+      "title": "Id",
+      "type": "string"
+    },
+    "last_message_at": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Last Message At"
+    },
+    "release_id": {
+      "minLength": 1,
+      "title": "Release Id",
+      "type": "string"
+    },
+    "user_id": {
+      "minLength": 1,
+      "title": "User Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "user_id",
+    "release_id",
+    "created_at"
+  ],
+  "title": "Conversation",
+  "type": "object",
+  "x-entity-kind": "service"
+}

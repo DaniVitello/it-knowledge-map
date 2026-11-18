@@ -1,0 +1,130 @@
+{
+  "additionalProperties": false,
+  "definitions": {
+    "EvidenceKind": {
+      "enum": [
+        "image",
+        "video",
+        "document",
+        "link",
+        "code"
+      ],
+      "title": "EvidenceKind",
+      "type": "string"
+    },
+    "EvidenceReview": {
+      "enum": [
+        "manually_reviewed"
+      ],
+      "title": "EvidenceReview",
+      "type": "string"
+    },
+    "EvidenceVariant": {
+      "additionalProperties": false,
+      "properties": {
+        "height": {
+          "minimum": 1,
+          "title": "Height",
+          "type": "integer"
+        },
+        "mime": {
+          "title": "Mime",
+          "type": "string"
+        },
+        "size": {
+          "minimum": 0,
+          "title": "Size",
+          "type": "integer"
+        },
+        "storage_key": {
+          "title": "Storage Key",
+          "type": "string"
+        },
+        "width": {
+          "minimum": 1,
+          "title": "Width",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "width",
+        "height",
+        "storage_key",
+        "mime",
+        "size"
+      ],
+      "title": "EvidenceVariant",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "alt_text": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Alt Text"
+    },
+    "kind": {
+      "$ref": "#/definitions/EvidenceKind"
+    },
+    "mime": {
+      "minLength": 1,
+      "title": "Mime",
+      "type": "string"
+    },
+    "record_uid": {
+      "pattern": "^j_[0-9A-Z]{10}$",
+      "title": "Record Uid",
+      "type": "string"
+    },
+    "review": {
+      "$ref": "#/definitions/EvidenceReview",
+      "default": "manually_reviewed"
+    },
+    "sha256": {
+      "minLength": 1,
+      "title": "Sha256",
+      "type": "string"
+    },
+    "size": {
+      "minimum": 0,
+      "title": "Size",
+      "type": "integer"
+    },
+    "storage_key": {
+      "minLength": 1,
+      "title": "Storage Key",
+      "type": "string"
+    },
+    "uid": {
+      "pattern": "^e_[0-9A-Z]{10}$",
+      "title": "Uid",
+      "type": "string"
+    },
+    "variants": {
+      "items": {
+        "$ref": "#/definitions/EvidenceVariant"
+      },
+      "title": "Variants",
+      "type": "array"
+    }
+  },
+  "required": [
+    "uid",
+    "record_uid",
+    "kind",
+    "storage_key",
+    "sha256",
+    "mime",
+    "size"
+  ],
+  "title": "Evidence",
+  "type": "object",
+  "x-entity-kind": "release"
+}

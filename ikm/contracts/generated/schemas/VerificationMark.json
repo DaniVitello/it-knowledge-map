@@ -1,0 +1,20 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "kind": {
+      "title": "Kind",
+      "type": "string"
+    },
+    "section": {
+      "title": "Section",
+      "type": "string"
+    }
+  },
+  "required": [
+    "section",
+    "kind"
+  ],
+  "title": "VerificationMark",
+  "type": "object",
+  "x-entity-kind": "release"
+}

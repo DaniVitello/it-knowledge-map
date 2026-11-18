@@ -1,0 +1,236 @@
+{
+  "additionalProperties": false,
+  "definitions": {
+    "JourneyKind": {
+      "enum": [
+        "project",
+        "role",
+        "course",
+        "certification",
+        "self_study",
+        "job_change",
+        "other"
+      ],
+      "title": "JourneyKind",
+      "type": "string"
+    },
+    "Period": {
+      "additionalProperties": false,
+      "properties": {
+        "basis": {
+          "$ref": "#/definitions/PeriodBasis"
+        },
+        "end": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "End"
+        },
+        "precision": {
+          "title": "Precision",
+          "type": "string"
+        },
+        "start": {
+          "format": "date",
+          "title": "Start",
+          "type": "string"
+        }
+      },
+      "required": [
+        "start",
+        "precision",
+        "basis"
+      ],
+      "title": "Period",
+      "type": "object"
+    },
+    "PeriodBasis": {
+      "enum": [
+        "documented",
+        "confirmed_from_metadata"
+      ],
+      "title": "PeriodBasis",
+      "type": "string"
+    },
+    "Publication": {
+      "enum": [
+        "private",
+        "candidate",
+        "approved"
+      ],
+      "title": "Publication",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "concept_uids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Concept Uids",
+      "type": "array"
+    },
+    "content_hash": {
+      "minLength": 1,
+      "title": "Content Hash",
+      "type": "string"
+    },
+    "context": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Context"
+    },
+    "decisions": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Decisions",
+      "type": "array"
+    },
+    "description": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Description"
+    },
+    "evidence_uids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Evidence Uids",
+      "type": "array"
+    },
+    "kind": {
+      "items": {
+        "$ref": "#/definitions/JourneyKind"
+      },
+      "title": "Kind",
+      "type": "array"
+    },
+    "objective": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Objective"
+    },
+    "period": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/Period"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "problems": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Problems",
+      "type": "array"
+    },
+    "publication": {
+      "$ref": "#/definitions/Publication",
+      "default": "approved"
+    },
+    "results": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Results",
+      "type": "array"
+    },
+    "slug": {
+      "minLength": 1,
+      "title": "Slug",
+      "type": "string"
+    },
+    "solutions": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Solutions",
+      "type": "array"
+    },
+    "stage": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Stage"
+    },
+    "technologies": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Technologies",
+      "type": "array"
+    },
+    "title": {
+      "minLength": 1,
+      "title": "Title",
+      "type": "string"
+    },
+    "tools": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Tools",
+      "type": "array"
+    },
+    "topics": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Topics",
+      "type": "array"
+    },
+    "uid": {
+      "pattern": "^j_[0-9A-Z]{10}$",
+      "title": "Uid",
+      "type": "string"
+    }
+  },
+  "required": [
+    "uid",
+    "slug",
+    "title",
+    "content_hash"
+  ],
+  "title": "JourneyRecord",
+  "type": "object",
+  "x-entity-kind": "release"
+}

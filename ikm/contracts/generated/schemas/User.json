@@ -1,0 +1,80 @@
+{
+  "additionalProperties": false,
+  "definitions": {
+    "UserStatus": {
+      "enum": [
+        "active",
+        "suspended",
+        "deleted"
+      ],
+      "title": "UserStatus",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "deleted_at": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Deleted At"
+    },
+    "email": {
+      "minLength": 1,
+      "title": "Email",
+      "type": "string"
+    },
+    "email_verified": {
+      "title": "Email Verified",
+      "type": "boolean"
+    },
+    "google_sub": {
+      "minLength": 1,
+      "title": "Google Sub",
+      "type": "string"
+    },
+    "id": {
+      "minLength": 1,
+      "title": "Id",
+      "type": "string"
+    },
+    "last_seen_at": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Last Seen At"
+    },
+    "status": {
+      "$ref": "#/definitions/UserStatus",
+      "default": "active"
+    }
+  },
+  "required": [
+    "id",
+    "google_sub",
+    "email",
+    "email_verified",
+    "created_at"
+  ],
+  "title": "User",
+  "type": "object",
+  "x-entity-kind": "service"
+}

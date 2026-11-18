@@ -1,0 +1,115 @@
+{
+  "additionalProperties": false,
+  "definitions": {
+    "Explanation": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_chunk_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Chunk Ids",
+          "type": "array"
+        },
+        "status": {
+          "$ref": "#/definitions/ExplanationStatus"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "text",
+        "status"
+      ],
+      "title": "Explanation",
+      "type": "object"
+    },
+    "ExplanationStatus": {
+      "enum": [
+        "quoted",
+        "authored",
+        "derived",
+        "reviewed",
+        "stale"
+      ],
+      "title": "ExplanationStatus",
+      "type": "string"
+    },
+    "RelationType": {
+      "enum": [
+        "depends_on",
+        "uses",
+        "implements",
+        "communicates_with",
+        "complements",
+        "prerequisite",
+        "specializes",
+        "applied_in",
+        "untyped"
+      ],
+      "title": "RelationType",
+      "type": "string"
+    },
+    "TypeBasis": {
+      "enum": [
+        "explicit",
+        "reviewed",
+        "none"
+      ],
+      "title": "TypeBasis",
+      "type": "string"
+    }
+  },
+  "description": "Dirigida: A->B y B->A son dos relaciones.",
+  "properties": {
+    "cross_area": {
+      "default": false,
+      "title": "Cross Area",
+      "type": "boolean"
+    },
+    "explanation": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/Explanation"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "source_uid": {
+      "pattern": "^c_[0-9A-Z]{10}$",
+      "title": "Source Uid",
+      "type": "string"
+    },
+    "target_uid": {
+      "pattern": "^c_[0-9A-Z]{10}$",
+      "title": "Target Uid",
+      "type": "string"
+    },
+    "type": {
+      "$ref": "#/definitions/RelationType",
+      "default": "untyped"
+    },
+    "type_basis": {
+      "$ref": "#/definitions/TypeBasis",
+      "default": "none"
+    },
+    "uid": {
+      "pattern": "^r_[0-9a-f]{64}$",
+      "title": "Uid",
+      "type": "string"
+    }
+  },
+  "required": [
+    "uid",
+    "source_uid",
+    "target_uid"
+  ],
+  "title": "Relation",
+  "type": "object",
+  "x-entity-kind": "release"
+}

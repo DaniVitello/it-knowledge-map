@@ -1,0 +1,42 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "concept_uids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Concept Uids",
+      "type": "array"
+    },
+    "tier": {
+      "maximum": 4,
+      "minimum": 1,
+      "title": "Tier",
+      "type": "integer"
+    },
+    "title": {
+      "minLength": 1,
+      "title": "Title",
+      "type": "string"
+    },
+    "uid": {
+      "pattern": "^s_[0-9A-Z]{10}$",
+      "title": "Uid",
+      "type": "string"
+    },
+    "url": {
+      "minLength": 1,
+      "title": "Url",
+      "type": "string"
+    }
+  },
+  "required": [
+    "uid",
+    "url",
+    "title",
+    "tier"
+  ],
+  "title": "Source",
+  "type": "object",
+  "x-entity-kind": "release"
+}
