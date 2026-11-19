@@ -1,13 +1,27 @@
 /** Presentación (/): hero, métricas del release, áreas y cómo leer el mapa. */
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { animate, motion, useMotionValue, useReducedMotion, useTransform } from 'framer-motion';
 import { AlertTriangle, BookOpen, Network, Quote, Sparkles } from 'lucide-react';
 import { useRelease } from '../lib/release';
 import { formatCount } from '../lib/format';
 import AreaCard from '../components/AreaCard';
 import { useRecordView } from '../lib/useExploration';
 
-function Stat({ value, label, delay }: { value: string; label: string; delay: number }) {
+/** Cuenta desde 0 hasta el valor real al montar (respeta reduced-motion). */
+function CountUp({ to, format }: { to: number; format: (n: number) => string }) {
+  const reduced = useReducedMotion();
+  const mv = useMotionValue(reduced ? to : 0);
+  const text = useTransform(mv, (v) => format(Math.round(v)));
+  useEffect(() => {
+    if (reduced) { mv.set(to); return; }
+    const c = animate(mv, to, { duration: 1.2, ease: [0.22, 1, 0.36, 1] });
+    return () => c.stop();
+  }, [to, reduced, mv]);
+  return <motion.span>{text}</motion.span>;
+}
+
+function Stat({ value, label, delay, format }: { value: number; label: string; delay: number; format: (n: number) => string }) {
   return (
     <motion.div
       className="panel px-5 py-4 text-center"
@@ -15,7 +29,7 @@ function Stat({ value, label, delay }: { value: string; label: string; delay: nu
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35, delay }}
     >
-      <p className="text-2xl font-bold tabular-nums text-accent">{value}</p>
+      <p className="text-2xl font-bold tabular-nums text-accent"><CountUp to={value} format={format} /></p>
       <p className="text-xs text-muted mt-0.5">{label}</p>
     </motion.div>
   );
@@ -32,7 +46,7 @@ export default function Home() {
       <section className="relative text-center mb-12">
         <div
           aria-hidden
-          className="absolute inset-x-0 -top-10 h-64 pointer-events-none"
+          className="hero-aurora absolute inset-x-0 -top-10 h-64 pointer-events-none"
           style={{ background: 'radial-gradient(ellipse 60% 50% at 50% 0%, rgb(var(--c-accent) / 0.16), transparent)' }}
         />
         <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
@@ -60,10 +74,10 @@ export default function Home() {
 
       {/* Métricas */}
       <section aria-label="Métricas del release" className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-12">
-        <Stat value={formatCount(counts.concepts)} label="Conceptos" delay={0.05} />
-        <Stat value={formatCount(counts.relations)} label="Relaciones" delay={0.1} />
-        <Stat value={formatCount(counts.areas)} label="Áreas" delay={0.15} />
-        <Stat value={formatCount(counts.chunks)} label="Fragmentos indexados" delay={0.2} />
+        <Stat value={counts.concepts} label="Conceptos" delay={0.05} format={formatCount} />
+        <Stat value={counts.relations} label="Relaciones" delay={0.1} format={formatCount} />
+        <Stat value={counts.areas} label="Áreas" delay={0.15} format={formatCount} />
+        <Stat value={counts.chunks} label="Fragmentos indexados" delay={0.2} format={formatCount} />
       </section>
 
       {/* Áreas */}

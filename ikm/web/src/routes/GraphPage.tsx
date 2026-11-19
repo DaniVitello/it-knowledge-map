@@ -3,12 +3,13 @@
  * lista de conceptos para navegación por teclado (§15.5).
  * Vistas simples codificadas en la URL: ?focus= &area= &from= &to= (§15.2).
  */
-import { useEffect, useMemo, useState } from 'react';
+import { lazy, Suspense, useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
-import { ArrowLeft, GitBranch, Maximize, Network, X } from 'lucide-react';
+import { ArrowLeft, Box, GitBranch, Maximize, Network, Square, X } from 'lucide-react';
 import { useRelease, useRelations } from '../lib/release';
 import { buildAdjacency, edgesAlongPath, neighborsOf, shortestPath, subgraphAround } from '../lib/graph';
 import GraphCanvas from '../components/GraphCanvas';
+const Graph3D = lazy(() => import('../components/Graph3D'));
 import RelationCard from '../components/RelationCard';
 import { AreaBadge } from '../components/ui';
 import { areaColor } from '../lib/format';
@@ -55,6 +56,9 @@ export default function GraphPage() {
   const from = params.get('from') ?? '';
   const to = params.get('to') ?? '';
   const focusParam = params.get('focus');
+  const viewMode = params.get('view') === '2d' ? '2d' : '3d';
+  const areasParam = params.get('areas');
+  const highlightAreas = useMemo(() => areasParam ? new Set(areasParam.split(',').filter(Boolean)) : null, [areasParam]);
 
   const [selected, setSelected] = useState<string | null>(contextUid ?? focusParam);
   const [selectedEdge, setSelectedEdge] = useState<string | null>(null);
@@ -183,6 +187,15 @@ export default function GraphPage() {
           >
             <GitBranch className="h-3.5 w-3.5" aria-hidden /> Camino
           </button>
+          <button
+            className="btn-ghost !py-1.5 !text-xs"
+            onClick={() => setParam('view', viewMode === '3d' ? '2d' : null)}
+            aria-pressed={viewMode === '3d'}
+            title={viewMode === '3d' ? 'Cambiar a vista 2D' : 'Cambiar a vista 3D'}
+          >
+            {viewMode === '3d' ? <Square className="h-3.5 w-3.5" aria-hidden /> : <Box className="h-3.5 w-3.5" aria-hidden />}
+            {viewMode === '3d' ? '2D' : '3D'}
+          </button>
           <button className="btn-ghost !py-1.5 !text-xs" onClick={() => setFitSignal((s) => s + 1)}>
             <Maximize className="h-3.5 w-3.5" aria-hidden /> Encuadrar
           </button>
@@ -204,20 +217,45 @@ export default function GraphPage() {
       )}
 
       <div className="flex-1 flex min-h-0 relative">
-        {/* Canvas */}
-        <GraphCanvas
-          className="flex-1 bg-base"
-          nodes={view.nodes}
-          edges={view.edges}
-          selectedUid={selected}
-          highlightUids={pathUids}
-          highlightEdgeUids={pathEdgeUids}
-          focusUid={contextual ? null : centerRequest}
-          areaFilter={contextual ? null : areaFilter}
-          fitSignal={fitSignal}
-          onSelect={(uid) => selectNode(uid)}
-          onEdgeSelect={(edgeUid) => { setSelectedEdge(edgeUid); setSelected(null); }}
-        />
+        {/* Grafo 3D (default) o 2D (toggle) */}
+        {viewMode === '3d' ? (
+          <Suspense fallback={
+            <div className="flex-1 bg-base flex items-center justify-center text-sm text-muted">
+              <span className="inline-block h-5 w-5 rounded-full border-2 border-line border-t-accent animate-spin mr-2.5" />
+              Cargando grafo 3D…
+            </div>
+          }>
+            <Graph3D
+              className="flex-1 bg-base"
+              nodes={view.nodes}
+              edges={view.edges}
+              selectedUid={selected}
+              highlightUids={pathUids}
+              highlightEdgeUids={pathEdgeUids}
+              highlightAreas={highlightAreas}
+              focusUid={contextual ? null : centerRequest}
+              areaFilter={contextual ? null : areaFilter}
+              fitSignal={fitSignal}
+              onSelect={(uid) => selectNode(uid)}
+              onEdgeSelect={(edgeUid) => { setSelectedEdge(edgeUid); setSelected(null); }}
+            />
+          </Suspense>
+        ) : (
+          <GraphCanvas
+            className="flex-1 bg-base"
+            nodes={view.nodes}
+            edges={view.edges}
+            selectedUid={selected}
+            highlightUids={pathUids}
+            highlightEdgeUids={pathEdgeUids}
+            highlightAreas={highlightAreas}
+            focusUid={contextual ? null : centerRequest}
+            areaFilter={contextual ? null : areaFilter}
+            fitSignal={fitSignal}
+            onSelect={(uid) => selectNode(uid)}
+            onEdgeSelect={(edgeUid) => { setSelectedEdge(edgeUid); setSelected(null); }}
+          />
+        )}
 
         {/* Leyenda de áreas */}
         {!contextual && (

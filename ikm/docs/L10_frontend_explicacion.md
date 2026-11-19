@@ -6,6 +6,8 @@
 > Diseño de referencia: `diseno-tecnico-pipeline-v3.md` §15 (Frontend y visualización), §6.6 (estado de exploración), Apéndice A (orden de entregas).
 > Skill de capa: `.opencode/skills/ikm-v2-layer-coder` (checklist Frontend L4).
 
+> **Actualización (L10b):** el grafo ahora es 3D por defecto (Three.js client-side) y las relaciones se deduplicaron (913 aristas dirigidas → 472 únicas). Este doc describe el estado L10 (2D, 913). Ver `L10b_grafo3d_chat_explicacion.md`.
+
 ---
 
 ## 1. Que es L10 y que resuelve

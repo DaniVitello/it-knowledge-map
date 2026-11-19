@@ -14,6 +14,7 @@ export interface GraphCanvasProps {
   selectedUid?: string | null;
   highlightUids?: Set<string> | null;
   highlightEdgeUids?: Set<string> | null;
+  highlightAreas?: Set<string> | null;
   focusUid?: string | null;
   areaFilter?: string | null;
   /** Incrementar para pedir un re-encuadre animado desde afuera. */
@@ -35,7 +36,7 @@ function easeOutCubic(t: number): number {
 
 export default function GraphCanvas({
   nodes, edges, selectedUid = null, highlightUids = null, highlightEdgeUids = null,
-  focusUid = null, areaFilter = null, fitSignal = 0, onSelect, onEdgeSelect, onHover, className = '',
+  highlightAreas = null, focusUid = null, areaFilter = null, fitSignal = 0, onSelect, onEdgeSelect, onHover, className = '',
 }: GraphCanvasProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const wrapRef = useRef<HTMLDivElement>(null);
@@ -217,6 +218,7 @@ export default function GraphCanvas({
     if (activeSet) for (const u of activeSet) labelUids.add(u);
 
     const nodeAlpha = (n: GraphNode): number => {
+      if (highlightAreas && highlightAreas.size > 0) return highlightAreas.has(n.area_uid ?? '') ? 1 : 0.08;
       if (areaFilter && n.area_uid !== areaFilter) return 0.1;
       if (activeSet && !activeSet.has(n.uid)) return 0.14;
       if (anchor && !focusSet.has(n.uid)) return 0.22;
@@ -251,6 +253,18 @@ export default function GraphCanvas({
       const a = nodeByUid.get(e.source);
       const b = nodeByUid.get(e.target);
       if (!a || !b) continue;
+      if (highlightAreas && highlightAreas.size > 0) {
+        const both = highlightAreas.has(a.area_uid ?? '') && highlightAreas.has(b.area_uid ?? '');
+        const al = both ? 0.85 : 0.03;
+        const col = both ? pal.accent : (pal.areas.get(a.area_uid ?? '') ?? pal.line);
+        ctx.beginPath();
+        ctx.moveTo(sx(a.x), sy(a.y));
+        ctx.lineTo(sx(b.x), sy(b.y));
+        ctx.strokeStyle = col.replace('rgb(', 'rgba(').replace(')', ` / ${al})`);
+        ctx.lineWidth = both ? 1.6 : 1;
+        ctx.stroke();
+        continue;
+      }
       const isHl = highlightEdgeUids?.has(e.uid)
         || (anchor && (e.source === anchor || e.target === anchor));
       const dimByArea = areaFilter && a.area_uid !== areaFilter && b.area_uid !== areaFilter;
@@ -321,7 +335,7 @@ export default function GraphCanvas({
       ctx.fillStyle = uid === selectedUid || uid === hover.current ? pal.accent : pal.ink;
       ctx.fillText(text, lx, ly);
     }
-  }, [nodes, edges, nodeByUid, neighbors, selectedUid, highlightUids, highlightEdgeUids, areaFilter]);
+  }, [nodes, edges, nodeByUid, neighbors, selectedUid, highlightUids, highlightEdgeUids, highlightAreas, areaFilter]);
 
   // Primer paint síncrono: no depender de rAF (pestañas en background lo
   // throttlean; el grafo debe verse igual al montar). Mide, encuadra y dibuja.
@@ -392,7 +406,7 @@ export default function GraphCanvas({
     return () => cancelAnimationFrame(raf);
   }, [draw, fitView]);
 
-  useEffect(() => { dirty.current = true; }, [selectedUid, highlightUids, highlightEdgeUids, areaFilter, draw]);
+  useEffect(() => { dirty.current = true; }, [selectedUid, highlightUids, highlightEdgeUids, highlightAreas, areaFilter, draw]);
 
   // Hit testing
   const hitNode = useCallback((px: number, py: number): GraphNode | null => {

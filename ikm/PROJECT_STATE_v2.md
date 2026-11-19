@@ -11,7 +11,7 @@
 
 ## Capa en curso
 
-**L10 — Frontend (20a navegable + 20b chat): IMPLEMENTADA Y VERIFICADA.** Entrega 1 (sitio navegable sin backend) lista para probar. Pendiente de confirmación del usuario para avanzar.
+**L10b — Grafo 3D + puente chat↔grafo + dedup: IMPLEMENTADA Y VERIFICADA.** Encima de L10 (frontend navegable + chat cliente). El grafo ahora es 3D (client-side), el chat activa relaciones en el grafo, y las conexiones duplicadas se canonicalizaron (913→472). Pendiente de confirmación del usuario para publicar.
 
 ## Qué está hecho
 
@@ -23,8 +23,14 @@
   - Vistas: Home, KB por área, ficha de concepto (10 secciones + marcas + relaciones quoted), grafo 2D canvas (selección/vecindad/camino BFS/filtro por área/teclado), chat cliente (estados + procedencia), Journey/Tours/Privacy/NotFound honestos.
   - Capa de datos: cliente del release estático, búsqueda full-text cliente, grafo (BFS/vecinos), ExplorationState en IndexedDB, wikilinks, contratos TS.
   - Command palette Ctrl+K, temas claro/oscuro, responsive, `prefers-reduced-motion`.
-  - **43 tests Vitest passing · build verde · JS inicial 117.86 KB gz (< 250 KB, §15.5).**
+  - **52 tests Vitest passing · build verde · JS inicial 120.30 KB gz (< 250 KB, §15.5).**
   - Explicación: `ikm/docs/L10_frontend_explicacion.md` (+ copia en `OneDrive\Escritorio`). Decisiones: `ikm/docs/decisions/DR-L10-frontend.md`.
+- **L10b — Grafo 3D, chat↔grafo, dedup, motion (completa, verificada).**
+  - L-data: dedup de relaciones recíprocas por par no ordenado (`content/relations.py::colapsar_reciprocas`), conserva tipo tipado y explicación quoted. 913 aristas dirigidas → 472 únicas. 7 tests.
+  - L-3d: grafo 3D Three.js vanilla + d3-force-3d client-side (`src/components/Graph3D.tsx`, `src/lib/forceLayout.ts`). InstancedMesh + CSS2D labels + bloom neón. Lazy (~140 KB gz). Toggle 2D/3D por URL. Modos: selección, vecindad, camino encuadrado, multi-área. Auto-rotación idle.
+  - L-chat-graph: puente chat↔grafo (`src/lib/chatBridge.ts`): entity linking contra el release → acción de grafo. Vista split en /chat; "Frontend y Backend" resalta esas conexiones. Funciona con backend stub. 9 tests.
+  - L-ui: count-up en métricas, aurora en hero, auto-rotación idle. Todo con prefers-reduced-motion.
+  - Explicación: `ikm/docs/L10b_grafo3d_chat_explicacion.md` (+ copia en Escritorio). Decisiones: `ikm/docs/decisions/DR-L10b-grafo3d-chat.md`.
 
 ## Base de release corregida en L10 (100% reutilizable)
 
@@ -35,12 +41,12 @@ El release estaba incompleto (C9 solo escribía manifest). Se corrigió el plano
 - `content/derivados.py`: layout phyllotaxis por área (determinista, legible).
 - `content/release_build.py`: encadena C0–C9 con área real y slug canónico.
 
-**Release `2026-11-19-77912eef`: 255 conceptos · 913 relaciones (todas quoted) · 2295 chunks · 10 áreas · 262 archivos verificados.** Idempotente (rebuild → mismo id). Gate C7 PASSED, vault intacto.
+**Release vigente `2026-11-19-95e94e92` (post-dedup L-data): 255 conceptos · 472 relaciones únicas (todas quoted) · 2295 chunks · 10 áreas · archivos verificados.** Idempotente. Gate C7 PASSED, vault intacto. (El release L10 previo `77912eef` tenía 913 aristas dirigidas con reciprocidad duplicada.)
 
 ## Datos del vault (relevamiento)
 
 - 266 `.md`: 255 conceptos + 11 índices (excluidos). 255 notas con las 10 secciones.
-- 913 relaciones conceptuales en `Relacionados` (todas con explicación quoted); 14 tipificadas.
+- 913 links dirigidos en `Relacionados` (cada relación aparece en ambas fichas) → 472 pares únicos tras dedup. Todas con explicación quoted; 14 tipificadas.
 - 37 marcas de verificación. Títulos duplicados reales (p.ej. "HTTP" en backend y networking, "routing" ×3) — el grafo los distingue por uid/área.
 
 ## Qué falta (orden de entregas, Apéndice A)
@@ -49,7 +55,7 @@ El release estaba incompleto (C9 solo escribía manifest). Se corrigió el plano
 2. **Entrega 2 — Journey (C5/C6):** curar registros del material crudo (`OneDrive\Escritorio/IT Career - Documentacion del dia` + `docs/`). El autor aprueba; el pipeline no escribe Journey solo. Vistas frontend ya listas (estado honesto con 0 registros).
 3. **Entrega 3 — Chat con LLM real:** el backend actual es stub (echo). Falta auth, limits, retrieval (BM25 ya funcional), verify, adaptador Groq, orquestador. El cliente frontend ya parsea la forma real (`blocks`+`basis`) y etiqueta procedencia.
 4. **Entrega 4 — Eval/CI/operación (L11):** reglas duras 100%, recall@8, publicación tras revisión humana.
-5. **Diferidos por condición:** grafo 3D (Three.js, §15.3), tours, embeddings.
+5. **Diferidos por condición:** tours guiados, embeddings (el grafo 3D de §15.3 ya está implementado en L10b).
 
 ## Cómo reanudar (checklist)
 
@@ -72,4 +78,4 @@ El release estaba incompleto (C9 solo escribía manifest). Se corrigió el plano
 
 ## Nota de atribución
 
-El plano de contenido C2–C9 y el plano de servicio `api/`/`eval/` fueron implementados por OpenCode en sesiones previas (estaban sin commitear). Esta sesión (Hermes) implementó **L10 frontend** y la **base de release** (C9 autocontenido, áreas, layout, imports TS), y commiteó el conjunto v2 funcional en `v2/L10-frontend` para preservarlo. Sin push.
+El plano de contenido C2–C9 y el plano de servicio `api/`/`eval/` fueron implementados por OpenCode en sesiones previas (estaban sin commitear). Esta sesión (Hermes) implementó **L10 frontend**, la **base de release** (C9 autocontenido, áreas, layout, imports TS) y **L10b** (dedup de relaciones, grafo 3D client-side, puente chat↔grafo, motion), y commiteó el conjunto v2 funcional en `v2/L10-frontend` para preservarlo. Sin push.

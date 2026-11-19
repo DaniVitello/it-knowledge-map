@@ -8,10 +8,11 @@ from __future__ import annotations
 
 import re
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Tuple
 
 from ikm.contracts.errors import AbortStage
 from ikm.contracts.release import Explanation, ExplanationStatus, Relation, RelationType, TypeBasis
+from ikm.contracts.ids import uid_relacion
 
 # Tipos validos (seccion 6.3 de la spec)
 TIPOS_VALIDOS = {
@@ -109,6 +110,48 @@ def enriquecer_relaciones(relaciones: List[Relation],
         extraer_quoted(rel, oracion, seccion)
 
     return relaciones
+
+
+def colapsar_reciprocas(relaciones: List[Relation]) -> List[Relation]:
+    """Colapsa pares reciprocos (A->B y B->A) en una conexion unica.
+
+    Los links de 'Relacionados' son simetricos: si A lista B y B lista A, es una
+    sola conexion mutua, no dos. Direccion canonica = uid menor -> uid mayor
+    (determinista). Conserva el tipo tipado si existe y la explicacion con texto.
+    Reduce el grafo a conexiones unicas sin perder provenance: la explicacion
+    quoted se mantiene.
+    """
+    por_par: Dict[Tuple[str, str], List[Relation]] = {}
+    for r in relaciones:
+        if r.source_uid == r.target_uid:
+            continue  # self-loop defensivo
+        clave = tuple(sorted((r.source_uid, r.target_uid)))
+        por_par.setdefault(clave, []).append(r)
+
+    out: List[Relation] = []
+    for clave in sorted(por_par):
+        grupo = por_par[clave]
+        a, b = clave
+        base = next((r for r in grupo if r.source_uid == a), grupo[0])
+        otro = next((r for r in grupo if r is not base), None)
+        # tipo: preferir tipado sobre untyped
+        tipo_rel = base
+        if base.type == RelationType.untyped and otro is not None and otro.type != RelationType.untyped:
+            tipo_rel = otro
+        # explicacion: preferir la que tiene texto (base primero)
+        expl = base.explanation
+        if (expl is None or not expl.text) and otro is not None and otro.explanation is not None:
+            expl = otro.explanation
+        out.append(Relation(
+            uid=uid_relacion(a, b),
+            source_uid=a,
+            target_uid=b,
+            type=tipo_rel.type,
+            type_basis=tipo_rel.type_basis,
+            explanation=expl,
+            cross_area=base.cross_area,
+        ))
+    return out
 
 
 # Excepciones

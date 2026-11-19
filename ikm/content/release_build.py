@@ -21,7 +21,7 @@ from ikm.content.inventory import C0_inventario, _iter_archivos
 from ikm.content.parse import C1_parseo
 from ikm.content.identity import asignar_uids
 from ikm.content.graph import resolver_links
-from ikm.content.relations import enriquecer_relaciones
+from ikm.content.relations import enriquecer_relaciones, colapsar_reciprocas
 from ikm.content.derivados import (
     generar_chunks, generar_indice_bm25, generar_indice_cliente, calcular_posiciones_grafo,
 )
@@ -154,7 +154,7 @@ def release_build() -> Dict[str, Any]:
                 })
 
     def ejecutar_c4():
-        return enriquecer_relaciones(list(rels), wikilinks_info)
+        return colapsar_reciprocas(enriquecer_relaciones(list(rels), wikilinks_info))
     def validar_c4(x):
         return x
     etapa_c4 = ejecutar_etapa("C4", {"notas": len(parsed)}, cfg, WORKDIR, ejecutar_c4, validar_c4, None)
@@ -163,7 +163,7 @@ def release_build() -> Dict[str, Any]:
     runner.registrar(etapa_c4)
     quoted = sum(1 for r in enriched if r.explanation and r.explanation.status.value == "quoted")
     typed = sum(1 for r in enriched if r.type.value != "untyped")
-    print(f"  -> {len(enriched)} relaciones | quoted={quoted} | tipificadas={typed}")
+    print(f"  -> {len(enriched)} conexiones únicas (de {len(rels)} dirigidas) | quoted={quoted} | tipificadas={typed}")
 
     # C5/C6: Journey (sin registros curados por ahora)
     print("[C5] Journey: sin registros curados, skip")

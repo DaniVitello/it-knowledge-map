@@ -104,3 +104,27 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* Labels del grafo 3D (CSS2DRenderer) */
+.graph3d-label {
+  font: 500 11px/1.2 system-ui, sans-serif;
+  color: rgb(var(--c-ink));
+  background: rgb(var(--c-base) / 0.82);
+  border: 1px solid rgb(var(--c-line) / 0.5);
+  padding: 2px 7px;
+  border-radius: 5px;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: opacity 0.18s ease;
+  backdrop-filter: blur(4px);
+}
+
+/* Aurora sutil del hero: deriva lenta, solo transform/opacity (GPU). */
+@keyframes aurora-drift {
+  0%, 100% { transform: translate3d(-3%, 0, 0) scale(1); opacity: 0.75; }
+  50% { transform: translate3d(3%, 2%, 0) scale(1.07); opacity: 1; }
+}
+.hero-aurora { animation: aurora-drift 9s ease-in-out infinite; will-change: transform, opacity; }
+@media (prefers-reduced-motion: reduce) {
+  .hero-aurora { animation: none; }
+}
