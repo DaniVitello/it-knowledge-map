@@ -32,6 +32,7 @@
   - L-ui: count-up en métricas, aurora en hero, auto-rotación idle. Todo con prefers-reduced-motion.
   - Explicación: `ikm/docs/L10b_grafo3d_chat_explicacion.md` (+ copia en Escritorio). Decisiones: `ikm/docs/decisions/DR-L10b-grafo3d-chat.md`.
 - **L10c — Grafo 2D como Obsidian (corrección, verificada).** `GraphCanvas.tsx` reescrito: layout de fuerzas d3-force 2D en vivo (reutiliza d3-force-3d), jerarquía por grado (`nodeR=3+sqrt(grado)*2.8`), nodos arrastrables (fx/fy + reheat), foco al hover/selección, labels con text-fade por zoom, sin halos de área. Reemplaza el phyllotaxis fijo. Modos L10b siguen funcionando. DR-L10c + §9 en el doc L10b.
+- **L10d — Jerarquía por área: cada área con su cabeza (corrección, verificada).** `computeHeads` (forceLayout.ts) elige la cabeza de cada área = mayor grado (data-driven, sin inventar nodos/relaciones). Cabeza fija en el centroide, miembros orbitándola (gravedad 0.25, links débiles 0.06), cabezas realzadas (radio ×2.1+10 en 3D, anillo en 2D, label fijo bold accent, cabeza global en accent). Spokes visibles, inter-área tenues. 2D y 3D. 6 tests nuevos (58 total). DR-L10d + §10 en el doc L10b.
 
 ## Base de release corregida en L10 (100% reutilizable)
 

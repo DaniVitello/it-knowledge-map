@@ -118,6 +118,12 @@
   transition: opacity 0.18s ease;
   backdrop-filter: blur(4px);
 }
+.graph3d-label-head {
+  font-size: 13px;
+  font-weight: 700;
+  border-color: rgb(var(--c-accent) / 0.6);
+  box-shadow: 0 0 12px rgb(var(--c-accent) / 0.25);
+}
 
 /* Aurora sutil del hero: deriva lenta, solo transform/opacity (GPU). */
 @keyframes aurora-drift {

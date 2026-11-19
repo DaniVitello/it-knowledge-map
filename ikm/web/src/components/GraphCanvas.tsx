@@ -12,6 +12,7 @@
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef } from 'react';
 import { forceSimulation, forceLink, forceManyBody, forceCollide, forceX, forceY } from 'd3-force-3d';
 import type { GraphEdge, GraphNode } from '../lib/types';
+import { computeHeads } from '../lib/forceLayout';
 
 export interface GraphCanvasProps {
   nodes: GraphNode[];
@@ -35,14 +36,17 @@ interface SimNode2 {
   uid: string; area_uid: string | null; grado: number;
   x: number; y: number; vx: number; vy: number;
   fx?: number | null; fy?: number | null;
+  isHead?: boolean;
+  anchor?: { x: number; y: number };
+  headRef?: SimNode2 | null;
 }
 
 const MIN_K = 0.12;
 const MAX_K = 9;
 const GOLDEN = 2.399963229728653;
 
-/** Jerarquía visual: radio por grado (hubs notablemente mayores). */
-const nodeR = (grado: number) => Math.min(3 + Math.sqrt(grado) * 2.8, 26);
+/** Jerarquía visual: radio por grado (hubs notablemente mayores); cabezas realzadas. */
+const nodeR = (grado: number, isHead = false) => Math.min(3 + Math.sqrt(grado) * 2.8 + (isHead ? 8 : 0), 34);
 
 function easeOutCubic(t: number): number {
   return 1 - Math.pow(1 - t, 3);
@@ -95,26 +99,32 @@ export default function GraphCanvas({
     const isReduced = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const areaUids = [...new Set(nodes.map((n) => n.area_uid).filter(Boolean))] as string[];
     const seeds = areaSeeds(areaUids);
+    const heads = computeHeads(nodes);
     const simNodes: SimNode2[] = nodes.map((n, i) => {
       const s = seeds.get(n.area_uid ?? '') ?? { x: 0, y: 0 };
+      const isHead = heads.headSet.has(n.uid);
       const a = i * GOLDEN;
-      const rr = 16 * Math.sqrt((i % 50) + 1);
-      return { uid: n.uid, area_uid: n.area_uid, grado: n.grado, x: s.x + Math.cos(a) * rr, y: s.y + Math.sin(a) * rr, vx: 0, vy: 0 };
+      const rr = isHead ? 3 : 16 * Math.sqrt((i % 50) + 1);
+      return { uid: n.uid, area_uid: n.area_uid, grado: n.grado, isHead, x: s.x + Math.cos(a) * rr, y: s.y + Math.sin(a) * rr, vx: 0, vy: 0 };
     });
     const byUid = new Map(simNodes.map((sn) => [sn.uid, sn]));
+    for (const sn of simNodes) {
+      if (sn.isHead) { sn.anchor = seeds.get(sn.area_uid ?? '') ?? { x: 0, y: 0 }; sn.headRef = null; sn.fx = sn.anchor.x; sn.fy = sn.anchor.y; }
+      else { const hu = heads.heads.get(sn.area_uid ?? ''); sn.headRef = hu ? byUid.get(hu) ?? null : null; }
+    }
     const links = edges.map((e) => ({ source: e.source, target: e.target }));
     const sim = forceSimulation(simNodes as any, 2)
-      .force('link', forceLink(links as any).id((d: any) => d.uid).distance(52).strength(0.28))
-      .force('charge', forceManyBody().strength(-85))
-      .force('collide', forceCollide().radius((d: any) => nodeR(d.grado) + 2.5).strength(0.9).iterations(2))
-      .force('x', forceX((d: any) => seeds.get(d.area_uid ?? '')?.x ?? 0).strength(0.05))
-      .force('y', forceY((d: any) => seeds.get(d.area_uid ?? '')?.y ?? 0).strength(0.05))
+      .force('link', forceLink(links as any).id((d: any) => d.uid).distance(40).strength(0.06))
+      .force('charge', forceManyBody().strength(-25))
+      .force('collide', forceCollide().radius((d: any) => nodeR(d.grado, d.isHead) + 2.5).strength(0.9).iterations(2))
+      .force('x', forceX((d: any) => d.isHead ? (d.anchor?.x ?? 0) : (d.headRef?.x ?? 0)).strength((d: any) => d.isHead ? 0.5 : 0.25))
+      .force('y', forceY((d: any) => d.isHead ? (d.anchor?.y ?? 0) : (d.headRef?.y ?? 0)).strength((d: any) => d.isHead ? 0.5 : 0.25))
       .alpha(1).alphaDecay(0.028).velocityDecay(0.4).alphaMin(0.003)
       .stop();
     // Pre-tick: con reduced-motion se resuelve ya; si no, parcial y sigue animando.
     const pre = isReduced ? 300 : 14;
     for (let i = 0; i < pre; i++) sim.tick();
-    return { sim, simNodes, byUid };
+    return { sim, simNodes, byUid, heads };
   }, [nodes, edges]);
 
   // Paleta resuelta desde tokens CSS (se recalcula si cambia el tema).
@@ -295,8 +305,9 @@ export default function GraphCanvas({
         || (anchor && (e.source === anchor || e.target === anchor));
       const dimByArea = areaFilter && na?.area_uid !== areaFilter && nb?.area_uid !== areaFilter;
       const dimBySet = activeSet && !(activeSet.has(e.source) && activeSet.has(e.target));
-      let alpha = 0.14;
-      let width = 1;
+      const spoke = a.isHead || b.isHead;
+      let alpha = spoke ? 0.3 : 0.08;
+      let width = spoke ? 1.3 : 1;
       let color = pal.line;
       if (isHl) { alpha = 0.9; width = 1.7; color = pal.accent; }
       if (dimByArea || dimBySet) alpha = Math.min(alpha, 0.04);
@@ -309,12 +320,12 @@ export default function GraphCanvas({
       ctx.stroke();
     }
 
-    // Nodos (radio por grado = jerarquía; color por área)
+    // Nodos (radio por grado = jerarquía; color por área; cabezas con anillo)
     for (const n of nodes) {
       const p = P.get(n.uid);
       if (!p) continue;
       const alpha = nodeAlpha(n);
-      const r = Math.max(nodeR(n.grado) * k, 1.6);
+      const r = Math.max(nodeR(n.grado, p.isHead) * k, 1.6);
       const color = pal.areas.get(n.area_uid ?? '') ?? pal.line;
       const x = sx(p.x);
       const y = sy(p.y);
@@ -330,6 +341,15 @@ export default function GraphCanvas({
       ctx.arc(x, y, r, 0, Math.PI * 2);
       ctx.fillStyle = color.replace('rgb(', 'rgba(').replace(')', ` / ${alpha})`);
       ctx.fill();
+      if (p.isHead) {
+        // Anillo de cabeza: la cabeza global va en accent, las demás en su área.
+        ctx.beginPath();
+        ctx.arc(x, y, r + 3, 0, Math.PI * 2);
+        ctx.lineWidth = 2;
+        const ringCol = n.uid === simData.heads.globalHead ? pal.accent : color;
+        ctx.strokeStyle = ringCol.replace('rgb(', 'rgba(').replace(')', ` / ${0.75 * alpha})`);
+        ctx.stroke();
+      }
       if (n.uid === selectedUid || n.uid === hover.current) {
         ctx.lineWidth = 1.5;
         ctx.strokeStyle = pal.ink;
@@ -345,7 +365,7 @@ export default function GraphCanvas({
     for (const n of nodes) {
       const p = P.get(n.uid);
       if (!p) continue;
-      const isFocus = focusSet.has(n.uid) || n.uid === selectedUid || (activeSet?.has(n.uid) ?? false);
+      const isFocus = focusSet.has(n.uid) || n.uid === selectedUid || (activeSet?.has(n.uid) ?? false) || (p.isHead ?? false);
       const la = isFocus ? 1 : zoomLabel;
       if (la <= 0.02) continue;
       const na = nodeAlpha(n);
@@ -453,7 +473,7 @@ export default function GraphCanvas({
     let bestD = Infinity;
     for (const n of simData.simNodes) {
       const d = Math.hypot(n.x - wx, n.y - wy);
-      const r = nodeR(n.grado) + 6 / k;
+      const r = nodeR(n.grado, n.isHead) + 6 / k;
       if (d < Math.max(r, 8 / k) && d < bestD) { best = n; bestD = d; }
     }
     return best;
@@ -512,7 +532,7 @@ export default function GraphCanvas({
       const [a, b] = [...pointers.current.values()];
       pinch.current = { dist: Math.hypot(a.x - b.x, a.y - b.y), k: cam.current.k };
       drag.current = null;
-      if (dragNode.current) { dragNode.current.fx = null; dragNode.current.fy = null; dragNode.current = null; simData.sim.alphaTarget(0); }
+      if (dragNode.current) { const dn = dragNode.current; if (dn.isHead && dn.anchor) { dn.fx = dn.anchor.x; dn.fy = dn.anchor.y; } else { dn.fx = null; dn.fy = null; } dragNode.current = null; simData.sim.alphaTarget(0); }
     }
   };
 
@@ -572,8 +592,9 @@ export default function GraphCanvas({
     pointers.current.delete(e.pointerId);
     if (pointers.current.size < 2) pinch.current = null;
     if (dragNode.current) {
-      dragNode.current.fx = null;
-      dragNode.current.fy = null;
+      const dn = dragNode.current;
+      if (dn.isHead && dn.anchor) { dn.fx = dn.anchor.x; dn.fy = dn.anchor.y; }
+      else { dn.fx = null; dn.fy = null; }
       dragNode.current = null;
       simData.sim.alphaTarget(0);
     }

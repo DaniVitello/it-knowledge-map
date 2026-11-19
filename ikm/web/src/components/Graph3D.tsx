@@ -17,7 +17,7 @@ import {
   forceSimulation, forceLink, forceManyBody, forceCollide, forceX, forceY, forceZ,
 } from 'd3-force-3d';
 import type { GraphNode, GraphEdge } from '../lib/types';
-import { areaCentroids, initialPositions, type SimNode } from '../lib/forceLayout';
+import { areaCentroids, initialPositions, computeHeads, type SimNode, type HeadInfo } from '../lib/forceLayout';
 
 export interface Graph3DProps {
   nodes: GraphNode[];
@@ -52,6 +52,7 @@ interface State {
   nodeIndex: Map<string, number>;
   labels: Map<string, CSS2DObject>;
   sim: any;
+  heads: HeadInfo;
   raycaster: THREE.Raycaster;
   pointer: THREE.Vector2;
   hoverUid: string | null;
@@ -113,6 +114,8 @@ function applyHighlight(s: State, p: Graph3DProps) {
     const base = s.palette.get(n.area_uid ?? '') ?? s.accent;
     const f = nodeVisible(n);
     c.copy(base).multiplyScalar(f);
+    if (n.isHead && f >= 1) c.copy(base).multiplyScalar(1.3);
+    if (n.uid === s.heads.globalHead && f >= 1) c.copy(s.accent).multiplyScalar(1.35);
     if (pathSet && pathSet.has(n.uid)) c.copy(base).multiplyScalar(1.4);
     if (n.uid === p.selectedUid) c.copy(s.accent).multiplyScalar(1.5);
     s.nodesMesh.setColorAt(i, c);
@@ -138,7 +141,8 @@ function applyHighlight(s: State, p: Graph3DProps) {
     const isHl = (p.highlightEdgeUids?.has(e.uid)) || (anchor && (e.source === anchor || e.target === anchor));
     const dimArea = p.areaFilter && a.area_uid !== p.areaFilter && b.area_uid !== p.areaFilter;
     const dimPath = pathSet && !(pathSet.has(e.source) && pathSet.has(e.target));
-    let f = 0.28;
+    const spoke = a.isHead || b.isHead;
+    let f = spoke ? 0.5 : 0.18;
     if (isHl) f = 1.3;
     if (dimArea || dimPath) f = 0.04;
     else if (anchor && !isHl) f = 0.06;
@@ -149,8 +153,9 @@ function applyHighlight(s: State, p: Graph3DProps) {
   }
   posAttr.needsUpdate = true;
 
-  // labels: hover, selección, vecinos, camino
+  // labels: hover, selección, vecinos, camino + cabezas de área siempre visibles
   const show = new Set<string>(neighborSet);
+  for (const h of s.heads.headSet) show.add(h);
   if (p.selectedUid) show.add(p.selectedUid);
   if (pathSet) for (const u of pathSet) show.add(u);
   for (const [uid, label] of s.labels) {
@@ -307,27 +312,42 @@ export default function Graph3D(props: Graph3DProps) {
     const edgesLine = new THREE.LineSegments(edgesGeom, edgeMat);
     scene.add(edgesLine);
 
-    // simulación
+    // simulación con jerarquía: cada área tiene su cabeza (mayor grado); los
+    // miembros orbitan la cabeza viva, la cabeza se ancla al centroide del área.
     const areaUids = [...new Set(props.nodes.map((n) => n.area_uid).filter(Boolean))] as string[];
+    const heads = computeHeads(props.nodes);
     const centroids = areaCentroids(areaUids);
-    const simNodes = initialPositions(props.nodes, centroids);
+    const simNodes = initialPositions(props.nodes, centroids, 90, heads.headSet);
     const nodeIndex = new Map(simNodes.map((n, i) => [n.uid, i]));
+    for (const sn of simNodes) {
+      if (sn.isHead) {
+        sn.anchor = centroids.get(sn.area_uid ?? '') ?? { x: 0, y: 0, z: 0 };
+        sn.headRef = null;
+        (sn as any).fx = sn.anchor.x; (sn as any).fy = sn.anchor.y; (sn as any).fz = sn.anchor.z;
+      } else {
+        const hu = heads.heads.get(sn.area_uid ?? '');
+        sn.headRef = hu ? simNodes[nodeIndex.get(hu)!] : null;
+      }
+    }
     const simLinks = props.edges.map((e) => ({ source: e.source, target: e.target, uid: e.uid }));
     const edgeUids = props.edges.map((e) => e.uid);
+    const tx = (d: any) => d.isHead ? (d.anchor?.x ?? 0) : (d.headRef?.x ?? 0);
+    const ty = (d: any) => d.isHead ? (d.anchor?.y ?? 0) : (d.headRef?.y ?? 0);
+    const tz = (d: any) => d.isHead ? (d.anchor?.z ?? 0) : (d.headRef?.z ?? 0);
     const sim = forceSimulation(simNodes as any, 3)
-      .force('link', forceLink(simLinks as any).id((d: any) => d.uid).distance(75).strength(0.22))
-      .force('charge', forceManyBody().strength(-45))
-      .force('collide', forceCollide().radius((d: any) => d.radius + 3).strength(0.7))
-      .force('x', forceX((d: any) => centroids.get(d.area_uid ?? '')?.x ?? 0).strength(0.055))
-      .force('y', forceY((d: any) => centroids.get(d.area_uid ?? '')?.y ?? 0).strength(0.055))
-      .force('z', forceZ((d: any) => centroids.get(d.area_uid ?? '')?.z ?? 0).strength(0.055))
+      .force('link', forceLink(simLinks as any).id((d: any) => d.uid).distance(50).strength(0.06))
+      .force('charge', forceManyBody().strength(-25))
+      .force('collide', forceCollide().radius((d: any) => d.radius + 3).strength(0.85))
+      .force('x', forceX(tx).strength((d: any) => d.isHead ? 0.5 : 0.25))
+      .force('y', forceY(ty).strength((d: any) => d.isHead ? 0.5 : 0.25))
+      .force('z', forceZ(tz).strength((d: any) => d.isHead ? 0.5 : 0.25))
       .alpha(1).alphaDecay(0.022).velocityDecay(0.35);
 
     // labels
     const labels = new Map<string, CSS2DObject>();
     for (const n of simNodes) {
       const div = document.createElement('div');
-      div.className = 'graph3d-label';
+      div.className = n.isHead ? 'graph3d-label graph3d-label-head' : 'graph3d-label';
       div.textContent = n.title;
       div.style.opacity = '0';
       const obj = new CSS2DObject(div);
@@ -338,7 +358,7 @@ export default function Graph3D(props: Graph3DProps) {
 
     const s: State = {
       renderer, labelRenderer, scene, camera, composer, controls, nodesMesh, edgesLine, edgesGeom,
-      simNodes, edgeUids, nodeIndex, labels, sim,
+      simNodes, edgeUids, nodeIndex, labels, sim, heads,
       raycaster: new THREE.Raycaster(), pointer: new THREE.Vector2(),
       hoverUid: null, palette: areas, bg, accent, raf: 0, disposed: false, camTween: null,
       width, height, reduced, dummy: new THREE.Object3D(), downX: 0, downY: 0,
