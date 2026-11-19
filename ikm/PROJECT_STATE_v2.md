@@ -11,7 +11,7 @@
 
 ## Capa en curso
 
-**L10b — Grafo 3D + puente chat↔grafo + dedup: IMPLEMENTADA Y VERIFICADA.** Encima de L10 (frontend navegable + chat cliente). El grafo ahora es 3D (client-side), el chat activa relaciones en el grafo, y las conexiones duplicadas se canonicalizaron (913→472). Pendiente de confirmación del usuario para publicar.
+**L10b — Grafo 3D + puente chat↔grafo + dedup: IMPLEMENTADA Y VERIFICADA.** Encima de L10 (frontend navegable + chat cliente). El grafo ahora es 3D (client-side), el chat activa relaciones en el grafo, y las conexiones duplicadas se canonicalizaron (913→472). **L10c (corrección):** el 2D ahora es como el graph view de Obsidian (layout de fuerzas en vivo + jerarquía por grado + nodos arrastrables). Pendiente de confirmación del usuario para publicar.
 
 ## Qué está hecho
 
@@ -31,6 +31,7 @@
   - L-chat-graph: puente chat↔grafo (`src/lib/chatBridge.ts`): entity linking contra el release → acción de grafo. Vista split en /chat; "Frontend y Backend" resalta esas conexiones. Funciona con backend stub. 9 tests.
   - L-ui: count-up en métricas, aurora en hero, auto-rotación idle. Todo con prefers-reduced-motion.
   - Explicación: `ikm/docs/L10b_grafo3d_chat_explicacion.md` (+ copia en Escritorio). Decisiones: `ikm/docs/decisions/DR-L10b-grafo3d-chat.md`.
+- **L10c — Grafo 2D como Obsidian (corrección, verificada).** `GraphCanvas.tsx` reescrito: layout de fuerzas d3-force 2D en vivo (reutiliza d3-force-3d), jerarquía por grado (`nodeR=3+sqrt(grado)*2.8`), nodos arrastrables (fx/fy + reheat), foco al hover/selección, labels con text-fade por zoom, sin halos de área. Reemplaza el phyllotaxis fijo. Modos L10b siguen funcionando. DR-L10c + §9 en el doc L10b.
 
 ## Base de release corregida en L10 (100% reutilizable)
 

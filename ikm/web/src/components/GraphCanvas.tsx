@@ -1,11 +1,16 @@
-/** Grafo 2D en canvas (DR-L10-02): 255 nodos / 913 aristas a ≥30 fps sin
- * dependencias de grafos. Posiciones precalculadas del release.
- * - Labels solo en hover, selección y vecinos (criterio §15.3).
- * - Pan con drag, zoom con rueda/pinch, click en nodo o arista.
- * - prefers-reduced-motion: sin animaciones de cámara.
+/** Grafo 2D en canvas, layout de fuerzas en vivo estilo Obsidian (DR-L10c).
+ * - Simulación d3-force 2D en el cliente: los nodos se asientan animados y la
+ *   proximidad refleja las conexiones (no posiciones decorativas fijas).
+ * - Jerarquía por grado: el radio crece con la cantidad de conexiones (los hubs
+ *   se ven claramente mayores), además de la agrupación por área.
+ * - Nodos arrastrables (fijá un nodo y la simulación se recalienta), foco al
+ *   hover (vecinos iluminados, resto atenuado), labels que aparecen con el zoom.
+ * - Pan con drag en vacío, zoom con rueda/pinch, click en nodo o arista.
+ * - prefers-reduced-motion: layout resuelto sin animación continua.
  * - Colores resueltos desde los tokens CSS (canvas no lee variables).
  */
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef } from 'react';
+import { forceSimulation, forceLink, forceManyBody, forceCollide, forceX, forceY } from 'd3-force-3d';
 import type { GraphEdge, GraphNode } from '../lib/types';
 
 export interface GraphCanvasProps {
@@ -26,12 +31,32 @@ export interface GraphCanvasProps {
 }
 
 interface Camera { tx: number; ty: number; k: number }
+interface SimNode2 {
+  uid: string; area_uid: string | null; grado: number;
+  x: number; y: number; vx: number; vy: number;
+  fx?: number | null; fy?: number | null;
+}
 
-const MIN_K = 0.15;
-const MAX_K = 8;
+const MIN_K = 0.12;
+const MAX_K = 9;
+const GOLDEN = 2.399963229728653;
+
+/** Jerarquía visual: radio por grado (hubs notablemente mayores). */
+const nodeR = (grado: number) => Math.min(3 + Math.sqrt(grado) * 2.8, 26);
 
 function easeOutCubic(t: number): number {
   return 1 - Math.pow(1 - t, 3);
+}
+
+/** Centroides de área en un círculo (semilla para que agrupen orgánico). */
+function areaSeeds(areaUids: string[], radius = 340): Map<string, { x: number; y: number }> {
+  const m = new Map<string, { x: number; y: number }>();
+  const n = Math.max(areaUids.length, 1);
+  areaUids.forEach((uid, i) => {
+    const a = (i / n) * Math.PI * 2 - Math.PI / 2;
+    m.set(uid, { x: Math.cos(a) * radius, y: Math.sin(a) * radius });
+  });
+  return m;
 }
 
 export default function GraphCanvas({
@@ -47,6 +72,8 @@ export default function GraphCanvas({
   const dirty = useRef(true);
   const pointers = useRef(new Map<number, { x: number; y: number }>());
   const drag = useRef<{ x: number; y: number; tx: number; ty: number; moved: boolean } | null>(null);
+  const dragNode = useRef<SimNode2 | null>(null);
+  const downAt = useRef<{ x: number; y: number; moved: boolean } | null>(null);
   const pinch = useRef<{ dist: number; k: number } | null>(null);
   const reduced = useRef(false);
   const didFit = useRef(false);
@@ -60,6 +87,34 @@ export default function GraphCanvas({
       map.get(e.target)?.add(e.source);
     }
     return map;
+  }, [nodes, edges]);
+
+  // Simulación de fuerzas 2D (Obsidian): link + repulsión + colisión + gravedad
+  // suave por área. Se detiene el timer interno de d3 y se tick-ea en el rAF.
+  const simData = useMemo(() => {
+    const isReduced = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const areaUids = [...new Set(nodes.map((n) => n.area_uid).filter(Boolean))] as string[];
+    const seeds = areaSeeds(areaUids);
+    const simNodes: SimNode2[] = nodes.map((n, i) => {
+      const s = seeds.get(n.area_uid ?? '') ?? { x: 0, y: 0 };
+      const a = i * GOLDEN;
+      const rr = 16 * Math.sqrt((i % 50) + 1);
+      return { uid: n.uid, area_uid: n.area_uid, grado: n.grado, x: s.x + Math.cos(a) * rr, y: s.y + Math.sin(a) * rr, vx: 0, vy: 0 };
+    });
+    const byUid = new Map(simNodes.map((sn) => [sn.uid, sn]));
+    const links = edges.map((e) => ({ source: e.source, target: e.target }));
+    const sim = forceSimulation(simNodes as any, 2)
+      .force('link', forceLink(links as any).id((d: any) => d.uid).distance(52).strength(0.28))
+      .force('charge', forceManyBody().strength(-85))
+      .force('collide', forceCollide().radius((d: any) => nodeR(d.grado) + 2.5).strength(0.9).iterations(2))
+      .force('x', forceX((d: any) => seeds.get(d.area_uid ?? '')?.x ?? 0).strength(0.05))
+      .force('y', forceY((d: any) => seeds.get(d.area_uid ?? '')?.y ?? 0).strength(0.05))
+      .alpha(1).alphaDecay(0.028).velocityDecay(0.4).alphaMin(0.003)
+      .stop();
+    // Pre-tick: con reduced-motion se resuelve ya; si no, parcial y sigue animando.
+    const pre = isReduced ? 300 : 14;
+    for (let i = 0; i < pre; i++) sim.tick();
+    return { sim, simNodes, byUid };
   }, [nodes, edges]);
 
   // Paleta resuelta desde tokens CSS (se recalcula si cambia el tema).
@@ -99,9 +154,9 @@ export default function GraphCanvas({
 
   const fitView = useCallback((animate = true) => {
     const { w, h } = size.current;
-    if (!w || !h || nodes.length === 0) return;
+    if (!w || !h || simData.simNodes.length === 0) return;
     let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
-    for (const n of nodes) {
+    for (const n of simData.simNodes) {
       minX = Math.min(minX, n.x); maxX = Math.max(maxX, n.x);
       minY = Math.min(minY, n.y); maxY = Math.max(maxY, n.y);
     }
@@ -118,10 +173,10 @@ export default function GraphCanvas({
       camAnim.current = null;
     }
     dirty.current = true;
-  }, [nodes]);
+  }, [simData]);
 
   const centerOn = useCallback((uid: string, animate = true) => {
-    const n = nodeByUid.get(uid);
+    const n = simData.byUid.get(uid);
     const { w, h } = size.current;
     if (!n || !w) return;
     // Solo panea: mantener el zoom actual conserva visible la vecindad.
@@ -134,7 +189,7 @@ export default function GraphCanvas({
       camAnim.current = null;
     }
     dirty.current = true;
-  }, [nodeByUid]);
+  }, [simData]);
 
   // Resize + fit inicial
   useEffect(() => {
@@ -161,10 +216,9 @@ export default function GraphCanvas({
 
   useEffect(() => {
     // Cuando cambian los nodos (vista completa <-> contextual), re-encuadrar.
-    // El tick aplica el fit en cuanto conoce el tamaño real del contenedor.
     didFit.current = false;
     dirty.current = true;
-  }, [nodes]);
+  }, [nodes, simData]);
 
   useEffect(() => {
     if (fitSignal > 0) fitView(true);
@@ -172,9 +226,8 @@ export default function GraphCanvas({
 
   useEffect(() => {
     if (!focusUid) return;
-    // Si el tamaño aún no se conoce, el tick encuadra primero (didFit) y
-    // reintentamos el centrado en el próximo frame con tamaño ya disponible.
     let tries = 0;
+    let timer = 0;
     const attempt = () => {
       if (size.current.w > 0) {
         centerOn(focusUid);
@@ -182,7 +235,7 @@ export default function GraphCanvas({
         timer = window.setTimeout(attempt, 50);
       }
     };
-    let timer = window.setTimeout(attempt, 40);
+    timer = window.setTimeout(attempt, 40);
     return () => clearTimeout(timer);
   }, [focusUid, centerOn]);
 
@@ -195,6 +248,7 @@ export default function GraphCanvas({
     const { w, h, dpr } = size.current;
     const { tx, ty, k } = cam.current;
     const pal = palette.current;
+    const P = simData.byUid;
 
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx.clearRect(0, 0, w, h);
@@ -204,59 +258,31 @@ export default function GraphCanvas({
 
     const activeSet = highlightUids;
     const focusSet = new Set<string>();
-    const labelUids = new Set<string>();
     const anchor = hover.current ?? selectedUid;
     if (anchor) {
       focusSet.add(anchor);
-      labelUids.add(anchor);
-      for (const nb of neighbors.get(anchor) ?? []) {
-        focusSet.add(nb);
-        labelUids.add(nb);
-      }
+      for (const nb of neighbors.get(anchor) ?? []) focusSet.add(nb);
     }
-    if (selectedUid) labelUids.add(selectedUid);
-    if (activeSet) for (const u of activeSet) labelUids.add(u);
 
     const nodeAlpha = (n: GraphNode): number => {
       if (highlightAreas && highlightAreas.size > 0) return highlightAreas.has(n.area_uid ?? '') ? 1 : 0.08;
       if (areaFilter && n.area_uid !== areaFilter) return 0.1;
       if (activeSet && !activeSet.has(n.uid)) return 0.14;
-      if (anchor && !focusSet.has(n.uid)) return 0.22;
+      if (anchor && !focusSet.has(n.uid)) return 0.2;
       return 1;
     };
 
-    // Halos suaves por área (agrupación visual)
-    const areaBounds = new Map<string, { cx: number; cy: number; r: number; count: number }>();
-    for (const n of nodes) {
-      if (!n.area_uid) continue;
-      const b = areaBounds.get(n.area_uid) ?? { cx: 0, cy: 0, r: 0, count: 0 };
-      b.cx += n.x; b.cy += n.y; b.count += 1;
-      areaBounds.set(n.area_uid, b);
-    }
-    for (const [areaUid, b] of areaBounds) {
-      const cx = b.cx / b.count;
-      const cy = b.cy / b.count;
-      let r = 0;
-      for (const n of nodes) {
-        if (n.area_uid === areaUid) r = Math.max(r, Math.hypot(n.x - cx, n.y - cy));
-      }
-      const color = pal.areas.get(areaUid) ?? pal.line;
-      const dim = areaFilter && areaUid !== areaFilter;
-      ctx.beginPath();
-      ctx.arc(sx(cx), sy(cy), (r + 34) * k, 0, Math.PI * 2);
-      ctx.fillStyle = color.replace('rgb(', 'rgba(').replace(')', ` / ${dim ? 0.02 : 0.05})`);
-      ctx.fill();
-    }
-
-    // Aristas
+    // Aristas (tenues por defecto, como Obsidian; brillantes al resaltar)
     for (const e of edges) {
-      const a = nodeByUid.get(e.source);
-      const b = nodeByUid.get(e.target);
+      const a = P.get(e.source);
+      const b = P.get(e.target);
       if (!a || !b) continue;
+      const na = nodeByUid.get(e.source);
+      const nb = nodeByUid.get(e.target);
       if (highlightAreas && highlightAreas.size > 0) {
-        const both = highlightAreas.has(a.area_uid ?? '') && highlightAreas.has(b.area_uid ?? '');
+        const both = highlightAreas.has(na?.area_uid ?? '') && highlightAreas.has(nb?.area_uid ?? '');
         const al = both ? 0.85 : 0.03;
-        const col = both ? pal.accent : (pal.areas.get(a.area_uid ?? '') ?? pal.line);
+        const col = both ? pal.accent : pal.line;
         ctx.beginPath();
         ctx.moveTo(sx(a.x), sy(a.y));
         ctx.lineTo(sx(b.x), sy(b.y));
@@ -267,44 +293,42 @@ export default function GraphCanvas({
       }
       const isHl = highlightEdgeUids?.has(e.uid)
         || (anchor && (e.source === anchor || e.target === anchor));
-      const dimByArea = areaFilter && a.area_uid !== areaFilter && b.area_uid !== areaFilter;
+      const dimByArea = areaFilter && na?.area_uid !== areaFilter && nb?.area_uid !== areaFilter;
       const dimBySet = activeSet && !(activeSet.has(e.source) && activeSet.has(e.target));
-      let alpha = 0.16;
+      let alpha = 0.14;
       let width = 1;
       let color = pal.line;
-      if (isHl) { alpha = 0.85; width = 1.6; color = pal.accent; }
-      if (dimByArea || dimBySet) alpha = Math.min(alpha, 0.05);
-      else if (anchor && !isHl) alpha = 0.07;
+      if (isHl) { alpha = 0.9; width = 1.7; color = pal.accent; }
+      if (dimByArea || dimBySet) alpha = Math.min(alpha, 0.04);
+      else if (anchor && !isHl) alpha = 0.06;
       ctx.beginPath();
       ctx.moveTo(sx(a.x), sy(a.y));
       ctx.lineTo(sx(b.x), sy(b.y));
-      ctx.strokeStyle = color.startsWith('rgb(')
-        ? color.replace('rgb(', 'rgba(').replace(')', ` / ${alpha})`)
-        : color;
+      ctx.strokeStyle = color.replace('rgb(', 'rgba(').replace(')', ` / ${alpha})`);
       ctx.lineWidth = width;
       ctx.stroke();
     }
 
-    // Nodos
+    // Nodos (radio por grado = jerarquía; color por área)
     for (const n of nodes) {
+      const p = P.get(n.uid);
+      if (!p) continue;
       const alpha = nodeAlpha(n);
-      const r = Math.min(4 + Math.sqrt(n.grado) * 1.4, 12) * Math.max(k, 0.55);
+      const r = Math.max(nodeR(n.grado) * k, 1.6);
       const color = pal.areas.get(n.area_uid ?? '') ?? pal.line;
-      const x = sx(n.x);
-      const y = sy(n.y);
+      const x = sx(p.x);
+      const y = sy(p.y);
       if (x < -40 || x > w + 40 || y < -40 || y > h + 40) continue;
 
       if (n.uid === selectedUid) {
         ctx.beginPath();
-        ctx.arc(x, y, r + 6, 0, Math.PI * 2);
+        ctx.arc(x, y, r + 5, 0, Math.PI * 2);
         ctx.fillStyle = pal.accent.replace('rgb(', 'rgba(').replace(')', ' / 0.22)');
         ctx.fill();
       }
       ctx.beginPath();
       ctx.arc(x, y, r, 0, Math.PI * 2);
-      ctx.fillStyle = color.startsWith('rgb(')
-        ? color.replace('rgb(', 'rgba(').replace(')', ` / ${alpha})`)
-        : color;
+      ctx.fillStyle = color.replace('rgb(', 'rgba(').replace(')', ` / ${alpha})`);
       ctx.fill();
       if (n.uid === selectedUid || n.uid === hover.current) {
         ctx.lineWidth = 1.5;
@@ -313,29 +337,38 @@ export default function GraphCanvas({
       }
     }
 
-    // Labels (solo hover/selección/vecinos/foco)
+    // Labels: foco (hover/selección/vecinos/camino) siempre; el resto aparece
+    // al acercar (text-fade por zoom, como Obsidian).
+    const zoomLabel = Math.max(0, Math.min(1, (k - 1.05) / 0.5));
     ctx.font = '11px system-ui, sans-serif';
     ctx.textBaseline = 'middle';
-    for (const uid of labelUids) {
-      const n = nodeByUid.get(uid);
-      if (!n) continue;
-      if (areaFilter && n.area_uid !== areaFilter) continue;
-      const x = sx(n.x);
-      const y = sy(n.y);
-      if (x < -100 || x > w + 100 || y < -20 || y > h + 20) continue;
-      const r = Math.min(4 + Math.sqrt(n.grado) * 1.4, 12) * Math.max(k, 0.55);
+    for (const n of nodes) {
+      const p = P.get(n.uid);
+      if (!p) continue;
+      const isFocus = focusSet.has(n.uid) || n.uid === selectedUid || (activeSet?.has(n.uid) ?? false);
+      const la = isFocus ? 1 : zoomLabel;
+      if (la <= 0.02) continue;
+      const na = nodeAlpha(n);
+      if (na < 0.3) continue;
+      if (areaFilter && n.area_uid !== areaFilter && !isFocus) continue;
+      const x = sx(p.x);
+      const y = sy(p.y);
+      if (x < -120 || x > w + 120 || y < -20 || y > h + 20) continue;
+      const r = Math.max(nodeR(n.grado) * k, 1.6);
       const text = n.title;
       const tw = ctx.measureText(text).width;
       const lx = x + r + 6;
       const ly = y;
-      ctx.fillStyle = pal.bg.replace('rgb(', 'rgba(').replace(')', ' / 0.82)');
+      const a = la * (isFocus ? 1 : na);
+      ctx.fillStyle = pal.bg.replace('rgb(', 'rgba(').replace(')', ` / ${0.82 * a})`);
       ctx.beginPath();
       ctx.roundRect(lx - 4, ly - 9, tw + 8, 18, 4);
       ctx.fill();
-      ctx.fillStyle = uid === selectedUid || uid === hover.current ? pal.accent : pal.ink;
+      ctx.fillStyle = (n.uid === selectedUid || n.uid === hover.current ? pal.accent : pal.ink)
+        .replace('rgb(', 'rgba(').replace(')', ` / ${a})`);
       ctx.fillText(text, lx, ly);
     }
-  }, [nodes, edges, nodeByUid, neighbors, selectedUid, highlightUids, highlightEdgeUids, highlightAreas, areaFilter]);
+  }, [nodes, edges, nodeByUid, neighbors, simData, selectedUid, highlightUids, highlightEdgeUids, highlightAreas, areaFilter]);
 
   // Primer paint síncrono: no depender de rAF (pestañas en background lo
   // throttlean; el grafo debe verse igual al montar). Mide, encuadra y dibuja.
@@ -360,9 +393,7 @@ export default function GraphCanvas({
     draw();
   }, [nodes, draw, fitView, refreshPalette]);
 
-  // Loop rAF: dibuja solo cuando hay cambios o animación de cámara.
-  // Además verifica el tamaño del contenedor en cada frame (self-healing):
-  // ResizeObserver puede llegar tarde en dev; sin tamaño, fit/center se abortan.
+  // Loop rAF: tick-ea la simulación mientras se asienta y dibuja con cambios.
   useEffect(() => {
     let raf = 0;
     const tick = (now: number) => {
@@ -384,6 +415,11 @@ export default function GraphCanvas({
           }
         }
       }
+      // Simulación en vivo (salvo reduced-motion): los nodos se asientan animados.
+      if (!reduced.current && simData.sim.alpha() > simData.sim.alphaMin()) {
+        simData.sim.tick();
+        dirty.current = true;
+      }
       const anim = camAnim.current;
       if (anim) {
         const t = Math.min((now - anim.start) / anim.dur, 1);
@@ -404,26 +440,24 @@ export default function GraphCanvas({
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [draw, fitView]);
+  }, [draw, fitView, simData]);
 
   useEffect(() => { dirty.current = true; }, [selectedUid, highlightUids, highlightEdgeUids, highlightAreas, areaFilter, draw]);
 
-  // Hit testing
-  const hitNode = useCallback((px: number, py: number): GraphNode | null => {
+  // Hit testing (sobre posiciones vivas de la simulación)
+  const hitNode = useCallback((px: number, py: number): SimNode2 | null => {
     const { tx, ty, k } = cam.current;
     const wx = (px - tx) / k;
     const wy = (py - ty) / k;
-    let best: GraphNode | null = null;
-    let bestD = 14 / k;
-    for (const n of nodes) {
+    let best: SimNode2 | null = null;
+    let bestD = Infinity;
+    for (const n of simData.simNodes) {
       const d = Math.hypot(n.x - wx, n.y - wy);
-      const r = Math.min(4 + Math.sqrt(n.grado) * 1.4, 12) / k + 6 / k;
-      if (d < Math.max(r, 8 / k) && d < bestD + 14 / k) {
-        if (!best || d < bestD) { best = n; bestD = d; }
-      }
+      const r = nodeR(n.grado) + 6 / k;
+      if (d < Math.max(r, 8 / k) && d < bestD) { best = n; bestD = d; }
     }
     return best;
-  }, [nodes]);
+  }, [simData]);
 
   const hitEdge = useCallback((px: number, py: number): GraphEdge | null => {
     const { tx, ty, k } = cam.current;
@@ -432,8 +466,8 @@ export default function GraphCanvas({
     let best: GraphEdge | null = null;
     let bestD = 6 / k;
     for (const e of edges) {
-      const a = nodeByUid.get(e.source);
-      const b = nodeByUid.get(e.target);
+      const a = simData.byUid.get(e.source);
+      const b = simData.byUid.get(e.target);
       if (!a || !b) continue;
       const dx = b.x - a.x;
       const dy = b.y - a.y;
@@ -445,29 +479,47 @@ export default function GraphCanvas({
       if (d < bestD) { bestD = d; best = e; }
     }
     return best;
-  }, [edges, nodeByUid]);
+  }, [edges, simData]);
 
   const localPoint = (e: { clientX: number; clientY: number }) => {
     const rect = canvasRef.current!.getBoundingClientRect();
     return { x: e.clientX - rect.left, y: e.clientY - rect.top };
   };
+  const toWorld = (p: { x: number; y: number }) => ({
+    x: (p.x - cam.current.tx) / cam.current.k,
+    y: (p.y - cam.current.ty) / cam.current.k,
+  });
 
   const onPointerDown = (e: React.PointerEvent<HTMLCanvasElement>) => {
     canvasRef.current?.setPointerCapture(e.pointerId);
     const p = localPoint(e);
     pointers.current.set(e.pointerId, p);
+    downAt.current = { x: p.x, y: p.y, moved: false };
     if (pointers.current.size === 1) {
-      drag.current = { x: p.x, y: p.y, tx: cam.current.tx, ty: cam.current.ty, moved: false };
+      const n = hitNode(p.x, p.y);
+      if (n) {
+        // Arrastrar nodo: fijarlo y recalentar la simulación (como Obsidian).
+        dragNode.current = n;
+        n.fx = n.x; n.fy = n.y;
+        simData.sim.alphaTarget(0.3);
+        simData.sim.alpha(Math.max(simData.sim.alpha(), 0.3));
+        drag.current = null;
+        canvasRef.current!.style.cursor = 'grabbing';
+      } else {
+        drag.current = { x: p.x, y: p.y, tx: cam.current.tx, ty: cam.current.ty, moved: false };
+      }
     } else if (pointers.current.size === 2) {
       const [a, b] = [...pointers.current.values()];
       pinch.current = { dist: Math.hypot(a.x - b.x, a.y - b.y), k: cam.current.k };
       drag.current = null;
+      if (dragNode.current) { dragNode.current.fx = null; dragNode.current.fy = null; dragNode.current = null; simData.sim.alphaTarget(0); }
     }
   };
 
   const onPointerMove = (e: React.PointerEvent<HTMLCanvasElement>) => {
     const p = localPoint(e);
     if (pointers.current.has(e.pointerId)) pointers.current.set(e.pointerId, p);
+    if (downAt.current && Math.hypot(p.x - downAt.current.x, p.y - downAt.current.y) > 4) downAt.current.moved = true;
 
     if (pinch.current && pointers.current.size === 2) {
       const [a, b] = [...pointers.current.values()];
@@ -477,6 +529,14 @@ export default function GraphCanvas({
       const wx = (mid.x - cam.current.tx) / cam.current.k;
       const wy = (mid.y - cam.current.ty) / cam.current.k;
       cam.current = { k, tx: mid.x - wx * k, ty: mid.y - wy * k };
+      dirty.current = true;
+      return;
+    }
+
+    if (dragNode.current && pointers.current.size === 1) {
+      const w = toWorld(p);
+      dragNode.current.fx = w.x;
+      dragNode.current.fy = w.y;
       dirty.current = true;
       return;
     }
@@ -507,10 +567,20 @@ export default function GraphCanvas({
   const onPointerUp = (e: React.PointerEvent<HTMLCanvasElement>) => {
     const p = localPoint(e);
     const wasDrag = drag.current?.moved;
+    const wasNodeDrag = dragNode.current && downAt.current?.moved;
+    const clickedNode = dragNode.current && !downAt.current?.moved ? dragNode.current : null;
     pointers.current.delete(e.pointerId);
     if (pointers.current.size < 2) pinch.current = null;
+    if (dragNode.current) {
+      dragNode.current.fx = null;
+      dragNode.current.fy = null;
+      dragNode.current = null;
+      simData.sim.alphaTarget(0);
+    }
     if (pointers.current.size === 0) {
-      if (!wasDrag) {
+      if (clickedNode) {
+        onSelect?.(clickedNode.uid);
+      } else if (!wasDrag && !wasNodeDrag) {
         const n = hitNode(p.x, p.y);
         if (n) {
           onSelect?.(n.uid);
@@ -521,11 +591,12 @@ export default function GraphCanvas({
         }
       }
       drag.current = null;
+      downAt.current = null;
+      canvasRef.current!.style.cursor = 'grab';
     }
   };
 
   const onWheel = (e: React.WheelEvent<HTMLCanvasElement>) => {
-    // El preventDefault real lo hace el listener nativo no-pasivo (abajo).
     const p = localPoint(e);
     const factor = Math.exp(-e.deltaY * 0.0012);
     const k = Math.max(MIN_K, Math.min(MAX_K, cam.current.k * factor));
@@ -575,7 +646,7 @@ export default function GraphCanvas({
         ref={canvasRef}
         tabIndex={0}
         role="application"
-        aria-label="Grafo de conceptos. Usá las flechas para moverte, más y menos para zoom, 0 para encuadrar. La lista de conceptos debajo ofrece navegación por teclado completa."
+        aria-label="Grafo de conceptos con layout de fuerzas. Arrastrá un nodo para moverlo, arrastrá el fondo para paneo, rueda para zoom, click para seleccionar. Usá las flechas para moverte, más y menos para zoom, 0 para encuadrar. La lista de conceptos debajo ofrece navegación por teclado completa."
         className="block outline-none cursor-grab focus-visible:ring-2 focus-visible:ring-accent/70"
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}

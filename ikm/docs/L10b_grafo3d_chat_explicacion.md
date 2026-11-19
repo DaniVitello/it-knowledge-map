@@ -132,3 +132,17 @@ Recorridos que cubren esta capa:
 - Browser real (laptop 2 apuntando a laptop 1): render 3D con glow, selección con vecinos iluminados, camino encuadrado, chat→grafo activando Frontend↔Backend, conteos deduplicados (HTTP con 6 relaciones únicas).
 
 Los números y el estado vivo están en `ikm/PROJECT_STATE_v2.md`. Las decisiones puntuales, en `ikm/docs/decisions/DR-L10b-grafo3d-chat.md`.
+
+## 9. Corrección L10c: el 2D ahora es como el graph view de Obsidian
+
+El 2D original tenía un problema de fondo: usaba posiciones fijas del release (phyllotaxis por área). Se veía como un anillo decorativo de puntos casi uniformes, con aristas largas cruzando un centro vacío. La cercanía en pantalla no significaba nada: dos nodos podían estar al lado y no estar relacionados, o estar relacionados y aparecer en extremos opuestos. Eso no es un grafo de conocimiento, es un adorno.
+
+La corrección fue reescribir `src/components/GraphCanvas.tsx` para que use un layout de fuerzas en vivo, como Obsidian. Ahora la simulación corre en el navegador (reutilizo `d3-force-3d` en modo 2D, la misma dependencia del 3D, así no suma peso): fuerza de links que acerca los conectados, repulsión que separa los no conectados, colisión que evita solapamientos, y una gravedad suave por área para que los clusters queden legibles. Los nodos se asientan animados al entrar, y la proximidad por fin refleja las conexiones.
+
+La jerarquía que pediste sale del tamaño: el radio crece con el grado (`nodeR = 3 + sqrt(grado) * 2.8`), así los hubs se ven claramente mayores que los nodos hoja. Eso, sumado a que el layout lleva los nodos muy conectados al centro de su cluster, da la lectura de importancia que tiene Obsidian, además de las conexiones.
+
+El comportamiento también copia a Obsidian: podés arrastrar un nodo individual (se fija con `fx/fy` y la simulación se recalienta, los vecinos se estiran para seguirlo), el hover y la selección hacen foco (vecinos iluminados, resto atenuado), y los labels aparecen al acercar (text-fade por zoom, no todos a la vez). Saqué los halos de área que dibujaba antes, porque Obsidian no los tiene y ensuciaban. Las aristas son finas y tenues por defecto, brillantes solo al resaltar.
+
+Lo que no es idéntico a Obsidian, dicho honestamente: la paleta. Obsidian es más minimalista (fondo negro puro, nodos planos sin brillo). Acá mantengo los colores por área y el tono neón del proyecto, que es parte de su identidad. La estructura y el comportamiento del grafo sí son los de Obsidian; el vestido es el de IT Knowledge Map.
+
+Verificado en browser: layout orgánico con hubs grandes, foco al seleccionar HTTP (vecinos cian iluminados, resto tenue), labels al hacer zoom, y arrastre de nodo con la simulación respondiendo (el nodo movido queda desplazado y sus aristas tensadas). 52 tests y build en verde; el JS inicial sigue en ~120 KB gz porque d3-force ahora se comparte entre el 2D y el 3D en un chunk común. Decisión en `DR-L10c-grafo2d-obsidian.md`.
