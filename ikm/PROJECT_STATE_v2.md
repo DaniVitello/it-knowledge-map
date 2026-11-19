@@ -17,17 +17,17 @@
 - **L0 — Contratos (completa, verificada).** `ikm/contracts/` + 23 JSON Schema + 38 TS generados. 22 tests. Commit `66d970d`.
 - **L1 — Inventario y parseo (completa, verificada).** `ikm/content/`:
   - `inventory.py` (C0), `parse.py` (C1), `publish_config.py`, `schemas.py`, `pipeline.py`, `cli.py`.
-  - `fixtures/vault/` (7 notas sintéticas) y `tests/test_l1_content.py` (**15 passed**).
+  - `fixtures/vault/` (7 notas sintéticas) y `tests/test_l1_content.py` (**40 passed**).
   - Explicación: `ikm/docs/L1_contenido_explicacion.md`.
-  - Commit `90373af`.
-  - Verificado sobre el vault real: **255 notas** inventariadas (11 índices excluidos), 20 con señales; parseo con **940 wikilinks** conceptuales, 35 marcas, 62 notas con las 10 secciones y 193 sin ellas.
+  - Commit `90373af` (+ ajuste `ideas_clave`).
+  - Verificado sobre el vault real (recuperado por el autor): **255 notas**, 64 con señales; **940 wikilinks** conceptuales, 37 marcas, **255 completas / 0 sin secciones**. Vault intacto (hash).
 
 ## Datos del vault (relevamiento L1)
 
 - 266 `.md`: 255 conceptos + 11 índices (excluidos por config).
-- 62 notas con las 10 secciones completas; 193 sin ellas (bloque AI vacío o con `-`).
+- Las 255 notas tienen las 10 secciones (vault recuperado). La 2ª sección se llama `## Ideas clave` → canónica `ideas_clave`.
 - Wikilinks: 940 en `Relacionados` (conceptuales), 255 de navegación (blockquote), 725 de pie.
-- 35 marcas `sin verificar`. 20 notas con señales de escaneo (secretos/emails/rutas/URLs privadas).
+- 37 marcas de verificación. 64 notas con señales de escaneo.
 
 ## Qué falta (orden)
 
@@ -47,6 +47,7 @@
 - **DR-L1-02:** el bloque AI es una zona única; los `##` internos se resuelven como `seccion` del link/marca, no como zonas.
 - **DR-L1-03:** las secciones del contrato se normalizan (sin tildes, sin sufijo entre paréntesis) para tolerar las variantes reales del vault.
 - **DR-L1-04:** `workdir/` es estado y está gitignored; los artefactos con hashes viven ahí.
+- **DR-L1-05:** la 2ª sección del contrato se llama `ideas_clave` (el vault usa `## Ideas clave`); `esqueleto` queda como variante legacy. Solo los encabezados canónicos abren sección; los subtítulos `##` internos no truncan.
 - **Decisiones de encuadre del informe de aplicabilidad (§4)** siguen vigentes.
 
 ## Cómo reanudar (checklist)

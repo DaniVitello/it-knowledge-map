@@ -71,7 +71,7 @@ Archivo: `ikm/contracts/release.py`. Mapea el §0.2 del pseudocódigo y el §7.2
 
 Dos decisiones que vale la pena nombrar:
 
-- **`Concept.sections`** replica las 10 secciones del contrato de v1 (`objetivo`, `esqueleto`, `como_funciona`, `detalles`, `ejemplo_minimo`, `errores_comunes`, `estado_actual`, `conexiones`, `ruta_estudio`, `preguntas_repaso`). Es un modelo propio (`ConceptSections`), no un `Dict[str, str]`: así el esquema obliga a que las claves sean las correctas y el TS generado las expone tipadas. El contenido es de v1 **sin reescritura** (§7.4); `content_hash` es el del texto original.
+- **`Concept.sections`** replica las 10 secciones del contrato de v1 (`objetivo`, `ideas_clave`, `como_funciona`, `detalles`, `ejemplo_minimo`, `errores_comunes`, `estado_actual`, `conexiones`, `ruta_estudio`, `preguntas_repaso`). Es un modelo propio (`ConceptSections`), no un `Dict[str, str]`: así el esquema obliga a que las claves sean las correctas y el TS generado las expone tipadas. El contenido es de v1 **sin reescritura** (§7.4); `content_hash` es el del texto original.
 - **`verification_marks`** registra `sin verificar` / `⚠️ verificar` por sección. Son **señales de integridad de la spec**, no ruido: el diseño §C1 los parsea como flags y prohíbe stripearlos. El test `test_round_trip_concept` los incluye para que no se pierdan en la serialización.
 
 ### 4.2 `Relation` — dirigida, con explicación y estado

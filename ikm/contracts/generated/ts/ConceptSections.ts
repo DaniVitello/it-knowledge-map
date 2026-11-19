@@ -5,8 +5,8 @@ export interface ConceptSections {
   detalles?: (string) | null;
   ejemplo_minimo?: (string) | null;
   errores_comunes?: (string) | null;
-  esqueleto?: (string) | null;
   estado_actual?: (string) | null;
+  ideas_clave?: (string) | null;
   objetivo?: (string) | null;
   preguntas_repaso?: (string) | null;
   ruta_estudio?: (string) | null;

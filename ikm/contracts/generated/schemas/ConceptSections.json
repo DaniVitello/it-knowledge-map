@@ -61,18 +61,6 @@
       "default": null,
       "title": "Errores Comunes"
     },
-    "esqueleto": {
-      "anyOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "null"
-        }
-      ],
-      "default": null,
-      "title": "Esqueleto"
-    },
     "estado_actual": {
       "anyOf": [
         {
@@ -84,6 +72,18 @@
       ],
       "default": null,
       "title": "Estado Actual"
+    },
+    "ideas_clave": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Ideas Clave"
     },
     "objetivo": {
       "anyOf": [

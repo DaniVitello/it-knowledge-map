@@ -28,14 +28,14 @@ Antes de codear se relevó el vault real (255 conceptos + 11 índices, 266 `.md`
 | Notas de concepto | 255 |
 | Índices excluidos por config | 11 |
 | Con el bloque `ai:start`/`ai:end` | 255 |
-| Con las 10 secciones completas | **62** |
-| Con bloque AI vacío o placeholder (`-`) | **193** |
+| Con las 10 secciones completas | **255** |
+| Sin secciones del contrato | **0** |
 | Wikilinks en `Relacionados` | 940 |
 | Wikilinks de navegación (blockquote) | 255 |
 | Wikilinks de pie (prev/next) | 725 |
-| Marcas `sin verificar` | 35 |
+| Marcas de verificación | 37 |
 
-Ese último dato es el más importante: **193 de 255 notas no tienen las secciones del contrato**. El diseño ya lo prevé — *"tolerar estructura de bloque AI variable (no asumir las 10 secciones presentes; reportar ausentes)"* — y C1 las reporta como `sections_missing` en lugar de reventar. No es un aborto: es el estado real del contenido.
+El vault fue recuperado por el autor durante esta capa: las 255 notas tienen ahora las 10 secciones. La segunda sección se llama **`## Ideas clave`** (antes `## Esqueleto`); el contrato la nombra `ideas_clave` y acepta `esqueleto` como variante legacy. C1 sigue tolerando estructura variable: lo que no encuentra va a `sections_missing` como **reporte**, no como aborto.
 
 ---
 
@@ -111,7 +111,7 @@ Zonas que **nunca** se publican (constante `ZONAS_SIEMPRE_EXCLUIDAS`, no configu
 
 ### 5.2 Secciones del contrato y variantes
 
-`_secciones_de(bloque_ai)` extrae las 10 secciones de v1 del bloque AI. El vault real usa variantes ortográficas — `## Esqueleto (el 20% esencial)`, `## Como funciona` (sin tilde), `## Ejemplo minimo` — que `_canon_seccion()` normaliza (quita tildes y sufijos entre paréntesis) antes de mapear. Lo que no encuentra va a `sections_missing`, que es un **reporte**, no un aborto.
+`_secciones_de(bloque_ai)` extrae las 10 secciones del contrato del bloque AI. Solo los encabezados que mapean a una sección canónica **abren** una sección: los subtítulos `##` internos (`## Uso`, `## Metricas`, ejemplos de código) quedan dentro del texto de la sección vigente y no la truncan. `_canon_seccion()` normaliza tildes y sufijos entre paréntesis; `## Ideas clave` mapea a `ideas_clave`. Lo que no encuentra va a `sections_missing`, que es un **reporte**, no un aborto.
 
 ### 5.3 WikiLinks con posición y oración
 
@@ -163,7 +163,7 @@ Es decir: **940 relaciones conceptuales**, que es exactamente lo que C3 va a res
 
 ```
 .venv/Scripts/python.exe -m pytest ikm/tests/test_l1_content.py -q
-15 passed
+40 passed (22 L0 + 18 L1)
 ```
 
 Cubren: inventario y clasificación `private`, no modificación del vault, detección de señales, exclusión de índices, config inválida, parseo completo, secciones ausentes, variantes de título, wikilinks con oración y exclusiones, marcas por sección, fuentes, zonas publicables/excluidas, frontmatter inválido, título no resoluble y round-trip del esquema.
@@ -171,10 +171,11 @@ Cubren: inventario y clasificación `private`, no modificación del vault, detec
 **Ejecución real sobre el vault** (laptop 1):
 
 ```
-inventory: 255 elementos | por_tipo={'markdown': 255} | con_senales=20
+inventory: 255 elementos | por_tipo={'markdown': 255} | con_senales=64
   01 - Software Engineering: 30
   02..10: 25 c/u
-parse: 255 notas | wikilinks=940 | marcas=35 | con_secciones=62 | sin_secciones=193
+parse: 255 notas | wikilinks=940 | marcas=37 | completas=255 | sin_secciones=0
+vault intacto: True
 ```
 
 ---
@@ -183,7 +184,7 @@ parse: 255 notas | wikilinks=940 | marcas=35 | con_secciones=62 | sin_secciones=
 
 - [x] cada concepto del release proviene de una nota del inventario — el inventario es la fuente de verdad; C7 (L4) verifica el vínculo.
 - [x] el vault no cambia (hashes) — `hash_arbol_vault` antes/después en C0 y en cada etapa.
-- [x] marcas de verificación registradas por sección — `_marcas_de`, 35 reales.
+- [x] marcas de verificación registradas por sección — `_marcas_de`, 37 reales.
 - [x] WikiLinks con posición y oración — 940 reales, con `offset` y `oracion`.
 - [ ] pipeline C0–C9 completo sobre el vault sintético — **pendiente L2–L4**.
 

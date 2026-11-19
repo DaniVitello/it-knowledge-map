@@ -21,7 +21,7 @@ ZONAS_SIEMPRE_EXCLUIDAS = ("navegacion", "pie", "mis_notas", "frontmatter", "tit
 # Secciones del contrato de v1 y sus variantes ortograficas reales.
 SECCIONES_CONTRATO = {
     "objetivo": ("objetivo",),
-    "esqueleto": ("esqueleto",),
+    "ideas_clave": ("ideas clave", "esqueleto"),
     "como_funciona": ("como funciona", "como funciona (paso a paso)"),
     "detalles": ("detalles",),
     "ejemplo_minimo": ("ejemplo minimo", "ejemplo minimo practico"),

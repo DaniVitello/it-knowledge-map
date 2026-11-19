@@ -35,7 +35,7 @@ class Source(_Base):
 
 class ConceptSections(_Base):
     objetivo: Optional[str] = None
-    esqueleto: Optional[str] = None
+    ideas_clave: Optional[str] = None
     como_funciona: Optional[str] = None
     detalles: Optional[str] = None
     ejemplo_minimo: Optional[str] = None

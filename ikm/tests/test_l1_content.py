@@ -36,9 +36,9 @@ def cfg():
 
 def test_c0_inventaria_y_clasifica_private(cfg):
     inv = C0_inventario(cfg)
-    assert inv.summary.total == 5
-    assert inv.summary.por_tipo == {"markdown": 5}
-    assert inv.summary.por_clasificacion == {"private": 5}
+    assert inv.summary.total == 6
+    assert inv.summary.por_tipo == {"markdown": 6}
+    assert inv.summary.por_clasificacion == {"private": 6}
     assert all(i.clasificacion == "private" for i in inv.items)
 
 
@@ -64,7 +64,7 @@ def test_c0_detecta_senales(cfg):
 
 def test_c0_excluye_indices(cfg):
     inv = C0_inventario(cfg)
-    assert inv.summary.total == 5     # 7 notas - 2 indices
+    assert inv.summary.total == 6     # 7 notas - 2 indices
 
 
 def test_c0_config_invalida():
@@ -91,7 +91,7 @@ def test_c1_reporta_secciones_ausentes(cfg):
 
 
 def test_c1_variantes_de_titulo(cfg):
-    assert _canon_seccion("Esqueleto (el 20% esencial)") == "esqueleto"
+    assert _canon_seccion("Ideas clave") == "ideas_clave"
     assert _canon_seccion("Como funciona") == "como_funciona"
     assert _canon_seccion("Ejemplo minimo") == "ejemplo_minimo"
     assert _canon_seccion("Preguntas de repaso") == "preguntas_repaso"
@@ -163,3 +163,27 @@ def test_c1_round_trip(cfg):
     parsed = C1_parseo([(nota, "t9")], cfg)[0]
     de_vuelta = type(parsed).model_validate(json.loads(parsed.model_dump_json()))
     assert de_vuelta == parsed
+
+
+def test_c1_ideas_clave_es_seccion_canonica(cfg):
+    nota = FIX / "01 - Area A" / "04 - Ideas.md"
+    parsed = C1_parseo([(nota, "t10")], cfg)[0]
+    assert parsed.sections.ideas_clave is not None
+    assert "Punto" in parsed.sections.ideas_clave
+    assert parsed.sections_missing == []
+
+
+def test_c1_subtitulos_no_truncan_secciones(cfg):
+    nota = FIX / "01 - Area A" / "04 - Ideas.md"
+    parsed = C1_parseo([(nota, "t11")], cfg)[0]
+    # los subtitulos ## Uso / ## Metricas quedan dentro de Detalles
+    assert "Subtitulo interno" in parsed.sections.detalles
+    assert "Otro subtitulo" in parsed.sections.detalles
+    # el codigo con # comentario no abre seccion
+    assert "Variables y tipos" in parsed.sections.ejemplo_minimo
+    assert parsed.sections.errores_comunes is not None
+
+
+def test_c1_canon_ideas_clave():
+    assert _canon_seccion("Ideas clave") == "ideas_clave"
+    assert _canon_seccion("Ideas Clave") == "ideas_clave"

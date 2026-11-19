@@ -22,7 +22,7 @@ Apunte manual del autor. No se publica.
 ## Objetivo
 Entender Alpha. Sin verificar este punto.
 
-## Esqueleto (el 20% esencial)
+## Ideas clave
 1. **Punto** – detalle.
 
 ## Como funciona

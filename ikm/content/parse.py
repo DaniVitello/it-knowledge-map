@@ -252,16 +252,19 @@ def _fuentes_de(cuerpo: str) -> List[SourceRef]:
 
 
 def _secciones_de(bloque_ai: str) -> Tuple[ConceptSections, List[str]]:
-    """Extrae las 10 secciones del contrato del bloque AI. Reporta ausentes."""
-    secciones = list(H2.finditer(bloque_ai))
+    """Extrae las 10 secciones del contrato del bloque AI. Reporta ausentes.
+
+    Solo los encabezados que mapean a una seccion canonica ABREN una seccion.
+    Los subtitulos `##` internos (ej. "Uso", "Metricas", ejemplos de codigo)
+    quedan dentro del texto de la seccion vigente: no la truncan.
+    """
+    heads = [(m.start(), m.end(), _canon_seccion(m.group(1))) for m in H2.finditer(bloque_ai)]
+    canonicos = [(s, e, c) for s, e, c in heads if c]
     por_canon: Dict[str, str] = {}
-    for i, m in enumerate(secciones):
-        canon = _canon_seccion(m.group(1))
-        if not canon or canon in por_canon:
-            continue
-        inicio = m.end()
-        fin = secciones[i + 1].start() if i + 1 < len(secciones) else len(bloque_ai)
-        por_canon[canon] = bloque_ai[inicio:fin].strip()
+    for i, (s, e, c) in enumerate(canonicos):
+        fin = canonicos[i + 1][0] if i + 1 < len(canonicos) else len(bloque_ai)
+        if c not in por_canon:
+            por_canon[c] = bloque_ai[e:fin].strip()
     data = {k: v for k, v in por_canon.items() if v}
     ausentes = [c for c in SECCIONES_CONTRATO if c not in por_canon or not por_canon[c]]
     return ConceptSections(**data), ausentes
