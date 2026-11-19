@@ -1,4 +1,7 @@
 // Generado desde contracts. No editar a mano.
+import type { JourneyKind } from './JourneyKind';
+import type { Period } from './Period';
+import type { Publication } from './Publication';
 export interface JourneyRecord {
   concept_uids?: Array<string>;
   content_hash: string;

@@ -1,0 +1,15 @@
+area: "Project Management"
+context_framing: "Gestion de proyectos y metodologias agiles"
+professional_roles:
+  - "Project Manager"
+style_example: "Practico, con metodologias y herramientas"
+response_mode: "educativo"
+preferred_domains:
+  - "pmi.org"
+  - "scrum.org"
+seed_urls: []
+default_volatility: "semi_stable"
+volatility_overrides: {}
+context_questions:
+  - "Que es y para que sirve?"
+  - "Como se aplica en la practica?"

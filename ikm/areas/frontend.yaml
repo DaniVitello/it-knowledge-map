@@ -1,0 +1,15 @@
+area: "Frontend"
+context_framing: "Desarrollo frontend moderno"
+professional_roles:
+  - "Frontend Developer"
+style_example: "Practico, con ejemplos de codigo"
+response_mode: "educativo"
+preferred_domains:
+  - "developer.mozilla.org"
+  - "react.dev"
+seed_urls: []
+default_volatility: "semi_stable"
+volatility_overrides: {}
+context_questions:
+  - "Que es y para que sirve?"
+  - "Como se aplica en la practica?"

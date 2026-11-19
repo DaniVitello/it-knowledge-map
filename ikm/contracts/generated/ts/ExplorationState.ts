@@ -1,4 +1,7 @@
 // Generado desde contracts. No editar a mano.
+import type { Camera } from './Camera';
+import type { Origin } from './Origin';
+import type { ViewType } from './ViewType';
 export interface ExplorationState {
   camera?: (Camera) | null;
   created_at?: (string) | null;

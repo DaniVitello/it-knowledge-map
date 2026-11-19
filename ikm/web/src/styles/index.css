@@ -1,0 +1,106 @@
+@import './tokens.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+  body {
+    @apply bg-base text-ink font-sans;
+    margin: 0;
+    min-height: 100vh;
+  }
+  ::selection {
+    @apply bg-accent/30;
+  }
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent/70 ring-offset-2 ring-offset-base;
+  }
+  /* Scrollbar discreta */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(var(--c-line)) transparent;
+  }
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: rgb(var(--c-line));
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  .panel {
+    @apply bg-surface/80 border border-line/60 rounded-xl backdrop-blur-sm;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-medium;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-3.5 py-2 text-sm font-medium
+      transition-colors duration-150 select-none cursor-pointer;
+  }
+  .btn-primary {
+    @apply btn bg-accent text-white hover:bg-accent/85;
+  }
+  .btn-ghost {
+    @apply btn border border-line/70 text-ink hover:bg-raised/70;
+  }
+  .input {
+    @apply w-full rounded-lg border border-line/70 bg-raised/50 px-3 py-2 text-sm text-ink
+      placeholder:text-faint focus:border-accent/60;
+  }
+  .skeleton {
+    @apply rounded-md bg-raised/80 animate-shimmer;
+    background-image: linear-gradient(
+      90deg,
+      rgb(var(--c-raised)) 0px,
+      rgb(var(--c-line) / 0.5) 40px,
+      rgb(var(--c-raised)) 80px
+    );
+    background-size: 400px 100%;
+  }
+}
+
+/* Markdown de las fichas */
+.prose-ikm {
+  @apply text-[15px] leading-relaxed text-ink/90;
+}
+.prose-ikm h1, .prose-ikm h2, .prose-ikm h3 {
+  @apply font-semibold text-ink mt-5 mb-2;
+}
+.prose-ikm h1 { @apply text-xl; }
+.prose-ikm h2 { @apply text-lg; }
+.prose-ikm h3 { @apply text-base; }
+.prose-ikm p { @apply my-2.5; }
+.prose-ikm ul { @apply list-disc pl-5 my-2.5 space-y-1; }
+.prose-ikm ol { @apply list-decimal pl-5 my-2.5 space-y-1; }
+.prose-ikm code {
+  @apply font-mono text-[13px] bg-raised/90 border border-line/50 rounded px-1.5 py-0.5;
+}
+.prose-ikm pre {
+  @apply bg-raised/70 border border-line/50 rounded-lg p-3.5 overflow-x-auto my-3;
+}
+.prose-ikm pre code { @apply bg-transparent border-0 p-0; }
+.prose-ikm blockquote {
+  @apply border-l-2 border-accent/50 pl-3.5 text-muted italic my-3;
+}
+.prose-ikm a { @apply text-accent underline decoration-accent/40 underline-offset-2 hover:decoration-accent; }
+.prose-ikm table { @apply w-full text-sm my-3 border-collapse; }
+.prose-ikm th, .prose-ikm td { @apply border border-line/60 px-2.5 py-1.5 text-left; }
+.prose-ikm th { @apply bg-raised/70 font-semibold; }
+.prose-ikm hr { @apply border-line/50 my-5; }
+
+/* Accesibilidad: movimiento reducido (criterio 15.5) */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

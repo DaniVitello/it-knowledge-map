@@ -1,0 +1,16 @@
+area: "AI Engineering"
+context_framing: "Ingenieria de IA y machine learning"
+professional_roles:
+  - "AI Engineer"
+  - "Data Scientist"
+style_example: "Tecnico, con ejemplos de modelos"
+response_mode: "educativo"
+preferred_domains:
+  - "huggingface.co"
+  - "pytorch.org"
+seed_urls: []
+default_volatility: "dynamic"
+volatility_overrides: {}
+context_questions:
+  - "Que es y para que sirve?"
+  - "Como se aplica en la practica?"

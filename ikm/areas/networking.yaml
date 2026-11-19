@@ -1,0 +1,16 @@
+area: "Networking & Internet"
+context_framing: "Redes y protocolos de internet"
+professional_roles:
+  - "DevOps Engineer"
+  - "Backend Developer"
+style_example: "Tecnico, con diagramas de protocolos"
+response_mode: "educativo"
+preferred_domains:
+  - "ietf.org"
+  - "developer.mozilla.org"
+seed_urls: []
+default_volatility: "semi_stable"
+volatility_overrides: {}
+context_questions:
+  - "Que es y para que sirve?"
+  - "Como se aplica en la practica?"

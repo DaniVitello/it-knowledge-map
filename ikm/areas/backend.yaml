@@ -1,0 +1,15 @@
+area: "Backend"
+context_framing: "Desarrollo backend y APIs"
+professional_roles:
+  - "Backend Developer"
+style_example: "Tecnico, con patrones de diseño"
+response_mode: "educativo"
+preferred_domains:
+  - "docs.python.org"
+  - "nodejs.org"
+seed_urls: []
+default_volatility: "semi_stable"
+volatility_overrides: {}
+context_questions:
+  - "Que es y para que sirve?"
+  - "Como se aplica en la practica?"

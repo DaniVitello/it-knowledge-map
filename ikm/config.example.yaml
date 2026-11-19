@@ -1,0 +1,43 @@
+# Configuracion de ejemplo para IT Knowledge Map v2
+# Copiar a config.yaml y completar con valores reales (config.yaml esta gitignored)
+
+vault_root: "C:/Users/DGVit/Proyectos/IT Career/IT-Mind-Map"
+journey_raw_roots: []
+include:
+  - "**/*.md"
+exclude:
+  - "**/00 - *ndice*.md"
+  - "**/.obsidian/**"
+  - "**/.trash/**"
+publishable_zones:
+  - "bloque_ai"
+  - "relacionados"
+  - "que_abarca"
+scan_patterns:
+  - "-----BEGIN [A-Z ]*PRIVATE KEY-----"
+  - "AKIA[0-9A-Z]{16}"
+  - "sk-[A-Za-z0-9]{20,}"
+  - "ghp_[A-Za-z0-9]{36}"
+  - "AIza[0-9A-Za-z_\\-]{35}"
+
+# Backend
+backend:
+  provider: "groq"
+  modelo: "openai/gpt-oss-120b"
+  reasoning_effort: "low"
+  temperatura: 0.2
+  timeout_segundos: 20
+
+# Auth (Google OAuth)
+auth:
+  google_client_id: ""
+  google_client_secret: ""
+  redirect_uri: "http://localhost:8000/api/auth/google/callback"
+
+# Limites
+limits:
+  max_message_chars: 800
+  max_output_tokens: 700
+  user_tokens_per_day: 40000
+  global_tokens_per_day_ratio: 0.8
+PYEOF

@@ -1,0 +1,16 @@
+area: "Operating Systems & Linux"
+context_framing: "Sistemas operativos y Linux"
+professional_roles:
+  - "DevOps Engineer"
+  - "SRE"
+style_example: "Tecnico, con comandos de terminal"
+response_mode: "educativo"
+preferred_domains:
+  - "kernel.org"
+  - "man7.org"
+seed_urls: []
+default_volatility: "stable"
+volatility_overrides: {}
+context_questions:
+  - "Que es y para que sirve?"
+  - "Como se aplica en la practica?"

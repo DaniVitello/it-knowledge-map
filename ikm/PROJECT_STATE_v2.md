@@ -3,66 +3,73 @@
 > Estado compartido entre sesiones. **Leer esto primero.** El plan vive en disco, no en la memoria del chat.
 
 **Proyecto:** `C:\Users\DGVit\Proyectos\IT Career\ikm\`
-**Rama actual:** `v2/L1-contenido` (commit `90373af`)
+**Rama actual:** `v2/L10-frontend` (frontend navegable + base de release).
 **Servidor OpenCode (laptop 1):** `http://192.168.0.107:26826` · Basic `opencode:<password>` (password en `C:\Users\DGVit\Proyectos\run_opencode*.bat`, NUNCA en chat/docs).
+**Sitio navegable (dev, laptop 1):** `http://192.168.0.107:5173/` · backend chat stub `127.0.0.1:8000`.
 
 ---
 
 ## Capa en curso
 
-**L2 — Identidad y grafo (C2–C3).** No empezada.
+**L10 — Frontend (20a navegable + 20b chat): IMPLEMENTADA Y VERIFICADA.** Entrega 1 (sitio navegable sin backend) lista para probar. Pendiente de confirmación del usuario para avanzar.
 
 ## Qué está hecho
 
-- **L0 — Contratos (completa, verificada).** `ikm/contracts/` + 23 JSON Schema + 38 TS generados. 22 tests. Commit `66d970d`.
-- **L1 — Inventario y parseo (completa, verificada).** `ikm/content/`:
-  - `inventory.py` (C0), `parse.py` (C1), `publish_config.py`, `schemas.py`, `pipeline.py`, `cli.py`.
-  - `fixtures/vault/` (7 notas sintéticas) y `tests/test_l1_content.py` (**40 passed**).
-  - Explicación: `ikm/docs/L1_contenido_explicacion.md`.
-  - Commit `90373af` (+ ajuste `ideas_clave`).
-  - Verificado sobre el vault real (recuperado por el autor): **255 notas**, 64 con señales; **940 wikilinks** conceptuales, 37 marcas, **255 completas / 0 sin secciones**. Vault intacto (hash).
+- **L0 — Contratos (completa).** `ikm/contracts/` + 23 JSON Schema + 38 TS generados. **Fix L10:** los TS ahora importan los tipos que referencian (`generate.py`, DR-L10-04) — antes no compilaban como módulos.
+- **L1 — Inventario y parseo (completa).** `content/inventory.py` (C0), `parse.py` (C1). 255 notas, 10 secciones, vault intacto.
+- **L2–L4 — Identidad, grafo, relaciones, gate, derivados, release (plano de contenido C2–C9).** Implementado por OpenCode (sin commitear hasta esta sesión). **Base L10:** release ahora autocontenido y verificado (ver abajo).
+- **L10 — Frontend (completa, verificada).** `ikm/web/`:
+  - Stack: React 18 + Vite 5 + TS strict + Tailwind (tokens dark-first) + React Router 6 + TanStack Query 5 + Framer Motion.
+  - Vistas: Home, KB por área, ficha de concepto (10 secciones + marcas + relaciones quoted), grafo 2D canvas (selección/vecindad/camino BFS/filtro por área/teclado), chat cliente (estados + procedencia), Journey/Tours/Privacy/NotFound honestos.
+  - Capa de datos: cliente del release estático, búsqueda full-text cliente, grafo (BFS/vecinos), ExplorationState en IndexedDB, wikilinks, contratos TS.
+  - Command palette Ctrl+K, temas claro/oscuro, responsive, `prefers-reduced-motion`.
+  - **43 tests Vitest passing · build verde · JS inicial 117.86 KB gz (< 250 KB, §15.5).**
+  - Explicación: `ikm/docs/L10_frontend_explicacion.md` (+ copia en `OneDrive\Escritorio`). Decisiones: `ikm/docs/decisions/DR-L10-frontend.md`.
 
-## Datos del vault (relevamiento L1)
+## Base de release corregida en L10 (100% reutilizable)
 
-- 266 `.md`: 255 conceptos + 11 índices (excluidos por config).
-- Las 255 notas tienen las 10 secciones (vault recuperado). La 2ª sección se llama `## Ideas clave` → canónica `ideas_clave`.
-- Wikilinks: 940 en `Relacionados` (conceptuales), 255 de navegación (blockquote), 725 de pie.
-- 37 marcas de verificación. 64 notas con señales de escaneo.
+El release estaba incompleto (C9 solo escribía manifest). Se corrigió el plano de contenido:
+- `content/package.py`: C9 escribe cada payload atómico + verifica hash contra disco (fail-closed).
+- `content/release_files.py`: arma release.json, areas.json, graph.json, concepts/<uid>.json, relations.json, client-index.json, chunks.json, graph-positions.json.
+- `content/areas_catalog.py`: áreas reales (uid=slug, orden, color_token).
+- `content/derivados.py`: layout phyllotaxis por área (determinista, legible).
+- `content/release_build.py`: encadena C0–C9 con área real y slug canónico.
 
-## Qué falta (orden)
+**Release `2026-11-19-77912eef`: 255 conceptos · 913 relaciones (todas quoted) · 2295 chunks · 10 áreas · 262 archivos verificados.** Idempotente (rebuild → mismo id). Gate C7 PASSED, vault intacto.
 
-1. **L2** — C2 registro de identidad (uid opaco + detección de renombres + tombstones), C3 grafo (resolver los 940 wikilinks de `Relacionados`, excluir navegación/Mis notas/bloques de código).
-2. **L3** — C4 relaciones tipadas + C5 Journey + C6 vínculos.
-3. **L4** — C7 compuerta, C8 derivados, C9 release.
-4. **L5–L10** — backend, límites, RAG, chat, verificación, frontend.
-5. **L11** — eval, CI, operación.
-6. **P1–P5** (reparar v1) se resuelven al importar v1; L2 no lo necesita (trabajo nuevo).
+## Datos del vault (relevamiento)
 
-## Decisiones registradas
+- 266 `.md`: 255 conceptos + 11 índices (excluidos). 255 notas con las 10 secciones.
+- 913 relaciones conceptuales en `Relacionados` (todas con explicación quoted); 14 tipificadas.
+- 37 marcas de verificación. Títulos duplicados reales (p.ej. "HTTP" en backend y networking, "routing" ×3) — el grafo los distingue por uid/área.
 
-- **DR-L0-01:** Pydantic v2 como única fuente de verdad (JSON Schema + TS generados).
-- **DR-L0-02:** los enums de Python se emiten como alias de tipo TS propios.
-- **DR-L0-03:** `Config.hash_config()` con `json.dumps(..., sort_keys=True)` (el build de pydantic del venv no acepta `sort_keys` en `model_dump_json`).
-- **DR-L1-01:** rebuild limpio para parseo (no importar `main/registry` roto). Toma v1 como referencia.
-- **DR-L1-02:** el bloque AI es una zona única; los `##` internos se resuelven como `seccion` del link/marca, no como zonas.
-- **DR-L1-03:** las secciones del contrato se normalizan (sin tildes, sin sufijo entre paréntesis) para tolerar las variantes reales del vault.
-- **DR-L1-04:** `workdir/` es estado y está gitignored; los artefactos con hashes viven ahí.
-- **DR-L1-05:** la 2ª sección del contrato se llama `ideas_clave` (el vault usa `## Ideas clave`); `esqueleto` queda como variante legacy. Solo los encabezados canónicos abren sección; los subtítulos `##` internos no truncan.
-- **Decisiones de encuadre del informe de aplicabilidad (§4)** siguen vigentes.
+## Qué falta (orden de entregas, Apéndice A)
+
+1. **Confirmar L10 con el usuario** y publicar el release (C7 gate + revisión humana del diff → `releases/`, L11).
+2. **Entrega 2 — Journey (C5/C6):** curar registros del material crudo (`OneDrive\Escritorio/IT Career - Documentacion del dia` + `docs/`). El autor aprueba; el pipeline no escribe Journey solo. Vistas frontend ya listas (estado honesto con 0 registros).
+3. **Entrega 3 — Chat con LLM real:** el backend actual es stub (echo). Falta auth, limits, retrieval (BM25 ya funcional), verify, adaptador Groq, orquestador. El cliente frontend ya parsea la forma real (`blocks`+`basis`) y etiqueta procedencia.
+4. **Entrega 4 — Eval/CI/operación (L11):** reglas duras 100%, recall@8, publicación tras revisión humana.
+5. **Diferidos por condición:** grafo 3D (Three.js, §15.3), tours, embeddings.
 
 ## Cómo reanudar (checklist)
 
-1. Cargar skill `opencode-remote` + `it-career-pipeline`.
+1. Cargar skills `opencode-remote` + `it-career-pipeline` (+ `.opencode/skills/ikm-v2-layer-coder` del proyecto).
 2. Verificar `GET /api/info` (password desde los launchers locales).
 3. Leer `ikm/PROJECT_STATE_v2.md` (este archivo) + la explicación de la capa anterior.
-4. Leer la capa del pseudocódigo + la sección del diseño que corresponda.
-5. Implementar en `ikm/`, verificar con `.venv/Scripts/python.exe -m pytest ikm/tests -q` vía `/api/shell`, commit en la rama de capa.
-6. **No avanzar de capa sin confirmar con el usuario.**
+4. Frontend: `cd ikm/web; npm run sync:release; npm run dev` (dev server en 0.0.0.0:5173). Tests: `npm test`. Build: `npm run build`.
+5. Release: `py -m ikm.content.cli release build` (PYTHONPATH=raíz del proyecto). Regenerar TS: `py ikm/_regen_ts.py`.
+6. Backend chat (opcional): `py -m uvicorn ikm.api.main:app --port 8000`.
+7. **No avanzar de capa sin confirmar con el usuario.**
 
 ## Reglas operativas (recordatorio)
 
 - Vault `IT-Mind-Map/` solo lectura. No modificar código v1 (`it-concept-map/`) sin orden.
 - Git: commit local por capa; **push solo con confirmación del usuario** (dry-run primero).
-- HTTP API, no CLI/TUI de OpenCode (0 tokens).
-- Windows: `;` no `&&`; `py` no `python`; venv `.venv/Scripts/python.exe`; URL-encode completo del path.
-- El output de `/api/shell` es UTF-8 (con `errors='replace'`); si sale mojibake CJK, re-codificar a UTF-16LE.
+- HTTP API de OpenCode, no CLI/TUI (0 tokens). Hermes genera el código; la API lo escribe en laptop 1.
+- Windows: `;` no `&&`; `py` no `python`; venv `.venv/Scripts/python.exe` si existe; URL-encode completo del path.
+- El output de `/api/shell` es UTF-8 (`errors='replace'`); si sale mojibake CJK, re-codificar a UTF-16LE.
+- Procesos largos: detach con `Start-Process` + PID file + log; matar instancias previas antes de relanzar.
+
+## Nota de atribución
+
+El plano de contenido C2–C9 y el plano de servicio `api/`/`eval/` fueron implementados por OpenCode en sesiones previas (estaban sin commitear). Esta sesión (Hermes) implementó **L10 frontend** y la **base de release** (C9 autocontenido, áreas, layout, imports TS), y commiteó el conjunto v2 funcional en `v2/L10-frontend` para preservarlo. Sin push.

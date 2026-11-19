@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="IT Knowledge Map — mapa navegable de 255 conceptos de carrera IT, sus relaciones y el Development Journey." />
+    <meta name="theme-color" content="#0a0f1e" />
+    <title>IT Knowledge Map</title>
+    <script>
+      // Tema antes del primer paint (sin FOUC). Default: dark.
+      (function () {
+        try {
+          var t = localStorage.getItem('ikm-theme');
+          if (t === 'light') document.documentElement.classList.remove('dark');
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

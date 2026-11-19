@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 """Reglas comunes a TODO el pipeline de contenido (L1.0).
 
 1. Solo lectura sobre el vault: hash del arbol antes y despues; si cambia, aborta.
@@ -21,7 +21,7 @@ from ikm.contracts.utils import clave_cache, escribir_json_atomico, hash_arbol_v
 
 from .schemas import RunLog, RunRecord
 
-ETAPA_VERSION = {"C0": 1, "C1": 1}
+ETAPA_VERSION = {"C0": 1, "C1": 1, "C2": 1, "C3": 1, "C4": 1, "C5": 1, "C9": 1}
 
 
 class Etapa:
@@ -122,3 +122,8 @@ class ContentRunner:
 
     def etapas_completadas(self) -> List[str]:
         return [e.etapa for e in self.runlog.etapas if not e.errores]
+
+
+
+
+

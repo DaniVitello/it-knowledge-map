@@ -1,0 +1,39 @@
+/* Tokens de diseño IKM — dark-first (DR-L10-03).
+   Valores RGB separados por espacios para alpha con Tailwind. */
+:root {
+  --c-base: 248 250 252;
+  --c-surface: 255 255 255;
+  --c-raised: 241 245 249;
+  --c-line: 203 213 225;
+  --c-ink: 15 23 42;
+  --c-muted: 71 85 105;
+  --c-faint: 148 163 184;
+  --c-accent: 37 99 235;
+  color-scheme: light;
+}
+
+.dark {
+  --c-base: 10 15 30;
+  --c-surface: 17 24 39;
+  --c-raised: 30 41 59;
+  --c-line: 51 65 85;
+  --c-ink: 229 231 235;
+  --c-muted: 156 163 175;
+  --c-faint: 107 114 128;
+  --c-accent: 96 165 250;
+  color-scheme: dark;
+}
+
+/* Paleta por área (uid de area -> color). Consistente en grafo, badges y fichas. */
+:root {
+  --area-software-engineering: 96 165 250;
+  --area-frontend: 244 114 182;
+  --area-backend: 52 211 153;
+  --area-database: 251 191 36;
+  --area-networking: 34 211 238;
+  --area-os-linux: 167 139 250;
+  --area-ai-engineering: 251 113 133;
+  --area-ux-ui: 249 115 22;
+  --area-product-management: 74 222 128;
+  --area-project-management: 148 163 184;
+}

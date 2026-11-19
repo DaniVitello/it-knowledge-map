@@ -1,4 +1,5 @@
 // Generado desde contracts. No editar a mano.
+import type { MessageRole } from './MessageRole';
 export interface Message {
   blocks?: Array<Record<string, unknown>>;
   cached?: boolean;

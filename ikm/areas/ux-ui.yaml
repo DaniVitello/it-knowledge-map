@@ -1,0 +1,16 @@
+area: "UX / UI"
+context_framing: "Experiencia de usuario y diseño de interfaces"
+professional_roles:
+  - "UX Designer"
+  - "Frontend Developer"
+style_example: "Visual, con principios de diseño"
+response_mode: "educativo"
+preferred_domains:
+  - "nngroup.com"
+  - "material.io"
+seed_urls: []
+default_volatility: "semi_stable"
+volatility_overrides: {}
+context_questions:
+  - "Que es y para que sirve?"
+  - "Como se aplica en la practica?"

@@ -172,7 +172,15 @@ def _ts_interface(nombre: str, schema: Dict[str, Any], mod: Dict[str, Any],
         opcional = "" if campo in requeridos else "?"
         lineas.append(f"  {campo}{opcional}: {_ts_type(spec, mod, modelos)};")
     lineas.append("}")
-    return "\n".join(lineas)
+    cuerpo = "\n".join(lineas)
+    # Cada archivo es un modulo: importar los tipos referenciados (DR-L10-04).
+    conocidos = [
+        n for n in _RELEASE + _SERVICE
+        if n != nombre and (_es_enum(n, mod) or _es_modelo(n, mod))
+    ]
+    refs = sorted({n for n in conocidos if re.search(r"\b" + re.escape(n) + r"\b", cuerpo)})
+    imports = "".join(f"import type {{ {n} }} from './{n}';\n" for n in refs)
+    return imports + cuerpo
 
 
 def _escribir_ts(dest_dir: str, schema_dir: str, mod: Dict[str, Any],

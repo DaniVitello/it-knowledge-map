@@ -99,6 +99,7 @@ class ParsedConcept(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     note_id: str
+    ruta: str = ""
     titulo: str
     frontmatter: Dict[str, Any] = Field(default_factory=dict)
     zones: List[Zone] = Field(default_factory=list)
@@ -108,6 +109,14 @@ class ParsedConcept(BaseModel):
     marks: List[VerificationMark] = Field(default_factory=list)
     sources: List[SourceRef] = Field(default_factory=list)
     content_hash: str = Field(min_length=1)
+
+
+class IdentifiedConcept(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    uid: str = Field(pattern=r"^c_[0-9A-Z]{10}$")
+    parsed: ParsedConcept
+    ruta: str = ""
 
 
 class RunRecord(_Base):

@@ -1,0 +1,15 @@
+area: "Database & Data Analytics"
+context_framing: "Bases de datos y analisis de datos"
+professional_roles:
+  - "Data Engineer"
+style_example: "Tecnico, con ejemplos SQL"
+response_mode: "educativo"
+preferred_domains:
+  - "postgresql.org"
+  - "mongodb.com"
+seed_urls: []
+default_volatility: "semi_stable"
+volatility_overrides: {}
+context_questions:
+  - "Que es y para que sirve?"
+  - "Como se aplica en la practica?"

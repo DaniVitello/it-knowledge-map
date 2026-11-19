@@ -1,4 +1,5 @@
 // Generado desde contracts. No editar a mano.
+import type { UserStatus } from './UserStatus';
 export interface User {
   created_at: string;
   deleted_at?: (string) | null;

@@ -1,0 +1,15 @@
+area: "Product Management"
+context_framing: "Gestion de producto y estrategia"
+professional_roles:
+  - "Product Manager"
+style_example: "Estrategico, con frameworks de producto"
+response_mode: "educativo"
+preferred_domains:
+  - "productplan.com"
+  - "mindtheproduct.com"
+seed_urls: []
+default_volatility: "semi_stable"
+volatility_overrides: {}
+context_questions:
+  - "Que es y para que sirve?"
+  - "Como se aplica en la practica?"

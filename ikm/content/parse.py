@@ -291,6 +291,7 @@ def C1_parseo_nota(ruta: Path, config: PublishConfig, id_temporal: str) -> Parse
 
     return ParsedConcept(
         note_id=id_temporal,
+        ruta=str(ruta),
         titulo=titulo,
         frontmatter=frontmatter,
         zones=zonas,

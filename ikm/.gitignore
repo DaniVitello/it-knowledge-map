@@ -7,3 +7,6 @@ releases/*
 !releases/.gitkeep
 fixtures/_work/
 workdir/
+
+# Launchers de dev con rutas locales
+_*.ps1

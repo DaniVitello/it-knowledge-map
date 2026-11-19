@@ -1,0 +1,13 @@
+# Dependencias y build
+node_modules/
+dist/
+
+# Release estático sincronizado (generado desde workdir/, gitignored)
+public/release/
+
+# Launchers de dev con rutas locales
+_*.ps1
+
+# Logs y PIDs (también ignorados en la raíz)
+*.log
+*.pid

@@ -1,0 +1,17 @@
+# Area config for Software Engineering
+area: "Software Engineering"
+context_framing: "Fundamentos de ingenieria de software"
+professional_roles:
+  - "Software Engineer"
+style_example: "Conceptual, con ejemplos practicos"
+response_mode: "educativo"
+preferred_domains:
+  - "docs.python.org"
+  - "developer.mozilla.org"
+seed_urls: []
+default_volatility: "semi_stable"
+volatility_overrides: {}
+context_questions:
+  - "Que es y para que sirve?"
+  - "Como se aplica en la practica?"
+context_framing: "Fundamentos de ingenieria de software"
