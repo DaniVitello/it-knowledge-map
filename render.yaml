@@ -1,0 +1,21 @@
+# Render blueprint — backend del chat IT Knowledge Map.
+services:
+  - type: web
+    name: ikm-api
+    runtime: python
+    plan: free
+    rootDir: ikm
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn ikm.api.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: IKM_RELEASE_DIR
+        value: web/public/release
+      - key: IKM_CORS_ORIGINS
+        value: https://it-knowledge-map-v2.netlify.app,http://localhost:5173,http://192.168.0.107:5173
+      - key: IKM_FRONTEND_URL
+        value: https://it-knowledge-map-v2.netlify.app
+      - key: GROQ_API_KEYS
+        sync: false
+      - key: IKM_SESSION_SECRET
+        generate: true

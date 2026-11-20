@@ -68,10 +68,22 @@ def get_config() -> Config:
 def get_release() -> Any:
     global _release
     if _release is None:
-        releases = listar_releases(RELEASES_DIR)
-        if releases:
-            latest = releases[-1]
-            _release = cargar_release(latest, RELEASES_DIR / latest)
+        # Caso 1: IKM_RELEASE_DIR apunta directo a un release (manifest.json en la raiz).
+        try:
+            import json as _json
+            mp = RELEASES_DIR / "manifest.json"
+            if mp.exists():
+                rid = (_json.loads(mp.read_text(encoding="utf-8")) or {}).get("release_id")
+                if rid:
+                    _release = cargar_release(rid, RELEASES_DIR)
+        except Exception:
+            _release = None
+        # Caso 2: IKM_RELEASE_DIR contiene subcarpetas <release_id>/.
+        if _release is None:
+            releases = listar_releases(RELEASES_DIR)
+            if releases:
+                latest = releases[-1]
+                _release = cargar_release(latest, RELEASES_DIR / latest)
     return _release
 
 
