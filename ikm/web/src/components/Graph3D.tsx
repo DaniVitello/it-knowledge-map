@@ -279,7 +279,7 @@ export default function Graph3D(props: Graph3DProps) {
     camera.position.set(0, 260, 1250);
 
     const renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: 'high-performance' });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
     renderer.setSize(width, height);
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     mount.appendChild(renderer.domElement);
@@ -292,21 +292,23 @@ export default function Graph3D(props: Graph3DProps) {
     labelRenderer.domElement.style.pointerEvents = 'none';
     mount.appendChild(labelRenderer.domElement);
 
-    const composer = new EffectComposer(renderer);
+    // Render target con MSAA + HDR: bordes limpios a través del bloom y glow de calidad.
+    const rt = new THREE.WebGLRenderTarget(width, height, { samples: 4, type: THREE.HalfFloatType });
+    const composer = new EffectComposer(renderer, rt);
     composer.addPass(new RenderPass(scene, camera));
-    const bloom = new UnrealBloomPass(new THREE.Vector2(width, height), props.obsidian ? 0.35 : 0.9, 0.55, props.obsidian ? 0.5 : 0.18);
+    const bloom = new UnrealBloomPass(new THREE.Vector2(width / 2, height / 2), props.obsidian ? 0.35 : 0.9, 0.55, props.obsidian ? 0.5 : 0.18);
     composer.addPass(bloom);
 
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
-    controls.dampingFactor = 0.08;
+    controls.dampingFactor = 0.06;
     controls.rotateSpeed = 0.6;
     controls.minDistance = 120;
     controls.maxDistance = 3200;
     controls.autoRotateSpeed = 0.45;
 
     // nodos instanciados
-    const sphere = new THREE.SphereGeometry(1, 18, 18);
+    const sphere = new THREE.SphereGeometry(1, 14, 14);
     const nodeMat = new THREE.MeshBasicMaterial({ color: 0xffffff, toneMapped: false });
     const nodesMesh = new THREE.InstancedMesh(sphere, nodeMat, props.nodes.length);
     nodesMesh.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
