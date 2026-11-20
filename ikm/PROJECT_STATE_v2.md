@@ -82,3 +82,9 @@ El release estaba incompleto (C9 solo escribía manifest). Se corrigió el plano
 ## Nota de atribución
 
 El plano de contenido C2–C9 y el plano de servicio `api/`/`eval/` fueron implementados por OpenCode en sesiones previas (estaban sin commitear). Esta sesión (Hermes) implementó **L10 frontend**, la **base de release** (C9 autocontenido, áreas, layout, imports TS) y **L10b** (dedup de relaciones, grafo 3D client-side, puente chat↔grafo, motion), y commiteó el conjunto v2 funcional en `v2/L10-frontend` para preservarlo. Sin push.
+
+## Deploy público (Netlify) — 2026-11-19
+- Sitio: https://it-knowledge-map-v2.netlify.app (siteId 59f9bd3c-f52a-43ba-a5b7-fc34da3bfa7b, público sin SSO).
+- Frontend L10–L11 + fix labels + calidad 3D (MSAA/HDR) deployado. Build autocontenido (contratos vendorizados en src/contracts, release versionado).
+- Rama v2/L10-frontend con commits hasta 49bddc8. Push a GitHub pendiente de confirmación de Dan (dry-run: rama nueva, seguro).
+- Tests frontend 64/64. JS inicial ~120 KB gz, chunk 3D lazy ~131 KB gz.

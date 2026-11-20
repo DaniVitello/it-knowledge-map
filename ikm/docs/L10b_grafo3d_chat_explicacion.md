@@ -180,3 +180,18 @@ Así que agregué un segundo modo de vista, "Obsidian", que convive con el mapa 
 Lo honesto: los nodos raíz y área son representaciones de los índices del vault (que el release excluye como conceptos), y los enlaces jerárquicos replican los wikilinks de esos índices. No invento relaciones entre conceptos: las 472 reales se conservan tal cual. El modo mapa (L10d) sigue intacto: al volver, 255 nodos y 472 relaciones, cabezas por área como antes.
 
 Verificado en browser: 2D Obsidian igual a la imagen de referencia, editor de color en vivo, 3D Obsidian renderizando, y modo mapa intacto al alternar. 64 tests (6 nuevos de `buildObsidianGraph`/`nodeKind`) y build verde, JS inicial ~120 KB gz. Decisión en `DR-L11-modo-obsidian.md`.
+
+## 12. Calidad 3D y deploy público (Netlify)
+
+### Fluidez y calidad del 3D
+El render pasó a un render target con MSAA (samples: 4) y tipo HalfFloat: los bordes quedan limpios a través del bloom y el glow gana rango dinámico. El bloom corre a media resolución, el pixelRatio se limita a 1.5 y las esferas bajan a 14 segmentos: menos fill-rate sin perder presencia. La cámara usa damping 0.06 para una inercia más suave. El resultado se ve nítido y neón, sin dientes de sierra.
+
+### Deploy en Netlify
+El sitio es estático (Vite + JSON del release), así que Netlify encaja mejor que Vercel: no hay SSR ni funciones que justifiquen Vercel. Pasos que dejaron el sitio público:
+1. `netlify.toml` en `ikm/web` (command `npm ci && npm run build`, publish `dist`, redirect SPA `/* -> /index.html`).
+2. El release (`public/release`) se versiona a propósito para que el build tenga los datos.
+3. Los contratos TS se vendorizan en `src/contracts` (antes vivían fuera de `ikm/web` y el build de Netlify fallaba con exit 2).
+4. Sitio creado vía MCP (`create-new-project`) y deploy con `npx @netlify/mcp --site-id <id> --proxy-path <token>`.
+5. Acceso de visitantes abierto (sin SSO ni password) para que sea público.
+
+URL pública: https://it-knowledge-map-v2.netlify.app
