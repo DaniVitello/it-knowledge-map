@@ -278,7 +278,8 @@ export default function Graph3D(props: Graph3DProps) {
     const camera = new THREE.PerspectiveCamera(60, width / height, 1, 8000);
     camera.position.set(0, 260, 1250);
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: 'high-performance' });
+    // Sin antialias nativo: el compositor ya resuelve MSAA sobre su target (doble AA = desperdicio).
+    const renderer = new THREE.WebGLRenderer({ antialias: false, powerPreference: 'high-performance' });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
     renderer.setSize(width, height);
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
