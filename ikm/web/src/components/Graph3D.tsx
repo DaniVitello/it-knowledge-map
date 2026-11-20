@@ -18,6 +18,10 @@ import {
 } from 'd3-force-3d';
 import type { GraphNode, GraphEdge } from '../lib/types';
 import { areaCentroids, initialPositions, computeHeads, type SimNode, type HeadInfo } from '../lib/forceLayout';
+import { nodeKind, ROOT_UID } from '../lib/obsidianGraph';
+
+/** Modo Obsidian 3D: la raíz (grado ~265) debe verse mucho mayor; tope alto. */
+const obsR3D = (grado: number) => Math.min(4 + Math.sqrt(grado) * 2.2, 80);
 
 export interface Graph3DProps {
   nodes: GraphNode[];
@@ -33,6 +37,9 @@ export interface Graph3DProps {
   onEdgeSelect?: (edgeUid: string) => void;
   onHover?: (uid: string | null) => void;
   className?: string;
+  obsidian?: boolean;
+  monoColor?: string;
+  areaColors?: Record<string, string>;
 }
 
 interface CamTween { fromPos: THREE.Vector3; toPos: THREE.Vector3; fromTarget: THREE.Vector3; toTarget: THREE.Vector3; start: number; dur: number }
@@ -111,11 +118,13 @@ function applyHighlight(s: State, p: Graph3DProps) {
   const c = new THREE.Color();
   for (let i = 0; i < s.simNodes.length; i++) {
     const n = s.simNodes[i];
-    const base = s.palette.get(n.area_uid ?? '') ?? s.accent;
+    const base = p.obsidian
+      ? new THREE.Color(p.areaColors?.[n.area_uid ?? ''] ?? p.monoColor ?? '#94a3b8')
+      : (s.palette.get(n.area_uid ?? '') ?? s.accent);
     const f = nodeVisible(n);
     c.copy(base).multiplyScalar(f);
-    if (n.isHead && f >= 1) c.copy(base).multiplyScalar(1.3);
-    if (n.uid === s.heads.globalHead && f >= 1) c.copy(s.accent).multiplyScalar(1.35);
+    if (!p.obsidian && n.isHead && f >= 1) c.copy(base).multiplyScalar(1.3);
+    if (!p.obsidian && n.uid === s.heads.globalHead && f >= 1) c.copy(s.accent).multiplyScalar(1.35);
     if (pathSet && pathSet.has(n.uid)) c.copy(base).multiplyScalar(1.4);
     if (n.uid === p.selectedUid) c.copy(s.accent).multiplyScalar(1.5);
     s.nodesMesh.setColorAt(i, c);
@@ -142,11 +151,11 @@ function applyHighlight(s: State, p: Graph3DProps) {
     const dimArea = p.areaFilter && a.area_uid !== p.areaFilter && b.area_uid !== p.areaFilter;
     const dimPath = pathSet && !(pathSet.has(e.source) && pathSet.has(e.target));
     const spoke = a.isHead || b.isHead;
-    let f = spoke ? 0.5 : 0.18;
+    let f = p.obsidian ? 0.12 : (spoke ? 0.5 : 0.18);
     if (isHl) f = 1.3;
     if (dimArea || dimPath) f = 0.04;
     else if (anchor && !isHl) f = 0.06;
-    const col = isHl ? s.accent : (s.palette.get(a.area_uid ?? '') ?? s.accent);
+    const col = isHl ? s.accent : (p.obsidian ? new THREE.Color(p.monoColor ?? '#94a3b8') : (s.palette.get(a.area_uid ?? '') ?? s.accent));
     ec.copy(col).multiplyScalar(f);
     posAttr.setXYZ(i * 2, ec.r, ec.g, ec.b);
     posAttr.setXYZ(i * 2 + 1, ec.r, ec.g, ec.b);
@@ -156,6 +165,7 @@ function applyHighlight(s: State, p: Graph3DProps) {
   // labels: hover, selección, vecinos, camino + cabezas de área siempre visibles
   const show = new Set<string>(neighborSet);
   for (const h of s.heads.headSet) show.add(h);
+  if (p.obsidian) for (const sn of s.simNodes) if (nodeKind(sn.uid) !== 'concept') show.add(sn.uid);
   if (p.selectedUid) show.add(p.selectedUid);
   if (pathSet) for (const u of pathSet) show.add(u);
   for (const [uid, label] of s.labels) {
@@ -284,7 +294,7 @@ export default function Graph3D(props: Graph3DProps) {
 
     const composer = new EffectComposer(renderer);
     composer.addPass(new RenderPass(scene, camera));
-    const bloom = new UnrealBloomPass(new THREE.Vector2(width, height), 0.9, 0.55, 0.18);
+    const bloom = new UnrealBloomPass(new THREE.Vector2(width, height), props.obsidian ? 0.35 : 0.9, 0.55, props.obsidian ? 0.5 : 0.18);
     composer.addPass(bloom);
 
     const controls = new OrbitControls(camera, renderer.domElement);
@@ -312,42 +322,64 @@ export default function Graph3D(props: Graph3DProps) {
     const edgesLine = new THREE.LineSegments(edgesGeom, edgeMat);
     scene.add(edgesLine);
 
-    // simulación con jerarquía: cada área tiene su cabeza (mayor grado); los
-    // miembros orbitan la cabeza viva, la cabeza se ancla al centroide del área.
+    // simulación: modo Obsidian (mind-map jerárquico, fuerza pura, raíz al
+    // centro) o modo mapa (cabezas de área fijadas, miembros orbitando).
     const areaUids = [...new Set(props.nodes.map((n) => n.area_uid).filter(Boolean))] as string[];
     const heads = computeHeads(props.nodes);
-    const centroids = areaCentroids(areaUids);
-    const simNodes = initialPositions(props.nodes, centroids, 90, heads.headSet);
-    const nodeIndex = new Map(simNodes.map((n, i) => [n.uid, i]));
-    for (const sn of simNodes) {
-      if (sn.isHead) {
-        sn.anchor = centroids.get(sn.area_uid ?? '') ?? { x: 0, y: 0, z: 0 };
-        sn.headRef = null;
-        (sn as any).fx = sn.anchor.x; (sn as any).fy = sn.anchor.y; (sn as any).fz = sn.anchor.z;
-      } else {
-        const hu = heads.heads.get(sn.area_uid ?? '');
-        sn.headRef = hu ? simNodes[nodeIndex.get(hu)!] : null;
-      }
-    }
     const simLinks = props.edges.map((e) => ({ source: e.source, target: e.target, uid: e.uid }));
     const edgeUids = props.edges.map((e) => e.uid);
-    const tx = (d: any) => d.isHead ? (d.anchor?.x ?? 0) : (d.headRef?.x ?? 0);
-    const ty = (d: any) => d.isHead ? (d.anchor?.y ?? 0) : (d.headRef?.y ?? 0);
-    const tz = (d: any) => d.isHead ? (d.anchor?.z ?? 0) : (d.headRef?.z ?? 0);
-    const sim = forceSimulation(simNodes as any, 3)
-      .force('link', forceLink(simLinks as any).id((d: any) => d.uid).distance(50).strength(0.06))
-      .force('charge', forceManyBody().strength(-25))
-      .force('collide', forceCollide().radius((d: any) => d.radius + 3).strength(0.85))
-      .force('x', forceX(tx).strength((d: any) => d.isHead ? 0.5 : 0.25))
-      .force('y', forceY(ty).strength((d: any) => d.isHead ? 0.5 : 0.25))
-      .force('z', forceZ(tz).strength((d: any) => d.isHead ? 0.5 : 0.25))
-      .alpha(1).alphaDecay(0.022).velocityDecay(0.35);
+    let simNodes: SimNode[];
+    let sim: any;
+    if (props.obsidian) {
+      simNodes = props.nodes.map((n, i) => {
+        const a = i * 2.399963;
+        const rr = n.uid === ROOT_UID ? 0 : 40 + 16 * Math.sqrt((i % 60) + 1);
+        const radius = nodeKind(n.uid) === 'area' ? obsR3D(n.grado) * 1.5 : obsR3D(n.grado);
+        return { ...n, x: Math.cos(a) * rr, y: Math.sin(a * 1.3) * rr, z: Math.sin(a) * rr, radius };
+      });
+      for (const sn of simNodes) if (sn.uid === ROOT_UID) { (sn as any).fx = 0; (sn as any).fy = 0; (sn as any).fz = 0; }
+      sim = forceSimulation(simNodes as any, 3)
+        .force('link', forceLink(simLinks as any).id((d: any) => d.uid).distance(85).strength(0.18))
+        .force('charge', forceManyBody().strength(-130))
+        .force('collide', forceCollide().radius((d: any) => d.radius + 3).strength(0.85))
+        .force('x', forceX(0).strength(0.02))
+        .force('y', forceY(0).strength(0.02))
+        .force('z', forceZ(0).strength(0.02))
+        .alpha(1).alphaDecay(0.022).velocityDecay(0.35);
+    } else {
+      const centroids = areaCentroids(areaUids);
+      simNodes = initialPositions(props.nodes, centroids, 90, heads.headSet);
+      const idxTmp = new Map(simNodes.map((n, i) => [n.uid, i]));
+      for (const sn of simNodes) {
+        if (sn.isHead) {
+          sn.anchor = centroids.get(sn.area_uid ?? '') ?? { x: 0, y: 0, z: 0 };
+          sn.headRef = null;
+          (sn as any).fx = sn.anchor.x; (sn as any).fy = sn.anchor.y; (sn as any).fz = sn.anchor.z;
+        } else {
+          const hu = heads.heads.get(sn.area_uid ?? '');
+          sn.headRef = hu ? simNodes[idxTmp.get(hu)!] : null;
+        }
+      }
+      const tx = (d: any) => d.isHead ? (d.anchor?.x ?? 0) : (d.headRef?.x ?? 0);
+      const ty = (d: any) => d.isHead ? (d.anchor?.y ?? 0) : (d.headRef?.y ?? 0);
+      const tz = (d: any) => d.isHead ? (d.anchor?.z ?? 0) : (d.headRef?.z ?? 0);
+      sim = forceSimulation(simNodes as any, 3)
+        .force('link', forceLink(simLinks as any).id((d: any) => d.uid).distance(50).strength(0.06))
+        .force('charge', forceManyBody().strength(-25))
+        .force('collide', forceCollide().radius((d: any) => d.radius + 3).strength(0.85))
+        .force('x', forceX(tx).strength((d: any) => d.isHead ? 0.5 : 0.25))
+        .force('y', forceY(ty).strength((d: any) => d.isHead ? 0.5 : 0.25))
+        .force('z', forceZ(tz).strength((d: any) => d.isHead ? 0.5 : 0.25))
+        .alpha(1).alphaDecay(0.022).velocityDecay(0.35);
+    }
+    const nodeIndex = new Map(simNodes.map((n, i) => [n.uid, i]));
 
     // labels
     const labels = new Map<string, CSS2DObject>();
     for (const n of simNodes) {
       const div = document.createElement('div');
-      div.className = n.isHead ? 'graph3d-label graph3d-label-head' : 'graph3d-label';
+      const isHeadLike = n.isHead || (props.obsidian && nodeKind(n.uid) !== 'concept');
+      div.className = isHeadLike ? 'graph3d-label graph3d-label-head' : 'graph3d-label';
       div.textContent = n.title;
       div.style.opacity = '0';
       const obj = new CSS2DObject(div);
@@ -475,11 +507,11 @@ export default function Graph3D(props: Graph3DProps) {
       st.current = null;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [props.nodes, props.edges]);
+  }, [props.nodes, props.edges, props.obsidian]);
 
   useEffect(() => {
     if (st.current) applyHighlight(st.current, propsRef.current);
-  }, [props.selectedUid, props.highlightUids, props.highlightEdgeUids, props.highlightAreas, props.areaFilter]);
+  }, [props.selectedUid, props.highlightUids, props.highlightEdgeUids, props.highlightAreas, props.areaFilter, props.obsidian, props.monoColor, props.areaColors]);
 
   useEffect(() => {
     if (st.current && props.focusUid) focusNode(st.current, props.focusUid);

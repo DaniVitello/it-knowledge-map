@@ -13,6 +13,7 @@ import { useCallback, useEffect, useLayoutEffect, useMemo, useRef } from 'react'
 import { forceSimulation, forceLink, forceManyBody, forceCollide, forceX, forceY } from 'd3-force-3d';
 import type { GraphEdge, GraphNode } from '../lib/types';
 import { computeHeads } from '../lib/forceLayout';
+import { nodeKind, ROOT_UID } from '../lib/obsidianGraph';
 
 export interface GraphCanvasProps {
   nodes: GraphNode[];
@@ -29,6 +30,10 @@ export interface GraphCanvasProps {
   onEdgeSelect?: (edgeUid: string) => void;
   onHover?: (uid: string | null) => void;
   className?: string;
+  /** Modo Obsidian: mind-map jerárquico (raíz+áreas+conceptos), color uniforme editable. */
+  obsidian?: boolean;
+  monoColor?: string;
+  areaColors?: Record<string, string>;
 }
 
 interface Camera { tx: number; ty: number; k: number }
@@ -37,6 +42,7 @@ interface SimNode2 {
   x: number; y: number; vx: number; vy: number;
   fx?: number | null; fy?: number | null;
   isHead?: boolean;
+  isRoot?: boolean;
   anchor?: { x: number; y: number };
   headRef?: SimNode2 | null;
 }
@@ -47,6 +53,15 @@ const GOLDEN = 2.399963229728653;
 
 /** Jerarquía visual: radio por grado (hubs notablemente mayores); cabezas realzadas. */
 const nodeR = (grado: number, isHead = false) => Math.min(3 + Math.sqrt(grado) * 2.8 + (isHead ? 8 : 0), 34);
+/** Modo Obsidian: la raíz (grado ~265) debe verse mucho mayor; tope más alto. */
+const obsR = (grado: number) => Math.min(3 + Math.sqrt(grado) * 2.8, 60);
+function toRgb(c: string): string {
+  if (c.startsWith('#') && c.length === 7) {
+    const r = parseInt(c.slice(1, 3), 16), g = parseInt(c.slice(3, 5), 16), b = parseInt(c.slice(5, 7), 16);
+    return `rgb(${r} ${g} ${b})`;
+  }
+  return c;
+}
 
 function easeOutCubic(t: number): number {
   return 1 - Math.pow(1 - t, 3);
@@ -66,6 +81,7 @@ function areaSeeds(areaUids: string[], radius = 340): Map<string, { x: number; y
 export default function GraphCanvas({
   nodes, edges, selectedUid = null, highlightUids = null, highlightEdgeUids = null,
   highlightAreas = null, focusUid = null, areaFilter = null, fitSignal = 0, onSelect, onEdgeSelect, onHover, className = '',
+  obsidian = false, monoColor = '#94a3b8', areaColors = {},
 }: GraphCanvasProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const wrapRef = useRef<HTMLDivElement>(null);
@@ -97,6 +113,30 @@ export default function GraphCanvas({
   // suave por área. Se detiene el timer interno de d3 y se tick-ea en el rAF.
   const simData = useMemo(() => {
     const isReduced = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (obsidian) {
+      // Mind-map jerárquico: fuerza pura, raíz fija al centro. El grado alto de
+      // la raíz la lleva al centro; las áreas quedan alrededor y las hojas en la
+      // periferia (como Obsidian). Sin cabezas fijadas por área.
+      const simNodes: SimNode2[] = nodes.map((n, i) => {
+        const a = i * GOLDEN;
+        const rr = n.uid === ROOT_UID ? 0 : 30 + 14 * Math.sqrt((i % 60) + 1);
+        return { uid: n.uid, area_uid: n.area_uid, grado: n.grado, isRoot: n.uid === ROOT_UID, x: Math.cos(a) * rr, y: Math.sin(a) * rr, vx: 0, vy: 0 };
+      });
+      const byUid = new Map(simNodes.map((sn) => [sn.uid, sn]));
+      for (const sn of simNodes) if (sn.isRoot) { sn.fx = 0; sn.fy = 0; }
+      const links = edges.map((e) => ({ source: e.source, target: e.target }));
+      const sim = forceSimulation(simNodes as any, 2)
+        .force('link', forceLink(links as any).id((d: any) => d.uid).distance(55).strength(0.2))
+        .force('charge', forceManyBody().strength(-55))
+        .force('collide', forceCollide().radius((d: any) => obsR(d.grado) + 2).strength(0.85).iterations(2))
+        .force('x', forceX(0).strength(0.03))
+        .force('y', forceY(0).strength(0.03))
+        .alpha(1).alphaDecay(0.028).velocityDecay(0.4).alphaMin(0.003)
+        .stop();
+      const pre = isReduced ? 300 : 14;
+      for (let i = 0; i < pre; i++) sim.tick();
+      return { sim, simNodes, byUid, heads: computeHeads(nodes) };
+    }
     const areaUids = [...new Set(nodes.map((n) => n.area_uid).filter(Boolean))] as string[];
     const seeds = areaSeeds(areaUids);
     const heads = computeHeads(nodes);
@@ -125,7 +165,7 @@ export default function GraphCanvas({
     const pre = isReduced ? 300 : 14;
     for (let i = 0; i < pre; i++) sim.tick();
     return { sim, simNodes, byUid, heads };
-  }, [nodes, edges]);
+  }, [nodes, edges, obsidian]);
 
   // Paleta resuelta desde tokens CSS (se recalcula si cambia el tema).
   const palette = useRef({ areas: new Map<string, string>(), ink: '#e5e7eb', line: '#334155', accent: '#60a5fa', bg: '#0a0f1e' });
@@ -289,6 +329,18 @@ export default function GraphCanvas({
       if (!a || !b) continue;
       const na = nodeByUid.get(e.source);
       const nb = nodeByUid.get(e.target);
+      if (obsidian) {
+        const isHl = highlightEdgeUids?.has(e.uid) || (anchor && (e.source === anchor || e.target === anchor));
+        const al = isHl ? 0.85 : 0.1;
+        const col = isHl ? pal.accent : pal.line;
+        ctx.beginPath();
+        ctx.moveTo(sx(a.x), sy(a.y));
+        ctx.lineTo(sx(b.x), sy(b.y));
+        ctx.strokeStyle = col.replace('rgb(', 'rgba(').replace(')', ` / ${al})`);
+        ctx.lineWidth = isHl ? 1.6 : 1;
+        ctx.stroke();
+        continue;
+      }
       if (highlightAreas && highlightAreas.size > 0) {
         const both = highlightAreas.has(na?.area_uid ?? '') && highlightAreas.has(nb?.area_uid ?? '');
         const al = both ? 0.85 : 0.03;
@@ -325,8 +377,8 @@ export default function GraphCanvas({
       const p = P.get(n.uid);
       if (!p) continue;
       const alpha = nodeAlpha(n);
-      const r = Math.max(nodeR(n.grado, p.isHead) * k, 1.6);
-      const color = pal.areas.get(n.area_uid ?? '') ?? pal.line;
+      const r = Math.max((obsidian ? obsR(n.grado) : nodeR(n.grado, p.isHead)) * k, 1.6);
+      const color = obsidian ? toRgb(areaColors[n.area_uid ?? ''] ?? monoColor) : (pal.areas.get(n.area_uid ?? '') ?? pal.line);
       const x = sx(p.x);
       const y = sy(p.y);
       if (x < -40 || x > w + 40 || y < -40 || y > h + 40) continue;
@@ -341,7 +393,7 @@ export default function GraphCanvas({
       ctx.arc(x, y, r, 0, Math.PI * 2);
       ctx.fillStyle = color.replace('rgb(', 'rgba(').replace(')', ` / ${alpha})`);
       ctx.fill();
-      if (p.isHead) {
+      if (!obsidian && p.isHead) {
         // Anillo de cabeza: la cabeza global va en accent, las demás en su área.
         ctx.beginPath();
         ctx.arc(x, y, r + 3, 0, Math.PI * 2);
@@ -365,7 +417,7 @@ export default function GraphCanvas({
     for (const n of nodes) {
       const p = P.get(n.uid);
       if (!p) continue;
-      const isFocus = focusSet.has(n.uid) || n.uid === selectedUid || (activeSet?.has(n.uid) ?? false) || (p.isHead ?? false);
+      const isFocus = focusSet.has(n.uid) || n.uid === selectedUid || (activeSet?.has(n.uid) ?? false) || (p.isHead ?? false) || (obsidian && nodeKind(n.uid) !== 'concept');
       const la = isFocus ? 1 : zoomLabel;
       if (la <= 0.02) continue;
       const na = nodeAlpha(n);
@@ -374,7 +426,7 @@ export default function GraphCanvas({
       const x = sx(p.x);
       const y = sy(p.y);
       if (x < -120 || x > w + 120 || y < -20 || y > h + 20) continue;
-      const r = Math.max(nodeR(n.grado) * k, 1.6);
+      const r = Math.max((obsidian ? obsR(n.grado) : nodeR(n.grado)) * k, 1.6);
       const text = n.title;
       const tw = ctx.measureText(text).width;
       const lx = x + r + 6;
@@ -388,7 +440,7 @@ export default function GraphCanvas({
         .replace('rgb(', 'rgba(').replace(')', ` / ${a})`);
       ctx.fillText(text, lx, ly);
     }
-  }, [nodes, edges, nodeByUid, neighbors, simData, selectedUid, highlightUids, highlightEdgeUids, highlightAreas, areaFilter]);
+  }, [nodes, edges, nodeByUid, neighbors, simData, selectedUid, highlightUids, highlightEdgeUids, highlightAreas, areaFilter, obsidian, monoColor, areaColors]);
 
   // Primer paint síncrono: no depender de rAF (pestañas en background lo
   // throttlean; el grafo debe verse igual al montar). Mide, encuadra y dibuja.

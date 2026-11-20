@@ -162,3 +162,21 @@ Lo que hice fue volver explícita esa jerarquía en el 2D y en el 3D.
 Lo que queda honestamente pendiente de pulir: algún cluster no es perfectamente simétrico (la cabeza queda "al frente" pero no en el centroide geométrico exacto), y un par de nodos con muchas relaciones inter-área quedan sueltos cerca del centro. Las líneas inter-área tenues son relaciones reales y no las saco. Nada de eso rompe la lectura jerárquica, que ya se entiende de una.
 
 Verificado en browser: 2D con cabezas centradas, clusters compactos, spokes radiales y una cabeza por área bien separada; 3D con cabezas 4–6× mayores, glow y labels destacados, miembros orbitando. 58 tests (6 nuevos de `computeHeads`/`nodeRadius`/`initialPositions`) y build verde, JS inicial ~120 KB gz. Decisión en `DR-L10d-jerarquia-cabezas.md`.
+
+## 11. L11: modo Obsidian (el mind-map del vault, con raíz y color editable)
+
+Acá hubo una corrección importante de tu parte. En L10d la "cabeza" de cada área era un concepto (el más conectado, por ejemplo Visual Hierarchy en UX & UI). Vos señalaste que eso no es lo que querías: la cabeza tiene que ser el ÁREA (UX & UI), no un concepto suelto. Y pasaste la imagen del graph view de Obsidian como referencia: un nodo raíz central gigante conectado a todo, las áreas como cabezas medianas alrededor, y los conceptos como hojas chicas en la periferia, todos del mismo color.
+
+Así que agregué un segundo modo de vista, "Obsidian", que convive con el mapa actual. Se alterna con el botón Obsidian/Mapa (queda en la URL como `?mode=obsidian`).
+
+**Recorrí el vault para replicar la disposición real.** En `IT-Mind-Map` la jerarquía está en los enlaces: la raíz `00 - Indice Maestro IT` (el "mercado IT", 255 conceptos en 10 áreas) enlaza a los 10 índices de área Y a los 255 conceptos directamente; cada índice de área enlaza a su raíz y a sus conceptos; los conceptos tienen sus relaciones reales. Por eso en Obsidian la raíz se ve conectada a casi todo (el abanico denso del centro).
+
+**El grafo Obsidian se arma en el cliente.** `src/lib/obsidianGraph.ts` (`buildObsidianGraph`) toma el grafo de conceptos y le agrega la raíz "Mercado IT" + 10 nodos cabeza de área (con el nombre del área) + los enlaces jerárquicos del vault (raíz→área, raíz→concepto, área→concepto), conservando las 472 relaciones reales. Quedan 266 nodos y 992 enlaces. El tamaño por grado hace el resto: la raíz tiene grado ~265 (gigante), las áreas ~26 (medianas), las hojas pocas (chicas). La raíz se fija al centro y la fuerza dispone las áreas alrededor y las hojas en la periferia, como en tu imagen.
+
+**Color uniforme, editable.** En modo Obsidian todos los nodos van del mismo color (gris por defecto), sin colores por área. El botón Color abre un editor (`src/components/ObsidianColors.tsx`) con un selector global "Uniforme (todos)" y colores opcionales por área (como los grupos de Obsidian). Se aplica en vivo y persiste en localStorage (`src/lib/obsidianColors.ts`). Lo probé: cambiar el color global pinta todo el grafo al instante, raíz y cabezas incluidas.
+
+**Funciona en 2D y 3D.** El 2D replica tu imagen de una (raíz Mercado IT al centro, áreas alrededor, hojas, todo gris). El 3D también renderiza el mind-map con glow suave; la jerarquía se lee algo menos fina que en 2D porque las labels del centro se solapan, pero la raíz grande y las áreas están. En Obsidian bajé el bloom para que no lave los tamaños.
+
+Lo honesto: los nodos raíz y área son representaciones de los índices del vault (que el release excluye como conceptos), y los enlaces jerárquicos replican los wikilinks de esos índices. No invento relaciones entre conceptos: las 472 reales se conservan tal cual. El modo mapa (L10d) sigue intacto: al volver, 255 nodos y 472 relaciones, cabezas por área como antes.
+
+Verificado en browser: 2D Obsidian igual a la imagen de referencia, editor de color en vivo, 3D Obsidian renderizando, y modo mapa intacto al alternar. 64 tests (6 nuevos de `buildObsidianGraph`/`nodeKind`) y build verde, JS inicial ~120 KB gz. Decisión en `DR-L11-modo-obsidian.md`.

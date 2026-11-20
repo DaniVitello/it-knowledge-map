@@ -5,7 +5,7 @@
  */
 import { lazy, Suspense, useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
-import { ArrowLeft, Box, GitBranch, Maximize, Network, Square, X } from 'lucide-react';
+import { ArrowLeft, Box, GitBranch, Maximize, Network, Palette, Square, Waypoints, X } from 'lucide-react';
 import { useRelease, useRelations } from '../lib/release';
 import { buildAdjacency, edgesAlongPath, neighborsOf, shortestPath, subgraphAround } from '../lib/graph';
 import GraphCanvas from '../components/GraphCanvas';
@@ -16,6 +16,9 @@ import { areaColor } from '../lib/format';
 import { normalizeText } from '../lib/search';
 import { useRecordView } from '../lib/useExploration';
 import type { ConceptIndexEntry } from '../lib/types';
+import { buildObsidianGraph } from '../lib/obsidianGraph';
+import { useObsidianColors } from '../lib/obsidianColors';
+import ObsidianColorPanel from '../components/ObsidianColors';
 
 function ConceptSelect({ value, onChange, concepts, areas, label }: {
   value: string;
@@ -66,10 +69,14 @@ export default function GraphPage() {
   const [centerRequest, setCenterRequest] = useState<string | null>(null);
   const [fitSignal, setFitSignal] = useState(0);
   const [listFilter, setListFilter] = useState('');
+  const obsidianMode = params.get('mode') === 'obsidian';
+  const { colors: obsColors, setMono, setArea, reset: resetColors } = useObsidianColors();
+  const [colorEditorOpen, setColorEditorOpen] = useState(false);
+  const obsidianGraph = useMemo(() => buildObsidianGraph(graph, areas), [graph, areas]);
 
   const view = useMemo(
-    () => (contextual ? subgraphAround(graph, adj, contextUid!, 1) : graph),
-    [contextual, contextUid, graph, adj],
+    () => (obsidianMode ? obsidianGraph : contextual ? subgraphAround(graph, adj, contextUid!, 1) : graph),
+    [obsidianMode, obsidianGraph, contextual, contextUid, graph, adj],
   );
 
   const path = useMemo(
@@ -196,6 +203,24 @@ export default function GraphPage() {
             {viewMode === '3d' ? <Square className="h-3.5 w-3.5" aria-hidden /> : <Box className="h-3.5 w-3.5" aria-hidden />}
             {viewMode === '3d' ? '2D' : '3D'}
           </button>
+          <button
+            className={`btn-ghost !py-1.5 !text-xs ${obsidianMode ? '!border-accent/50 !text-accent' : ''}`}
+            onClick={() => setParam('mode', obsidianMode ? null : 'obsidian')}
+            aria-pressed={obsidianMode}
+            title={obsidianMode ? 'Volver al mapa por áreas' : 'Vista Obsidian (mind-map jerárquico)'}
+          >
+            <Waypoints className="h-3.5 w-3.5" aria-hidden /> {obsidianMode ? 'Mapa' : 'Obsidian'}
+          </button>
+          {obsidianMode && (
+            <button
+              className={`btn-ghost !py-1.5 !text-xs ${colorEditorOpen ? '!border-accent/50 !text-accent' : ''}`}
+              onClick={() => setColorEditorOpen((o) => !o)}
+              aria-pressed={colorEditorOpen}
+              title="Editar colores de los nodos"
+            >
+              <Palette className="h-3.5 w-3.5" aria-hidden /> Color
+            </button>
+          )}
           <button className="btn-ghost !py-1.5 !text-xs" onClick={() => setFitSignal((s) => s + 1)}>
             <Maximize className="h-3.5 w-3.5" aria-hidden /> Encuadrar
           </button>
@@ -236,6 +261,9 @@ export default function GraphPage() {
               focusUid={contextual ? null : centerRequest}
               areaFilter={contextual ? null : areaFilter}
               fitSignal={fitSignal}
+              obsidian={obsidianMode}
+              monoColor={obsColors.mono}
+              areaColors={obsColors.areas}
               onSelect={(uid) => selectNode(uid)}
               onEdgeSelect={(edgeUid) => { setSelectedEdge(edgeUid); setSelected(null); }}
             />
@@ -252,13 +280,20 @@ export default function GraphPage() {
             focusUid={contextual ? null : centerRequest}
             areaFilter={contextual ? null : areaFilter}
             fitSignal={fitSignal}
+            obsidian={obsidianMode}
+            monoColor={obsColors.mono}
+            areaColors={obsColors.areas}
             onSelect={(uid) => selectNode(uid)}
             onEdgeSelect={(edgeUid) => { setSelectedEdge(edgeUid); setSelected(null); }}
           />
         )}
 
+        {obsidianMode && colorEditorOpen && (
+          <ObsidianColorPanel colors={obsColors} setMono={setMono} setArea={setArea} reset={resetColors} areas={areas} />
+        )}
+
         {/* Leyenda de áreas */}
-        {!contextual && (
+        {!contextual && !obsidianMode && (
           <div className="absolute left-3 bottom-3 panel px-3 py-2 flex flex-wrap gap-x-3 gap-y-1 max-w-[70%] text-[11px]">
             {areas.map((a) => (
               <button
