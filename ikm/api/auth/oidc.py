@@ -133,3 +133,38 @@ def callback(code: str, state: str, expected_state: str, nonce: str,
     # data = verificar_id_token(id_token, client_id, nonce)
     # user_id = buscar_o_crear_usuario(data["sub"], data["email"], data["email_verified"])
     return {"user_id": "stub", "session_token": secrets.token_urlsafe(32)}
+
+def intercambiar_code(code: str, client_id: str, client_secret: str,
+                      redirect_uri: str, verifier: str) -> Dict[str, Any]:
+    """Intercambia el authorization code por tokens (Google OAuth2 + PKCE)."""
+    import urllib.request, urllib.parse, json
+    data = urllib.parse.urlencode({
+        "code": code, "client_id": client_id, "client_secret": client_secret,
+        "redirect_uri": redirect_uri, "grant_type": "authorization_code",
+        "code_verifier": verifier,
+    }).encode("utf-8")
+    req = urllib.request.Request(
+        "https://oauth2.googleapis.com/token", data=data,
+        headers={"Content-Type": "application/x-www-form-urlencoded"}, method="POST")
+    with urllib.request.urlopen(req, timeout=20) as resp:
+        return json.loads(resp.read().decode("utf-8"))
+
+
+def verificar_id_token_real(id_token: str, client_id: str, nonce: str) -> Dict[str, Any]:
+    """Verifica firma/aud/exp con google-auth (JWKS); fallback al tokeninfo de Google."""
+    try:
+        from google.oauth2 import id_token as gid
+        from google.auth.transport import requests as grequests
+        claims = gid.verify_oauth2_token(id_token, grequests.Request(), client_id)
+    except ImportError:
+        import urllib.request, urllib.parse, json
+        url = "https://oauth2.googleapis.com/tokeninfo?id_token=" + urllib.parse.quote(id_token)
+        with urllib.request.urlopen(url, timeout=20) as resp:
+            claims = json.loads(resp.read().decode("utf-8"))
+        if claims.get("aud") != client_id:
+            raise AuthError("aud_mismatch", etapa="auth")
+    if claims.get("nonce") != nonce:
+        raise AuthError("nonce_mismatch", etapa="auth")
+    if str(claims.get("email_verified")).lower() not in ("true", "1"):
+        raise AuthError("email_not_verified", etapa="auth")
+    return claims

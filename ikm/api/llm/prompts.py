@@ -30,7 +30,11 @@ REGLAS
 7. Si no hay documentacion sobre lo preguntado, dilo. Puedes anadir una explicacion
    general etiquetada como tal.
 
-FORMATO: JSON segun ChatResponse, sin texto fuera del JSON.
+FORMATO: responde UNICAMENTE un objeto JSON con esta forma, sin texto fuera del JSON:
+{{"blocks":[{{"text":"...","basis":"documented","sources":["<chunk_id del CONTEXTO>"]}}],
+ "suggestions":[{{"label":"...","uid":"<uid de ALLOWED_UIDS>"}}]}}
+Reglas de formato: basis "documented" exige sources con chunk_id reales del CONTEXTO;
+"general" no lleva sources; "inferred" es asociacion propia. Maximo 4 blocks, texto claro y breve.
 CONTEXTO: <doc id="..." class="A|B|D">...</doc> ...
 ALLOWED_UIDS: [{uids_str}]
 HISTORIAL: {historial}

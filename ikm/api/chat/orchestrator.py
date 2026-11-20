@@ -63,7 +63,8 @@ class ChatOrchestrator:
 
         # L4: Recuperacion
         entidades = enlazar_entidades(message, self._get_conceptos())
-        chunks_recuperados = buscar_bm25(message, self._chunks, top_k=20)
+        chunks_recuperados = [r["chunk"] if isinstance(r, dict) and "chunk" in r else r
+                              for r in buscar_bm25(message, self._chunks, top_k=20)]
         # Expansion por grafo
         relaciones = self._get_relaciones()
         chunks_expandidos = expandir_por_grafo(entidades, relaciones, self._chunks)
@@ -115,7 +116,18 @@ class ChatOrchestrator:
         if self.release is None:
             return []
         try:
-            return self.release.load_json("concepts/index.json") or []
+            idx = self.release.load_json("concepts/index.json")
+            if idx:
+                return idx
+        except Exception:
+            pass
+        # El release no trae concepts/index.json: se arma desde graph.json.
+        try:
+            graph = self.release.load_json("graph.json")
+            nodes = graph.get("nodes", []) if isinstance(graph, dict) else []
+            return [{"uid": n.get("uid"), "title": n.get("title", ""),
+                     "aliases": n.get("aliases") or []}
+                    for n in nodes if n.get("uid")]
         except Exception:
             return []
 
@@ -132,7 +144,7 @@ class ChatOrchestrator:
 
     def _armar_contexto(self, chunks: List[Any], expandidos: List[Any]) -> str:
         partes = []
-        for ch in chunks[:10]:
+        for ch in list(chunks[:10]) + list(expandidos[:5]):
             texto = getattr(ch, "text", None) or (ch.get("text") if isinstance(ch, dict) else "") or ""
             cid = getattr(ch, "chunk_id", None) or (ch.get("chunk_id") if isinstance(ch, dict) else "") or ""
             clase = getattr(ch, "source_class", None) or (ch.get("source_class") if isinstance(ch, dict) else "A") or "A"

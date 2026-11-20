@@ -10,3 +10,8 @@ workdir/
 
 # Launchers de dev con rutas locales
 _*.ps1
+# Release local de pruebas del backend
+api_release/
+_chat_test.py
+_llm_test.py
+_key_*.py
