@@ -139,6 +139,13 @@ export default function GraphPage() {
     }
   };
 
+  // Navegación por drill-down: en la vista de vecindad, tocar un vecino entra a SU vecindad.
+  const goVecindad = (uid: string) => navigate(`/graph/view/${uid}`);
+  const onNodeSelect = (uid: string | null) => {
+    if (uid && contextual && uid !== contextUid) { goVecindad(uid); return; }
+    selectNode(uid);
+  };
+
   const setParam = (key: string, value: string | null) => {
     const p = new URLSearchParams(params);
     if (value) p.set(key, value);
@@ -269,7 +276,7 @@ export default function GraphPage() {
               obsidian={obsidianMode}
               monoColor={obsColors.mono}
               areaColors={obsColors.areas}
-              onSelect={(uid) => selectNode(uid)}
+              onSelect={onNodeSelect}
               onEdgeSelect={(edgeUid) => { setSelectedEdge(edgeUid); setSelected(null); }}
             />
           </Suspense>
@@ -288,7 +295,7 @@ export default function GraphPage() {
             obsidian={obsidianMode}
             monoColor={obsColors.mono}
             areaColors={obsColors.areas}
-            onSelect={(uid) => selectNode(uid)}
+            onSelect={onNodeSelect}
             onEdgeSelect={(edgeUid) => { setSelectedEdge(edgeUid); setSelected(null); }}
           />
         )}
@@ -297,18 +304,30 @@ export default function GraphPage() {
           <ObsidianColorPanel colors={obsColors} setMono={setMono} setArea={setArea} reset={resetColors} areas={areas} />
         )}
 
-        {hintOpen && !panelOpen && (
+        {hintOpen && (contextual ? (
           <div className="graph-hint" role="status">
-            <Waypoints className="h-3.5 w-3.5 text-accent shrink-0" aria-hidden />
+            <Network className="h-3.5 w-3.5 text-accent shrink-0" aria-hidden />
             <span>
-              Tocá un <strong className="font-semibold text-ink">nodo</strong> para ver su vecindad · tocá una{' '}
-              <strong className="font-semibold text-ink">línea</strong> para ver por qué se conectan
+              Vecindad de <strong className="font-semibold text-ink">{byUid.get(contextUid!)?.title}</strong>:{' '}
+              {view.nodes.length - 1} conexiones directas. Es un recorte del mapa, no un submapa temático.{' '}
+              Tocá un vecino para entrar a su vecindad.
             </span>
             <button className="text-faint hover:text-ink ml-0.5" onClick={() => setHintOpen(false)} aria-label="Cerrar ayuda">
               <X className="h-3.5 w-3.5" />
             </button>
           </div>
-        )}
+        ) : !panelOpen ? (
+          <div className="graph-hint" role="status">
+            <Waypoints className="h-3.5 w-3.5 text-accent shrink-0" aria-hidden />
+            <span>
+              Tocá un <strong className="font-semibold text-ink">nodo</strong> para ver su ficha y su vecindad · tocá una{' '}
+              <strong className="font-semibold text-ink">línea</strong> para ver la conexión
+            </span>
+            <button className="text-faint hover:text-ink ml-0.5" onClick={() => setHintOpen(false)} aria-label="Cerrar ayuda">
+              <X className="h-3.5 w-3.5" />
+            </button>
+          </div>
+        ) : null)}
 
         {/* Leyenda de áreas */}
         {!contextual && !obsidianMode && (
@@ -388,7 +407,8 @@ export default function GraphPage() {
                   </div>
 
                   <div>
-                    <h3 className="text-xs font-semibold text-faint uppercase tracking-wide mb-2">Vecinos (teclado)</h3>
+                    <h3 className="text-xs font-semibold text-faint uppercase tracking-wide mb-1">Vecinos directos</h3>
+                    <p className="text-[11px] text-faint mb-2">Tocá uno para entrar a su vecindad.</p>
                     <div className="flex flex-wrap gap-1.5">
                       {neighborsOf(viewAdj, selectedEntry.uid).map((nb) => {
                         const e = byUid.get(nb.uid);
@@ -397,7 +417,7 @@ export default function GraphPage() {
                           <button
                             key={nb.uid + nb.direction}
                             className="chip bg-raised/70 border border-line/50 text-muted hover:text-accent hover:border-accent/40"
-                            onClick={() => selectNode(nb.uid, true)}
+                            onClick={() => goVecindad(nb.uid)}
                           >
                             {e.title}
                           </button>
