@@ -266,9 +266,11 @@ export default function GraphCanvas({
 
   useEffect(() => {
     // Cuando cambian los nodos (vista completa <-> contextual), re-encuadrar.
+    // Antes solo marcaba didFit=false, pero el layout-effect corria antes y no lo aplicaba.
     didFit.current = false;
     dirty.current = true;
-  }, [nodes, simData]);
+    fitView(false);
+  }, [nodes, simData, fitView]);
 
   useEffect(() => {
     if (fitSignal > 0) fitView(true);
