@@ -79,6 +79,8 @@ export default function GraphPage() {
     () => (obsidianMode ? obsidianGraph : contextual ? subgraphAround(graph, adj, contextUid!, 1) : graph),
     [obsidianMode, obsidianGraph, contextual, contextUid, graph, adj],
   );
+  // Adyacencia del grafo visible: en modo Obsidian incluye la jerarquía (raíz/áreas).
+  const viewAdj = useMemo(() => buildAdjacency(view), [view]);
 
   const path = useMemo(
     () => (from && to ? shortestPath(adj, from, to) : null),
@@ -152,7 +154,7 @@ export default function GraphPage() {
   const selectedEntry = selected ? byUid.get(selected) : undefined;
   const selectedNode = view.nodes.find((n) => n.uid === selected) ?? graph.nodes.find((n) => n.uid === selected);
   const syntheticNode = selected && !selectedEntry ? selectedNode ?? null : null;
-  const syntheticNeighbors = useMemo(() => (selected ? neighborsOf(adj, selected) : []), [adj, selected]);
+  const syntheticNeighbors = useMemo(() => (selected ? neighborsOf(viewAdj, selected) : []), [viewAdj, selected]);
 
   return (
     <div className="h-[calc(100vh-3.5rem)] flex flex-col">
@@ -334,7 +336,7 @@ export default function GraphPage() {
             <div className="p-4 space-y-4">
               <div className="flex items-start justify-between gap-2">
                 <h2 className="text-sm font-semibold text-faint uppercase tracking-wide">
-                  {selectedEdgeRecord ? 'Relación' : path ? 'Camino' : 'Concepto'}
+                  {selectedEdgeRecord ? 'Relación' : path ? 'Camino' : syntheticNode ? 'Nodo' : 'Concepto'}
                 </h2>
                 <button
                   className="btn-ghost !p-1"
@@ -388,7 +390,7 @@ export default function GraphPage() {
                   <div>
                     <h3 className="text-xs font-semibold text-faint uppercase tracking-wide mb-2">Vecinos (teclado)</h3>
                     <div className="flex flex-wrap gap-1.5">
-                      {neighborsOf(adj, selectedEntry.uid).map((nb) => {
+                      {neighborsOf(viewAdj, selectedEntry.uid).map((nb) => {
                         const e = byUid.get(nb.uid);
                         if (!e) return null;
                         return (
