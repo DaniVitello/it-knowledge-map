@@ -351,7 +351,9 @@ export default function Graph3D(props: Graph3DProps) {
         .force('z', forceZ(0).strength(0.02))
         .alpha(1).alphaDecay(0.022).velocityDecay(0.35);
     } else {
-      const centroids = areaCentroids(areaUids);
+      // Radio proporcional al tamaño: el mapa completo usa 460, una vecindad (recorte) queda compacta.
+      const centroidR = Math.max(90, Math.min(460, 45 * Math.sqrt(props.nodes.length)));
+      const centroids = areaCentroids(areaUids, centroidR);
       simNodes = initialPositions(props.nodes, centroids, 90, heads.headSet);
       const idxTmp = new Map(simNodes.map((n, i) => [n.uid, i]));
       for (const sn of simNodes) {
@@ -417,8 +419,6 @@ export default function Graph3D(props: Graph3DProps) {
       const busy = !!(p.selectedUid || p.highlightUids || p.highlightAreas || s.camTween || s.hoverUid);
       s.controls.autoRotate = !s.reduced && !busy && (now - s.lastPointer > 3500);
       s.controls.update();
-      const __d = document.getElementById('ikm-dbg3d');
-      if (__d) __d.textContent = JSON.stringify({ cam: s.camera.position.toArray().map((v: number) => Math.round(v)), tgt: s.controls.target.toArray().map((v: number) => Math.round(v)), ns: s.simNodes.map((n) => [n.title, Math.round(n.x), Math.round(n.y), Math.round(n.z)]) });
       s.composer.render();
       s.labelRenderer.render(s.scene, s.camera);
       s.raf = requestAnimationFrame(animate);
@@ -542,8 +542,6 @@ export default function Graph3D(props: Graph3DProps) {
       className={`relative overflow-hidden ${props.className ?? ''}`}
       role="application"
       aria-label="Grafo 3D de conceptos. Arrastrá para rotar, rueda para zoom, click para seleccionar. La lista de conceptos ofrece navegación por teclado."
-    >
-      <div id="ikm-dbg3d" style={{ position: 'absolute', left: 4, top: 4, zIndex: 60, fontSize: 9, fontFamily: 'monospace', background: 'rgba(0,0,0,.85)', color: '#0f0', padding: 4, maxWidth: 380, whiteSpace: 'pre', pointerEvents: 'none' }} />
-    </div>
+    />
   );
 }

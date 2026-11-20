@@ -138,7 +138,9 @@ export default function GraphCanvas({
       return { sim, simNodes, byUid, heads: computeHeads(nodes) };
     }
     const areaUids = [...new Set(nodes.map((n) => n.area_uid).filter(Boolean))] as string[];
-    const seeds = areaSeeds(areaUids);
+    // Radio proporcional al tamaño: el mapa completo usa 340, una vecindad (recorte) queda compacta.
+    const seedR = Math.max(70, Math.min(340, 40 * Math.sqrt(nodes.length)));
+    const seeds = areaSeeds(areaUids, seedR);
     const heads = computeHeads(nodes);
     const simNodes: SimNode2[] = nodes.map((n, i) => {
       const s = seeds.get(n.area_uid ?? '') ?? { x: 0, y: 0 };
@@ -732,7 +734,6 @@ export default function GraphCanvas({
         onWheel={onWheel}
         onKeyDown={onKeyDown}
       />
-      <div id="ikm-dbg" style={{ position: 'absolute', left: 4, top: 4, zIndex: 60, fontSize: 9, fontFamily: 'monospace', background: 'rgba(0,0,0,.85)', color: '#0f0', padding: 4, maxWidth: 360, whiteSpace: 'pre', pointerEvents: 'none' }} />
     </div>
   );
 }
