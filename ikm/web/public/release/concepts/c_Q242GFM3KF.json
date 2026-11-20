@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "Algorithms"
+  ],
+  "area_uid": "software-engineering",
+  "content_hash": "10b83d16aa2cd8fb7b71cdd9a10c5c10a84c6c051e03cc94c36ab34d51461e28",
+  "numero": 3,
+  "related_uids": [
+    "c_45PAYUACPS",
+    "c_KEMF6IFKTQ"
+  ],
+  "sections": {
+    "como_funciona": "1. Identifico el problema y selecciono la categoría (búsqueda, ordenamiento, etc.).  \r\n2. Elijo la estrategia adecuada (por ejemplo, búsqueda binaria si los datos están ordenados).  \r\n3. Aplico la lógica recursiva o iterativa según el algoritmo elegido.  \r\n4. Durante la ejecución, el algoritmo procesa los datos paso a paso, reduciendo el espacio de búsqueda o subdividiendo la colección.  \r\n5. Al finalizar, obtengo el resultado y, opcionalmente, analizo su complejidad para validar la eficiencia.",
+    "conexiones": "- **Data Structures**: los algoritmos de búsqueda y ordenamiento dependen de la estructura subyacente (arrays, árboles, listas) para alcanzar sus garantías de complejidad.  \r\n- **Complexity Analysis**: la notación O‑grande permite comparar algoritmos y decidir cuál es más apropiado según los requisitos de tiempo y espacio.  \r\n- **Parallel Computing**: muchos algoritmos clásicos (p. ej., mergesort) tienen versiones paralelas que reducen el tiempo de ejecución en arquitecturas multicore.",
+    "detalles": "- **Básico**: búsqueda lineal (O(n)) y ordenamiento por inserción (O(n²)). Son fáciles de implementar y sirven como referencia.  \r\n- **Intermedio**: búsqueda binaria (O(log n)) y quicksort (O(n log n) promedio). Requieren datos ordenados o particiones eficientes.  \r\n- **Avanzado**: mergesort (O(n log n) garantizado) y algoritmos recursivos con memoización o programación dinámica, que optimizan problemas exponenciales como la mochila.  \r\n- En cada nivel, la complejidad guía la elección: se prefiere O(log n) sobre O(n) cuando el tamaño de los datos crece significativamente.",
+    "ejemplo_minimo": "```python\r\ndef binary_search(arr, target):\r\n    lo, hi = 0, len(arr) - 1\r\n    while lo <= hi:\r\n        mid = (lo + hi) // 2\r\n        if arr[mid] == target:\r\n            return mid\r\n        elif arr[mid] < target:\r\n            lo = mid + 1\r\n        else:\r\n            hi = mid - 1\r\n    return -1\r\n\r\n# Uso\r\nlista = [1, 3, 5, 7, 9]\r\nprint(binary_search(lista, 7))   # → 3\r\n```",
+    "errores_comunes": "- **Confundir ordenamiento y búsqueda**: intentar buscar en una lista no ordenada con búsqueda binaria. *Evitar*: ordenar primero o usar búsqueda lineal.  \r\n- **Olvidar caso base en recursión**: provoca recursión infinita y desbordamiento de pila. *Evitar*: definir siempre una condición de terminación clara.  \r\n- **Subestimar la complejidad**: elegir quicksort sin considerar su peor caso O(n²). *Evitar*: usar mergesort o introsort cuando la robustez es crítica.",
+    "estado_actual": "Los fundamentos de búsqueda, ordenamiento y recursión son estables y forman parte del currículo básico de Ingeniería de Software. En la práctica moderna, se combinan con técnicas de paralelismo (p. ej., algoritmos de ordenamiento paralelo) y con estructuras de datos especializadas (árboles balanceados, heaps) para mejorar la escalabilidad. Además, la evaluación de complejidad se complementa con análisis de caché y coste energético en entornos de computación en la nube.",
+    "ideas_clave": "1. **Búsqueda** – localizar un elemento dentro de una colección mediante técnicas como búsqueda lineal o binaria.  \r\n2. **Ordenamiento** – reorganizar datos para que sigan un criterio definido; ejemplos clásicos son quicksort y mergesort.  \r\n3. **Recursión** – definir una solución en términos de sí misma, esencial para algoritmos de divide‑y‑vencer.  \r\n4. **Complejidad** – medir el costo temporal y espacial de un algoritmo (notación O‑grande).",
+    "objetivo": "Utilizo los algoritmos para transformar datos de forma sistemática y eficiente, resolviendo problemas como encontrar información específica, ordenar colecciones o calcular resultados recursivamente. En mi día a día como ingeniero de software, los algoritmos aparecen en la implementación de funcionalidades de búsqueda, en la optimización de procesos y en la evaluación de la viabilidad de una solución mediante su complejidad. Después de comprenderlos, puedo diseñar soluciones más rápidas, elegir la estructura de datos adecuada y estimar costos de ejecución. Sólo cuando el dominio del problema es trivial o el rendimiento no es crítico, no necesito preocuparme por la elección del algoritmo.",
+    "preguntas_repaso": "1. ¿En qué situaciones es preferible usar búsqueda binaria en lugar de búsqueda lineal?  \r\n2. ¿Cómo afecta la elección de la estructura de datos al comportamiento de un algoritmo de ordenamiento?  \r\n3. ¿Cuál es la diferencia entre complejidad temporal promedio y peor caso en quicksort?  \r\n4. Describe un caso donde la recursión sin memoización resulta ineficiente y cómo la memoización lo mejora.  \r\n5. ¿Qué ventajas aporta paralelizar mergesort en un sistema multicore?",
+    "ruta_estudio": "1. **Prerequisitos**: lógica de programación, tipos de datos básicos y manejo de arrays.  \r\n2. **Fundamentos**: estudiar búsqueda lineal, inserción y recursión simple; practicar con ejercicios de complejidad O(n) y O(log n).  \r\n3. **Intermedio**: implementar búsqueda binaria, quicksort y mergesort; introducir análisis de caso promedio y peor.  \r\n4. **Avanzado**: explorar algoritmos de programación dinámica, memoización y versiones paralelas de mergesort; profundizar en análisis de complejidad amortizada y de caché.  \r\n5. **Especialización**: aplicar algoritmos a dominios específicos (bases de datos, gráficos, aprendizaje automático) y evaluar su rendimiento en entornos reales."
+  },
+  "sections_missing": [],
+  "slug": "algorithms",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/software-engineering"
+  ],
+  "title": "Algorithms",
+  "uid": "c_Q242GFM3KF",
+  "verification_marks": []
+}

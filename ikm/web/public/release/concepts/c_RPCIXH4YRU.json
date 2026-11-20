@@ -1,0 +1,47 @@
+{
+  "aliases": [
+    "Rendering moderno"
+  ],
+  "area_uid": "frontend",
+  "content_hash": "454420c416871ee9286ab6155904fb8d928ed4675a0d9390287226e3823f5f62",
+  "numero": 24,
+  "related_uids": [
+    "c_SCSLG2OETM",
+    "c_ZEMQLX7HXG"
+  ],
+  "sections": {
+    "como_funciona": "1. El desarrollador elige una estrategia (CSR, SSR, SSG) según la naturaleza de la ruta.  \r\n2. En SSR o SSG, el servidor o el proceso de build generan el markup inicial.  \r\n3. Ese markup se envía al navegador; si incluye scripts, el cliente ejecuta la **hydration** para convertir los nodos estáticos en componentes interactivos.  \r\n4. Cuando se usa **streaming**, el servidor empieza a enviar los primeros fragmentos de HTML antes de terminar de renderizar toda la página, permitiendo que el navegador empiece a pintar rápidamente.  \r\n5. En CSR puro, el navegador recibe un HTML mínimo y luego descarga y ejecuta todo el JavaScript para construir la UI.",
+    "conexiones": "- **Performance** – El tipo de rendering determina el tiempo hasta la primera pintura y el consumo de recursos del cliente.  \r\n- **CDN** – En SSG y SSR, los archivos HTML y los assets estáticos se distribuyen a través de una CDN para acercar el contenido al usuario final.  \r\n- **Load Balancing** – En SSR, el balanceador reparte las peticiones entre múltiples instancias de servidor para mantener tiempos de respuesta consistentes.",
+    "detalles": "- **Básico**: comprender CSR y cómo el bundle de JavaScript controla el DOM.  \r\n- **Intermedio**: introducir SSR con frameworks que renderizan en Node.js y observar la mejora en First Contentful Paint.  \r\n- **Avanzado**: combinar SSG con incremental static regeneration, aplicar hydration parcial y habilitar streaming para páginas muy pesadas. Cada capa agrega complejidad de infraestructura (caché de servidor, orquestación de builds) pero brinda mayores ganancias de performance y SEO.",
+    "ejemplo_minimo": "```jsx\r\n// index.html (SSG + hydration)\r\n<!DOCTYPE html>\r\n<html lang=\"es\">\r\n<head><meta charset=\"UTF-8\"><title>Demo</title></head>\r\n<body>\r\n  <div id=\"root\"><h1>Hola Mundo</h1></div>\r\n  <script type=\"module\" src=\"/app.js\"></script>\r\n</body>\r\n</html>\r\n\r\n// app.js (React hydration)\r\nimport React from \"https://esm.sh/react\";\r\nimport { hydrateRoot } from \"https://esm.sh/react-dom/client\";\r\n\r\nfunction App() {\r\n  return <h1>Hola Mundo</h1>;\r\n}\r\n\r\nhydrateRoot(document.getElementById(\"root\"), <App />);\r\n```\r\nEl HTML estático muestra “Hola Mundo”; el script lo hidrata para que React pueda gestionar futuros cambios.",
+    "errores_comunes": "- **Confundir SSR con SSG** – SSR se ejecuta en cada petición; SSG se genera una sola vez. Evitarlo definiendo claramente la estrategia por ruta.  \r\n- **Olvidar la hidratación** – Publicar HTML estático sin incluir el bundle rompe la interactividad; siempre cargar el script de hidratación.  \r\n- **Renderizar demasiado en el servidor** – Incluir lógica que depende del navegador (window, document) en SSR provoca errores; aislarla con verificaciones de entorno.",
+    "estado_actual": "- **Fundamentos estables**: CSR, SSR y SSG son conceptos consolidados y soportados por los principales frameworks (React, Vue, Angular).  \r\n- **Práctica moderna**: la combinación de hydration parcial y streaming está ganando adopción para reducir la latencia percibida en aplicaciones de gran escala. Herramientas como React 18 y Next.js 13 ofrecen APIs nativas para streaming y rehidratación incremental.",
+    "ideas_clave": "1. **CSR (Client‑Side Rendering)** – El navegador descarga JavaScript y genera la UI completamente en el cliente.  \r\n2. **SSR (Server‑Side Rendering)** – El servidor envía HTML ya renderizado, mejorando el tiempo de primera pintura y SEO.  \r\n3. **SSG (Static Site Generation)** – Se genera HTML estático en tiempo de build; ideal para contenido que cambia poco.  \r\n4. **Hydration** – Proceso que “activa” el HTML estático o SSR añadiendo interactividad mediante JavaScript.  \r\n5. **Streaming** – Envía fragmentos de HTML al cliente a medida que se generan, reduciendo la latencia percibida.",
+    "objetivo": "Utilizo el rendering moderno para decidir cómo y cuándo el HTML de una aplicación web se genera y se entrega al navegador. Resuelvo el problema de equilibrar velocidad de carga percibida, SEO y carga del servidor, eligiendo entre renderizado del lado del cliente (CSR), del lado del servidor (SSR), generación estática (SSG) o combinaciones con hydration y streaming. Aparece en cada proyecto frontend donde la experiencia del usuario y la indexación por buscadores son críticas. Después de entenderlo, puedo diseñar arquitecturas que aprovechen la mejor estrategia para cada ruta y optimizar recursos. No necesito preocuparme cuando la aplicación es puramente interna y no requiere SEO ni tiempos de carga críticos.",
+    "preguntas_repaso": "1. ¿En qué situaciones prefiero SSR sobre CSR?  \r\n2. ¿Qué papel juega la hydration después de un SSG?  \r\n3. ¿Cómo reduce el streaming la latencia percibida por el usuario?  \r\n4. ¿Cuál es la diferencia principal entre SSR y SSG en cuanto a generación de HTML?  \r\n5. ¿Por qué una CDN es importante para los archivos generados por SSG?",
+    "ruta_estudio": "1. **Prerequisitos**: HTML, CSS, JavaScript ES6, conceptos básicos de HTTP.  \r\n2. **Fundamentos**: practicar CSR con un proyecto React simple.  \r\n3. **SSR**: seguir un tutorial de Next.js que muestre `getServerSideProps`.  \r\n4. **SSG**: crear una página estática con `getStaticProps` y desplegar en Vercel o Netlify.  \r\n5. **Hydration y Streaming**: profundizar en la API `hydrateRoot` y en los componentes `Suspense`/`Streaming` de React 18.  \r\n6. **Optimización**: medir métricas de performance (LCP, FID) y ajustar la estrategia de rendering según los resultados."
+  },
+  "sections_missing": [],
+  "slug": "rendering-moderno",
+  "sources": [
+    "https://esm.sh/react",
+    "https://esm.sh/react-dom/client"
+  ],
+  "sources_detail": [
+    {
+      "title": null,
+      "url": "https://esm.sh/react"
+    },
+    {
+      "title": null,
+      "url": "https://esm.sh/react-dom/client"
+    }
+  ],
+  "tags": [
+    "concepto",
+    "it/frontend"
+  ],
+  "title": "Rendering moderno",
+  "uid": "c_RPCIXH4YRU",
+  "verification_marks": []
+}

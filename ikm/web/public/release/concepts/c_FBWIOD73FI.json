@@ -1,0 +1,41 @@
+{
+  "aliases": [
+    "Engineering Processes"
+  ],
+  "area_uid": "software-engineering",
+  "content_hash": "99034954ecc161d2715f379bcd699e1c38089292928ae403a11e4a355b73f011",
+  "numero": 30,
+  "related_uids": [
+    "c_5P4YM7PKKX",
+    "c_CQ3MBF4W7W",
+    "c_K2VG7SUBID",
+    "c_N6K5FPOTSK",
+    "c_O73WVZARSW",
+    "c_Q56AS5I5XQ",
+    "c_QZTOO636ZO",
+    "c_VZFUJQTAUP"
+  ],
+  "sections": {
+    "como_funciona": "1. **Planificación**: se reúnen los stakeholders, se priorizan requisitos y se crea un backlog inicial.  \r\n2. **Estimación**: el equipo descompone los ítems del backlog y asigna unidades de esfuerzo, ajustando la capacidad del sprint o del flujo continuo.  \r\n3. **Entrega**: se seleccionan los ítems estimados para el próximo ciclo, se desarrollan, prueban y despliegan; al final del sprint o del ciclo Kanban se revisa el incremento.  \r\n4. **Gestión de incidentes**: cuando ocurre una falla, se abre un ticket, se asigna a un responsable, se investiga la causa raíz y se implementa la solución, cerrando el incidente y registrando la lección aprendida.",
+    "conexiones": "- **Technical Leadership**: el líder técnico define la visión del proceso, asegura que la planificación sea realista y guía la mejora continua.  \r\n- **Agile**: los principios ágiles proporcionan el marco de trabajo que hace operables la planificación, estimación y entrega iterativa.  \r\n- **Retrospectives & Improvement**: los retrospectives cierran el ciclo, analizando tanto la entrega como la gestión de incidentes para introducir ajustes.",
+    "detalles": "- **Básico**: comprender la diferencia entre planificación estratégica (road‑map) y táctica (sprint planning).  \r\n- **Intermedio**: aplicar técnicas de estimación colaborativa (Planning Poker) y usar métricas como velocity o lead time para ajustar la entrega.  \r\n- **Avanzado**: integrar la gestión de incidentes con el proceso de entrega mediante pipelines de CI/CD que incluyen alertas automáticas y retroalimentación en los retrospectives.",
+    "ejemplo_minimo": "```python\r\n# Simulación mínima de estimación y planificación en Scrum\r\nbacklog = {\"login\": 5, \"registro\": 8, \"perfil\": 3}   # story points\r\ncapacity = 10                                      # puntos disponibles en el sprint\r\n\r\nsprint = {}\r\nremaining = capacity\r\nfor task, pts in backlog.items():\r\n    if pts <= remaining:\r\n        sprint[task] = pts\r\n        remaining -= pts\r\n\r\nprint(\"Sprint seleccionado:\", sprint)\r\n# Salida: Sprint seleccionado: {'login': 5, 'perfil': 3}\r\n```",
+    "errores_comunes": "- Subestimar el esfuerzo porque se ignoran dependencias técnicas; evitarlo revisando la arquitectura antes de estimar.  \r\n- Planificar sin reservar capacidad para incidentes; reservar al menos un 10 % del sprint para soporte.  \r\n- Confundir entrega de código con entrega de valor; validar siempre con criterios de aceptación claros.",
+    "estado_actual": "**Fundamentos estables**: la necesidad de planificar, estimar, entregar y gestionar incidentes es constante en cualquier proyecto de software.  \r\n**Práctica moderna**: la adopción de marcos ágiles (Scrum, Kanban) y la integración de herramientas de observabilidad (Prometheus, Sentry) para automatizar la detección y el registro de incidentes son tendencias consolidadas.",
+    "ideas_clave": "1. **Planificación** – Definir el alcance, los objetivos y el calendario del proyecto.  \r\n2. **Estimación** – Cuantificar el esfuerzo necesario mediante técnicas como story points o function points.  \r\n3. **Entrega** – Ejecutar el trabajo siguiendo un marco ágil (Scrum, Kanban) y producir incrementos de software funcionales.  \r\n4. **Gestión de incidentes** – Detectar, registrar y resolver fallas operativas para mantener la disponibilidad del sistema.",
+    "objetivo": "Utilizo los Engineering Processes para estructurar y controlar todo el ciclo de vida de un producto de software, desde la concepción hasta la operación. Resuelvo la incertidumbre de cómo planificar, estimar y entregar funcionalidades de forma predecible, y cómo responder a incidentes cuando aparecen. Aparecen en el día a día de un ingeniero senior o de un Technical Leader cuando coordina equipos, define metas y asegura la calidad del entregable. Después de comprenderlos, puedo diseñar road‑maps, establecer métricas de progreso y aplicar mejoras continuas. No es necesario profundizar en ellos cuando el proyecto es un prototipo rápido o una prueba de concepto sin requisitos de entrega formal.",
+    "preguntas_repaso": "1. ¿Cuál es la diferencia entre planificación estratégica y planificación táctica dentro de los Engineering Processes?  \r\n2. ¿Cómo se utiliza el método Planning Poker para mejorar la precisión de la estimación?  \r\n3. ¿Qué papel juega la gestión de incidentes en la fase de entrega de un sprint?  \r\n4. ¿Por qué es importante reservar capacidad del sprint para atender incidentes?  \r\n5. ¿Cómo pueden los retrospectives influir en la mejora de los procesos de planificación y estimación?",
+    "ruta_estudio": "1. **Prerequisitos**: conceptos básicos de gestión de proyectos, fundamentos de metodologías ágiles y nociones de arquitectura de software.  \r\n2. **Fundamentos**: estudiar Scrum Guide y Kanban Guide, practicar Planning Poker y crear un backlog simple.  \r\n3. **Intermedio**: aprender a medir velocity, lead time y a usar herramientas de seguimiento de incidentes (Jira, ServiceNow).  \r\n4. **Avanzado**: integrar CI/CD con alertas automáticas, aplicar análisis de causa raíz (5 Whys) y liderar retrospectives orientados a procesos."
+  },
+  "sections_missing": [],
+  "slug": "engineering-processes",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/software-engineering"
+  ],
+  "title": "Engineering Processes",
+  "uid": "c_FBWIOD73FI",
+  "verification_marks": []
+}

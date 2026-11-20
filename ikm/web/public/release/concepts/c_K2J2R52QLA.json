@@ -1,0 +1,38 @@
+{
+  "aliases": [
+    "SOLID & Design Principles"
+  ],
+  "area_uid": "software-engineering",
+  "content_hash": "28bb68f88f64c696d661f8f98c846ea28f11dbd0ec0d77600fdbb8dba68ab464",
+  "numero": 16,
+  "related_uids": [
+    "c_3UAMR6JQWV",
+    "c_53KOHLSCN5",
+    "c_IMFWIGRRUB",
+    "c_VA6ETRQ2HH",
+    "c_ZUGE3YIJ5I"
+  ],
+  "sections": {
+    "como_funciona": "1. Identifico la **responsabilidad** principal de cada componente y lo separo en clases distintas (SRP).  \r\n2. Defino **abstracciones** (interfaces o clases abstractas) que describen el comportamiento esperado, permitiendo que nuevas implementaciones se añadan sin tocar el código existente (OCP).  \r\n3. Aseguro que cualquier implementación nueva respete las **pre‑ y post‑condiciones** de la abstracción, de modo que pueda sustituir a la original sin efectos colaterales (LSP).  \r\n4. Divido las abstracciones en **interfaces pequeñas y coherentes**, evitando que los clientes dependan de métodos que no usan (ISP).  \r\n5. Invierto la dirección de las dependencias: los componentes de alto nivel reciben **abstracciones** en sus constructores o mediante inyección de dependencias, en lugar de crear directamente los módulos de bajo nivel (DIP).",
+    "conexiones": "- **Code Quality** – Aplicar SOLID mejora la legibilidad y reduce la deuda técnica, elevando la calidad del código.  \r\n- **Design Patterns** – Muchos patrones (Strategy, Factory, Decorator) se construyen sobre los principios SOLID, especialmente OCP y DIP.  \r\n- **Refactoring** – El proceso de refactorizar frecuentemente consiste en reorganizar código para cumplir SRP, ISP y otros principios.",
+    "detalles": "- **Básico**: Aplicar SRP y reconocer cuándo una clase está haciendo demasiado.  \r\n- **Intermedio**: Introducir interfaces para cumplir OCP y ISP; usar herencia con cuidado para no violar LSP.  \r\n- **Avanzado**: Implementar contenedores de inversión de control (IoC) o patrones de fábrica que faciliten DIP; combinar SOLID con patrones de diseño como Strategy o Decorator para lograr extensibilidad sin modificar código existente.",
+    "ejemplo_minimo": "```java\r\n// SRP: clase que solo envía notificaciones\r\ninterface Notifier {\r\n    void send(String message);\r\n}\r\n\r\n// OCP y DIP: podemos añadir nuevos notifiers sin tocar el código cliente\r\nclass EmailNotifier implements Notifier {\r\n    public void send(String message) {\r\n        System.out.println(\"Email: \" + message);\r\n    }\r\n}\r\n\r\nclass SmsNotifier implements Notifier {\r\n    public void send(String message) {\r\n        System.out.println(\"SMS: \" + message);\r\n    }\r\n}\r\n\r\n// Cliente que depende de la abstracción (DIP)\r\nclass AlertService {\r\n    private final Notifier notifier;\r\n    public AlertService(Notifier notifier) {\r\n        this.notifier = notifier;\r\n    }\r\n    public void alert(String msg) {\r\n        notifier.send(msg);\r\n    }\r\n}\r\n\r\n// Uso\r\nAlertService service = new AlertService(new EmailNotifier());\r\nservice.alert(\"¡Sistema operativo!\");\r\n```",
+    "errores_comunes": "- **Confundir SRP con “una clase por método”** – evitar dividir en exceso; la responsabilidad debe ser lógica, no granular.  \r\n- **Violación de LSP al sobrescribir métodos con comportamientos diferentes** – mantener invariantes y contratos.  \r\n- **Inyectar dependencias concretas en vez de abstracciones** – usar interfaces o clases abstractas para cumplir DIP.",
+    "estado_actual": "Los principios SOLID siguen siendo la base estable de la arquitectura orientada a objetos; su validez está respaldada por la práctica continua en la industria. En la práctica moderna, se combinan con enfoques de arquitectura basada en componentes, microservicios y frameworks de inyección de dependencias (por ejemplo, Spring, .NET Core) que facilitan la aplicación de DIP y OCP a gran escala.",
+    "ideas_clave": "1. **Responsabilidad Única (SRP)** – Cada clase o módulo debe tener una única razón para cambiar.  \r\n2. **Abierto/Cerrado (OCP)** – El código debe estar abierto a extensión pero cerrado a modificación.  \r\n3. **Sustitución de Liskov (LSP)** – Las subclases deben poder sustituir a sus superclases sin alterar el comportamiento esperado.  \r\n4. **Segregación de Interfaces (ISP)** – Es mejor tener varias interfaces específicas que una única interfaz general.  \r\n5. **Inversión de Dependencias (DIP)** – Los módulos de alto nivel no deben depender de módulos de bajo nivel; ambos deben depender de abstracciones.",
+    "objetivo": "Utilizo los principios SOLID y de diseño para crear código que sea fácil de entender, mantener y escalar. Resuelvo problemas de acoplamiento excesivo y de falta de flexibilidad que aparecen al agregar nuevas funcionalidades o al corregir errores. En mi día a día como ingeniero de software aplico estos principios al diseñar clases, módulos y APIs, garantizando que cada pieza tenga una única responsabilidad y que las dependencias sean controlables. Después de comprenderlos, puedo estructurar sistemas que soporten cambios sin romper el comportamiento existente y participar eficazmente en revisiones de código y refactorizaciones. No necesito preocuparme por SOLID cuando trabajo en scripts muy pequeños o prototipos descartables que no van a evolucionar.",
+    "preguntas_repaso": "1. ¿Qué significa que una clase tenga una única razón de cambio según SRP?  \r\n2. ¿Cómo garantiza OCP que el código existente no se rompa al añadir nuevas funcionalidades?  \r\n3. ¿Qué condición debe cumplir una subclase para no violar LSP?  \r\n4. ¿Por qué es preferible crear varias interfaces pequeñas en lugar de una única interfaz grande (ISP)?  \r\n5. ¿De qué manera la inversión de dependencias (DIP) facilita la sustitución de implementaciones en tiempo de ejecución?",
+    "ruta_estudio": "1. **Prerequisitos**: Programación orientada a objetos (clases, herencia, interfaces) y conceptos básicos de acoplamiento y cohesión.  \r\n2. **Fundamentos**: Estudiar cada principio SOLID individualmente, con ejercicios de identificación de violaciones en código existente.  \r\n3. **Práctica**: Implementar pequeños proyectos (por ejemplo, un sistema de notificaciones) aplicando los cinco principios.  \r\n4. **Profundización**: Explorar patrones de diseño que complementan SOLID y aprender a usar contenedores IoC para DIP.  \r\n5. **Avanzado**: Integrar SOLID en arquitecturas de microservicios y evaluar su impacto en pruebas automatizadas y despliegues continuos."
+  },
+  "sections_missing": [],
+  "slug": "solid-design-principles",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/software-engineering"
+  ],
+  "title": "SOLID & Design Principles",
+  "uid": "c_K2J2R52QLA",
+  "verification_marks": []
+}

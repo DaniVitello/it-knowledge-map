@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "Formularios"
+  ],
+  "area_uid": "frontend",
+  "content_hash": "70f8dc6bd20f2d84bc00ae26c9ec0996f3e087da1b812779b0ecc9c5bd28ed24",
+  "numero": 17,
+  "related_uids": [
+    "c_FYUNN3WTKX",
+    "c_NNWQH47RM7"
+  ],
+  "sections": {
+    "como_funciona": "1. El componente inicializa su estado con los valores de los campos del formulario.  \r\n2. Cada vez que el usuario escribe, el evento `onChange` actualiza el estado correspondiente.  \r\n3. El componente ejecuta funciones de validación (expresiones regulares, reglas de negocio, etc.) y actualiza un objeto de errores.  \r\n4. En el evento `onSubmit`, se impide el comportamiento por defecto, se revisan los errores y, si no existen, se procede a enviar los datos al backend o a procesarlos localmente.",
+    "conexiones": "- **Autenticación en Frontend** – Los formularios de login son la puerta de entrada a los flujos de autenticación y requieren validaciones de credenciales.  \r\n- **Accesibilidad** – Los mensajes de error y los atributos ARIA garantizan que los usuarios con tecnologías asistivas puedan interactuar con los formularios.  \r\n- **Gestión de estado global** – En aplicaciones grandes, los datos de formularios pueden sincronizarse con stores como Redux o Pinia para compartirlos entre componentes.",
+    "detalles": "- **Básico**: Uso de `useState` (React) o variables locales (Vue) para crear un formulario controlado y validar campos obligatorios.  \r\n- **Intermedio**: Implementación de validaciones compuestas, uso de librerías como Yup o Zod, y despliegue de mensajes de error accesibles con `aria-live`.  \r\n- **Avanzado**: Gestión de formularios complejos con campos dinámicos, validación asíncrona (por ejemplo, verificación de disponibilidad de usuario) y optimización de rendimiento mediante memoización y debouncing.",
+    "ejemplo_minimo": "```jsx\r\nimport { useState } from \"react\";\r\n\r\nfunction SimpleForm() {\r\n  const [email, setEmail] = useState(\"\");\r\n  const [error, setError] = useState(\"\");\r\n\r\n  const validate = (value) => /\\S+@\\S+\\.\\S+/.test(value);\r\n\r\n  const handleSubmit = (e) => {\r\n    e.preventDefault();\r\n    if (!validate(email)) {\r\n      setError(\"Formato de email inválido\");\r\n      return;\r\n    }\r\n    alert(`Enviando: ${email}`);\r\n  };\r\n\r\n  return (\r\n    <form onSubmit={handleSubmit}>\r\n      <label>\r\n        Email:\r\n        <input\r\n          type=\"email\"\r\n          value={email}\r\n          onChange={(e) => {\r\n            setEmail(e.target.value);\r\n            setError(\"\");\r\n          }}\r\n        />\r\n      </label>\r\n      {error && <p style={{ color: \"red\" }}>{error}</p>}\r\n      <button type=\"submit\">Enviar</button>\r\n    </form>\r\n  );\r\n}\r\n```",
+    "errores_comunes": "- **Olvidar prevenir el comportamiento por defecto en `onSubmit`** – el navegador recarga la página; evitarlo con `e.preventDefault()`.  \r\n- **Usar inputs no controlados cuando se necesita sincronizar estado** – pierde consistencia; optar por componentes controlados.  \r\n- **Mostrar errores solo después del envío** – la retroalimentación tardía dificulta la corrección; validar en tiempo real.",
+    "estado_actual": "Los conceptos de estado controlado, validación y manejo de errores son fundamentos estables y ampliamente adoptados en bibliotecas modernas como React, Vue y Angular. En la práctica contemporánea, se complementan con librerías de gestión de formularios (React Hook Form, Formik) y esquemas de validación declarativos (Yup, Zod) que simplifican la implementación y mejoran la accesibilidad.",
+    "ideas_clave": "1. **Estado controlado (controlled state)** – El valor del input se almacena en el estado del componente y se actualiza mediante eventos.  \r\n2. **Validación** – Se verifica la corrección de los datos antes de enviarlos, tanto en tiempo real como al enviar.  \r\n3. **Manejo de errores** – Los mensajes de error se presentan al usuario de forma clara y accesible.  \r\n4. **Envío del formulario** – Se dispara una acción (por ejemplo, una petición HTTP) solo cuando la validación es exitosa.",
+    "objetivo": "Utilizo los formularios para capturar datos del usuario y enviarlos al servidor o procesarlos en la aplicación. Resuelvo el problema de cómo estructurar la interacción de entrada, validar la información y proporcionar retroalimentación inmediata. En mi trabajo como experto en Frontend, los formularios aparecen en cualquier pantalla que requiera datos, desde login hasta configuraciones avanzadas. Después de entenderlos, puedo diseñar interfaces más robustas, integrar validaciones personalizadas y conectar la captura de datos con la lógica de negocio. No necesito preocuparme cuando la interacción es solo de visualización estática y no se requiere entrada del usuario.",
+    "preguntas_repaso": "1. ¿Por qué es preferible usar un formulario controlado en una aplicación React?  \r\n2. ¿Cómo se evita que el navegador recargue la página al enviar un formulario?  \r\n3. ¿Qué papel juegan los atributos ARIA en la accesibilidad de los formularios?  \r\n4. ¿Cuál es la diferencia entre validar en tiempo real y validar al enviar?  \r\n5. ¿En qué casos conviene delegar la gestión de formularios a una librería externa?",
+    "ruta_estudio": "1. **Prerequisitos**: HTML básico, manejo de eventos JavaScript, conceptos de estado en el framework elegido.  \r\n2. **Fundamentos**: Crear formularios controlados, validar campos simples, mostrar errores.  \r\n3. **Intermedio**: Introducir librerías de validación (Yup/Zod) y de gestión de formularios (React Hook Form, Vuelidate).  \r\n4. **Avanzado**: Implementar validación asíncrona, formularios dinámicos, optimizaciones de rendimiento y pruebas unitarias con Jest o Testing Library."
+  },
+  "sections_missing": [],
+  "slug": "formularios",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/frontend"
+  ],
+  "title": "Formularios",
+  "uid": "c_YPMUNOMCWL",
+  "verification_marks": []
+}

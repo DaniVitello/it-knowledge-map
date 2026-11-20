@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "Problem Discovery"
+  ],
+  "area_uid": "product-management",
+  "content_hash": "c879f4021ff01950644301d5c03bbc0557ae36bb2415863757ee470e95377917",
+  "numero": 2,
+  "related_uids": [
+    "c_CHBELWMYEO",
+    "c_ECB42D4UZM",
+    "c_OPRQ4KKLEV"
+  ],
+  "sections": {
+    "como_funciona": "1. **Observación** – Recojo señales de uso (abandonos, tickets, comentarios) que sugieren un dolor.  \r\n2. **Investigación** – Conduzco user research (entrevistas, encuestas) y market research para confirmar que el síntoma corresponde a un problema estructural.  \r\n3. **Análisis de datos** – Mido frecuencia, severidad y segmento afectado; utilizo métricas como churn rate o NPS.  \r\n4. **Matriz de priorización** – Ubico el problema en una cuadrícula impacto‑esfuerzo y lo comparo con otros hallazgos.  \r\n5. **Hipótesis** – Redacto una hipótesis “Si cambiamos X, entonces Y mejorará en Z%”. Esta guía la siguiente fase de experimentación.",
+    "conexiones": "- **Product Thinking**: aporta la mentalidad de enfocarse en el valor para el usuario, lo que guía la selección de problemas a investigar.  \r\n- **User Research**: provee los métodos cualitativos (entrevistas, pruebas de usabilidad) que alimentan la fase de validación del problema.  \r\n- **Market Research**: contextualiza el problema dentro de tendencias y competidores, asegurando que la solución tenga relevancia de mercado.",
+    "detalles": "- **Básico**: reconocer patrones visibles (p. ej., alta tasa de rebote) y registrar preguntas abiertas.  \r\n- **Intermedio**: aplicar técnicas de user research (jobs‑to‑be‑done, mapas de empatía) y combinar con datos cuantitativos para validar la hipótesis del problema.  \r\n- **Avanzado**: usar análisis causal (A/B testing preliminar, cohort analysis) para aislar la raíz del problema y estimar el ROI de su solución, integrando insights de Product Thinking para alinear con la visión estratégica.",
+    "ejemplo_minimo": "```python\r\n# Simulación simple de detección de problema de alta tasa de abandono en onboarding\r\nimport pandas as pd\r\n\r\ndata = pd.read_csv('onboarding_events.csv')\r\nabandon_rate = data['completed'].mean()\r\nif abandon_rate < 0.6:\r\n    print(\"Problema detectado: alta tasa de abandono (>40%)\")\r\nelse:\r\n    print(\"No hay problema crítico en onboarding\")\r\n```",
+    "errores_comunes": "- **Confundir síntomas con problemas** – profundizar solo en lo visible sin validar la causa raíz.  \r\n- **Priorizar por facilidad** – elegir problemas fáciles de resolver en lugar de los de mayor impacto.  \r\n- **Ignorar datos cuantitativos** – basarse solo en opiniones cualitativas sin medir magnitud.",
+    "estado_actual": "- **Fundamentos estables**: la práctica de combinar observación, investigación de usuarios y análisis de datos para descubrir problemas está consolidada en metodologías de Product Management.  \r\n- **Práctica moderna**: la integración de herramientas de analytics en tiempo real y frameworks de hipótesis (Lean Startup, Opportunity Solution Tree) permite iterar más rápido y validar problemas con menor sesgo.",
+    "ideas_clave": "1. **Identificar problemas reales**: observar comportamientos y síntomas que indican fricción o insatisfacción.  \r\n2. **Validar con datos**: corroborar la existencia y magnitud del problema mediante métricas o entrevistas.  \r\n3. **Priorizar por impacto**: comparar el costo de no resolverlo contra el valor potencial para el negocio.  \r\n4. **Formular hipótesis de solución**: traducir el problema en una pregunta de experimentación clara.",
+    "objetivo": "Utilizo Problem Discovery para detectar, validar y priorizar los problemas reales que enfrentan mis usuarios antes de diseñar soluciones. Resuelvo la incertidumbre de “¿qué debemos construir?” al enfocarme en necesidades verificadas, lo que me permite alinear el roadmap con oportunidades de negocio tangibles. Aparece en la fase inicial del ciclo de vida del producto, justo después de la visión y antes de la definición de requisitos. Después de entenderlo, puedo estructurar hipótesis de solución, diseñar experimentos y comunicar de forma clara el valor esperado a stakeholders. No necesito preocuparme de Problem Discovery cuando el producto ya está en fase de optimización y los problemas críticos están bien documentados.",
+    "preguntas_repaso": "1. ¿Cómo diferencio un síntoma de un problema real en la gestión de un producto?  \r\n2. ¿Qué métricas usaría para validar la magnitud de un problema detectado?  \r\n3. ¿Por qué es importante priorizar problemas por impacto antes que por facilidad de solución?  \r\n4. ¿Cómo se traduce un problema validado en una hipótesis de solución ejecutable?  \r\n5. ¿Qué rol juegan Product Thinking, User Research y Market Research en el proceso de Problem Discovery?",
+    "ruta_estudio": "1. **Prerequisitos**: conceptos básicos de métricas de producto (KPIs, funnel), fundamentos de user research y análisis de datos.  \r\n2. **Fundamentos**: leer casos de estudio de discovery, practicar entrevistas estructuradas y análisis de abandono.  \r\n3. **Intermedio**: aprender a construir matrices de priorización y a formular hipótesis medibles.  \r\n4. **Avanzado**: dominar técnicas de causalidad (experimentación, cohort analysis) y aplicar frameworks como Opportunity Solution Tree.  \r\n5. **Especialización**: combinar Problem Discovery con estrategias de growth hacking y roadmap estratégico."
+  },
+  "sections_missing": [],
+  "slug": "problem-discovery",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/product-management"
+  ],
+  "title": "Problem Discovery",
+  "uid": "c_4NELIH6YTV",
+  "verification_marks": []
+}

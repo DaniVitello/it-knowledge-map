@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "Functional Programming"
+  ],
+  "area_uid": "software-engineering",
+  "content_hash": "26b82d4037dbc2566a8ee8ff8102d9601adeeb17029c0f8bb2b1d31cff450282",
+  "numero": 6,
+  "related_uids": [
+    "c_KZHQNGA3LM",
+    "c_TSM6OQKLAB"
+  ],
+  "sections": {
+    "como_funciona": "1. Defino los datos como valores inmutables (por ejemplo, objetos o estructuras sin setters).  \r\n2. Escribo funciones puras que operan sobre esos valores y devuelven nuevos valores.  \r\n3. Cuando necesito lógica reutilizable, creo funciones de orden superior que aceptan otras funciones como argumentos.  \r\n4. Combino esas funciones mediante composición, formando una cadena de transformaciones que se ejecuta de forma secuencial o perezosa.  \r\n5. El programa final se construye como la combinación de esas transformaciones, garantizando que cada paso sea determinista y libre de efectos colaterales.",
+    "conexiones": "- **Object‑Oriented Programming**: la programación funcional complementa la OOP al ofrecer funciones puras que pueden usarse como métodos sin estado, reduciendo la complejidad de los objetos mutables.  \r\n- **Abstraction**: ambas disciplinas buscan ocultar detalles; la programación funcional lo hace mediante funciones de orden superior y composición, mientras que la OOP lo hace mediante clases e interfaces.  \r\n- **Concurrency**: la ausencia de estado mutable en la programación funcional simplifica la escritura de código concurrente y libre de condiciones de carrera, facilitando la paralelización segura.",
+    "detalles": "- **Básico**: comprender la diferencia entre mutabilidad y inmutabilidad; identificar funciones puras y reconocer efectos colaterales (logs, I/O, cambios de estado).  \r\n- **Intermedio**: usar funciones de orden superior como `map`, `filter` y `reduce`; aplicar composición (`compose`/`pipe`) para crear pipelines legibles.  \r\n- **Avanzado**: manejar evaluación diferida con *lazy* collections o *generators*; aplicar monadas simples (por ejemplo, `Maybe` o `Either`) para gestionar errores sin romper la pureza; integrar programación funcional en entornos orientados a objetos mediante técnicas como *currying* y *partial application*.",
+    "ejemplo_minimo": "```python\r\n# Función pura que duplica un número\r\ndef doble(x):\r\n    return x * 2\r\n\r\n# Función de orden superior que aplica una función a cada elemento de una lista\r\ndef mapear(func, lista):\r\n    return [func(item) for item in lista]\r\n\r\nnumeros = [1, 2, 3]\r\nresultado = mapear(doble, numeros)   # -> [2, 4, 6]\r\nprint(resultado)\r\n```",
+    "errores_comunes": "- **Modificar estructuras inmutables**: intentar cambiar un elemento de una tupla o un objeto frozen; evitarlo creando una nueva instancia.  \r\n- **Introducir efectos colaterales en funciones puras**: escribir a la consola o a una base de datos dentro de una función que debería ser pura; aislar esos efectos en capas externas.  \r\n- **Confundir composición con herencia**: usar composición de funciones para reutilizar comportamiento, no para modelar relaciones de tipo “es‑un”.  \r\n- **Olvidar la evaluación diferida**: asumir que una operación lazy se ejecuta inmediatamente y depender de sus efectos secundarios; forzar la evaluación cuando sea necesario.",
+    "estado_actual": "- **Fundamentos estables**: la inmutabilidad, las funciones puras y la composición siguen siendo pilares aceptados en la teoría y la práctica de la programación funcional.  \r\n- **Práctica moderna**: lenguajes como Kotlin, Swift y Rust incorporan características funcionales (lambdas, `map`, `filter`, tipos de datos inmutables) y se utilizan ampliamente en desarrollo de aplicaciones móviles y sistemas de alto rendimiento. Las bibliotecas de JavaScript (Ramda, lodash/fp) y de Python (toolz, fn) facilitan la adopción de este paradigma en entornos tradicionales.",
+    "ideas_clave": "1. **Inmutabilidad** – Los datos nunca cambian después de su creación; cualquier “modificación” produce una nueva versión del valor.  \r\n2. **Funciones puras** – Una función siempre devuelve el mismo resultado para los mismos argumentos y no produce efectos colaterales.  \r\n3. **Funciones de orden superior** – Las funciones pueden recibir otras funciones como parámetros o devolverlas, permitiendo composición y abstracción de comportamiento.  \r\n4. **Composición de funciones** – Pequeñas funciones puras se encadenan para formar operaciones más complejas sin introducir estado mutable.  \r\n5. **Evaluación diferida** – Los cálculos pueden posponerse hasta que su resultado sea realmente necesario, optimizando recursos.",
+    "objetivo": "Utilizo la programación funcional para escribir código que sea más predecible y fácil de razonar, especialmente cuando manejo datos inmutables y transformaciones puras. Resuelvo problemas de complejidad accidental que aparecen al mezclar estado mutable con lógica de negocio, lo que reduce bugs y facilita pruebas automatizadas. En mi día a día como ingeniero de software la aplico al diseñar pipelines de procesamiento, APIs sin efectos colaterales y componentes reutilizables. Después de comprenderla puedo combinarla con otros paradigmas, elegir la herramienta adecuada para cada módulo y mejorar la mantenibilidad del sistema. No necesito preocuparme por ella cuando el dominio es estrictamente imperativo y el rendimiento de bajo nivel es crítico, o cuando el equipo no está familiarizado con sus conceptos básicos.",
+    "preguntas_repaso": "1. ¿Qué caracteriza a una función pura y por qué es importante para la predictibilidad del código?  \r\n2. ¿Cómo se diferencia la inmutabilidad de la mutabilidad y cuál es su impacto en la concurrencia?  \r\n3. ¿Qué es una función de orden superior y cómo permite la composición de comportamiento?  \r\n4. Describe un caso práctico donde combinar programación funcional con programación orientada a objetos mejore la mantenibilidad.  \r\n5. ¿Cuál es la ventaja de la evaluación diferida y cómo se puede forzar su ejecución cuando sea necesario?",
+    "ruta_estudio": "1. **Prerequisitos**: conceptos básicos de estructuras de datos, algoritmos y al menos un lenguaje con soporte de funciones de primera clase (por ejemplo, JavaScript, Python o Scala).  \r\n2. **Fundamentos**: estudiar inmutabilidad y funciones puras; practicar con `map`, `filter` y `reduce`.  \r\n3. **Intermedio**: profundizar en funciones de orden superior, currying y composición; resolver ejercicios de transformación de colecciones.  \r\n4. **Avanzado**: explorar monadas simples (`Maybe`, `Either`), evaluación diferida y patrones de efectos (IO monad, efectos en Kotlin coroutines).  \r\n5. **Integración**: aplicar conceptos funcionales en proyectos OOP existentes, refactorizando métodos con lógica mutable a funciones puras y usando librerías funcionales del ecosistema del lenguaje."
+  },
+  "sections_missing": [],
+  "slug": "functional-programming",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/software-engineering"
+  ],
+  "title": "Functional Programming",
+  "uid": "c_I4SP5V3R2E",
+  "verification_marks": []
+}

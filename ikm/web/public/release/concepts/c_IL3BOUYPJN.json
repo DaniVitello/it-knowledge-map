@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "Prototyping"
+  ],
+  "area_uid": "ux-ui",
+  "content_hash": "78ebbcd6e40d5fc3723b5aa05cf7d371dc767bfc80e7709ba216e5376ec5a979",
+  "numero": 11,
+  "related_uids": [
+    "c_36FC2H5MMW",
+    "c_P3AM7QSPS6"
+  ],
+  "sections": {
+    "como_funciona": "1. Defino el objetivo de la prueba y el nivel de fidelidad necesario.  \r\n2. Creo los artefactos iniciales (sketches o wireframes) que sirven de base.  \r\n3. Uso una herramienta de prototyping (Figma, Axure, etc.) para añadir interactividad a los elementos.  \r\n4. Realizo una sesión de prueba con usuarios reales o con el equipo interno.  \r\n5. Recopilo observaciones, ajusto el flujo y repito el proceso hasta alcanzar la confianza requerida.",
+    "conexiones": "- **Interaction Design**: el prototyping materializa los patrones de interacción diseñados, permitiendo su evaluación práctica.  \r\n- **Wireframing**: los wireframes son la base estructural que se transforma en prototipos al añadir interactividad.  \r\n- **User Testing**: los prototipos son el artefacto central en las pruebas de usabilidad, proporcionando el contexto necesario para observar comportamientos reales.",
+    "detalles": "- **Básico**: papel o bocetos digitales sin interacción; sirve para validar la arquitectura de información.  \r\n- **Intermedio**: prototipos de baja fidelidad con enlaces navegables; permite evaluar la lógica de flujo y la jerarquía visual.  \r\n- **Avanzado**: prototipos de alta fidelidad con animaciones, micro‑interacciones y datos simulados; ideal para pruebas de usabilidad detalladas y para presentar a inversores o clientes.",
+    "ejemplo_minimo": "```html\r\n<!DOCTYPE html>\r\n<html lang=\"es\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <title>Prototipo simple</title>\r\n  <style>\r\n    button { padding: 10px 20px; font-size: 1rem; }\r\n  </style>\r\n</head>\r\n<body>\r\n  <button id=\"cta\">Comprar</button>\r\n  <script>\r\n    document.getElementById('cta').addEventListener('click', () => {\r\n      alert('Proceso de compra iniciado');\r\n    });\r\n  </script>\r\n</body>\r\n</html>\r\n```\r\nEste código muestra un prototipo de alta fidelidad mínimo: un botón que simula la acción de compra mediante una alerta.",
+    "errores_comunes": "- **Demasiada fidelidad demasiado pronto** – genera gasto innecesario; evitarlo eligiendo low‑fidelity al inicio.  \r\n- **No probar con usuarios reales** – el feedback interno no revela problemas de usabilidad; incluir siempre pruebas con usuarios.  \r\n- **Olvidar los estados interactivos** – un prototipo estático no captura fricciones; añadir al menos hover y click.",
+    "estado_actual": "- **Fundamentos estables**: la distinción entre low y high fidelity, la iteración basada en feedback y la necesidad de validar interacciones clave siguen siendo pilares del prototyping.  \r\n- **Práctica moderna**: herramientas colaborativas en la nube permiten co‑edición en tiempo real y la integración de datos reales mediante APIs mock, lo que acelera la transición de prototipo a producto.",
+    "ideas_clave": "1. **Fidelidad adecuada** – Selecciono low‑fidelity para explorar ideas rápidamente y high‑fidelity cuando necesito validar detalles visuales y de interacción.  \r\n2. **Iteración rápida** – Cada versión del prototipo se prueba, se recoge feedback y se refina en ciclos cortos.  \r\n3. **Enfoque en la interacción** – El prototipo debe reproducir los comportamientos clave (clics, transiciones, estados) que se evaluarán con usuarios.",
+    "objetivo": "Utilizo el prototyping para materializar ideas de interacción antes de invertir en desarrollo, lo que me permite validar flujos, detectar fricciones y alinear al equipo con una visión tangible. Resuelvo el problema de la incertidumbre temprana al diseñar interfaces, ya que un prototipo muestra cómo se comportará la solución sin requerir código completo. Aparece en mi día a día cuando paso del wireframe a la prueba de usabilidad o cuando necesito comunicar decisiones de diseño a stakeholders. Después de entenderlo, puedo elegir el nivel de fidelidad adecuado, planificar pruebas y iterar rápidamente. No necesito preocuparme por prototipar cuando el alcance es meramente conceptual o cuando la solución ya está validada y se está implementando.",
+    "preguntas_repaso": "1. ¿Qué criterios utilizo para decidir entre un prototipo low‑fidelity y uno high‑fidelity?  \r\n2. ¿Cómo se conecta el prototyping con el proceso de Interaction Design?  \r\n3. ¿Cuál es el beneficio de incluir estados interactivos en un prototipo?  \r\n4. ¿Qué error común implica gastar recursos en alta fidelidad demasiado pronto?  \r\n5. ¿Qué pasos siguen a la fase de pruebas de un prototipo antes de pasar a desarrollo?",
+    "ruta_estudio": "1. **Prerequisitos**: comprender principios básicos de UX, arquitectura de información y herramientas de diseño vectorial.  \r\n2. **Fundamentos**: aprender a crear wireframes y a seleccionar la fidelidad adecuada según el objetivo de la prueba.  \r\n3. **Práctica intermedia**: dominar al menos una herramienta de prototyping (p. ej., Figma) y ejecutar pruebas de usabilidad de baja fidelidad.  \r\n4. **Avanzado**: incorporar micro‑interacciones, datos mock y pruebas A/B con prototipos de alta fidelidad; explorar integración con sistemas de gestión de feedback."
+  },
+  "sections_missing": [],
+  "slug": "prototyping",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/ux-ui"
+  ],
+  "title": "Prototyping",
+  "uid": "c_IL3BOUYPJN",
+  "verification_marks": []
+}

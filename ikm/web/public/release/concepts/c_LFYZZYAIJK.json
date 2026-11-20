@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "Eventos"
+  ],
+  "area_uid": "frontend",
+  "content_hash": "abea13281c809f48b45dc0234a9799b65222f08e16add4fc8b38f1a2b60a45a1",
+  "numero": 8,
+  "related_uids": [
+    "c_3G2O5BM4F2",
+    "c_NTNITJDH3Q",
+    "c_QWAQTV7JRM"
+  ],
+  "sections": {
+    "como_funciona": "1. Se crea una función manejadora que recibe el objeto `Event`.  \r\n2. Con `addEventListener` se asocia esa función a un elemento DOM y a un tipo de evento, indicando opcionalmente la fase (capturing / bubbling).  \r\n3. Cuando el usuario genera la acción, el navegador crea un objeto `Event` y lo propaga: primero por la fase de captura desde la raíz hasta el objetivo, luego ejecuta el listener del objetivo y finalmente recorre la fase de bubbling hacia arriba.  \r\n4. Si algún listener llama a `stopPropagation`, la propagación se detiene; si llama a `preventDefault`, se anula la acción predeterminada del navegador.  \r\n5. En delegación, el listener está en un ancestro; al recibir el evento, inspecciona `event.target` para determinar cuál hijo lo originó y actúa en consecuencia.",
+    "conexiones": "- **JavaScript** – los eventos son una característica central del lenguaje que permite la programación orientada a callbacks.  \r\n- **JavaScript avanzado** – conceptos como closures y promesas se combinan con eventos para manejar asincronía y crear flujos de datos reactivos.  \r\n- **Asincronía** – los eventos son una forma de I/O no bloqueante; su manejo a menudo se complementa con `async/await` o `Promise` para procesar resultados posteriores.",
+    "detalles": "- **Básico**: registrar y remover listeners con `addEventListener` y `removeEventListener`.  \r\n- **Intermedio**: comprender la diferencia entre bubbling y capturing, usar el tercer parámetro (`{capture:true}`) para cambiar la fase.  \r\n- **Avanzado**: aplicar delegación para listas dinámicas, combinar con `event.currentTarget` y `event.target` para filtrar, y usar `once:true` para listeners de un solo uso.  \r\n- **Performance**: minimizar la cantidad de listeners creando delegaciones en contenedores grandes; evitar listeners en elementos que cambian frecuentemente sin necesidad.  \r\n- **Accesibilidad**: asegurarse de que los eventos críticos tengan equivalentes de teclado y que `preventDefault` no rompa la navegación esperada.",
+    "ejemplo_minimo": "```html\r\n<button id=\"miBtn\">Haz click</button>\r\n\r\n<script>\r\n  const btn = document.getElementById('miBtn');\r\n\r\n  function manejarClick(event) {\r\n    alert('¡Botón pulsado!');\r\n    // Evita que el botón recargue la página si está dentro de un form\r\n    event.preventDefault();\r\n  }\r\n\r\n  btn.addEventListener('click', manejarClick);\r\n</script>\r\n```",
+    "errores_comunes": "- **Olvidar remover listeners** → fuga de memoria; usar `removeEventListener` cuando el componente se destruye.  \r\n- **Confundir bubbling con capturing** → el listener se ejecuta en el momento inesperado; especificar explícitamente la fase.  \r\n- **Delegar sin filtrar `event.target`** → se ejecuta código para elementos no deseados; comprobar la clase o atributo antes de actuar.  \r\n- **Usar `preventDefault` indiscriminadamente** → bloquea comportamientos nativos útiles; aplicarlo solo cuando sea necesario.",
+    "estado_actual": "- **Fundamentos estables**: la API de eventos del DOM (`addEventListener`, fases, `Event` object) es parte del estándar ECMAScript/HTML5 y no ha cambiado en años.  \r\n- **Práctica moderna**: los frameworks (React, Vue, Svelte) encapsulan los listeners en componentes, pero siguen basándose en bubbling y delegación bajo el capó. Además, la opción `{once:true}` y los objetos `AbortSignal` para cancelar listeners están ganando adopción en código vanilla.",
+    "ideas_clave": "1. **Event listeners** – funciones que se registran para ser invocadas cuando ocurre un tipo de evento específico.  \r\n2. **Bubbling y capturing** – dos fases de propagación que determinan el orden en que los eventos atraviesan la jerarquía del DOM.  \r\n3. **Delegación** – técnica que aprovecha bubbling para asignar un solo listener a un ancestro y gestionar eventos de muchos hijos.  \r\n4. **Tipos de eventos comunes** – click, submit, input, keydown, load, etc., que cubren la mayor parte de las interacciones UI.  \r\n5. **Cancelación y prevención** – métodos `stopPropagation`, `preventDefault` para controlar la propagación y el comportamiento por defecto.",
+    "objetivo": "Utilizo los eventos para reaccionar a la interacción del usuario o a cambios del entorno del navegador. Resuelvo el problema de cómo ejecutar código en respuesta a clicks, pulsaciones de tecla, carga de recursos, etc., sin bloquear la ejecución del resto de la aplicación. En mi día a día como desarrollador Frontend, los eventos aparecen cada vez que debo conectar la lógica de la UI con la capa visual: botones, formularios, scroll, websockets y componentes reutilizables. Después de entenderlos, puedo diseñar interfaces más dinámicas, aplicar patrones como delegación y crear arquitecturas basadas en flujo de datos. No necesito preocuparme por los eventos cuando trabajo exclusivamente con código estático o cuando utilizo frameworks que abstraen completamente el manejo de eventos.",
+    "preguntas_repaso": "1. ¿Qué diferencia hay entre la fase de captura y la de bubbling en la propagación de un evento?  \r\n2. ¿Cómo se elimina un listener que ya no es necesario y por qué es importante hacerlo?  \r\n3. ¿En qué consiste la delegación de eventos y cuál es su principal ventaja?  \r\n4. ¿Qué efecto tiene llamar a `preventDefault` dentro de un manejador de evento?  \r\n5. ¿Cómo puedes registrar un listener que se ejecute solo una vez?",
+    "ruta_estudio": "1. **Prerequisitos**: DOM básico, sintaxis de funciones y manejo de objetos en JavaScript.  \r\n2. **Fundamentos**: registrar y remover listeners, tipos de eventos comunes, fases de propagación.  \r\n3. **Intermedio**: captura vs bubbling, uso de `stopPropagation` y `preventDefault`, delegación en listas dinámicas.  \r\n4. **Avanzado**: opciones `{once, passive, capture}`; patrones de gestión de listeners con `AbortController`; integración con frameworks y librerías de estado.  \r\n5. **Especialización**: accesibilidad en eventos, performance profiling, testing de listeners con herramientas como Jest o Cypress."
+  },
+  "sections_missing": [],
+  "slug": "eventos",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/frontend"
+  ],
+  "title": "Eventos",
+  "uid": "c_LFYZZYAIJK",
+  "verification_marks": []
+}

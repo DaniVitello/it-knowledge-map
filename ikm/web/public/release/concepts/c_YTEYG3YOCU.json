@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "Usability Testing"
+  ],
+  "area_uid": "ux-ui",
+  "content_hash": "cc79188afe8d1604bd106afae13169729d0bfb6c5aaa737149b80e86a0c6f78f",
+  "numero": 22,
+  "related_uids": [
+    "c_K2XQL2MKUK",
+    "c_RQAR6DO3SU"
+  ],
+  "sections": {
+    "como_funciona": "1. **Planificación** – a partir del mapa de flujo de usuario, determino las tareas críticas y los criterios de éxito.  \r\n2. **Reclutamiento** – contacto a usuarios que representen los arquetipos definidos y les explico el objetivo de la prueba.  \r\n3. **Ejecución** – los usuarios realizan cada tarea mientras yo (o un moderador) observo, toma notas y registra tiempos y errores.  \r\n4. **Captura de datos** – utilizo grabaciones de pantalla, métricas de tiempo y cuestionarios post‑prueba para complementar la observación.  \r\n5. **Síntesis** – agrupo los hallazgos en problemas de usabilidad, priorizándolos por impacto y frecuencia.  \r\n6. **Iteración** – propongo soluciones de diseño, actualizo el prototipo y repito el ciclo si es necesario.",
+    "conexiones": "- **Usability**: el testing es la herramienta principal para medir cuán usable es una interfaz y para identificar oportunidades de mejora.  \r\n- **UX Metrics**: los datos obtenidos (tasa de éxito, tiempo de tarea, SUS) alimentan los indicadores de experiencia de usuario que guían decisiones estratégicas.  \r\n- **User Research**: los hallazgos del testing informan y refinan los insights obtenidos en fases de investigación cualitativa, cerrando el ciclo de descubrimiento‑validación.",
+    "detalles": "- **Básico**: pruebas de guerrilla con 3‑5 usuarios, tareas simples y observación directa.  \r\n- **Intermedio**: sesiones moderadas en laboratorio, uso de métricas como *task success rate* y *time on task*, y aplicación de cuestionarios como SUS.  \r\n- **Avanzado**: pruebas remotas con herramientas de tracking, análisis estadístico de métricas, y combinación con pruebas A/B para validar cambios específicos.",
+    "ejemplo_minimo": "```json\r\n{\r\n  \"test_id\": \"UT-001\",\r\n  \"tarea\": \"Agregar un producto al carrito\",\r\n  \"pasos\": [\r\n    \"Abrir la página de inicio\",\r\n    \"Buscar el producto 'Camiseta azul'\",\r\n    \"Seleccionar talla M\",\r\n    \"Hacer clic en 'Agregar al carrito'\"\r\n  ],\r\n  \"criterio_exito\": true,\r\n  \"tiempo_maximo_seg\": 120\r\n}\r\n```",
+    "errores_comunes": "- **Seleccionar usuarios no representativos** – evita la validez de los hallazgos; verifica el perfil antes de reclutar.  \r\n- **Demasiadas tareas en una sesión** – genera fatiga y datos ruidosos; limita a 3‑4 tareas críticas.  \r\n- **Interpretar comentarios como métricas** – combina observación cualitativa con datos cuantitativos para decisiones equilibradas.  \r\n- **Ignorar hallazgos menores** – pequeños problemas pueden escalar; registra y prioriza todos los incidentes.",
+    "estado_actual": "**Fundamentos estables**: la necesidad de observar usuarios reales, definir tareas y analizar errores sigue siendo la base del usability testing.  \r\n**Práctica moderna**: se complementa con pruebas remotas, análisis de métricas de interacción (p. ej., clickstream) y la integración de resultados en sistemas de gestión de producto para seguimiento continuo.",
+    "ideas_clave": "1. **Definir tareas representativas**: selecciono acciones que los usuarios deben realizar para alcanzar sus objetivos principales.  \r\n2. **Reclutar usuarios reales**: elijo participantes que coincidan con el perfil del público objetivo.  \r\n3. **Observar y registrar**: durante la prueba, capturo comportamientos, comentarios y métricas de desempeño.  \r\n4. **Analizar hallazgos**: identifico patrones de error, tiempos de ejecución y niveles de satisfacción.  \r\n5. **Iterar el diseño**: convierto los insights en cambios concretos y los vuelvo a validar.",
+    "objetivo": "Utilizo el **usability testing** para validar, con usuarios reales, si una interfaz permite cumplir las tareas clave sin fricción. Resuelvo la incertidumbre de que mis decisiones de diseño funcionen en el contexto de uso, detectando problemas de navegación, comprensión y eficiencia antes de lanzar el producto. Aparece en mi flujo de trabajo cuando paso de los prototipos de alta fidelidad a la fase de validación, y me permite priorizar mejoras basadas en evidencia. Después de entenderlo, puedo diseñar pruebas estructuradas, interpretar hallazgos y traducirlos en iteraciones de diseño; cuando el producto ya está en producción y los indicadores de uso son estables, no es necesario volver a ejecutar pruebas exhaustivas a menos que se introduzcan cambios significativos.",
+    "preguntas_repaso": "1. ¿Qué criterios utilizo para seleccionar las tareas que se probarán en un usability test?  \r\n2. ¿Cómo se combina la observación cualitativa con métricas cuantitativas durante la prueba?  \r\n3. ¿Cuál es la diferencia entre una prueba de guerrilla y una sesión moderada en laboratorio?  \r\n4. ¿Por qué es importante iterar el diseño después de analizar los hallazgos?  \r\n5. ¿Cómo se relaciona el usability testing con los UX Metrics en la toma de decisiones de producto?",
+    "ruta_estudio": "1. **Prerequisitos**: conceptos de *user personas*, *user journeys* y principios básicos de *interaction design*.  \r\n2. **Fundamentos**: leer guías de Nielsen sobre pruebas de usabilidad, practicar con prototipos de baja fidelidad.  \r\n3. **Intermedio**: aprender a usar herramientas de grabación y análisis (e.g., Lookback, UserTesting), aplicar el System Usability Scale (SUS).  \r\n4. **Avanzado**: dominar pruebas remotas, análisis estadístico de métricas, y la integración de resultados en roadmaps de producto.  \r\n5. **Especialización**: explorar pruebas de accesibilidad y pruebas de usabilidad en entornos móviles o de realidad aumentada."
+  },
+  "sections_missing": [],
+  "slug": "usability-testing",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/ux-ui"
+  ],
+  "title": "Usability Testing",
+  "uid": "c_YTEYG3YOCU",
+  "verification_marks": []
+}

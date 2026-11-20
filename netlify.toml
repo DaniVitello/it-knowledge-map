@@ -1,0 +1,15 @@
+# Netlify — IT Knowledge Map v2 (sitio estático Vite + release JSON).
+# El release vive en ikm/web/public/release (commiteado para que el build lo tenga).
+[build]
+  base = "ikm/web"
+  command = "npm ci && npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# SPA (React Router): todas las rutas caen en index.html.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

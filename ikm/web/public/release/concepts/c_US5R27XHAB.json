@@ -1,0 +1,34 @@
+{
+  "aliases": [
+    "Routing"
+  ],
+  "area_uid": "backend",
+  "content_hash": "d10991f0a2c35dfae02673f19fde246255927369db59ed509d7f58274efb796e",
+  "numero": 6,
+  "related_uids": [
+    "c_DWZHOC5BVU"
+  ],
+  "sections": {
+    "como_funciona": "1. Cada router mantiene su tabla de rutas, inicialmente con rutas locales y una ruta por defecto.  \r\n2. Cuando se recibe un paquete, el router extrae la dirección IP de destino y la compara con los prefijos de la tabla.  \r\n3. Aplica la regla de “longest prefix match” para seleccionar la entrada más específica.  \r\n4. Si la ruta es estática, el siguiente salto está predefinido; si es dinámica, el router consulta la métrica aprendida del protocolo correspondiente.  \r\n5. El paquete se reenvía al interfaz indicado y el proceso se repite en el siguiente hop hasta llegar al destino o a la ruta por defecto.",
+    "conexiones": "- **Routers**: son los dispositivos que ejecutan el algoritmo de routing y mantienen la tabla de rutas.  \r\n- **NAT**: depende del routing para saber a qué interfaz debe enviar los paquetes que serán traducidos de direcciones privadas a públicas.  \r\n- **Subnetting / CIDR**: define los prefijos que aparecen en la tabla de rutas, influyendo en la granularidad y eficiencia del enrutamiento.",
+    "detalles": "- **Básico**: configuración de rutas estáticas (`ip route`) y verificación con `show ip route`.  \r\n- **Intermedio**: despliegue de un protocolo interior (OSPF) para que los routers intercambien automáticamente prefijos y actualicen sus métricas.  \r\n- **Avanzado**: uso de BGP para anunciar prefijos a Internet, manipulación de atributos (local‑pref, MED) y aplicación de políticas de ruta que influyen en la selección de caminos entre proveedores.  \r\n- En todos los niveles, la interacción con NAT implica que la tabla de rutas debe apuntar al dispositivo que realiza la traducción, y el subnetting/CIDR define la granularidad de los prefijos que aparecen en la tabla.",
+    "ejemplo_minimo": "```bash\r\n# En un router Cisco IOS\r\nRouter(config)# ip route 10.0.0.0 255.255.255.0 192.168.1.1\r\nRouter# show ip route 10.0.0.0\r\nS    10.0.0.0/24 [1/0] via 192.168.1.1, 00:00:12, GigabitEthernet0/1\r\n```\r\nLa salida indica que los paquetes destinados a la subred 10.0.0.0/24 se enviarán al siguiente salto 192.168.1.1 a través de la interfaz especificada.",
+    "errores_comunes": "- **Olvidar la ruta por defecto**: sin ella, los paquetes a destinos desconocidos se descartan; añada `0.0.0.0/0` apuntando a un gateway.  \r\n- **Confundir métricas de OSPF y BGP**: use la métrica adecuada para cada protocolo; revise los atributos antes de aplicar políticas.  \r\n- **Superposición de prefijos**: evite que dos rutas estáticas cubran el mismo rango, ya que el “longest prefix match” puede producir resultados inesperados; planifique los subnets con CIDR.",
+    "estado_actual": "- **Fundamentos estables**: la tabla de rutas, el algoritmo de “longest prefix match” y la distinción entre rutas estáticas y dinámicas son conceptos consolidados y compatibles con cualquier router de nivel empresarial.  \r\n- **Práctica moderna**: la adopción de BGP para interconexión entre centros de datos, el uso de Segment Routing (SR‑TE) para dirigir tráfico sin protocolos adicionales, y la integración de SD‑WAN que abstrae el routing tradicional mediante controladores centralizados.",
+    "ideas_clave": "1. **Tabla de rutas**: almacena los prefijos y el próximo salto que deben usarse para alcanzar cada destino.  \r\n2. **Protocolos de enrutamiento**: intercambian información de rutas entre routers (ej. OSPF, BGP).  \r\n3. **Selección de mejor ruta**: se basa en métricas como coste, longitud del prefijo y política.  \r\n4. **Rutas estáticas vs dinámicas**: las estáticas se configuran manualmente; las dinámicas se aprenden automáticamente.  \r\n5. **Impacto en NAT y subnetting**: el routing determina cómo los paquetes atraviesan zonas NAT y cómo se agrupan los prefijos con CIDR.",
+    "objetivo": "Utilizo el routing para que los paquetes de datos encuentren su destino a través de múltiples redes, resolviendo el problema de la conectividad entre subredes y dominios de Internet. En mi día a día como ingeniero de redes senior, configuro rutas estáticas o depuro protocolos dinámicos cuando una comunicación falla entre sitios. Al comprender cómo se decide el mejor camino, puedo diseñar topologías eficientes, diagnosticar bucles de enrutamiento y aplicar políticas de tráfico. Después de dominar el routing, paso a optimizar el uso de ancho de banda con balanceo y a integrar soluciones de alta disponibilidad. Cuando la red es una única LAN sin segmentación, el routing no es relevante y me enfoco en switching.",
+    "preguntas_repaso": "1. ¿Qué criterio usa un router para elegir la entrada de la tabla de rutas cuando varios prefijos coinciden?  \r\n2. ¿En qué situaciones prefiero una ruta estática a un protocolo dinámico?  \r\n3. ¿Cómo afecta la longitud del prefijo (CIDR) a la selección de la mejor ruta?  \r\n4. ¿Cuál es la diferencia principal entre la métrica de OSPF y el atributo `local‑pref` de BGP?  \r\n5. ¿Qué papel juega el routing cuando un paquete atraviesa un dispositivo NAT?",
+    "ruta_estudio": "1. **Prerequisitos**: comprensión de direcciones IP, máscara de subred y modelo OSI (capa 3).  \r\n2. **Fundamentos**: práctica con rutas estáticas y comandos `show ip route`.  \r\n3. **Protocolos internos**: OSPF – configuración de áreas y costos.  \r\n4. **Protocolos externos**: BGP – establecimiento de peers, anuncio de prefijos y atributos.  \r\n5. **Optimización**: políticas de ruta, redistribución entre OSPF y BGP, y uso de Segment Routing.  \r\n6. **Integración**: cómo el routing interactúa con NAT y con arquitecturas SD‑WAN."
+  },
+  "sections_missing": [],
+  "slug": "routing",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/backend"
+  ],
+  "title": "Routing",
+  "uid": "c_US5R27XHAB",
+  "verification_marks": []
+}

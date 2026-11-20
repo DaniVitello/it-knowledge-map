@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "Observabilidad"
+  ],
+  "area_uid": "backend",
+  "content_hash": "b4c8c1ad4e8a168def1538c6f21844094e9abbbb7f3703431fce5f1eb1c13b41",
+  "numero": 22,
+  "related_uids": [
+    "c_BQ2OLMROJZ",
+    "c_MKC6PGQUM7",
+    "c_MMPVIHXRHF"
+  ],
+  "sections": {
+    "como_funciona": "1. Cada servicio escribe **logs** estructurados en stdout o en un agente de recolección.  \r\n2. Un exporter expone **métricas** (p. ej., Prometheus) que el servidor de monitoreo raspa periódicamente.  \r\n3. Un tracer (OpenTelemetry) inserta IDs de correlación en los encabezados HTTP y genera **spans** que se envían a un backend de trazas.  \r\n4. El sistema de **monitoring** agrupa logs, métricas y trazas en dashboards y define reglas de alerta.  \r\n5. Cuando ocurre un incidente, el ingeniero busca la alerta, revisa la métrica afectada, inspecciona los logs y sigue la traza para localizar el origen.",
+    "conexiones": "- **Logs & System Monitoring** – los logs alimentan los sistemas de monitoreo para generar alertas y dashboards.  \r\n- **Tracing & Distributed Systems** – las trazas revelan la topología de llamadas entre microservicios, esencial para depurar latencias.  \r\n- **Metrics & Autoscaling** – las métricas de carga y latencia se usan como triggers para escalar automáticamente los pods o instancias.",
+    "detalles": "- **Básico**: habilitar logs JSON y exportar contadores simples (requests_total, error_total).  \r\n- **Intermedio**: añadir histogramas de latencia, etiquetas de contexto (service, endpoint) y configurar un collector de OpenTelemetry.  \r\n- **Avanzado**: implementar sampling inteligente de trazas, crear alertas basadas en anomalías estadísticas y usar dashboards unificados (Grafana) que correlacionen los tres tipos de datos.",
+    "ejemplo_minimo": "```python\r\n# app.py – FastAPI con logs, métricas y trazas mínimas\r\nfrom fastapi import FastAPI, Request\r\nimport logging, time\r\nfrom prometheus_client import Counter, Histogram, start_http_server\r\nfrom opentelemetry import trace\r\nfrom opentelemetry.instrumentation.fastapi import FastAPIInstrumentor\r\nfrom opentelemetry.sdk.trace import TracerProvider\r\nfrom opentelemetry.sdk.trace.export import BatchSpanProcessor, ConsoleSpanExporter\r\n\r\napp = FastAPI()\r\nlogging.basicConfig(level=logging.INFO, format='%(message)s')\r\nlogger = logging.getLogger(\"app\")\r\n\r\nREQUEST_COUNT = Counter(\"http_requests_total\", \"Total HTTP requests\", [\"method\", \"endpoint\"])\r\nREQUEST_LATENCY = Histogram(\"http_request_duration_seconds\", \"Latency per endpoint\", [\"endpoint\"])\r\n\r\ntrace.set_tracer_provider(TracerProvider())\r\ntracer = trace.get_tracer(__name__)\r\nspan_processor = BatchSpanProcessor(ConsoleSpanExporter())\r\ntrace.get_tracer_provider().add_span_processor(span_processor)\r\nFastAPIInstrumentor().instrument_app(app)\r\n\r\n@app.middleware(\"http\")\r\nasync def add_metrics(request: Request, call_next):\r\n    start = time.time()\r\n    response = await call_next(request)\r\n    latency = time.time() - start\r\n    REQUEST_COUNT.labels(method=request.method, endpoint=request.url.path).inc()\r\n    REQUEST_LATENCY.labels(endpoint=request.url.path).observe(latency)\r\n    logger.info(f'{{\"method\":\"{request.method}\",\"path\":\"{request.url.path}\",\"status\":{response.status_code},\"latency_ms\":{latency*1000:.2f}}}')\r\n    return response\r\n\r\n@app.get(\"/ping\")\r\ndef ping():\r\n    return {\"msg\": \"pong\"}\r\n\r\nif __name__ == \"__main__\":\r\n    start_http_server(8000)   # expone métricas en /metrics\r\n    import uvicorn\r\n    uvicorn.run(app, host=\"0.0.0.0\", port=8080)\r\n```",
+    "errores_comunes": "- **Logs sin estructura** – dificultan búsquedas; usar JSON o logfmt.  \r\n- **Métricas sin etiquetas** – impiden filtrar por servicio o versión; etiquetar siempre.  \r\n- **Trazas sin propagación de contexto** – pierden la cadena de llamadas; asegurar que los headers (`traceparent`) se reenvíen.  \r\n- **Alertas demasiado ruidosas** – generan fatiga; calibrar umbrales y usar agregaciones.  \r\n- **No versionar la configuración** – cambios inesperados; mantener la configuración en control de versiones.",
+    "estado_actual": "- **Fundamentos estables**: logs estructurados, métricas basadas en Prometheus, trazas con OpenTelemetry.  \r\n- **Práctica moderna**: observabilidad como código (IaC), sampling adaptativo de trazas, alertas basadas en aprendizaje automático y dashboards unificados que correlacionan los tres pilares.",
+    "ideas_clave": "1. **Logs estructurados** – registros de eventos que describen acciones y errores en formato legible por máquinas.  \r\n2. **Métricas** – valores numéricos (counters, gauges, histograms) que cuantifican comportamiento del sistema.  \r\n3. **Trazas distribuidas** – seguimiento de una petición a través de múltiples servicios, mostrando latencias y puntos de fallo.  \r\n4. **Monitoring** – proceso de recopilar, visualizar y alertar sobre logs, métricas y trazas.  \r\n5. **Correlación** – unión de los tres pilares para obtener una visión completa del estado del backend.",
+    "objetivo": "Utilizo la observabilidad para saber, en tiempo real, qué está pasando dentro de mis servicios y APIs y para detectar rápidamente fallas o degradaciones de rendimiento. Resuelvo el problema de operar sistemas distribuidos sin “cajas negras”, obteniendo visibilidad suficiente para diagnosticar errores, medir SLAs y planificar mejoras. Aparece en mi día a día cuando despliego nuevos microservicios, cuando investigo incidentes o cuando optimizo la latencia de una cadena de llamadas. Después de entenderla, puedo diseñar pipelines de logs, métricas y trazas que alimenten dashboards y alertas, y decidir cuándo delegar la responsabilidad a un equipo de SRE. No necesito preocuparme de la observabilidad cuando trabajo con scripts aislados o pruebas unitarias que no involucran interacción externa.",
+    "preguntas_repaso": "1. ¿Qué información clave debe contener un log estructurado para ser útil en un incidente?  \r\n2. ¿Cómo se diferencia un counter de un histogram en la definición de métricas?  \r\n3. ¿Qué papel juega el encabezado `traceparent` en la propagación de trazas?  \r\n4. ¿Por qué una alerta basada solo en logs suele generar más ruido que una basada en métricas?  \r\n5. ¿Cuál es la ventaja de usar sampling adaptativo en trazas distribuidas?",
+    "ruta_estudio": "1. **Prerequisitos**: manejo de Linux, conceptos de HTTP y REST, familiaridad con contenedores.  \r\n2. **Fundamentos**: leer la guía oficial de OpenTelemetry, tutorial de Prometheus y práctica de logs JSON.  \r\n3. **Intermedio**: implementar un collector (Grafana Agent) y crear alertas en Alertmanager.  \r\n4. **Avanzado**: explorar sampling dinámico, integrar observabilidad como código con Terraform y aplicar detección de anomalías con herramientas como Prometheus Rule Engine o Grafana ML."
+  },
+  "sections_missing": [],
+  "slug": "observabilidad",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/backend"
+  ],
+  "title": "Observabilidad",
+  "uid": "c_H7VQOVE2NF",
+  "verification_marks": []
+}

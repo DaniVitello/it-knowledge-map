@@ -1,0 +1,42 @@
+{
+  "aliases": [
+    "Cliente-Servidor"
+  ],
+  "area_uid": "backend",
+  "content_hash": "bdea4467ab345c53935af5dbab005861da37580a8ab329231d66bb5c1eedb513",
+  "numero": 1,
+  "related_uids": [
+    "c_E6UZ37VTA5",
+    "c_NYZQU435OZ"
+  ],
+  "sections": {
+    "como_funciona": "1. El cliente construye un mensaje de **request** con método, ruta y, opcionalmente, cuerpo.  \r\n2. El mensaje se envía a través de la red al **servidor** que escucha en un puerto específico.  \r\n3. El servidor recibe la solicitud, la interpreta y ejecuta la lógica correspondiente.  \r\n4. Tras procesar la solicitud, el servidor genera una **response** con código de estado y datos (por ejemplo JSON).  \r\n5. La respuesta viaja de regreso al cliente, que la interpreta y actualiza su estado o UI.",
+    "conexiones": "- **REST API**: Implementa el modelo cliente‑servidor mediante recursos y verbos HTTP.  \r\n- **Microservicios**: Cada microservicio actúa como servidor independiente que responde a peticiones de otros servicios o clientes externos.  \r\n- **Load Balancer**: Distribuye las solicitudes de múltiples clientes entre varios servidores para mejorar disponibilidad y rendimiento.",
+    "detalles": "- **Básico**: Entender los componentes de la petición (método, encabezados, cuerpo) y la respuesta (código de estado, payload).  \r\n- **Intermedio**: Gestionar sesiones, autenticación (tokens JWT) y manejo de errores a nivel de protocolo.  \r\n- **Avanzado**: Optimizar la comunicación con técnicas como keep‑alive, HTTP/2 multiplexing, compresión de payload y balanceo de carga.",
+    "ejemplo_minimo": "```python\r\n# Servidor simple con Flask\r\nfrom flask import Flask, jsonify, request\r\napp = Flask(__name__)\r\n\r\n@app.route('/saludo', methods=['GET'])\r\ndef saludo():\r\n    nombre = request.args.get('nombre', 'Mundo')\r\n    return jsonify(mensaje=f'Hola, {nombre}!')\r\n\r\nif __name__ == '__main__':\r\n    app.run(port=5000)\r\n```\r\n```bash\r\n# Cliente con curl\r\ncurl \"http://localhost:5000/saludo?nombre=Ana\"\r\n# Respuesta: {\"mensaje\":\"Hola, Ana!\"}\r\n```",
+    "errores_comunes": "- **Olvidar cerrar la conexión** → usar encabezados `Connection: close` o habilitar keep‑alive correctamente.  \r\n- **Confundir códigos de estado** → devolver 200 solo cuando la operación es exitosa; usar 4xx/5xx para errores.  \r\n- **Exponer datos sensibles en la respuesta** → filtrar información confidencial antes de serializar.",
+    "estado_actual": "- **Fundamentos estables**: El patrón request/response sobre HTTP sigue siendo la base de la mayoría de las APIs backend.  \r\n- **Práctica moderna**: Se favorece HTTP/2 o HTTP/3 para reducir latencia, y se adoptan formatos ligeros como JSON‑API o protobuf según el caso de uso.",
+    "ideas_clave": "1. **Request/Response** – El cliente envía una solicitud y el servidor devuelve una respuesta estructurada.  \r\n2. **Responsabilidades** – El cliente se encarga de la interacción con el usuario; el servidor gestiona la lógica de negocio y el acceso a datos.  \r\n3. **Comunicación** – La interacción se realiza a través de un protocolo de red (usualmente HTTP) que define cómo se codifican los mensajes.",
+    "objetivo": "Utilizo el modelo Cliente‑Servidor para estructurar la comunicación entre la lógica de negocio que implemento en el backend y los consumidores externos, como aplicaciones web o móviles. Resuelvo el problema de coordinar peticiones y respuestas de forma predecible, aislando la responsabilidad de servir datos del cliente que los solicita. En mi día a día como desarrollador backend, este modelo aparece cada vez que diseño APIs REST, GraphQL o servicios RPC. Después de comprenderlo, puedo definir contratos de API, elegir protocolos de transporte y escalar componentes de forma independiente. No necesito preocuparme cuando la arquitectura es puramente monolítica y todas las capas comparten el mismo proceso.",
+    "preguntas_repaso": "1. ¿Cuál es la responsabilidad principal del cliente en el modelo Cliente‑Servidor?  \r\n2. ¿Qué información contiene típicamente el código de estado de una respuesta HTTP?  \r\n3. ¿Cómo afecta el uso de HTTP/2 al patrón request/response?  \r\n4. ¿Por qué es importante filtrar datos sensibles antes de serializar la respuesta?  \r\n5. ¿Qué papel juega un load balancer en una arquitectura basada en Cliente‑Servidor?\r\n\r\n<!-- trazabilidad: run_id=run-20261111-222401-c247e2 concept=03-backend-01-cliente-servidor written_at=2026-11-12T01:24:05.694862+00:00 -->",
+    "ruta_estudio": "1. **Prerequisitos**: Conocer TCP/IP básico, HTTP/1.1 y conceptos de JSON.  \r\n2. **Fundamentos**: Practicar con frameworks ligeros (Flask, Express) creando endpoints CRUD.  \r\n3. **Seguridad**: Aprender autenticación con JWT y TLS para cifrar la comunicación.  \r\n4. **Rendimiento**: Estudiar HTTP/2, compresión y técnicas de caching (ETag, Cache‑Control).  \r\n5. **Escalado**: Implementar balanceadores de carga y despliegues en contenedores (Docker, Kubernetes)."
+  },
+  "sections_missing": [],
+  "slug": "cliente-servidor",
+  "sources": [
+    "http://localhost:5000/saludo?nombre=Ana"
+  ],
+  "sources_detail": [
+    {
+      "title": null,
+      "url": "http://localhost:5000/saludo?nombre=Ana"
+    }
+  ],
+  "tags": [
+    "concepto",
+    "it/backend"
+  ],
+  "title": "Cliente-Servidor",
+  "uid": "c_MSTGJ6MKWW",
+  "verification_marks": []
+}

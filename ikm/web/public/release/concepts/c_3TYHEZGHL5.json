@@ -1,0 +1,34 @@
+{
+  "aliases": [
+    "Budget & Cost"
+  ],
+  "area_uid": "project-management",
+  "content_hash": "6864c91197935b85c7d3d2dae3e93c994cad5d86376269665a9a1d7df1cfb2f3",
+  "numero": 23,
+  "related_uids": [
+    "c_DJDORY2E6F"
+  ],
+  "sections": {
+    "como_funciona": "1. Al iniciar la planificación, reúno estimaciones de cada actividad y calculo el **budget** total.  \r\n2. Creo una **estructura de desglose de costos (WBS)** que vincula cada paquete de trabajo con su partida presupuestaria.  \r\n3. Durante la ejecución, registro los costos reales en el sistema de control financiero.  \r\n4. Cada revisión de estado (semanal o mensual) genera un **variance report** que muestra desviaciones.  \r\n5. Si la variación supera el umbral definido, evalúo trade‑offs y ajusto alcance, recursos o cronograma, comunicando la decisión al patrocinador.",
+    "conexiones": "- **Resource Management**: los costos están directamente ligados a la asignación y utilización de recursos humanos y materiales.  \r\n- **Risk Management**: las reservas de contingencia son una respuesta financiera a los riesgos identificados.  \r\n- **Stakeholder Management**: la comunicación del estado financiero es clave para mantener el apoyo y la confianza de los patrocinadores.",
+    "detalles": "- **Básico**: establecer un presupuesto simple basado en horas estimadas y tarifa promedio.  \r\n- **Intermedio**: incorporar costos indirectos, reservas de contingencia y métricas de desempeño como CPI (Cost Performance Index).  \r\n- **Avanzado**: aplicar técnicas de earned value management (EVM) para predecir desviaciones futuras y ejecutar escenarios de re‑presupuesto.",
+    "ejemplo_minimo": "```python\r\n# Simulación mínima de control de presupuesto\r\npresupuesto = 10000          # $10.000 asignados\r\ngasto_acumulado = 0\r\n\r\ndef registrar_gasto(monto):\r\n    global gasto_acumulado\r\n    gasto_acumulado += monto\r\n    print(f\"Gasto total: ${gasto_acumulado} / ${presupuesto}\")\r\n\r\nregistrar_gasto(2500)   # primera actividad\r\nregistrar_gasto(4000)   # segunda actividad\r\n```",
+    "errores_comunes": "- **Subestimar costos**: usar estimaciones optimistas sin reservas. *Evitar*: aplicar factores de ajuste basados en datos históricos.  \r\n- **Ignorar variaciones**: no revisar el gasto real frecuentemente. *Evitar*: establecer revisiones regulares y alertas de umbral.  \r\n- **No comunicar**: ocultar desviaciones a los stakeholders. *Evitar*: reportar siempre con claridad y proponer acciones correctivas.",
+    "estado_actual": "Los fundamentos del presupuesto y control de costos son estables: definición del budget, desglose de partidas y seguimiento de variaciones. En la práctica moderna se complementa con herramientas de EVM, dashboards en tiempo real y análisis predictivo basados en IA para anticipar overruns.",
+    "ideas_clave": "1. **Definir el presupuesto total**: suma de todos los costos estimados que el proyecto podrá absorber.  \r\n2. **Desglosar los costos**: asignar partidas a recursos, materiales, herramientas y contingencias.  \r\n3. **Monitorear el gasto real vs. el planificado**: comparar periódicamente el gasto incurrido con el presupuesto.  \r\n4. **Gestionar trade‑offs**: decidir entre alcance, calidad y tiempo cuando el gasto supera el presupuesto.  \r\n5. **Comunicar el estado financiero**: informar a stakeholders sobre variaciones y decisiones correctivas.",
+    "objetivo": "Utilizo el concepto de **Budget & Cost** para garantizar que el proyecto se ejecute dentro de los límites financieros acordados, evitando sorpresas que comprometan la entrega o la calidad. Resuelvo el problema de la sobrecarga de gastos inesperados al alinear los recursos disponibles con los objetivos del proyecto. Aparece en cada fase del trabajo de un project manager senior: al iniciar la planificación, al monitorear el avance y al cerrar el proyecto con una evaluación de la rentabilidad. Después de entenderlo, puedo diseñar estructuras de control financiero, negociar trade‑offs y reportar el estado económico a los patrocinadores. No necesito preocuparme cuando el proyecto es de muy bajo costo y no requiere seguimiento financiero formal.",
+    "preguntas_repaso": "1. ¿Cuál es la diferencia entre presupuesto total y partida de costo desglosada?  \r\n2. ¿Cómo se utiliza un variance report para decidir un trade‑off?  \r\n3. ¿Qué métricas de earned value indican que el proyecto está sobrecostado?  \r\n4. ¿Por qué es importante comunicar las desviaciones financieras a los stakeholders?  \r\n5. ¿Qué papel juegan las reservas de contingencia dentro del manejo de riesgos?",
+    "ruta_estudio": "1. Prerrequisitos: conceptos básicos de planificación de proyectos y estimación de esfuerzo.  \r\n2. Fundamentos: aprender a crear un presupuesto y una WBS de costos.  \r\n3. Intermedio: dominar earned value management y métricas CPI/ SPI.  \r\n4. Avanzado: integrar herramientas de BI y análisis predictivo para gestión proactiva del presupuesto.  \r\n5. Certificaciones recomendadas: PMI‑PMBOK® (sección de Cost Management) y PRINCE2 (tema de Costes)."
+  },
+  "sections_missing": [],
+  "slug": "budget-cost",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/project-management"
+  ],
+  "title": "Budget & Cost",
+  "uid": "c_3TYHEZGHL5",
+  "verification_marks": []
+}

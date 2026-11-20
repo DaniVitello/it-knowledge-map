@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "Retrospectives & Improvement"
+  ],
+  "area_uid": "project-management",
+  "content_hash": "5000a702952f3a103cfb21d202a8c4792d998ac203fe89b26e0aebb5766023c4",
+  "numero": 25,
+  "related_uids": [
+    "c_FBWIOD73FI",
+    "c_VZFUJQTAUP"
+  ],
+  "sections": {
+    "como_funciona": "1. **Programar** la sesión al final del sprint o release, reservando 60‑90 min.  \r\n2. **Recopilar datos** (burndown, defectos, bloqueos) y compartirlos con el equipo antes de la reunión.  \r\n3. **Facilitar** la discusión siguiendo la estructura: *What went well*, *What didn’t*, *What we’ll try*.  \r\n4. **Priorizar** los temas críticos y definir **acciones de mejora** con responsable y fecha límite.  \r\n5. **Documentar** los acuerdos en el tablero de proyecto y **vincular** cada acción a un metric relevant para su seguimiento.",
+    "conexiones": "- **Engineering Processes** – las mejoras definidas en la retrospective se incorporan a los procesos de desarrollo, cerrando el bucle de calidad.  \r\n- **Project Metrics** – las acciones de mejora se miden con métricas como lead time, defect density o velocity, garantizando que el aprendizaje sea cuantificable.  \r\n- **Risk Management** – identificar fallas recurrentes permite anticipar riesgos y planificar mitigaciones antes de que impacten al proyecto.",
+    "detalles": "- **Básico:** usar una agenda simple y limitar la sesión a los hechos observables; evita debates de culpa.  \r\n- **Intermedio:** introducir técnicas como *5 Why* o *Fishbone* para profundizar en causas raíz y asignar métricas de éxito (p. ej., reducción del lead time en 10 %).  \r\n- **Avanzado:** integrar la retrospective al ciclo de mejora continua (CI) mediante automatización de métricas, retrospectives asincrónicas y experimentos A/B en procesos de desarrollo.",
+    "ejemplo_minimo": "```markdown\r\n# Retrospective Sprint 7\r\n## What went well\r\n- Entregamos 8 historias sin bloqueos críticos.\r\n## What didn’t\r\n- 3 bugs críticos detectados en producción.\r\n## What we’ll try\r\n- Añadir pruebas de integración en la rama develop antes del merge.\r\n- Responsable: Ana, fecha límite: 2026‑12‑01\r\n```",
+    "errores_comunes": "- **Convertir la sesión en una queja grupal** – evitarlo enfocándose en hechos y soluciones, no en culpables.  \r\n- **No asignar responsables** – cada acción debe tener dueño y fecha para que no quede en el olvido.  \r\n- **Olvidar el seguimiento** – revisar el cumplimiento en la siguiente retrospectiva para cerrar el ciclo.",
+    "estado_actual": "- **Fundamentos estables:** la práctica de revisar iteraciones y generar acciones de mejora es un pilar aceptado en metodologías ágiles.  \r\n- **Práctica moderna:** uso de herramientas de métricas automatizadas (p. ej., dashboards de ciclo de vida) y experimentación de mejoras mediante *continuous improvement loops*.",
+    "ideas_clave": "1. **Revisión estructurada** – se dedica tiempo fijo a examinar hechos concretos de la iteración.  \r\n2. **Identificación de aprendizajes** – se extraen lecciones sobre procesos, comunicación y herramientas.  \r\n3. **Acciones de mejora** – se convierten los aprendizajes en compromisos claros y medibles para la próxima iteración.  \r\n4. **Cierre y seguimiento** – se registra lo acordado y se verifica su cumplimiento en la siguiente retrospectiva.",
+    "objetivo": "Utilizo las retrospectives & improvement para cerrar cada iteración del proyecto con una visión clara de lo que funcionó, lo que falló y cómo podemos ajustar nuestro proceso antes de la siguiente fase. Resuelvo la falta de aprendizaje continuo que suele generar repeticiones de errores y pérdida de velocidad. Aparecen al final de sprints, releases o hitos críticos, cuando el equipo necesita alinear su forma de trabajar con los objetivos del proyecto. Después de entenderlas, puedo diseñar ciclos de mejora que incrementen la calidad y la predictibilidad del delivery; cuando el proyecto está bajo un modelo de entrega única sin iteraciones, la necesidad de una retrospective formal disminuye.",
+    "preguntas_repaso": "1. ¿Qué pasos garantizan que una retrospective pase de la discusión a la acción concreta?  \r\n2. ¿Cómo se relaciona una acción de mejora con los Project Metrics?  \r\n3. ¿Cuál es la diferencia entre una retrospective básica y una avanzada en términos de técnicas usadas?  \r\n4. ¿Qué riesgo se corre si no se asignan responsables a las acciones definidas?  \r\n5. ¿De qué manera una retrospective puede influir en la gestión de riesgos del proyecto?",
+    "ruta_estudio": "1. **Prerequisitos:** comprensión básica de Scrum o Kanban y manejo de métricas de proyecto.  \r\n2. **Fundamentos:** leer guías de retrospectives (ej. *Scrum Guide*), practicar la agenda *What went well / What didn’t / What we’ll try*.  \r\n3. **Intermedio:** aprender técnicas de análisis de causa raíz (5 Why, Fishbone) y cómo vincular acciones a métricas.  \r\n4. **Avanzado:** explorar automatización de métricas, retrospectives asincrónicas y frameworks de mejora continua (Lean, Kaizen).  \r\n5. **Especialización:** aplicar la retroalimentación a procesos de ingeniería y a la gestión de riesgos del proyecto."
+  },
+  "sections_missing": [],
+  "slug": "retrospectives-improvement",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/project-management"
+  ],
+  "title": "Retrospectives & Improvement",
+  "uid": "c_O73WVZARSW",
+  "verification_marks": []
+}

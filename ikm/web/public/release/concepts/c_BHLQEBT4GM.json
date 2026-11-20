@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "Information Architecture"
+  ],
+  "area_uid": "ux-ui",
+  "content_hash": "2685a0520d50fb3c404b99bacc97c0dce684fd49d9f750f21214c0ca788e58d2",
+  "numero": 6,
+  "related_uids": [
+    "c_Q3YN3JYKSD",
+    "c_Q62PGX2MP4"
+  ],
+  "sections": {
+    "como_funciona": "1. **Inventario de contenido**: recolecto todos los elementos de información del producto (páginas, funcionalidades, datos).  \r\n2. **Agrupamiento**: aplico la idea 1 del esqueleto y formo categorías coherentes.  \r\n3. **Jerarquización**: con la idea 2, asigno niveles (principal, secundario, terciario) y determino la profundidad de cada categoría.  \r\n4. **Mapeo de relaciones**: siguiendo la idea 3, dibujo un sitemap o diagramas de flujo que muestren los caminos posibles.  \r\n5. **Etiquetado**: aplico la idea 4 para nombrar cada nodo del mapa con términos familiares.  \r\n6. **Pruebas de usabilidad**: ejecuto la idea 5, observando si los usuarios encuentran lo que buscan sin dificultad.  \r\n7. **Iteración**: ajusto grupos, jerarquías o etiquetas según los hallazgos y repito el ciclo.",
+    "conexiones": "- **Navigation**: la arquitectura de información define la estructura sobre la que se construyen los menús y los patrones de navegación.  \r\n- **User Flows**: los flujos de usuario se dibujan sobre la jerarquía establecida, indicando los pasos que el usuario sigue entre los grupos de información.  \r\n- **Content Strategy**: una estrategia de contenido clara depende de una arquitectura que organice y priorice la información de forma coherente.",
+    "detalles": "- **Básico**: inventario y agrupamiento. Se trata de listar todo y crear carpetas temáticas; suficiente para proyectos pequeños.  \r\n- **Intermedio**: jerarquización y etiquetado. Introduzco niveles de profundidad y pruebo la claridad de los nombres con tarjetas de clasificación.  \r\n- **Avanzado**: mapeo de relaciones y validación continua. Utilizo diagramas de flujo interactivos, pruebas de árbol y análisis de métricas de navegación para refinar la arquitectura en productos complejos.",
+    "ejemplo_minimo": "```json\r\n{\r\n  \"Home\": [\"Dashboard\", \"Notificaciones\"],\r\n  \"Productos\": {\r\n    \"Categorías\": [\"Electrónica\", \"Ropa\", \"Hogar\"],\r\n    \"Detalle\": [\"Descripción\", \"Precio\", \"Opiniones\"]\r\n  },\r\n  \"Cuenta\": [\"Perfil\", \"Pedidos\", \"Configuración\"]\r\n}\r\n```\r\nEl JSON anterior muestra una arquitectura de información mínima para una tienda online: grupos principales (Home, Productos, Cuenta) y sus sub‑elementos jerárquicos.",
+    "errores_comunes": "- **Crear demasiados niveles** – genera rutas largas y confunde al usuario; mantener la profundidad mínima.  \r\n- **Etiquetas ambiguas** – usan jerga interna; siempre validar con usuarios reales.  \r\n- **Ignorar la retroalimentación** – no ajustar la arquitectura después de pruebas; iterar continuamente.",
+    "estado_actual": "- **Fundamentos estables**: la necesidad de organizar y jerarquizar la información, el uso de inventarios y mapas de sitio, y la validación mediante pruebas de árbol siguen siendo prácticas consolidadas.  \r\n- **Práctica moderna**: se complementa con herramientas de IA para sugerir agrupamientos, análisis de datos de comportamiento real (clickstream) para ajustar la jerarquía, y prototipos interactivos que permiten pruebas de navegación en tiempo real.",
+    "ideas_clave": "1. **Organizar el contenido en grupos lógicos** – agrupo páginas, pantallas o módulos según su temática o función.  \r\n2. **Definir una jerarquía clara** – establezco niveles de importancia que guían la profundidad de la navegación.  \r\n3. **Mapear relaciones entre grupos** – creo conexiones que muestran cómo los usuarios pueden pasar de un grupo a otro.  \r\n4. **Etiquetar de forma consistente** – utilizo nombres que los usuarios reconozcan y que reflejen la estructura.  \r\n5. **Validar con usuarios** – comprobo que la organización propuesta sea intuitiva mediante pruebas tempranas.",
+    "objetivo": "Utilizo la arquitectura de información para estructurar y jerarquizar todo el contenido que aparecerá en una interfaz, de modo que los usuarios encuentren lo que buscan con el menor esfuerzo cognitivo. Resuelvo la confusión que surge cuando la información está dispersa o sin orden lógico, garantizando que cada elemento tenga su lugar dentro del flujo del producto. Aparece en cada fase del diseño de producto senior: desde la definición de la estructura del sitio o la app, pasando por la creación de wireframes, hasta la validación de prototipos con usuarios. Cuando entiendo cómo organizar la información, puedo diseñar menús, filtros y rutas de navegación que tengan sentido, y también puedo evaluar si una solución existente está bien estructurada. No necesito preocuparme de la arquitectura de información cuando el proyecto es un micro‑producto con una sola pantalla o cuando el contenido está predefinido por regulaciones que no admiten reordenamiento.",
+    "preguntas_repaso": "1. ¿Cómo ayuda la arquitectura de información a reducir la carga cognitiva del usuario?  \r\n2. ¿Qué pasos seguirías para crear una jerarquía clara en un nuevo producto?  \r\n3. ¿Por qué es crítico validar las etiquetas con usuarios reales?  \r\n4. ¿Cuál es la diferencia entre un sitemap y un user flow y cómo se complementan?  \r\n5. ¿Qué riesgos implica una arquitectura con demasiados niveles y cómo los mitigaría?",
+    "ruta_estudio": "1. **Prerequisitos**: conceptos básicos de usabilidad, investigación de usuarios y card sorting.  \r\n2. **Fundamentos**: aprender a crear inventarios de contenido y a agrupar información en categorías lógicas.  \r\n3. **Herramientas**: dominar sitemaps, diagramas de flujo y pruebas de árbol (tree testing).  \r\n4. **Avanzado**: explorar análisis de datos de navegación, IA para clustering de contenido y prototipado de arquitectura dinámica.  \r\n5. **Especialización**: aplicar IA en IA (Information Architecture) a productos multicanal y a sistemas de gestión de contenido (CMS) complejos."
+  },
+  "sections_missing": [],
+  "slug": "information-architecture",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/ux-ui"
+  ],
+  "title": "Information Architecture",
+  "uid": "c_BHLQEBT4GM",
+  "verification_marks": []
+}

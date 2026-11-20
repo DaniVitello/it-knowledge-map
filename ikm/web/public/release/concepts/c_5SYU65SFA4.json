@@ -1,0 +1,38 @@
+{
+  "aliases": [
+    "Product Strategy"
+  ],
+  "area_uid": "product-management",
+  "content_hash": "9a6b8447b18e8bcba539f815002c46229ea90d1fa011cfa2d8a64e51edcd923e",
+  "numero": 8,
+  "related_uids": [
+    "c_4ZEK2ZN5ZJ",
+    "c_5N3OJBWASE",
+    "c_6XO5SGEQV5",
+    "c_QM2SFYU3HE",
+    "c_UQ26LMCZYY"
+  ],
+  "sections": {
+    "como_funciona": "1. **Diagnóstico**: recolecto datos de usuarios, métricas de negocio y limitaciones técnicas para mapear la situación actual.  \r\n2. **Visión y objetivo**: reviso la Product Vision y la alineo con oportunidades de mercado, definiendo una meta a largo plazo.  \r\n3. **Análisis de brecha**: comparo diagnóstico y visión, identificando áreas de alto impacto y bajo riesgo.  \r\n4. **Priorización**: aplico criterios de valor, costo y alineación estratégica para ordenar iniciativas.  \r\n5. **Definición de metas**: convierto las iniciativas top‑ranked en objetivos medibles y resultados esperados.  \r\n6. **Comunicación**: elaboro un documento de estrategia y lo difundo en reuniones de alineación y revisiones de roadmap.",
+    "conexiones": "- **Value Proposition**: la estrategia define qué propuesta de valor se persigue y cómo se diferencia en el mercado.  \r\n- **Product Vision**: la visión es el punto de partida que la estrategia traduce en acciones concretas.  \r\n- **Product Roadmap**: el roadmap es la representación temporal de la estrategia, mostrando cuándo se entregarán las iniciativas priorizadas.",
+    "detalles": "- **Básico**: entender la diferencia entre visión (qué queremos) y estrategia (cómo llegaremos). Aprender a usar un simple canvas de estrategia que incluya visión, objetivos y prioridades.  \r\n- **Intermedio**: incorporar análisis de mercado y de competencia, usar frameworks de priorización (RICE, ICE) y definir KPIs vinculados a resultados de negocio.  \r\n- **Avanzado**: escalar la estrategia a múltiples productos o líneas, integrar OKR a nivel de organización, y crear procesos de revisión continua que adapten la estrategia a cambios de entorno.",
+    "ejemplo_minimo": "```json\r\n{\r\n  \"vision\": \"Ser la plataforma líder de gestión de finanzas personales en LATAM\",\r\n  \"current_state\": {\r\n    \"usuarios_activos\": 12000,\r\n    \"retencion_mensual\": 0.45\r\n  },\r\n  \"strategic_priorities\": [\r\n    {\r\n      \"nombre\": \"Mejorar onboarding\",\r\n      \"valor_estimado\": 0.30,\r\n      \"costo_estimado\": \"bajo\",\r\n      \"objetivo\": \"Incrementar retención a 0.55 en 3 meses\"\r\n    },\r\n    {\r\n      \"nombre\": \"Lanzar integración con bancos locales\",\r\n      \"valor_estimado\": 0.50,\r\n      \"costo_estimado\": \"medio\",\r\n      \"objetivo\": \"Aumentar usuarios activos en 20% en 6 meses\"\r\n    }\r\n  ]\r\n}\r\n```",
+    "errores_comunes": "- Confundir visión con estrategia: la visión es el “por qué”, la estrategia el “cómo”.  \r\n- Priorizar solo por facilidad técnica y olvidar el valor para el usuario.  \r\n- No traducir la estrategia en métricas claras, lo que impide medir el éxito.  \r\n- Comunicar la estrategia solo a nivel ejecutivo, dejando a los equipos de ejecución sin guía.",
+    "estado_actual": "**Fundamentos estables**: la necesidad de alinear visión, prioridades y métricas sigue siendo la base de cualquier Product Strategy. El uso de canvas simples y frameworks de priorización como RICE es ampliamente aceptado.  \r\n**Práctica moderna**: muchas organizaciones combinan la estrategia con OKR a nivel de equipo, utilizan data lakes para actualizar la visión en tiempo real y aplican metodologías de *continuous discovery* para ajustar la estrategia de forma iterativa.",
+    "ideas_clave": "1. **Conectar la visión con la realidad actual** – Identifico la brecha entre donde está el producto y dónde queremos que esté.  \r\n2. **Definir prioridades basadas en valor y viabilidad** – Selecciono iniciativas que maximicen la propuesta de valor y sean factibles con los recursos disponibles.  \r\n3. **Traducir prioridades en metas y resultados** – Establezco objetivos claros (OKR, KPIs) que guían la ejecución y permiten medir el progreso.  \r\n4. **Comunicar la ruta a todos los stakeholders** – Creo una narrativa que alinee equipos de ingeniería, diseño, marketing y liderazgo alrededor de la misma dirección.",
+    "objetivo": "Utilizo la Product Strategy para trazar el camino que lleva nuestro producto desde la situación actual hasta la visión que queremos alcanzar. Resuelvo la incertidumbre de *qué* debemos construir, *para quién* y *por qué* al alinear decisiones diarias con objetivos de negocio y de usuario. Aparece en cada fase de planificación, desde la definición de la visión hasta la priorización del roadmap, y me permite comunicar de forma clara a stakeholders internos y externos. Después de entenderla, puedo diseñar metas medibles, validar hipótesis con datos y ajustar la dirección del producto sin perder el foco. No necesito preocuparme de la Product Strategy cuando el producto está en fase de mantenimiento sin cambios estratégicos ni cuando la organización opera bajo una hoja de ruta rígida dictada por regulaciones externas.",
+    "preguntas_repaso": "1. ¿Cómo diferencia la Product Strategy de la Product Vision en la práctica diaria?  \r\n2. ¿Qué criterios utilizas para priorizar iniciativas dentro de una estrategia?  \r\n3. ¿De qué manera una métrica clara (KPIs) conecta la estrategia con la ejecución?  \r\n4. ¿Cuál es el riesgo de comunicar la estrategia solo a nivel ejecutivo?  \r\n5. ¿Cómo adaptarías una Product Strategy cuando aparecen nuevos competidores en el mercado?",
+    "ruta_estudio": "1. **Prerequisitos**: comprender conceptos de Product Vision, métricas de producto (retención, LTV) y fundamentos de priorización.  \r\n2. **Fundamentos**: estudiar plantillas de Product Strategy Canvas y practicar con casos reales de brecha visión‑realidad.  \r\n3. **Intermedio**: aprender frameworks de priorización (RICE, ICE) y cómo vincular iniciativas a OKR y KPIs.  \r\n4. **Avanzado**: explorar escalado de estrategia a portafolios, integración de *continuous discovery* y uso de data-driven dashboards para revisión periódica."
+  },
+  "sections_missing": [],
+  "slug": "product-strategy",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/product-management"
+  ],
+  "title": "Product Strategy",
+  "uid": "c_5SYU65SFA4",
+  "verification_marks": []
+}

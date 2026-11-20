@@ -1,0 +1,46 @@
+{
+  "aliases": [
+    "Asincronía"
+  ],
+  "area_uid": "frontend",
+  "content_hash": "097a9e61383049eac2f00927d243b6aca59fd99a6f9288a3f28e39af044c80df",
+  "numero": 9,
+  "related_uids": [
+    "c_3G2O5BM4F2",
+    "c_ESB3I2EXYR",
+    "c_LFYZZYAIJK",
+    "c_QWAQTV7JRM",
+    "c_SQK5OV6EKB",
+    "c_WYOKFAK6RE"
+  ],
+  "sections": {
+    "como_funciona": "1. El código inicia en el hilo principal y encuentra una llamada asíncrona.  \r\n2. Si se usa un callback, la función se registra en la cola de tareas del event loop.  \r\n3. Si se crea una promise, el motor la coloca en la *micro‑task queue* una vez que se resuelve o rechaza.  \r\n4. El event loop procesa primero la micro‑task queue, ejecutando los `then`/`catch` o el código después de `await`.  \r\n5. Cuando la micro‑task queue está vacía, el event loop procesa la cola de tareas normal, ejecutando callbacks de temporizadores, I/O, etc.  \r\n6. El hilo principal queda libre para pintar la UI mientras estas operaciones se completan en segundo plano.",
+    "conexiones": "- **Concurrency** – La asincronía permite ejecutar varias operaciones sin bloquear el hilo principal, creando la ilusión de concurrencia dentro del modelo de un solo hilo de JavaScript.  \r\n- **JavaScript** – La gestión de la asincronía es una característica intrínseca del lenguaje, implementada mediante callbacks, promises y el event loop.  \r\n- **Eventos** – Los manejadores de eventos se registran como callbacks y se disparan a través del event loop, por lo que la asincronía y el sistema de eventos están estrechamente ligados.",
+    "detalles": "- **Básico**: Entender que una función callback se ejecuta después de que la operación termina; reconocer la firma `(error, result)`.  \r\n- **Intermedio**: Adoptar promises para evitar anidaciones; conocer los estados *pending*, *fulfilled* y *rejected*; usar `Promise.all` para paralelismo controlado.  \r\n- **Avanzado**: Aplicar `async/await` con manejo de errores mediante `try/catch`; combinar `await` con `Promise.race` para time‑outs; comprender cómo el event loop prioriza micro‑tasks sobre macrotasks y cómo esto afecta el orden de ejecución.",
+    "ejemplo_minimo": "```js\r\n// async/await con fetch\r\nasync function cargarUsuario(id) {\r\n  const respuesta = await fetch(`https://api.example.com/users/${id}`);\r\n  const usuario = await respuesta.json();\r\n  return usuario;\r\n}\r\n\r\ncargarUsuario(1).then(u => console.log(u));\r\n```",
+    "errores_comunes": "- Olvidar `await` y devolver una promise sin resolver; se evita añadiendo `await` o retornando la promise explícitamente.  \r\n- Capturar errores solo con `catch` de la promise y no con `try/catch` dentro de una función async; usar `try/catch` alrededor del `await`.  \r\n- Mezclar callbacks y promises sin encadenar correctamente, lo que genera “callback hell”; preferir una única estrategia (promises o async/await).  \r\n- Asumir que `await` bloquea el hilo principal; recordar que solo pausa la ejecución de la función async, mientras el event loop sigue activo.",
+    "estado_actual": "**Fundamentos estables**: El modelo de callbacks, el objeto `Promise` y el algoritmo del event loop están definidos en la especificación ECMAScript y son compatibles con todos los navegadores modernos.  \r\n**Práctica moderna**: La sintaxis `async/await` es la forma recomendada para escribir código asíncrono legible; el uso de `Promise.allSettled` y `AbortController` para gestionar cancelaciones y time‑outs está ampliamente adoptado en proyectos Frontend actuales.",
+    "ideas_clave": "1. **Callbacks** – Funciones que se pasan como argumento y se invocan cuando una operación asíncrona termina.  \r\n2. **Promises** – Objetos que representan el eventual resultado de una operación asíncrona y permiten encadenar manejadores `then` y `catch`.  \r\n3. **async/await** – Sintaxis que simplifica el manejo de promises, haciendo que el código asíncrono se lea como síncrono.  \r\n4. **Event loop** – Mecanismo del motor JavaScript que gestiona la cola de tareas y decide cuándo ejecutar callbacks o resoluciones de promises.",
+    "objetivo": "Utilizo la asincronía para que la interfaz de usuario siga respondiendo mientras el navegador realiza operaciones que pueden tardar, como peticiones a APIs o lecturas de archivos. Resuelvo el problema de bloquear el hilo principal y evitar que la página se “congele”. En mi día a día como desarrollador Frontend la encuentro cada vez que consumo datos externos, manejo temporizadores o proceso eventos que no pueden ejecutarse de forma inmediata. Después de comprenderla, puedo estructurar código que combine callbacks, promises y la sintaxis async/await sin crear “callback hell” y aprovechar el event loop para optimizar el rendimiento. No necesito preocuparme cuando la tarea es trivial y se ejecuta de forma síncrona, como cálculos simples que no dependen de recursos externos.",
+    "preguntas_repaso": "1. ¿Qué diferencia hay entre una callback y una promise en la forma en que manejan el resultado de una operación asíncrona?  \r\n2. ¿Cómo afecta la prioridad de la micro‑task queue al orden de ejecución de `await` y de un `setTimeout`?  \r\n3. ¿Cuál es la ventaja de usar `async/await` frente a encadenar múltiples `then`?  \r\n4. ¿Qué ocurre si una función async no incluye `await` antes de una llamada que devuelve una promise?  \r\n5. ¿Cómo puedes cancelar una petición fetch en curso usando la API estándar del navegador?",
+    "ruta_estudio": "1. **Prerequisitos**: Dominar los tipos de datos, funciones y el modelo de ejecución síncrono de JavaScript.  \r\n2. **Fundamentos**: Practicar callbacks con `setTimeout` y `XMLHttpRequest`.  \r\n3. **Promises**: Implementar y encadenar promises; estudiar `Promise.all` y `Promise.race`.  \r\n4. **async/await**: Convertir código basado en promises a async/await; manejar errores con `try/catch`.  \r\n5. **Profundización**: Analizar el event loop, micro‑tasks vs macrotasks, y herramientas de cancelación como `AbortController`.  \r\n6. **Aplicación**: Integrar asincronía en frameworks modernos (React, Vue) y en patrones de gestión de estado (Redux Thunk, Vuex actions)."
+  },
+  "sections_missing": [],
+  "slug": "asincronia",
+  "sources": [
+    "https://api.example.com/users/${id"
+  ],
+  "sources_detail": [
+    {
+      "title": null,
+      "url": "https://api.example.com/users/${id"
+    }
+  ],
+  "tags": [
+    "concepto",
+    "it/frontend"
+  ],
+  "title": "Asincronía",
+  "uid": "c_NTNITJDH3Q",
+  "verification_marks": []
+}

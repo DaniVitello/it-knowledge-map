@@ -1,0 +1,37 @@
+{
+  "aliases": [
+    "Vector Databases"
+  ],
+  "area_uid": "ai-engineering",
+  "content_hash": "1206e6212cea9b41b929a73c222c654d70a4e319ea4ab5fcc5eea1fd168e084c",
+  "numero": 15,
+  "related_uids": [
+    "c_JS77WZ6QYB",
+    "c_QTK2SYOTSW",
+    "c_XPKAEIKUDL",
+    "c_YFKRGNUXRH"
+  ],
+  "sections": {
+    "como_funciona": "1. El modelo de IA genera un embedding a partir del input del usuario.  \r\n2. Ese embedding se envía a la base de datos vectorial, que lo compara con los vectores indexados usando una métrica de similitud.  \r\n3. La capa de indexación devuelve los *k* vectores más cercanos junto con sus metadatos.  \r\n4. El componente de retrieval incorpora esos documentos al prompt del modelo (RAG) o los usa directamente en una decisión.  \r\n5. Si se añaden nuevos datos, la base de datos actualiza su índice de forma incremental para mantener la eficiencia.",
+    "conexiones": "- **Embeddings** – los vectores que se indexan provienen de modelos de lenguaje o visión; la calidad del embedding determina la efectividad de la búsqueda.  \r\n- **RAG (Retrieval‑Augmented Generation)** – la base de datos vectorial alimenta al modelo generativo con contexto relevante, mejorando precisión y factualidad.  \r\n- **NoSQL** – muchas bases de datos vectoriales se construyen sobre almacenes NoSQL para combinar consultas estructuradas y búsqueda vectorial en una única capa.",
+    "detalles": "- **Básico:** crear un índice plano (brute‑force) y usar distancia coseno; suficiente para pocos miles de vectores.  \r\n- **Intermedio:** emplear estructuras como HNSW o IVF para reducir la complejidad a *log N* y soportar millones de vectores.  \r\n- **Avanzado:** combinar sharding y replicación para alta disponibilidad; usar métricas híbridas (texto + vector) y aplicar re‑ranking con modelos de IA.",
+    "ejemplo_minimo": "```python\r\nfrom sentence_transformers import SentenceTransformer\r\nimport chromadb  # cliente de una base de datos vectorial ligera\r\n\r\n# 1. Generar embeddings\r\nmodel = SentenceTransformer('all-MiniLM-L6-v2')\r\ndocs = [\"¿Cómo entrenar un modelo?\", \"Guía de despliegue en Docker\"]\r\nembs = model.encode(docs)\r\n\r\n# 2. Crear colección y añadir vectores\r\nclient = chromadb.Client()\r\ncollection = client.create_collection(name=\"knowledge\")\r\ncollection.add(\r\n    ids=[\"doc1\", \"doc2\"],\r\n    embeddings=embs.tolist(),\r\n    documents=docs\r\n)\r\n\r\n# 3. Consulta\r\nquery = model.encode([\"¿Cómo lanzar mi modelo?\"])\r\nresults = collection.query(\r\n    query_embeddings=query.tolist(),\r\n    n_results=1\r\n)\r\nprint(results['documents'][0])\r\n```",
+    "errores_comunes": "- **Usar distancia euclídea con embeddings normalizados** – produce rankings erróneos; prefiera coseno o normalice antes.  \r\n- **Sobrecargar el índice con inserciones masivas sin re‑indexar** – degrada la latencia; programe re‑indexado periódico.  \r\n- **Ignorar la persistencia de metadatos** – dificulta la trazabilidad del documento recuperado; siempre almacene IDs y atributos relevantes.",
+    "estado_actual": "- **Fundamentos estables:** representación de datos mediante embeddings, métricas de similitud (coseno, dot‑product) y la necesidad de indexación para búsqueda eficiente.  \r\n- **Práctica moderna:** uso de estructuras HNSW, IVF‑PQ y servicios gestionados (p. ej., Pinecone, Weaviate) que ofrecen escalado automático, replicación y APIs de RAG integradas.",
+    "ideas_clave": "1. **Indexación de embeddings** – los vectores se insertan en estructuras que permiten búsquedas rápidas.  \r\n2. **Similarity search** – se calcula la distancia (p. ej., coseno) entre el query y los vectores indexados para obtener los más cercanos.  \r\n3. **Retrieval** – los resultados se entregan al modelo de IA para enriquecer su generación o decisión.  \r\n4. **Persistencia en NoSQL** – los metadatos y los vectores se guardan en un almacén compatible con consultas flexibles.  \r\n5. **Escalado dinámico** – el índice se actualiza y reequilibra conforme crecen los datos.",
+    "objetivo": "Utilizo bases de datos vectoriales para almacenar y buscar embeddings de alta dimensión que representan textos, imágenes o cualquier dato que haya sido transformado por un modelo de IA. Resuelvo el problema de encontrar rápidamente los ítems más similares a una consulta, lo que es esencial en sistemas de recuperación aumentada (RAG), recomendación y búsqueda semántica. Aparecen en la arquitectura de productos de IA cuando necesito conectar un modelo generativo con información externa de forma eficiente. Después de entenderlas, puedo diseñar pipelines de recuperación, optimizar la latencia de búsqueda y combinar varios índices para mejorar la cobertura del contexto. No necesito preocuparme por ellas si mi aplicación solo produce respuestas sin requerir acceso a datos externos o si utilizo un motor de búsqueda tradicional basado en texto plano.",
+    "preguntas_repaso": "1. ¿Qué papel juega la métrica de similitud en una base de datos vectorial?  \r\n2. ¿Cómo se conecta una base de datos vectorial con un modelo generativo en un flujo RAG?  \r\n3. ¿Cuál es la diferencia práctica entre un índice plano y uno basado en HNSW?  \r\n4. ¿Por qué es importante almacenar metadatos junto a los vectores?  \r\n5. ¿Qué consideraciones de escalado aparecen al pasar de miles a millones de vectores?",
+    "ruta_estudio": "1. **Prerequisitos:** Python, conceptos de embeddings y métricas de distancia; familiaridad con APIs REST.  \r\n2. **Fundamentos:** crear un índice plano, medir similitud y evaluar precisión con conjuntos de prueba simples.  \r\n3. **Intermedio:** aprender HNSW/IVF, experimentar con parámetros de *efecto* y *recall*.  \r\n4. **Avanzado:** implementar sharding, replicación y pipelines RAG; explorar integraciones con plataformas de IA (LangChain, LlamaIndex)."
+  },
+  "sections_missing": [],
+  "slug": "vector-databases",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/ai-engineering"
+  ],
+  "title": "Vector Databases",
+  "uid": "c_DCYZGXRVW2",
+  "verification_marks": []
+}

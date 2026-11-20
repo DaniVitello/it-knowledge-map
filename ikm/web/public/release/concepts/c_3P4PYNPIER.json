@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "LLM APIs & Model Serving"
+  ],
+  "area_uid": "ai-engineering",
+  "content_hash": "95976bbd2fad7fcd7c2aa0cabd637251f3c44ebdef4ef78ceac35bddf856d4bb",
+  "numero": 12,
+  "related_uids": [
+    "c_LG2UZSQPXG",
+    "c_MBMF42FTPA"
+  ],
+  "sections": {
+    "como_funciona": "1. El desarrollador importa el SDK y configura credenciales.  \r\n2. Construye una solicitud que incluye el prompt, parámetros de generación y, opcionalmente, la opción de streaming.  \r\n3. El SDK envía la petición a la API REST/GRPC del modelo.  \r\n4. El servidor de Model Serving ejecuta la inferencia y devuelve la respuesta completa o un flujo de tokens.  \r\n5. El cliente procesa la salida y la integra en la lógica del producto (respuesta al usuario, almacenamiento, etc.).",
+    "conexiones": "- **API Design** – Define la estructura de los endpoints, métodos y contratos que consumen los SDKs.  \r\n- **Model Monitoring** – Supervisa la calidad y latencia de las inferencias servidas por la API.  \r\n- **Data Pipeline** – Alimenta los prompts y consume las respuestas dentro de flujos ETL o de procesamiento en tiempo real.",
+    "detalles": "- **Básico**: Uso de una API REST con JSON; envío de `prompt` y recepción de `completion`.  \r\n- **Intermedio**: Configuración de parámetros como `temperature`, `max_tokens` y uso de SDKs que gestionan reintentos y límites de cuota.  \r\n- **Avanzado**: Activación de streaming (Server‑Sent Events o websockets) para obtener tokens a medida que se generan; despliegue propio de Model Serving con contenedores Docker, escalado automático y balanceo de carga; integración con sistemas de autenticación y registro de métricas.",
+    "ejemplo_minimo": "```python\r\nimport openai\r\n\r\nclient = openai.OpenAI(api_key=\"sk-*****\")\r\nresponse = client.chat.completions.create(\r\n    model=\"gpt-4o-mini\",\r\n    messages=[{\"role\": \"user\", \"content\": \"¿Cuál es la capital de Perú?\"}],\r\n    stream=False\r\n)\r\n\r\nprint(response.choices[0].message.content)\r\n```",
+    "errores_comunes": "- **Olvidar el parámetro `stream`** → la respuesta llega completa y la latencia percibida aumenta; habilitar `stream=True` cuando se necesita interacción en tiempo real.  \r\n- **Exceder el límite de tokens** → la API devuelve error; ajustar `max_tokens` o dividir el prompt.  \r\n- **No manejar reintentos** → fallas transitorias abortan el flujo; usar la lógica de reintento del SDK.",
+    "estado_actual": "- **Fundamentos estables**: APIs RESTful con JSON, autenticación mediante tokens, límites de cuota y modelo de precios basado en tokens.  \r\n- **Práctica moderna**: SDKs asíncronos, streaming de tokens, despliegues de Model Serving en Kubernetes o serverless, observabilidad con métricas de latencia y uso de GPU.",
+    "ideas_clave": "1. **API** – Punto de entrada HTTP que expone operaciones de inferencia del modelo.  \r\n2. **SDK** – Biblioteca cliente que simplifica la construcción de peticiones y el manejo de respuestas.  \r\n3. **Inference** – Ejecución del modelo sobre un prompt y devolución del resultado.  \r\n4. **Streaming** – Transferencia incremental de tokens para reducir latencia percibida.",
+    "objetivo": "Utilizo LLM APIs y Model Serving para conectar mis aplicaciones con modelos de lenguaje grande sin gestionar la infraestructura del modelo. Resuelvo el problema de obtener inferencia en tiempo real y a escala, evitando la sobrecarga de entrenamiento y mantenimiento de hardware. Aparecen cada vez que necesito que un producto de IA genere texto, clasifique, o realice razonamiento bajo demanda, ya sea en un chatbot, un motor de recomendación o una herramienta de análisis de documentos. Después de entender este concepto, puedo diseñar flujos de datos que llamen a modelos externos, orquestar despliegues propios de modelos y combinar ambas estrategias. No necesito preocuparme cuando el producto solo requiere lógica estática o cuando el modelo está embebido en el mismo proceso y no requiere exposición como servicio.",
+    "preguntas_repaso": "1. ¿Qué ventaja aporta el streaming frente a una respuesta completa en una LLM API?  \r\n2. ¿Cómo se configura el número máximo de tokens que puede generar un modelo?  \r\n3. ¿Cuál es el rol del SDK al interactuar con una API de inferencia?  \r\n4. ¿Qué pasos seguirías para migrar de una API externa a un despliegue propio de Model Serving?  \r\n5. ¿Qué métricas son críticas para monitorear la salud de un servicio de inferencia?",
+    "ruta_estudio": "1. **Prerequisitos**: HTTP/HTTPS, JSON, Python, conceptos básicos de inferencia de ML.  \r\n2. **Fundamentos**: Consumir una LLM API con un SDK, entender parámetros de generación.  \r\n3. **Intermedio**: Implementar streaming, gestionar cuotas y errores, medir latencia.  \r\n4. **Avanzado**: Desplegar Model Serving propio (Docker, Kubernetes), escalar con autoscaling, integrar observabilidad y alertas.  \r\n5. **Especialización**: Optimizar costos mediante batching, usar técnicas de prompt engineering y combinar APIs externas con modelos internos."
+  },
+  "sections_missing": [],
+  "slug": "llm-apis-model-serving",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/ai-engineering"
+  ],
+  "title": "LLM APIs & Model Serving",
+  "uid": "c_3P4PYNPIER",
+  "verification_marks": []
+}

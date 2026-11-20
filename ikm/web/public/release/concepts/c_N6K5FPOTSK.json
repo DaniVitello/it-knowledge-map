@@ -1,0 +1,37 @@
+{
+  "aliases": [
+    "Team Coordination"
+  ],
+  "area_uid": "project-management",
+  "content_hash": "00e4d6cb0e3f46c4c80201b7bbee67cbc3b62d127f45b48b87ec2981fdbbb622",
+  "numero": 22,
+  "related_uids": [
+    "c_7HAIPW7HG2",
+    "c_FBWIOD73FI",
+    "c_ODRXW7IAT4",
+    "c_Q56AS5I5XQ"
+  ],
+  "sections": {
+    "como_funciona": "1. Durante la planificación, el PM lista todas las tareas y marca las dependencias entre ellas.  \r\n2. Se asignan responsables y se elige el canal de comunicación (Slack, reuniones diarias, tablero Kanban).  \r\n3. Se crean hitos que agrupan actividades con dependencias comunes y se fijan fechas de integración.  \r\n4. Cada día el equipo actualiza su progreso en el tablero; los bloqueos se reportan inmediatamente.  \r\n5. El PM revisa el reporte, informa al Technical Leader y, si es necesario, re‑prioriza o negocia con los Stakeholders.",
+    "conexiones": "- **Technical Leadership**: Provee la autoridad técnica para decidir cómo resolver dependencias críticas y priorizar refactorizaciones.  \r\n- **Engineering Processes**: Define los pasos (code review, integración continua) que deben respetarse para que la coordinación sea efectiva.  \r\n- **Stakeholder Management**: Necesita información de la coordinación de equipos para comunicar avances realistas y negociar cambios de alcance.",
+    "detalles": "- **Básico:** Reconocer quién entrega qué y cuándo; usar un tablero simple con columnas “Por hacer”, “En progreso” y “Hecho”.  \r\n- **Intermedio:** Introducir “dependencias visuales” (líneas entre tarjetas) y reuniones de coordinación de 15 min cada mañana para alinear prioridades.  \r\n- **Avanzado:** Automatizar notificaciones de bloqueos mediante integraciones (por ejemplo, GitHub Actions que avisan cuando un PR depende de otro) y aplicar métricas de lead time para ajustar la sincronización de sprints.",
+    "ejemplo_minimo": "```json\r\n{\r\n  \"team\": [\r\n    {\"name\": \"Ana\", \"role\": \"Frontend\"},\r\n    {\"name\": \"Luis\", \"role\": \"Backend\"}\r\n  ],\r\n  \"tasks\": [\r\n    {\"id\": \"T1\", \"owner\": \"Ana\", \"dependsOn\": []},\r\n    {\"id\": \"T2\", \"owner\": \"Luis\", \"dependsOn\": [\"T1\"]}\r\n  ]\r\n}\r\n```\r\nEn este JSON, la tarea *T2* no puede iniciarse hasta que *T1* esté completada, lo que obliga a Ana y Luis a coordinar sus entregas.",
+    "errores_comunes": "- Asumir que la comunicación informal es suficiente; evitarlo estableciendo canales oficiales.  \r\n- Ignorar pequeñas dependencias que, acumuladas, generan grandes retrasos; revisarlas en cada planificación.  \r\n- No actualizar el tablero en tiempo real; usar recordatorios automáticos para mantener la información fresca.  \r\n- Delegar la coordinación completa al líder técnico sin supervisión del PM; mantener la visión global.",
+    "estado_actual": "**Fundamentos estables:** La identificación de dependencias y la actualización visible del estado son prácticas consolidadas en metodologías ágiles y tradicionales.  \r\n**Práctica moderna:** El uso de integraciones CI/CD para señalizar bloqueos y la adopción de métricas de flujo (flow metrics) para optimizar la sincronización de equipos están ganando adopción en organizaciones que buscan entrega continua.",
+    "ideas_clave": "1. **Identificar dependencias** – Detectar qué entregables requieren la salida de otros equipos antes de poder avanzar.  \r\n2. **Establecer canales de colaboración** – Definir reuniones, herramientas y protocolos que permitan el intercambio rápido de información.  \r\n3. **Sincronizar tiempos** – Alinear fechas de inicio y fin de actividades interdependientes para evitar esperas.  \r\n4. **Monitorear el estado** – Registrar avances y bloqueos en un punto visible para todos los involucrados.  \r\n5. **Facilitar decisiones** – Proveer al líder técnico la información necesaria para resolver conflictos de prioridad.",
+    "objetivo": "Utilizo la coordinación de equipos para alinear a los miembros en torno a entregas interdependientes, garantizando que cada pieza del proyecto avance sin bloqueos. Resuelvo el problema de la falta de sincronía que genera retrasos y retrabajo, y aparece en cada fase donde el trabajo de varios roles se superpone: planificación de sprints, revisiones de hitos y entregas parciales. Después de entender la coordinación de equipos, puedo diseñar flujos de trabajo claros, definir puntos de integración y anticipar cuellos de botella. No necesito preocuparme cuando el proyecto es de una sola persona o cuando las tareas son totalmente independientes.",
+    "preguntas_repaso": "1. ¿Cómo identificas una dependencia que pueda bloquear el progreso de otro equipo?  \r\n2. ¿Qué canales de colaboración prefieres para una coordinación diaria y por qué?  \r\n3. ¿Cuál es el papel del Technical Leader al resolver un conflicto de prioridad entre tareas dependientes?  \r\n4. ¿Cómo usarías una métrica de lead time para ajustar la sincronización de sprints?  \r\n5. ¿Qué riesgos aparecen si el tablero de estado no se actualiza en tiempo real?",
+    "ruta_estudio": "1. **Prerequisitos:** Conocer los fundamentos de gestión de proyectos (WBS, cronograma) y manejo de tableros Kanban.  \r\n2. **Fundamento:** Practicar la identificación de dependencias en proyectos pequeños y usar un tablero visual.  \r\n3. **Intermedio:** Implementar reuniones de coordinación y herramientas de notificación automática.  \r\n4. **Avanzado:** Integrar métricas de flujo y automatizaciones CI/CD; estudiar casos de escalado de coordinación en equipos distribuidos.  \r\n5. **Especialización:** Explorar frameworks de Release Train Engineering (RTE) y técnicas de Program Increment (PI) Planning."
+  },
+  "sections_missing": [],
+  "slug": "team-coordination",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/project-management"
+  ],
+  "title": "Team Coordination",
+  "uid": "c_N6K5FPOTSK",
+  "verification_marks": []
+}

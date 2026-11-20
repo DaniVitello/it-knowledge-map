@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "JavaScript avanzado"
+  ],
+  "area_uid": "frontend",
+  "content_hash": "17bcd6f1323d6c16124ecb295075b7a71d8d783450b66c2403fb18dc7121636f",
+  "numero": 7,
+  "related_uids": [
+    "c_LFYZZYAIJK",
+    "c_NTNITJDH3Q",
+    "c_QWAQTV7JRM"
+  ],
+  "sections": {
+    "como_funciona": "1. Cuando el motor interpreta el código, crea un **scope** para cada bloque y función.  \r\n2. Si una función interna accede a variables del scope externo, se forma una **closure** que conserva esas referencias aun después de que el scope externo haya finalizado.  \r\n3. Al invocar la función, el motor resuelve **`this`** según si la llamada es directa, como método de objeto, con `call/apply` o mediante `new`.  \r\n4. Los objetos pueden delegar en un **prototype**, heredando métodos sin copiarlos, lo que reduce el consumo de memoria.  \r\n5. Con la sintaxis de **módulos** (`import`/`export`) o patrones IIFE, el código se encapsula, exponiendo solo la API pública y manteniendo el resto privado.",
+    "conexiones": "- **JavaScript**: los conceptos avanzados son extensiones del mismo lenguaje y forman la base para cualquier código que escriba en el frontend.  \r\n- **Eventos**: los handlers de eventos a menudo dependen de closures para mantener estado entre disparos y de `this` para referirse al elemento objetivo.  \r\n- **Asincronía**: promesas y async/await utilizan closures para capturar variables del entorno y requieren comprender `this` cuando se combinan con métodos de objetos.",
+    "detalles": "- **Básico**: comprender el alcance léxico y la diferencia entre `var`, `let` y `const`.  \r\n- **Intermedio**: crear closures para encapsular estado (por ejemplo, contadores privados) y usar `this` en callbacks con `bind`.  \r\n- **Avanzado**: diseñar jerarquías de objetos mediante prototypes, aplicar herencia múltiple con mixins y estructurar la aplicación con módulos ES6 o CommonJS, combinando closures y `this` para construir APIs limpias.",
+    "ejemplo_minimo": "```js\r\n// Módulo simple con closure y this\r\nconst counter = (() => {\r\n  let total = 0;               // variable privada (closure)\r\n  return {\r\n    inc() {                    // método que usa this implícito\r\n      total++;\r\n      console.log(this === counter); // true\r\n    },\r\n    get() { return total; }\r\n  };\r\n})();\r\n\r\ncounter.inc();   // 1\r\ncounter.inc();   // 2\r\nconsole.log(counter.get()); // 2\r\n```",
+    "errores_comunes": "- Confundir `var` con `let` y crear scopes inesperados → usar siempre `let`/`const`.  \r\n- Olvidar enlazar `this` en callbacks → aplicar `bind` o usar funciones flecha cuando sea apropiado.  \r\n- Declarar métodos dentro del constructor en lugar de en el prototype → moverlos al prototype para compartirlos.  \r\n- Exportar variables en lugar de funciones encapsuladas → mantener la privacidad con closures.  \r\n- Mezclar módulos CommonJS y ES6 sin transpiler → elegir un sistema y configurarlo consistentemente.",
+    "estado_actual": "**Fundamentos estables**: el modelo de scope, closures, `this` y prototype son parte del lenguaje desde ES5 y siguen sin cambios.  \r\n**Práctica moderna**: los módulos ES6 (`import`/`export`) son la forma recomendada para organizar código; los frameworks frontend (React, Vue, Svelte) abstraen gran parte del manejo manual de `this` y prototypes, pero el entendimiento subyacente sigue siendo esencial para depurar y crear librerías propias.",
+    "ideas_clave": "1. **Scope** – Define el contexto léxico donde viven las variables y determina su accesibilidad.  \r\n2. **Closures** – Funciones que recuerdan el scope en el que fueron creadas, permitiendo encapsular datos.  \r\n3. **`this`** – Referencia al objeto que ejecuta la función; su valor depende del modo de invocación.  \r\n4. **Prototypes** – Cadena de delegación que permite compartir propiedades y métodos entre objetos.  \r\n5. **Módulos** – Agrupan código en unidades reutilizables con un namespace propio, evitando colisiones globales.",
+    "objetivo": "Utilizo JavaScript avanzado para estructurar y optimizar la lógica de la interfaz de usuario, resolviendo problemas de mantenimiento, reutilización y rendimiento que aparecen al construir aplicaciones Frontend complejas. Cuando gestiono estados compartidos, interactúo con APIs o creo componentes reutilizables, dependo de conceptos como scope, closures, prototypes, módulos y el manejo correcto de `this`. Al dominar estos mecanismos, puedo diseñar código predecible, evitar fugas de memoria y escribir librerías o frameworks propios. Después de entenderlos, paso a implementar patrones de arquitectura (por ejemplo, módulos ES6 o patrones de diseño) y a depurar comportamientos sutiles en tiempo de ejecución. No necesito preocuparme de ellos en scripts triviales o cuando utilizo exclusivamente herramientas que abstraen la lógica (por ejemplo, editores visuales sin código).",
+    "preguntas_repaso": "1. ¿Cómo afecta el tipo de declaración (`var`, `let`, `const`) al scope de una variable?  \r\n2. ¿Qué diferencia hay entre una closure y una función normal que accede a variables externas?  \r\n3. ¿En qué situaciones el valor de `this` cambia y cómo puedes controlarlo?  \r\n4. ¿Por qué es preferible definir métodos en el prototype en lugar de dentro del constructor?  \r\n5. ¿Cómo los módulos ES6 ayudan a evitar colisiones de nombres y a mantener el código encapsulado?",
+    "ruta_estudio": "1. **Prerequisitos**: sintaxis básica de JavaScript, tipos de datos y estructuras de control.  \r\n2. **Fundamentos**: estudiar scope y diferencias entre `var`, `let`, `const`; practicar closures con funciones simples.  \r\n3. **Profundizar**: experimentar con `this` en distintos contextos (métodos, callbacks, constructores).  \r\n4. **Prototype**: crear objetos mediante `Object.create` y definir métodos en el prototype.  \r\n5. **Módulos**: aprender la sintaxis ES6, configurar bundlers (Webpack, Vite) y usar import/export en proyectos reales.  \r\n6. **Aplicación**: integrar los conceptos en un pequeño proyecto (por ejemplo, una SPA sin framework) y luego comparar con la implementación en React o Vue."
+  },
+  "sections_missing": [],
+  "slug": "javascript-avanzado",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/frontend"
+  ],
+  "title": "JavaScript avanzado",
+  "uid": "c_3G2O5BM4F2",
+  "verification_marks": []
+}

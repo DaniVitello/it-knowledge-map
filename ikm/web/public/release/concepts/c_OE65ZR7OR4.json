@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "Users & Groups"
+  ],
+  "area_uid": "os-linux",
+  "content_hash": "7068e8cc874fe456e2fc6c6383c6544ed5cb36a73b7ee7bbed433d101f3641f3",
+  "numero": 10,
+  "related_uids": [
+    "c_TXS5EDLI4R",
+    "c_XUZJWYTELS"
+  ],
+  "sections": {
+    "como_funciona": "1. Al iniciar sesión, `login` o `sshd` verifica el nombre contra `/etc/passwd` y asigna el UID correspondiente al proceso de la sesión.  \r\n2. El proceso hereda el GID primario del usuario y los GID suplementarios definidos en `/etc/group`.  \r\n3. Cuando el proceso intenta abrir un archivo, el kernel compara el UID/GID del proceso con el propietario y el grupo del inode del archivo.  \r\n4. Según la coincidencia, el kernel aplica los bits de permiso `rwx` del propietario, del grupo o de “otros” y decide permitir o denegar la operación.",
+    "conexiones": "- **File Permissions** – Los bits `rwx` que evalúa el kernel dependen directamente del UID/GID del proceso.  \r\n- **File Systems** – Cada inode almacena UID, GID y los bits de permiso; el sistema de archivos los expone al kernel.  \r\n- **sudo** – Permite a usuarios no privilegiados ejecutar comandos con UID 0 u otro UID, basándose en reglas que referencian nombres de usuarios y grupos.",
+    "detalles": "- **Básico**: Creación de usuarios con `useradd`, asignación de contraseñas con `passwd`, y visualización con `id`.  \r\n- **Intermedio**: Uso de grupos secundarios (`usermod -aG`) para otorgar accesos temporales, y configuración de `setgid` en directorios para heredar el GID.  \r\n- **Avanzado**: Manipulación directa de `/etc/shadow` para políticas de expiración, uso de `sudo` con `User_Alias` y `Runas_Alias` para delegar privilegios, y empleo de ACLs (`setfacl`) cuando los bits tradicionales son insuficientes.",
+    "ejemplo_minimo": "```bash\r\n# Crear usuario y grupo\r\nsudo groupadd devops\r\nsudo useradd -m -g devops alice\r\n\r\n# Ver identidad del proceso de alice\r\nsu - alice -c 'id'\r\n# salida:\r\n# uid=1001(alice) gid=1001(devops) groups=1001(devops)\r\n\r\n# Crear archivo y asignar permisos\r\ntouch proyecto.txt\r\nchmod 640 proyecto.txt      # rw- r-- ---\r\nchown alice:devops proyecto.txt\r\n\r\n# Intentar lectura como otro usuario\r\nsudo -u bob cat proyecto.txt   # falla: Permission denied\r\n```",
+    "errores_comunes": "- **Olvidar añadir al usuario al grupo secundario** → el usuario no hereda los permisos esperados; usar `usermod -aG`.  \r\n- **Confundir UID y GID al cambiar propietario** → usar `chown user:group` en vez de `chown user group`.  \r\n- **Asignar permisos 777 por comodidad** → expone datos; aplicar el principio de menor privilegio.",
+    "estado_actual": "Los conceptos de UID/GID y permisos POSIX son fundamentos estables del kernel Linux. En la práctica moderna, se complementan con `sudo` para delegar privilegios de forma granular y con ACLs (`setfacl`) para casos donde los tres niveles tradicionales (`owner`, `group`, `others`) resultan insuficientes. Herramientas como `systemd` también gestionan usuarios y grupos de servicio mediante unidades `User=` y `Group=`.",
+    "ideas_clave": "1. **Identidad única** – Cada proceso se ejecuta bajo un UID (User ID) y pertenece a uno o varios GID (Group ID).  \r\n2. **Separación de privilegios** – Los permisos de archivo (`rwx`) se evalúan primero contra el propietario, luego contra el grupo y finalmente contra el resto del mundo.  \r\n3. **Roles mediante grupos** – Agrupar usuarios permite conceder el mismo conjunto de permisos a varios actores sin duplicar configuraciones.  \r\n4. **Persistencia en el kernel** – La tabla de usuarios y grupos (`/etc/passwd`, `/etc/group`) es consultada por el kernel en cada llamada de sistema que requiera autorización.",
+    "objetivo": "Utilizo usuarios y grupos para identificar a cada proceso y a cada archivo dentro del sistema, de modo que pueda asignar y controlar quién puede leer, escribir o ejecutar recursos críticos. Resuelvo el problema de la colisión de privilegios y la exposición accidental de datos al separar la autoridad de cada actor del sistema. En mi día a día como ingeniero Linux senior, los usuarios y grupos aparecen cada vez que creo cuentas de servicio, configuro permisos de directorios compartidos o depuro accesos denegados en logs de `auth.log`. Después de entender este mecanismo, puedo diseñar políticas de seguridad basadas en roles, automatizar la creación de cuentas y auditar el cumplimiento de normas. No necesito preocuparme cuando trabajo exclusivamente con procesos sin interacción humana y con recursos que ya están aislados mediante contenedores o máquinas virtuales.",
+    "preguntas_repaso": "1. ¿Qué verifica el kernel primero al decidir si un proceso puede leer un archivo?  \r\n2. ¿Cómo añado un usuario existente a un grupo sin perder su grupo primario?  \r\n3. ¿Qué diferencia hay entre los permisos mostrados por `chmod 750` y `chmod 750` aplicado a un directorio?  \r\n4. ¿En qué situación usarías una ACL en lugar de los permisos tradicionales?  \r\n5. ¿Cuál es el efecto de establecer el bit `setgid` en un directorio?",
+    "ruta_estudio": "1. **Prerequisitos**: Familiarizarse con la línea de comandos, conceptos de procesos y el árbol de directorios Linux.  \r\n2. **Fundamentos**: Leer `/etc/passwd` y `/etc/group`, practicar `useradd`, `groupadd`, `id`, `chmod`, `chown`.  \r\n3. **Intermedio**: Configurar `sudoers` (visualmente con `visudo`), crear grupos secundarios y probar `setgid` en directorios.  \r\n4. **Avanzado**: Implementar ACLs (`setfacl`, `getfacl`), explorar `systemd`‑user units y automatizar la gestión de cuentas con scripts o herramientas como `ansible`."
+  },
+  "sections_missing": [],
+  "slug": "users-groups",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/operating-systems-linux"
+  ],
+  "title": "Users & Groups",
+  "uid": "c_OE65ZR7OR4",
+  "verification_marks": []
+}

@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "Modularity"
+  ],
+  "area_uid": "software-engineering",
+  "content_hash": "054c0da5ee3d3f2361b2c37619f12126603e3e6eb5a521288d1eb84bd0cbcdf9",
+  "numero": 8,
+  "related_uids": [
+    "c_HISOSDWX75",
+    "c_KZDA6HODJU",
+    "c_TSM6OQKLAB"
+  ],
+  "sections": {
+    "como_funciona": "1. Identifico una funcionalidad que pueda aislarse y la encapsulo en un módulo.  \r\n2. Defino una interfaz pública que exponga solo lo necesario para otros módulos.  \r\n3. Declaro explícitamente las dependencias que ese módulo necesita para operar.  \r\n4. Establezco límites claros, evitando que código externo acceda a detalles internos.  \r\n5. Repito el proceso para cada nueva funcionalidad, creando una red de módulos interconectados pero débilmente acoplados.",
+    "conexiones": "- **Abstraction**: la modularidad se apoya en la abstracción al ocultar la complejidad interna de un módulo detrás de su interfaz.  \r\n- **Architecture**: una arquitectura bien diseñada organiza los módulos en capas o dominios, definiendo cómo se comunican y se integran.  \r\n- **Design Trade‑offs**: decidir el nivel de granularidad de los módulos implica sopesar la reutilización contra la sobrecarga de gestión de dependencias.",
+    "detalles": "- **Básico**: crear archivos o paquetes que agrupen funciones relacionadas y exporten una API mínima.  \r\n- **Intermedio**: gestionar dependencias mediante un gestor de paquetes y aplicar principios de alta cohesión y bajo acoplamiento.  \r\n- **Avanzado**: diseñar sistemas de módulos dinámicos (plugins, micro‑servicios) y aplicar patrones como *Facade* o *Dependency Injection* para controlar las interacciones en tiempo de ejecución.",
+    "ejemplo_minimo": "```python\r\n# modulo_math.py\r\ndef suma(a, b):\r\n    return a + b\r\n\r\n# app.py\r\nfrom modulo_math import suma\r\n\r\nresultado = suma(3, 4)\r\nprint(resultado)   # 7\r\n```",
+    "errores_comunes": "- **Acoplamiento excesivo**: un módulo depende de la implementación interna de otro; evitarlo usando interfaces.  \r\n- **Interfaces demasiado amplias**: exponer más de lo necesario; reducir la superficie pública.  \r\n- **Módulos con baja cohesión**: mezclar funcionalidades no relacionadas; reorganizar para que cada módulo tenga una única responsabilidad.",
+    "estado_actual": "- **Fundamentos estables**: la definición de módulo, la práctica de declarar dependencias explícitas y el uso de encapsulamiento son conceptos consolidados en la literatura de ingeniería de software.  \r\n- **Práctica moderna**: el auge de arquitecturas basadas en micro‑servicios y sistemas de plugins ha impulsado herramientas de gestión de dependencias automatizadas y patrones de inyección de dependencias que facilitan la modularidad a escala de organización.",
+    "ideas_clave": "1. **Módulos** – unidades de código con una responsabilidad clara y una interfaz bien definida.  \r\n2. **Dependencias** – relaciones explícitas entre módulos que indican quién necesita qué.  \r\n3. **Límites (boundaries)** – fronteras que separan módulos y controlan el flujo de información.  \r\n4. **Cohesión** – grado en que las funcionalidades dentro de un módulo están relacionadas.  \r\n5. **Encapsulamiento** – ocultación de la implementación interna detrás de la interfaz pública.",
+    "objetivo": "Utilizo la modularidad para organizar el código en unidades independientes que pueden desarrollarse, probarse y evolucionar por separado. Resuelvo la complejidad de sistemas grandes al limitar el alcance de los cambios y reducir las interdependencias. En mi día a día como ingeniero de software la modularidad aparece al diseñar APIs, al estructurar paquetes o al definir micro‑servicios. Después de comprenderla puedo crear arquitecturas más flexibles, reutilizar componentes y acelerar la entrega continua. No necesito preocuparme por la modularidad cuando trabajo en scripts muy pequeños o pruebas de concepto que no van a escalar.",
+    "preguntas_repaso": "1. ¿Qué diferencia hay entre un módulo y una simple colección de funciones?  \r\n2. ¿Cómo ayuda el encapsulamiento a reducir el acoplamiento entre módulos?  \r\n3. ¿Por qué una interfaz pública demasiado amplia puede ser problemática?  \r\n4. ¿Qué patrón de diseño facilita la inyección de dependencias entre módulos?  \r\n5. ¿En qué situaciones la modularidad deja de ser una prioridad en un proyecto?",
+    "ruta_estudio": "1. **Pre‑requisitos**: conceptos básicos de programación estructurada, manejo de paquetes y control de versiones.  \r\n2. **Fundamentos**: estudiar principios de cohesión, acoplamiento y encapsulamiento; practicar creando paquetes simples.  \r\n3. **Herramientas**: aprender a usar gestores de dependencias (npm, pip, Maven) y sistemas de construcción (Make, Gradle).  \r\n4. **Patrones avanzados**: profundizar en *Dependency Injection*, *Facade* y arquitectura de micro‑servicios.  \r\n5. **Práctica**: refactorizar un proyecto monolítico en módulos independientes y medir la mejora en pruebas y despliegues."
+  },
+  "sections_missing": [],
+  "slug": "modularity",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/software-engineering"
+  ],
+  "title": "Modularity",
+  "uid": "c_A2ZXZTXBH5",
+  "verification_marks": []
+}

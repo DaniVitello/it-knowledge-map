@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "File Systems"
+  ],
+  "area_uid": "os-linux",
+  "content_hash": "e8d7cb97b67af639d01e017b397f0702df0b6ecfa4b582b733fba4e7dcbce66e",
+  "numero": 8,
+  "related_uids": [
+    "c_OE65ZR7OR4",
+    "c_XUZJWYTELS"
+  ],
+  "sections": {
+    "como_funciona": "1. El usuario invoca una operación (p. ej., `open(\"/home/user/file.txt\")`).  \r\n2. El VFS traduce la ruta en un inodo mediante la metadata del directorio.  \r\n3. El inodo contiene punteros a los bloques que contienen los datos del archivo.  \r\n4. El kernel solicita esos bloques al controlador del dispositivo y los lee/escribe.  \r\n5. Tras la operación, el VFS actualiza timestamps y contadores en la metadata.",
+    "conexiones": "- **File Permissions** – La metadata del inodo incluye los bits de permiso que determinan quién puede leer o escribir un archivo.  \r\n- **Users & Groups** – Los campos UID y GID del inodo enlazan el archivo con usuarios y grupos del sistema, controlando el acceso.  \r\n- **Kernel VFS (Virtual File System)** – Actúa como capa de abstracción que permite al kernel manejar diferentes tipos de FS mediante una interfaz común.",
+    "detalles": "- **Básico:** Cada archivo tiene un inodo único; los directorios son archivos especiales que listan pares nombre‑inodo.  \r\n- **Intermedio:** Los sistemas modernos usan bloques de 4 KB y estructuras de árbol (extent) para reducir la fragmentación.  \r\n- **Avanzado:** Funciones como journaling (ext4, XFS) registran cambios antes de aplicarlos, permitiendo recuperación rápida tras cortes de energía; sistemas copy‑on‑write (btrfs, ZFS) gestionan versiones y snapshots.",
+    "ejemplo_minimo": "```bash\r\n# Crear un directorio y un archivo\r\nmkdir -p /tmp/mi_dir\r\ntouch /tmp/mi_dir/archivo.txt\r\n# Ver metadata del archivo\r\nls -li /tmp/mi_dir/archivo.txt\r\n```\r\nSalida típica:\r\n```\r\n1234567 -rw-r--r-- 1 usuario usuarios 0 nov  7 12:34 /tmp/mi_dir/archivo.txt\r\n```\r\nEl número `1234567` es el inodo, evidencia de la metadata que el FS mantiene.",
+    "errores_comunes": "- **Olvidar montar** el dispositivo antes de acceder a sus archivos → “No such file or directory”.  \r\n- **Confundir permisos con ownership**; aplicar `chmod` sin revisar `chown` genera accesos inesperados.  \r\n- **Ignorar el límite de bloques**; crear archivos muy grandes en un FS con bloques de 1 KB provoca fragmentación excesiva.",
+    "estado_actual": "- **Fundamentos estables:** Inodos, bloques de 4 KB, jerarquía de directorios y journaling son conceptos presentes desde ext2/ext3.  \r\n- **Práctica moderna:** Ext4 es el FS predeterminado en la mayoría de distribuciones; btrfs y XFS se usan para cargas que requieren snapshots o alta concurrencia; overlayfs permite combinar capas de FS en contenedores.",
+    "ideas_clave": "1. **Archivos y directorios** – Nodos que el usuario manipula mediante rutas legibles.  \r\n2. **Bloques** – Unidades físicas de almacenamiento donde el FS guarda el contenido de los archivos.  \r\n3. **Metadata (inodos)** – Información estructural (tamaño, timestamps, punteros a bloques, permisos).  \r\n4. **Asignación y recuperación** – Algoritmos que asignan bloques libres y reconstruyen la estructura tras fallos.",
+    "objetivo": "Utilizo los sistemas de archivos para organizar los datos que el kernel almacena en discos, SSD o memoria volátil, de modo que pueda leer, escribir y borrar información de forma estructurada. Resuelvo el problema de localizar rápidamente cualquier bloque de datos mediante nombres de archivo y directorios, evitando la gestión manual de sectores físicos. En mi día a día como ingeniero Linux senior, lo empleo al crear particiones, montar volúmenes, diagnosticar fragmentación o corrupción de metadatos y al aplicar políticas de retención. Después de comprender cómo se estructuran los bloques, los inodos y la metadata, puedo diseñar estrategias de backup, optimizar el rendimiento I/O y elegir el tipo de FS adecuado para cada carga de trabajo. Sólo cuando trabajo con dispositivos de bloque virtuales o sistemas temporales (por ejemplo, `tmpfs`) no necesito preocuparme por los detalles internos del FS.",
+    "preguntas_repaso": "1. ¿Qué información contiene un inodo y por qué es esencial para localizar los bloques de un archivo?  \r\n2. ¿Cómo afecta el tamaño de bloque a la fragmentación y al rendimiento de I/O?  \r\n3. ¿Qué diferencia hay entre permisos (`chmod`) y ownership (`chown`) en la metadata de un archivo?  \r\n4. ¿Cuál es el papel del journaling y en qué situaciones puede evitar una pérdida de datos?  \r\n5. ¿Cómo montar temporalmente un dispositivo y verificar que su FS está saludable antes de usarlo?",
+    "ruta_estudio": "1. **Prerequisitos:** manejo de la línea de comandos, conceptos de bloques y dispositivos de bloque (`lsblk`, `fdisk`).  \r\n2. **Fundamentos:** estudiar la estructura de inodos y directorios con `stat` y `debugfs`.  \r\n3. **FS modernos:** comparar ext4, XFS y btrfs mediante pruebas de rendimiento (`fio`) y análisis de logs (`dmesg`).  \r\n4. **Diagnóstico:** aprender a usar `fsck`, `tune2fs` y `btrfs check` para detectar y reparar metadata corrupta.  \r\n5. **Avanzado:** implementar snapshots y subvolúmenes con btrfs, y explorar overlayfs en entornos de contenedores."
+  },
+  "sections_missing": [],
+  "slug": "file-systems",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/operating-systems-linux"
+  ],
+  "title": "File Systems",
+  "uid": "c_TXS5EDLI4R",
+  "verification_marks": []
+}

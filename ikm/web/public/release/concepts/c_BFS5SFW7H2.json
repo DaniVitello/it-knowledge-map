@@ -1,0 +1,41 @@
+{
+  "aliases": [
+    "Human-Centered Design"
+  ],
+  "area_uid": "ux-ui",
+  "content_hash": "c1578042d34e9626ee36cbb686cbde97bb89b0aa54c80edf47d9cbdc43676ff0",
+  "numero": 1,
+  "related_uids": [],
+  "sections": {
+    "como_funciona": "1. **Recopilación de datos** (Empatizar) → entrevistas, observación de campo, análisis de tareas.  \r\n2. **Síntesis** (Definir) → creación de personas y mapas de experiencia que resaltan frustraciones y deseos.  \r\n3. **Co‑creación** (Idear) → sesiones de brainstorming donde cada idea se evalúa contra capacidades motoras, carga cognitiva y contexto de uso.  \r\n4. **Construcción de prototipos** (Prototipar) → mockups de baja fidelidad que permiten pruebas rápidas en el entorno real del usuario.  \r\n5. **Pruebas de usabilidad** (Testear) → métricas como tiempo de tarea, errores y satisfacción guían la siguiente iteración.  \r\n6. **Ciclo de mejora** (Iterar) → se repite el proceso hasta que la solución satisface los criterios humanos definidos al inicio.",
+    "conexiones": "- **User Research** – provee los datos de empatía y definición; sin investigación no hay base para HCD.  \r\n- **Design Thinking** – comparte el proceso iterativo, pero HCD enfatiza el contexto humano en cada paso.  \r\n- **Usability Testing** – es la fase de testeo donde se verifica que la solución sigue alineada con las necesidades humanas.  \r\n- **Accessibility** – amplía HCD al considerar capacidades físicas y sensoriales diversas.",
+    "detalles": "- **Básico**: aplicar la regla de “una persona, una necesidad” para evitar suposiciones. Herramientas típicas: entrevistas semiestructuradas y tarjetas de afinidad.  \r\n- **Intermedio**: combinar métodos cualitativos (diarios de uso) con cuantitativos (analytics) para validar la definición del problema. Introducir técnicas de co‑design con usuarios clave.  \r\n- **Avanzado**: integrar HCD con metodologías ágiles (sprints centrados en el usuario) y con métricas de negocio (KPIs de adopción). Utilizar pruebas A/B y análisis de accesibilidad para afinar la UI a nivel de detalle.",
+    "ejemplo_minimo": "Una app de reserva de mesas permite al usuario seleccionar la hora y el número de comensales.  \r\n- **Empatía**: descubrimos que usuarios mayores tienen dificultad para arrastrar sliders.  \r\n- **Definición**: el problema es la interacción fina en pantallas pequeñas.  \r\n- **Ideación**: se propone un selector de botones grandes en lugar del slider.  \r\n- **Prototipo**: mockup de baja fidelidad con botones.  \r\n- **Test**: usuarios mayores completan la reserva 30 % más rápido y con menos errores.  \r\n?? verificar",
+    "errores_comunes": "- **Confundir HCD con “diseño bonito”** – la estética sin validación no resuelve necesidades; evitar enfocarse solo en la apariencia.  \r\n- **Ignorar limitaciones del contexto** – diseñar para escritorio cuando el producto se usa en móvil genera fricción; validar siempre el entorno de uso.  \r\n- **Saltarse la fase de testeo** – lanzar sin pruebas reales lleva a soluciones que fallan en producción; incluir ciclos de feedback continuo.",
+    "estado_actual": "- **Fundamentos estables**: la secuencia Empatizar‑Definir‑Idear‑Prototipar‑Testear sigue siendo la base académica y práctica (sin verificar).  \r\n- **Práctica moderna**: integración de HCD con Design Systems, accesibilidad avanzada y métricas de éxito de negocio; uso de herramientas colaborativas en tiempo real para co‑design (sin verificar).",
+    "ideas_clave": "1. **Empatizar con el usuario** – descubrir qué personas hacen, piensan y sienten en su contexto real.  \r\n2. **Definir problemas reales** – traducir hallazgos en oportunidades de diseño concretas.  \r\n3. **Idear soluciones factibles** – generar alternativas que respeten limitaciones humanas (cognitivas, físicas, emocionales).  \r\n4. **Prototipar y testear rápidamente** – validar hipótesis con usuarios reales antes de escalar.  \r\n5. **Iterar basado en feedback** – refinar la UI según los resultados de pruebas y métricas de usabilidad.",
+    "objetivo": "Utilizo Human‑Centered Design (HCD) para crear productos que realmente funcionen para las personas que los usan. Resuelve el problema de diseñar a ciegas: evita funcionalidades bonitas pero inútiles al alinear decisiones de UI con necesidades, capacidades y contexto real del usuario. Aparece en cada fase del trabajo de un diseñador senior: desde la planificación de la investigación hasta la validación de los prototipos. Después de entender HCD, puedo estructurar workshops, priorizar requisitos y medir el impacto de cambios de interfaz. Sólo cuando el producto está completamente definido y no habrá más interacción humana (por ejemplo, una herramienta interna de bajo uso) puedo dejar de preocuparte por HCD.",
+    "preguntas_repaso": "1. ¿Qué problema de diseño resuelve Human‑Centered Design y cómo se manifiesta en una UI?  \r\n2. ¿Cuál es la diferencia entre “empatizar” y “definir” dentro del proceso HCD?  \r\n3. ¿Cómo influye el contexto de uso en la elección de un componente UI (por ejemplo, slider vs botón)?  \r\n4. ¿Qué riesgos aparecen si se omite la fase de testeo con usuarios reales?  \r\n5. ¿De qué manera se conecta Human‑Centered Design con Accessibility y por qué es importante?\r\n\r\n<!-- trazabilidad: run_id=run-20261105-124155-b4f0cd concept=08-ux-ui-01-human-centered-design written_at=2026-11-05T15:43:07.944262+00:00 -->",
+    "ruta_estudio": "1. **Prerequisitos**: conceptos básicos de UX (personas, journey maps) y técnicas de entrevista.  \r\n2. **Fundamento**: estudiar el proceso HCD paso a paso (libros de IDEO, Stanford d.school).  \r\n3. **Práctica**: ejecutar un mini‑proyecto aplicando cada fase, documentando resultados.  \r\n4. **Avanzado**: combinar HCD con metodologías ágiles, Design Systems y métricas de negocio; participar en workshops de co‑design."
+  },
+  "sections_missing": [],
+  "slug": "human-centered-design",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/ux-ui"
+  ],
+  "title": "Human-Centered Design",
+  "uid": "c_BFS5SFW7H2",
+  "verification_marks": [
+    {
+      "kind": "sin_verificar",
+      "section": "Estado actual"
+    },
+    {
+      "kind": "sin_verificar",
+      "section": "Estado actual"
+    }
+  ]
+}

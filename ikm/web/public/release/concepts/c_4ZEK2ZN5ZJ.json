@@ -1,0 +1,40 @@
+{
+  "aliases": [
+    "Value Proposition"
+  ],
+  "area_uid": "product-management",
+  "content_hash": "52a3a1f5823a4643293570f9741489550becb0bba6249cc04b8b384b7f0c9ef9",
+  "numero": 6,
+  "related_uids": [
+    "c_5N3OJBWASE",
+    "c_5SYU65SFA4",
+    "c_6XO5SGEQV5",
+    "c_CHBELWMYEO",
+    "c_QM2SFYU3HE",
+    "c_SWJ7STVZDR",
+    "c_UQ26LMCZYY"
+  ],
+  "sections": {
+    "como_funciona": "1. **Mapeo de usuarios**: reúno datos de entrevistas y analítica para definir el segmento objetivo.  \r\n2. **Identificación de dolor**: extraigo los problemas o deseos más críticos del segmento.  \r\n3. **Formulación del beneficio**: redacto una frase que conecte el dolor con la solución que ofrece el producto.  \r\n4. **Validación**: pruebo la propuesta con usuarios reales mediante pruebas de concepto o encuestas.  \r\n5. **Iteración**: ajusto beneficio, cliente o diferenciación según el feedback y los resultados medibles.",
+    "conexiones": "- **Product Vision**: la Value Proposition traduce la visión de largo plazo en una promesa concreta de valor para el usuario.  \r\n- **Product Strategy**: sirve como punto de partida para definir prioridades estratégicas y alinearlas con los objetivos de negocio.  \r\n- **Product Roadmap**: las funcionalidades que aparecen en el roadmap deben respaldar la propuesta de valor definida.",
+    "detalles": "- **Básico**: redactar una sola oración que combine beneficio y cliente (ej. “Ayudamos a freelancers a facturar en 5 minutos”).  \r\n- **Intermedio**: añadir la diferenciación y un KPI asociado (ej. “... reduciendo el tiempo de facturación un 40 % frente a la competencia”).  \r\n- **Avanzado**: integrar la Value Proposition en la estrategia de producto, alineándola con la Product Vision, definiendo experimentos de validación y creando un Value Proposition Canvas que sirva de guía para diseño, marketing y ventas.",
+    "ejemplo_minimo": "```json\r\n{\r\n  \"valueProposition\": \"Permite a estudiantes universitarios organizar sus notas en una sola app, ahorrando al menos 2 horas semanales de búsqueda de información.\"\r\n}\r\n```",
+    "errores_comunes": "- **Confundir característica con beneficio** – enfocarse en lo que hace el producto en lugar de lo que gana el usuario; evitarlo describiendo siempre el impacto para el cliente.  \r\n- **Segmentar demasiado** – intentar cubrir a todos los usuarios diluye la propuesta; limitarse a un segmento prioritario.  \r\n- **Olvidar la diferenciación** – presentar una propuesta genérica que no destaca frente a la competencia; incluir siempre al menos un factor único.",
+    "estado_actual": "- **Fundamentos estables**: la necesidad de articular beneficio, cliente y diferenciación sigue siendo la base de la Value Proposition en gestión de productos.  \r\n- **Práctica moderna**: se complementa con herramientas visuales como el Value Proposition Canvas y se valida mediante experimentos de producto rápidos (MVP, pruebas A/B).",
+    "ideas_clave": "1. **Beneficio claro** – describe el problema que resuelve o la mejora que genera.  \r\n2. **Cliente objetivo** – identifica el segmento de usuarios que percibe ese beneficio.  \r\n3. **Diferenciación** – explica por qué esa solución es mejor o única frente a alternativas.  \r\n4. **Resultado esperado** – vincula el beneficio a un outcome medible para el negocio.",
+    "objetivo": "Utilizo la Value Proposition para articular, de forma concreta, el beneficio que mi producto entrega a un segmento de usuarios específico. Resuelvo la incertidumbre de “¿por qué alguien compraría o usaría este producto?” y alineo a todo el equipo en torno a un objetivo de valor compartido. Aparece en la fase de descubrimiento y en la validación de hipótesis, cuando defino experimentos o priorizo funcionalidades. Después de comprenderla, puedo diseñar mensajes de marketing, fijar métricas de éxito y decidir si una característica avanza al roadmap. No necesito preocuparme por la Value Proposition cuando el producto ya está en fase de mantenimiento y el valor principal está consolidado.",
+    "preguntas_repaso": "1. ¿Cuál es la diferencia entre una característica y un beneficio dentro de una Value Proposition?  \r\n2. ¿Cómo se relaciona la Value Proposition con la definición de un KPI de producto?  \r\n3. ¿Qué pasos seguirías para validar una Value Proposition con usuarios reales?  \r\n4. ¿Por qué es importante delimitar un segmento de cliente específico al redactar la propuesta de valor?  \r\n5. ¿De qué manera la Value Proposition influye en la priorización del Product Roadmap?",
+    "ruta_estudio": "1. **Prerequisitos**: comprender conceptos de segmentación de usuarios y de problemas de cliente.  \r\n2. **Fundamentos**: leer guías sobre Value Proposition Canvas y practicar con casos reales.  \r\n3. **Intermedio**: aprender a diseñar experimentos de validación (MVP, pruebas de usabilidad).  \r\n4. **Avanzado**: integrar la Value Proposition en la planificación estratégica, vinculándola con OKRs y métricas de impacto."
+  },
+  "sections_missing": [],
+  "slug": "value-proposition",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/product-management"
+  ],
+  "title": "Value Proposition",
+  "uid": "c_4ZEK2ZN5ZJ",
+  "verification_marks": []
+}

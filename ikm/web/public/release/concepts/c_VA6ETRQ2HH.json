@@ -1,0 +1,38 @@
+{
+  "aliases": [
+    "Refactoring"
+  ],
+  "area_uid": "software-engineering",
+  "content_hash": "2b238c8fbb90e2bcc047b624cdc8fe652c68107d2c4c2a60d802da0bb47190a2",
+  "numero": 20,
+  "related_uids": [
+    "c_3UAMR6JQWV",
+    "c_53KOHLSCN5",
+    "c_IMFWIGRRUB",
+    "c_K2J2R52QLA",
+    "c_ZUGE3YIJ5I"
+  ],
+  "sections": {
+    "como_funciona": "1. **Identificar un “code smell”** (por ejemplo, una función demasiado larga).  \r\n2. **Escribir o ejecutar pruebas que garanticen el comportamiento actual**.  \r\n3. **Aplicar una técnica de refactoring** (renombrar, extraer método, mover clase, etc.).  \r\n4. **Ejecutar las pruebas**; si todas pasan, el refactoring es exitoso.  \r\n5. **Repetir el proceso** en otras áreas problemáticas, manteniendo siempre la cobertura de pruebas.",
+    "conexiones": "- **Code Quality**: el refactoring eleva la calidad del código al eliminar complejidad innecesaria y mejorar la legibilidad.  \r\n- **Clean Code**: los principios de Clean Code guían la selección de refactorings que hacen el código más claro y expresivo.  \r\n- **Design Patterns**: algunos refactorings introducen patrones (por ejemplo, *Strategy*), lo que permite soluciones más flexibles y reutilizables.",
+    "detalles": "- **Básico**: reconocer olores de código y usar refactorings simples como *Rename Variable* o *Extract Method*.  \r\n- **Intermedio**: combinar varios refactorings, introducir patrones de diseño ligeros y aplicar principios SOLID para reducir acoplamientos.  \r\n- **Avanzado**: refactorings a gran escala, como *Introduce Parameter Object* o *Replace Inheritance with Delegation*, apoyados por pruebas de integración y herramientas de análisis estático.",
+    "ejemplo_minimo": "```java\r\n// Antes del refactoring\r\nint calc(int a, int b) {\r\n    return a * b + a * b; // duplicación de cálculo\r\n}\r\n\r\n// Después del refactoring\r\nint multiply(int a, int b) {\r\n    return a * b;\r\n}\r\nint calc(int a, int b) {\r\n    return 2 * multiply(a, b);\r\n}\r\n```",
+    "errores_comunes": "- Refactorizar sin pruebas de respaldo → introducir regresiones.  \r\n- Cambiar la lógica accidentalmente → validar con pruebas unitarias después de cada paso.  \r\n- Aplicar refactorings innecesarios → perder tiempo y complicar el código sin beneficio.",
+    "estado_actual": "**Fundamentos estables**: el objetivo de refactoring es siempre preservar el comportamiento mientras se mejora la estructura interna; las técnicas básicas (renombrar, extraer método, mover clase) están consolidadas en la literatura de ingeniería de software.  \r\n**Práctica moderna**: el uso de pruebas automatizadas como guardia, la integración de herramientas de análisis estático y la adopción de patrones de diseño emergentes hacen que el refactoring sea parte de los pipelines de CI/CD y de la cultura DevOps.",
+    "ideas_clave": "1. **Mantener el comportamiento**: el código sigue pasando todas las pruebas después del cambio.  \r\n2. **Mejorar la estructura interna**: se simplifican nombres, se extraen funciones y se reducen dependencias.  \r\n3. **Facilitar la comprensión**: la nueva forma es más legible y predecible para cualquier desarrollador.  \r\n4. **Incrementar la mantenibilidad**: los futuros cambios son menos riesgosos y más rápidos.",
+    "objetivo": "Utilizo el refactoring para reorganizar el código existente sin alterar su comportamiento observable. Resuelvo la acumulación de complejidad que dificulta el mantenimiento, la extensión y la detección de errores. En mi día a día como ingeniero de software, el refactoring aparece antes de añadir nuevas funcionalidades, durante la revisión de código y cuando la calidad del código se degrada. Después de comprenderlo, puedo aplicar técnicas sistemáticas que mejoran la legibilidad y la modularidad, facilitando pruebas automatizadas y futuras evoluciones. No necesito preocuparme por refactoring cuando el código es nuevo, está bien cubierto por pruebas y su estructura ya satisface los requisitos de claridad y extensibilidad.",
+    "preguntas_repaso": "1. ¿Cuál es el objetivo principal del refactoring y cómo se verifica que se haya cumplido?  \r\n2. ¿Qué papel juegan las pruebas unitarias durante un proceso de refactoring?  \r\n3. Nombra dos refactorings básicos y describe brevemente cuándo aplicarlos.  \r\n4. ¿Cómo se relaciona el refactoring con los principios SOLID?  \r\n5. ¿Por qué es importante evitar refactorings innecesarios en un proyecto?",
+    "ruta_estudio": "1. **Prerequisitos**: dominio de un lenguaje de programación, comprensión de pruebas unitarias y conceptos básicos de arquitectura de software.  \r\n2. **Fundamentos**: estudiar la lista de “code smells”, practicar los refactorings elementales y ejecutar pruebas después de cada cambio.  \r\n3. **Intermedio**: aprender a combinar refactorings con principios SOLID y a usar herramientas de análisis estático (p. ej., SonarQube).  \r\n4. **Avanzado**: explorar refactorings a nivel de arquitectura, integrar el proceso en pipelines de CI/CD y participar en revisiones de código donde se promueva la mejora continua."
+  },
+  "sections_missing": [],
+  "slug": "refactoring",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/software-engineering"
+  ],
+  "title": "Refactoring",
+  "uid": "c_VA6ETRQ2HH",
+  "verification_marks": []
+}

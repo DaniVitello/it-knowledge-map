@@ -1,0 +1,37 @@
+{
+  "aliases": [
+    "WebSockets"
+  ],
+  "area_uid": "networking",
+  "content_hash": "4d2a16b21b53fc92cf439fa49497794e44f688ef534f6141c3259e628c5d1074",
+  "numero": 22,
+  "related_uids": [
+    "c_D2IZ67V6IU",
+    "c_IRKTW3AVGM",
+    "c_KMBVXYCQPO",
+    "c_ORX7MOBSU6"
+  ],
+  "sections": {
+    "como_funciona": "1. El cliente envía una petición HTTP GET a `ws://host:puerto/ruta` con los headers `Upgrade: websocket` y `Connection: Upgrade`.  \r\n2. El servidor verifica que soporta WebSocket, genera una clave de aceptación (`Sec-WebSocket-Accept`) y responde con `101 Switching Protocols`.  \r\n3. La capa TCP sigue activa; ya no se interpreta como HTTP sino como una secuencia de frames WebSocket.  \r\n4. Cada vez que el cliente o el servidor necesita enviar datos, empaqueta la carga en un frame y lo escribe en el socket.  \r\n5. Cuando la sesión termina, cualquiera de los extremos envía un frame de cierre (`opcode 0x8`) y cierra la conexión TCP.",
+    "conexiones": "- **HTTP** – El handshake parte de una petición HTTP y depende de los mismos códigos de estado y headers.  \r\n- **TLS** – Cuando se usa `wss://`, la capa de seguridad es idéntica a la de HTTPS, protegiendo la integridad y confidencialidad del canal.  \r\n- **Sockets** – WebSocket reutiliza una conexión TCP (socket) tradicional, pero añade su propio framing para multiplexar mensajes.",
+    "detalles": "- **Básico:** Solo se necesita una conexión TCP y los headers de handshake. No hay cifrado implícito; para seguridad se usa `wss://` (WebSocket sobre TLS).  \r\n- **Intermedio:** Manejo de fragmentación de mensajes grandes, ping/pong para mantener viva la conexión y detectar caídas.  \r\n- **Avanzado:** Integración con proxies inversos (NGINX, HAProxy) que deben reenviar correctamente el header `Upgrade`, uso de extensiones como permessage‑deflate para comprimir payloads y multiplexado de sub‑protocolos mediante el header `Sec-WebSocket-Protocol`.",
+    "ejemplo_minimo": "```bash\r\n# Cliente con websocat (CLI)\r\nwebsocat ws://echo.websocket.org\r\n# Escribo \"hola\"\r\nhola\r\n# Recibo el eco del servidor\r\nhola\r\n```\r\n*Salida:* El cliente envía “hola” y el servidor lo devuelve inmediatamente, demostrando el canal bidireccional persistente.",
+    "errores_comunes": "- **Olvidar el header `Upgrade`** → el servidor responde 400 y la conexión se cierra; verificar siempre el handshake.  \r\n- **Usar HTTP en lugar de HTTPS** en entornos donde el tráfico está cifrado; cambiar a `wss://` para atravesar firewalls que inspeccionan TLS.  \r\n- **No manejar ping/pong** → la conexión puede quedar inactiva y ser cerrada por el balanceador; implementar keep‑alive.",
+    "estado_actual": "- **Fundamentos estables:** El protocolo definido en RFC 6455 (handshake, framing, códigos de cierre) es ampliamente soportado por navegadores y servidores.  \r\n- **Práctica moderna:** El uso de `wss://` es la norma en producción; los balanceadores de carga actuales (NGINX, HAProxy, Envoy) incluyen soporte nativo para el upgrade de WebSocket y para la terminación TLS.",
+    "ideas_clave": "1. **Handshake HTTP → Upgrade** – El cliente inicia una petición HTTP con el header `Upgrade: websocket` y el servidor responde aceptando el cambio de protocolo.  \r\n2. **Canal persistente** – Una vez aceptado, la conexión TCP subyacente permanece abierta y permite el intercambio de mensajes en ambas direcciones.  \r\n3. **Framing de mensajes** – Cada mensaje se envuelve en un frame que indica tipo (texto, binario) y longitud, garantizando la integridad del flujo.  \r\n4. **Cierre ordenado** – Tanto cliente como servidor pueden enviar un frame de cierre para terminar la sesión de forma limpia.",
+    "objetivo": "Utilizo WebSockets para mantener una comunicación bidireccional persistente entre un cliente y un servidor sin necesidad de abrir nuevas conexiones HTTP para cada mensaje. Resuelvo el problema de latencia y sobrecarga que aparecen cuando una aplicación necesita intercambiar datos en tiempo real, como chats, notificaciones o actualizaciones de estado en dashboards. En mi día a día como ingeniero de redes senior, lo empleo al diagnosticar flujos de tráfico persistente, validar la correcta negociación del handshake HTTP→WebSocket y asegurar que los firewalls y balanceadores permiten el upgrade de protocolo. Después de entender WebSockets, puedo diseñar arquitecturas que combinan HTTP para la carga inicial y WebSockets para la interacción continua, o decidir cuándo usar alternativas como HTTP/2 Server‑Sent Events. No necesito preocuparme cuando la aplicación solo envía peticiones puntuales y la latencia no es crítica.",
+    "preguntas_repaso": "1. ¿Qué headers son obligatorios en la petición HTTP de inicio de un WebSocket?  \r\n2. ¿Cómo se indica que una conexión WebSocket debe cerrarse de forma ordenada?  \r\n3. ¿Por qué es necesario usar `wss://` en entornos productivos?  \r\n4. ¿Qué papel juega el proxy inverso al manejar el upgrade de protocolo?  \r\n5. ¿Cuál es la diferencia entre un frame de tipo “text” y uno de tipo “binary”?",
+    "ruta_estudio": "1. **Prerequisitos:** TCP/IP, conceptos de sockets, fundamentos de HTTP/1.1 y TLS.  \r\n2. **WebSocket básico:** Leer RFC 6455, practicar con herramientas CLI (websocat, wscat).  \r\n3. **Integración con servidores:** Configurar NGINX o HAProxy para proxy inverso con `proxy_set_header Upgrade $http_upgrade;`.  \r\n4. **Seguridad:** Implementar `wss://`, validar certificados y políticas de CORS.  \r\n5. **Optimización:** Explorar extensiones de compresión, manejo de fragmentación y multiplexado de sub‑protocolos."
+  },
+  "sections_missing": [],
+  "slug": "websockets",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/networking-internet"
+  ],
+  "title": "WebSockets",
+  "uid": "c_2SYCRXYECS",
+  "verification_marks": []
+}

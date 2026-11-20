@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "Go-to-Market"
+  ],
+  "area_uid": "product-management",
+  "content_hash": "dc137513b6dc6f0a5fd70cc3bfcbee1d6e4db2c42502059a673eadd766149765",
+  "numero": 24,
+  "related_uids": [
+    "c_ETWVMQBZXQ",
+    "c_F45REZFNEG",
+    "c_MZ7L6JLNSU"
+  ],
+  "sections": {
+    "como_funciona": "1. **Validar el Product‑Market Fit** mediante métricas de uso y feedback.  \r\n2. **Mapear segmentos** y crear perfiles de cliente (personas).  \r\n3. **Definir el posicionamiento** que resuelva el dolor principal del segmento.  \r\n4. **Seleccionar canales** alineados con los hábitos de compra del segmento.  \r\n5. **Establecer pricing** basado en valor percibido y costos.  \r\n6. **Diseñar el plan de adopción** (beta cerrado → lanzamiento público).  \r\n7. **Lanzar** siguiendo el calendario y activar los canales.  \r\n8. **Monitorear métricas** y ajustar rápidamente los componentes del GTM.",
+    "conexiones": "- **MVP**: el GTM se construye una vez que el MVP ha demostrado que resuelve un problema real.  \r\n- **Product‑Market Fit**: sin este ajuste, cualquier estrategia GTM carece de demanda suficiente.  \r\n- **Product Lifecycle**: el GTM marca la transición del lanzamiento al crecimiento y define cuándo se necesita una nueva fase de expansión o madurez.",
+    "detalles": "- **Básico**: Segmentación y posicionamiento. Se construye a partir del MVP y del feedback que confirma el Product‑Market Fit.  \r\n- **Intermedio**: Selección de canales y pricing. Involucra análisis de coste‑beneficio y pruebas A/B en precios.  \r\n- **Avanzado**: Plan de adopción y métricas de lanzamiento. Incluye estrategias de growth hacking, alianzas estratégicas y automatización de reporting en tiempo real.",
+    "ejemplo_minimo": "```python\r\n# GTM plan simplificado para una app SaaS de gestión de tareas\r\ngtm = {\r\n    \"segmento\": \"pymes de 5‑20 empleados\",\r\n    \"posicionamiento\": \"reducción de tiempo de planificación en 30%\",\r\n    \"canal\": \"venta directa vía website + partnership con reseller de software\",\r\n    \"pricing\": {\"plan_basic\": 9.99, \"plan_pro\": 24.99},\r\n    \"adopcion\": {\"beta_users\": 50, \"incentivo\": \"2 meses gratis\"},\r\n    \"metricas\": [\"CAC\", \"activation_rate\", \"churn_30d\"]\r\n}\r\nprint(gtm)\r\n```",
+    "errores_comunes": "- **Lanzar sin validar Product‑Market Fit** → bajo adoption rate.  \r\n- **Elegir canales que no usan los usuarios objetivo** → alto CAC.  \r\n- **Pricing basado solo en costos** → perciben bajo valor y abandonan.  \r\n- **Ignorar métricas de lanzamiento** → incapacidad de iterar rápidamente.",
+    "estado_actual": "- **Fundamentos estables**: la necesidad de alinear segmento, canal y pricing sigue siendo la base del GTM.  \r\n- **Práctica moderna**: uso de experimentación continua (feature flags, pruebas de precios en tiempo real) y plataformas de automatización de campañas que permiten ajustar el GTM semana a semana.",
+    "ideas_clave": "1. **Segmentación y posicionamiento** – Definir a quién va dirigido el producto y qué propuesta de valor lo diferencia.  \r\n2. **Canales de distribución** – Elegir los medios (store, web, partners) que entregarán el producto al cliente.  \r\n3. **Pricing y modelo de ingresos** – Establecer el precio y la estructura de cobro que maximice adopción y rentabilidad.  \r\n4. **Plan de adopción** – Diseñar tácticas (early‑adopters, beta, incentivos) para generar tracción inicial.  \r\n5. **Métricas de lanzamiento** – Seleccionar indicadores (CAC, activation rate, churn) que guiarán la evaluación del GTM.",
+    "objetivo": "Utilizo el Go‑to‑Market (GTM) para transformar la visión del producto en una estrategia concreta que lleve la solución al cliente correcto, en el momento adecuado y al precio justo. Resuelvo la incertidumbre de *cómo* y *dónde* lanzar, qué canales activar y cómo impulsar la adopción inicial. Aparece cada vez que el producto ha alcanzado un Product‑Market Fit suficiente para escalar y necesito coordinar equipos de desarrollo, marketing y ventas en una decisión de lanzamiento. Después de entender GTM puedo diseñar planes de lanzamiento, priorizar inversiones en canales y medir el impacto de la primera ola de usuarios. Cuando el producto sigue en fase de descubrimiento o está en pruebas internas, el GTM no es prioritario.",
+    "preguntas_repaso": "1. ¿Cómo determina el GTM si el producto ya tiene Product‑Market Fit?  \r\n2. ¿Qué criterios utilizas para seleccionar los canales de distribución en un lanzamiento?  \r\n3. ¿Por qué el pricing basado solo en costos puede ser un error en la fase de GTM?  \r\n4. ¿Qué métricas son críticas para evaluar el éxito del lanzamiento y por qué?  \r\n5. ¿Cómo se relaciona el GTM con la fase de crecimiento del Product Lifecycle?",
+    "ruta_estudio": "1. **Prerequisitos**: comprensión de MVP, métricas de producto y fundamentos de pricing.  \r\n2. **Fundamentos**: leer casos de estudio de lanzamientos exitosos y practicar segmentación con datos reales.  \r\n3. **Intermedio**: aprender herramientas de automatización de campañas y análisis de canales (Google Analytics, Mixpanel).  \r\n4. **Avanzado**: profundizar en modelos de pricing dinámico, alianzas estratégicas y frameworks de growth hacking.  \r\n5. **Especialización**: certificaciones en Go‑to‑Market Strategy o roles de Launch Manager."
+  },
+  "sections_missing": [],
+  "slug": "go-to-market",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/product-management"
+  ],
+  "title": "Go-to-Market",
+  "uid": "c_5BZPAUGDCC",
+  "verification_marks": []
+}

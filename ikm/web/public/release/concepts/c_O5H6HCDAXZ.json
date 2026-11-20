@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "Indexes"
+  ],
+  "area_uid": "database",
+  "content_hash": "ab3c3e6e49829e8f16bfcfe8fe3685c9f3cf6c17d0e0f9aecfa14bdcafd2ce65",
+  "numero": 9,
+  "related_uids": [
+    "c_JWMD5PBSD7",
+    "c_LIWOFAKHEO"
+  ],
+  "sections": {
+    "como_funciona": "1. Al crear un índice, el motor de base de datos construye una estructura B‑tree que almacena los valores de la(s) columna(s) clave y punteros a las filas correspondientes.  \r\n2. Cuando se ejecuta una consulta que incluye esas columnas en `WHERE`, `JOIN` o `ORDER BY`, el optimizador decide usar el índice y recorre el árbol para encontrar rápidamente los punteros relevantes.  \r\n3. Si el índice es compuesto, el árbol está ordenado primero por la primera columna, luego por la segunda, etc., lo que permite búsquedas que aprovechan cualquier prefijo del conjunto.  \r\n4. Durante operaciones DML (INSERT, UPDATE, DELETE), el motor actualiza el árbol para mantener su consistencia, lo que genera un costo adicional proporcional al número y tipo de índices.  \r\n5. El plan de ejecución final combina los accesos al índice con lecturas de datos (index‑only scan o bookmark lookup) para devolver el resultado.",
+    "conexiones": "- **Database Architecture** – Los índices son un componente clave del diseño físico que complementa la normalización lógica.  \r\n- **Query Optimizer** – Determina si un índice es útil para una consulta y genera el plan de ejecución correspondiente.  \r\n- **Data Modeling** – La elección de claves primarias y columnas de alta cardinalidad influye directamente en qué índices crear.",
+    "detalles": "- **Básico**: Índices simples (una sola columna) con estructura B‑tree; uso típico en claves primarias y columnas frecuentemente filtradas.  \r\n- **Intermedio**: Índices compuestos; cobertura parcial de consultas; índices únicos que impiden duplicados.  \r\n- **Avanzado**: Índices parciales (filtrados), índices de tipo hash (para igualdad exacta), índices columnstore (optimización de analítica), y estrategias de mantenimiento como `REINDEX` o `DROP INDEX CONCURRENTLY`.",
+    "ejemplo_minimo": "```sql\r\n-- Tabla de eventos\r\nCREATE TABLE eventos (\r\n    id   BIGINT PRIMARY KEY,\r\n    fecha DATE NOT NULL,\r\n    tipo VARCHAR(20) NOT NULL,\r\n    datos JSONB\r\n);\r\n\r\n-- Índice simple para búsquedas por fecha\r\nCREATE INDEX idx_eventos_fecha ON eventos(fecha);\r\n\r\n-- Consulta que usa el índice\r\nSELECT id, tipo\r\nFROM eventos\r\nWHERE fecha = '2023-10-15';\r\n```",
+    "errores_comunes": "- Indexar columnas de baja selectividad (p.ej., columnas booleanas) → evita crear índices innecesarios.  \r\n- Crear índices compuestos en orden que no coincide con los predicados de la consulta → ordena las columnas según su uso frecuente.  \r\n- Olvidar que cada índice añade sobrecarga en escrituras → evalúa el balance lectura/escritura antes de añadir índices.  \r\n- No actualizar estadísticas después de cambios masivos → ejecuta `ANALYZE` para que el optimizador reconozca el nuevo costo.",
+    "estado_actual": "- **Fundamentos estables**: B‑tree como estructura predeterminada, comportamiento de índices únicos y compuestos, y el principio de costo de mantenimiento.  \r\n- **Práctica moderna**: Uso creciente de índices parciales y de tipo columnstore en data warehouses, y de herramientas de autogestión de índices que recomiendan o eliminan índices basándose en métricas de uso.",
+    "ideas_clave": "1. **Búsqueda eficiente** – Un índice permite localizar filas sin leer toda la tabla.  \r\n2. **Estructura B‑tree** – La mayoría de los índices relacionales usan árboles balanceados que mantienen orden y permiten búsquedas logarítmicas.  \r\n3. **Índices compuestos** – Combinar varias columnas en un solo índice sirve a consultas que filtran por esas columnas en conjunto.  \r\n4. **Costo de mantenimiento** – Cada inserción, actualización o borrado debe actualizar los índices asociados.  \r\n5. **Selección de columnas** – Indexar columnas con alta selectividad y uso frecuente en cláusulas `WHERE`, `JOIN` o `ORDER BY`.",
+    "objetivo": "Utilizo índices para acelerar la búsqueda y filtrado de filas en tablas grandes, evitando escaneos completos que consumen tiempo y recursos. Resuelvo el problema de consultas lentas cuando debo localizar registros por valores de columnas clave, como fechas, IDs o combinaciones de campos. En mi día a día como ingeniero de datos, los índices aparecen al diseñar esquemas de data warehouses, al optimizar pipelines ETL y al crear dashboards interactivos que dependen de respuestas rápidas. Después de entender cómo funcionan, puedo decidir qué columnas indexar, elegir el tipo de estructura (B‑tree, hash, etc.) y balancear el costo de mantenimiento frente al beneficio de rendimiento. No necesito preocuparme por índices cuando trabajo con datasets pequeños que caben en memoria o cuando la carga de escritura es tan alta que cualquier índice degradaría el throughput.",
+    "preguntas_repaso": "1. ¿Por qué un índice basado en B‑tree permite búsquedas logarítmicas?  \r\n2. ¿Qué criterios utilizas para decidir si una columna debe ser indexada?  \r\n3. ¿Cómo afecta el orden de las columnas en un índice compuesto al plan de ejecución?  \r\n4. ¿Qué diferencia hay entre un índice simple y uno parcial?  \r\n5. ¿Cuál es el impacto de los índices en operaciones de inserción masiva y cómo lo mitigas?",
+    "ruta_estudio": "1. **Prerequisitos**: SQL básico, conceptos de tablas y claves primarias, y comprensión de cardinalidad.  \r\n2. **Fundamentos**: Crear y usar índices simples; interpretar planes de ejecución (`EXPLAIN`).  \r\n3. **Intermedio**: Índices compuestos, índices únicos y parciales; evaluar selectividad.  \r\n4. **Avanzado**: Índices columnstore, hash y estrategias de mantenimiento automático; benchmarking de rendimiento.  \r\n5. **Especialización**: Integrar índices en pipelines ETL y en modelos de datos de data lake/warehouse."
+  },
+  "sections_missing": [],
+  "slug": "indexes",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/database-data-analytics"
+  ],
+  "title": "Indexes",
+  "uid": "c_O5H6HCDAXZ",
+  "verification_marks": []
+}

@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "ORM / Data Access"
+  ],
+  "area_uid": "backend",
+  "content_hash": "78e5c23c7fd59043d785cf2a49222d6f0443e51966b101e1b6e2784694813baa",
+  "numero": 14,
+  "related_uids": [
+    "c_3IEBYDYAQB",
+    "c_6QUR6EX2HV"
+  ],
+  "sections": {
+    "como_funciona": "1. Defino una clase (p. ej. `User`) y decoradores/annotations que indican la tabla y columnas.  \r\n2. El ORM registra esa definición en su *metadata* al iniciar la aplicación.  \r\n3. Cuando llamo a `userRepository.save(user)`, el ORM traduce el objeto a una sentencia `INSERT` o `UPDATE` según su estado.  \r\n4. Para lecturas, `userRepository.find({ email })` se convierte en `SELECT * FROM users WHERE email = ?`.  \r\n5. Si el modelo cambia, ejecuto una migración; el ORM genera el DDL necesario y lo aplica contra la base de datos.  \r\n6. Durante la petición, una *session* mantiene el contexto de transacción; al final, se hace `commit` o `rollback`.",
+    "conexiones": "- **Modelado de datos** – El ORM materializa el modelo de dominio en estructuras de tabla, garantizando que los cambios en el modelo se reflejen en la base de datos.  \r\n- **Relational Databases** – El ORM actúa como puente que traduce operaciones de objetos a SQL compatible con PostgreSQL, MySQL, SQL Server, etc.  \r\n- **Caching** – Los resultados de consultas ORM pueden ser almacenados en capas de caché (Redis, in‑memory) para reducir la carga de la base de datos y acelerar respuestas de API.",
+    "detalles": "- **Básico**: Configuración del cliente (datasource), definición de entidades y uso de métodos CRUD.  \r\n- **Intermedio**: Relaciones (one‑to‑many, many‑to‑many), carga diferida (*lazy loading*), consultas compuestas y uso de transacciones explícitas.  \r\n- **Avanzado**: Optimización de consultas (eager loading, índices declarativos), manejo de *caching* de segundo nivel, extensiones de *query* con funciones nativas y generación de migraciones complejas (renombrado de columnas, data seeding).",
+    "ejemplo_minimo": "```ts\r\n// Prisma (TypeScript)\r\nimport { PrismaClient } from '@prisma/client';\r\nconst prisma = new PrismaClient();\r\n\r\nasync function crearUsuario() {\r\n  const usuario = await prisma.user.create({\r\n    data: { email: 'juan@example.com', nombre: 'Juan' },\r\n  });\r\n  console.log(usuario);\r\n}\r\ncrearUsuario();\r\n```",
+    "errores_comunes": "- **Olvidar sincronizar migraciones** → la tabla no coincide con la entidad; evitar ejecutando siempre `prisma migrate dev` o su equivalente.  \r\n- **Usar carga perezosa en bucles** → genera N+1 consultas; prefiera *eager loading* con `include`.  \r\n- **Mantener lógica de negocio dentro del ORM** → mezclar capas; mantenga la lógica en servicios y use el ORM solo para persistencia.",
+    "estado_actual": "- **Fundamentos estables**: mapeo entidad‑tabla, generación automática de CRUD y soporte de transacciones son pilares consolidados en Prisma, Hibernate, SQLAlchemy y Entity Framework.  \r\n- **Práctica moderna**: migraciones declarativas, generación de tipos TypeScript/Java a partir del esquema, y soporte de *shadow tables* para auditoría son tendencias adoptadas en los últimos años.",
+    "ideas_clave": "1. **Mapeo entidad‑tabla** – Cada clase del dominio se asocia a una tabla y sus atributos a columnas.  \r\n2. **CRUD automático** – El ORM genera consultas SQL para crear, leer, actualizar y borrar objetos sin código SQL explícito.  \r\n3. **Migraciones de esquema** – Herramientas integradas (Prisma migrate, Hibernate DDL, Alembic) sincronizan el modelo de código con la base de datos.  \r\n4. **Consultas expresivas** – Se construyen filtros y joins mediante API de lenguaje (query builders, LINQ‑like).  \r\n5. **Gestión de sesiones/transactions** – El ORM controla la apertura y cierre de conexiones y la atomicidad de operaciones.",
+    "objetivo": "Utilizo un ORM (Object‑Relational Mapping) para traducir objetos del código a filas de una base de datos relacional y viceversa, evitando escribir SQL manual en cada operación. Resuelvo el problema de la fricción entre la lógica de negocio escrita en el lenguaje del servidor (por ejemplo, TypeScript, Java o Python) y el esquema de la base de datos, garantizando consistencia y reduciendo errores de tipado. En mi día a día como ingeniero backend senior, el ORM aparece cada vez que creo, actualizo o consulto datos dentro de un servicio o API; me permite concentrarme en la lógica de negocio y en la arquitectura del servicio. Después de dominarlo, puedo diseñar repositorios reutilizables, aplicar migraciones automáticas y optimizar consultas sin abandonar la comodidad del código orientado a objetos. No es necesario usar un ORM cuando el acceso a datos es trivial, cuando se requiere un rendimiento extremo o cuando la base de datos no es relacional.",
+    "preguntas_repaso": "1. ¿Cómo traduce un ORM un objeto de dominio a una sentencia SQL de inserción?  \r\n2. ¿Qué problema resuelve la capa de migraciones y cuándo debe ejecutarse en el ciclo de desarrollo?  \r\n3. ¿Cuál es la diferencia entre carga perezosa y carga anticipada, y cómo afecta al rendimiento?  \r\n4. ¿En qué situaciones es preferible evitar un ORM y escribir SQL manual?  \r\n5. ¿Cómo se relaciona el ORM con la capa de caché en una arquitectura de microservicios?",
+    "ruta_estudio": "1. **Prerequisitos**: SQL básico, conceptos de programación orientada a objetos y manejo de paquetes en el lenguaje elegido.  \r\n2. **Fundamentos**: Instalar un ORM (Prisma, Hibernate, SQLAlchemy), crear una entidad simple y ejecutar operaciones CRUD.  \r\n3. **Intermedio**: Definir relaciones, trabajar con transacciones y aplicar migraciones; leer la documentación oficial de la herramienta.  \r\n4. **Avanzado**: Optimizar consultas, implementar carga anticipada, integrar migraciones en CI/CD y explorar extensiones de *query* específicas del motor de base de datos."
+  },
+  "sections_missing": [],
+  "slug": "orm-data-access",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/backend"
+  ],
+  "title": "ORM / Data Access",
+  "uid": "c_BHKPT7WX3D",
+  "verification_marks": []
+}

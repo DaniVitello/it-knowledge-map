@@ -1,0 +1,48 @@
+{
+  "aliases": [
+    "Internet & Web"
+  ],
+  "area_uid": "frontend",
+  "content_hash": "2ea3e92961fc4a1a68a4ff9317418694cf0e011427a9468ed8aaad7e48196ea3",
+  "numero": 1,
+  "related_uids": [
+    "c_267BQAZTKD",
+    "c_3YET5TARBZ",
+    "c_E6UZ37VTA5",
+    "c_IRKTW3AVGM",
+    "c_KMBVXYCQPO",
+    "c_MSTGJ6MKWW",
+    "c_PJZHQDBJWY",
+    "c_XNSCZALME2"
+  ],
+  "sections": {
+    "como_funciona": "1. El navegador construye una **URL** que indica el recurso deseado.  \r\n2. Se abre una conexión TCP (o UDP en casos especiales) y, si la URL usa **https**, se realiza el handshake TLS.  \r\n3. El cliente envía una **request** HTTP con método, cabeceras y, opcionalmente, cuerpo.  \r\n4. El servidor procesa la solicitud, genera una **response** con código de estado, cabeceras y cuerpo (HTML, JSON, etc.).  \r\n5. El navegador recibe la respuesta, la interpreta y actualiza la UI según corresponda.",
+    "conexiones": "- **API REST** – las peticiones HTTP son el medio por el cual los clientes frontend consumen servicios RESTful.  \r\n- **Seguridad (TLS/SSL)** – HTTPS incorpora TLS para proteger la confidencialidad e integridad de los datos intercambiados.  \r\n- **SEO** – los motores de búsqueda rastrean URLs y dependen de respuestas HTTP correctas (códigos 200, 301, 404) para indexar el contenido.",
+    "detalles": "- **Básico**: comprender los métodos HTTP (GET para lectura, POST para creación) y los códigos de estado más comunes (200, 404, 500).  \r\n- **Intermedio**: manejar cabeceras relevantes (Content-Type, Accept, Authorization) y trabajar con parámetros de consulta y cuerpo JSON.  \r\n- **Avanzado**: optimizar peticiones con caché (Cache-Control), compresión (gzip), y aplicar técnicas de seguridad como HSTS y pinning de certificados.",
+    "ejemplo_minimo": "```javascript\r\n// Solicita datos JSON a un endpoint público\r\nfetch('https://api.example.com/users')\r\n  .then(res => {\r\n    if (!res.ok) throw new Error(`Error ${res.status}`);\r\n    return res.json();\r\n  })\r\n  .then(data => console.log(data))\r\n  .catch(err => console.error(err));\r\n```",
+    "errores_comunes": "- **Olvidar usar HTTPS** en entornos de producción → vulnerabilidad a ataques de interceptación.  \r\n- **Confundir método GET con POST** → envío de datos sensibles en la URL.  \r\n- **Ignorar códigos de estado** → tratar respuestas erróneas como exitosas.  \r\n- **No validar cabeceras CORS** → bloqueos del navegador al intentar acceder a recursos externos.",
+    "estado_actual": "- **Fundamentos estables**: HTTP/1.1 y HTTPS siguen siendo la base para la mayoría de las aplicaciones web. Los métodos, códigos de estado y estructura de mensajes son bien definidos y ampliamente soportados.  \r\n- **Práctica moderna**: HTTP/2 y HTTP/3 mejoran la multiplexación y la latencia, pero su adopción depende del servidor y del navegador. El uso de fetch API y bibliotecas como Axios es la forma recomendada para realizar peticiones en código frontend actual.",
+    "ideas_clave": "1. **HTTP/HTTPS** – protocolo de texto que define cómo se estructuran las peticiones y respuestas entre cliente y servidor.  \r\n2. **URL** – identificador único que localiza un recurso en la Web y contiene esquema, host, ruta y opcionalmente parámetros.  \r\n3. **Modelo cliente‑servidor** – el navegador (cliente) inicia la comunicación y el servidor responde con el recurso solicitado.  \r\n4. **Request / Response** – la petición lleva método (GET, POST, etc.) y cabeceras; la respuesta incluye código de estado y cuerpo.  \r\n5. **Seguridad con HTTPS** – la capa TLS cifra la comunicación, garantizando confidencialidad e integridad.",
+    "objetivo": "Utilizo Internet y la Web como la capa de transporte que permite a mis aplicaciones frontend comunicarse con servidores y obtener los datos que necesita la interfaz de usuario. Resuelvo el problema de cómo solicitar recursos (HTML, JSON, imágenes, etc.) y recibir respuestas de forma estructurada. Aparecen en cada proyecto cuando implemento llamadas a APIs, cargo recursos estáticos o gestiono la navegación del usuario. Después de entender este concepto puedo diseñar flujos de datos eficientes, depurar peticiones y aplicar buenas prácticas de seguridad. No necesito preocuparme cuando la aplicación es puramente estática y no realiza ninguna interacción con un servidor.",
+    "preguntas_repaso": "1. ¿Cuál es la diferencia principal entre una petición GET y una POST?  \r\n2. ¿Qué información contiene una URL y por qué es importante para el cliente?  \r\n3. ¿Cómo garantiza HTTPS la seguridad de la comunicación?  \r\n4. ¿Qué papel juegan los códigos de estado HTTP en la lógica de una aplicación frontend?  \r\n5. ¿Por qué es relevante entender CORS al consumir una API externa?",
+    "ruta_estudio": "1. **Prerequisitos**: HTML básico, JavaScript y conceptos de red (IP, DNS).  \r\n2. **Fundamentos**: estudiar la sintaxis de URLs, los métodos y códigos de estado HTTP, y la diferencia entre HTTP y HTTPS.  \r\n3. **Práctica**: experimentar con `fetch` y herramientas como Postman para observar request/response.  \r\n4. **Avanzado**: profundizar en HTTP/2, encabezados de caché, políticas CORS y mecanismos de autenticación (Bearer tokens, cookies HttpOnly).  \r\n5. **Especialización**: integrar conocimientos en frameworks frontend (React, Vue) y optimizar la carga mediante Service Workers y HTTP/3."
+  },
+  "sections_missing": [],
+  "slug": "internet-web",
+  "sources": [
+    "https://api.example.com/users"
+  ],
+  "sources_detail": [
+    {
+      "title": null,
+      "url": "https://api.example.com/users"
+    }
+  ],
+  "tags": [
+    "concepto",
+    "it/frontend"
+  ],
+  "title": "Internet & Web",
+  "uid": "c_NYZQU435OZ",
+  "verification_marks": []
+}

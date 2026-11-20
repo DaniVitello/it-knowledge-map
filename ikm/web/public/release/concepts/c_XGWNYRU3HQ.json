@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "Advanced Data Architecture"
+  ],
+  "area_uid": "database",
+  "content_hash": "b69aa53f4ca178c95a855a7723c274397005c917ab6ce389f94359327a16c4ec",
+  "numero": 25,
+  "related_uids": [
+    "c_GFXWIQR3NM",
+    "c_VXNPWGQTHB",
+    "c_Y2M5VLS32J"
+  ],
+  "sections": {
+    "como_funciona": "1. Se crea un **Lakehouse** sobre un storage distribuido (por ejemplo, S3 o ADLS) que soporta formatos transaccionales (Delta, Iceberg).  \r\n2. Los **streams** de eventos (Kafka, Kinesis) se conectan directamente al Lakehouse mediante lecturas continuas, evitando la duplicación de datos.  \r\n3. El motor de procesamiento (Spark, Flink) ejecuta consultas tanto batch como streaming sobre los mismos archivos, aprovechando la **distribución** de cómputo.  \r\n4. Las capas de **governance** interceptan cada operación, aplicando control de acceso y validaciones de calidad antes de que los datos se materialicen.",
+    "conexiones": "- **Distributed Systems**: la arquitectura se apoya en la capacidad de los sistemas distribuidos para escalar el cómputo y el almacenamiento de forma horizontal.  \r\n- **Mensajería**: los sistemas de mensajería (Kafka, Kinesis) alimentan los pipelines de streaming que se consumen directamente en el Lakehouse.  \r\n- **Sistemas distribuidos**: la consistencia y tolerancia a fallos del Lakehouse dependen de los algoritmos de consenso y replicación propios de los sistemas distribuidos.",
+    "detalles": "- **Básico**: Configurar un storage distribuido y habilitar un formato transaccional que soporte ACID.  \r\n- **Intermedio**: Integrar un motor de streaming que lea directamente del storage y escriba en tablas Delta, manteniendo versiones.  \r\n- **Avanzado**: Implementar políticas de governance automáticas (catalogos, etiquetas, linaje) y orquestar pipelines con herramientas como Airflow o Dagster, asegurando consistencia entre batch y streaming.",
+    "ejemplo_minimo": "```python\r\n# Spark 3.x + Delta Lake: crear una tabla Lakehouse y consumir un stream de Kafka\r\nfrom pyspark.sql import SparkSession\r\n\r\nspark = SparkSession.builder \\\r\n    .appName(\"LakehouseDemo\") \\\r\n    .config(\"spark.sql.extensions\", \"io.delta.sql.DeltaSparkSessionExtension\") \\\r\n    .config(\"spark.sql.catalog.spark_catalog\", \"org.apache.spark.sql.delta.catalog.DeltaCatalog\") \\\r\n    .getOrCreate()\r\n\r\n# 1. Definir tabla Delta (Lakehouse)\r\nspark.sql(\"\"\"\r\nCREATE TABLE IF NOT EXISTS sales\r\nUSING DELTA\r\nLOCATION 's3://my-bucket/lakehouse/sales'\r\n\"\"\")\r\n\r\n# 2. Leer stream de Kafka y escribir en la tabla\r\nkafka_stream = spark.readStream \\\r\n    .format(\"kafka\") \\\r\n    .option(\"kafka.bootstrap.servers\", \"broker:9092\") \\\r\n    .option(\"subscribe\", \"sales_topic\") \\\r\n    .load()\r\n\r\nsales_df = kafka_stream.selectExpr(\"CAST(value AS STRING) as json\") \\\r\n    .selectExpr(\"json_tuple(json, 'order_id','amount','ts') as (order_id, amount, ts)\")\r\n\r\nquery = sales_df.writeStream \\\r\n    .format(\"delta\") \\\r\n    .outputMode(\"append\") \\\r\n    .option(\"checkpointLocation\", \"/tmp/checkpoints/sales\") \\\r\n    .table(\"sales\")\r\n\r\nquery.awaitTermination()\r\n```",
+    "errores_comunes": "- **Ignorar el versionado**: escribir datos sin habilitar el formato transaccional genera inconsistencias; habilitar Delta/Iceberg evita el problema.  \r\n- **Mezclar esquemas**: permitir que diferentes streams escriban con estructuras distintas rompe la consistencia; usar esquemas evolutivos controlados.  \r\n- **Olvidar la governance**: no aplicar políticas de acceso lleva a brechas de seguridad; integrar el catalogo de metadatos desde el inicio.",
+    "estado_actual": "- **Fundamentos estables**: uso de storage distribuido (S3, ADLS), formatos transaccionales (Delta, Iceberg) y motores de procesamiento (Spark, Flink).  \r\n- **Práctica moderna**: integración nativa de streaming en Lakehouse, políticas de governance automatizadas mediante Unity Catalog o Hive Metastore, y orquestación de pipelines con herramientas de CI/CD para datos.",
+    "ideas_clave": "1. **Lakehouse** – combina la flexibilidad del data lake con la consistencia y el rendimiento de un data warehouse.  \r\n2. **Streaming** – permite ingerir y procesar datos en tiempo real dentro de la misma capa de almacenamiento.  \r\n3. **Distributed systems** – garantiza escalabilidad y tolerancia a fallos mediante nodos coordinados.  \r\n4. **Governance** – define políticas de seguridad, calidad y linaje que se aplican de forma uniforme.",
+    "objetivo": "Utilizo la Advanced Data Architecture para diseñar entornos donde datos estructurados y no estructurados conviven en una única capa accesible, lo que me permite ejecutar consultas analíticas y pipelines de streaming sin mover datos entre sistemas aislados. Resuelvo la fragmentación de datos que surge al combinar almacenes de datos tradicionales, lagos de datos y flujos en tiempo real, y así garantizo que los analistas y científicos de datos obtengan información consistente y oportuna. En mi día a día como ingeniero de datos, esta arquitectura aparece al definir la capa de Lakehouse que soporta tanto batch como streaming, aplicando políticas de governance para controlar el acceso y la calidad. Después de entenderla, puedo diseñar pipelines end‑to‑end, optimizar costos de almacenamiento y habilitar auto‑servicio de datos. Cuando los requerimientos son simples (solo un data warehouse o un data lake aislado) no es necesario adoptar una arquitectura avanzada.",
+    "preguntas_repaso": "1. ¿Cómo el Lakehouse combina las ventajas de un data lake y un data warehouse?  \r\n2. ¿Qué papel juega el versionado de archivos (Delta/Iceberg) en la consistencia de datos?  \r\n3. ¿De qué manera un motor de streaming puede escribir directamente en una tabla Delta sin pasos intermedios?  \r\n4. ¿Cuál es la función de la governance en una arquitectura avanzada de datos?  \r\n5. ¿Qué riesgos aparecen al mezclar esquemas diferentes en streams que alimentan la misma tabla del Lakehouse?",
+    "ruta_estudio": "1. **Prerequisitos**: fundamentos de SQL, conceptos de data lake y data warehouse, y nociones básicas de sistemas distribuidos.  \r\n2. **Fundamentos**: aprender Delta Lake o Iceberg, practicar lecturas/escrituras batch con Spark.  \r\n3. **Streaming**: integrar Kafka con Spark Structured Streaming y escribir en tablas Delta.  \r\n4. **Governance**: explorar Unity Catalog, etiquetas de calidad y linaje de datos.  \r\n5. **Orquestación**: diseñar pipelines completos con Airflow/Dagster y aplicar CI/CD para despliegues de esquemas."
+  },
+  "sections_missing": [],
+  "slug": "advanced-data-architecture",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/database-data-analytics"
+  ],
+  "title": "Advanced Data Architecture",
+  "uid": "c_XGWNYRU3HQ",
+  "verification_marks": []
+}

@@ -1,0 +1,37 @@
+{
+  "aliases": [
+    "ETL / ELT"
+  ],
+  "area_uid": "database",
+  "content_hash": "d9084d01230e210600d4725fb33aa495850231bbe66bfa1b7374030f727c664a",
+  "numero": 16,
+  "related_uids": [
+    "c_64ZKUJ47VT",
+    "c_AW3CMP3J7S",
+    "c_NTZ6VGXWNA",
+    "c_UQ7BW2UQHQ"
+  ],
+  "sections": {
+    "como_funciona": "1. **Extracción**: el motor de pipeline abre conexiones a cada origen y copia los registros nuevos o modificados (CDC, snapshots).  \r\n2. **Transformación**: los datos pasan por funciones de filtrado, tipado, deduplicación y cálculo de métricas; estas operaciones pueden ejecutarse en un motor de procesamiento intermedio (Spark, dbt).  \r\n3. **Carga**: el resultado se escribe en tablas de destino mediante inserciones masivas o “upserts”, respetando claves primarias y particiones.  \r\n4. **Orquestación**: un scheduler (Airflow, Prefect) dispara los jobs en el orden Extract → Transform → Load y controla dependencias.  \r\n5. **Monitoreo**: logs y métricas de tiempo, filas procesadas y errores se envían a dashboards para su revisión.",
+    "conexiones": "- **Data Warehouses**: son el destino típico de la fase Load y, en ELT, también el motor donde se realizan las Transformaciones.  \r\n- **Data Pipelines**: ETL/ELT es la arquitectura subyacente que define cómo fluye la información a través de los pipelines.  \r\n- **AI Workflows**: los datos preparados por ETL/ELT alimentan modelos de machine learning, cerrando el ciclo de datos desde la captura hasta la inferencia.",
+    "detalles": "- **Básico**: ETL tradicional con scripts SQL/Python que extraen de una tabla, aplican una única transformación y cargan a otra tabla.  \r\n- **Intermedio**: uso de herramientas de transformación declarativa (dbt) que permiten versionar lógica y ejecutar pruebas de calidad entre Extract y Load.  \r\n- **Avanzado**: ELT en la nube donde la transformación se realiza directamente en el data warehouse (Snowflake, BigQuery) usando SQL nativo; integración con streaming (Kafka) y con pipelines de IA que consumen los datos recién cargados.",
+    "ejemplo_minimo": "```python\r\n# ETL mínimo con pandas y SQLite\r\nimport pandas as pd, sqlite3\r\n\r\n# Extract\r\nsrc = sqlite3.connect('oltp.db')\r\ndf = pd.read_sql('SELECT id, amount_usd FROM sales WHERE date >= \"2024-01-01\"', src)\r\n\r\n# Transform\r\ndf['amount_eur'] = df['amount_usd'] * 0.92   # conversión simple\r\ndf = df.drop_duplicates(subset='id')\r\n\r\n# Load\r\ndst = sqlite3.connect('dw.db')\r\ndf.to_sql('sales_fact', dst, if_exists='replace', index=False)\r\n```",
+    "errores_comunes": "- **Extraer datos sin control de cambios** → genera duplicados; usar CDC o marcas de tiempo.  \r\n- **Transformar en el mismo motor de origen** → sobrecarga el OLTP; mover a un entorno intermedio o usar ELT.  \r\n- **Cargar sin validar claves** → rompe la integridad referencial; aplicar constraints antes de la carga.  \r\n- **Ignorar el orden de ejecución** → produce datos parciales; definir dependencias claras en la orquestación.",
+    "estado_actual": "- **Fundamentos estables**: la separación lógica de Extract, Transform y Load sigue siendo la base para cualquier pipeline de datos.  \r\n- **Práctica moderna**: la tendencia es ELT, donde la carga ocurre primero y la transformación se ejecuta en el data warehouse usando SQL escalable; además, los pipelines se gestionan con herramientas de orquestación basadas en contenedores y se integran con flujos de trabajo de IA que consumen los datos recién cargados.",
+    "ideas_clave": "1. **Extract** – Obtener datos de fuentes heterogéneas (bases OLTP, APIs, archivos) manteniendo la integridad de la información.  \r\n2. **Transform** – Aplicar reglas de limpieza, normalización, agregación y enriquecimiento para que los datos cumplan el modelo analítico.  \r\n3. **Load** – Insertar los datos transformados en el destino (data warehouse, data lake) de forma eficiente y consistente.  \r\n4. **Orquestación** – Coordinar la secuencia y la periodicidad de los pasos para garantizar que el pipeline se ejecute sin solapamientos.  \r\n5. **Monitoreo** – Detectar fallos y desviaciones de calidad para reaccionar rápidamente.",
+    "objetivo": "Utilizo ETL/ELT para mover datos desde sistemas operacionales (OLTP) hacia entornos analíticos (OLAP) donde pueden ser consultados y visualizados. Resuelvo el problema de que los datos crudos no están listos para el análisis: los limpio, los unifico y los estructuro según el modelo del data warehouse. En mi día a día como ingeniero de datos, defino los pasos de extracción, transformación y carga, programo los pipelines y monitorizo su ejecución. Después de comprender ETL/ELT puedo diseñar flujos de datos robustos, elegir la estrategia (ETL o ELT) adecuada y optimizar el rendimiento de consultas analíticas. Cuando los datos ya están en un data lake con capacidad de procesamiento interno, no necesito preocuparme por una fase de carga separada.",
+    "preguntas_repaso": "1. ¿Qué ventaja tiene mover la fase de Transformación al data warehouse en una arquitectura ELT?  \r\n2. ¿Cómo evita el uso de CDC la generación de registros duplicados durante la extracción?  \r\n3. ¿Cuál es el rol de la orquestación en un pipeline ETL y qué herramienta popular la implementa?  \r\n4. En el ejemplo mínimo, ¿qué operación garantiza la unicidad de los registros antes de la carga?  \r\n5. ¿Por qué es importante validar claves primarias antes de la fase Load?",
+    "ruta_estudio": "1. **Prerequisitos**: SQL básico, conceptos de bases OLTP/OLAP, manejo de Python o Scala.  \r\n2. **Fundamentos**: tutoriales de ETL con scripts, ejercicios de CDC y pruebas de calidad de datos.  \r\n3. **Herramientas intermedias**: aprender dbt para transformaciones declarativas y Airflow para orquestación.  \r\n4. **Modernización**: profundizar en ELT con Snowflake/BigQuery, practicar cargas masivas y transformaciones en‑SQL.  \r\n5. **Especialización**: integrar pipelines con Kafka (streaming) y con plataformas de ML (MLflow, Vertex AI) para crear AI Workflows completos."
+  },
+  "sections_missing": [],
+  "slug": "etl-elt",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/database-data-analytics"
+  ],
+  "title": "ETL / ELT",
+  "uid": "c_EIJI27LM76",
+  "verification_marks": []
+}

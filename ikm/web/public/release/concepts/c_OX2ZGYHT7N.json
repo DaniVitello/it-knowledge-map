@@ -1,0 +1,37 @@
+{
+  "aliases": [
+    "Normalization"
+  ],
+  "area_uid": "database",
+  "content_hash": "15749dd27f6f2a91a768d80b3e4e287339b52a2e887df2ea6111add18150430e",
+  "numero": 8,
+  "related_uids": [
+    "c_3GNOH5HEH5",
+    "c_3IEBYDYAQB",
+    "c_6QUR6EX2HV",
+    "c_6WHYRNWVHH"
+  ],
+  "sections": {
+    "como_funciona": "1. **Identifico atributos repetidos** en la tabla origen y los separo en una tabla nueva.  \r\n2. **Asigno una primary key** a la tabla original y a la tabla nueva.  \r\n3. **Establezco foreign keys** que enlazan los registros mediante la clave primaria recién creada.  \r\n4. **Verifico que cada tabla cumpla 1NF** (valores atómicos) y, si es necesario, continúo a 2NF y 3NF para eliminar dependencias parciales y transitivas.  \r\n5. **Ejecutó pruebas de inserción/actualización/borrado** para confirmar que las anomalías han desaparecido.",
+    "conexiones": "- **Modelado de datos**: La normalización es una técnica esencial dentro del modelado de datos para estructurar relaciones lógicas antes de implementar el esquema físico.  \r\n- **Relational Databases**: Las bases de datos relacionales dependen de la normalización para aplicar eficientemente constraints y optimizar el motor de consultas.  \r\n- **Keys & Constraints**: Las claves primarias y foráneas son los mecanismos que hacen posible la integridad que la normalización persigue.",
+    "detalles": "- **Básico**: 1NF garantiza atomicidad; se elimina la repetición de grupos de valores.  \r\n- **Intermedio**: 2NF elimina dependencias parciales sobre claves compuestas; cada atributo no clave depende completamente de la clave primaria.  \r\n- **Avanzado**: 3NF y BCNF suprimen dependencias transitivas y garantizan que cada atributo no clave dependa solo de la clave primaria, no de otros atributos no clave.  \r\n- **Optimización práctica**: En entornos de analítica, a veces se desnormalizan tablas de referencia para reducir joins costosos, pero siempre manteniendo la lógica de integridad mediante vistas o materialized views.",
+    "ejemplo_minimo": "```sql\r\n-- Tabla original con redundancia\r\nCREATE TABLE ventas_brutas (\r\n    id INT,\r\n    cliente VARCHAR(50),\r\n    producto VARCHAR(50),\r\n    precio DECIMAL(10,2)\r\n);\r\n\r\n-- Normalización a 3NF\r\nCREATE TABLE cliente (\r\n    cliente_id INT PRIMARY KEY,\r\n    nombre VARCHAR(50)\r\n);\r\n\r\nCREATE TABLE producto (\r\n    producto_id INT PRIMARY KEY,\r\n    nombre VARCHAR(50),\r\n    precio DECIMAL(10,2)\r\n);\r\n\r\nCREATE TABLE venta (\r\n    venta_id INT PRIMARY KEY,\r\n    cliente_id INT REFERENCES cliente(cliente_id),\r\n    producto_id INT REFERENCES producto(producto_id)\r\n);\r\n```",
+    "errores_comunes": "- **Normalizar en exceso**: crear demasiadas tablas pequeñas que degradan el rendimiento de los joins; evitarlo evaluando la carga de consultas.  \r\n- **Olvidar claves foráneas**: rompe la integridad referencial; siempre definir constraints explícitos.  \r\n- **Confundir 2NF y 3NF**: aplicar 2NF sin revisar dependencias transitivas; revisar cada atributo no clave para asegurar que depende solo de la clave primaria.",
+    "estado_actual": "- **Fundamentos estables**: Las formas normales (1NF‑3NF) y el uso de primary/foreign keys siguen siendo la base aceptada para diseñar bases relacionales.  \r\n- **Práctica moderna**: En data warehouses se combina la normalización con esquemas dimensionales (estrella, copo de nieve) y se emplean herramientas de modelado automático que generan scripts de normalización y desnormalización según patrones de acceso.",
+    "ideas_clave": "1. **Eliminar redundancia**: Cada hecho se guarda en una sola tabla, evitando repeticiones que inflan el tamaño y generan inconsistencias.  \r\n2. **Prevenir anomalías**: La normalización elimina anomalías de inserción, actualización y eliminación que aparecen en esquemas no estructurados.  \r\n3. **Usar claves y restricciones**: Primary keys y foreign keys son los pilares que conectan las tablas normalizadas y garantizan la integridad referencial.  \r\n4. **Aplicar formas normales**: Se avanza progresivamente desde 1NF a 3NF (y más allá) para lograr un equilibrio entre integridad y complejidad.",
+    "objetivo": "Utilizo la normalización cuando diseño esquemas relacionales para garantizar que los datos se almacenen una sola vez y que las actualizaciones, inserciones y borrados no generen inconsistencias. Resuelvo problemas de redundancia y de anomalías de inserción, actualización y eliminación que aparecen al trabajar con grandes volúmenes de transacciones o al preparar datos para análisis. En mi día a día como ingeniero de datos, la normalización me permite crear modelos de datos claros, optimizar consultas y reducir el coste de almacenamiento. Después de dominarla, puedo pasar a diseñar modelos dimensionales para data warehouses o a aplicar técnicas de desnormalización controlada para mejorar el rendimiento de consultas analíticas. No es necesario preocuparse por ella cuando trabajo exclusivamente con fuentes de datos ya estructuradas en formato de tabla plana sin relaciones.",
+    "preguntas_repaso": "1. ¿Qué anomalía de actualización se evita al pasar de una tabla no normalizada a 3NF?  \r\n2. ¿Cómo se identifica una dependencia parcial que requiere aplicar 2NF?  \r\n3. ¿Cuál es la diferencia práctica entre una foreign key y una simple columna que almacena un ID?  \r\n4. ¿En qué situaciones puede ser conveniente desnormalizar una tabla normalizada?  \r\n5. ¿Qué forma normal elimina dependencias transitivas y por qué es importante para la integridad?",
+    "ruta_estudio": "1. **Prerequisitos**: comprender tipos de datos SQL, conceptos de primary key y foreign key, y la noción de atomicidad.  \r\n2. **Fundamentos**: estudiar 1NF, 2NF y 3NF con ejemplos de tablas reales; practicar con ejercicios de descomposición.  \r\n3. **Avanzado**: explorar BCNF y 4NF, y casos de desnormalización controlada en entornos de BI.  \r\n4. **Herramientas**: usar ER diagram tools (dbdiagram.io, MySQL Workbench) para visualizar esquemas normalizados.  \r\n5. **Aplicación**: diseñar un modelo de datos completo para un caso de negocio (por ejemplo, sistema de pedidos) y validar con pruebas de integridad."
+  },
+  "sections_missing": [],
+  "slug": "normalization",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/database-data-analytics"
+  ],
+  "title": "Normalization",
+  "uid": "c_OX2ZGYHT7N",
+  "verification_marks": []
+}

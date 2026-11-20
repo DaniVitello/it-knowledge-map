@@ -1,0 +1,39 @@
+{
+  "aliases": [
+    "LLMs"
+  ],
+  "area_uid": "ai-engineering",
+  "content_hash": "4277b387a09f1f6c5f4efea2460f859654628a3184c0adbdb1c4d8d6e379b3c8",
+  "numero": 7,
+  "related_uids": [
+    "c_APDCP5OPVF",
+    "c_BGANTCDDFJ",
+    "c_CG3CPXKFLT",
+    "c_FLXMOQWDJK",
+    "c_R42HL4B5YW",
+    "c_YFKRGNUXRH"
+  ],
+  "sections": {
+    "como_funciona": "1. Se selecciona un modelo pre‑entrenado (p. ej., GPT‑Neo).  \r\n2. En inference, el prompt del usuario se tokeniza y se inserta en la **context window**.  \r\n3. Cada paso de generación consulta la **Neural Network** (un Transformer) para obtener la distribución del siguiente token.  \r\n4. El token con mayor probabilidad se decodifica y se agrega al contexto, repitiéndose hasta alcanzar la longitud deseada o un token de parada.",
+    "conexiones": "- **Neural Networks**: los LLMs son una clase de redes neuronales profundas cuya arquitectura principal es el Transformer.  \r\n- **Tokenization**: el proceso de dividir texto en sub‑palabras es esencial para que el modelo pueda mapear palabras a vectores de entrada.  \r\n- **AI Infrastructure**: despliegue de LLMs requiere orquestación de GPUs/TPUs, balanceo de carga y monitorización de latencia.",
+    "detalles": "- **Básico**: entender que el pretraining provee conocimientos generales y que la inference depende de la probabilidad de tokens.  \r\n- **Intermedio**: gestionar la longitud de la **context window** para evitar truncamiento de información relevante; usar técnicas de *prompt engineering* para guiar las **capabilities**.  \r\n- **Avanzado**: combinar varios LLMs, aplicar *retrieval‑augmented generation* (RAG) y ajustar (fine‑tune) el modelo con datos del dominio para mejorar precisión y reducir sesgos.",
+    "ejemplo_minimo": "```python\r\nfrom transformers import pipeline\r\n\r\n# Carga un modelo pequeño y listo para inference\r\ngenerator = pipeline(\"text-generation\", model=\"EleutherAI/gpt-neo-125M\")\r\n\r\nprompt = \"¿Cuál es la diferencia entre IA supervisada y no supervisada?\"\r\nresult = generator(prompt, max_new_tokens=50, do_sample=False)\r\n\r\nprint(result[0][\"generated_text\"])\r\n```",
+    "errores_comunes": "- **Olvidar la longitud de la context window** → el modelo pierde información importante; evitar truncando prompts críticos.  \r\n- **Usar temperatura alta sin control** → respuestas incoherentes; fijar `temperature` bajo para tareas determinísticas.  \r\n- **No validar salida** → generar contenido no fiable; implementar filtros y métricas de calidad.",
+    "estado_actual": "- **Fundamentos estables**: pretraining con grandes corpora, arquitectura Transformer y tokenización sub‑palabra siguen siendo la base.  \r\n- **Práctica moderna**: uso de modelos de 6‑30 B parámetros en producción, integración con AI Infrastructure (servicios de inferencia escalables) y pipelines de fine‑tuning adaptados a dominios específicos.",
+    "ideas_clave": "1. **Pretraining** – el modelo aprende patrones de lenguaje a partir de enormes corpora sin supervisión directa.  \r\n2. **Inference** – durante la ejecución, el modelo recibe tokens y devuelve probabilidades para el siguiente token.  \r\n3. **Context windows** – el modelo solo “ve” una ventana limitada de tokens; su tamaño determina cuánta información previa puede usar.  \r\n4. **Capabilities** – la combinación de arquitectura y datos determina tareas como completado, traducción o razonamiento.",
+    "objetivo": "Utilizo LLMs (Large Language Models) para dotar a mis productos de IA de capacidad de comprensión y generación de texto natural a gran escala. Resuelvo el problema de traducir consultas de usuarios, generar respuestas coherentes o sintetizar información sin escribir reglas específicas para cada caso. Aparecen en la capa de servicio de cualquier aplicación que requiera interacción en lenguaje, como chatbots, asistentes de código o sistemas de resumen automático. Después de entender cómo entrenan, inferencian y manejan contextos, puedo diseñar pipelines que integren prompts, ajustar el modelo a dominios concretos y monitorizar su fiabilidad. No necesito preocuparme por LLMs cuando la tarea es estrictamente numérica o cuando la latencia requerida es tan baja que un modelo pequeño o reglas heurísticas son más apropiados.",
+    "preguntas_repaso": "1. ¿Qué papel juega el pretraining en la capacidad de un LLM para responder preguntas fuera de dominio?  \r\n2. ¿Cómo afecta el tamaño de la context window al rendimiento de un modelo en una conversación larga?  \r\n3. ¿Por qué la tokenización es un paso crítico antes de la inference?  \r\n4. ¿Qué diferencia hay entre ajustar (fine‑tune) un LLM y simplemente diseñar un mejor prompt?  \r\n5. ¿En qué situaciones preferirías usar un modelo pequeño en lugar de un LLM de varios miles de millones de parámetros?",
+    "ruta_estudio": "1. **Prerequisitos**: Python, fundamentos de Machine Learning, conceptos de redes neuronales y embeddings.  \r\n2. **Fundamentos**: estudiar la arquitectura Transformer y la tokenización BPE.  \r\n3. **Práctica**: experimentar con pipelines de HuggingFace, ajustar prompts y medir uso de la context window.  \r\n4. **Especialización**: aprender técnicas de fine‑tuning, RAG y despliegue en plataformas de AI Infrastructure (Kubernetes, SageMaker, etc.)."
+  },
+  "sections_missing": [],
+  "slug": "llms",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/ai-engineering"
+  ],
+  "title": "LLMs",
+  "uid": "c_AG5JLRF7W4",
+  "verification_marks": []
+}

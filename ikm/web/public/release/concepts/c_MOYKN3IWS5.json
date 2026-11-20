@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "Kernel"
+  ],
+  "area_uid": "os-linux",
+  "content_hash": "7ed9d37f615f215b933c3b52df4705a1d7bba69f0c08bcd28528b965363a5194",
+  "numero": 2,
+  "related_uids": [
+    "c_J7K4IRROGC",
+    "c_PPPZUFR2JG"
+  ],
+  "sections": {
+    "como_funciona": "1. Al arrancar, el bootloader carga la imagen del kernel en memoria y lo transfiere al modo kernel.  \r\n2. El kernel inicializa subsistemas críticos (scheduler, memory manager, drivers).  \r\n3. Cada proceso que necesita interactuar con el hardware ejecuta una *system call* (p. ej. `open`, `read`).  \r\n4. El kernel valida la petición, traduce la llamada a una operación concreta sobre el hardware o un recurso interno y devuelve el resultado al proceso.  \r\n5. Si se requiere funcionalidad adicional, el kernel carga un módulo mediante `insmod`/`modprobe`, que registra nuevas system calls o controladores.",
+    "conexiones": "- **System Calls**: Son la interfaz que permite a los procesos solicitar servicios al kernel, convirtiendo llamadas de alto nivel en acciones de bajo nivel.  \r\n- **Operating System**: El kernel constituye el corazón del sistema operativo; sin él, no existiría la capa que coordina hardware y software.  \r\n- **Filesystem**: El kernel implementa VFS (Virtual File System), que abstrae diferentes sistemas de archivos y permite que los procesos accedan a datos de forma uniforme.",
+    "detalles": "- **Básico**: El ciclo de vida de una system call (entrada, validación, ejecución, salida) y la tabla de interrupciones que enlaza eventos de hardware con manejadores del kernel.  \r\n- **Intermedio**: Planificación de procesos (CFS en Linux), gestión de memoria (paging, cgroups) y virtualización de dispositivos mediante `udev`.  \r\n- **Avanzado**: Compilación de un kernel personalizado, uso de `kprobes` para instrumentar código en vivo, y desarrollo de módulos que interactúan con subsistemas como netfilter o BPF.",
+    "ejemplo_minimo": "```bash\r\n# Mostrar la versión del kernel y su configuración básica\r\n$ uname -r\r\n5.15.0-78-generic\r\n\r\n# Ver el registro de arranque del kernel\r\n$ dmesg | head -n 5\r\n[    0.000000] Linux version 5.15.0-78-generic (buildd@lcy01-amd64-025) (gcc (Ubuntu 11.2.0-19ubuntu1) 11.2.0, GNU ld (GNU Binutils for Ubuntu) 2.38) #86-Ubuntu SMP Fri Sep 15 14:30:00 UTC 2023\r\n[    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-5.15.0-78-generic root=UUID=... ro quiet splash\r\n[    0.000000] KERNEL supported cpus:\r\n[    0.000000]   Intel GenuineIntel\r\n[    0.000000]   AMD AuthenticAMD\r\n```\r\n*Salida*: `uname -r` muestra la versión exacta del kernel que está gestionando el hardware; `dmesg` permite inspeccionar los mensajes que el kernel emitió durante el arranque, útil para diagnosticar fallos de drivers o de inicialización.",
+    "errores_comunes": "- **Modificar parámetros del kernel sin validar** → puede provocar inestabilidad; usar `sysctl -a` para inspeccionar valores antes de cambiarlos.  \r\n- **Cargar módulos incompatibles** → genera “invalid module format”; compilar el módulo contra la misma versión de cabecera del kernel.  \r\n- **Confundir system call con comando de shell** → los comandos son implementaciones en espacio de usuario que usan system calls; no se pueden ejecutar directamente en el kernel.",
+    "estado_actual": "- **Fundamentos estables**: La arquitectura monolítica con módulos, la tabla de system calls y el scheduler CFS son conceptos maduros y ampliamente documentados.  \r\n- **Práctica moderna**: Uso de eBPF para extender el kernel sin recompilar, integración de cgroups v2 para aislamiento de recursos, y despliegue de kernels “live‑patched” mediante Ksplice o KernelCare para corregir vulnerabilidades sin reinicio.",
+    "ideas_clave": "1. **Núcleo central** – El kernel es el único código que se ejecuta en modo privilegiado y controla todo el hardware.  \r\n2. **Abstracción de recursos** – Presenta CPU, memoria y dispositivos como objetos manejables mediante APIs estandarizadas.  \r\n3. **Mecanismo de comunicación** – System calls son la puerta de entrada que permite a los procesos solicitar servicios al kernel.  \r\n4. **Gestión de módulos** – El kernel puede cargar y descargar código (módulos) en tiempo de ejecución para ampliar su funcionalidad.  \r\n5. **Política vs. mecanismo** – El kernel implementa políticas de planificación y seguridad que los administradores pueden parametrizar.",
+    "objetivo": "Utilizo el kernel como la capa que traduce las peticiones de los programas en acciones sobre el hardware y gestiona recursos como CPU, memoria y dispositivos. Resuelvo problemas de aislamiento, planificación y acceso seguro a los recursos del sistema, que aparecen cada vez que configuro servicios, depuro cuelgues o ajusto el rendimiento de un servidor Linux. Después de comprender cómo funciona el kernel, puedo interpretar logs del núcleo, ajustar parámetros de `sysctl`, compilar módulos a medida o incluso personalizar una distribución mínima. Cuando sólo ejecuto aplicaciones de usuario y el hardware funciona sin incidencias, no es necesario profundizar en el kernel.",
+    "preguntas_repaso": "1. ¿Qué papel juega el kernel al ejecutar una system call como `open`?  \r\n2. ¿Cómo puedes inspeccionar los mensajes que el kernel genera durante el arranque?  \r\n3. ¿Cuál es la diferencia entre compilar un kernel completo y cargar un módulo dinámico?  \r\n4. ¿Qué riesgos implica cambiar un parámetro de `sysctl` sin validar su impacto?  \r\n5. ¿De qué manera eBPF permite extender la funcionalidad del kernel sin recompilarlo?",
+    "ruta_estudio": "1. **Prerequisitos**: Conocimientos básicos de Linux (comandos, permisos) y de arquitectura de procesos.  \r\n2. **Fundamentos**: Lectura de “Linux Kernel Development” (capítulos de arquitectura y system calls) y práctica con `strace` para observar llamadas del kernel.  \r\n3. **Intermedio**: Compilar un kernel genérico, usar `make menuconfig`, y cargar/unload módulos con `modprobe`.  \r\n4. **Avanzado**: Explorar eBPF con `bcc`/`bpftrace`, experimentar con cgroups v2 y probar live‑patching.  \r\n5. **Especialización**: Desarrollo de drivers de dispositivo o contribución a subsistemas como networking o storage."
+  },
+  "sections_missing": [],
+  "slug": "kernel",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/operating-systems-linux"
+  ],
+  "title": "Kernel",
+  "uid": "c_MOYKN3IWS5",
+  "verification_marks": []
+}

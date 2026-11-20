@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "Data Quality"
+  ],
+  "area_uid": "database",
+  "content_hash": "5b0319040df378190e2d181887171854283bbbce63c528713a6d7e40fea19211",
+  "numero": 18,
+  "related_uids": [
+    "c_DMG36WFAUY",
+    "c_OAPY46OJKC"
+  ],
+  "sections": {
+    "como_funciona": "1. **Perfilado**: se escanean tablas o streams para cuantificar ausentes, duplicados e inconsistencias.  \r\n2. **Definición de reglas**: se establecen criterios de validación (p. ej., `NOT NULL`, rangos aceptables, claves únicas).  \r\n3. **Detección**: mediante consultas o herramientas de profiling se marcan los registros que violan las reglas.  \r\n4. **Corrección**: se aplican estrategias – imputación, eliminación de duplicados o normalización – según la gravedad y el coste.  \r\n5. **Monitoreo continuo**: se programan métricas de calidad (porcentaje de nulos, tasa de duplicados) en dashboards de Data Ops.",
+    "conexiones": "- **Data Cleaning**: la calidad de datos define qué registros deben limpiarse y cómo priorizar esas tareas.  \r\n- **Data Governance**: establece políticas y roles que garantizan la aplicación consistente de reglas de calidad.  \r\n- **Machine Learning**: modelos entrenados con datos de alta calidad reducen sesgos y mejoran la precisión predictiva.",
+    "detalles": "- **Básico**: usar `COUNT(*)`, `COUNT(column)` y `DISTINCT` para cuantificar nulos y duplicados.  \r\n- **Intermedio**: crear constraints (`UNIQUE`, `CHECK`) y vistas de calidad que expongan filas problemáticas.  \r\n- **Avanzado**: integrar pruebas de calidad en CI/CD con frameworks como Great Expectations o Deequ, y automatizar alertas cuando las métricas superen umbrales definidos.",
+    "ejemplo_minimo": "```sql\r\n-- Detectar filas con valores nulos críticos y duplicados en la tabla ventas\r\nWITH nulled AS (\r\n    SELECT *\r\n    FROM ventas\r\n    WHERE cliente_id IS NULL OR monto IS NULL\r\n),\r\ndup AS (\r\n    SELECT cliente_id, fecha, monto, COUNT(*) AS cnt\r\n    FROM ventas\r\n    GROUP BY cliente_id, fecha, monto\r\n    HAVING COUNT(*) > 1\r\n)\r\nSELECT 'Nulos' AS tipo, * FROM nulled\r\nUNION ALL\r\nSELECT 'Duplicado' AS tipo, cliente_id, fecha, monto FROM dup;\r\n```",
+    "errores_comunes": "- **Eliminar todos los nulos sin analizar** – puede perder información valiosa; evaluar imputación primero.  \r\n- **Usar `DISTINCT` como solución definitiva a duplicados** – solo oculta el problema sin corregir la fuente.  \r\n- **Definir reglas de validación demasiado estrictas** – genera falsos positivos y retrasa pipelines; calibrar umbrales con datos reales.",
+    "estado_actual": "- **Fundamentos estables**: perfilado con `COUNT`, constraints de integridad y procesos manuales de limpieza siguen siendo la base.  \r\n- **Práctica moderna**: adopción de frameworks de pruebas de calidad de datos (Great Expectations, Deequ), integración con pipelines de orquestación (Airflow, Dagster) y métricas de calidad en observabilidad (DataDog, Monte Carlo).",
+    "ideas_clave": "1. **Missing data** – Identificar y decidir cómo tratar valores nulos o ausentes según el contexto del negocio.  \r\n2. **Duplicados** – Detectar filas repetidas que inflan métricas y distorsionan agregaciones.  \r\n3. **Inconsistencias** – Uniformizar formatos, unidades y codificaciones para evitar comparaciones inválidas.  \r\n4. **Validación** – Aplicar reglas de integridad (unicidad, rangos, referencias) que garantizan que los datos cumplan con los requisitos del dominio.",
+    "objetivo": "Utilizo la **Data Quality** para asegurar que los datos que consumo o entrego en mis pipelines sean fiables y útiles. Resuelvo problemas de valores ausentes, filas duplicadas, inconsistencias de formato y violaciones de reglas de negocio que, de otro modo, producirían análisis erróneos o decisiones basadas en información corrupta. En mi día a día como ingeniero de datos y analista senior, la calidad de los datos es la base para modelar esquemas, escribir consultas eficientes y generar dashboards confiables. Cuando entiendo cómo medir y mejorar la calidad, puedo diseñar procesos de ingestión automáticos, definir métricas de calidad y priorizar esfuerzos de limpieza. No necesito preocuparme de la Data Quality cuando trabajo con datos de prueba internos que no impactan decisiones productivas.",
+    "preguntas_repaso": "1. ¿Qué criterios utilizo para decidir si imputo o elimino valores nulos?  \r\n2. ¿Cómo detecto duplicados que aparecen en distintas columnas de clave compuesta?  \r\n3. ¿Cuál es la diferencia entre una regla de `CHECK` y una política de Data Governance?  \r\n4. ¿Qué ventaja aporta un framework como Great Expectations frente a consultas SQL manuales?  \r\n5. ¿En qué situaciones la calidad de datos deja de ser una prioridad para un proyecto?",
+    "ruta_estudio": "1. **Prerequisitos**: SQL básico, conceptos de modelado relacional y manejo de tipos de datos.  \r\n2. **Fundamentos**: aprender a perfilar datos (profiling) y a crear constraints en bases relacionales.  \r\n3. **Herramientas**: explorar Great Expectations o Deequ para pruebas automatizadas.  \r\n4. **Operacionalización**: integrar métricas de calidad en pipelines de Airflow y configurar alertas.  \r\n5. **Especialización**: profundizar en técnicas de imputación avanzada y en gobernanza de datos con herramientas como Collibra."
+  },
+  "sections_missing": [],
+  "slug": "data-quality",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/database-data-analytics"
+  ],
+  "title": "Data Quality",
+  "uid": "c_36OGTOCIKG",
+  "verification_marks": []
+}

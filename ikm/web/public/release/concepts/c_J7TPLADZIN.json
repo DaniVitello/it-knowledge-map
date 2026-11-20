@@ -1,0 +1,50 @@
+{
+  "aliases": [
+    "AI / ML Fundamentals"
+  ],
+  "area_uid": "ai-engineering",
+  "content_hash": "cdcd08a19e45591a1da6f567f5f8eabcf27f25b926640de3d97c8b9e6c2f35c3",
+  "numero": 1,
+  "related_uids": [
+    "c_27KJZ2SSUT",
+    "c_CG3CPXKFLT",
+    "c_LAYNEBDIRF",
+    "c_SNCAJUJCGH"
+  ],
+  "sections": {
+    "como_funciona": "1. **Recolección y pre‑procesamiento** de datos → garantiza que el modelo reciba entradas consistentes (esqueleto 1).  \r\n2. **Selección del modelo** → se elige la arquitectura que mejor captura la relación señal‑ruido (esqueleto 2).  \r\n3. **Configuración del entrenamiento** → se define el optimizador, la tasa de aprendizaje y el número de epochs (esqueleto 3).  \r\n4. **Ejecutar entrenamiento** → el algoritmo itera sobre los datos, minimizando la función de pérdida.  \r\n5. **Validación** → se calculan métricas sobre un set de hold‑out para decidir si el modelo está listo (esqueleto 5).  \r\n6. **Despliegue para inferencia** → el modelo se empaqueta (Docker, ONNX, etc.) y se expone vía API (esqueleto 4).  \r\n7. **Monitorización** → se rastrean drift y latencia; si degradan, se vuelve al paso 1.",
+    "conexiones": "- **Statistics** – provee las métricas y pruebas de hipótesis que validan la calidad del modelo.  \r\n- **Linear Algebra & Probability** – forman el lenguaje matemático de los pesos y la incertidumbre en predicciones.  \r\n- **Machine Learning Fundamentals** – amplía los conceptos de entrenamiento/inferencia a algoritmos específicos.  \r\n- **Neural Networks** – es una sub‑categoría de modelos que requiere los mismos pasos básicos pero con arquitecturas más complejas.",
+    "detalles": "- **Básico**: entender que los datos deben estar etiquetados y normalizados; usar algoritmos como *logistic regression* o *random forest* para pruebas rápidas.  \r\n- **Intermedio**: introducir regularización, validación cruzada y pipelines de *feature engineering*; pasar a redes neuronales simples (MLP) cuando la no linealidad es alta.  \r\n- **Avanzado**: entrenar modelos grandes con *distributed training*, aplicar técnicas de *transfer learning* y *fine‑tuning*; gestionar versiones de modelo y reproducibilidad con MLflow o DVC. Cada nivel profundiza sobre los puntos del esqueleto, añadiendo capas de complejidad y control.",
+    "ejemplo_minimo": "```python\r\n# Entrenamiento rápido de un modelo lineal para clasificación binaria\r\nfrom sklearn.datasets import make_classification\r\nfrom sklearn.linear_model import LogisticRegression\r\nfrom sklearn.model_selection import train_test_split\r\nfrom sklearn.metrics import accuracy_score\r\n\r\nX, y = make_classification(n_samples=200, n_features=5, random_state=42)\r\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1)\r\n\r\nmodel = LogisticRegression()\r\nmodel.fit(X_train, y_train)                     # entrenamiento\r\npred = model.predict(X_test)                    # inferencia\r\nprint(\"Acc:\", accuracy_score(y_test, pred))    # evaluación\r\n```\r\n?? verificar (el código es sintácticamente correcto, pero la validez de la métrica en un caso real depende del dominio).",
+    "errores_comunes": "- **Datos sucios o desbalanceados** → produce sesgo; usar *SMOTE* o re‑muestreo.  \r\n- **Sobre‑ajuste por demasiadas epochs** → monitorizar la pérdida de validación y aplicar early stopping.  \r\n- **Olvidar escalar features** → afecta a algoritmos basados en distancia; aplicar *StandardScaler*.  \r\n- **Desconectar evaluación del negocio** → elegir métricas alineadas con el objetivo del producto (p. ej., recall para detección de fraude).",
+    "estado_actual": "- **Fundamentos estables**: la teoría de optimización (gradiente descendente), la estadística descriptiva y la probabilidad siguen siendo la base (sin verificar).  \r\n- **Práctica moderna**: uso de *transformers* y *foundation models* para tareas de NLP/vision; pipelines automatizados con *Kubeflow* y *MLflow* para CI/CD de modelos (sin verificar).  \r\n- **Tendencias**: creciente adopción de *prompt engineering* y *retrieval‑augmented generation* que reducen la necesidad de entrenamiento extensivo (sin verificar).",
+    "ideas_clave": "1. **Datos** – la calidad y el formato de los datos determinan la factibilidad del entrenamiento.  \r\n2. **Modelo** – elección entre modelo clásico (regresión, árbol) o deep learning según complejidad del problema.  \r\n3. **Entrenamiento** – proceso de ajustar pesos/hyper‑parámetros usando un algoritmo de optimización.  \r\n4. **Inferencia** – ejecución del modelo entrenado para generar predicciones en tiempo real o batch.  \r\n5. **Evaluación** – métricas (accuracy, F1, ROC‑AUC) que guían decisiones de despliegue.",
+    "objetivo": "Utilizo los fundamentos de AI/ML para decidir **qué tipo de modelo** aplicar, **cómo estructurar los datos** y **cuándo es viable entrenar** versus usar un modelo pre‑entrenado. Resuelvo problemas de **precisión, escalabilidad y coste** al diseñar pipelines de IA que pasan de datos crudos a inferencias en producción. Aparece en cada fase del ciclo de vida de un producto de IA: recolección de datos, entrenamiento, validación, despliegue y monitorización. Después de dominarlo, puedo **optimizar recursos**, **diagnosticar fallos de rendimiento** y **planificar mejoras iterativas**. No es necesario profundizar cuando se usa un servicio “black‑box” con garantía de SLA y sin requerimientos de personalización.",
+    "preguntas_repaso": "1. ¿Cómo influye la calidad de los datos en la decisión de entrenar un modelo propio versus usar uno pre‑entrenado?  \r\n2. ¿Qué métricas elegirías para validar un modelo de detección de anomalías y por qué?  \r\n3. ¿Cuál es la diferencia práctica entre *early stopping* y regularización L2?  \r\n4. ¿En qué situaciones un pipeline de MLOps es indispensable para la inferencia en producción?  \r\n5. ¿Cómo se relacionan los conceptos de *probabilidad* y *loss function* en el entrenamiento de un modelo?\r\n\r\n<!-- trazabilidad: run_id=run-20261105-123949-c78d1a concept=07-ai-engineering-01-ai-ml-fundamentals written_at=2026-11-05T15:40:31.327551+00:00 -->",
+    "ruta_estudio": "1. **Prerequisitos**: álgebra lineal (vectores, matrices), probabilidad básica y manejo de datos con pandas.  \r\n2. **Fundamentos**: cursos introductorios de ML (scikit‑learn) que cubran regresión y clasificación.  \r\n3. **Especialización**: profundizar en deep learning (PyTorch/TensorFlow) y técnicas de regularización.  \r\n4. **Operacionalización**: aprender sobre Docker, Kubernetes y herramientas de MLOps (MLflow, DVC).  \r\n5. **Avanzado**: explorar *foundation models*, *prompt engineering* y estrategias de *continual learning*."
+  },
+  "sections_missing": [],
+  "slug": "ai-ml-fundamentals",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/ai-engineering"
+  ],
+  "title": "AI / ML Fundamentals",
+  "uid": "c_J7TPLADZIN",
+  "verification_marks": [
+    {
+      "kind": "sin_verificar",
+      "section": "Estado actual"
+    },
+    {
+      "kind": "sin_verificar",
+      "section": "Estado actual"
+    },
+    {
+      "kind": "sin_verificar",
+      "section": "Estado actual"
+    }
+  ]
+}

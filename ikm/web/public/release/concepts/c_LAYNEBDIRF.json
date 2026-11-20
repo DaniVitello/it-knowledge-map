@@ -1,0 +1,37 @@
+{
+  "aliases": [
+    "Machine Learning Fundamentals"
+  ],
+  "area_uid": "ai-engineering",
+  "content_hash": "486876c639ae3bdda5ec761f0272d671a25e78afc7ff545f058dc077eac43ebc",
+  "numero": 4,
+  "related_uids": [
+    "c_27KJZ2SSUT",
+    "c_CG3CPXKFLT",
+    "c_J7TPLADZIN",
+    "c_SNCAJUJCGH"
+  ],
+  "sections": {
+    "como_funciona": "1. **Recolección y etiquetado**: se obtienen datos y se asignan labels.  \r\n2. **Ingeniería de features**: se transforman los datos crudos en vectores numéricos.  \r\n3. **División del dataset**: se separa en *training set* y *validation set*.  \r\n4. **Entrenamiento**: el algoritmo minimiza una función de pérdida sobre el training set, ajustando sus pesos.  \r\n5. **Validación**: se calcula la métrica de desempeño (p. ej. accuracy, RMSE) sobre el validation set; si el desempeño difiere mucho del entrenamiento, se detecta sobre‑ajuste.  \r\n6. **Iteración**: se ajustan features, hiperparámetros o el algoritmo hasta lograr una buena generalización.",
+    "conexiones": "- **Statistics**: provee la teoría de estimación y pruebas que sustentan la validación y la medición de generalización.  \r\n- **Linear Algebra & Probability**: forman el lenguaje matemático para representar features y modelar incertidumbre en los algoritmos.  \r\n- **Neural Networks**: extienden los principios de training y validation a arquitecturas profundas, manteniendo la necesidad de buenas features y datos etiquetados.",
+    "detalles": "- **Básico**: selección de features simples (escala, codificación one‑hot) y uso de algoritmos lineales (regresión logística, SVM).  \r\n- **Intermedio**: normalización, manejo de desbalance de clases, validación cruzada y búsqueda de hiperparámetros (grid/random search).  \r\n- **Avanzado**: pipelines de preprocesamiento, técnicas de regularización (L1/L2, dropout), ensembles y aprendizaje profundo que extienden los mismos principios de training/validation a redes neuronales.",
+    "ejemplo_minimo": "```python\r\nimport numpy as np\r\nfrom sklearn.linear_model import LogisticRegression\r\nfrom sklearn.model_selection import train_test_split\r\nfrom sklearn.metrics import accuracy_score\r\n\r\n# 1. Datos sintéticos (features) y etiquetas (labels)\r\nX = np.array([[0, 1], [1, 1], [2, 0], [3, 1]])\r\ny = np.array([0, 0, 1, 1])\r\n\r\n# 2. División entrenamiento / validación\r\nX_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.5, random_state=42)\r\n\r\n# 3. Entrenamiento\r\nmodel = LogisticRegression()\r\nmodel.fit(X_train, y_train)\r\n\r\n# 4. Validación\r\npred = model.predict(X_val)\r\nprint(\"Accuracy:\", accuracy_score(y_val, pred))\r\n```",
+    "errores_comunes": "- **Usar features con alta colinealidad** → genera inestabilidad; aplicar reducción de dimensionalidad o regularización.  \r\n- **Entrenar y validar con el mismo conjunto** → sobre‑ajuste invisible; siempre separar datos.  \r\n- **Ignorar el escalado de features** → algoritmos sensibles a la magnitud fallan; normalizar antes de entrenar.",
+    "estado_actual": "Los fundamentos (features, labels, training, validation, generalization) siguen siendo la base estable de cualquier proyecto de IA. En la práctica moderna se complementan con herramientas de automatización de pipelines (por ejemplo, *MLflow* o *Kubeflow*) y con técnicas de regularización y validación cruzada avanzadas que mejoran la robustez del modelo.",
+    "ideas_clave": "1. **Features** – Representaciones numéricas que capturan la información relevante del dominio.  \r\n2. **Labels** – Valores objetivo que el modelo debe aprender a predecir.  \r\n3. **Training** – Proceso de ajustar los parámetros del modelo usando un conjunto de pares feature‑label.  \r\n4. **Validation** – Evaluación del modelo en datos no vistos para estimar su capacidad de generalizar.  \r\n5. **Generalization** – Habilidad del modelo para mantener buen desempeño en datos reales fuera del conjunto de entrenamiento.",
+    "objetivo": "Utilizo los fundamentos de Machine Learning para transformar datos crudos en modelos que predigan o clasifiquen de forma fiable. Resuelvo el problema de cómo enseñar a una máquina a reconocer patrones sin programarlos explícitamente, lo que es esencial al diseñar pipelines de IA que integren modelos entrenados, validen su desempeño y garanticen su generalización. Aparecen en cada fase del desarrollo de un producto de IA: recolección de datos, construcción de features, entrenamiento, validación y despliegue. Después de comprender estos conceptos puedo diseñar experimentos controlados, seleccionar algoritmos adecuados y diagnosticar fallos de sobre‑ajuste. No necesito preocuparme cuando el modelo ya está entrenado y solo se consume como servicio.",
+    "preguntas_repaso": "1. ¿Qué papel juegan las features en la capacidad de generalización de un modelo?  \r\n2. ¿Por qué es crítico separar training y validation sets antes de entrenar?  \r\n3. ¿Cómo ayuda la regularización a mitigar el sobre‑ajuste?  \r\n4. ¿Qué diferencia hay entre una métrica de precisión y una de recall en un problema de clasificación?  \r\n5. ¿En qué situaciones podrías prescindir de una fase de ingeniería de features?",
+    "ruta_estudio": "1. **Prerequisitos**: álgebra lineal básica, conceptos de probabilidad y estadística descriptiva.  \r\n2. **Fundamentos**: aprender a crear y preprocesar features, entender etiquetas y dividir datos.  \r\n3. **Algoritmos clásicos**: regresión lineal/logística, árboles de decisión, SVM.  \r\n4. **Validación**: técnicas de hold‑out, k‑fold cross‑validation y métricas de desempeño.  \r\n5. **Avanzado**: regularización, pipelines automatizados, integración con frameworks de deep learning."
+  },
+  "sections_missing": [],
+  "slug": "machine-learning-fundamentals",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/ai-engineering"
+  ],
+  "title": "Machine Learning Fundamentals",
+  "uid": "c_LAYNEBDIRF",
+  "verification_marks": []
+}

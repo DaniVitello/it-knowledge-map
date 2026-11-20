@@ -1,0 +1,46 @@
+{
+  "aliases": [
+    "AI Infrastructure"
+  ],
+  "area_uid": "ai-engineering",
+  "content_hash": "d974b637660bd33d9ee01d2eb2449ef39eaba4beddc03f3a806c83d19fa52aaf",
+  "numero": 23,
+  "related_uids": [
+    "c_AG5JLRF7W4",
+    "c_BGANTCDDFJ",
+    "c_J2J5LSR7ZQ",
+    "c_K5E3UA3HBU",
+    "c_NWJKJRLXFG",
+    "c_YVRZUYOANU"
+  ],
+  "sections": {
+    "como_funciona": "1. Selecciono la GPU adecuada y la instalo en un nodo o contenedor.  \r\n2. Empaqueto el modelo y lo cargo en un inference server (por ejemplo, TensorRT‑Server).  \r\n3. Configuro una cola (RabbitMQ, SQS) que recibe las peticiones y las entrega al servidor.  \r\n4. Activo una capa de caché (Redis) para almacenar respuestas frecuentes.  \r\n5. Defino políticas de escalado en el orquestador (Kubernetes HPA) que monitorizan métricas de latencia y uso de GPU.  \r\n6. El sistema monitorea continuamente y ajusta recursos para mantener SLA.",
+    "conexiones": "- **CI/CD**: la infraestructura se provisiona y actualiza automáticamente mediante pipelines que despliegan imágenes de contenedores con el modelo.  \r\n- **Containers**: los inference servers se empaquetan en Docker, facilitando portabilidad y escalado en clústeres.  \r\n- **LLMs**: los modelos de lenguaje grande requieren infraestructuras con mayor memoria GPU y estrategias de sharding, ampliando los conceptos de colas y caching.",
+    "detalles": "- **Básico**: Uso de una única GPU y un servidor de inferencia local; pruebas de latencia con `curl`.  \r\n- **Intermedio**: Introducción de colas para manejar ráfagas de tráfico y caché para reducir llamadas repetidas.  \r\n- **Avanzado**: Despliegue en clúster Kubernetes, autoscaling basado en métricas personalizadas, y observabilidad con Prometheus + Grafana.",
+    "ejemplo_minimo": "```python\r\n# inference_server.py\r\nimport torch, torchvision.models as models, flask, json\r\n\r\napp = flask.Flask(__name__)\r\nmodel = models.resnet18(pretrained=True).eval().cuda()\r\n\r\n@app.route(\"/predict\", methods=[\"POST\"])\r\ndef predict():\r\n    data = json.loads(flask.request.data)\r\n    tensor = torch.tensor(data[\"input\"]).float().cuda()\r\n    with torch.no_grad():\r\n        out = model(tensor.unsqueeze(0))\r\n    return {\"logits\": out.cpu().tolist()}\r\n\r\nif __name__ == \"__main__\":\r\n    app.run(host=\"0.0.0.0\", port=8080)\r\n```\r\nEjecutar: `python inference_server.py` y enviar una petición `curl -X POST -d '{\"input\":[...]}'\r\nhttp://localhost:8080/predict'`.",
+    "errores_comunes": "- **Sobredimensionar GPUs**: genera costos innecesarios; usar profiling para dimensionar correctamente.  \r\n- **Olvidar la caché**: aumenta latencia y carga; habilitar Redis o similar.  \r\n- **No limitar la concurrencia del servidor**: provoca OOM; establecer `max_workers`.  \r\n- **Desactivar métricas**: dificulta la detección de cuellos de botella; integrar Prometheus desde el inicio.",
+    "estado_actual": "**Fundamentos estables**: uso de GPUs para inferencia, servidores como TensorRT‑Server o TorchServe, y patrones de cola‑caché.  \r\n**Práctica moderna**: despliegues en Kubernetes con autoscaling basado en GPU utilization, observabilidad unificada (Prometheus, Grafana) y uso de infra‑as‑code (Terraform) para reproducibilidad.",
+    "ideas_clave": "1. **GPUs y aceleradores** – hardware especializado que reduce la latencia de inferencia.  \r\n2. **Inference servers** – procesos o servicios que exponen el modelo mediante APIs.  \r\n3. **Colas y caching** – mecanismos para desacoplar la llegada de peticiones y reutilizar resultados.  \r\n4. **Escalado automático** – reglas que añaden o quitan instancias según la carga.  \r\n5. **Monitoreo y métricas** – observabilidad para detectar degradaciones y ajustar recursos.",
+    "objetivo": "Utilizo la AI Infrastructure para provisionar y orquestar los recursos que hacen posible que un modelo de IA responda a peticiones de producción de forma fiable y rentable. Resuelvo el problema de latencia alta, cuellos de botella de cómputo y falta de escalabilidad que aparecen cuando un modelo entrenado se lleva a un entorno de usuarios reales. Aparece en cada fase del ciclo de vida del producto: desde la validación de inferencia en GPUs locales hasta el despliegue de servidores de inferencia en la nube y la gestión de colas y cachés que equilibran la carga. Después de entenderla, puedo diseñar pipelines de despliegue automatizados, dimensionar recursos y aplicar patrones de alta disponibilidad. No necesito preocuparme cuando el modelo solo se usa en pruebas unitarias o en entornos de desarrollo sin requisitos de rendimiento.",
+    "preguntas_repaso": "1. ¿Qué papel juegan las GPUs dentro de la AI Infrastructure y cómo afectan la latencia?  \r\n2. ¿Cómo ayuda una capa de caching a reducir la carga del inference server?  \r\n3. Describe el flujo de una petición desde la cola hasta la respuesta al cliente.  \r\n4. ¿Qué riesgos implica no monitorizar métricas de uso de GPU en producción?  \r\n5. ¿De qué manera CI/CD interactúa con los contenedores que alojan los modelos de IA?",
+    "ruta_estudio": "1. **Prerequisitos**: Linux básico, conceptos de Docker y redes, fundamentos de deep learning (tensors, GPU).  \r\n2. **Fundamentos**: tutorial de TensorRT‑Server o TorchServe, ejercicios de profiling con `nvidia-smi`.  \r\n3. **Intermedio**: implementar colas con RabbitMQ, caché con Redis, y crear métricas con Prometheus.  \r\n4. **Avanzado**: orquestar con Kubernetes, configurar HPA basado en GPU, escribir Terraform para infra‑as‑code, y explorar sharding de LLMs."
+  },
+  "sections_missing": [],
+  "slug": "ai-infrastructure",
+  "sources": [
+    "http://localhost:8080/predict"
+  ],
+  "sources_detail": [
+    {
+      "title": null,
+      "url": "http://localhost:8080/predict"
+    }
+  ],
+  "tags": [
+    "concepto",
+    "it/ai-engineering"
+  ],
+  "title": "AI Infrastructure",
+  "uid": "c_FLXMOQWDJK",
+  "verification_marks": []
+}

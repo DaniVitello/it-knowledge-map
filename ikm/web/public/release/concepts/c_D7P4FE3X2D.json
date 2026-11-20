@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "Validación"
+  ],
+  "area_uid": "backend",
+  "content_hash": "e810388c63d8f47f00c4eb5ed54ee9b3cd0b0abb51dc75d261d891f6a032a222",
+  "numero": 9,
+  "related_uids": [
+    "c_CLBL3KTWT4",
+    "c_N3N6CTKPIA"
+  ],
+  "sections": {
+    "como_funciona": "1. La petición llega al servidor y el middleware de validación intercepta el cuerpo, query o parámetros.  \r\n2. El middleware selecciona el *schema* correspondiente al endpoint y lo ejecuta contra los datos.  \r\n3. Cada regla del *schema* comprueba tipo, longitud, patrones y valores permitidos; si alguna falla, se detiene el proceso.  \r\n4. En caso de éxito, los datos pueden pasar por una fase de *sanitización* que elimina caracteres peligrosos o normaliza formatos.  \r\n5. Finalmente, la lógica de negocio recibe los datos ya validados y sanitizados, reduciendo la probabilidad de errores o vulnerabilidades.",
+    "conexiones": "- **Error Handling** – la validación produce errores estructurados que deben ser capturados y transformados en respuestas HTTP coherentes.  \r\n- **Middleware** – la validación se implementa típicamente como middleware, lo que permite que sea reutilizable y se ejecute antes de la lógica de negocio.  \r\n- **Logging** – los fallos de validación suelen registrarse para auditoría y diagnóstico, vinculándose con la estrategia de observabilidad del backend.",
+    "detalles": "- **Básico**: usar una librería de validación (p. ej., Joi, Yup) para crear un *schema* simple que verifique tipos y campos obligatorios.  \r\n- **Intermedio**: combinar varios *schemas* (por ejemplo, para body y query) y añadir reglas de negocio como “el campo `endDate` debe ser posterior a `startDate`”.  \r\n- **Avanzado**: crear *schemas* reutilizables, extenderlos mediante composición, y aplicar *sanitizers* personalizados (p. ej., escape HTML, normalizar números de teléfono). También se pueden generar tipos TypeScript a partir de los *schemas* para mantener consistencia entre validación y tipado.",
+    "ejemplo_minimo": "```js\r\n// middleware de validación con Joi\r\nconst Joi = require('joi');\r\n\r\nconst userSchema = Joi.object({\r\n  username: Joi.string().alphanum().min(3).max(30).required(),\r\n  email:    Joi.string().email().required(),\r\n  age:      Joi.number().integer().min(0)\r\n});\r\n\r\nfunction validateUser(req, res, next) {\r\n  const { error, value } = userSchema.validate(req.body);\r\n  if (error) return res.status(400).json({ error: error.details[0].message });\r\n  req.validatedBody = value; // datos ya sanitizados por Joi\r\n  next();\r\n}\r\n```",
+    "errores_comunes": "- **Validar después de la lógica de negocio** – provoca estados inconsistentes; validar al inicio del pipeline.  \r\n- **Confiar solo en el cliente** – siempre validar en el servidor, el cliente puede ser manipulado.  \r\n- **Ignorar la sanitización** – la validación de tipo no elimina contenido peligroso; aplicar una capa de limpieza.  \r\n- **Usar esquemas demasiado permisivos** – permite datos inesperados; definir reglas estrictas y específicas.",
+    "estado_actual": "- **Fundamentos estables**: la necesidad de validar y sanitizar datos de entrada es un principio básico de seguridad y robustez en cualquier backend.  \r\n- **Práctica moderna**: se prefieren librerías declarativas (Joi, Yup, Zod) que permiten describir *schemas* de forma legible y generar tipos estáticos; la integración como middleware en frameworks como Express o Fastify es la forma más extendida.",
+    "ideas_clave": "1. **Validación de entrada** – Verificar que los datos recibidos cumplen con tipos, rangos y formatos requeridos.  \r\n2. **Schemas** – Definir estructuras declarativas (por ejemplo, JSON Schema o Joi) que describen los requisitos de los datos.  \r\n3. **Sanitización** – Limpiar o transformar los valores para eliminar contenido peligroso (p. ej., scripts) antes de procesarlos.  \r\n4. **Integración en el flujo** – Aplicar la validación temprano, típicamente mediante middleware, para abortar la petición si falla.  \r\n5. **Feedback estructurado** – Generar errores claros que indiquen qué campo falló y por qué.",
+    "objetivo": "Utilizo la validación de entrada para garantizar que los datos que llegan a mi API o servicio backend cumplen con el formato y las reglas de negocio esperadas. Resuelvo problemas de seguridad, consistencia y errores inesperados que pueden surgir cuando datos mal formados son procesados. Aparece en cada punto donde el backend recibe información externa: rutas HTTP, colas de mensajes o llamadas a funciones internas. Después de entenderla, puedo diseñar esquemas claros, integrar middleware de validación y combinarla con el manejo de errores para crear servicios robustos. No necesito preocuparme cuando el origen de los datos es interno y ya está bajo control estricto, o cuando el contrato de datos está garantizado por otro componente confiable.",
+    "preguntas_repaso": "1. ¿Por qué es importante validar los datos antes de ejecutar la lógica de negocio?  \r\n2. ¿Cuál es la diferencia entre validación y sanitización y cuándo se aplican cada una?  \r\n3. ¿Cómo se integra típicamente la validación en un framework como Express?  \r\n4. ¿Qué riesgos aparecen si solo confiamos en la validación del lado del cliente?  \r\n5. ¿De qué manera los *schemas* pueden ayudar a mantener consistencia entre validación y tipado en TypeScript?",
+    "ruta_estudio": "1. **Prerequisitos**: conocer HTTP, JSON y conceptos básicos de tipos de datos en JavaScript/TypeScript.  \r\n2. **Fundamentos**: aprender a usar una librería de validación (p. ej., Joi) y crear *schemas* simples.  \r\n3. **Intermedio**: combinar validación de body, query y params; añadir reglas de negocio y sanitización.  \r\n4. **Avanzado**: generar tipos a partir de *schemas*, crear middleware reutilizable, integrar con sistemas de logging y pruebas automatizadas.  \r\n5. **Especialización**: explorar validación en GraphQL, validación de archivos (multipart) y estrategias de validación en microservicios."
+  },
+  "sections_missing": [],
+  "slug": "validacion",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/backend"
+  ],
+  "title": "Validación",
+  "uid": "c_D7P4FE3X2D",
+  "verification_marks": []
+}

@@ -1,0 +1,46 @@
+{
+  "aliases": [
+    "HTTP Methods"
+  ],
+  "area_uid": "networking",
+  "content_hash": "01f1c4662c1becee7a9b772cf9a670b22c2deeff55ff03add9ca5de15e1de95c",
+  "numero": 19,
+  "related_uids": [
+    "c_267BQAZTKD",
+    "c_3YET5TARBZ",
+    "c_IRKTW3AVGM",
+    "c_KMBVXYCQPO",
+    "c_NYZQU435OZ",
+    "c_XNSCZALME2"
+  ],
+  "sections": {
+    "como_funciona": "1. El cliente abre una conexión TCP (usualmente sobre puerto 80 o 443).  \r\n2. Envía una línea de solicitud que comienza con el verbo elegido (GET, POST, etc.) seguida de la URI y la versión HTTP.  \r\n3. El servidor interpreta el verbo y ejecuta la lógica correspondiente: lee, crea, actualiza o elimina el recurso.  \r\n4. El servidor devuelve una respuesta con un código de estado que refleja el resultado del verbo.  \r\n5. Opcionalmente, el cliente incluye cabeceras (Headers) o cuerpo (Body) según el método (por ejemplo, cuerpo en POST o PUT).",
+    "conexiones": "- **HTTP**: los métodos son parte integral del protocolo y determinan cómo se construye la línea de solicitud.  \r\n- **Request / Response**: cada método genera una solicitud que el servidor traduce en una respuesta con un código de estado correspondiente.  \r\n- **HTTP Status Codes**: los códigos (200, 201, 204, 400, 404, 405, 500) indican el éxito o la falla del verbo aplicado al recurso.",
+    "detalles": "- **Básico**: GET y POST son los únicos verbos que la mayoría de firewalls permiten por defecto; se usan para navegación y formularios.  \r\n- **Intermedio**: PUT y PATCH requieren que el servidor exponga la capacidad de sobrescribir o parchear recursos; son críticos en APIs RESTful y en pruebas de integridad de datos.  \r\n- **Avanzado**: DELETE puede estar restringido por políticas de seguridad; su uso combinado con encabezados como `If-Match` permite borrados condicionales y evita condiciones de carrera. Además, la idempotencia de PUT y DELETE influye en la configuración de balanceadores de carga y cachés.",
+    "ejemplo_minimo": "```bash\r\n# GET simple a un endpoint público\r\ncurl -i http://example.com/api/resource\r\n```\r\nSalida típica:\r\n```\r\nHTTP/1.1 200 OK\r\nContent-Type: application/json\r\n...\r\n\r\n{\"id\":1,\"name\":\"Recurso\"}\r\n```",
+    "errores_comunes": "- Usar POST cuando el verbo idempotente requerido es PUT → genera duplicados.  \r\n- Enviar cuerpo en una solicitud GET → algunos servidores lo ignoran y pueden devolver 400.  \r\n- Olvidar el encabezado `Content-Type` en POST/PUT con JSON → el servidor no parsea el cuerpo.  \r\n- Confiar en que DELETE siempre elimina el recurso; algunos servidores responden 202 (aceptado) y la eliminación es asíncrona.",
+    "estado_actual": "- **Fundamentos estables**: los verbos GET, POST, PUT, PATCH y DELETE están definidos en RFC 7231 y su comportamiento básico es ampliamente soportado.  \r\n- **Práctica moderna**: el uso de PATCH para actualizaciones parciales se ha popularizado con APIs GraphQL y JSON‑Patch; los balanceadores de capa 7 (por ejemplo, NGINX, Envoy) permiten reglas específicas por verbo para mejorar la seguridad y el enrutamiento.",
+    "ideas_clave": "1. **GET**: solicita la representación actual de un recurso sin modificarlo.  \r\n2. **POST**: envía datos al servidor para crear un nuevo recurso o ejecutar una operación.  \r\n3. **PUT / PATCH**: reemplaza (PUT) o actualiza parcialmente (PATCH) la representación de un recurso existente.  \r\n4. **DELETE**: indica al servidor que elimine el recurso especificado.",
+    "objetivo": "Utilizo los métodos HTTP para indicar al servidor qué acción quiero que realice sobre un recurso web. Resuelvo problemas de conectividad como respuestas inesperadas o errores 4xx/5xx al interactuar con APIs, balanceadores de carga o firewalls que filtran tráfico según el verbo. En mi día a día como ingeniero de redes senior, los métodos aparecen al diagnosticar peticiones fallidas, al diseñar reglas de ACL que permitan solo GET y POST, o al validar que un proxy respete la semántica de PUT y DELETE. Después de entenderlos, puedo crear políticas de seguridad más precisas, interpretar logs de servidores y depurar problemas de capa 7. No necesito preocuparme cuando la comunicación se limita a tráfico de capa 3/4 (TCP/UDP) sin involucrar HTTP.",
+    "preguntas_repaso": "1. ¿Qué diferencia fundamental hay entre GET y POST en términos de efectos sobre el recurso?  \r\n2. ¿En qué situaciones es preferible usar PATCH en lugar de PUT?  \r\n3. ¿Cómo afecta la idempotencia de un método a la configuración de un balanceador de carga?  \r\n4. ¿Qué código de estado indica que una solicitud DELETE se aceptó pero la eliminación es asíncrona?  \r\n5. ¿Cuál es el riesgo de enviar un cuerpo en una solicitud GET y cómo lo detecta un servidor?",
+    "ruta_estudio": "1. **Prerequisitos**: comprensión de TCP/IP, puertos 80/443 y conceptos de cliente/servidor.  \r\n2. **Fundamentos**: leer RFC 7231, practicar con `curl` y `httpie` usando cada verbo.  \r\n3. **Intermedio**: explorar APIs RESTful, probar idempotencia con PUT/DELETE y usar herramientas como Postman.  \r\n4. **Avanzado**: configurar reglas de firewall y balanceadores que filtren por método, implementar autenticación basada en tokens y manejar respuestas asíncronas (202 Accepted)."
+  },
+  "sections_missing": [],
+  "slug": "http-methods",
+  "sources": [
+    "http://example.com/api/resource"
+  ],
+  "sources_detail": [
+    {
+      "title": null,
+      "url": "http://example.com/api/resource"
+    }
+  ],
+  "tags": [
+    "concepto",
+    "it/networking-internet"
+  ],
+  "title": "HTTP Methods",
+  "uid": "c_PJZHQDBJWY",
+  "verification_marks": []
+}

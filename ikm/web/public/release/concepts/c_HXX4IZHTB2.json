@@ -1,0 +1,32 @@
+{
+  "aliases": [
+    "Tooling"
+  ],
+  "area_uid": "frontend",
+  "content_hash": "6347d0df64ed8002ee74a1884a980da16146714a3a1cfdc23ce97ca68bccd8ba",
+  "numero": 21,
+  "related_uids": [],
+  "sections": {
+    "como_funciona": "1. Instalo Node, que provee el runtime y el gestor de paquetes npm (o pnpm).  \r\n2. Con npm/pnpm ejecuto `npm install` para descargar todas las dependencias declaradas en `package.json`.  \r\n3. Configuro Vite (o un bundler) mediante un archivo de configuración que define entradas, plugins y salida.  \r\n4. Durante el desarrollo, Vite sirve los módulos directamente y recarga la página al cambiar un archivo.  \r\n5. Al ejecutar el comando de build, el bundler genera un bundle optimizado y minificado.  \r\n6. ESLint se ejecuta como parte del proceso (pre‑commit o script de CI) y reporta violaciones de estilo.",
+    "conexiones": "- **Accesibilidad** – ESLint dispone de plugins que detectan problemas de accesibilidad en JSX/HTML, ayudando a cumplir normas como WCAG.  \r\n- **Testing** – Vite se integra con frameworks de pruebas (por ejemplo, Vitest) permitiendo ejecutar tests en un entorno que comparte la misma configuración de módulos.  \r\n- **Performance** – Los bundlers optimizan el tamaño del bundle y aplican técnicas de code‑splitting, lo que impacta directamente en la velocidad de carga percibida por el usuario.",
+    "detalles": "- **Básico**: comprender que Node es la base que permite ejecutar npm y Vite; crear un `package.json` y añadir scripts simples.  \r\n- **Intermedio**: elegir entre npm y pnpm según necesidades de espacio y velocidad; personalizar Vite con plugins y definir alias de módulos.  \r\n- **Avanzado**: combinar Vite con bundlers externos para casos de código legacy; crear configuraciones de ESLint que integren plugins de React, TypeScript y reglas de accesibilidad; automatizar linting y pruebas en pipelines de CI.",
+    "ejemplo_minimo": "```bash\r\n# 1. Inicializar proyecto\r\nnpm init -y\r\n\r\n# 2. Instalar Vite y ESLint\r\nnpm install vite eslint --save-dev\r\n\r\n# 3. Añadir scripts en package.json\r\n# {\r\n#   \"scripts\": {\r\n#     \"dev\": \"vite\",\r\n#     \"build\": \"vite build\",\r\n#     \"lint\": \"eslint src/**/*.js\"\r\n#   }\r\n# }\r\n\r\n# 4. Crear archivo src/main.js\r\n# console.log('Hola tooling');\r\n\r\n# 5. Ejecutar desarrollo\r\nnpm run dev\r\n```",
+    "errores_comunes": "- **Olvidar instalar dependencias locales** → el comando falla; siempre ejecutar `npm install` después de clonar un proyecto.  \r\n- **Confundir npm y pnpm** → los lockfiles son incompatibles; usar el mismo gestor que generó el proyecto.  \r\n- **No actualizar la configuración de ESLint al añadir nuevas librerías** → aparecen falsos positivos; extender la configuración con los plugins correspondientes.  \r\n- **Ignorar la salida de build** → el bundle puede quedar sin minificar; revisar que el script de producción incluya `vite build` o el bundler adecuado.",
+    "estado_actual": "- **Fundamentos estables**: Node sigue siendo el runtime de facto; npm es el gestor de paquetes predeterminado y pnpm gana popularidad por su eficiencia de espacio.  \r\n- **Práctica moderna**: Vite se ha convertido en la opción preferida para proyectos nuevos por su rapidez en desarrollo; los bundlers tradicionales como Webpack siguen usándose en proyectos legacy. ESLint es la herramienta estándar para linting, con ecosistemas de plugins que cubren React, Vue, TypeScript y accesibilidad.",
+    "ideas_clave": "1. **Node** – motor JavaScript que permite ejecutar herramientas de build y scripts fuera del navegador.  \r\n2. **npm / pnpm** – gestores de paquetes que descargan, versionan y comparten librerías dentro del proyecto.  \r\n3. **Vite** – servidor de desarrollo y bundler que aprovecha módulos ES nativos para recargas rápidas.  \r\n4. **Bundlers** – herramientas (por ejemplo, Rollup o Webpack) que agrupan y optimizan los archivos para producción.  \r\n5. **ESLint** – linter que analiza el código fuente y aplica reglas de estilo y buenas prácticas.",
+    "objetivo": "Utilizo el tooling para automatizar y estandarizar todo el flujo de trabajo de un proyecto Frontend: instalando dependencias, ejecutando servidores de desarrollo, empaquetando código para producción y garantizando la calidad mediante linting. Resuelvo la complejidad de gestionar paquetes, configurar compilaciones y detectar errores de estilo antes de que lleguen al navegador. Aparece en cada fase del desarrollo, desde la configuración inicial del proyecto hasta la entrega final. Después de entenderlo, puedo crear entornos reproducibles, integrar pruebas y despliegues continuos, y enfocarme en la lógica de la aplicación sin preocuparme por la infraestructura del build. No necesito preocuparme cuando trabajo en prototipos muy simples que no requieren empaquetado ni control de calidad automatizado.",
+    "preguntas_repaso": "1. ¿Por qué Node es necesario para ejecutar herramientas de build en Frontend?  \r\n2. ¿Cuál es la diferencia principal entre npm y pnpm en la gestión de dependencias?  \r\n3. ¿Cómo Vite acelera el ciclo de desarrollo comparado con un bundler tradicional?  \r\n4. ¿Qué papel juega ESLint en la garantía de accesibilidad dentro del código?  \r\n5. ¿En qué situaciones conviene combinar Vite con un bundler como Rollup o Webpack?",
+    "ruta_estudio": "1. **Prerequisitos**: conocimientos básicos de JavaScript, línea de comandos y conceptos de módulos ES.  \r\n2. **Fundamentos**: instalar Node, crear un proyecto con npm, aprender a usar scripts en `package.json`.  \r\n3. **Vite**: seguir la guía oficial para iniciar un proyecto, explorar la configuración de plugins y alias.  \r\n4. **Bundlers**: comparar configuraciones básicas de Vite y Webpack/Rollup; practicar code‑splitting y tree‑shaking.  \r\n5. **ESLint**: generar una configuración inicial con `eslint --init`, añadir plugins de React y accesibilidad, integrar en CI.  \r\n6. **Avanzado**: migrar un proyecto legacy a Vite, combinar Vite con un bundler externo, automatizar linting y pruebas en pipelines de GitHub Actions."
+  },
+  "sections_missing": [],
+  "slug": "tooling",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/frontend"
+  ],
+  "title": "Tooling",
+  "uid": "c_HXX4IZHTB2",
+  "verification_marks": []
+}

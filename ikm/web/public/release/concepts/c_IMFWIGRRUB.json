@@ -1,0 +1,38 @@
+{
+  "aliases": [
+    "Code Review"
+  ],
+  "area_uid": "software-engineering",
+  "content_hash": "349cefcf8debcbad1a50674d1c2aa5bf1be3e3342db60d1b7381bde464e4771b",
+  "numero": 19,
+  "related_uids": [
+    "c_3UAMR6JQWV",
+    "c_53KOHLSCN5",
+    "c_K2J2R52QLA",
+    "c_VA6ETRQ2HH",
+    "c_ZUGE3YIJ5I"
+  ],
+  "sections": {
+    "como_funciona": "1. El autor crea una *pull request* o *merge request* con los cambios.  \r\n2. Un o varios revisores leen el diff, aplican las ideas del esqueleto y anotan comentarios.  \r\n3. El autor responde a cada comentario, corrige el código o justifica decisiones.  \r\n4. Se actualiza la solicitud y, una vez aprobada, se integra al branch principal.  \r\n5. El equipo registra lecciones aprendidas para futuros reviews.",
+    "conexiones": "- **Code Quality:** el code review es una de las principales prácticas para elevar la calidad del código al detectar defectos y promover buenas prácticas.  \r\n- **Clean Code:** los revisores aplican los principios de código limpio (nombres descriptivos, funciones pequeñas) durante la revisión.  \r\n- **Design Patterns:** al identificar oportunidades de reutilización, el reviewer puede sugerir la aplicación de patrones de diseño apropiados.",
+    "detalles": "- **Básico:** enfocarse en errores evidentes y en la claridad del código; usar comentarios breves y constructivos.  \r\n- **Intermedio:** incluir pruebas unitarias, validar que el código respete patrones de diseño y principios SOLID, y sugerir refactorizaciones menores.  \r\n- **Avanzado:** revisar la arquitectura global, la consistencia con la estrategia de *clean code*, y proponer cambios estructurales que mejoren la extensibilidad y el rendimiento.",
+    "ejemplo_minimo": "```python\r\n# before review\r\ndef add(a,b):\r\n    return a+b\r\n\r\n# reviewer comment: add type hints and docstring\r\ndef add(a: int, b: int) -> int:\r\n    \"\"\"Suma dos enteros y devuelve el resultado.\"\"\"\r\n    return a + b\r\n```",
+    "errores_comunes": "- **Demasiado crítico:** enfocarse solo en detalles menores y olvidar la funcionalidad principal. *Evitar:* equilibrar comentarios de estilo con observaciones de lógica.  \r\n- **Falta de contexto:** criticar sin entender el requerimiento. *Evitar:* preguntar antes de señalar.  \r\n- **No cerrar el ciclo:** dejar comentarios sin respuesta. *Evitar:* siempre responder o actualizar el código.",
+    "estado_actual": "Los fundamentos del code review – feedback, corrección y mantenibilidad – son estables y ampliamente adoptados en metodologías ágiles. En la práctica moderna se complementan con herramientas automatizadas (linters, análisis estático) que filtran problemas triviales antes de la revisión humana, permitiendo que los revisores se concentren en decisiones de diseño y arquitectura.",
+    "ideas_clave": "1. **Feedback** – el revisor aporta observaciones que el autor puede aplicar para mejorar el código.  \r\n2. **Correctness** – se verifica que el código cumpla con los requisitos funcionales y no introduzca defectos.  \r\n3. **Maintainability** – se evalúa la legibilidad, la modularidad y la facilidad de futuros cambios.  \r\n4. **Consenso de estilo** – se asegura que el código siga las convenciones acordadas por el equipo.  \r\n5. **Aprendizaje continuo** – el proceso sirve como mecanismo de transferencia de conocimientos.",
+    "objetivo": "Utilizo el **code review** para obtener retroalimentación temprana sobre el código que escribo, detectar errores de lógica y asegurar que el artefacto sea fácil de mantener. Resuelvo problemas de calidad y consistencia antes de que el código entre en producción, lo que reduce costes de corrección y mejora la confianza del equipo. Aparece en la rutina diaria de cualquier ingeniero de software que colabora en repositorios compartidos; después de dominarlo, puedo participar activamente en la mejora continua del código y en la mentoría de colegas. No es necesario preocuparse por un code review cuando el cambio es trivial, está aislado en una rama personal que no será fusionada, o cuando el proyecto no sigue prácticas colaborativas.",
+    "preguntas_repaso": "1. ¿Cuál es el objetivo principal de un code review dentro del ciclo de desarrollo?  \r\n2. ¿Cómo se relaciona la retroalimentación del reviewer con la mantenibilidad del código?  \r\n3. ¿Qué diferencia hay entre revisar la corrección funcional y revisar la adherencia a patrones de diseño?  \r\n4. ¿Por qué es importante cerrar el ciclo de comentarios después de una revisión?  \r\n5. ¿De qué manera las herramientas automáticas complementan al code review humano?",
+    "ruta_estudio": "1. **Prerequisitos:** manejo básico de un sistema de control de versiones (Git) y comprensión de la sintaxis del lenguaje usado.  \r\n2. **Fundamentos:** estudiar guías de estilo del lenguaje, principios SOLID y conceptos de clean code.  \r\n3. **Práctica:** participar en revisiones reales, comenzar con pequeños *pull requests* y aplicar feedback.  \r\n4. **Avanzado:** aprender a usar herramientas de análisis estático, integrar revisiones en pipelines CI/CD y profundizar en arquitectura de software."
+  },
+  "sections_missing": [],
+  "slug": "code-review",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/software-engineering"
+  ],
+  "title": "Code Review",
+  "uid": "c_IMFWIGRRUB",
+  "verification_marks": []
+}

@@ -1,0 +1,37 @@
+{
+  "aliases": [
+    "Tokenization"
+  ],
+  "area_uid": "ai-engineering",
+  "content_hash": "b03573d8850f7a95d058cf1b1966c44633b27abb81cfef09506724d7d3df9130",
+  "numero": 8,
+  "related_uids": [
+    "c_AG5JLRF7W4",
+    "c_CG3CPXKFLT",
+    "c_R42HL4B5YW",
+    "c_YFKRGNUXRH"
+  ],
+  "sections": {
+    "como_funciona": "1. El texto de entrada se pasa a un **tokenizer** que aplica reglas de segmentación (p. ej., BPE o WordPiece).  \r\n2. Cada segmento se mapea a un **id de token** según el vocabulario del modelo.  \r\n3. El conjunto de ids forma la **secuencia de tokens** que se inserta en la ventana de **contexto**.  \r\n4. Durante la inferencia, el modelo verifica que la longitud total no supere el **token budget**; si la supera, se trunca o se divide en varios llamados.  \r\n5. La salida del modelo se vuelve a des‑tokenizar para obtener texto legible.",
+    "conexiones": "- **Neural Networks:** los tokens son la entrada discreta que alimenta la arquitectura de redes neuronales.  \r\n- **Transformers:** el mecanismo de atención opera sobre la secuencia de tokens dentro del contexto.  \r\n- **Embeddings:** cada token se proyecta a un vector de embedding antes de entrar al modelo.",
+    "detalles": "- **Básico:** tokenizadores de sub‑palabras (BPE) que equilibran vocabulario pequeño y cobertura de palabras raras.  \r\n- **Intermedio:** manejo de tokens especiales (e.g., ``<pad>``, ``<eos>``, ``<bos>``) y control de longitud mediante parámetros como `max_length` y `truncation`.  \r\n- **Avanzado:** técnicas de *prompt engineering* que ajustan la distribución de tokens para maximizar la información útil dentro del budget, y uso de *sliding windows* para procesar documentos extensos.",
+    "ejemplo_minimo": "```python\r\nfrom transformers import AutoTokenizer\r\n\r\ntokenizer = AutoTokenizer.from_pretrained(\"gpt2\")\r\ntexto = \"Hola, IA!\"\r\nids = tokenizer.encode(texto, add_special_tokens=False)\r\nprint(\"Tokens:\", tokenizer.convert_ids_to_tokens(ids))\r\nprint(\"IDs:\", ids)\r\n```",
+    "errores_comunes": "- **Olvidar el límite de tokens:** genera respuestas truncadas; usar `max_length` y revisar `len(ids)`.  \r\n- **Contar caracteres en vez de tokens:** la longitud real varía; siempre medir con el tokenizer.  \r\n- **Reusar vocabularios incompatibles:** usar un tokenizer distinto al modelo provoca errores de dimensión; asegurarse de que coincidan.",
+    "estado_actual": "- **Fundamentos estables:** los algoritmos BPE y WordPiece siguen siendo la base de la tokenización en LLMs.  \r\n- **Práctica moderna:** los frameworks (Transformers, LangChain) exponen APIs para gestión automática de budgets y sliding windows, y se adoptan tokenizers de tipo *fast* (Rust‑based) para mayor velocidad.",
+    "ideas_clave": "1. **Tokens** – unidades mínimas que el modelo consume (palabras, sub‑palabras o caracteres).  \r\n2. **Token budgets** – límite máximo de tokens que caben en el contexto del modelo (p. ej., 8 k, 32 k).  \r\n3. **Context** – ventana de tokens que el modelo mantiene simultáneamente para generar respuestas.  \r\n4. **Longitud variable** – la tokenización determina cuántos tokens ocupa cada fragmento de texto, influyendo en coste y latencia.",
+    "objetivo": "Utilizo la tokenización para convertir texto libre en unidades discretas que el modelo de IA pueda procesar. Resuelvo el problema de que los transformers solo operan sobre secuencias numéricas de longitud limitada, lo que permite que los prompts, documentos y respuestas entren dentro del “token budget” del modelo. Aparece en cada etapa del pipeline de un producto de IA: al pre‑procesar datos de entrenamiento, al construir prompts dinámicos y al medir el coste de inferencia. Después de entenderla, puedo estimar el consumo de contexto, diseñar prompts eficientes y diagnosticar fallos de truncamiento. No necesito preocuparme cuando trabajo exclusivamente con datos ya tokenizados o con modelos que aceptan directamente vectores pre‑embebidos.",
+    "preguntas_repaso": "1. ¿Qué es un token y por qué el modelo no procesa texto sin tokenizar?  \r\n2. ¿Cómo afecta el token budget al diseño de un prompt para un modelo de 8 k tokens?  \r\n3. ¿Cuál es la diferencia entre contar caracteres y contar tokens en una solicitud de inferencia?  \r\n4. ¿Qué consecuencias tiene usar un tokenizer que no corresponde al modelo seleccionado?  \r\n5. ¿Cómo se puede manejar un documento que supera el límite de contexto del modelo?",
+    "ruta_estudio": "1. **Prerequisitos:** Python, conceptos básicos de NLP y de redes neuronales.  \r\n2. **Fundamentos:** estudiar BPE/WordPiece y experimentar con `AutoTokenizer`.  \r\n3. **Práctica:** implementar prompts que respeten el token budget y medir latencia.  \r\n4. **Avanzado:** explorar técnicas de sliding window y de token‑level pruning para documentos largos."
+  },
+  "sections_missing": [],
+  "slug": "tokenization",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/ai-engineering"
+  ],
+  "title": "Tokenization",
+  "uid": "c_APDCP5OPVF",
+  "verification_marks": []
+}

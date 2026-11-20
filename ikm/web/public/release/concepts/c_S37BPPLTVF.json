@@ -1,0 +1,38 @@
+{
+  "aliases": [
+    "Task Management"
+  ],
+  "area_uid": "project-management",
+  "content_hash": "749bc983dd3e6abb2528263d48401515aaa56c01d0ef15415c4ab1378256ebf3",
+  "numero": 6,
+  "related_uids": [
+    "c_CDAPU4W4IV",
+    "c_CQ3MBF4W7W",
+    "c_GYUCO2KNED",
+    "c_OXV4OR4VYX",
+    "c_YRDFIS7XCB"
+  ],
+  "sections": {
+    "como_funciona": "1. Partiendo del WBS, identifico todas las tareas necesarias para cada entrega.  \r\n2. Asigno a cada tarea un responsable según habilidades y carga de trabajo.  \r\n3. Defino los estados que la tarea atravesará y los registro en la herramienta de gestión.  \r\n4. Establezco dependencias entre tareas para evitar bloqueos y ordenar el flujo de trabajo.  \r\n5. Estimo el esfuerzo (horas o story points) y, usando esas estimaciones, genero el cronograma del proyecto.  \r\n6. Durante la ejecución, el equipo actualiza el estado de sus tareas, lo que permite al project manager monitorizar el avance y re‑planificar si surge alguna desviación.",
+    "conexiones": "- **Work Breakdown Structure**: provee la jerarquía de entregas que se desglosan en tareas gestionadas.  \r\n- **Dependencies**: determinan el orden de ejecución y evitan que una tarea empiece antes de que su predecesora esté completa.  \r\n- **Scheduling**: utiliza estimaciones de tareas para construir el cronograma y asignar recursos de forma equilibrada.",
+    "detalles": "- **Básico**: Crear una lista de tareas, asignar un responsable y marcar su estado.  \r\n- **Intermedio**: Añadir dependencias y usar estimaciones para calcular la ruta crítica y ajustar el calendario.  \r\n- **Avanzado**: Integrar métricas de velocidad, aplicar límites de WIP (Work In Progress) y automatizar notificaciones cuando una tarea cambia de estado o se rompe una dependencia.",
+    "ejemplo_minimo": "```yaml\r\n# Tablero Kanban sencillo (formato YAML)\r\ntasks:\r\n  - id: T1\r\n    name: \"Diseñar mockups de la pantalla de login\"\r\n    owner: Ana\r\n    estimate: 8h\r\n    state: To-Do\r\n    depends_on: []\r\n  - id: T2\r\n    name: \"Implementar API de autenticación\"\r\n    owner: Luis\r\n    estimate: 12h\r\n    state: To-Do\r\n    depends_on: [T1]\r\n```",
+    "errores_comunes": "- **Asignar tareas sin definir claramente el responsable** → genera confusión; evitarlo asignando siempre un dueño.  \r\n- **Olvidar dependencias** → produce bloqueos inesperados; revisa siempre la cadena de precedencia.  \r\n- **No actualizar el estado** → pierde visibilidad; establece recordatorios diarios de actualización.  \r\n- **Sobre‑estimar sin validar** → distorsiona el cronograma; usa datos históricos para calibrar estimaciones.",
+    "estado_actual": "Los fundamentos del Task Management (descomposición, asignación, estados y dependencias) son estables y se aplican en la mayoría de los marcos de trabajo ágiles y tradicionales. En la práctica moderna, se complementa con tableros digitales (Jira, Azure Boards, Trello) que automatizan flujos, integran métricas de velocidad y permiten reportes en tiempo real.",
+    "ideas_clave": "1. **Descomposición de trabajo** – Cada entrega se divide en tareas concretas (Work Breakdown Structure).  \r\n2. **Asignación de responsables** – Cada tarea tiene un dueño claro que la ejecuta y la reporta.  \r\n3. **Estados de la tarea** – Se define un ciclo (por ejemplo: To‑Do, In Progress, Done) que refleja su progreso.  \r\n4. **Dependencias** – Algunas tareas no pueden iniciarse hasta que otras se completen.  \r\n5. **Estimación y planificación** – Se estima el esfuerzo de cada tarea para construir el cronograma (Scheduling).",
+    "objetivo": "Utilizo el Task Management para organizar, asignar y dar seguimiento a cada actividad que compone el proyecto, de modo que el equipo sepa qué hacer, cuándo y quién es responsable. Resuelvo la falta de visibilidad y el riesgo de que tareas críticas se pierdan o se retrasen, garantizando que el progreso sea medible y que los entregables se alineen con los hitos del proyecto. Aparece en la fase de planificación y se mantiene activo durante la ejecución, sirviendo de base para la coordinación diaria y la generación de reportes de estado. Después de entenderlo, puedo diseñar tableros de trabajo, definir flujos de estados y establecer métricas de desempeño; cuando el proyecto está bajo control y las tareas están automatizadas, no necesito enfocarme en los detalles de gestión de tareas.",
+    "preguntas_repaso": "1. ¿Cómo transforma el Task Management la visión abstracta del alcance en acciones concretas para el equipo?  \r\n2. ¿Qué ocurre si una tarea crítica no tiene dependencias definidas y se retrasa?  \r\n3. ¿Cuál es la diferencia entre estimar en horas y estimar en story points dentro del Task Management?  \r\n4. ¿Cómo ayuda la actualización de estados a detectar desviaciones en el cronograma?  \r\n5. ¿Qué beneficio aporta limitar el WIP (Work In Progress) en un tablero de tareas?",
+    "ruta_estudio": "1. **Prerequisitos**: comprender los conceptos de alcance del proyecto y de WBS.  \r\n2. **Fundamentos**: aprender a crear y asignar tareas, definir estados y registrar dependencias en una herramienta básica.  \r\n3. **Intermedio**: practicar estimación de esfuerzo y generación de cronogramas con técnicas como PERT o Critical Path.  \r\n4. **Avanzado**: dominar tableros digitales, métricas de velocidad, límites de WIP y automatizaciones de notificaciones.  \r\n5. **Especialización**: explorar integraciones con gestión de riesgos y control de calidad."
+  },
+  "sections_missing": [],
+  "slug": "task-management",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/project-management"
+  ],
+  "title": "Task Management",
+  "uid": "c_S37BPPLTVF",
+  "verification_marks": []
+}

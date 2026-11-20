@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "Project Fundamentals"
+  ],
+  "area_uid": "project-management",
+  "content_hash": "953d3f64918c7a0f2db9545ce09484315115276c6dec2c2a820f9dd7e03ca12e",
+  "numero": 1,
+  "related_uids": [
+    "c_7HCWIHGY3Y",
+    "c_RIRVA7AOPS",
+    "c_ZZNQZABFF3"
+  ],
+  "sections": {
+    "como_funciona": "1. Defino el objetivo con los patrocinadores para que todos compartan la visión.  \r\n2. Traduzco esa visión en un alcance claro, listando funcionalidades y exclusiones.  \r\n3. Identifico restricciones críticas (fecha de lanzamiento, presupuesto máximo, disponibilidad de personal).  \r\n4. Derivo los entregables que evidenciarán que el alcance se ha cumplido dentro de las restricciones.  \r\n5. Comunico este conjunto a todo el equipo y lo utilizo como referencia para la planificación detallada y el control de cambios.",
+    "conexiones": "- **Scope**: el alcance deriva directamente del objetivo y delimita los entregables que se producirán.  \r\n- **Requirements**: los requisitos son la especificación detallada del alcance; sin un alcance definido, los requisitos se dispersan.  \r\n- **Deliverables**: los entregables son la materialización tangible del alcance aprobado y sirven para validar que el objetivo se ha alcanzado.",
+    "detalles": "- **Básico:** redactar una declaración de objetivo concisa y un enunciado de alcance simple.  \r\n- **Intermedio:** desglosar el alcance en paquetes de trabajo, mapear cada restricción a riesgos y asignar entregables a hitos.  \r\n- **Avanzado:** aplicar técnicas de gestión de valor ganado (Earned Value Management) para medir el progreso respecto a objetivo, alcance y restricciones, y ajustar el plan en tiempo real.",
+    "ejemplo_minimo": "```json\r\n{\r\n  \"project\": \"Lanzamiento App móvil\",\r\n  \"objective\": \"Incrementar la base de usuarios en 20% en 6 meses\",\r\n  \"scope\": {\r\n    \"incluye\": [\"Diseño UI\", \"Desarrollo iOS\", \"Pruebas beta\"],\r\n    \"excluye\": [\"Desarrollo Android\", \"Marketing offline\"]\r\n  },\r\n  \"constraints\": {\r\n    \"budget\": 50000,\r\n    \"deadline\": \"2024-06-30\",\r\n    \"resources\": 3 developers\r\n  },\r\n  \"deliverables\": [\"App iOS v1.0\", \"Informe de pruebas\", \"Guía de usuario\"]\r\n}\r\n```",
+    "errores_comunes": "- Confundir objetivo con entregable: el objetivo es el *por qué*, el entregable es el *qué*; evitarlo clarificando ambos por separado.  \r\n- Definir alcance sin excluir nada: generar ambigüedad; siempre listar explícitamente exclusiones.  \r\n- Ignorar restricciones tempranas: provocan replanificaciones costosas; registrar todas las limitaciones antes de la planificación detallada.",
+    "estado_actual": "Los **fundamentos** (objetivo, alcance, restricciones y entregables) siguen siendo estables y forman la columna vertebral de cualquier metodología de gestión de proyectos, ya sea tradicional o ágil. En la práctica moderna, los equipos ágiles incorporan estos conceptos en artefactos como el *Product Vision*, el *Product Backlog* (que representa el alcance) y los *Definition of Done* (entregables), manteniendo la disciplina de las restricciones mediante *time‑boxing* y *budget tracking*.",
+    "ideas_clave": "1. **Objetivo del proyecto** – la razón de ser que guía todas las decisiones.  \r\n2. **Alcance** – lo que está incluido y lo que queda fuera, delimitando el trabajo.  \r\n3. **Restricciones** – limitaciones de tiempo, costo, recursos o calidad que condicionan la ejecución.  \r\n4. **Entregables** – productos o resultados concretos que demuestran el cumplimiento del objetivo.",
+    "objetivo": "Utilizo los fundamentos del proyecto para establecer la base sobre la que planifico, coordino y entrego resultados con criterios de éxito claros. Resuelvo la ambigüedad inicial que impide al equipo saber qué se quiere lograr, qué está incluido y qué limitaciones existen. Aparecen en la fase de iniciación y en la definición del alcance, sirviendo de referencia para todas las decisiones posteriores. Después de comprenderlos, puedo estructurar el charter, fijar metas medibles y alinear a los stakeholders. Cuando el proyecto ya está en ejecución y el alcance está formalmente aprobado, ya no necesito volver a revisar los fundamentos salvo que haya cambios significativos.",
+    "preguntas_repaso": "1. ¿Cómo se traduce un objetivo de negocio en un alcance concreto?  \r\n2. ¿Qué papel juegan las restricciones al definir los entregables?  \r\n3. ¿Por qué es importante listar explícitamente lo que queda fuera del alcance?  \r\n4. ¿Cómo se verifica que un entregable cumple con el objetivo del proyecto?  \r\n5. ¿De qué manera los equipos ágiles incorporan los fundamentos del proyecto en sus artefactos?",
+    "ruta_estudio": "1. **Pre‑requisitos:** comprender la diferencia entre visión, misión y objetivo de negocio; familiarizarse con la estructura de un Project Charter.  \r\n2. **Fundamentos:** practicar la redacción de objetivos SMART, crear enunciados de alcance y listar restricciones en casos de estudio.  \r\n3. **Avanzado:** estudiar técnicas de gestión de valor ganado y de control de cambios; aplicar la integración de fundamentos en marcos ágiles (Scrum, SAFe)."
+  },
+  "sections_missing": [],
+  "slug": "project-fundamentals",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/project-management"
+  ],
+  "title": "Project Fundamentals",
+  "uid": "c_BF7HN4NHO2",
+  "verification_marks": []
+}

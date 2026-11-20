@@ -1,0 +1,37 @@
+{
+  "aliases": [
+    "Autenticación en Frontend"
+  ],
+  "area_uid": "frontend",
+  "content_hash": "b18b700d25f9c79c2a3265f6ef65aeef32f6d4baa91ed4743a7fdc86633d8251",
+  "numero": 19,
+  "related_uids": [
+    "c_56N6B2BTGY",
+    "c_DHDG7TOBNK",
+    "c_FYUNN3WTKX",
+    "c_YPMUNOMCWL"
+  ],
+  "sections": {
+    "como_funciona": "1. El usuario completa un **formulario** de login y envía sus credenciales al backend.  \r\n2. El backend valida las credenciales y genera un **token** firmado que contiene la identidad y los **permisos** del usuario.  \r\n3. El token se entrega al cliente, típicamente a través de una **cookie** HttpOnly o mediante almacenamiento local.  \r\n4. En cada navegación o petición a una API protegida, el frontend incluye el token (cookie o encabezado `Authorization`).  \r\n5. El servidor verifica el token, establece o actualiza la **sesión** y responde según los **permisos** asociados.",
+    "conexiones": "- **Formularios**: el login se implementa mediante un formulario que captura credenciales y dispara el flujo de autenticación.  \r\n- **Accesibilidad**: los campos de login deben ser accesibles (etiquetas, foco, mensajes de error) para que cualquier usuario pueda autenticarse sin barreras.  \r\n- **Autorización**: una vez autenticado, el frontend consulta los permisos del token para decidir qué componentes o rutas mostrar.",
+    "detalles": "- **Básico**: Uso de cookies de sesión tradicionales; el servidor mantiene el estado y el cliente solo envía la cookie.  \r\n- **Intermedio**: Adoptar tokens JWT; el frontend almacena el token y lo envía en encabezados, lo que elimina la necesidad de estado en el servidor.  \r\n- **Avanzado**: Implementar refresco de tokens, rotación de claves y almacenamiento en cookies HttpOnly + `SameSite` para mitigar ataques XSS y CSRF; combinar con mecanismos de autorización basados en roles y atributos.",
+    "ejemplo_minimo": "```html\r\n<!-- login.html -->\r\n<form id=\"login\">\r\n  <input type=\"text\" name=\"email\" placeholder=\"email\" required />\r\n  <input type=\"password\" name=\"password\" placeholder=\"contraseña\" required />\r\n  <button type=\"submit\">Entrar</button>\r\n</form>\r\n\r\n<script>\r\ndocument.getElementById('login').addEventListener('submit', async e => {\r\n  e.preventDefault();\r\n  const form = new FormData(e.target);\r\n  const res = await fetch('/api/login', {\r\n    method: 'POST',\r\n    body: JSON.stringify(Object.fromEntries(form)),\r\n    headers: { 'Content-Type': 'application/json' },\r\n    credentials: 'include'          // permite recibir cookies HttpOnly\r\n  });\r\n  if (res.ok) location.href = '/dashboard.html';\r\n});\r\n</script>\r\n```",
+    "errores_comunes": "- **Almacenar el token en `localStorage`**: expone el token a scripts maliciosos; usar cookies HttpOnly.  \r\n- **Olvidar enviar `credentials: 'include'`**: impide que el navegador envíe la cookie de sesión.  \r\n- **No validar la expiración del token**: permite accesos después de que la sesión debería haber terminado.  \r\n- **Usar el mismo token para autenticación y autorización**: dificulta la revocación granular; separar claims de permisos.",
+    "estado_actual": "**Fundamentos estables**: la necesidad de identificar al usuario, el uso de cookies de sesión y la existencia de tokens firmados (JWT) son conceptos consolidados.  \r\n**Práctica moderna**: se prefiere combinar cookies HttpOnly con `SameSite=Lax/Strict` y tokens de corta vida, acompañados de un endpoint de refresco. Las bibliotecas como `oidc-client` o `auth0-spa-js` facilitan la integración con proveedores de identidad y gestionan automáticamente la rotación de tokens.",
+    "ideas_clave": "1. **Sesiones** – Conjunto de datos que identifica al usuario mientras navega en la aplicación.  \r\n2. **Tokens** – Credenciales compactas (por ejemplo JWT) que el cliente envía en cada petición para probar su identidad.  \r\n3. **Cookies** – Medio de almacenamiento que permite que el navegador envíe automáticamente el token al servidor.  \r\n4. **Permisos** – Conjunto de acciones que el usuario está autorizado a ejecutar una vez autenticado.",
+    "objetivo": "Utilizo la autenticación en frontend para verificar la identidad del usuario antes de permitirle interactuar con la aplicación. Resuelvo el problema de que cualquier persona pueda acceder a recursos protegidos simplemente ingresando la URL. En mi día a día como desarrollador frontend, la autenticación aparece cada vez que debo mostrar contenido personalizado, proteger rutas o enviar peticiones a APIs que requieren credenciales. Después de comprenderla, puedo diseñar flujos de login seguros, integrar proveedores externos (OAuth, OpenID) y manejar la expiración de sesiones. No necesito preocuparme cuando la aplicación es puramente estática y no consume datos protegidos.",
+    "preguntas_repaso": "1. ¿Qué diferencia hay entre una sesión basada en cookies y una basada en tokens?  \r\n2. ¿Por qué es preferible usar cookies HttpOnly en lugar de `localStorage` para almacenar un token?  \r\n3. ¿Cuál es el papel del encabezado `Authorization: Bearer <token>` en una petición protegida?  \r\n4. ¿Cómo ayuda la bandera `SameSite` a prevenir ataques CSRF?  \r\n5. ¿Qué pasos seguirías para añadir un flujo de refresco de tokens a una aplicación existente?",
+    "ruta_estudio": "1. **Prerequisitos**: HTML básico, JavaScript asíncrono (`fetch`/`async‑await`), conceptos de HTTP (cookies, encabezados).  \r\n2. **Fundamentos**: comprender sesiones tradicionales y el formato JWT (header, payload, signature).  \r\n3. **Práctica**: implementar login con cookies HttpOnly, añadir manejo de expiración y refresco de tokens.  \r\n4. **Avanzado**: integrar un proveedor OAuth/OIDC, aplicar `SameSite` y `Secure` flags, y usar bibliotecas de gestión de tokens.  \r\n5. **Especialización**: estudiar patrones de autorización (RBAC, ABAC) y pruebas de seguridad (XSS, CSRF)."
+  },
+  "sections_missing": [],
+  "slug": "autenticacion-en-frontend",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/frontend"
+  ],
+  "title": "Autenticación en Frontend",
+  "uid": "c_NNWQH47RM7",
+  "verification_marks": []
+}

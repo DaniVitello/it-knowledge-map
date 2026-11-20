@@ -1,0 +1,37 @@
+{
+  "aliases": [
+    "Autorización"
+  ],
+  "area_uid": "backend",
+  "content_hash": "ed0e7ebfbcaff9a322f36a5c94d4fcc34665cba26a8d2b8486df713648e872cb",
+  "numero": 17,
+  "related_uids": [
+    "c_DHDG7TOBNK",
+    "c_KUZUIAJVV7",
+    "c_NNWQH47RM7",
+    "c_USKUN3IVRZ"
+  ],
+  "sections": {
+    "como_funciona": "1. El cliente envía su token de autenticación (JWT, OAuth2, etc.).  \r\n2. Un middleware extrae la identidad y los atributos (roles, claims).  \r\n3. Según el modelo elegido (RBAC o ABAC), el middleware compara los permisos requeridos por el endpoint con los que posee el cliente.  \r\n4. Si la evaluación es positiva, la petición continúa; de lo contrario, se devuelve `403 Forbidden`.",
+    "conexiones": "- **Security Engineering** – la autorización es una capa clave dentro del diseño de sistemas seguros, complementando la defensa en profundidad.  \r\n- **Autenticación** – sin una identidad verificada, la autorización no tiene sujeto sobre el cual aplicar reglas.  \r\n- **Seguridad** – la correcta autorización previene escaladas de privilegio y protege la confidencialidad e integridad de los datos.",
+    "detalles": "- **Básico**: definir roles (`admin`, `editor`, `viewer`) y mapearlos a permisos estáticos.  \r\n- **Intermedio**: combinar RBAC con scopes en el token para evitar consultas a bases de datos en cada request.  \r\n- **Avanzado**: implementar ABAC usando atributos como `tenantId`, `timeOfDay` o `ipAddress`; integrar un PDP (Policy Decision Point) externo (OPA, XACML) para decisiones centralizadas y auditoría.",
+    "ejemplo_minimo": "```js\r\n// Express middleware simple de RBAC\r\nfunction authorize(requiredPermission) {\r\n  return (req, res, next) => {\r\n    const perms = req.user.permissions; // extraído del JWT\r\n    if (perms.includes(requiredPermission)) return next();\r\n    res.status(403).json({ error: 'Forbidden' });\r\n  };\r\n}\r\n\r\n// Uso en un endpoint\r\napp.delete('/users/:id', authorize('delete:user'), (req, res) => {\r\n  // lógica de borrado\r\n  res.sendStatus(204);\r\n});\r\n```",
+    "errores_comunes": "- **Asignar permisos directamente a usuarios** → dificulta el mantenimiento; usar roles.  \r\n- **Olvidar revocar tokens** después de cambiar roles → aplicar listas de revocación o tokens de corta vida.  \r\n- **Confiar solo en el cliente** para decidir acceso → siempre validar en el servidor.",
+    "estado_actual": "- **Fundamentos estables**: RBAC sigue siendo la práctica recomendada para la mayoría de los sistemas; la definición de roles y permisos es ampliamente soportada por frameworks (Spring Security, NestJS).  \r\n- **Práctica moderna**: ABAC está ganando adopción en entornos multitenant y zero‑trust; herramientas como Open Policy Agent (OPA) y AWS IAM Policy permiten políticas declarativas y auditoría centralizada.",
+    "ideas_clave": "1. **Roles** – conjuntos estáticos de permisos que se asignan a usuarios o cuentas de servicio.  \r\n2. **Permissions** – acciones concretas (p. ej. `read:order`, `delete:user`) que pueden ser concedidas o denegadas.  \r\n3. **RBAC (Role‑Based Access Control)** – modelo que vincula roles a permissions y usuarios a roles.  \r\n4. **ABAC (Attribute‑Based Access Control)** – modelo que evalúa atributos dinámicos (usuario, recurso, contexto) para decidir el acceso.",
+    "objetivo": "Utilizo la autorización para decidir **qué** operaciones puede ejecutar cada usuario o servicio dentro de una API. Resuelvo el problema de que, aunque la identidad esté verificada, no todos los clientes deben acceder a los mismos recursos; por ejemplo, un cliente “read‑only” no debe poder borrar datos. Aparece en cada punto donde expongo endpoints protegidos: controladores, microservicios y funciones serverless. Después de entenderla, puedo diseñar políticas de acceso coherentes, aplicar controles granulares y auditar quién hizo qué. No necesito preocuparme por autorización cuando el endpoint es público o cuando la lógica de negocio no depende de la identidad del solicitante.",
+    "preguntas_repaso": "1. ¿En qué situación un endpoint público no necesita autorización?  \r\n2. ¿Cómo se diferencia un permiso de un rol en RBAC?  \r\n3. ¿Qué ventaja aporta ABAC frente a RBAC en un entorno multitenant?  \r\n4. ¿Cuál es la respuesta HTTP estándar cuando la autorización falla?  \r\n5. ¿Por qué es importante revocar o expirar tokens después de cambiar los roles de un usuario?",
+    "ruta_estudio": "1. **Prerequisitos**: comprender autenticación (JWT, OAuth2) y conceptos básicos de HTTP (`401`, `403`).  \r\n2. **Fundamentos**: leer la guía de RBAC de OWASP, implementar roles y permisos en un proyecto simple.  \r\n3. **Intermedio**: explorar scopes y claims en tokens, integrar middleware de autorización en un framework elegido.  \r\n4. **Avanzado**: estudiar ABAC y políticas declarativas con OPA, practicar la separación de PDP y PEP, y configurar auditoría de decisiones."
+  },
+  "sections_missing": [],
+  "slug": "autorizacion",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/backend"
+  ],
+  "title": "Autorización",
+  "uid": "c_56N6B2BTGY",
+  "verification_marks": []
+}

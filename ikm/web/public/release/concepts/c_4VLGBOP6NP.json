@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "Requirements"
+  ],
+  "area_uid": "product-management",
+  "content_hash": "1c8959f7fc6a111abd6018fcf03a7e014537545110f53814b90ee88309d40ad8",
+  "numero": 12,
+  "related_uids": [
+    "c_PLSS7K466J",
+    "c_ZZNQZABFF3"
+  ],
+  "sections": {
+    "como_funciona": "1. **Recopilación** – Reúno información de usuarios, patrocinadores y regulaciones.  \r\n2. **Formalización** – Redacto cada requirement de forma clara, medible y verificable.  \r\n3. **Validación** – Los reviso con los stakeholders para confirmar que reflejan sus necesidades.  \r\n4. **Priorización** – Asigno valor de negocio y riesgo, definiendo el orden de implementación.  \r\n5. **Desglose** – Transformo los requirements en User Stories o tareas técnicas que alimentan el backlog.  \r\n6. **Seguimiento** – Durante la ejecución, comparo el trabajo realizado con los criterios de aceptación y actualizo el estado de cada requirement.",
+    "conexiones": "- **User Stories**: los requirements se desglosan en User Stories que el equipo de desarrollo implementa en sprints.  \r\n- **Scope**: el conjunto de requirements define el alcance del proyecto y sirve para controlar la expansión del mismo.  \r\n- **Deliverables**: cada deliverable debe cumplir con los requirements asociados, garantizando que el producto final satisface lo acordado.",
+    "detalles": "- **Básico**: identificar quiénes son los stakeholders y registrar sus expectativas en frases simples.  \r\n- **Intermedio**: aplicar criterios SMART (Specific, Measurable, Achievable, Relevant, Time‑bound) y crear una matriz de trazabilidad entre requirements y entregables.  \r\n- **Avanzado**: gestionar cambios mediante un proceso de control de versiones, integrar requisitos no funcionales (seguridad, rendimiento) y usar herramientas de gestión de requisitos para automatizar la trazabilidad y la generación de pruebas de aceptación.",
+    "ejemplo_minimo": "```json\r\n{\r\n  \"requirementId\": \"REQ-001\",\r\n  \"description\": \"El sistema debe permitir al usuario registrar una cuenta con email y contraseña.\",\r\n  \"type\": \"Functional\",\r\n  \"priority\": \"High\",\r\n  \"acceptanceCriteria\": [\r\n    \"El formulario valida formato de email.\",\r\n    \"La contraseña requiere al menos 8 caracteres.\"\r\n  ]\r\n}\r\n```",
+    "errores_comunes": "- **Ambigüedad**: redactar requisitos vagos genera interpretaciones distintas; evitarlo usando lenguaje preciso y medible.  \r\n- **Sobrecarga**: incluir demasiados detalles técnicos en los requirements; mantenerlos enfocados en el “qué”, no en el “cómo”.  \r\n- **Falta de trazabilidad**: no enlazar requisitos con entregables o pruebas; usar una matriz de trazabilidad para prevenirlo.  \r\n- **Ignorar cambios**: no actualizar los requirements cuando cambian las necesidades del negocio; establecer un proceso de gestión de cambios.",
+    "estado_actual": "- **Fundamentos estables**: la necesidad de definir qué debe entregarse, la alineación con el scope y la validación con stakeholders son prácticas consolidadas en la gestión de proyectos.  \r\n- **Práctica moderna**: la adopción de herramientas de gestión de requisitos (Jira, Azure DevOps, DOORS) y la integración continua de requisitos con pruebas automatizadas son tendencias actuales que mejoran la trazabilidad y la calidad del entregable.",
+    "ideas_clave": "1. **Qué debe entregarse**: descripción concreta del producto o servicio que el proyecto debe producir.  \r\n2. **Alineación con el alcance**: los requirements delimitan el scope y evitan la expansión no controlada.  \r\n3. **Base para estimación y planificación**: sirven para calcular esfuerzo, costo y calendario.  \r\n4. **Comunicación con stakeholders**: actúan como contrato verbal/escrito entre cliente y equipo.  \r\n5. **Criterio de aceptación**: cada requirement incluye condiciones que deben cumplirse para considerarse completado.",
+    "objetivo": "Utilizo los **requirements** para definir con claridad qué debe entregarse al cliente y al equipo, evitando malentendidos que retrasen el proyecto. Resuelvo el problema de ambigüedad en la planificación, garantizando que el alcance (scope) y los entregables (deliverables) estén alineados con las expectativas del negocio. Aparecen en la fase de iniciación y en la elaboración del plan de proyecto, donde sirvan de base para estimar tiempo, costo y recursos. Después de comprenderlos, puedo estructurar el backlog, priorizar el trabajo y validar cada incremento contra lo acordado. No necesito preocuparme por los requirements cuando el proyecto es puramente de mantenimiento interno sin requisitos externos definidos.",
+    "preguntas_repaso": "1. ¿Cómo ayuda la definición de requirements a controlar el scope de un proyecto?  \r\n2. ¿Qué diferencia hay entre un requirement y una User Story?  \r\n3. ¿Cuáles son los criterios clave para validar que un requirement está bien redactado?  \r\n4. ¿Qué consecuencias puede generar la falta de trazabilidad entre requirements y entregables?  \r\n5. ¿En qué situaciones es recomendable usar una herramienta de gestión de requisitos en lugar de una hoja de cálculo?",
+    "ruta_estudio": "1. **Prerequisitos**: comprender los conceptos de stakeholder, scope y entregables.  \r\n2. **Fundamentos**: estudiar técnicas de captura de requisitos (entrevistas, workshops) y criterios SMART.  \r\n3. **Herramientas**: aprender a usar un gestor de requisitos (p. ej., Jira) y a crear trazabilidad.  \r\n4. **Avanzado**: profundizar en requisitos no funcionales, gestión de cambios y automatización de pruebas de aceptación.  \r\n5. **Especialización**: explorar metodologías ágiles (Scrum, SAFe) y su relación con el backlog de requisitos."
+  },
+  "sections_missing": [],
+  "slug": "requirements",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/product-management"
+  ],
+  "title": "Requirements",
+  "uid": "c_4VLGBOP6NP",
+  "verification_marks": []
+}

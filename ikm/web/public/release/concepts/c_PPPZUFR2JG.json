@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "System Calls"
+  ],
+  "area_uid": "os-linux",
+  "content_hash": "b96a638597842ca9754a5a06b4d3af28977a43a570c3032ebb24d853b06c8f96",
+  "numero": 11,
+  "related_uids": [
+    "c_J7K4IRROGC",
+    "c_MOYKN3IWS5"
+  ],
+  "sections": {
+    "como_funciona": "1. El proceso prepara los argumentos y coloca el número de la system call en el registro `rax` (x86‑64).  \r\n2. Ejecuta la instrucción `syscall` (o `int 0x80` en arquitecturas antiguas).  \r\n3. El CPU cambia a modo kernel y el scheduler dirige la interrupción al handler correspondiente dentro del kernel.  \r\n4. El handler valida los argumentos, accede a recursos protegidos y ejecuta la operación solicitada (p. ej., abrir un archivo).  \r\n5. Al terminar, el kernel escribe el valor de retorno en `rax` y, si hubo error, coloca el código en `errno`.  \r\n6. El CPU vuelve a modo usuario y el proceso continúa con la siguiente instrucción, leyendo el resultado.",
+    "conexiones": "- **Filesystem**: `open`, `read` y `write` son system calls que permiten al proceso acceder al árbol de directorios gestionado por el VFS.  \r\n- **Process Management**: `fork`, `execve` y `waitpid` son llamadas que crean y controlan la vida de los procesos, vinculándose al scheduler del kernel.  \r\n- **Security**: `ptrace` y `seccomp` utilizan system calls para inspeccionar o filtrar otras llamadas, integrándose con el subsistema de control de acceso del kernel.",
+    "detalles": "- **Básico**: conocer las system calls más usadas (`read`, `write`, `open`, `close`, `fork`, `execve`).  \r\n- **Intermedio**: entender la tabla de system calls del kernel (`/proc/kallsyms` o `syscall_64.tbl`) y cómo se mapean a funciones internas (`do_sys_open`, `sys_clone`).  \r\n- **Avanzado**: manipular la tabla mediante módulos de kernel, interceptar llamadas con `ptrace` o `seccomp`, y crear nuevas system calls mediante `syscall_register`.  \r\n- **Seguridad**: `errno` permite a la aplicación reaccionar a fallos como permisos insuficientes o recursos agotados; el kernel verifica siempre los punteros de usuario para evitar vulnerabilidades.  \r\n- **Rendimiento**: cada cambio de modo implica overhead; por eso se usan técnicas como `vDSO` para operaciones de tiempo sin entrar al kernel.",
+    "ejemplo_minimo": "```c\r\n#include <unistd.h>\r\n#include <sys/syscall.h>\r\n#include <stdio.h>\r\n\r\nint main(void) {\r\n    const char *msg = \"Hola\\n\";\r\n    /* syscall número 1 = write en x86‑64 */\r\n    long ret = syscall(SYS_write, STDOUT_FILENO, msg, 5);\r\n    printf(\"write returned %ld\\n\", ret);\r\n    return 0;\r\n}\r\n```\r\nSalida típica:\r\n```\r\nHola\r\nwrite returned 5\r\n```\r\nEl programa llama directamente a la system call `write` mediante `syscall(2)` y muestra el número de bytes escritos.",
+    "errores_comunes": "- Pasar punteros no validados → kernel devuelve `EFAULT`.  \r\n- Usar número de llamada incorrecto para la arquitectura → `ENOSYS`.  \r\n- Olvidar cerrar descriptors → fuga de recursos; usar `close` siempre que sea posible.  \r\n- Ignorar `errno` → la aplicación puede continuar con datos corruptos.",
+    "estado_actual": "- **Fundamentos estables**: la tabla de system calls y la convención de número/registro son parte del ABI de Linux y cambian solo entre versiones mayores del kernel.  \r\n- **Práctica moderna**: se favorece el uso de bibliotecas de alto nivel (`glibc`) que envuelven las system calls y gestionan `errno` automáticamente; sin embargo, herramientas de diagnóstico (strace, perf) y contenedores de seguridad (`seccomp`) siguen interactuando directamente con la lista de llamadas del kernel.",
+    "ideas_clave": "1. **Interfaz de usuario‑kernel**: la única vía oficial para que un proceso solicite servicios del kernel.  \r\n2. **Número de llamada y argumentos**: cada system call está identificada por un número y recibe parámetros en registros o en la pila.  \r\n3. **Cambio de modo**: al invocar una system call el CPU pasa de modo usuario a modo kernel, ejecutando código privilegiado.  \r\n4. **Resultado y errno**: el kernel devuelve un valor (éxito o descriptor) y, en caso de error, establece `errno`.  \r\n5. **Mecanismo de retorno**: la ejecución vuelve al proceso en modo usuario con el control del flujo.",
+    "objetivo": "Utilizo las system calls para que un programa de espacio de usuario pueda solicitar al kernel que realice operaciones críticas como crear procesos, leer o escribir en archivos, o asignar memoria. Resuelvo el problema de la separación entre código de aplicación y recursos protegidos del sistema operativo, evitando que el programa acceda directamente al hardware o a estructuras internas del kernel. En mi día a día como ingeniero Linux senior, las system calls aparecen cada vez que depuro fallos de I/O, analizo consumo de recursos o implemento herramientas que necesitan interactuar con el núcleo. Después de comprenderlas, puedo diseñar scripts y binarios que usen la API del kernel de forma segura, o crear wrappers en C/Python que expongan funcionalidades avanzadas. Cuando utilizo únicamente comandos de alto nivel (por ejemplo `ls` o `systemd`), no necesito preocuparme por las system calls subyacentes.",
+    "preguntas_repaso": "1. ¿Qué ocurre en el CPU cuando un proceso ejecuta la instrucción `syscall`?  \r\n2. ¿Cómo se comunica el kernel con el proceso cuando una system call falla?  \r\n3. ¿Por qué es importante cerrar los descriptors de archivo después de usarlos?  \r\n4. ¿Qué ventaja ofrece `vDSO` respecto a una system call tradicional?  \r\n5. ¿Cómo podrías interceptar una system call específica para auditoría de seguridad?",
+    "ruta_estudio": "1. **Prerequisitos**: conocimientos de arquitectura de CPU (modos usuario/kernel), manejo de punteros en C y conceptos de procesos en Linux.  \r\n2. **Fundamentos**: leer `man 2 syscall`, experimentar con `strace` para observar llamadas reales.  \r\n3. **Intermedio**: explorar `/usr/include/asm/unistd.h` y la tabla `syscall_64.tbl` del kernel; escribir programas que usen `syscall(2)` directamente.  \r\n4. **Avanzado**: estudiar `ptrace(2)`, `seccomp(2)` y la creación de módulos que añadan nuevas system calls; analizar el código fuente del kernel en `kernel/sys.c`."
+  },
+  "sections_missing": [],
+  "slug": "system-calls",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/operating-systems-linux"
+  ],
+  "title": "System Calls",
+  "uid": "c_PPPZUFR2JG",
+  "verification_marks": []
+}

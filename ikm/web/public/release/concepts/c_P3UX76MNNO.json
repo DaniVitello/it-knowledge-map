@@ -1,0 +1,38 @@
+{
+  "aliases": [
+    "User Needs & Problems"
+  ],
+  "area_uid": "ux-ui",
+  "content_hash": "c42c2596baeeced0a3e1ff83e2ae48d53f294565b3a820d6086738c58e7ffbc6",
+  "numero": 3,
+  "related_uids": [
+    "c_7FPNVGV76Q",
+    "c_OPRQ4KKLEV",
+    "c_WM2AMCYFR6",
+    "c_YN4BSBEZRX",
+    "c_ZVUDKC7ITK"
+  ],
+  "sections": {
+    "como_funciona": "1. **Recopilación**: mediante entrevistas, encuestas o análisis de datos, recolecto declaraciones de usuarios que revelan necesidades y pain points.  \r\n2. **Agrupación**: organizo la información en categorías de objetivos y motivaciones, buscando patrones comunes.  \r\n3. **Priorización**: aplico criterios de impacto y frecuencia para decidir qué necesidades son críticas y qué pain points deben resolverse primero.  \r\n4. **Definición de requisitos**: traduzco los insights en historias de usuario o criterios de aceptación que guían el diseño.  \r\n5. **Validación**: pruebo prototipos con usuarios reales para confirmar que los problemas seleccionados se han mitigado y los objetivos se cumplen.",
+    "conexiones": "- **User Research**: provee los métodos y datos que revelan necesidades y problemas del usuario.  \r\n- **Personas**: sintetizan los insights de necesidades, objetivos y motivaciones en arquetipos utilizables por todo el equipo.  \r\n- **User Journeys**: visualizan cómo los pain points aparecen a lo largo del flujo, facilitando la detección de oportunidades de mejora.",
+    "detalles": "- **Básico**: identificar necesidades y pain points a través de preguntas abiertas; registrar en notas simples.  \r\n- **Intermedio**: usar técnicas como “Jobs to be Done” para mapear objetivos y motivaciones; crear matrices de priorización (ej. Impacto × Esfuerzo).  \r\n- **Avanzado**: combinar análisis cualitativo con métricas de comportamiento (p. ej. tasa de abandono) para cuantificar la gravedad de los pain points; generar roadmaps de producto alineados a motivaciones estratégicas.",
+    "ejemplo_minimo": "```json\r\n{\r\n  \"userNeed\": \"Consultar saldo rápidamente\",\r\n  \"painPoint\": \"Navegación profunda para llegar al balance\",\r\n  \"objective\": \"Ver el saldo en menos de 3 segundos\",\r\n  \"motivation\": \"Sentir control financiero al instante\"\r\n}\r\n```\r\nEste fragmento puede alimentar una historia de usuario: *Como usuario, quiero ver mi saldo con un solo toque para sentirme seguro de mi situación financiera*.",
+    "errores_comunes": "- **Confundir deseos con necesidades reales** – validar con pruebas antes de priorizar.  \r\n- **Ignorar pain points de bajo volumen pero alto impacto** – usar métricas de gravedad, no solo frecuencia.  \r\n- **Documentar sin asignar acción** – siempre traducir cada necesidad en un requisito de diseño concreto.",
+    "estado_actual": "- **Fundamentos estables**: la identificación de necesidades y pain points sigue siendo la base de cualquier proceso de diseño centrado en el usuario.  \r\n- **Práctica moderna**: la integración de datos de uso (analytics) con insights cualitativos permite una priorización más objetiva; herramientas de mapas de calor y grabaciones de sesión complementan la investigación tradicional.",
+    "ideas_clave": "1. **Necesidades** – lo que el usuario necesita para alcanzar sus metas.  \r\n2. **Pain points** – obstáculos o frustraciones que impiden al usuario lograr esas metas.  \r\n3. **Objetivos** – resultados concretos que el usuario persigue al usar el producto.  \r\n4. **Motivaciones** – razones emocionales o racionales que impulsan al usuario a buscar la solución.",
+    "objetivo": "Utilizo el concepto de **User Needs & Problems** para identificar qué es lo que realmente impulsa a los usuarios a buscar una solución y qué obstáculos encuentran en su camino. Resuelvo la incertidumbre de diseñar funcionalidades que no aportan valor, enfocándome en necesidades, puntos de dolor, objetivos y motivaciones. Aparece en la fase de descubrimiento y en la validación de ideas, cuando defino requisitos de producto o priorizo mejoras. Después de comprenderlo, puedo crear hipótesis de diseño, validar con pruebas y alinear al equipo en una visión centrada en el usuario. No es necesario profundizar en él cuando el producto ya está validado y las métricas de uso confirman que los problemas críticos están resueltos.",
+    "preguntas_repaso": "1. ¿Cómo diferencia un diseñador entre una necesidad y un deseo del usuario?  \r\n2. ¿Qué papel juegan los pain points al priorizar funcionalidades en un backlog?  \r\n3. ¿De qué manera una motivación puede influir en la definición de un objetivo de producto?  \r\n4. ¿Cuál es el beneficio de combinar datos cuantitativos con entrevistas cualitativas al identificar problemas de usuario?  \r\n5. ¿Cómo se traduce un insight de necesidad en una historia de usuario concreta?",
+    "ruta_estudio": "1. **Prerequisitos**: conceptos básicos de investigación de usuarios y técnicas de entrevista.  \r\n2. **Fundamento**: practicar la extracción de necesidades y pain points en estudios de caso reales.  \r\n3. **Intermedio**: aprender a priorizar con matrices de impacto/esfuerzo y a redactar historias de usuario.  \r\n4. **Avanzado**: combinar análisis cualitativo con métricas de comportamiento, y usar herramientas de visualización de journeys para comunicar soluciones."
+  },
+  "sections_missing": [],
+  "slug": "user-needs-problems",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/ux-ui"
+  ],
+  "title": "User Needs & Problems",
+  "uid": "c_P3UX76MNNO",
+  "verification_marks": []
+}

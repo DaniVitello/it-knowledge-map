@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "Color"
+  ],
+  "area_uid": "ux-ui",
+  "content_hash": "9f8590f70cf55d8630377b52b91a753c399958d438d0f3563696597b8fbddb8e",
+  "numero": 14,
+  "related_uids": [
+    "c_AEJ6QCIQ75",
+    "c_CLVNVR43CK",
+    "c_WI7XS25GM5"
+  ],
+  "sections": {
+    "como_funciona": "1. Defino una paleta base alineada con la identidad de la marca.  \r\n2. Selecciono colores de fondo y texto que cumplan ratios de contraste WCAG.  \r\n3. Asigno significados (por ejemplo, rojo = error) y los aplico a componentes críticos.  \r\n4. Creo variantes de cada color para los estados de interacción, asegurando que el contraste se mantenga en cada uno.  \r\n5. Valido el esquema con usuarios y herramientas de accesibilidad antes de implementarlo.",
+    "conexiones": "- **Visual Hierarchy:** El color refuerza la jerarquía visual al destacar elementos primarios sobre secundarios.  \r\n- **Typography:** El contraste entre color de texto y fondo afecta la legibilidad tipográfica.  \r\n- **Spacing & Layout:** Los bloques de color pueden crear separación visual que complementa el espaciado.",
+    "detalles": "- **Básico:** Elegir 1‑2 colores primarios, 1‑2 secundarios y neutros; aplicar la regla 60‑30‑10 para distribución visual.  \r\n- **Intermedio:** Generar tonos y matices (tints, shades) para ampliar la paleta sin romper la coherencia; usar herramientas de contraste para validar cada combinación.  \r\n- **Avanzado:** Implementar un sistema de tokens de color en el código, integrar pruebas automatizadas de contraste y adaptar la paleta a modos claros/ oscuros y a diferentes culturas.",
+    "ejemplo_minimo": "```css\r\n/* Paleta mínima */\r\n:root {\r\n  --color-primary: #0066FF;   /* azul de marca */\r\n  --color-primary-hover: #0052CC;\r\n  --color-error: #D32F2F;\r\n  --color-bg: #FFFFFF;\r\n  --color-text: #212121;\r\n}\r\n\r\n/* Uso en un botón */\r\n.button {\r\n  background: var(--color-primary);\r\n  color: var(--color-bg);\r\n}\r\n.button:hover {\r\n  background: var(--color-primary-hover);\r\n}\r\n.error-msg {\r\n  color: var(--color-error);\r\n}\r\n```",
+    "errores_comunes": "- **Contraste insuficiente:** usar colores que no cumplen WCAG; evitarlo probando con herramientas de contraste.  \r\n- **Paleta excesiva:** mezclar demasiados colores y perder consistencia; limitarse a 5‑7 tonos.  \r\n- **Significado inconsistente:** asignar el mismo color a estados diferentes; mantener una tabla de usos.",
+    "estado_actual": "Los fundamentos del uso del color (paletas, contraste, significado y estados) son estables y se aplican en la mayoría de los sistemas de diseño. La práctica moderna incorpora tokens de color en CSS/Design Tokens y pruebas automatizadas de accesibilidad, además de adaptar paletas a modos oscuros y a consideraciones culturales.",
+    "ideas_clave": "1. **Paletas** – Conjunto limitado de colores que refleja la marca y facilita la consistencia.  \r\n2. **Contraste** – Diferencia luminosa entre elementos que garantiza legibilidad y accesibilidad.  \r\n3. **Significado** – Asociación cultural o psicológica que comunica estados (éxito, error, alerta).  \r\n4. **Estados** – Variaciones cromáticas que indican interacción (hover, activo, deshabilitado).",
+    "objetivo": "Utilizo el color para guiar la atención, comunicar significado y reforzar la identidad visual de un producto digital. Resuelvo la ambigüedad de qué elemento es interactivo, cuál está activo o deshabilitado, y cómo priorizo la información en pantalla. Aparece en cada fase del diseño: investigación de usuarios, definición de la paleta, creación de componentes y pruebas de usabilidad. Después de comprender el color, puedo diseñar sistemas de diseño consistentes, validar accesibilidad y adaptar la marca a diferentes contextos. Cuando el producto ya tiene una guía de estilo aprobada y la accesibilidad está certificada, no es necesario volver a profundizar en la selección cromática.",
+    "preguntas_repaso": "1. ¿Cómo determina una paleta de colores la consistencia visual de un producto?  \r\n2. ¿Qué ratio de contraste mínimo exige WCAG para texto normal?  \r\n3. ¿Por qué es importante asignar significados consistentes a colores como rojo o verde?  \r\n4. ¿Cómo se gestionan los colores de estado sin perder contraste?  \r\n5. ¿Qué ventajas aporta el uso de Design Tokens para el color en un sistema de diseño?",
+    "ruta_estudio": "1. Prerrequisitos: principios básicos de percepción visual y normas WCAG de contraste.  \r\n2. Fundamentos: crear y aplicar paletas, entender significado cultural del color.  \r\n3. Intermedio: diseñar variantes de estado y validar contraste en diferentes dispositivos.  \r\n4. Avanzado: implementar tokens de color, pruebas automatizadas y adaptación a modo oscuro y a mercados internacionales."
+  },
+  "sections_missing": [],
+  "slug": "color",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/ux-ui"
+  ],
+  "title": "Color",
+  "uid": "c_OYXEXTPWLS",
+  "verification_marks": []
+}

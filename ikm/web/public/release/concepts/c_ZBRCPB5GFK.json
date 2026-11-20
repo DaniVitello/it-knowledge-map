@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "Design Systems"
+  ],
+  "area_uid": "ux-ui",
+  "content_hash": "07250b1061d11b6ce5cf9bd1efbf3ae8f3fd7ea1d8e114a00311adc398cf9aa4",
+  "numero": 16,
+  "related_uids": [
+    "c_FIPB4YV5WK",
+    "c_JPHEZJIFHI",
+    "c_UAIG2N6OVP"
+  ],
+  "sections": {
+    "como_funciona": "1. Defino los tokens que describen la identidad visual del producto.  \r\n2. Creo componentes (botones, tarjetas, formularios) que consumen esos tokens.  \r\n3. Agrupo componentes en patrones (por ejemplo, “lista de resultados”) que cubren flujos de usuario.  \r\n4. Documentó reglas de uso (por ejemplo, “el botón primario solo se usa para la acción principal”).  \r\n5. Cuando diseño una pantalla, selecciono patrones y componentes según las reglas, garantizando consistencia y velocidad.",
+    "conexiones": "- **Componentización:** el Design System provee los componentes que la estrategia de componentización reutiliza en la arquitectura de la UI.  \r\n- **Arquitectura Frontend:** los tokens y componentes del Design System se alinean con la capa de presentación de la arquitectura frontend, facilitando la consistencia entre diseño y código.  \r\n- **UI Components:** los componentes del Design System son un subconjunto especializado de UI Components, con la diferencia de estar gobernados por un conjunto de reglas y tokens comunes.",
+    "detalles": "- **Básico:** Identificar los tokens esenciales (color primario, tipografía base) y crear un pequeño set de componentes (botón, input).  \r\n- **Intermedio:** Expandir el catálogo de componentes, introducir variantes (estado disabled, tamaños) y definir patrones de interacción (modal, tabla).  \r\n- **Avanzado:** Automatizar la generación de código a partir de los tokens, integrar el Design System con la arquitectura frontend (por ejemplo, Storybook) y establecer procesos de gobernanza para su evolución continua.",
+    "ejemplo_minimo": "```json\r\n// tokens.json\r\n{\r\n  \"colorPrimary\": \"#0066FF\",\r\n  \"spacingSmall\": \"8px\",\r\n  \"fontBase\": \"Roboto, sans-serif\"\r\n}\r\n```\r\n\r\n```tsx\r\n// Button.tsx (React)\r\nimport tokens from './tokens.json';\r\n\r\nexport const Button = ({label}) => (\r\n  <button style={{\r\n    backgroundColor: tokens.colorPrimary,\r\n    padding: tokens.spacingSmall,\r\n    fontFamily: tokens.fontBase,\r\n    color: '#fff',\r\n    border: 'none',\r\n    borderRadius: '4px'\r\n  }}>\r\n    {label}\r\n  </button>\r\n);\r\n```",
+    "errores_comunes": "- **Crear componentes sin basarse en tokens:** genera incoherencia visual; evitarlo manteniendo siempre la referencia a los tokens.  \r\n- **Sobrecargar el sistema con variantes innecesarias:** dificulta su mantenimiento; limitar variantes a casos de uso reales.  \r\n- **Ignorar las reglas de uso:** lleva a decisiones arbitrarias; documentar y revisar reglas con todo el equipo.",
+    "estado_actual": "**Fundamentos estables:** la idea de tokens, componentes y patrones como bloques reutilizables está consolidada en la práctica de diseño de productos.  \r\n**Práctica moderna:** la integración de Design Systems con herramientas de desarrollo (Storybook, Figma Tokens) y la automatización de la sincronización entre diseño y código son tendencias ampliamente adoptadas.",
+    "ideas_clave": "1. **Tokens** – valores atómicos (colores, espaciado, tipografía) que se usan como fuente única de verdad.  \r\n2. **Componentes** – bloques UI reutilizables construidos a partir de tokens.  \r\n3. **Patrones** – combinaciones de componentes que resuelven problemas de interacción comunes.  \r\n4. **Reglas** – guías de uso que dictan cuándo y cómo aplicar tokens, componentes y patrones.",
+    "objetivo": "Utilizo un Design System para crear interfaces consistentes y escalables sin reinventar cada elemento visual. Resuelvo el problema de la incoherencia visual y la sobrecarga de decisiones de diseño cuando trabajo en productos con múltiples pantallas y equipos. Aparece en mi día a día al definir la paleta de colores, tipografías y componentes reutilizables que guiarán a los desarrolladores y a otros diseñadores. Después de entenderlo, puedo estructurar la UI de forma modular, acelerar la entrega de funcionalidades y mantener la calidad a lo largo del tiempo. No necesito preocuparme por el Design System cuando el producto es un prototipo rápido o una prueba de concepto aislada que no será mantenida.",
+    "preguntas_repaso": "1. ¿Qué problema de incoherencia visual resuelve un Design System en un producto con varios equipos?  \r\n2. ¿Cómo se relacionan los tokens con los componentes dentro del sistema?  \r\n3. ¿Cuál es la diferencia entre un componente y un patrón en un Design System?  \r\n4. ¿Qué riesgo implica crear variantes de componentes sin validar su necesidad real?  \r\n5. ¿De qué manera la integración con Storybook mejora la gobernanza de un Design System?",
+    "ruta_estudio": "1. **Prerequisitos:** fundamentos de UX research, principios de diseño visual y nociones básicas de HTML/CSS.  \r\n2. **Fundamentos:** aprender a crear y documentar tokens; construir componentes básicos en una herramienta de diseño (Figma, Sketch).  \r\n3. **Intermedio:** definir patrones de interacción y reglas de uso; usar Storybook para documentar componentes.  \r\n4. **Avanzado:** integrar el Design System con pipelines de CI/CD, automatizar la exportación de tokens a código y establecer procesos de gobernanza (review, versionado)."
+  },
+  "sections_missing": [],
+  "slug": "design-systems",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/ux-ui"
+  ],
+  "title": "Design Systems",
+  "uid": "c_ZBRCPB5GFK",
+  "verification_marks": []
+}

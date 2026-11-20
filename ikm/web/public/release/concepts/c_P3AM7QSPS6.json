@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "Wireframing"
+  ],
+  "area_uid": "ux-ui",
+  "content_hash": "cb623758cee15b09ff61fa90b8d98c6cee345016cd5db558feadea7ddb2c386b",
+  "numero": 10,
+  "related_uids": [
+    "c_36FC2H5MMW",
+    "c_IL3BOUYPJN"
+  ],
+  "sections": {
+    "como_funciona": "1. Reúno los requisitos funcionales y de negocio.  \r\n2. Esbozo en papel o herramienta digital los bloques principales siguiendo la idea 1 del esqueleto.  \r\n3. Ajusto tamaños y alineaciones para reflejar la jerarquía (idea 2).  \r\n4. Añado anotaciones que describen acciones y transiciones (idea 3).  \r\n5. Reviso con el equipo; si algo no cuadra, modifico el esquema manteniendo la simplicidad (idea 4).  \r\n6. Repetimos el ciclo hasta obtener un consenso rápido antes de pasar al prototipo.",
+    "conexiones": "- **Interaction Design**: el wireframe define los puntos de interacción que luego se detallan en los patrones de Interaction Design.  \r\n- **Prototyping**: los wireframes sirven como base para crear prototipos navegables que prueban la usabilidad antes del desarrollo.  \r\n- **Information Architecture**: la organización de bloques en un wireframe refleja la estructura de la Information Architecture del producto.",
+    "detalles": "- **Básico**: uso de papel y lápiz o herramientas de arrastrar‑y‑soltar (ej. Balsamiq). Se centra en bloques y texto placeholder.  \r\n- **Intermedio**: incorporación de anotaciones de interacción y de métricas de usabilidad (p. ej. tiempo estimado de tarea). Se empieza a usar rejillas para alinear componentes.  \r\n- **Avanzado**: wireframes interactivos con enlaces navegables, componentes reutilizables y documentación de decisiones de diseño. Se integran con sistemas de diseño para asegurar consistencia futura.",
+    "ejemplo_minimo": "```html\r\n<!-- Wireframe simple de una página de login -->\r\n<div class=\"wireframe\">\r\n  <header style=\"height:60px; background:#eee;\">Logo</header>\r\n  <main style=\"padding:20px;\">\r\n    <label>Usuario</label><br>\r\n    <input type=\"text\" placeholder=\"ejemplo@dominio.com\"><br><br>\r\n    <label>Contraseña</label><br>\r\n    <input type=\"password\" placeholder=\"••••••\"><br><br>\r\n    <button>Acceder</button>\r\n  </main>\r\n  <footer style=\"height:40px; background:#eee;\">Enlaces de ayuda</footer>\r\n</div>\r\n```",
+    "errores_comunes": "- Dibujar con demasiados detalles visuales; evita usar colores o tipografías reales.  \r\n- Ignorar la jerarquía y colocar todos los elementos al mismo nivel; prioriza la información clave.  \r\n- No validar con usuarios o stakeholders; solicita feedback temprano y frecuente.  \r\n- Creer que el wireframe es un entregable final; úsalo solo como paso intermedio.",
+    "estado_actual": "**Fundamentos estables**: la práctica de separar estructura de presentación y de validar flujos antes del diseño visual sigue siendo la base del proceso de diseño de productos.  \r\n**Práctica moderna**: se prefiere el uso de herramientas colaborativas en la nube que permiten comentarios en tiempo real y la generación automática de especificaciones para desarrolladores. Además, la integración de wireframes con sistemas de diseño facilita la transición a prototipos de alta fidelidad.",
+    "ideas_clave": "1. **Definir la estructura de contenido**: se decide qué bloques (cabecera, cuerpo, barra lateral, pie) aparecen y en qué orden.  \r\n2. **Establecer la jerarquía visual**: se asignan tamaños y posiciones relativas para guiar la atención del usuario.  \r\n3. **Mapear los flujos de interacción**: se indican los puntos de entrada y salida de cada pantalla mediante enlaces o anotaciones.  \r\n4. **Mantener la simplicidad**: se usan formas básicas (rectángulos, líneas) y texto placeholder para evitar distracciones visuales.  \r\n5. **Iterar rápidamente**: se crean versiones ligeras que pueden modificarse en minutos según feedback.",
+    "objetivo": "Utilizo el wireframing para estructurar la arquitectura de una pantalla antes de invertir tiempo en el diseño visual. Resuelvo la incertidumbre sobre la disposición de los elementos, la jerarquía de información y los flujos de interacción, lo que me permite validar conceptos con stakeholders y usuarios de forma rápida y económica. Aparece en la fase inicial de cualquier proyecto de producto, cuando defino la ruta de navegación y los contenedores principales. Después de dominar el wireframing, puedo pasar a crear prototipos de alta fidelidad o a definir especificaciones de interacción detalladas. Cuando el layout ya está aprobado y los requisitos son estables, ya no es necesario volver a wireframear y puedo centrarme en los detalles visuales y de animación.",
+    "preguntas_repaso": "1. ¿Qué problema principal resuelve el wireframing en el proceso de diseño de producto?  \r\n2. ¿Cómo se relaciona la jerarquía visual del wireframe con la experiencia del usuario?  \r\n3. ¿Cuál es la diferencia entre un wireframe de baja fidelidad y uno interactivo?  \r\n4. ¿Qué error suele surgir al incluir demasiados detalles visuales y cómo se evita?  \r\n5. ¿De qué manera el wireframe alimenta al prototyping y al Interaction Design?",
+    "ruta_estudio": "1. **Prerequisitos**: conceptos básicos de usabilidad, principios de layout y manejo de herramientas de dibujo digital.  \r\n2. **Fundamento**: práctica de sketching rápido y creación de wireframes de baja fidelidad.  \r\n3. **Intermedio**: aprendizaje de anotaciones de interacción y uso de rejillas para alineación consistente.  \r\n4. **Avanzado**: dominio de herramientas colaborativas (Figma, Adobe XD) y generación de wireframes interactivos vinculados a sistemas de diseño.  \r\n5. **Especialización**: integración con pruebas de usabilidad temprana y documentación de decisiones de diseño para equipos de desarrollo."
+  },
+  "sections_missing": [],
+  "slug": "wireframing",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/ux-ui"
+  ],
+  "title": "Wireframing",
+  "uid": "c_P3AM7QSPS6",
+  "verification_marks": []
+}

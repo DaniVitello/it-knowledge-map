@@ -1,0 +1,47 @@
+{
+  "aliases": [
+    "HTTPS / TLS"
+  ],
+  "area_uid": "networking",
+  "content_hash": "d7103741dc363c30bb056ad5070a808579052873719045b272521505a63fcfd4",
+  "numero": 17,
+  "related_uids": [
+    "c_2SYCRXYECS",
+    "c_CSHCCYYZWJ",
+    "c_F4IWLYRXT4",
+    "c_IRKTW3AVGM",
+    "c_KMBVXYCQPO",
+    "c_KUZUIAJVV7",
+    "c_USKUN3IVRZ"
+  ],
+  "sections": {
+    "como_funciona": "1. El cliente envía **ClientHello** con versiones TLS soportadas y suites criptográficas.  \r\n2. El servidor responde con **ServerHello**, elige la suite y envía su certificado (y opcionalmente cadena de CA).  \r\n3. El cliente verifica el certificado contra su almacén de confianza; si falla, la conexión se aborta.  \r\n4. Se genera una clave pre‑maestra (RSA, Diffie‑Hellman o ECDHE) y ambos lados derivan claves de sesión.  \r\n5. Con esas claves, se cifran todos los mensajes HTTP posteriores; los encabezados y cookies viajan dentro del túnel TLS.  \r\n6. Si la arquitectura incluye terminación TLS, el dispositivo perimetral realiza los pasos 1‑5 y luego re‑cifra hacia el backend.",
+    "conexiones": "- **Security Engineering:** HTTPS/TLS es una capa esencial que implementa los principios de confidencialidad e integridad definidos en la ingeniería de seguridad.  \r\n- **Firewalls:** Los firewalls pueden terminar TLS para aplicar políticas de filtrado y detección de amenazas dentro del tráfico cifrado.  \r\n- **WebSockets:** Cuando se usan sobre HTTPS (`wss://`), la conexión hereda la protección TLS, garantizando que los mensajes en tiempo real también estén cifrados.",
+    "detalles": "- **Básico:** TLS 1.2 y 1.3 son los estándares de facto; la diferencia principal es que TLS 1.3 elimina cifrados obsoletos y reduce la latencia del handshake.  \r\n- **Intermedio:** Configuración de **cipher suites** fuertes (por ejemplo, `TLS_AES_128_GCM_SHA256`) y desactivación de algoritmos débiles como RC4 o 3DES.  \r\n- **Avanzado:** Uso de **OCSP stapling** para validar revocación sin consultas externas, y **TLS session resumption** (tickets o IDs) para acelerar reconexiones.  \r\n- **Operación:** Herramientas como `openssl s_client`, `curl -v https://host` o `wireshark` permiten inspeccionar el handshake y detectar fallos de certificado o incompatibilidades de versiones.",
+    "ejemplo_minimo": "```bash\r\n# Verificar handshake y certificado de example.com\r\nopenssl s_client -connect example.com:443 -servername example.com </dev/null\r\n```\r\nSalida (resumida):\r\n```\r\nCONNECTED(00000003)\r\n...\r\nCertificate chain\r\n 0 s:/CN=example.com\r\n   i:/C=US/O=Let's Encrypt/CN=R3\r\n...\r\nVerify return code: 0 (ok)\r\n```\r\nEl cliente ha establecido TLS, validado la cadena y está listo para enviar HTTP cifrado.",
+    "errores_comunes": "- **Usar versiones TLS obsoletas (1.0/1.1).** Evitar configurándolas explícitamente en los servidores.  \r\n- **Olvidar incluir la cadena intermedia de CA.** Corrige añadiendo el bundle de certificados.  \r\n- **No validar revocación (OCSP/CRL).** Habilita OCSP stapling o verifica CRL periódicamente.  \r\n- **Confundir terminación TLS con inspección profunda.** Asegúrate de que el dispositivo perimetral tenga certificados válidos para el backend.",
+    "estado_actual": "- **Fundamentos estables:** TLS 1.2 sigue siendo ampliamente soportado; la arquitectura de handshake basada en certificados X.509 es madura.  \r\n- **Práctica moderna:** TLS 1.3 está adoptado por la mayoría de navegadores y servidores; se prefiere por su menor latencia y mayor seguridad. La terminación TLS en load balancers y WAF es una práctica estándar para inspección de tráfico cifrado.",
+    "ideas_clave": "1. **Negociación de TLS (handshake)** – establece cifrado y autentica al servidor mediante certificados X.509.  \r\n2. **Cifrado de la carga útil HTTP** – protege encabezados, cookies y cuerpo contra escuchas y manipulaciones.  \r\n3. **Validación de la cadena de confianza** – el cliente verifica que el certificado sea emitido por una CA confiable y no esté revocado.  \r\n4. **Terminación TLS en dispositivos perimetrales** – firewalls o load balancers pueden desencriptar para inspección y volver a cifrar.",
+    "objetivo": "Utilizo HTTPS/TLS para proteger la comunicación HTTP entre clientes y servidores, evitando que terceros intercepten o alteren los datos. Resuelvo problemas de confidencialidad e integridad que aparecen cuando se transportan credenciales, datos personales o cualquier información sensible por Internet. En mi día a día como ingeniero de redes senior, lo empleo al validar la cadena de certificados, diagnosticar fallos de handshake y configurar dispositivos perimetrales que inspeccionan tráfico cifrado. Después de comprender cómo funciona el cifrado y la negociación de claves, puedo diseñar políticas de seguridad, depurar errores de conexión TLS y decidir cuándo delegar la terminación TLS a un load balancer o a un WAF. No necesito preocuparme cuando el tráfico es interno y no sale de un entorno controlado o cuando se usan protocolos que no requieren cifrado, como DNS interno sin DNSSEC.",
+    "preguntas_repaso": "1. ¿Qué pasos del handshake TLS garantizan la autenticación del servidor?  \r\n2. ¿Cómo afecta la elección de una cipher suite a la seguridad y latencia de la conexión?  \r\n3. ¿Qué ventaja ofrece TLS 1.3 respecto a TLS 1.2 en entornos de alta concurrencia?  \r\n4. ¿Por qué es importante incluir la cadena intermedia de CA en la configuración del servidor?  \r\n5. ¿En qué casos un firewall debería terminar TLS y cuáles son los riesgos si no se gestiona correctamente?",
+    "ruta_estudio": "1. **Prerequisitos:** TCP/IP, modelo OSI, conceptos de criptografía simétrica y asimétrica, y fundamentos de HTTP/1.1.  \r\n2. **Fundamentos TLS:** Estudiar el RFC 5246 (TLS 1.2) y RFC 8446 (TLS 1.3), enfocándose en el handshake y la derivación de claves.  \r\n3. **Herramientas de diagnóstico:** `openssl`, `curl`, `wireshark` y `ssllabs.com` para pruebas de configuración.  \r\n4. **Configuración segura:** Aprender a seleccionar cipher suites, habilitar OCSP stapling y desactivar versiones antiguas.  \r\n5. **Arquitecturas avanzadas:** Terminación TLS en load balancers, uso de TLS mutuo (client‑cert authentication) y despliegue de certificados automatizados con ACME/Let’s Encrypt."
+  },
+  "sections_missing": [],
+  "slug": "https-tls",
+  "sources": [
+    "https://host`"
+  ],
+  "sources_detail": [
+    {
+      "title": null,
+      "url": "https://host`"
+    }
+  ],
+  "tags": [
+    "concepto",
+    "it/networking-internet"
+  ],
+  "title": "HTTPS / TLS",
+  "uid": "c_D2IZ67V6IU",
+  "verification_marks": []
+}

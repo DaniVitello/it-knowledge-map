@@ -1,0 +1,38 @@
+{
+  "aliases": [
+    "Product Strategy at Scale"
+  ],
+  "area_uid": "product-management",
+  "content_hash": "660a21d2291c46843339b83cb3d54f018e7c7fe39cde25586df20dc4e32914b9",
+  "numero": 25,
+  "related_uids": [
+    "c_4ZEK2ZN5ZJ",
+    "c_5N3OJBWASE",
+    "c_5SYU65SFA4",
+    "c_6XO5SGEQV5",
+    "c_QM2SFYU3HE"
+  ],
+  "sections": {
+    "como_funciona": "1. **Mapeo del portafolio**: recolecto datos de rendimiento, usuarios y costos de todos los productos existentes.  \r\n2. **Identificación de plataformas comunes**: detecto funcionalidades o infraestructuras que pueden servir a varios productos.  \r\n3. **Definición de la visión de crecimiento**: establezco una declaración de futuro que conecta la Value Proposition con oportunidades de mercado.  \r\n4. **Aplicación de criterios de priorización**: evalúo cada producto/plataforma contra los criterios y genero una lista ordenada.  \r\n5. **Construcción del roadmap estratégico**: distribuyo las iniciativas priorizadas en un horizonte de 2‑5 años, asignando recursos y hitos clave.  \r\n6. **Revisión continua**: cada trimestre reviso métricas y ajusto la estrategia según datos reales y cambios de contexto.",
+    "conexiones": "- **Value Proposition**: la estrategia a escala debe reforzar la propuesta de valor, asegurando que cada inversión aumente el beneficio percibido por el cliente.  \r\n- **Product Vision**: la visión del producto sirve como brújula que orienta la selección de plataformas y la composición del portafolio.  \r\n- **Product Roadmap**: el roadmap traduce la estrategia de largo plazo en hitos temporales y asignación de recursos operativos.",
+    "detalles": "- **Básico**: entender la diferencia entre producto y plataforma; crear un simple mapa de productos.  \r\n- **Intermedio**: diseñar un modelo de priorización (por ejemplo, scoring de impacto × costo) y vincularlo a la visión de negocio.  \r\n- **Avanzado**: implementar una governance de portafolio que incluya comités de inversión, métricas de salud del portafolio y simulaciones de escenarios de crecimiento.",
+    "ejemplo_minimo": "```json\r\n{\r\n  \"portfolio\": [\r\n    {\r\n      \"name\": \"App móvil\",\r\n      \"type\": \"producto\",\r\n      \"platforms\": [\"AuthService\", \"AnalyticsEngine\"],\r\n      \"score\": 78\r\n    },\r\n    {\r\n      \"name\": \"API de pagos\",\r\n      \"type\": \"plataforma\",\r\n      \"platforms\": [],\r\n      \"score\": 92\r\n    }\r\n  ],\r\n  \"vision\": \"Ser la única solución de pagos integrada en apps de consumo en LATAM\",\r\n  \"roadmap\": [\r\n    { \"quarter\": \"Q1‑2025\", \"initiative\": \"Escalar AuthService a 5 regiones\" },\r\n    { \"quarter\": \"Q2‑2025\", \"initiative\": \"Lanzar versión premium de la App móvil\" }\r\n  ]\r\n}\r\n```",
+    "errores_comunes": "- **Confundir producto con plataforma** – Evitarlo definiendo claramente el nivel de reutilización y el público objetivo.  \r\n- **Priorizar solo por ingresos actuales** – Incluir métricas de potencial de crecimiento y alineación estratégica.  \r\n- **No revisar la estrategia** – Establecer ciclos de revisión trimestrales para ajustar a datos reales.",
+    "estado_actual": "- **Fundamentos estables**: la gestión de portafolios, la identificación de plataformas y la priorización basada en valor siguen siendo prácticas consolidadas.  \r\n- **Práctica moderna**: uso de herramientas de visualización de roadmaps dinámicos y de análisis de datos en tiempo real para alimentar la toma de decisiones estratégicas.",
+    "ideas_clave": "1. **Portfolio como unidad de decisión** – Trato el conjunto de productos y plataformas como un portafolio que debe optimizarse en conjunto.  \r\n2. **Plataformas como habilitadores de crecimiento** – Identifico componentes reutilizables que permiten escalar rápidamente nuevas ofertas.  \r\n3. **Visión de largo plazo** – Defino metas estratégicas que guían inversiones más allá de los ciclos de entrega inmediatos.  \r\n4. **Alineación con la Value Proposition** – Cada iniciativa del portafolio debe reforzar la propuesta de valor central de la empresa.  \r\n5. **Mecanismo de priorización** – Uso criterios claros (impacto, costo, riesgo) para decidir qué productos escalan y cuáles se descontinúan.",
+    "objetivo": "Utilizo la **Product Strategy at Scale** para orientar la dirección de un portafolio de productos y plataformas cuando la empresa busca crecimiento sostenido y decisiones de largo plazo. Resuelvo la dificultad de alinear múltiples líneas de negocio bajo una visión común, priorizando inversiones que generen mayor valor y reduciendo la fragmentación de esfuerzos. Aparece en mi día a día al definir qué productos se escalan, cuáles se retiran y cómo se estructuran los equipos alrededor de plataformas compartidas. Después de entenderla, puedo diseñar roadmaps coherentes, negociar recursos con stakeholders y medir el impacto de las decisiones estratégicas. No necesito preocuparme cuando gestiono un único producto con un horizonte corto y recursos limitados.",
+    "preguntas_repaso": "1. ¿Cómo diferencia una plataforma de un producto dentro de un portafolio?  \r\n2. ¿Qué criterios utilizas para priorizar iniciativas en una Product Strategy at Scale?  \r\n3. ¿De qué manera la Value Proposition influye en la selección de plataformas?  \r\n4. ¿Cuál es el ciclo recomendado para revisar y ajustar la estrategia a escala?  \r\n5. ¿Cómo se traduce la visión de producto en un roadmap estratégico?",
+    "ruta_estudio": "1. **Prerequisitos**: comprender Product Vision, Value Proposition y fundamentos de gestión de roadmaps.  \r\n2. **Fundamentos**: estudiar modelos de portafolio (BCG, GE/McKinsey) y conceptos de plataforma.  \r\n3. **Intermedio**: practicar scoring de priorización y crear un roadmap de 2‑3 años.  \r\n4. **Avanzado**: implementar governance de portafolio, usar dashboards de métricas y ejecutar simulaciones de escenarios de crecimiento."
+  },
+  "sections_missing": [],
+  "slug": "product-strategy-at-scale",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/product-management"
+  ],
+  "title": "Product Strategy at Scale",
+  "uid": "c_UQ26LMCZYY",
+  "verification_marks": []
+}

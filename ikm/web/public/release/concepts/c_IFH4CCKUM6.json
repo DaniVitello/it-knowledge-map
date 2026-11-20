@@ -1,0 +1,43 @@
+{
+  "aliases": [
+    "HTML"
+  ],
+  "area_uid": "frontend",
+  "content_hash": "766c93ce24d1268cae710af7364d10f1df5289fe2b18bca1e9c8bf743cbcbe97",
+  "numero": 2,
+  "related_uids": [
+    "c_HRF35BCROZ",
+    "c_UTVABXNLDY",
+    "c_ZIBCUCIHW3"
+  ],
+  "sections": {
+    "como_funciona": "1. El navegador recibe el archivo `.html` y lo parsea, creando el **DOM** a partir de la estructura de elementos.  \r\n2. Cada elemento se interpreta según su tipo; por ejemplo, `<img>` genera un nodo de imagen que carga el recurso indicado en `src`.  \r\n3. Los atributos se asocian al nodo correspondiente, permitiendo que CSS lo seleccione (`class`, `id`) o que JavaScript lo manipule (`data-*`).  \r\n4. La semántica guía al motor de renderizado para aplicar comportamientos por defecto (p. ej., `<nav>` recibe un rol de navegación).  \r\n5. El árbol resultante se pinta en pantalla, y a partir de ahí CSS y JavaScript pueden intervenir.",
+    "conexiones": "- **CSS**: los atributos `class` y `id` definidos en HTML son los selectores principales que permite a CSS aplicar estilos visuales.  \r\n- **Layout**: la estructura semántica de HTML determina los contenedores que CSS Grid o Flexbox utilizan para distribuir el espacio en la página.  \r\n- **DOM**: el árbol de nodos que el navegador crea a partir del HTML es la base sobre la que JavaScript interactúa para modificar dinámicamente la interfaz.",
+    "detalles": "- **Básico** – Declaración del `<!DOCTYPE html>`, estructura mínima (`<html>`, `<head>`, `<body>`), uso de etiquetas de texto y contenedores.  \r\n- **Intermedio** – Introducción de formularios (`<form>`, `<input>`), multimedia (`<video>`, `<audio>`), y atributos globales (`class`, `style`, `title`).  \r\n- **Avanzado** – Uso de elementos HTML5 semánticos (`<article>`, `<section>`, `<aside>`), atributos ARIA para accesibilidad, y técnicas de carga diferida (`loading=\"lazy\"`).",
+    "ejemplo_minimo": "```html\r\n<!DOCTYPE html>\r\n<html lang=\"es\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <title>Ejemplo básico</title>\r\n</head>\r\n<body>\r\n  <h1>Hola Mundo</h1>\r\n  <p>Este es un párrafo de ejemplo.</p>\r\n</body>\r\n</html>\r\n```",
+    "errores_comunes": "- Olvidar cerrar etiquetas obligatorias → el DOM se rompe; usar un validador HTML evita el problema.  \r\n- Usar `<div>` en lugar de etiquetas semánticas → pérdida de significado para SEO y accesibilidad; elegir la etiqueta que describa la función del contenido.  \r\n- Colocar atributos en elementos que no los soportan → comportamiento inesperado; consultar la especificación de cada elemento.",
+    "estado_actual": "- **Fundamentos estables**: la sintaxis básica de etiquetas, atributos y la estructura de documento (`<!DOCTYPE html>`) se mantienen sin cambios desde HTML5.  \r\n- **Práctica moderna**: el uso de etiquetas semánticas y atributos de accesibilidad (ARIA) es recomendado para mejorar la usabilidad y el posicionamiento. Los navegadores actuales soportan carga diferida de recursos y la integración estrecha con CSS Grid y Flexbox para layout.",
+    "ideas_clave": "1. **Estructura** – Un documento HTML se compone de una jerarquía de elementos anidados que forman el árbol del documento.  \r\n2. **Elementos** – Cada etiqueta (`<header>`, `<section>`, `<p>`, etc.) representa una pieza de contenido con un propósito específico.  \r\n3. **Atributos** – Los atributos (`class`, `id`, `src`, `alt`, …) añaden información adicional a los elementos y permiten su identificación y configuración.  \r\n4. **Semántica** – El uso de etiquetas semánticas comunica el significado del contenido tanto a los navegadores como a los lectores de pantalla y motores de búsqueda.",
+    "objetivo": "Utilizo HTML para describir la estructura lógica de una página web. Resuelvo el problema de organizar contenido textual, imágenes y enlaces de forma que el navegador pueda interpretarlos y mostrarlos. En mi día a día como desarrollador Frontend, HTML es el punto de partida de cualquier proyecto: sin una base estructurada no puedo aplicar estilos ni añadir interactividad. Cuando entiendo cómo se definen los elementos y sus atributos, puedo crear componentes reutilizables y comunicarme con CSS y JavaScript de manera predecible. Después de dominar HTML, paso a diseñar la presentación visual con CSS y a manipular la página mediante el DOM. En los casos en que solo consumo una API o trabajo exclusivamente con componentes ya renderizados, no necesito preocuparme por los detalles de la marca HTML.",
+    "preguntas_repaso": "1. ¿Cuál es la diferencia entre una etiqueta estructural y una etiqueta semántica en HTML?  \r\n2. ¿Cómo afecta el atributo `id` a la interacción entre HTML y CSS?  \r\n3. ¿Qué ocurre en el navegador cuando se omite el `<!DOCTYPE html>`?  \r\n4. ¿Por qué es importante usar elementos como `<nav>` o `<article>` en lugar de `<div>` genéricos?  \r\n5. ¿Cómo puedes mejorar la accesibilidad de un formulario usando atributos HTML?",
+    "ruta_estudio": "1. **Prerequisitos** – Conocer conceptos básicos de la web (URL, HTTP) y familiarizarse con la línea de comandos.  \r\n2. **Fundamentos** – Practicar la creación de documentos HTML estáticos, validar con el validador del W3C y experimentar con atributos globales.  \r\n3. **Semántica y accesibilidad** – Estudiar la lista de elementos HTML5, aplicar roles ARIA y probar con lectores de pantalla.  \r\n4. **Integración** – Combinar HTML con CSS para diseñar layouts y con JavaScript para manipular el DOM.  \r\n5. **Optimización** – Implementar carga diferida, usar `srcset` para imágenes responsivas y aplicar buenas prácticas de SEO."
+  },
+  "sections_missing": [],
+  "slug": "html",
+  "sources": [
+    "https://example.com/assets/images/header-banner-v2-final.png"
+  ],
+  "sources_detail": [
+    {
+      "title": null,
+      "url": "https://example.com/assets/images/header-banner-v2-final.png"
+    }
+  ],
+  "tags": [
+    "concepto",
+    "it/frontend"
+  ],
+  "title": "HTML",
+  "uid": "c_IFH4CCKUM6",
+  "verification_marks": []
+}

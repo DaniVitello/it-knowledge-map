@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "Reliability"
+  ],
+  "area_uid": "software-engineering",
+  "content_hash": "1c2e4ba26e0e29f376a2d2e8b49885030cde328c9d7da1d7705a8d19533bcd0c",
+  "numero": 27,
+  "related_uids": [
+    "c_GFXWIQR3NM",
+    "c_SCSLG2OETM",
+    "c_VXNPWGQTHB"
+  ],
+  "sections": {
+    "como_funciona": "1. Se identifica qué componentes son críticos y se añaden réplicas (redundancia).  \r\n2. Se implementan técnicas de tolerancia, como circuit breakers o retries, para que las solicitudes fallen de forma controlada.  \r\n3. Se define un objetivo de disponibilidad (por ejemplo, 99.9 %) y se calcula el tiempo máximo permitido de inactividad.  \r\n4. Se despliegan mecanismos de recuperación automática: reinicio de procesos, failover a réplicas, restauración de datos desde backups.  \r\n5. Un sistema de monitoreo recoge métricas de latencia, errores y uso de recursos; al superar umbrales, dispara alertas y ejecuta scripts de recuperación.",
+    "conexiones": "- **Distributed Systems**: la fiabilidad depende de cómo los nodos cooperan y replican datos en un entorno distribuido.  \r\n- **CDN (Content Delivery Network)**: una CDN mejora la disponibilidad al servir contenido desde puntos cercanos al usuario, reduciendo la carga sobre el origen.  \r\n- **Load Balancing**: el balanceador distribuye tráfico entre réplicas, permitiendo que la falla de una instancia no afecte la disponibilidad global.",
+    "detalles": "- **Básico**: comprender la diferencia entre disponibilidad y fiabilidad, y aplicar retries simples con límites de tiempo.  \r\n- **Intermedio**: diseñar arquitecturas con balanceadores de carga y réplicas activas‑pasivas, introducir circuit breakers y patrones de fallback.  \r\n- **Avanzado**: implementar estrategias de *chaos engineering* para validar la tolerancia a fallas, usar bases de datos multi‑región con consenso eventual y automatizar planes de recuperación (DR) con orquestación de contenedores.",
+    "ejemplo_minimo": "```python\r\nimport requests\r\nfrom time import sleep\r\n\r\ndef get_with_retry(url, retries=3, backoff=1):\r\n    for i in range(retries):\r\n        try:\r\n            r = requests.get(url, timeout=2)\r\n            r.raise_for_status()\r\n            return r.json()\r\n        except Exception:\r\n            if i == retries - 1:\r\n                raise\r\n            sleep(backoff * (2 ** i))   # backoff exponencial\r\n```\r\nEl código muestra una política de reintentos simple que mejora la tolerancia a fallas de una llamada HTTP.",
+    "errores_comunes": "- **Reintentos ilimitados**: pueden saturar el sistema; limitar número y tiempo total.  \r\n- **Ignorar idempotencia**: repetir operaciones no idempotentes genera efectos secundarios; usar solo en llamadas seguras.  \r\n- **No monitorear**: sin métricas, la recuperación nunca se dispara; integrar logs y alertas.  \r\n- **Subestimar la latencia de failover**: no probar el tiempo de conmutación; medir y ajustar.",
+    "estado_actual": "- **Fundamentos estables**: la definición de disponibilidad como tiempo de actividad, los patrones de tolerancia a fallas (circuit breaker, retry) y la práctica de backups periódicos son conceptos consolidados.  \r\n- **Práctica moderna**: el uso de *chaos engineering* para validar la fiabilidad, la adopción de arquitecturas sin servidor (serverless) con auto‑escalado y la integración de observabilidad basada en tracing distribuido están en expansión.",
+    "ideas_clave": "1. **Tolerancia a fallas (Fault tolerance)** – El sistema sigue operando pese a la ocurrencia de errores o componentes defectuosos.  \r\n2. **Disponibilidad (Availability)** – Porcentaje de tiempo en que el servicio está accesible y funcional para los usuarios.  \r\n3. **Recuperación (Recovery)** – Mecanismos para restaurar el estado correcto después de una falla.  \r\n4. **Redundancia** – Replicación de componentes críticos para soportar fallas sin pérdida de servicio.  \r\n5. **Monitoreo y alerta** – Detección temprana de anomalías que permitan activar la recuperación.",
+    "objetivo": "Utilizo la fiabilidad (reliability) para garantizar que un sistema de software continúe ofreciendo sus servicios correctos durante el tiempo que se espera, aun frente a fallas inesperadas. Resuelvo el problema de interrupciones y comportamientos erráticos que pueden afectar a los usuarios y a los procesos de negocio. En mi trabajo como ingeniero de software, la fiabilidad aparece al diseñar arquitecturas, definir SLAs y planificar pruebas de resistencia. Después de entenderla, puedo aplicar patrones de tolerancia a fallas, dimensionar la disponibilidad y diseñar estrategias de recuperación. No necesito preocuparme por la fiabilidad cuando desarrollo scripts o prototipos internos que no impactan a usuarios finales ni a operaciones críticas.",
+    "preguntas_repaso": "1. ¿Cuál es la diferencia entre disponibilidad y fiabilidad en un sistema de software?  \r\n2. ¿Cómo ayuda la redundancia a lograr tolerancia a fallas?  \r\n3. ¿Qué riesgos implica aplicar reintentos sin considerar la idempotencia de la operación?  \r\n4. ¿De qué manera un balanceador de carga contribuye a la fiabilidad?  \r\n5. ¿Qué objetivo persigue el *chaos engineering* dentro de la estrategia de fiabilidad?",
+    "ruta_estudio": "1. **Prerequisitos**: conceptos de arquitectura cliente‑servidor, fundamentos de redes y manejo de errores en programación.  \r\n2. **Fundamentos**: estudiar disponibilidad, MTBF (Mean Time Between Failures) y patrones de tolerancia a fallas.  \r\n3. **Práctica intermedia**: implementar circuit breakers con bibliotecas como Hystrix o Resilience4j; configurar balanceadores de carga (NGINX, HAProxy).  \r\n4. **Avanzado**: aprender *chaos engineering* (herramientas como Chaos Monkey), diseñar planes de recuperación de desastres y explorar observabilidad con OpenTelemetry.  \r\n5. **Especialización**: profundizar en fiabilidad de microservicios, bases de datos distribuidas y arquitecturas serverless."
+  },
+  "sections_missing": [],
+  "slug": "reliability",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/software-engineering"
+  ],
+  "title": "Reliability",
+  "uid": "c_PDOZ7FBH2J",
+  "verification_marks": []
+}

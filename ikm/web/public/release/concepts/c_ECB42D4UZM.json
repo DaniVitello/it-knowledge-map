@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "Market Research"
+  ],
+  "area_uid": "product-management",
+  "content_hash": "9125ed28c7769d66cc97424f3d7f805f9d7798619b3436a4383f6b7d9f9d8d12",
+  "numero": 4,
+  "related_uids": [
+    "c_4NELIH6YTV",
+    "c_CHBELWMYEO",
+    "c_OPRQ4KKLEV"
+  ],
+  "sections": {
+    "como_funciona": "1. Defino la pregunta de negocio (p. ej., “¿Existe un segmento de usuarios que necesite una solución de gestión de tiempo offline?”).  \r\n2. Recolecto datos de fuentes secundarias: informes de industria, bases de datos públicas y análisis de competidores.  \r\n3. Segmento el mercado según criterios relevantes (tamaño de empresa, perfil demográfico, comportamiento).  \r\n4. Construyo un mapa competitivo que muestra fortalezas y debilidades de cada alternativa.  \r\n5. Identifico brechas donde mi propuesta puede aportar mayor valor y asigno un puntaje de oportunidad.  \r\n6. Presento los resultados al equipo de producto y utilizo el puntaje para decidir qué hipótesis pasar a pruebas de usuario.",
+    "conexiones": "- **Product Thinking** – El Market Research alimenta la mentalidad de construir productos que resuelvan problemas reales del mercado, no solo ideas internas.  \r\n- **Problem Discovery** – Provee la evidencia externa necesaria para validar que el problema identificado por los usuarios es suficientemente amplio y no está ya cubierto.  \r\n- **User Research** – Los hallazgos de mercado guían los objetivos y la muestra de los estudios de usuarios, asegurando que se investiguen los segmentos más relevantes.",
+    "detalles": "- **Básico:** foco en datos cuantitativos de mercado (tamaño, CAGR) y listado de competidores principales.  \r\n- **Intermedio:** incorporación de análisis cualitativo (reviews, estudios de caso) y creación de “buyer personas” basadas en la segmentación.  \r\n- **Avanzado:** uso de modelos de “total addressable market” (TAM), “serviceable obtainable market” (SOM) y análisis de “blue‑ocean” para diseñar estrategias de diferenciación y pricing.",
+    "ejemplo_minimo": "```python\r\n# Estimación rápida de TAM usando datos públicos de población y adopción esperada\r\npoblacion_total = 50_000_000          # usuarios potenciales en el país\r\ntasa_adopcion = 0.07                  # 7 % estimado de adopción en el primer año\r\ntam = poblacion_total * tasa_adopcion\r\nprint(f\"TAM estimado: {tam:,} usuarios\")\r\n```",
+    "errores_comunes": "- **Confundir tamaño de mercado con demanda real.** Evitarlo validando la intención de compra con encuestas o pruebas piloto.  \r\n- **Depender solo de fuentes secundarias sin triangulación.** Complementar con entrevistas a expertos o usuarios.  \r\n- **Ignorar la evolución del mercado.** Actualizar el research periódicamente para capturar cambios de tendencia.",
+    "estado_actual": "- **Fundamentos estables:** la práctica de segmentar mercado, mapear competidores y calcular TAM sigue siendo la base aceptada en product management.  \r\n- **Práctica moderna:** se complementa con herramientas de scraping automatizado, análisis de datos en tiempo real y dashboards de inteligencia competitiva que permiten iterar el research de forma continua.",
+    "ideas_clave": "1. **Entender el mercado** – Analizo el tamaño, crecimiento y segmentación para saber cuántos usuarios potenciales existen.  \r\n2. **Mapear competidores y alternativas** – Identifico quiénes ya resuelven el problema y qué propuestas ofrecen.  \r\n3. **Detectar brechas de valor** – Cruzo la información del mercado y la competencia para encontrar necesidades no satisfechas.  \r\n4. **Validar hipótesis con datos** – Uso fuentes externas (informes, bases públicas) para confirmar o refutar supuestos iniciales.  \r\n5. **Priorizar oportunidades** – Convierto los hallazgos en criterios de priorización que alimentan el backlog.",
+    "objetivo": "Utilizo el Market Research para entender el contexto del mercado en el que mi producto compite, identificar oportunidades y riesgos antes de invertir en desarrollo. Resuelvo la incertidumbre sobre quiénes son los clientes potenciales, qué alternativas existen y cómo se posicionan los competidores, lo que me permite priorizar funcionalidades y definir una propuesta de valor clara. Aparece en la fase de descubrimiento y en los checkpoints de validación de hipótesis, cuando debo decidir si seguir adelante con una idea o pivotar. Después de dominarlo, puedo diseñar estrategias de entrada al mercado, fijar precios y planificar roadmaps con mayor confianza. No necesito preocuparme por Market Research cuando el producto ya está consolidado y la estrategia de crecimiento se basa en métricas de uso interno y optimización de la experiencia existente.",
+    "preguntas_repaso": "1. ¿Qué información del mercado me permite decidir si una idea merece pasar a la fase de prototipo?  \r\n2. ¿Cómo se diferencia un análisis de competidores de un estudio de usuarios?  \r\n3. ¿Qué métricas utilizo para estimar el TAM y por qué son importantes?  \r\n4. ¿Cuál es el riesgo de basar una decisión de producto únicamente en fuentes secundarias?  \r\n5. ¿De qué manera el Market Research influye en la priorización del backlog?",
+    "ruta_estudio": "1. **Prerequisitos:** conceptos básicos de segmentación de clientes y métricas de mercado (TAM, SAM, SOM).  \r\n2. **Fundamentos:** leer guías de investigación de mercado para product managers, practicar con fuentes públicas (e.g., Statista, informes gubernamentales).  \r\n3. **Intermedio:** aprender a usar herramientas de análisis competitivo (SimilarWeb, Crunchbase) y a crear mapas de posicionamiento.  \r\n4. **Avanzado:** dominar técnicas de modelado financiero de mercado y automatizar la recolección de datos con APIs.  \r\n5. **Después:** aplicar los insights a la definición de roadmap, pricing y estrategias de go‑to‑market; profundizar en User Research para validar hipótesis surgidas del market research."
+  },
+  "sections_missing": [],
+  "slug": "market-research",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/product-management"
+  ],
+  "title": "Market Research",
+  "uid": "c_ECB42D4UZM",
+  "verification_marks": []
+}

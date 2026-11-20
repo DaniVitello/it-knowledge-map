@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "Retention"
+  ],
+  "area_uid": "product-management",
+  "content_hash": "c3116f4e470b714862821e6b02dea1da3ce057a4aaf70ce1f567e94d98f2af62",
+  "numero": 19,
+  "related_uids": [
+    "c_FHDALEC2NY",
+    "c_L5MHDZ22JR",
+    "c_P2ZB42B6RQ"
+  ],
+  "sections": {
+    "como_funciona": "1. Defino el horizonte temporal (día 1, 7, 30) y el criterio de “uso” (login, sesión, acción clave).  \r\n2. Agrupo a los usuarios que realizaron su primera acción en el mismo día (cohorte).  \r\n3. Para cada cohorte calculo el porcentaje que repite la acción en los periodos posteriores.  \r\n4. Interpreto la curva de retención: caídas bruscas señalan fricción; mantenciones estables indican valor sostenido.  \r\n5. Uso los resultados para decidir si invertir en onboarding, nuevas funcionalidades o campañas de re‑engagement.",
+    "conexiones": "- **Product Metrics**: la retención es una de las métricas clave que complementa a adquisición, activación y revenue en el marco de métricas de producto.  \r\n- **Funnels**: la caída entre etapas del funnel afecta directamente la retención; mejorar la conversión en etapas tempranas suele elevar la retención.  \r\n- **Product Analytics**: las herramientas de analytics proporcionan los datos de eventos y cohortes necesarios para calcular y visualizar la retención.",
+    "detalles": "- **Básico**: cálculo de retención día‑a‑día y visualización de la curva de cohortes.  \r\n- **Intermedio**: segmentación por origen de adquisición, tipo de dispositivo o plan tarifario para identificar grupos con mayor fuga.  \r\n- **Avanzado**: modelado predictivo de churn a partir de la retención histórica y pruebas A/B que comparen variantes de onboarding o notificaciones push.",
+    "ejemplo_minimo": "```python\r\n# cálculo simple de retención día 7 en Python\r\nimport pandas as pd\r\n\r\n# df: columnas user_id, signup_date, event_date\r\ndf['day'] = (df['event_date'] - df['signup_date']).dt.days\r\ncohort = df[df['day'] == 0].groupby('signup_date')['user_id'].nunique()\r\nday7   = df[df['day'] == 7].groupby('signup_date')['user_id'].nunique()\r\nretention_day7 = (day7 / cohort).fillna(0)\r\nprint(retention_day7)\r\n```",
+    "errores_comunes": "- Confundir retención con activación: la primera mide uso recurrente, la segunda la primera acción clave.  \r\n- Usar periodos demasiado largos y diluir la señal de fuga temprana.  \r\n- Ignorar la segmentación y asumir que una curva promedio representa a todos los usuarios.",
+    "estado_actual": "**Fundamentos estables**: la definición de retención como porcentaje de usuarios que repiten una acción en un horizonte temporal definido y el uso de cohortes para su cálculo.  \r\n**Práctica moderna**: integración de retención en dashboards de Product Analytics, combinación con modelos de churn y experimentación continua mediante feature flags y pruebas A/B.",
+    "ideas_clave": "1. **Uso recurrente**: la retención mide cuántos usuarios vuelven a usar el producto en periodos definidos.  \r\n2. **Comportamiento a lo largo del tiempo**: se analiza por cohortes para observar la evolución de la lealtad.  \r\n3. **Indicador de valor entregado**: una alta retención indica que el producto satisface una necesidad continua.  \r\n4. **Base para decisiones de inversión**: permite priorizar mejoras que impacten la frecuencia de uso.",
+    "objetivo": "Utilizo la métrica de **retention** para saber cuántos usuarios vuelven a usar mi producto después de su primera interacción. Resuelvo el problema de identificar si el valor entregado es sostenible en el tiempo y si las mejoras que implementamos realmente generan hábito. Aparece en mi día a día cuando analizo cohortes, priorizo funcionalidades de mejora y justifico inversiones en activación o engagement. Después de entenderla, puedo diseñar experimentos que apunten a aumentar la retención y comunicar su impacto a stakeholders. No necesito preocuparme de la retención cuando el producto está en fase de descubrimiento puro o cuando el objetivo principal es validar una hipótesis de mercado antes de lanzar.",
+    "preguntas_repaso": "1. ¿Qué diferencia hay entre retención y activación en la gestión de un producto?  \r\n2. ¿Cómo se construye una cohorte para medir la retención día 7?  \r\n3. ¿Qué decisiones de producto pueden derivarse de una caída abrupta en la curva de retención?  \r\n4. ¿Por qué es importante segmentar la retención por origen de adquisición?  \r\n5. ¿Cómo se relaciona la retención con los funnels y qué implicaciones tiene para la optimización del funnel?",
+    "ruta_estudio": "1. **Prerequisitos**: conceptos de cohort analysis, eventos de tracking y fundamentos de SQL o Python para manipular datos.  \r\n2. **Fundamentos**: tutoriales de cálculo de retención y visualización de cohortes en herramientas como Mixpanel o Amplitude.  \r\n3. **Intermedio**: cursos sobre segmentación de usuarios y análisis de causas de churn.  \r\n4. **Avanzado**: especializaciones en modelado predictivo de churn y diseño de experimentos de retención."
+  },
+  "sections_missing": [],
+  "slug": "retention",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/product-management"
+  ],
+  "title": "Retention",
+  "uid": "c_2ZLVQ443PW",
+  "verification_marks": []
+}

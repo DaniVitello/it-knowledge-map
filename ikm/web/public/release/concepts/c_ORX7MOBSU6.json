@@ -1,0 +1,44 @@
+{
+  "aliases": [
+    "Sockets"
+  ],
+  "area_uid": "os-linux",
+  "content_hash": "75dd2421883fd37da834c0f5030008c0333880145490a3135cf787fb02a44753",
+  "numero": 14,
+  "related_uids": [
+    "c_2SYCRXYECS",
+    "c_5USWL4QXOA",
+    "c_BKADYY4BKV",
+    "c_CXEBUKNZHV",
+    "c_MFJRR5DWJK",
+    "c_R6PYD64O36"
+  ],
+  "sections": {
+    "como_funciona": "1. El proceso llama a `socket()` indicando familia (AF_INET o AF_UNIX) y tipo (SOCK_STREAM para TCP).  \r\n2. El servidor ejecuta `bind()` para reservar un puerto y `listen()` para aceptar peticiones.  \r\n3. Cada cliente ejecuta `connect()`; el kernel realiza el handshake TCP (SYN‑SYN/ACK‑ACK) y crea una tabla de sockets vinculada al proceso.  \r\n4. Cuando el servidor llama a `accept()`, el kernel devuelve un nuevo descriptor que representa la conexión establecida.  \r\n5. Ambos extremos usan `send()`/`recv()` (o `write()`/`read()`) para mover datos; el kernel gestiona buffers y notifica disponibilidad mediante `select()`/`poll()`.  \r\n6. Al terminar, cualquiera de los procesos llama a `close()`, lo que envía FIN y libera recursos.",
+    "conexiones": "- **TCP**: protocolo de transporte que garantiza entrega ordenada y confiable; los sockets tipo `SOCK_STREAM` se basan en él.  \r\n- **Signals**: pueden interrumpir operaciones de I/O bloqueante; `SIGPIPE` se genera si se escribe en un socket cerrado.  \r\n- **Processes IPC**: los sockets de dominio Unix son una forma de IPC que compite y complementa a pipes, shared memory y message queues.",
+    "detalles": "- **Básico**: sockets de dominio Unix (`AF_UNIX`) para comunicación local sin sobrecarga de red.  \r\n- **Intermedio**: sockets IPv4 (`AF_INET`) con `SOCK_STREAM` (TCP) garantizan entrega ordenada y control de congestión; se pueden ajustar opciones con `setsockopt()` (p. ej., `SO_REUSEADDR`).  \r\n- **Avanzado**: sockets no bloqueantes (`O_NONBLOCK`) y multiplexación (`epoll`, `poll`) permiten servidores de alta concurrencia; `SOCK_DGRAM` (UDP) sirve para mensajes sin conexión; `SOCK_SEQPACKET` combina características de stream y datagrama.  \r\n- **Seguridad**: `iptables`/`nftables` filtran puertos; `SELinux` controla acceso a sockets de dominio Unix.  \r\n- **Diagnóstico**: `netstat -tulnp`, `ss -ltnp` y `lsof -i` revelan sockets abiertos y procesos asociados.",
+    "ejemplo_minimo": "```bash\r\n# Servidor simple (TCP, puerto 12345)\r\n#!/usr/bin/env bash\r\nexec 3<>/dev/tcp/0.0.0.0/12345   # abre socket y asocia descriptor 3\r\necho \"Hola cliente\" >&3\r\ncat <&3                         # espera y muestra lo que envíe el cliente\r\nexec 3<&- 3>&-                   # cierra el socket\r\n```\r\n\r\n```bash\r\n# Cliente que se conecta al servidor anterior\r\n#!/usr/bin/env bash\r\nexec 3<>/dev/tcp/127.0.0.1/12345\r\nread -r line <&3\r\necho \"Servidor dice: $line\"\r\necho \"Respuesta del cliente\" >&3\r\nexec 3<&- 3>&-\r\n```\r\nAl ejecutar primero el servidor y luego el cliente, la salida del cliente será:  \r\n`Servidor dice: Hola cliente`",
+    "errores_comunes": "- Olvidar `bind()` antes de `listen()`: el servidor no reserva puerto y falla al aceptar.  \r\n- Usar `read()` en un socket bloqueante sin verificar retorno: puede quedar colgado si el peer cierra.  \r\n- No establecer `SO_REUSEADDR` al reiniciar rápidamente un servidor: el puerto queda en TIME_WAIT.  \r\n- Confundir descriptor de archivo con descriptor de socket; siempre cerrar ambos con `close()`.",
+    "estado_actual": "Los conceptos básicos de sockets (creación, bind, listen, accept, connect, send/recv, close) son estables y forman parte del API POSIX desde hace décadas. En la práctica moderna, la mayoría de los servicios de alto rendimiento usan `epoll` (Linux) o `io_uring` para I/O asíncrono, y emplean bibliotecas como **libevent** o **Boost.Asio** que abstraen la complejidad del multiplexado. Los contenedores y microservicios suelen exponer puertos mediante **Docker** y orquestadores (Kubernetes) que gestionan la asignación de sockets a nivel de host.",
+    "ideas_clave": "1. **Creación de un endpoint** – Un proceso abre un socket y lo asocia a un puerto o a un archivo de dominio Unix.  \r\n2. **Establecimiento de la conexión** – El cliente solicita conectar al endpoint del servidor mediante `connect()` o `accept()`.  \r\n3. **Intercambio de datos** – Se usan `read()/write()` o `send()/recv()` para transferir bytes.  \r\n4. **Cierre ordenado** – `close()` libera el descriptor y notifica al peer.",
+    "objetivo": "Utilizo sockets para establecer canales de comunicación entre procesos, ya sea dentro del mismo host o a través de la red, lo que me permite intercambiar datos de forma estructurada y fiable. Resuelvo el problema de cómo un proceso cliente solicita un servicio a un proceso servidor sin depender de archivos temporales ni de mecanismos de señalización limitados. En mi día a día como ingeniero de sistemas Linux senior, los sockets aparecen al depurar servicios de red, al crear herramientas de monitoreo o al conectar contenedores. Después de comprender su uso, puedo diseñar servidores multihilo, implementar clientes ligeros y diagnosticar cuellos de botella de red. Cuando la interacción se limita a llamadas locales muy simples, puedo prescindir de sockets y usar pipes o shared memory.",
+    "preguntas_repaso": "1. ¿Qué pasos realiza el kernel para transformar una llamada `connect()` en una conexión TCP establecida?  \r\n2. ¿En qué situaciones prefiero un socket de dominio Unix frente a un socket TCP?  \r\n3. ¿Cómo evita `SO_REUSEADDR` que el puerto quede bloqueado después de un reinicio rápido del servidor?  \r\n4. ¿Qué ocurre si un proceso escribe en un socket cuyo peer ya ha cerrado la conexión y no se maneja `SIGPIPE`?  \r\n5. ¿Cuál es la ventaja principal de usar `epoll` en lugar de `select()` en un servidor con miles de conexiones concurrentes?",
+    "ruta_estudio": "1. **Prerequisitos**: manejo de procesos (`fork`, `exec`), conceptos de red (IP, puertos) y permisos de archivo.  \r\n2. **Fundamentos**: practicar con `socket()`, `bind()`, `listen()`, `accept()`, `connect()` en scripts Bash y programas C simples.  \r\n3. **Multiplexado**: aprender `select()` y `poll()`, luego `epoll` para escalabilidad.  \r\n4. **Opciones avanzadas**: `setsockopt()` (SO_REUSEADDR, TCP_NODELAY), sockets no bloqueantes y `io_uring`.  \r\n5. **Seguridad y diagnóstico**: usar `ss`, `netstat`, `lsof`, y configurar firewall/NFTables.  \r\n6. **Integración**: explorar bibliotecas de alto nivel (libevent, Boost.Asio) y contenedores Docker que exponen puertos."
+  },
+  "sections_missing": [],
+  "slug": "sockets",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/operating-systems-linux"
+  ],
+  "title": "Sockets",
+  "uid": "c_ORX7MOBSU6",
+  "verification_marks": [
+    {
+      "kind": "sin_verificar",
+      "section": "Errores comunes"
+    }
+  ]
+}

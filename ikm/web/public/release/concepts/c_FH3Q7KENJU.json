@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "Change Management"
+  ],
+  "area_uid": "project-management",
+  "content_hash": "cf8387f161c9f7505648e7285905025dcda51678f341b97e0c7f88ebb5092b88",
+  "numero": 15,
+  "related_uids": [
+    "c_BQNWLPZECX",
+    "c_CIR4QHKD6Q"
+  ],
+  "sections": {
+    "como_funciona": "1. Un stakeholder envía una *Change Request* al registro.  \r\n2. El PM la asigna a un analista que calcula variaciones de tiempo y costo.  \r\n3. El resultado se presenta al Change Control Board (CCB) para su aprobación.  \r\n4. Si se aprueba, el plan del proyecto, el backlog y los documentos de requisitos se actualizan.  \r\n5. Se notifica al equipo y se planifica la ejecución; al cerrar, se registra el resultado y se actualiza el historial de cambios.",
+    "conexiones": "- **Risk Management:** Cada cambio introduce nuevos riesgos; la evaluación de impacto alimenta el registro de riesgos.  \r\n- **Issue Management:** Un cambio mal gestionado puede convertirse en un issue que requiere resolución inmediata.  \r\n- **Scope Management:** El control de cambios es la forma operativa de mantener el alcance definido y evitar la expansión descontrolada.",
+    "detalles": "- **Básico:** Mantener un formulario sencillo y un archivo (ej. hoja de cálculo) donde se capture la solicitud, el responsable y la fecha.  \r\n- **Intermedio:** Introducir una matriz de impacto que relacione cada cambio con los tres factores críticos (tiempo, costo, calidad) y definir umbrales de aprobación automática.  \r\n- **Avanzado:** Automatizar el flujo con una herramienta de gestión (Jira, Azure DevOps) que enlace la solicitud a los tickets de desarrollo, genere reportes de riesgo y actualice el cronograma en tiempo real.",
+    "ejemplo_minimo": "```json\r\n{\r\n  \"changeId\": \"CR-001\",\r\n  \"origin\": \"Cliente\",\r\n  \"description\": \"Agregar campo 'fecha de entrega' al formulario de pedido\",\r\n  \"impact\": {\r\n    \"scheduleDays\": 2,\r\n    \"budgetUSD\": 1500,\r\n    \"quality\": \"sin impacto\"\r\n  },\r\n  \"status\": \"Pending Approval\"\r\n}\r\n```",
+    "errores_comunes": "- **Ignorar la evaluación de impacto**, lo que genera sobrecostos inesperados; evitarlo usando siempre la matriz de impacto.  \r\n- **Aprobar cambios sin autoridad**, creando conflictos de responsabilidad; evitarlo definiendo claramente quién compone el CCB.  \r\n- **No comunicar la actualización**, provocando trabajo duplicado; evitarlo enviando notificaciones automáticas al equipo.",
+    "estado_actual": "- **Fundamentos estables:** El registro formal, la evaluación de impacto y la aprobación estructurada son prácticas consolidadas en PMBOK y PRINCE2.  \r\n- **Práctica moderna:** La integración de Change Management con herramientas de DevOps y la trazabilidad automática entre cambios y artefactos de código son tendencias actuales adoptadas por organizaciones ágiles.",
+    "ideas_clave": "1. **Registro de cambios** – Cada solicitud se documenta con origen, descripción y fecha.  \r\n2. **Evaluación de impacto** – Se analizan efectos en tiempo, costo y calidad antes de decidir.  \r\n3. **Aprobación formal** – Un comité o el sponsor autoriza o rechaza el cambio según criterios predefinidos.  \r\n4. **Comunicación y actualización** – El cambio aprobado se difunde al equipo y se actualizan los artefactos del proyecto.  \r\n5. **Seguimiento post‑cambio** – Se verifica que la implementación cumpla con lo esperado y se registran lecciones.",
+    "objetivo": "Utilizo Change Management para controlar cualquier variación en el alcance o los requisitos del proyecto, evitando sorpresas que comprometan el cronograma, el presupuesto o la calidad. Resuelvo la incertidumbre que surge cuando un stakeholder solicita una nueva funcionalidad o cuando una condición externa obliga a ajustar el plan. Aparece en mi día a día al revisar solicitudes de cambio, evaluar su impacto y decidir si se aprueba, se rechaza o se pospone. Después de entenderlo, puedo estructurar un proceso de revisión, priorización y comunicación que mantenga al equipo alineado y al cliente informado. No necesito preocuparme cuando el proyecto está bajo un contrato fijo sin cláusulas de variación o cuando el alcance está completamente congelado y todas las partes han firmado una declaración de requisitos inalterable.",
+    "preguntas_repaso": "1. ¿Cuál es el objetivo principal de un registro de cambios?  \r\n2. ¿Qué información esencial debe contener una evaluación de impacto?  \r\n3. ¿Quiénes forman típicamente el Change Control Board y cuál es su responsabilidad?  \r\n4. ¿Cómo se relaciona un cambio aprobado con el proceso de Risk Management?  \r\n5. ¿Qué pasos se deben seguir para comunicar y actualizar el equipo después de aprobar un cambio?",
+    "ruta_estudio": "1. **Prerequisitos:** Conocer los fundamentos de Scope Management y de la planificación de proyectos.  \r\n2. **Fundamentos:** Estudiar el proceso de Change Control en PMBOK y practicar con plantillas de registro.  \r\n3. **Intermedio:** Aprender a usar herramientas de gestión (Jira, Azure DevOps) para automatizar flujos de cambio.  \r\n4. **Avanzado:** Integrar Change Management con pipelines de CI/CD y métricas de calidad; participar en un Change Control Board real."
+  },
+  "sections_missing": [],
+  "slug": "change-management",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/project-management"
+  ],
+  "title": "Change Management",
+  "uid": "c_FH3Q7KENJU",
+  "verification_marks": []
+}

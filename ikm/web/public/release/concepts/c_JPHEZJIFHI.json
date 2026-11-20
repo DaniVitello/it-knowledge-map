@@ -1,0 +1,38 @@
+{
+  "aliases": [
+    "Componentización"
+  ],
+  "area_uid": "frontend",
+  "content_hash": "d17683329e2cf81e7babbd63d7e28d54a43dfec44174d7419bda28694b390a01",
+  "numero": 13,
+  "related_uids": [
+    "c_FIPB4YV5WK",
+    "c_UAIG2N6OVP",
+    "c_VXHILN4GCI",
+    "c_WYVLRHHAGA",
+    "c_ZBRCPB5GFK"
+  ],
+  "sections": {
+    "como_funciona": "1. Defino la interfaz pública del componente (props, eventos).  \r\n2. Implemento su estructura interna (HTML/JSX, CSS, lógica).  \r\n3. Exporto el componente para que otros módulos lo importen.  \r\n4. En la vista superior, combino varios componentes pasándoles los datos necesarios.  \r\n5. El framework (React, Vue, Svelte, etc.) gestiona el ciclo de vida y la actualización del DOM cuando cambian las props o el estado interno.",
+    "conexiones": "- **Frameworks UI**: bibliotecas como React o Vue proporcionan la infraestructura que permite crear y componer componentes.  \r\n- **Estado**: la gestión del estado (Redux, Zustand, Vuex) se integra con los componentes para que reaccionen a cambios de datos.  \r\n- **Design Systems**: definen un conjunto de componentes estandarizados que garantizan consistencia visual y de interacción en toda la aplicación.",
+    "detalles": "- **Básico**: crear componentes funcionales simples que reciban datos mediante props y rendericen UI estática.  \r\n- **Intermedio**: añadir estado interno, manejar eventos y usar hooks o composables para lógica reutilizable.  \r\n- **Avanzado**: aplicar patrones de alta orden (HOC), render props o slots, y optimizar la renderización con memoization y lazy loading.",
+    "ejemplo_minimo": "```jsx\r\n// Componente Button.jsx\r\nexport default function Button({ label, onClick }) {\r\n  return (\r\n    <button onClick={onClick} style={{ padding: '8px 12px' }}>\r\n      {label}\r\n    </button>\r\n  );\r\n}\r\n\r\n// Uso en App.jsx\r\nimport Button from './Button';\r\n\r\nexport default function App() {\r\n  return <Button label=\"Enviar\" onClick={() => alert('Enviado')} />;\r\n}\r\n```",
+    "errores_comunes": "- **Propagar estilos globales** en lugar de encapsularlos → usar CSS Modules o styled‑components.  \r\n- **Acoplar lógica de negocio al componente** → extraerla a hooks o servicios.  \r\n- **Pasar demasiadas props** → crear componentes más específicos o usar contextos.",
+    "estado_actual": "- **Fundamentos estables**: la idea de encapsular UI en componentes y pasar datos mediante props es consistente en los principales frameworks.  \r\n- **Práctica moderna**: se favorece la composición mediante hooks, render props y sistemas de diseño que exponen componentes como tokens de UI; además, el lazy loading y la división de código son habituales para mejorar el rendimiento.",
+    "ideas_clave": "1. **Componentes**: bloques autónomos que encapsulan markup, estilo y comportamiento.  \r\n2. **Composición**: los componentes se ensamblan para crear interfaces más complejas.  \r\n3. **Reutilización**: el mismo componente puede usarse en distintos contextos, reduciendo duplicación.",
+    "objetivo": "Utilizo la componentización para dividir la interfaz de usuario en unidades independientes, reutilizables y mantenibles. Resuelvo la complejidad de una aplicación al encapsular lógica, estilo y markup en bloques que pueden combinarse de distintas formas. En mi día a día como desarrollador Frontend, la componentización aparece cada vez que construyo vistas, paneles o widgets, y me permite escalar el código sin que el crecimiento de la UI se vuelva inmanejable. Después de comprenderla, puedo diseñar bibliotecas de componentes, aplicar patrones de composición y colaborar eficientemente con diseñadores y otros desarrolladores. Sólo dejo de preocuparme cuando trabajo en una página estática muy pequeña donde la sobrecarga de crear componentes no aporta valor.",
+    "preguntas_repaso": "1. ¿Qué ventajas aporta la componentización frente a una UI escrita como una única página HTML?  \r\n2. ¿Cómo se comunica un componente hijo con su padre sin romper la encapsulación?  \r\n3. ¿Cuál es la diferencia entre pasar datos mediante props y usar un contexto global?  \r\n4. ¿En qué situaciones conviene extraer lógica a un hook o composable en lugar de mantenerla dentro del componente?  \r\n5. ¿Qué técnicas modernas ayudan a reducir el coste de carga de componentes en una aplicación grande?",
+    "ruta_estudio": "1. **Prerequisitos**: HTML, CSS, JavaScript ES6 y conceptos básicos de un framework (p. ej., React).  \r\n2. **Fundamentos**: crear componentes funcionales, pasar props y manejar eventos.  \r\n3. **Intermedio**: introducir estado local, hooks/composables y patrones de composición.  \r\n4. **Avanzado**: explorar HOC, render props, lazy loading, y contribuir a un design system interno.  \r\n5. **Especialización**: performance de renderizado, testing de componentes y accesibilidad."
+  },
+  "sections_missing": [],
+  "slug": "componentizacion",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/frontend"
+  ],
+  "title": "Componentización",
+  "uid": "c_JPHEZJIFHI",
+  "verification_marks": []
+}

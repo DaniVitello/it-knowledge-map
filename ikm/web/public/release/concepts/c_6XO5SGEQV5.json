@@ -1,0 +1,38 @@
+{
+  "aliases": [
+    "Product Vision"
+  ],
+  "area_uid": "product-management",
+  "content_hash": "0d4173680e2eb0ca246ea8c01d348393d5ec84cb33965227742d1041b9cc0d6e",
+  "numero": 7,
+  "related_uids": [
+    "c_4ZEK2ZN5ZJ",
+    "c_5N3OJBWASE",
+    "c_5SYU65SFA4",
+    "c_QM2SFYU3HE",
+    "c_UQ26LMCZYY"
+  ],
+  "sections": {
+    "como_funciona": "1. **Recopilación de insights**: analizo datos de usuarios, tendencias de mercado y feedback interno.  \r\n2. **Redacción de la visión**: sintetizo esos insights en una frase o párrafo que exprese la dirección futura.  \r\n3. **Validación con stakeholders**: comparto la visión con líderes de negocio, diseño y desarrollo para asegurar alineación.  \r\n4. **Uso como filtro**: cada propuesta de feature o inversión se evalúa contra la visión; si no aporta al futuro deseado, se descarta o replantea.  \r\n5. **Iteración**: reviso la visión cada 12‑18 meses para adaptarla a cambios significativos del entorno.",
+    "conexiones": "- **Value Proposition**: la visión define el “por qué” del valor que entregamos, mientras que la propuesta de valor detalla el “qué” y el “cómo”.  \r\n- **Product Strategy**: la visión alimenta la estrategia, que traduce la dirección futura en planes concretos y prioridades.  \r\n- **Product Roadmap**: el roadmap desglosa la visión en entregas temporales, asegurando que cada release contribuya al futuro deseado.",
+    "detalles": "- **Básico**: una visión corta (una oración) que sea memorable y comprensible para todos.  \r\n- **Intermedio**: desgloso la visión en pilares estratégicos que conectan con la Value Proposition y los objetivos de negocio.  \r\n- **Avanzado**: creo un “North Star Metric” alineado a la visión y utilizo OKRs para traducirla en resultados medibles a corto plazo.",
+    "ejemplo_minimo": "```json\r\n{\r\n  \"productVision\": \"Convertir la gestión de finanzas personales en una experiencia automática, segura y basada en IA que permita a cualquier usuario ahorrar sin esfuerzo.\"\r\n}\r\n```",
+    "errores_comunes": "- **Vision demasiado vaga** – evita usar frases genéricas; sé específico sobre el futuro deseado.  \r\n- **Confundir visión con estrategia** – la visión no incluye tácticas ni plazos; la estrategia sí.  \r\n- **No revisitarla** – actualiza la visión cuando cambian los supuestos del mercado o la tecnología.",
+    "estado_actual": "- **Fundamentos estables**: la visión sigue siendo una declaración de dirección futura que guía la toma de decisiones.  \r\n- **Práctica moderna**: se complementa con métricas de “North Star” y se revisa periódicamente en ciclos de planificación estratégica.",
+    "ideas_clave": "1. **Dirección futura clara** – describe el estado deseado del producto en 3‑5 años.  \r\n2. **Enfoque en el cliente** – conecta la visión con las necesidades y aspiraciones de los usuarios.  \r\n3. **Motivación para el equipo** – sirve de inspiración y guía para decisiones diarias.  \r\n4. **Base para la estrategia** – alimenta la Product Strategy, los Goals & Outcomes y el roadmap.",
+    "objetivo": "Utilizo la Product Vision como la brújula que alinea a todo el equipo alrededor de la dirección futura del producto. Resuelvo la incertidumbre sobre *por qué* estamos construyendo y *qué* queremos lograr a largo plazo, lo que facilita decisiones de priorización y comunicación con stakeholders. Aparece en la fase de descubrimiento y se revisita antes de definir la estrategia, los objetivos y el roadmap. Después de entenderla, puedo articular la Value Proposition, diseñar la Product Strategy y validar hipótesis con datos. No necesito preocuparme por la visión cuando el producto está en fase de mantenimiento sin planes de expansión.",
+    "preguntas_repaso": "1. ¿Cuál es la diferencia esencial entre Product Vision y Product Strategy?  \r\n2. ¿Cómo utilizo la visión para filtrar una propuesta de feature?  \r\n3. ¿Qué papel juega la visión en la definición de la Product Roadmap?  \r\n4. ¿Por qué es importante revisar la visión cada 12‑18 meses?  \r\n5. ¿Cómo se conecta la visión con la Value Proposition y la North Star Metric?",
+    "ruta_estudio": "1. **Prerequisitos**: comprender conceptos de mercado, segmentación de usuarios y métricas de negocio.  \r\n2. **Fundamentos**: leer guías de visión de producto y practicar redactando declaraciones breves.  \r\n3. **Intermedio**: aprender a alinear la visión con la Value Proposition y a crear pilares estratégicos.  \r\n4. **Avanzado**: dominar la definición de North Star Metric, OKRs y la revisión periódica de la visión.  \r\n5. **Aplicación**: liderar workshops de visión con equipos cross‑functional y medir su impacto en la priorización del backlog."
+  },
+  "sections_missing": [],
+  "slug": "product-vision",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/product-management"
+  ],
+  "title": "Product Vision",
+  "uid": "c_6XO5SGEQV5",
+  "verification_marks": []
+}

@@ -1,0 +1,43 @@
+{
+  "aliases": [
+    "Asincronía & Concurrencia"
+  ],
+  "area_uid": "backend",
+  "content_hash": "c4aa41d9c90ec0ef1ed7c8f3684256aca35d3866eede73c29b19b57af088db61",
+  "numero": 20,
+  "related_uids": [
+    "c_NTNITJDH3Q",
+    "c_SQK5OV6EKB",
+    "c_WYOKFAK6RE"
+  ],
+  "sections": {
+    "como_funciona": "1. El servidor recibe una petición HTTP y, si la operación implica I/O (BD, API externa), la marca como *async* y libera el thread del request.  \r\n2. La llamada async devuelve un *Future*; el runtime registra la operación y continúa atendiendo otras peticiones.  \r\n3. Cuando la respuesta está lista, el runtime reanuda la coroutine y envía el resultado al cliente.  \r\n4. Si la tarea es pesada (cálculo, generación de reportes), el handler publica un mensaje en una queue.  \r\n5. Uno o varios workers leen de la queue, procesan el mensaje en paralelo (usando threads o procesos) y actualizan el estado del dominio.  \r\n6. Opcionalmente, el worker publica un evento de finalización que puede ser consumido por otro servicio o notificar al cliente vía WebSocket.",
+    "conexiones": "- **Concurrency**: la concurrencia describe la capacidad de ejecutar varias tareas al mismo tiempo; async y threads son dos técnicas para lograrla.  \r\n- **Caching**: usar cachés (Redis, Memcached) reduce la necesidad de I/O y, por tanto, la carga sobre los mecanismos async.  \r\n- **Observability**: trazas y métricas (OpenTelemetry, Prometheus) son esenciales para detectar cuellos de botella en pipelines async/worker.",
+    "detalles": "- **Básico**: entender que un thread bloquea mientras espera I/O y que async evita ese bloqueo usando un *event loop*.  \r\n- **Intermedio**: combinar async con colas; el handler solo encola y retorna rápidamente, mientras que los workers pueden ser thread‑pools o procesos aislados.  \r\n- **Avanzado**: orquestar múltiples workers con balanceo de carga, aplicar back‑pressure en la queue, y usar patrones como *fan‑out* o *pipeline* para procesar flujos de datos de forma altamente concurrente.",
+    "ejemplo_minimo": "```python\r\n# Python 3.11 – servidor FastAPI con endpoint async y worker en background\r\nfrom fastapi import FastAPI, BackgroundTasks\r\nimport httpx\r\n\r\napp = FastAPI()\r\n\r\nasync def fetch_user(user_id: int):\r\n    async with httpx.AsyncClient() as client:\r\n        r = await client.get(f\"https://jsonplaceholder.typicode.com/users/{user_id}\")\r\n        return r.json()\r\n\r\ndef heavy_job(data: dict):\r\n    # Simula trabajo intensivo\r\n    import time, hashlib\r\n    time.sleep(2)\r\n    return hashlib.sha256(str(data).encode()).hexdigest()\r\n\r\n@app.get(\"/users/{uid}\")\r\nasync def get_user(uid: int, background: BackgroundTasks):\r\n    user = await fetch_user(uid)          # async I/O no bloquea el thread\r\n    background.add_task(heavy_job, user) # delega a worker en background\r\n    return {\"status\": \"queued\", \"user\": user[\"name\"]}\r\n```",
+    "errores_comunes": "- **Crear hilos para cada petición** → agota recursos; usar async o pools en su lugar.  \r\n- **Bloquear dentro de una coroutine** (p.ej. `time.sleep`) → vuelve a bloquear el event loop; usar `await asyncio.sleep`.  \r\n- **Olvidar manejar excepciones en workers** → fallas silenciosas; envolver la lógica en `try/except` y registrar errores.  \r\n- **No limitar el tamaño de la queue** → consumo ilimitado de memoria; establecer una capacidad máxima y aplicar back‑pressure.",
+    "estado_actual": "- **Fundamentos estables**: los conceptos de threads, async/await y colas son parte del modelo de ejecución de la mayoría de los runtimes modernos (JVM, .NET, Node.js, Python).  \r\n- **Práctica moderna**: se prefiere combinar async con sistemas de mensajería distribuida (RabbitMQ, Kafka) y workers containerizados (Docker, Kubernetes) para lograr escalabilidad horizontal y resiliencia frente a fallos.",
+    "ideas_clave": "1. **Threads** – unidades de ejecución del sistema operativo que permiten correr código en paralelo dentro del mismo proceso.  \r\n2. **Async / await** – sintaxis que permite escribir código no bloqueante sobre operaciones de I/O sin crear hilos explícitos.  \r\n3. **Queues** – estructuras de mensajería que desacoplan la recepción de una petición de su procesamiento intensivo.  \r\n4. **Workers** – procesos o contenedores que consumen mensajes de una queue y ejecutan la lógica de negocio de forma concurrente.",
+    "objetivo": "Utilizo la asincronía y la concurrencia para que mis servicios y APIs respondan rápidamente aun cuando deben atender múltiples peticiones, ejecutar operaciones de I/O o procesar trabajos en segundo plano. Resuelvo el problema de los cuellos de botella que aparecen cuando un hilo queda bloqueado esperando una base de datos, un servicio externo o una operación de disco, lo que degrada la latencia y la disponibilidad del sistema. En mi día a día como ingeniero backend senior, aplico estos mecanismos al diseñar controladores HTTP que delegan tareas a colas, a workers que procesan mensajes y a rutinas async que liberan el hilo de servidor. Después de comprenderlos, puedo escalar horizontalmente, mejorar la resiliencia y reducir costos de infraestructura. No necesito preocuparme cuando el servicio es trivial, de bajo tráfico y todas sus operaciones son computacionales y rápidas.",
+    "preguntas_repaso": "1. ¿Por qué un handler async libera el thread del servidor mientras espera I/O?  \r\n2. ¿Qué ventaja tiene usar una queue frente a lanzar un thread nuevo por cada petición pesada?  \r\n3. ¿Cómo evitar que una coroutine bloquee el event loop?  \r\n4. ¿Cuál es la diferencia práctica entre threads y workers en un entorno containerizado?  \r\n5. ¿Qué métricas observarías para detectar que una queue está saturada?",
+    "ruta_estudio": "1. **Prerequisitos**: programación en al menos un lenguaje backend, conceptos de HTTP y bases de datos.  \r\n2. **Fundamentos**: estudiar threads (synchronization, locks) y el modelo de event loop de async/await.  \r\n3. **Práctica**: implementar un endpoint async que consuma una API externa y use una queue (RabbitMQ) con workers en Docker.  \r\n4. **Avanzado**: explorar patrones de back‑pressure, circuit breaker y despliegue de workers en Kubernetes con autoscaling.  \r\n5. **Especialización**: profundizar en observability de sistemas concurrentes y en arquitecturas basadas en eventos."
+  },
+  "sections_missing": [],
+  "slug": "asincronia-concurrencia",
+  "sources": [
+    "https://jsonplaceholder.typicode.com/users/{user_id"
+  ],
+  "sources_detail": [
+    {
+      "title": null,
+      "url": "https://jsonplaceholder.typicode.com/users/{user_id"
+    }
+  ],
+  "tags": [
+    "concepto",
+    "it/backend"
+  ],
+  "title": "Asincronía & Concurrencia",
+  "uid": "c_ESB3I2EXYR",
+  "verification_marks": []
+}

@@ -1,0 +1,38 @@
+{
+  "aliases": [
+    "Shell"
+  ],
+  "area_uid": "os-linux",
+  "content_hash": "a7b2a8084873caae1ce8a15f88feae1ad045b7b8017787cb144ea8764c00920f",
+  "numero": 16,
+  "related_uids": [
+    "c_4NFC4562JQ",
+    "c_KKF3Z6FUAE",
+    "c_R6PYD64O36",
+    "c_YBQTBM72V5",
+    "c_ZXNIK6IFVD"
+  ],
+  "sections": {
+    "como_funciona": "1. El usuario escribe una línea en la CLI del shell.  \r\n2. El shell tokeniza la línea, expandiendo variables y comodines.  \r\n3. Busca cada comando en los directorios listados en `$PATH`.  \r\n4. Lanza un proceso mediante `fork()` y `execve()`.  \r\n5. Si el comando se ejecuta en segundo plano (`&`), el shell no espera; de lo contrario, espera su terminación y captura su código de salida.  \r\n6. Las señales enviadas al shell (p. ej. `Ctrl‑C`) se propagan a los procesos hijos según la política del shell.  \r\n7. En scripts, el flujo de control dirige la ejecución de múltiples órdenes de forma condicional o iterativa.",
+    "conexiones": "- **Environment Variables**: el shell es el punto donde se crean, exportan y consumen variables que afectan a todos los procesos del sistema.  \r\n- **Linux CLI**: el shell constituye la capa de interpretación que convierte la línea de comandos en acciones del kernel.  \r\n- **Package Management**: los gestores de paquetes (`apt`, `dnf`, `pacman`) se invocan habitualmente desde el shell, y sus scripts de post‑instalación se ejecutan en este entorno.",
+    "detalles": "- **Básico**: uso de comandos simples, redirección (`>`, `>>`, `<`) y pipelines (`|`).  \r\n- **Intermedio**: definición y exportación de variables, sustitución de comandos ``$(cmd)`` y manejo de trabajos (`jobs`, `bg`, `fg`).  \r\n- **Avanzado**: funciones de shell, trap de señales, expansión de arrays, y uso de `eval` para generar código dinámico. Cada nivel aprovecha las ideas del esqueleto: la CLI sigue siendo la base, mientras que la gestión del entorno y el control de flujo permiten construir herramientas de diagnóstico complejas.",
+    "ejemplo_minimo": "```bash\r\n# Lista los procesos que usan más CPU y guarda el resultado en un archivo\r\nps -eo pid,comm,%cpu --sort=-%cpu | head -n 5 > top5.txt\r\n```\r\n*Salida esperada*: `top5.txt` contiene las cinco líneas con mayor consumo de CPU, útil para identificar rápidamente procesos problemáticos.",
+    "errores_comunes": "- Olvidar exportar una variable (`export VAR=value`) y esperar que esté disponible en procesos hijos.  \r\n- Usar `=` sin espacios al asignar en scripts, provocando errores de sintaxis.  \r\n- Ejecutar un comando en primer plano y luego presionar `Ctrl‑C`, terminando también procesos que deberían seguir corriendo; usar `nohup` o `&` cuando sea necesario.",
+    "estado_actual": "Los shells tradicionales (Bash, Zsh, Fish) siguen siendo la base estable para la interacción diaria con Linux. En la práctica moderna, Bash es el intérprete por defecto en la mayoría de distribuciones, mientras que Zsh gana popularidad por sus mejoras de completado y plugins. Las extensiones de scripting (por ejemplo, `bash` 4+ con arrays asociativos) amplían la capacidad de automatización sin romper la compatibilidad con scripts heredados.",
+    "ideas_clave": "1. **Interfaz de línea de comandos (CLI)**: punto de entrada textual para enviar órdenes al kernel.  \r\n2. **Interpretación y ejecución de comandos**: el shell parsea la línea, busca el ejecutable y crea un proceso.  \r\n3. **Gestión del entorno**: variables de entorno y expansión de comodines influyen en la ejecución.  \r\n4. **Control de flujo y scripting**: estructuras (`if`, `for`, `while`) permiten automatizar secuencias de comandos.  \r\n5. **Manejo de señales**: el shell recibe y propaga señales (SIGINT, SIGTERM) a los procesos hijos.",
+    "objetivo": "Utilizo el shell como la puerta de enlace directa al kernel de Linux: me permite lanzar procesos, inspeccionar el estado del sistema y encadenar herramientas para diagnosticar y automatizar tareas. Resuelvo la necesidad de interactuar con el sistema sin escribir código C, accediendo a archivos de `/proc`, gestionando servicios o inspeccionando variables de entorno. Aparece en mi día a día al depurar un servicio que no arranca, al inspeccionar el consumo de CPU con `top` o al crear scripts que despliegan paquetes. Después de dominar el shell puedo escribir scripts de mantenimiento, integrar comandos en pipelines y personalizar mi entorno de trabajo; cuando solo ejecuto una única orden puntual, no necesito profundizar más.",
+    "preguntas_repaso": "1. ¿Qué pasos sigue el shell para ejecutar una orden escrita en la línea de comandos?  \r\n2. ¿Cómo afecta la variable `$PATH` a la búsqueda de un ejecutable?  \r\n3. ¿Cuál es la diferencia entre redirigir la salida con `>` y con `>>`?  \r\n4. ¿Cómo puedes hacer que una variable esté disponible para los procesos hijos?  \r\n5. ¿Qué comando usarías para enviar una señal `SIGTERM` a todos los procesos iniciados por un script?",
+    "ruta_estudio": "1. **Prerequisitos**: comprensión de procesos Unix (`fork`, `exec`), sistema de archivos y permisos.  \r\n2. **Fundamentos**: práctica intensiva con comandos básicos, redirección y pipelines.  \r\n3. **Scripting**: crear scripts que usen variables, condicionales y bucles; estudiar `set -e` y `trap`.  \r\n4. **Avanzado**: profundizar en manejo de señales, funciones de shell y personalización del prompt.  \r\n5. **Especialización**: explorar shells alternativos (Zsh, Fish) y su ecosistema de plugins para mejorar la productividad."
+  },
+  "sections_missing": [],
+  "slug": "shell",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/operating-systems-linux"
+  ],
+  "title": "Shell",
+  "uid": "c_NH4DBCJPVZ",
+  "verification_marks": []
+}

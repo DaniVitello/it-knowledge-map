@@ -1,0 +1,38 @@
+{
+  "aliases": [
+    "CI/CD"
+  ],
+  "area_uid": "software-engineering",
+  "content_hash": "7f1df32bfafd52b0f3b9b7409d24d9bb7d63260db95baffae44cacd30dcecafa",
+  "numero": 25,
+  "related_uids": [
+    "c_FLXMOQWDJK",
+    "c_J2J5LSR7ZQ",
+    "c_K5E3UA3HBU",
+    "c_X4YMC3NLRL",
+    "c_YVRZUYOANU"
+  ],
+  "sections": {
+    "como_funciona": "1. Un desarrollador hace *push* a un repositorio de control de versiones.  \r\n2. El servidor de CI detecta el cambio y lanza el **job** de *build*, que compila el código y genera artefactos.  \r\n3. Al completarse el build, el pipeline ejecuta el **stage** de *test*; si alguna prueba falla, el proceso se detiene y se notifica al autor.  \r\n4. Cuando todas las pruebas pasan, el pipeline avanza al **stage** de *deploy*, que publica los artefactos en el entorno configurado (staging, producción, etc.).  \r\n5. Finalmente, se genera un reporte con métricas de tiempo, cobertura y estado, cerrando el ciclo y permitiendo la siguiente iteración.",
+    "conexiones": "- **Git** – CI/CD se dispara a partir de eventos en el repositorio Git, lo que permite que cada commit inicie un pipeline de validación.  \r\n- **Containers** – Los artefactos construidos suelen empaquetarse en contenedores Docker, facilitando despliegues consistentes en cualquier infraestructura.  \r\n- **AI Infrastructure** – Los pipelines pueden incluir etapas de entrenamiento o inferencia de modelos de IA, automatizando la entrega de versiones actualizadas de modelos junto al código.",
+    "detalles": "- **Básico**: Configuración de un archivo de pipeline que incluya los tres stages (build, test, deploy) y la conexión al repositorio.  \r\n- **Intermedio**: Uso de *caches* para acelerar builds, paralelismo de pruebas y despliegues condicionales según rama o etiqueta.  \r\n- **Avanzado**: Integración con *infrastructure as code* (Terraform, Ansible), despliegues canary o blue‑green, y métricas de calidad (code coverage, static analysis) dentro del mismo pipeline.",
+    "ejemplo_minimo": "```yaml\r\n# .github/workflows/ci.yml\r\nname: CI/CD simple\r\non: [push]\r\n\r\njobs:\r\n  build-test-deploy:\r\n    runs-on: ubuntu-latest\r\n    steps:\r\n      - uses: actions/checkout@v3\r\n      - name: Build\r\n        run: mvn clean package   # compila proyecto Java\r\n      - name: Test\r\n        run: mvn test            # ejecuta pruebas unitarias\r\n      - name: Deploy\r\n        if: github.ref == 'refs/heads/main'\r\n        run: echo \"Desplegando a producción...\"   # placeholder de despliegue\r\n```",
+    "errores_comunes": "- **Ignorar fallos de pruebas** – el pipeline sigue desplegando código defectuoso; evitarlo configurando la condición `if: failure()` para detener el flujo.  \r\n- **Hardcodear rutas o credenciales** – genera vulnerabilidades y rotura en diferentes entornos; usar variables de entorno y secretos gestionados.  \r\n- **No versionar la configuración del pipeline** – dificulta la reproducibilidad; mantener el archivo de pipeline bajo control de versiones junto al código.",
+    "estado_actual": "- **Fundamentos estables**: la automatización de build, test y deploy es una práctica consolidada en la mayoría de los equipos de desarrollo; los conceptos de pipeline y feedback inmediato son ampliamente adoptados.  \r\n- **Práctica moderna**: la integración de contenedores, despliegues canary y observabilidad dentro del mismo pipeline está en expansión; herramientas como GitHub Actions, GitLab CI y Azure Pipelines ofrecen plantillas predefinidas para estos patrones.",
+    "ideas_clave": "1. **Build automatizado** – El código fuente se compila o empaqueta de forma reproducible cada vez que hay un cambio.  \r\n2. **Test continuo** – Se ejecutan pruebas (unitarias, de integración, de seguridad) automáticamente para validar la calidad del build.  \r\n3. **Deploy automático** – Los artefactos validados se despliegan a entornos de prueba o producción sin intervención manual.  \r\n4. **Feedback inmediato** – El pipeline informa al desarrollador en tiempo real sobre el estado de cada fase.",
+    "objetivo": "Utilizo CI/CD para automatizar la construcción, verificación y puesta en producción del software, lo que elimina tareas manuales repetitivas y reduce la probabilidad de errores humanos. Resuelvo el problema de integrar cambios de código de forma rápida y confiable, garantizando que cada modificación pase por pruebas antes de llegar a los usuarios. En mi día a día como ingeniero de software, CI/CD está presente en cada commit que envío a la rama principal, en los pipelines que ejecutan pruebas unitarias y en los despliegues a entornos de staging o producción. Después de comprenderlo, puedo diseñar pipelines que soporten entregas continuas, escalar procesos de despliegue y colaborar eficientemente con equipos de operaciones. No necesito preocuparme por CI/CD cuando trabajo en scripts aislados o prototipos que nunca se integran a un repositorio compartido.",
+    "preguntas_repaso": "1. ¿Cuál es el beneficio principal de automatizar el build dentro de un pipeline CI/CD?  \r\n2. ¿Cómo se asegura que un despliegue solo ocurra después de que todas las pruebas hayan pasado?  \r\n3. ¿Qué diferencia hay entre un despliegue *blue‑green* y un despliegue *canary*?  \r\n4. ¿Por qué es importante versionar la configuración del pipeline junto al código fuente?  \r\n5. ¿De qué manera los contenedores facilitan la fase de deploy en un pipeline CI/CD?",
+    "ruta_estudio": "1. **Prerequisitos**: manejo básico de Git, conceptos de compilación y pruebas unitarias.  \r\n2. **Fundamentos**: crear un pipeline sencillo con una herramienta CI (GitHub Actions, GitLab CI).  \r\n3. **Intermedio**: añadir paralelismo, cachés y despliegues condicionales; integrar Docker.  \r\n4. **Avanzado**: implementar despliegues canary, infraestructura como código y métricas de calidad dentro del pipeline.  \r\n5. **Especialización**: explorar pipelines para IA (MLflow, Kubeflow) y para entornos serverless."
+  },
+  "sections_missing": [],
+  "slug": "ci-cd",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/software-engineering"
+  ],
+  "title": "CI/CD",
+  "uid": "c_NWJKJRLXFG",
+  "verification_marks": []
+}

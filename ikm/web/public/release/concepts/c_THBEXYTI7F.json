@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "Runtime"
+  ],
+  "area_uid": "backend",
+  "content_hash": "40acc9cf811246136aaca7bf1a10b8a799873a718e35cd489674c2ea28423414",
+  "numero": 5,
+  "related_uids": [
+    "c_EDRNN4EAFB",
+    "c_GQXGQSF53L",
+    "c_HAZD53NJ7A"
+  ],
+  "sections": {
+    "como_funciona": "1. El código fuente se escribe en el lenguaje elegido (Java, JavaScript, C#, Python).  \r\n2. El compilador o intérprete del runtime traduce ese código a una representación intermedia (bytecode o AST).  \r\n3. El runtime carga esa representación en memoria y la ejecuta, gestionando recursos como hilos, memoria y llamadas al sistema.  \r\n4. Durante la ejecución, el runtime aplica políticas de recolección de basura y optimizaciones JIT (just‑in‑time) cuando corresponde.  \r\n5. Al finalizar, el runtime libera los recursos y devuelve el control al sistema operativo.",
+    "conexiones": "- **Programming Fundamentals**: el runtime implementa conceptos básicos como control de flujo y gestión de memoria que se estudian en los fundamentos de programación.  \r\n- **Lenguaje Backend**: cada lenguaje de backend (Java, JavaScript, C#, Python) depende de su runtime para ejecutar el código escrito por el desarrollador.  \r\n- **Python & Programming**: el runtime de Python expone una API de introspección que permite a los programadores crear metaprogramas y extensiones dinámicas.",
+    "detalles": "- **Básico**: entender que el runtime es la capa que convierte código en acciones del sistema; conocer los conceptos de bytecode y garbage collection.  \r\n- **Intermedio**: explorar cómo funciona el JIT en la JVM y en V8, y cómo el .NET Runtime maneja el ensamblado de metadatos.  \r\n- **Avanzado**: profundizar en perfiles de rendimiento, tuning de GC, y extensiones nativas (JNI, native addons de Node, interop de .NET).",
+    "ejemplo_minimo": "```javascript\r\n// Node.js runtime\r\nconsole.log('Hola runtime');\r\n```",
+    "errores_comunes": "- Confundir el runtime con el framework; evitar instalar paquetes que dependen de una versión distinta del runtime.  \r\n- Ignorar la configuración de memoria del runtime; ajustar los flags de GC según la carga de trabajo.  \r\n- Suponer que el código se ejecuta idénticamente en todos los runtimes; validar comportamientos específicos de cada plataforma.",
+    "estado_actual": "**Fundamentos estables**: la existencia de un runtime que interpreta o compila código en tiempo de ejecución, la gestión automática de memoria y la disponibilidad de APIs estándar.  \r\n**Práctica moderna**: uso extendido de compilación JIT en JVM y V8, contenedores Docker que encapsulan versiones específicas del runtime, y herramientas de observabilidad (profilers, tracing) integradas en .NET y Python.",
+    "ideas_clave": "1. **JVM**: ejecuta bytecode Java y provee gestión automática de memoria mediante garbage collection.  \r\n2. **Node.js**: runtime basado en V8 que interpreta JavaScript del lado del servidor y maneja I/O de forma no bloqueante.  \r\n3. **.NET Runtime**: compila código C# u otros lenguajes a un Common Intermediate Language (CIL) y lo ejecuta en tiempo de ejecución.  \r\n4. **Python runtime**: interpreta scripts Python y administra objetos en memoria mediante un recolector de basura.",
+    "objetivo": "Utilizo el runtime para ejecutar código escrito en un lenguaje de backend sin preocuparme por los detalles del hardware subyacente. Resuelvo el problema de traducir instrucciones de alto nivel a operaciones que la máquina pueda procesar, lo que me permite concentrarme en la lógica de negocio. En mi día a día como desarrollador backend, el runtime aparece cada vez que despliego una aplicación escrita en Java, Node.js, .NET o Python, pues es el componente que interpreta o compila esas instrucciones en tiempo de ejecución. Después de entender cómo funciona, puedo elegir la plataforma adecuada, optimizar el consumo de recursos y depurar problemas de rendimiento. Cuando trabajo con scripts simples o con servicios que ya están empaquetados, no necesito profundizar en el runtime.",
+    "preguntas_repaso": "1. ¿Qué papel juega el runtime al ejecutar código Java en un servidor backend?  \r\n2. ¿Cómo difiere la gestión de memoria entre la JVM y el runtime de Python?  \r\n3. ¿Qué es el JIT y por qué es importante en Node.js?  \r\n4. ¿Cuál es una práctica recomendada para evitar problemas de incompatibilidad de versiones de runtime?  \r\n5. ¿Qué herramienta usarías para perfilar el consumo de CPU de una aplicación .NET en producción?",
+    "ruta_estudio": "1. **Prerequisitos**: comprender sintaxis y semántica de al menos un lenguaje backend; conocer conceptos de procesos y memoria en sistemas operativos.  \r\n2. **Fundamentos**: estudiar la arquitectura de la JVM y de V8, y la diferencia entre compilación AOT y JIT.  \r\n3. **Práctica**: crear proyectos simples en cada runtime, medir uso de memoria y tiempos de arranque.  \r\n4. **Avanzado**: aprender a perfilar aplicaciones, ajustar parámetros de GC y explorar extensiones nativas (JNI, native addons, P/Invoke).  \r\n5. **Especialización**: profundizar en contenedorización de runtimes y en estrategias de despliegue continuo que consideren versiones de runtime."
+  },
+  "sections_missing": [],
+  "slug": "runtime",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/backend"
+  ],
+  "title": "Runtime",
+  "uid": "c_THBEXYTI7F",
+  "verification_marks": []
+}

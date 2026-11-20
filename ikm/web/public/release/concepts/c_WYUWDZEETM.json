@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "Memory Management"
+  ],
+  "area_uid": "os-linux",
+  "content_hash": "1736315c0f8bf87e7ce4f6b7b8253ff278ece57c94c43cc750780308f9299da5",
+  "numero": 6,
+  "related_uids": [
+    "c_472Y6TAHCW",
+    "c_UDNACO4RMV"
+  ],
+  "sections": {
+    "como_funciona": "1. Cuando un proceso solicita memoria (`malloc`, `mmap`), el kernel reserva páginas en su espacio de direcciones virtuales.  \r\n2. La tabla de páginas del proceso se actualiza con una entrada “no presente”.  \r\n3. Al primer acceso, se produce un *page fault*; el kernel asigna una página física libre o la recupera de swap.  \r\n4. La página se marca como “present” y el proceso continúa ejecutándose.  \r\n5. Si la RAM se agota, el kernel elige páginas poco usadas (algoritmo LRU) y las escribe a swap, liberando espacio para nuevas asignaciones.",
+    "conexiones": "- **Processes** – cada proceso posee su propio espacio de direcciones virtuales gestionado por la memoria del kernel.  \r\n- **Stack & Heap** – son regiones dentro del espacio virtual que crecen bajo demanda mediante paginación.  \r\n- **Filesystem** – el swap es un archivo o partición del sistema de archivos que actúa como extensión de la RAM cuando la memoria física se agota.",
+    "detalles": "- **Básico:** `free`, `top` y `/proc/meminfo` muestran la cantidad de RAM libre, usada y en swap.  \r\n- **Intermedio:** `/proc/<pid>/smaps` desglosa el uso por segmento (heap, stack, mmap). Las *page tables* pueden inspeccionarse con `pagemap` (requiere privilegios).  \r\n- **Avanzado:** Ajustes de `vm.swappiness` y `vm.overcommit_memory` controlan cuándo el kernel recurre a swap y cuánta memoria virtual puede reservar sin respaldo físico. Herramientas como `perf` o `trace-cmd` permiten rastrear *page faults* y tiempos de swapping.",
+    "ejemplo_minimo": "```c\r\n/* mm_demo.c */\r\n#include <stdio.h>\r\n#include <stdlib.h>\r\n#include <unistd.h>\r\n\r\nint main() {\r\n    size_t sz = 10 * 1024 * 1024;          // 10 MiB\r\n    char *buf = malloc(sz);\r\n    if (!buf) { perror(\"malloc\"); return 1; }\r\n\r\n    /* tocar cada página para forzar su asignación */\r\n    for (size_t i = 0; i < sz; i += 4096)\r\n        buf[i] = 0xAA;\r\n\r\n    printf(\"Dirección base: %p\\n\", (void*)buf);\r\n    sleep(30);   // permite inspeccionar con `pmap <pid>`\r\n    free(buf);\r\n    return 0;\r\n}\r\n```\r\nCompilación y ejecución:  \r\n```bash\r\n$ gcc -O0 -g mm_demo.c -o mm_demo\r\n$ ./mm_demo &\r\n[1] 12345\r\nDirección base: 0x55c3e2b5c260\r\n$ pmap -x 12345\r\n```\r\n`pmap` muestra que el proceso tiene una región de 10 MiB marcada como **private** y **rw‑**; esas páginas fueron creadas bajo demanda por el *page fault* del bucle.",
+    "errores_comunes": "- **Asumir que `malloc` siempre reserva RAM física** – solo reserva espacio virtual; la RAM se asigna al primer acceso. Evitarlo verificando el consumo real con `pmap` o `smaps`.  \r\n- **Desactivar swap indiscriminadamente** – puede provocar OOM (out‑of‑memory) y caída del sistema; ajustar `swappiness` es más seguro.  \r\n- **Ignorar límites de `ulimit -v`** – procesos pueden ser terminados por el kernel si superan el límite de memoria virtual.",
+    "estado_actual": "- **Fundamentos estables:** modelo de paginación de 4 KB, uso de `/proc` para inspección, algoritmo LRU aproximado para swapping.  \r\n- **Práctica moderna:** uso de *cgroups* para limitar memoria por contenedor, *zswap* y *zram* como compresión de swap en RAM, y *memfd_create* para archivos anónimos de alta velocidad. Estas extensiones están disponibles en kernels ≥ 4.14 y se configuran mediante sysctl o archivos bajo `/sys/fs/cgroup`.",
+    "ideas_clave": "1. **RAM física** – espacio de hardware donde se guardan los datos en tiempo real.  \r\n2. **Memoria virtual** – espacio de direcciones lógicas que el kernel mapea a la RAM o a swap.  \r\n3. **Páginas** – unidades de 4 KB (por defecto) que el kernel mueve entre RAM y swap.  \r\n4. **Page tables** – estructuras que traducen direcciones virtuales a físicas.  \r\n5. **Swapping** – mecanismo que desplaza páginas inactivas a disco para liberar RAM.",
+    "objetivo": "Utilizo la gestión de memoria para que el kernel asigne, libere y proteja la RAM que necesita cada proceso, evitando colisiones y agotamiento del recurso. Resuelvo problemas de sobre‑uso de memoria, fragmentación y aislamiento entre procesos, que aparecen cada vez que un servicio se vuelve inestable o el sistema se queda sin “free” memory. Con este conocimiento puedo diagnosticar cuellos de botella con `top`, `free` o `/proc/*/smaps`, ajustar parámetros como `vm.overcommit_memory` y diseñar aplicaciones que usen la memoria de forma eficiente. Cuando el sistema está bajo carga ligera y los procesos usan poca RAM, no es necesario profundizar en los detalles de paginación ni de swapping.",
+    "preguntas_repaso": "1. ¿Qué ocurre en el kernel cuando un proceso accede a una página virtual que aún no está presente en RAM?  \r\n2. ¿Cómo puedes verificar cuánta memoria física está realmente ocupada por el heap de un proceso?  \r\n3. ¿Qué parámetro controla la propensión del kernel a usar swap antes de liberar RAM?  \r\n4. ¿Cuál es la diferencia práctica entre limitar la RAM con `ulimit -v` y con un cgroup `memory.max`?  \r\n5. ¿En qué situaciones es recomendable habilitar *zswap* en lugar de aumentar la capacidad de swap tradicional?",
+    "ruta_estudio": "1. **Prerequisitos:** comprensión de procesos Linux, uso de `/proc`, y comandos `top`, `free`.  \r\n2. **Fundamentos:** leer la sección *Memory Management* del *Linux Kernel Documentation*; experimentar con `malloc` y `pmap`.  \r\n3. **Intermedio:** estudiar `/proc/<pid>/smaps`, ajustar `vm.swappiness` y `vm.overcommit_memory`.  \r\n4. **Avanzado:** explorar cgroups v2 (`memory.max`), habilitar *zswap* y *zram*, y usar `perf trace` para analizar *page faults*.  \r\n5. **Especialización:** profundizar en algoritmos de reemplazo de página y en la arquitectura del *page table* (p4d, pud, pmd, pte) en arquitecturas x86_64."
+  },
+  "sections_missing": [],
+  "slug": "memory-management",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/operating-systems-linux"
+  ],
+  "title": "Memory Management",
+  "uid": "c_WYUWDZEETM",
+  "verification_marks": []
+}

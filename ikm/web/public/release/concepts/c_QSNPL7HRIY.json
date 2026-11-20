@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "Testing"
+  ],
+  "area_uid": "software-engineering",
+  "content_hash": "6cb97e4efe49669051e0572df7d7a9114acd5cb1befcddcd2941b6d122c7c684",
+  "numero": 17,
+  "related_uids": [
+    "c_FF2SVKAIK5",
+    "c_GQ3G6NABQ6"
+  ],
+  "sections": {
+    "como_funciona": "1. Defino el objetivo de la prueba (unidad, componente, integración o E2E).  \r\n2. Escribo un caso de prueba que describe la entrada, la acción y el resultado esperado.  \r\n3. Ejecutó el runner de pruebas (por ejemplo Jest, Testing Library o Cypress) que crea un entorno controlado.  \r\n4. El runner evalúa el código bajo prueba y reporta si el resultado coincide con la expectativa.  \r\n5. En caso de falla, el proceso se detiene y el desarrollador corrige el error antes de continuar.",
+    "conexiones": "- **Testing Backend** – Complementa el testing del frontend al validar que las APIs respondan con los datos esperados.  \r\n- **CI/CD** – Integra la ejecución automática de pruebas en los flujos de despliegue continuo.  \r\n- **Observability** – Los resultados de las pruebas alimentan dashboards que ayudan a monitorizar la salud del código.",
+    "detalles": "- **Básico**: Unit tests con Jest para funciones puras; usan `expect` y `toBe`.  \r\n- **Intermedio**: Component tests con React Testing Library; renderizan el componente y consultan el DOM virtual.  \r\n- **Avanzado**: Integration tests que combinan varios componentes y mockean APIs con MSW (Mock Service Worker).  \r\n- **Muy avanzado**: E2E tests con Cypress; interactúan con el navegador real, verifican rutas, estados de la UI y persistencia de datos.",
+    "ejemplo_minimo": "```javascript\r\n// unit.test.js\r\nimport { sum } from './utils';\r\n\r\ntest('sum suma dos números', () => {\r\n  expect(sum(2, 3)).toBe(5);\r\n});\r\n```",
+    "errores_comunes": "- **Confundir unit y component tests** – Evitar probar la UI en un unit test; usar Testing Library para componentes.  \r\n- **No limpiar mocks** – Restaurar mocks después de cada prueba para evitar efectos colaterales.  \r\n- **Dependencias externas sin mockear** – Simular llamadas a APIs para que las pruebas sean determinísticas.",
+    "estado_actual": "Los fundamentos de unit, component, integration y E2E testing son estables y ampliamente adoptados en la comunidad Frontend. En la práctica moderna, herramientas como Jest, React Testing Library y Cypress se combinan en pipelines CI/CD para ejecutar pruebas en cada commit y prevenir regresiones.",
+    "ideas_clave": "1. **Unit tests** – Verifican la lógica de funciones o utilidades de forma aislada.  \r\n2. **Component tests** – Evalúan la renderización y el comportamiento de un componente UI en aislamiento.  \r\n3. **Integration tests** – Comprueban la interacción entre varios componentes o entre el frontend y servicios externos.  \r\n4. **E2E (End‑to‑End) tests** – Simulan flujos completos del usuario a través de la aplicación completa.",
+    "objetivo": "Utilizo el testing para garantizar que el código que escribo en la capa visual se comporte como se espera, detectando errores antes de que lleguen al usuario. Resuelvo la incertidumbre de que una modificación rompa funcionalidades existentes y mantengo la confianza al refactorizar componentes. En mi día a día como desarrollador Frontend, el testing aparece en la fase de desarrollo y en los pipelines de integración continua. Después de comprender los distintos tipos de pruebas, puedo diseñar una estrategia de calidad que reduzca el tiempo de depuración y mejore la experiencia del usuario. No necesito preocuparme por testing cuando el proyecto es un prototipo descartable o cuando la funcionalidad está aislada y no afecta a otras partes del sistema.",
+    "preguntas_repaso": "1. ¿Cuál es la diferencia principal entre un unit test y un component test?  \r\n2. ¿Por qué es importante mockear llamadas a APIs en integration tests?  \r\n3. ¿Qué herramienta recomendarías para ejecutar pruebas de UI en un entorno de navegador real?  \r\n4. ¿Cómo se asegura que los tests no dejen estado compartido entre ejecuciones?  \r\n5. ¿En qué casos podrías omitir la fase de E2E testing sin comprometer la calidad?",
+    "ruta_estudio": "1. **Prerequisitos**: JavaScript/TypeScript sólido, conceptos de DOM y componentes.  \r\n2. **Fundamentos**: Aprender Jest y escribir unit tests.  \r\n3. **Componentes**: Usar React Testing Library para pruebas de UI.  \r\n4. **Integración**: Introducir MSW para mockear APIs y probar flujos de datos.  \r\n5. **E2E**: Dominar Cypress y crear escenarios de usuario completos.  \r\n6. **Automatización**: Configurar pipelines CI con GitHub Actions o similar."
+  },
+  "sections_missing": [],
+  "slug": "testing",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/software-engineering"
+  ],
+  "title": "Testing",
+  "uid": "c_QSNPL7HRIY",
+  "verification_marks": []
+}

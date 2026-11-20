@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "Milestones & Releases"
+  ],
+  "area_uid": "project-management",
+  "content_hash": "31a6054000f66e76b2e5e609d0591fd11cff0ae3995e2f934848fc1bbaa53591",
+  "numero": 19,
+  "related_uids": [
+    "c_5N3OJBWASE",
+    "c_CDAPU4W4IV",
+    "c_YRDFIS7XCB"
+  ],
+  "sections": {
+    "como_funciona": "1. Durante la fase de **planning**, se revisa el product roadmap y se definen los milestones que marcan fases de alto valor (por ejemplo, “Fin de la arquitectura” o “Validación de prototipo”).  \r\n2. Cada milestone se desglosa en tareas y se asigna a sprints o iteraciones en el **scheduling**.  \r\n3. Al cerrar un sprint que contiene el milestone, el equipo verifica los criterios de aceptación y registra la culminación del hito.  \r\n4. Cuando se agrupan varios milestones completados, se prepara una **release** que incluye todas las funcionalidades listas, se ejecutan pruebas de integración y se entrega al cliente o a QA.  \r\n5. El release se comunica mediante un informe de estado que muestra los milestones alcanzados y los próximos pasos.",
+    "conexiones": "- **Product Roadmap**: los milestones son los hitos que convierten la visión del roadmap en pasos verificables.  \r\n- **Planning**: la definición de milestones y releases se realiza durante la planificación para alinear alcance, tiempo y recursos.  \r\n- **Scheduling**: los milestones se insertan en el calendario del proyecto, guiando la asignación de tareas y la gestión de dependencias.",
+    "detalles": "- **Básico**: definir milestones claros (fecha, entregable, criterios) y una estrategia de releases (frecuencia, público objetivo).  \r\n- **Intermedio**: vincular cada milestone a indicadores de riesgo y a métricas de calidad; usar herramientas de gestión (Jira, Azure Boards) para automatizar la transición a release.  \r\n- **Avanzado**: implementar pipelines de CI/CD que disparen una release automáticamente al cumplir los criterios de un milestone; aplicar técnicas de release rolling o canary para minimizar impacto en producción.",
+    "ejemplo_minimo": "```yaml\r\nmilestones:\r\n  - name: \"Diseño de arquitectura\"\r\n    due: \"2024-02-15\"\r\n    criteria: [\"Diagramas aprobados\", \"Revisión de seguridad\"]\r\n  - name: \"MVP funcional\"\r\n    due: \"2024-04-01\"\r\n    criteria: [\"Feature A\", \"Feature B\", \"Pruebas unitarias 80%\"]\r\nreleases:\r\n  - version: \"1.0.0\"\r\n    fromMilestones: [\"MVP funcional\"]\r\n    target: \"Entorno de staging\"\r\n    date: \"2024-04-05\"\r\n```",
+    "errores_comunes": "- **Confundir milestone con entrega**: un milestone no implica que el producto esté listo para el cliente; evitarlo definiendo criterios de “ready” diferentes a los de “done”.  \r\n- **Sobrecargar de milestones**: demasiados hitos fragmentan la visión; mantener solo los críticos para la toma de decisiones.  \r\n- **Ignorar la dependencia entre releases**: lanzar sin validar que los milestones previos están completos genera retrabajo; usar checklists de pre‑release.",
+    "estado_actual": "- **Fundamentos estables**: los milestones siguen siendo puntos de control definidos por criterios de aceptación; las releases continúan siendo paquetes entregables que marcan la disponibilidad de funcionalidades.  \r\n- **Práctica moderna**: la integración de milestones en pipelines de CI/CD y la adopción de releases automatizadas (rolling, canary) son tendencias consolidadas en equipos ágiles.",
+    "ideas_clave": "1. **Milestone como punto de control**: indica que se ha completado un conjunto de entregables críticos y permite validar el rumbo del proyecto.  \r\n2. **Release como entrega al cliente**: empaqueta funcionalidades terminadas y probadas para su uso real o para pruebas de aceptación.  \r\n3. **Alineación con la planificación**: los milestones y releases se insertan en el cronograma y sirven de ancla para la estimación y el seguimiento.  \r\n4. **Comunicación de estado**: facilitan informes claros a stakeholders al mostrar avances concretos y próximos entregables.",
+    "objetivo": "Utilizo los **milestones** y **releases** para marcar puntos críticos y entregas tangibles dentro del ciclo de vida de un proyecto. Resuelvo la falta de visibilidad sobre el progreso y el riesgo de desviaciones, al ofrecer hitos claros que alinean al equipo y a los stakeholders con los objetivos del proyecto. Aparecen en la planificación de la hoja de ruta, en la coordinación de sprints y en la comunicación de resultados parciales. Después de entenderlos, puedo estructurar el cronograma, priorizar actividades y negociar alcance con mayor precisión. No necesito preocuparme cuando el proyecto es tan pequeño que una única entrega cubre todo el trabajo y no existen dependencias externas que requieran validaciones intermedias.",
+    "preguntas_repaso": "1. ¿Qué diferencia hay entre un milestone y una release en la gestión de proyectos?  \r\n2. ¿Cómo ayuda un milestone a reducir el riesgo de desviación del proyecto?  \r\n3. ¿En qué fase del proyecto se deben definir los milestones y por qué?  \r\n4. ¿Qué problemas pueden surgir si se confunden los criterios de “ready” y “done” en un milestone?  \r\n5. ¿Cómo se relaciona la frecuencia de releases con la entrega de valor al cliente?",
+    "ruta_estudio": "1. **Prerequisitos**: comprender conceptos de *sprint*, *backlog* y *criterios de aceptación*.  \r\n2. **Fundamentos**: leer guías de gestión de proyectos que traten milestones y releases (PMBOK, Agile Practice Guide).  \r\n3. **Herramientas**: practicar la configuración de milestones y releases en Jira o Azure DevOps.  \r\n4. **Avanzado**: estudiar pipelines de CI/CD y patrones de despliegue (rolling, canary) para automatizar releases basadas en milestones."
+  },
+  "sections_missing": [],
+  "slug": "milestones-releases",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/project-management"
+  ],
+  "title": "Milestones & Releases",
+  "uid": "c_FJSN2KSLMV",
+  "verification_marks": []
+}

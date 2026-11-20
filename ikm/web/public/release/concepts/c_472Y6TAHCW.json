@@ -1,0 +1,40 @@
+{
+  "aliases": [
+    "Processes"
+  ],
+  "area_uid": "os-linux",
+  "content_hash": "e64fcba382461893afb55fef2df5b6183d236a319beeef5cb99cbc590eaefac5",
+  "numero": 3,
+  "related_uids": [
+    "c_DCMEIR6SK3",
+    "c_HEPP5R7NCU",
+    "c_SQK5OV6EKB",
+    "c_UDNACO4RMV",
+    "c_UNJ4CCPCKV",
+    "c_WYOKFAK6RE",
+    "c_WYUWDZEETM"
+  ],
+  "sections": {
+    "como_funciona": "1. Un programa solicitado por el usuario o por otro proceso invoca `fork()`.  \r\n2. El kernel duplica la tabla de procesos, creando un **PID** único y una copia del espacio de direcciones.  \r\n3. El proceso hijo puede ejecutar `execve()` para cargar un nuevo binario, cambiando su imagen de memoria.  \r\n4. El scheduler coloca al proceso en la cola de runnable; cuando le corresponde, el CPU ejecuta sus instrucciones.  \r\n5. Durante la ejecución, el proceso puede bloquearse (sleep) esperando I/O, recibir señales o terminar, pasando a estado zombie hasta que el padre lo recoja con `wait()`.",
+    "conexiones": "- **Threads** – Los hilos comparten el mismo espacio de direcciones dentro de un proceso, ofreciendo concurrencia más ligera que crear procesos separados.  \r\n- **Memory Management** – El kernel asigna páginas de memoria a cada proceso; la separación evita que un proceso corrompa la memoria de otro.  \r\n- **Daemons / Services** – Los servicios del sistema son procesos que se inician en segundo plano y se gestionan mediante `systemd`, aprovechando el control de estado y reinicio automático.",
+    "detalles": "- **Básico**: `fork()` + `exec()` forman la base de cualquier lanzamiento de programa.  \r\n- **Intermedio**: manejo de señales (`SIGTERM`, `SIGKILL`) y estados de espera (`waitpid()`) para evitar zombies.  \r\n- **Avanzado**: afinación del scheduler mediante `nice`, `renice` o políticas de tiempo real; uso de cgroups para limitar CPU y memoria; depuración con `ptrace` y `strace`.",
+    "ejemplo_minimo": "```bash\r\n#!/bin/bash\r\n# Lanzar un proceso en segundo plano y mostrar su PID\r\nsleep 30 &\r\npid=$!\r\necho \"Proceso sleep lanzado con PID $pid\"\r\nps -p $pid -o pid,stat,cmd\r\n```\r\n**Salida esperada**\r\n```\r\n PID STAT CMD\r\n12345 S    sleep 30\r\n```\r\nEl proceso está en estado `S` (sleeping) esperando que expire el temporizador.",
+    "errores_comunes": "- **Olvidar `wait()`**: genera procesos zombie; usar `wait` o `waitpid` para recolectarlos.  \r\n- **Confundir `fork()` y `exec()`**: lanzar `exec` sin `fork` reemplaza el proceso actual.  \r\n- **Asignar señales a PID equivocado**: verificar el PID con `ps` antes de enviar `kill`.  \r\n- **Ignorar límites de recursos**: sin cgroups, un proceso puede consumir toda la CPU o memoria.",
+    "estado_actual": "- **Fundamentos estables**: el modelo de procesos POSIX, las llamadas `fork`, `exec`, `wait`, y el scheduler CFS son parte del kernel Linux desde hace décadas.  \r\n- **Práctica moderna**: uso de cgroups v2 para aislamiento de recursos, systemd como gestor de servicios que abstrae gran parte del ciclo de vida, y contenedores (Docker, podman) que encapsulan procesos en namespaces.",
+    "ideas_clave": "1. **Creación y fork** – Un proceso nace mediante la llamada `fork()`, copiando el contexto del padre.  \r\n2. **Ciclo de vida** – Transiciones entre estados: running, sleeping, stopped y zombie.  \r\n3. **Planificación (scheduling)** – El scheduler asigna tiempo de CPU según políticas (CFS, realtime).  \r\n4. **Separación de memoria** – Cada proceso tiene su propio espacio de direcciones, con stack y heap aislados.  \r\n5. **Comunicación y control** – Señales, pipes y sockets permiten interacción entre procesos.",
+    "objetivo": "Utilizo los procesos para ejecutar cualquier programa dentro de un sistema Linux, ya sea un script, un daemon o una aplicación interactiva. Resuelvo la necesidad de aislar recursos de CPU, memoria y dispositivos entre tareas concurrentes, lo que permite que el kernel planifique y controle su ejecución sin interferencias. En mi día a día como ingeniero de sistemas senior, administro procesos mediante herramientas como `ps`, `top`, `systemctl` y depuro fallas con `strace` o `gdb`. Al comprender su ciclo de vida (creación, ejecución, terminación) puedo diseñar servicios robustos, optimizar el uso de recursos y diagnosticar cuellos de botella. Después de dominar los procesos, puedo pasar a orquestar contenedores, gestionar clusters o implementar servidores de alta disponibilidad. Cuando una tarea es trivial y se ejecuta en modo batch sin requerir control fino, no es necesario profundizar en su gestión detallada.",
+    "preguntas_repaso": "1. ¿Qué diferencia hay entre el estado *running* y *sleeping* de un proceso?  \r\n2. ¿Por qué es necesario llamar a `wait()` después de un `fork()`?  \r\n3. ¿Cómo afecta la llamada `nice` al comportamiento del scheduler?  \r\n4. ¿En qué se diferencia un hilo de un proceso respecto a la memoria?  \r\n5. ¿Qué herramienta usarías para limitar el consumo de CPU de un proceso sin modificar su código?",
+    "ruta_estudio": "1. **Prerequisitos**: conceptos de Linux shell, permisos de usuario y fundamentos de sistemas de archivos.  \r\n2. **Fundamentos**: estudiar las llamadas `fork`, `exec`, `wait` y el modelo de estados de proceso (man 2 fork, man 7 signal).  \r\n3. **Herramientas**: practicar con `ps`, `top`, `htop`, `strace` y `gdb` para inspeccionar procesos en tiempo real.  \r\n4. **Aislamiento**: aprender cgroups y namespaces (man 7 cgroups, man 7 namespaces).  \r\n5. **Orquestación**: explorar systemd unit files y conceptos de contenedores (Dockerfile básico).  \r\n6. **Especialización**: profundizar en políticas de scheduling realtime y tuning de `nice`/`renice`."
+  },
+  "sections_missing": [],
+  "slug": "processes",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/operating-systems-linux"
+  ],
+  "title": "Processes",
+  "uid": "c_472Y6TAHCW",
+  "verification_marks": []
+}

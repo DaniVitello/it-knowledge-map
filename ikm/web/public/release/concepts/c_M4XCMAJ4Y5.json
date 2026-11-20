@@ -1,0 +1,32 @@
+{
+  "aliases": [
+    "Debugging"
+  ],
+  "area_uid": "software-engineering",
+  "content_hash": "99a0fad453989a72fd42c272169b1c97964b2074b4735f54d705ae0db02340d5",
+  "numero": 18,
+  "related_uids": [],
+  "sections": {
+    "como_funciona": "1. **Identifico** el síntoma (error, excepción, comportamiento incorrecto).  \r\n2. **Reproduzco** el escenario creando datos de entrada o configuraciones que generen el mismo fallo.  \r\n3. **Coloco** breakpoints o habilito logging detallado para observar el estado interno del programa.  \r\n4. **Ejecuto** paso a paso (step‑over/step‑into) o utilizo un profiler para ver la evolución temporal de variables y tiempos.  \r\n5. **Analizo** la información recopilada y formulo hipótesis sobre la causa.  \r\n6. **Verifico** la hipótesis modificando temporalmente el código o los datos y observando si el error desaparece.  \r\n7. **Corrijo** la causa raíz y vuelvo a ejecutar la suite de pruebas para confirmar la solución.",
+    "conexiones": "- **Testing** – Las pruebas automatizadas revelan fallos que luego se investigan mediante debugging; un buen debugging mejora la calidad de los tests.  \r\n- **Code Review** – Revisar el código ayuda a detectar patrones que dificultan el debugging, como lógica compleja o falta de manejo de errores.  \r\n- **Monitoring** – Las métricas y alertas de monitoreo proporcionan los primeros indicios que desencadenan una sesión de debugging en producción.",
+    "detalles": "- **Básico:** reproducir el error y usar `print`/logs simples para observar valores críticos.  \r\n- **Intermedio:** emplear depuradores integrados (IDE, `gdb`, `pdb`) y herramientas de profiling como `perf` o `VisualVM` para obtener métricas de tiempo y memoria.  \r\n- **Avanzado:** combinar tracing distribuido, análisis de core dumps y técnicas de “time‑travel debugging” para problemas que solo aparecen bajo alta concurrencia o en entornos de producción.",
+    "ejemplo_minimo": "```python\r\ndef dividir(a, b):\r\n    return a / b\r\n\r\n# Debugging sencillo con print\r\na, b = 10, 0\r\nprint(f\"Dividiendo {a} entre {b}\")\r\ntry:\r\n    resultado = dividir(a, b)\r\n    print(\"Resultado:\", resultado)\r\nexcept ZeroDivisionError as e:\r\n    print(\"Error detectado:\", e)\r\n```",
+    "errores_comunes": "- **No reproducir** el fallo antes de depurar → se pierde tiempo; usar datos de producción reales o mocks fieles.  \r\n- **Depender solo de prints** → dificulta seguir la ejecución; preferir breakpoints o logs estructurados.  \r\n- **Ignorar la causa raíz** y aplicar parches temporales → el problema reaparecerá; siempre buscar la razón subyacente.  \r\n- **Modificar código en producción** sin pruebas → introduce nuevos defectos; reproducir en entorno de staging primero.",
+    "estado_actual": "- **Fundamentos estables:** reproducir, inspeccionar variables, usar breakpoints y logs siguen siendo la base del debugging.  \r\n- **Práctica moderna:** el uso de tracing distribuido (OpenTelemetry), profiling en tiempo real y depuradores que permiten “rewind” están ganando adopción en sistemas de microservicios y aplicaciones cloud‑native.",
+    "ideas_clave": "1. **Reproducción** – Consigo que el fallo ocurra de forma determinista en un entorno controlado.  \r\n2. **Diagnóstico** – Utilizo herramientas (logs, breakpoints, inspección de variables) para entender el estado del programa en el punto de fallo.  \r\n3. **Profiling** – Mido el consumo de recursos y el flujo de ejecución para detectar cuellos de botella o comportamientos inesperados.  \r\n4. **Causa raíz** – A partir de la evidencia, localizo la pieza de código o la condición que origina el error y planifico su corrección.",
+    "objetivo": "Utilizo el debugging para identificar y corregir fallas en el código que impiden que una aplicación funcione según lo esperado. Resuelvo el problema de “¿por qué mi programa se comporta de forma inesperada?” reproduciendo el error, analizando su comportamiento y encontrando la causa raíz. En mi día a día como ingeniero de software, el debugging aparece cada vez que una prueba falla, un cliente reporta un comportamiento anómalo o un registro indica una excepción. Después de dominarlo, puedo diseñar sistemas más resilientes, escribir pruebas más efectivas y colaborar con el equipo para reducir el tiempo de respuesta ante incidentes. Cuando el código está cubierto por pruebas automatizadas y los entornos de producción son estables, no necesito preocuparme activamente por el debugging hasta que surja una nueva anomalía.",
+    "preguntas_repaso": "1. ¿Por qué es esencial reproducir un error antes de iniciar una sesión de debugging?  \r\n2. ¿Qué diferencia hay entre diagnóstico y profiling en el proceso de debugging?  \r\n3. ¿Cómo ayuda una causa raíz bien identificada a mejorar la calidad del código a largo plazo?  \r\n4. ¿Qué riesgos implica aplicar un parche sin haber verificado la causa raíz?  \r\n5. ¿De qué manera el monitoring puede desencadenar una actividad de debugging?",
+    "ruta_estudio": "1. **Prerequisitos:** conocimientos sólidos de programación, manejo de un IDE y comprensión de estructuras de datos.  \r\n2. **Fundamentos:** aprender a usar breakpoints, inspección de pila y logging básico.  \r\n3. **Profiling:** estudiar herramientas específicas del lenguaje (e.g., `cProfile` para Python, `JProfiler` para Java).  \r\n4. **Debugging avanzado:** explorar tracing distribuido, análisis de core dumps y depuradores de tiempo invertido.  \r\n5. **Integración:** combinar debugging con CI/CD, pruebas automatizadas y monitoreo para cerrar el ciclo de detección‑corrección."
+  },
+  "sections_missing": [],
+  "slug": "debugging",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/software-engineering"
+  ],
+  "title": "Debugging",
+  "uid": "c_M4XCMAJ4Y5",
+  "verification_marks": []
+}

@@ -1,0 +1,47 @@
+{
+  "aliases": [
+    "Proxies / Reverse Proxies"
+  ],
+  "area_uid": "networking",
+  "content_hash": "4bb65c2fc8480dc0b686c1de9acc159fdce3666fdb1aa1a9d7ad886cde279a85",
+  "numero": 23,
+  "related_uids": [
+    "c_F4IWLYRXT4",
+    "c_SCSLG2OETM"
+  ],
+  "sections": {
+    "como_funciona": "1. El cliente abre una conexión TCP al proxy (puede ser un puerto 80/443).  \r\n2. El proxy recibe la solicitud HTTP y, según su configuración, decide a qué backend enviarla.  \r\n3. Si el proxy actúa como reverse proxy, reescribe encabezados como `Host` y `X-Forwarded-For`.  \r\n4. Opcionalmente, el proxy almacena la respuesta en caché o la entrega a un algoritmo de balanceo.  \r\n5. La respuesta viaja de regreso al cliente, manteniendo oculta la dirección del servidor origen.",
+    "conexiones": "- **Firewall:** El proxy actúa como punto de inspección donde el firewall puede aplicar reglas de capa 7 antes de que el tráfico alcance los servidores.  \r\n- **CDN:** Un reverse proxy puede delegar contenido estático a una CDN, reduciendo la carga del backend y mejorando la latencia global.  \r\n- **Load Balancing:** El proxy incorpora algoritmos de balanceo (round‑robin, least‑connections) para distribuir peticiones entre varios servidores.",
+    "detalles": "- **Básico:** Configuración de un proxy forward (ej. Squid) para filtrar tráfico saliente.  \r\n- **Intermedio:** Implementación de un reverse proxy (ej. Nginx) con reglas de reescritura y terminación TLS.  \r\n- **Avanzado:** Integración de health checks, sticky sessions y caché distribuida; uso de HTTP/2 y gRPC con proxy.",
+    "ejemplo_minimo": "```bash\r\n# Nginx como reverse proxy simple\r\ncat > /etc/nginx/conf.d/reverse.conf <<'EOF'\r\nserver {\r\n    listen 80;\r\n    location / {\r\n        proxy_pass http://10.0.0.10:8080;\r\n        proxy_set_header Host $host;\r\n        proxy_set_header X-Forwarded-For $remote_addr;\r\n    }\r\n}\r\nEOF\r\nnginx -s reload\r\n```\r\nEl cliente que accede a `http://proxy.example.com` recibe la respuesta del backend `10.0.0.10:8080` sin conocer su IP.",
+    "errores_comunes": "- **Olvidar reenviar encabezados críticos** – causa pérdida de información de cliente; usar `proxy_set_header` para preservarlos.  \r\n- **Configurar TLS solo en el backend** – genera doble cifrado y latencia; terminar TLS en el proxy cuando sea posible.  \r\n- **No validar certificados del backend** – abre vulnerabilidad de MITM; habilitar `proxy_ssl_verify` en Nginx.",
+    "estado_actual": "- **Fundamentos estables:** El modelo cliente‑proxy‑servidor y la terminación TLS siguen siendo la base de la arquitectura.  \r\n- **Práctica moderna:** Se emplean reverse proxies como punto de entrada para microservicios, combinando balanceo de carga, observabilidad (tracing) y políticas de seguridad basadas en Zero Trust.",
+    "ideas_clave": "1. **Intermediario de capa 7** – recibe peticiones HTTP/HTTPS y las reenvía al servidor backend.  \r\n2. **Ocultamiento y control** – protege la IP real del servidor y permite aplicar reglas de acceso.  \r\n3. **Balanceo y caché** – distribuye la carga entre varios backends y almacena respuestas frecuentes.  \r\n4. **Terminación TLS** – descifra el tráfico cifrado antes de enviarlo al servidor interno.",
+    "objetivo": "Utilizo proxies y reverse proxies para intermediar el tráfico entre clientes y servidores, de modo que puedo ocultar la verdadera dirección del origen, aplicar políticas de acceso y balancear la carga. Resuelvo problemas de conectividad como saturación de servidores, exposición de servicios internos y filtrado de contenido no deseado. En mi día a día como ingeniero de redes senior, los configuro en la frontera de la red o delante de aplicaciones web para mejorar la disponibilidad y la seguridad. Después de entender su funcionamiento, puedo diseñar arquitecturas resilientes, integrar firewalls y CDN, y depurar fallos de capa 7. Cuando el tráfico es directo y no se requieren transformaciones ni control de acceso, no es necesario preocuparme por proxies.",
+    "preguntas_repaso": "1. ¿Qué ventaja aporta el ocultamiento de la IP del servidor al usar un reverse proxy?  \r\n2. ¿Cómo se preserva la dirección original del cliente cuando el tráfico pasa por un proxy?  \r\n3. ¿En qué situación es preferible terminar TLS en el proxy en lugar de en el backend?  \r\n4. ¿Cuál es la diferencia funcional entre un proxy forward y un reverse proxy?  \r\n5. ¿Qué configuración mínima necesita Nginx para actuar como reverse proxy de una aplicación en `10.0.0.10:8080`?",
+    "ruta_estudio": "1. **Prerequisitos:** TCP/IP, modelo OSI, conceptos de HTTP/HTTPS y TLS.  \r\n2. **Fundamentos:** Configuración de un proxy forward (Squid) y de un reverse proxy básico (Nginx/HAProxy).  \r\n3. **Intermedio:** Reescritura de encabezados, terminación TLS, caché y health checks.  \r\n4. **Avanzado:** Integración con service mesh, observabilidad (metrics, logs), políticas Zero Trust y despliegues en contenedores/Kubernetes."
+  },
+  "sections_missing": [],
+  "slug": "proxies-reverse-proxies",
+  "sources": [
+    "http://10.0.0.10:8080",
+    "http://proxy.example.com`"
+  ],
+  "sources_detail": [
+    {
+      "title": null,
+      "url": "http://10.0.0.10:8080"
+    },
+    {
+      "title": null,
+      "url": "http://proxy.example.com`"
+    }
+  ],
+  "tags": [
+    "concepto",
+    "it/networking-internet"
+  ],
+  "title": "Proxies / Reverse Proxies",
+  "uid": "c_2WZCMX2XER",
+  "verification_marks": []
+}

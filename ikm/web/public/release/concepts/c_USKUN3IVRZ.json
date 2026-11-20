@@ -1,0 +1,39 @@
+{
+  "aliases": [
+    "Security Engineering"
+  ],
+  "area_uid": "software-engineering",
+  "content_hash": "1543f7fba16a671424130f2440eb3d44693f27610fc741241fc15ba2f0bc2792",
+  "numero": 24,
+  "related_uids": [
+    "c_56N6B2BTGY",
+    "c_CSHCCYYZWJ",
+    "c_D2IZ67V6IU",
+    "c_DHDG7TOBNK",
+    "c_F4IWLYRXT4",
+    "c_KUZUIAJVV7"
+  ],
+  "sections": {
+    "como_funciona": "1. Identifico las **amenazas** relevantes al dominio del producto.  \r\n2. Realizo un análisis de **vulnerabilidades** potenciales en la arquitectura y el código.  \r\n3. Defino requisitos de **desarrollo seguro** (por ejemplo, uso de librerías actualizadas, codificación defensiva).  \r\n4. Aplico **gestión de riesgos** para priorizar mitigaciones según impacto y probabilidad.  \r\n5. Implemento controles (autenticación, cifrado, firewalls) y los **valido** mediante pruebas estáticas, dinámicas y de penetración.  \r\n6. Mantengo una **validación continua** en producción mediante monitoreo y parches regulares.",
+    "conexiones": "- **Autenticación**: Provee la primera capa de defensa al verificar la identidad del usuario antes de conceder acceso.  \r\n- **HTTPS / TLS**: Garantiza la confidencialidad e integridad de los datos en tránsito, mitigando ataques de interceptación.  \r\n- **AI Safety & Security**: Extiende los principios de Security Engineering a sistemas de IA, asegurando que los modelos no sean manipulados ni produzcan resultados inseguros.",
+    "detalles": "- **Básico**: Comprender el modelo de amenazas (STRIDE, PASTA) y aplicar principios de codificación segura (validación de entrada, manejo de errores).  \r\n- **Intermedio**: Integrar herramientas de análisis estático (SAST) y dinámico (DAST), establecer políticas de gestión de parches y usar entornos de pruebas aislados.  \r\n- **Avanzado**: Adoptar arquitectura de confianza cero, automatizar pruebas de seguridad en CI/CD, y emplear análisis de riesgo cuantitativo para decisiones de inversión en seguridad.",
+    "ejemplo_minimo": "```python\r\n# Ejemplo simple de validación de entrada para evitar inyección SQL\r\ndef get_user(id):\r\n    # Uso de consultas parametrizadas protege contra vulnerabilidades de inyección\r\n    cursor.execute(\"SELECT * FROM users WHERE id = %s\", (id,))\r\n    return cursor.fetchone()\r\n```",
+    "errores_comunes": "- **Confiar en la seguridad del perímetro**: Ignorar vulnerabilidades internas. *Evitar*: aplicar defensa en profundidad.  \r\n- **No actualizar dependencias**: Dejar bibliotecas con vulnerabilidades conocidas. *Evitar*: usar herramientas de gestión de versiones y escaneo de vulnerabilidades.  \r\n- **Validar solo en el cliente**: Creer que la validación del lado del cliente es suficiente. *Evitar*: siempre validar en el servidor.",
+    "estado_actual": "- **Fundamentos estables**: El concepto de amenazas, vulnerabilidades y desarrollo seguro sigue siendo la base de Security Engineering.  \r\n- **Práctica moderna**: La integración de pruebas de seguridad en pipelines CI/CD y la adopción de modelos de confianza cero están ganando adopción en la industria.",
+    "ideas_clave": "1. **Amenazas (Threats)** – Eventos o actores que pueden causar daño al sistema.  \r\n2. **Vulnerabilidades** – Debilidades en el software que pueden ser explotadas por una amenaza.  \r\n3. **Desarrollo seguro (Secure Development)** – Prácticas y procesos que incorporan la mitigación de vulnerabilidades desde el diseño hasta la entrega.  \r\n4. **Gestión de riesgos** – Evaluación y priorización de amenazas y vulnerabilidades para decidir controles.  \r\n5. **Validación continua** – Pruebas y monitoreo que garantizan que los controles siguen funcionando en producción.",
+    "objetivo": "Utilizo Security Engineering para diseñar y construir sistemas de software que resistan ataques y reduzcan riesgos, abordando amenazas y vulnerabilidades desde la fase de desarrollo. Resuelvo el problema de que un producto inseguro pueda comprometer datos, reputación o continuidad del negocio. En mi trabajo como ingeniero de software, aplico principios de Security Engineering al definir requisitos, seleccionar tecnologías y validar la implementación. Después de entenderlo, puedo integrar controles de seguridad, realizar pruebas de penetración y gestionar incidentes. No necesito preocuparme cuando el alcance del proyecto está aislado, sin datos sensibles ni exposición a usuarios externos.",
+    "preguntas_repaso": "1. ¿Qué diferencia hay entre una amenaza y una vulnerabilidad en Security Engineering?  \r\n2. ¿Cómo contribuye el desarrollo seguro a la reducción de vulnerabilidades?  \r\n3. ¿Por qué la validación de entrada en el servidor es indispensable aunque exista validación en el cliente?  \r\n4. ¿Qué papel juega HTTPS/TLS dentro de una estrategia de defensa en profundidad?  \r\n5. ¿Cuál es la ventaja de integrar pruebas de seguridad en un pipeline CI/CD?",
+    "ruta_estudio": "1. **Prerequisitos**: Programación básica, conceptos de redes y sistemas operativos.  \r\n2. **Fundamentos**: Modelos de amenazas (STRIDE), OWASP Top 10, principios de codificación segura.  \r\n3. **Herramientas**: SAST (SonarQube), DAST (OWASP ZAP), gestión de vulnerabilidades (Dependabot).  \r\n4. **Arquitectura**: Diseño de confianza cero, uso de TLS y gestión de certificados.  \r\n5. **Operaciones**: Monitoreo de seguridad, respuesta a incidentes y parcheo continuo.  \r\n6. **Especialización**: Seguridad en entornos de contenedores, seguridad de IA y privacidad diferencial."
+  },
+  "sections_missing": [],
+  "slug": "security-engineering",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/software-engineering"
+  ],
+  "title": "Security Engineering",
+  "uid": "c_USKUN3IVRZ",
+  "verification_marks": []
+}

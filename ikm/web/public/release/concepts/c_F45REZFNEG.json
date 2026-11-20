@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "Product Lifecycle"
+  ],
+  "area_uid": "product-management",
+  "content_hash": "ee30359a33b27cc61e91a9327031b7e0098a94dad039f7edc9f5ce240e5c2500",
+  "numero": 22,
+  "related_uids": [
+    "c_5BZPAUGDCC",
+    "c_ETWVMQBZXQ",
+    "c_MZ7L6JLNSU"
+  ],
+  "sections": {
+    "como_funciona": "1. En **Discovery** reúno insights de usuarios y analizo la competencia; defino el problema a resolver.  \r\n2. Paso a **Launch** construyendo un MVP que pruebe el Product‑Market Fit; lo lanzo a un segmento piloto y recojo métricas clave (activación, retención).  \r\n3. Con evidencia de ajuste, entro en **Growth**: priorizo mejoras que aumenten el LTV y el CAC, activo campañas de Go‑to‑Market y escalo la infraestructura.  \r\n4. Cuando las métricas de crecimiento se estabilizan, entro en **Maturity**: reduzco la velocidad de releases, foco en eficiencia operativa y preparo planes de sunset o de expansión a nuevos mercados.",
+    "conexiones": "- **MVP**: el entregable mínimo que permite validar el Product‑Market Fit durante la fase de Launch.  \r\n- **Product‑Market Fit**: criterio que determina si el producto está listo para entrar en Growth.  \r\n- **Go‑to‑Market**: estrategia de lanzamiento y expansión que se diseña en la transición de Launch a Growth.",
+    "detalles": "- **Básico**: entender que cada fase tiene objetivos claros (validación, entrega, escalado, optimización).  \r\n- **Intermedio**: aplicar métricas específicas por fase (por ejemplo, *product‑market fit score* en Launch, *growth rate* en Growth).  \r\n- **Avanzado**: gestionar transiciones entre fases mediante *stage‑gate reviews*, alineando recursos y ajustando el Go‑to‑Market según la evolución del mercado.",
+    "ejemplo_minimo": "```python\r\n# Simulación simple de transición de fase basada en métricas\r\ndef next_phase(active_users, growth_rate):\r\n    if active_users < 1000:\r\n        return \"Discovery\"\r\n    elif growth_rate > 0.20:\r\n        return \"Growth\"\r\n    else:\r\n        return \"Maturity\"\r\n\r\nprint(next_phase(active_users=1500, growth_rate=0.25))  # → Growth\r\n```",
+    "errores_comunes": "- **Confundir MVP con producto final** – Evitar lanzar sin validar el Product‑Market Fit.  \r\n- **Ignorar la fase de Discovery** – No dedicar tiempo a la investigación genera pivotes costosos.  \r\n- **Pasar a Growth sin métricas de retención** – Asegurar que los usuarios vuelvan antes de escalar.",
+    "estado_actual": "Los fundamentos del Product Lifecycle (Discovery, Launch, Growth, Maturity) son estables y ampliamente adoptados en metodologías ágiles y de gestión de productos digitales. La práctica moderna incorpora métricas en tiempo real y automatiza los *stage‑gate* con plataformas de analytics, pero la secuencia de fases sigue siendo la misma.",
+    "ideas_clave": "1. **Discovery** – Identifico oportunidades y valido hipótesis antes de construir.  \r\n2. **Launch** – Entrego el MVP al mercado y comienzo a medir la respuesta real.  \r\n3. **Growth** – Escalo funcionalidades y canales basándome en datos de adopción.  \r\n4. **Maturity** – Optimizo costos, estabilizo ingresos y gestiono la eventual declinación.",
+    "objetivo": "Utilizo el Product Lifecycle para planificar y guiar cada fase del producto digital, asegurando que las decisiones de inversión, priorización y comunicación estén alineadas con la realidad del mercado y la capacidad del equipo. Resuelvo la incertidumbre de *cuándo* lanzar nuevas funcionalidades, *cómo* escalar el producto y *cuándo* iniciar la transición a mantenimiento o sustitución. Aparece en mi día a día cuando defino el roadmap, evalúo métricas de adopción y decido si seguimos invirtiendo en crecimiento o empezamos a optimizar costos. Después de entenderlo, puedo estructurar experimentos, negociar recursos y comunicar el estado del producto a stakeholders. No necesito preocuparme cuando el producto está en fase de descontinuación o cuando la estrategia corporativa define un cierre inmediato sin fase de madurez.",
+    "preguntas_repaso": "1. ¿Qué objetivo principal persigue la fase de Discovery dentro del Product Lifecycle?  \r\n2. ¿Cómo determina el MVP si el producto está listo para pasar a la fase de Launch?  \r\n3. ¿Qué métricas son críticas para decidir que un producto ha alcanzado Product‑Market Fit?  \r\n4. ¿Cuál es la diferencia clave entre las decisiones de inversión en la fase de Growth y en la de Maturity?  \r\n5. ¿Cómo se relaciona la estrategia Go‑to‑Market con la transición de Launch a Growth?",
+    "ruta_estudio": "1. **Prerequisitos**: fundamentos de UX research, métricas de producto (CAC, LTV, churn).  \r\n2. **Fundamentos**: estudiar casos de Discovery y técnicas de validación de hipótesis.  \r\n3. **Intermedio**: profundizar en diseño de MVP y metodologías de lanzamiento rápido.  \r\n4. **Avanzado**: aprender a diseñar planes de Growth basados en cohort analysis y a gestionar la fase de Maturity con técnicas de optimización de costos y roadmap de sunset."
+  },
+  "sections_missing": [],
+  "slug": "product-lifecycle",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/product-management"
+  ],
+  "title": "Product Lifecycle",
+  "uid": "c_F45REZFNEG",
+  "verification_marks": []
+}

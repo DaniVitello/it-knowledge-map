@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "Kanban"
+  ],
+  "area_uid": "project-management",
+  "content_hash": "837c06aadb5acd8abbafcb1162073d2eae776e086c149ec421102214fd705714",
+  "numero": 18,
+  "related_uids": [
+    "c_FBWIOD73FI",
+    "c_K2VG7SUBID",
+    "c_QZTOO636ZO"
+  ],
+  "sections": {
+    "como_funciona": "1. **Diseño del tablero**: creo columnas que reflejan las etapas del proceso (por ejemplo, “Por hacer”, “En progreso”, “En revisión”, “Hecho”).  \r\n2. **Definición de límites WIP**: asigno un número máximo de tarjetas que pueden estar simultáneamente en cada columna.  \r\n3. **Ingreso de tareas**: cada historia o actividad se representa con una tarjeta que se coloca en la columna “Por hacer”.  \r\n4. **Desplazamiento de tarjetas**: a medida que el trabajo avanza, muevo la tarjeta al siguiente estado, respetando siempre los límites de WIP.  \r\n5. **Recolección de datos**: registro la fecha de entrada y salida de cada columna para calcular el cycle time.  \r\n6. **Retrospectiva**: analizo los datos y los cuellos de botella detectados, ajusto los límites WIP o modifica el flujo y repito el ciclo.",
+    "conexiones": "- **Engineering Processes**: Kanban se superpone con los procesos de ingeniería al proporcionar un mecanismo visual para gestionar la entrega de código, pruebas y despliegues.  \r\n- **Agile**: Kanban es una de las metodologías ágiles que comparte valores como la entrega incremental y la mejora continua.  \r\n- **Scrum**: aunque Scrum usa sprints, los equipos pueden combinarlo con un tablero Kanban para gestionar el trabajo dentro y fuera del sprint, creando un “Scrumban”.",
+    "detalles": "- **Básico**: tablero simple, límites WIP estáticos y seguimiento manual del cycle time.  \r\n- **Intermedio**: uso de métricas como lead time, implementación de políticas explícitas (por ejemplo, “definición de listo”) y reuniones diarias de seguimiento (stand‑up).  \r\n- **Avanzado**: integración con herramientas de automatización (por ejemplo, triggers que mueven tarjetas al cerrar pull‑request), análisis de tendencias de cycle time y simulaciones de capacidad para planificación a medio plazo.",
+    "ejemplo_minimo": "```markdown\r\n# Kanban board (markdown)\r\n\r\n- [ ] Por hacer\r\n  - 📌 Tarea A\r\n  - 📌 Tarea B\r\n- [ ] En progreso (WIP ≤ 2)\r\n  - 📌 Tarea C\r\n- [ ] Hecho\r\n```\r\nEn este ejemplo, la columna “En progreso” tiene un límite de 2 tarjetas; si ya hay dos, no se puede mover otra tarea a esa columna hasta que alguna se complete.",
+    "errores_comunes": "- **Ignorar los límites WIP** – El tablero pierde su valor predictivo; evitarlo revisando los límites en cada stand‑up.  \r\n- **Demasiadas columnas** – Complica la visualización y ralentiza el flujo; mantener solo los estados esenciales.  \r\n- **No medir el cycle time** – Se pierde la capacidad de estimar entregas; registrar fechas de entrada y salida de cada tarjeta.  \r\n- **Cambiar el tablero sin consenso** – Genera confusión; acordar cualquier cambio con todo el equipo.",
+    "estado_actual": "**Fundamentos estables**: la visualización del flujo, los límites de WIP y la medición del cycle time son prácticas consolidadas y ampliamente adoptadas en la gestión de proyectos.  \r\n**Práctica moderna**: la integración de Kanban con herramientas de CI/CD, el uso de políticas explícitas (Definition of Done) y la aplicación de análisis de datos en tiempo real para predecir la capacidad del equipo están ganando tracción en entornos ágiles avanzados.",
+    "ideas_clave": "1. **Visualizar el flujo** – Un tablero con columnas que representan los estados del trabajo permite que todo el equipo vea el progreso en tiempo real.  \r\n2. **Limitar WIP** – Establecer un máximo de tareas simultáneas por columna evita la sobrecarga y fuerza la finalización antes de iniciar nuevas actividades.  \r\n3. **Medir cycle time** – Registrar el tiempo que una tarea tarda en pasar de “En progreso” a “Hecho” brinda datos para predecir la velocidad del equipo.  \r\n4. **Mejorar continuamente** – Revisar regularmente el tablero y los límites de WIP permite identificar y eliminar cuellos de botella.",
+    "objetivo": "Utilizo Kanban para visualizar el flujo de trabajo y limitar la cantidad de tareas en curso, lo que me permite detectar cuellos de botella y mejorar la predictibilidad de la entrega. Resuelvo el problema de sobrecarga del equipo y la falta de claridad sobre el estado real de cada actividad, una situación frecuente al planificar sprints o al coordinar múltiples dependencias. Aparece en la fase de ejecución del proyecto, cuando el equipo necesita una herramienta ligera para gestionar el trabajo diario sin la rigidez de un backlog estructurado. Después de entender Kanban, puedo combinarlo con otras prácticas ágiles, ajustar WIP (Work In Progress) y medir el cycle time para optimizar la capacidad del equipo. No es necesario preocuparse por Kanban cuando el proyecto es extremadamente pequeño o cuando ya se usa un método de gestión de tareas que cubre todas sus funciones de forma suficiente.",
+    "preguntas_repaso": "1. ¿Cómo ayuda el límite de WIP a prevenir cuellos de botella?  \r\n2. ¿Qué información proporciona el cycle time para la planificación del proyecto?  \r\n3. ¿En qué situaciones combinarías Kanban con Scrum?  \r\n4. ¿Cuál es la diferencia entre “lead time” y “cycle time” en un tablero Kanban?  \r\n5. ¿Qué pasos seguirías para ajustar el flujo cuando una columna está constantemente sobrepasada?",
+    "ruta_estudio": "1. **Prerequisitos**: comprender los conceptos de backlog, sprint y roles de equipo en Agile.  \r\n2. **Fundamentos**: crear y usar un tablero Kanban básico, establecer límites WIP y medir cycle time.  \r\n3. **Intermedio**: aprender a definir políticas de “listo” y “hecho”, y a conducir retrospectivas enfocadas en el flujo.  \r\n4. **Avanzado**: explorar integraciones con herramientas de gestión (Jira, Azure Boards), análisis de métricas en tiempo real y técnicas de simulación de capacidad.  \r\n5. **Especialización**: estudiar casos de Scrumban y la aplicación de Kanban en entornos de DevOps."
+  },
+  "sections_missing": [],
+  "slug": "kanban",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/project-management"
+  ],
+  "title": "Kanban",
+  "uid": "c_5P4YM7PKKX",
+  "verification_marks": []
+}

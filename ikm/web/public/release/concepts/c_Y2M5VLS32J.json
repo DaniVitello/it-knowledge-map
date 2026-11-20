@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "Mensajería"
+  ],
+  "area_uid": "backend",
+  "content_hash": "df52ea5f9a795002205b5a61accf0656c251de1d9db5afc50efcc25dfbad038d",
+  "numero": 21,
+  "related_uids": [
+    "c_GFXWIQR3NM",
+    "c_VXNPWGQTHB",
+    "c_XGWNYRU3HQ"
+  ],
+  "sections": {
+    "como_funciona": "1. El productor crea un mensaje (p. ej. “orden‑creada”) y lo envía al broker.  \r\n2. El broker persiste el mensaje en una cola o lo asigna a un tópico según la configuración.  \r\n3. Los consumidores (workers, microservicios) se suscriben a la cola o al tópico y reciben los mensajes en orden o según particiones.  \r\n4. Cada consumidor procesa el mensaje y, si todo sale bien, envía un ACK; de lo contrario, el broker re‑entrega según la política de reintentos.  \r\n5. Los eventos publicados pueden disparar flujos adicionales (actualizar cachés, enviar correos, iniciar downstream services) sin que el productor conozca a los receptores.",
+    "conexiones": "- **Distributed Systems** – la mensajería es la columna vertebral que permite la comunicación fiable entre nodos dispersos.  \r\n- **Sistemas distribuidos** – los conceptos de consenso y tolerancia a particiones se implementan mediante brokers que manejan replicación y particionado.  \r\n- **Advanced Data Architecture** – los eventos publicados forman parte de pipelines de datos en tiempo real y alimentan almacenes de eventos (event stores).",
+    "detalles": "- **Básico**: crear una cola simple, producir y consumir mensajes con ACK manual.  \r\n- **Intermedio**: usar tópicos para pub/sub, configurar dead‑letter queues y políticas de reintento.  \r\n- **Avanzado**: particionar tópicos para paralelismo, aplicar idempotencia en consumidores, integrar con transacciones distribuidas y usar esquemas de serialización (Avro, Protobuf) para compatibilidad evolutiva.",
+    "ejemplo_minimo": "```python\r\n# productor con pika (RabbitMQ)\r\nimport pika, json\r\n\r\nconn = pika.BlockingConnection(pika.ConnectionParameters('localhost'))\r\nch = conn.channel()\r\nch.queue_declare(queue='tareas')\r\n\r\nmsg = {'tipo': 'email', 'destino': 'user@example.com'}\r\nch.basic_publish(exchange='', routing_key='tareas', body=json.dumps(msg))\r\nconn.close()\r\n```\r\n\r\n```python\r\n# consumidor\r\nimport pika, json\r\n\r\ndef callback(ch, method, properties, body):\r\n    data = json.loads(body)\r\n    print(f\"Procesando {data['tipo']} a {data['destino']}\")\r\n    ch.basic_ack(delivery_tag=method.delivery_tag)\r\n\r\nconn = pika.BlockingConnection(pika.ConnectionParameters('localhost'))\r\nch = conn.channel()\r\nch.basic_consume(queue='tareas', on_message_callback=callback)\r\nch.start_consuming()\r\n```",
+    "errores_comunes": "- **Olvidar ACK** → el mensaje se re‑entrega indefinidamente; usar `basic_ack` al final del procesamiento.  \r\n- **Procesar sin idempotencia** → duplicados generan efectos secundarios; diseñar consumidores idempotentes.  \r\n- **Usar una sola cola para diferentes tipos de trabajo** → dificulta el escalado; separar por prioridad o dominio.  \r\n- **No configurar dead‑letter** → los mensajes fallidos se pierden; habilitar DLQ para inspección.",
+    "estado_actual": "- **Fundamentos estables**: colas FIFO, ACK/NACK, dead‑letter queues y patrones pub/sub están consolidados en la mayoría de los brokers.  \r\n- **Práctica moderna**: uso de Kafka para eventos de alta velocidad, esquemas evolutivos con Avro/Protobuf, y arquitectura basada en eventos (event‑driven) para microservicios.",
+    "ideas_clave": "1. **Colas (queues)** – almacenan mensajes en orden FIFO para que los consumidores los procesen cuando estén listos.  \r\n2. **Eventos (events)** – representan hechos del dominio que se publican para que cualquier suscriptor reaccione.  \r\n3. **Brokers** – intermediarios (RabbitMQ, Kafka, SQS) que gestionan la persistencia, el enrutamiento y la entrega de mensajes.  \r\n4. **Pub/Sub** – patrón donde los productores publican a un tema y múltiples suscriptores reciben copias independientes.",
+    "objetivo": "Utilizo la mensajería para desacoplar componentes de un servicio backend y garantizar la entrega fiable de datos entre procesos o microservicios. Resuelvo problemas de escalabilidad, tolerancia a fallos y sincronización asíncrona que aparecen cuando una API necesita delegar trabajo a workers, notificar a otros sistemas o propagar cambios de estado sin bloquear la petición original. Aparece en la arquitectura de microservicios, en pipelines de procesamiento y en integraciones con sistemas externos. Después de entenderla puedo diseñar colas de trabajo, eventos de dominio y patrones pub/sub que mejoran la resiliencia y el rendimiento de mis APIs. No necesito preocuparme por mensajería cuando la lógica es estrictamente sincrónica, el volumen de tráfico es bajo y no hay requisitos de desacoplamiento o reintentos.",
+    "preguntas_repaso": "1. ¿En qué situaciones un backend debería preferir una cola frente a una llamada HTTP síncrona?  \r\n2. ¿Cómo garantiza un broker la entrega al menos una vez y qué implicaciones tiene para el consumidor?  \r\n3. ¿Cuál es la diferencia práctica entre un tópico pub/sub y una simple cola de trabajo?  \r\n4. ¿Qué papel juega una dead‑letter queue y cuándo deberías configurarla?  \r\n5. ¿Cómo puedes asegurar la idempotencia de un consumidor que procesa eventos de dominio?",
+    "ruta_estudio": "1. **Prerequisitos**: conocimientos de HTTP/REST, fundamentos de redes (TCP) y programación concurrente.  \r\n2. **Fundamentos**: tutorial oficial de RabbitMQ (colas, ACK, DLQ).  \r\n3. **Patrones**: estudiar pub/sub, work queues y fan‑out en la documentación de Kafka.  \r\n4. **Avanzado**: leer “Designing Event‑Driven Systems” y practicar con esquemas Avro en un clúster Kafka.  \r\n5. **Especialización**: implementar sagas y outbox pattern en microservicios, integrar con sistemas de observabilidad (tracing, metrics)."
+  },
+  "sections_missing": [],
+  "slug": "mensajeria",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/backend"
+  ],
+  "title": "Mensajería",
+  "uid": "c_Y2M5VLS32J",
+  "verification_marks": []
+}

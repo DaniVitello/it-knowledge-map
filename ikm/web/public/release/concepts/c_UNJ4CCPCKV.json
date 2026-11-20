@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "CPU & Scheduling"
+  ],
+  "area_uid": "os-linux",
+  "content_hash": "6dbfbfde0ef9da74644752ab163007dde59d9202a3550616bee2766ff4d95ac0",
+  "numero": 5,
+  "related_uids": [
+    "c_472Y6TAHCW",
+    "c_SQK5OV6EKB",
+    "c_WYOKFAK6RE"
+  ],
+  "sections": {
+    "como_funciona": "1. Cuando una tarea pasa a estado *RUNNABLE*, el scheduler la inserta en la cola correspondiente a su política.  \r\n2. En cada tick de timer, el scheduler revisa la cola de mayor prioridad disponible.  \r\n3. Selecciona la tarea con mayor peso (CFS) o la primera en la cola de tiempo real (FIFO/RR).  \r\n4. Asigna el quantum; al terminar o ser preemptada, la tarea vuelve a la cola y el scheduler elige la siguiente.  \r\n5. Si la afinidad está definida, el scheduler solo considera los CPUs permitidos; de lo contrario, el balanceador de carga puede mover la tarea a otro núcleo.",
+    "conexiones": "- **Concurrency** – la planificación permite que múltiples hilos progresen simultáneamente, gestionando la concurrencia a nivel de CPU.  \r\n- **Processes** – cada proceso contiene una o más tareas que el scheduler coloca en colas según su estado y prioridad.  \r\n- **Threads** – los hilos comparten el mismo espacio de direcciones pero son programados individualmente, por lo que la política de scheduling afecta directamente su rendimiento.",
+    "detalles": "- **Básico**: entender la diferencia entre políticas *CFS* y *RT*; usar `nice` y `renice` para modificar el peso.  \r\n- **Intermedio**: manipular la afinidad con `taskset` o `sched_setaffinity`; observar métricas en `/proc/sched_debug`.  \r\n- **Avanzado**: crear cgroups con control de CPU (`cpu.shares`, `cpu.rt_runtime_us`); ajustar parámetros del kernel como `sched_latency_ns` o `sched_min_granularity_ns` para perfilar cargas específicas.",
+    "ejemplo_minimo": "```bash\r\n# Ejecutar una carga CPU intensiva con prioridad baja\r\nnice -n 19 bash -c 'while :; do :; done' &\r\n# Ejecutar una carga de tiempo real con prioridad alta\r\nsudo chrt -f 1 bash -c 'while :; do :; done' &\r\n# Mostrar prioridades y afinidad\r\nps -eo pid,comm,pri,rtprio,psr | grep -E 'bash'\r\n```\r\nSalida (ejemplo):\r\n```\r\n 1234 bash          39     0   0\r\n 1235 bash          20     1   0\r\n```\r\nEl primer proceso tiene `nice` 19 (peso bajo) y se ejecuta en CPU 0; el segundo usa política FIFO con prioridad 1 y también está en CPU 0, pero preemptará al primero cuando necesite CPU.",
+    "errores_comunes": "- **Usar `nice` para procesos de tiempo real** – `nice` solo afecta CFS; para latencias críticas se necesita `chrt` o cgroups.  \r\n- **Ignorar afinidad** – asignar muchas tareas a un solo núcleo genera contención de caché; usar `taskset` o el balanceador del kernel.  \r\n- **Modificar parámetros del scheduler sin medir** – cambios como `sched_latency_ns` pueden degradar el rendimiento global; siempre validar con `perf` o `top`.",
+    "estado_actual": "- **Fundamentos estables**: el algoritmo CFS y las políticas *SCHED_FIFO*/*SCHED_RR* son parte del kernel Linux desde la versión 2.6 y se mantienen sin cambios estructurales.  \r\n- **Práctica moderna**: el uso de cgroups v2 para control fino de CPU, la exposición de métricas en `/proc/sched_debug` y la integración con systemd‑slice para aislar servicios son habituales en distribuciones actuales.",
+    "ideas_clave": "1. **Política de planificación** – el kernel elige entre *CFS* (Completely Fair Scheduler) y políticas de tiempo real (*SCHED_FIFO*, *SCHED_RR*) según la naturaleza de la carga.  \r\n2. **Prioridad y peso** – cada tarea tiene una prioridad (tiempo real) o un peso (CFS) que determina su cuota de tiempo de CPU.  \r\n3. **Quantum y re‑programación** – el scheduler asigna un quantum de tiempo; al agotarse, la tarea vuelve a la cola y se selecciona la siguiente.  \r\n4. **Afinidad de CPU** – se puede restringir una tarea a un subconjunto de núcleos para mejorar la localidad de caché.  \r\n5. **Balanceo de carga** – el kernel redistribuye tareas entre CPUs para evitar desequilibrios.",
+    "objetivo": "Utilizo la planificación de CPU para decidir qué proceso o hilo recibe tiempo de ejecución en cada instante del kernel. Resuelvo la competencia por recursos cuando varios procesos están listos y evito que el sistema se quede bloqueado o que una carga crítica se vea retrasada. Aparece cada vez que administro la carga de trabajo de servidores, ajusto la respuesta de aplicaciones en tiempo real o diagnostico cuellos de botella de rendimiento. Después de entender cómo funciona el scheduler, puedo afinar prioridades con `nice`, aislar cargas con cgroups o elegir políticas de planificación adecuadas. No necesito preocuparme cuando el sistema está bajo carga ligera y todas las tareas son de baja prioridad.",
+    "preguntas_repaso": "1. ¿Qué diferencia hay entre una política CFS y una política de tiempo real en Linux?  \r\n2. ¿Cómo afecta el valor de `nice` al peso de una tarea en el scheduler?  \r\n3. ¿Qué comando permite fijar la afinidad de una tarea a un núcleo específico?  \r\n4. ¿Por qué es importante usar cgroups para controlar el uso de CPU en entornos con múltiples servicios?  \r\n5. ¿Qué ocurre cuando el quantum de una tarea se agota y el scheduler la vuelve a colocar en la cola?",
+    "ruta_estudio": "1. **Prerequisitos**: conceptos de procesos, estados de proceso, y uso básico de la línea de comandos.  \r\n2. **Fundamentos**: leer la documentación de `man sched`, experimentar con `nice`, `renice` y `chrt`.  \r\n3. **Intermedio**: profundizar en `/proc/sched_debug`, probar `taskset` y crear cgroups con `systemd-run --scope`.  \r\n4. **Avanzado**: ajustar parámetros del kernel (`/sys/kernel/debug/sched/`), usar `perf sched` para análisis de latencia y estudiar casos de uso de tiempo real en sistemas embebidos."
+  },
+  "sections_missing": [],
+  "slug": "cpu-scheduling",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/operating-systems-linux"
+  ],
+  "title": "CPU & Scheduling",
+  "uid": "c_UNJ4CCPCKV",
+  "verification_marks": []
+}

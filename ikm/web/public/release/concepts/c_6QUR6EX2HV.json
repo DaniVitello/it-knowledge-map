@@ -1,0 +1,38 @@
+{
+  "aliases": [
+    "Modelado de datos"
+  ],
+  "area_uid": "backend",
+  "content_hash": "1c8519c4e959c599cba08ad67c9167eb02f33420f48f5880741271983fd220c0",
+  "numero": 13,
+  "related_uids": [
+    "c_3GNOH5HEH5",
+    "c_3IEBYDYAQB",
+    "c_6WHYRNWVHH",
+    "c_BHKPT7WX3D",
+    "c_OX2ZGYHT7N"
+  ],
+  "sections": {
+    "como_funciona": "1. Analizo los requisitos de negocio y extraigo las **entidades** (p. ej., Usuario, Pedido).  \r\n2. Determino las **relaciones** entre ellas y elijo el tipo adecuado.  \r\n3. Aplico **normalización** (hasta 3NF) para distribuir atributos en tablas sin duplicación.  \r\n4. Defino **constraints** y **claves** en cada tabla para garantizar integridad.  \r\n5. Genero el **esquema** en la base de datos y, si uso un ORM, creo las clases que lo representan.  \r\n6. El código de la API utiliza esas clases para leer/escribir datos; el motor de base de datos valida los constraints en cada operación.",
+    "conexiones": "- **ORM / Data Access**: el modelo de datos se traduce a clases que el ORM usa para generar consultas SQL.  \r\n- **Relational Databases**: el modelado define la estructura física que el motor relacional ejecuta y valida.  \r\n- **Keys & Constraints**: son los mecanismos que hacen posible que las relaciones definidas en el modelo sean enforceadas por la base de datos.",
+    "detalles": "- **Básico**: crear tablas con columnas simples y una primary key.  \r\n- **Intermedio**: introducir foreign keys, índices y reglas de unicidad; aplicar 1NF y 2NF.  \r\n- **Avanzado**: diseñar relaciones muchos‑a‑muchos mediante tablas de unión, usar check constraints y triggers, y aplicar 3NF o BCNF para esquemas complejos; considerar particionamiento y sharding en entornos de alta escala.",
+    "ejemplo_minimo": "```sql\r\n-- Tabla de usuarios\r\nCREATE TABLE users (\r\n    id SERIAL PRIMARY KEY,\r\n    email VARCHAR(255) UNIQUE NOT NULL,\r\n    created_at TIMESTAMP DEFAULT now()\r\n);\r\n\r\n-- Tabla de pedidos (uno‑a‑muchos con users)\r\nCREATE TABLE orders (\r\n    id SERIAL PRIMARY KEY,\r\n    user_id INT REFERENCES users(id) ON DELETE CASCADE,\r\n    total NUMERIC(10,2) NOT NULL,\r\n    placed_at TIMESTAMP DEFAULT now()\r\n);\r\n```\r\nEn un ORM de Python (SQLAlchemy):\r\n```python\r\nclass User(Base):\r\n    __tablename__ = \"users\"\r\n    id = Column(Integer, primary_key=True)\r\n    email = Column(String, unique=True, nullable=False)\r\n    orders = relationship(\"Order\", back_populates=\"user\")\r\n\r\nclass Order(Base):\r\n    __tablename__ = \"orders\"\r\n    id = Column(Integer, primary_key=True)\r\n    user_id = Column(Integer, ForeignKey(\"users.id\"), nullable=False)\r\n    total = Column(Numeric(10, 2), nullable=False)\r\n    user = relationship(\"User\", back_populates=\"orders\")\r\n```",
+    "errores_comunes": "- **Duplicar datos** en varias tablas → rompe la normalización; usar foreign keys en su lugar.  \r\n- **Olvidar índices** en columnas de búsqueda frecuente → consultas lentas; crear índices explícitos.  \r\n- **Usar claves compuestas sin necesidad** → complica el ORM; preferir surrogate keys.  \r\n- **No definir constraints** → permite datos inválidos; siempre especificar NOT NULL, UNIQUE, etc.  \r\n- **Sobrecargar relaciones muchos‑a‑muchos** con columnas extra en la tabla principal → crear tabla de unión dedicada.",
+    "estado_actual": "- **Fundamentos estables**: relaciones, normalización y constraints siguen siendo la base de cualquier RDBMS.  \r\n- **Práctica moderna**: los ORMs (SQLAlchemy, TypeORM, Hibernate) automatizan gran parte del mapeo, pero se recomienda revisar el esquema generado y ajustar índices manualmente. En microservicios, el modelado de datos a menudo se combina con eventos de dominio para mantener consistencia eventual.",
+    "ideas_clave": "1. **Relaciones** – Definen cómo se conectan las entidades (uno‑a‑uno, uno‑a‑muchos, muchos‑a‑muchos).  \r\n2. **Normalización** – Organiza los datos en tablas para eliminar redundancia y evitar anomalías de actualización.  \r\n3. **Constraints** – Reglas de integridad (primary key, foreign key, unique, check) que el motor de base de datos aplica automáticamente.  \r\n4. **Claves** – Identificadores únicos (primary key) y referencias (foreign key) que habilitan las relaciones.  \r\n5. **Mapeo a código** – El modelo se refleja en clases o structs mediante un ORM o capa de acceso.",
+    "objetivo": "Utilizo el modelado de datos para estructurar la información que mis servicios y APIs van a almacenar y consultar. Resuelvo problemas de inconsistencia, redundancia y dificultad al escribir consultas eficientes, garantizando que la lógica de negocio tenga una base fiable. Aparece cada vez que diseño una nueva entidad, defino relaciones entre tablas o migraciones de esquema en un proyecto backend. Después de entenderlo, puedo crear esquemas que soporten transacciones, validar datos mediante constraints y optimizar el rendimiento de los endpoints. No necesito preocuparme cuando la aplicación solo maneja datos efímeros en memoria o cuando delego el almacenamiento a un servicio externo sin esquema propio.",
+    "preguntas_repaso": "1. ¿Cómo decide si una relación debe ser uno‑a‑muchos o muchos‑a‑muchos?  \r\n2. ¿Qué anomalías de actualización se evitan al aplicar la tercera forma normal (3NF)?  \r\n3. ¿Cuál es la diferencia práctica entre una primary key y una unique constraint?  \r\n4. ¿Por qué es importante crear índices en columnas usadas como foreign keys?  \r\n5. ¿Cómo afecta la elección de una tabla de unión a la generación de código en un ORM?",
+    "ruta_estudio": "1. **Prerequisitos**: SQL básico, conceptos de tablas y tipos de datos.  \r\n2. **Fundamentos**: estudiar normalización (1NF‑3NF) y tipos de relaciones.  \r\n3. **Práctica**: crear esquemas en PostgreSQL o MySQL, aplicar constraints y probar inserciones/actualizaciones.  \r\n4. **ORM**: mapear los esquemas a código con SQLAlchemy o TypeORM, observar el DDL generado.  \r\n5. **Optimización**: aprender a crear índices, analizar planes de ejecución y aplicar particionamiento si es necesario.  \r\n6. **Avanzado**: diseñar esquemas para alta disponibilidad (sharding, multi‑tenant) y entender trade‑offs de denormalización controlada."
+  },
+  "sections_missing": [],
+  "slug": "modelado-de-datos",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/backend"
+  ],
+  "title": "Modelado de datos",
+  "uid": "c_6QUR6EX2HV",
+  "verification_marks": []
+}

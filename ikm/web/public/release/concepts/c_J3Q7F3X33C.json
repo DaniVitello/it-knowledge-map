@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "ACID & Isolation"
+  ],
+  "area_uid": "database",
+  "content_hash": "6b87c1fa7a27040286707eeaf2e5dd3adfb394e6e07acd4df02bdcf8483c5317",
+  "numero": 11,
+  "related_uids": [
+    "c_B32XQT5J5V",
+    "c_R72555O3AV"
+  ],
+  "sections": {
+    "como_funciona": "1. El cliente inicia una **transacción** (`BEGIN`).  \r\n2. El motor reserva los recursos necesarios según el **nivel de Isolation** seleccionado (por ejemplo `READ COMMITTED`).  \r\n3. Cada sentencia (`INSERT`, `UPDATE`, `DELETE`) se ejecuta dentro del contexto aislado; los bloqueos o versiones de fila evitan interferencias.  \r\n4. Al ejecutar `COMMIT`, el motor verifica que la **consistencia** no se haya violado y escribe los cambios en el log de recuperación, garantizando **durabilidad**.  \r\n5. Si ocurre un error o se llama a `ROLLBACK`, se revierte todo, manteniendo la **atomicidad**.",
+    "conexiones": "- **Data Warehousing**: los procesos de carga (ELT) suelen ejecutarse en transacciones ACID para asegurar que los datos de origen y destino permanezcan consistentes.  \r\n- **Eventual Consistency**: contrasta con ACID en sistemas NoSQL donde se sacrifica aislamiento para lograr alta disponibilidad y partición tolerante.  \r\n- **Distributed Transactions**: amplían los conceptos de ACID a múltiples bases de datos, requiriendo coordinadores de commit como el two‑phase commit.",
+    "detalles": "- **Básico**: usar `BEGIN … COMMIT` con el nivel por defecto (`READ COMMITTED`) para la mayoría de los procesos ETL.  \r\n- **Intermedio**: elegir niveles más estrictos (`REPEATABLE READ`, `SERIALIZABLE`) cuando se necesita evitar lecturas no repetibles o fenómenos de fantasmas en reportes críticos.  \r\n- **Avanzado**: combinar aislamiento con técnicas como **MVCC** (Multi‑Version Concurrency Control) para escalar lecturas sin bloquear, y emplear **two‑phase commit** en transacciones distribuidas que abarcan varios nodos.",
+    "ejemplo_minimo": "```sql\r\n-- PostgreSQL: transacción con aislamiento SERIALIZABLE\r\nBEGIN TRANSACTION ISOLATION LEVEL SERIALIZABLE;\r\n\r\nUPDATE orders\r\nSET status = 'shipped'\r\nWHERE order_id = 1024\r\n  AND status = 'processed';\r\n\r\nCOMMIT;\r\n```\r\nEl bloque garantiza que ningún otro proceso pueda modificar la fila `order_id = 1024` mientras se evalúa la condición y se actualiza, evitando lecturas sucias y garantizando consistencia.",
+    "errores_comunes": "- **Usar el nivel más alto por defecto**: genera bloqueos excesivos y degrada el rendimiento; elegir el nivel adecuado según la necesidad.  \r\n- **Olvidar `COMMIT` o `ROLLBACK`**: deja transacciones abiertas y bloquea recursos; siempre cerrar explícitamente.  \r\n- **Confundir aislamiento con consistencia**: el aislamiento controla la interacción entre transacciones, mientras que la consistencia se refiere a las reglas de integridad definidas por el esquema.",
+    "estado_actual": "- **Fundamentos estables**: los cuatro principios ACID siguen siendo la base de cualquier motor transaccional relacional (PostgreSQL, MySQL, SQL Server, Oracle).  \r\n- **Práctica moderna**: se favorece el uso de **MVCC** y niveles de aislamiento configurables para equilibrar concurrencia y consistencia; en entornos distribuidos se complementa con protocolos de consenso (Raft, Paxos) y **distributed transactions** que extienden ACID más allá de un solo nodo.",
+    "ideas_clave": "1. **Atomicidad** – una transacción se ejecuta completa o no se aplica nada.  \r\n2. **Consistencia** – al finalizar la transacción la base respeta todas sus reglas de integridad.  \r\n3. **Isolation (niveles)** – controla cómo las transacciones concurrentes se ven entre sí, evitando lecturas sucias, no repetibles y fantasmas.  \r\n4. **Durabilidad** – los cambios confirmados persisten aun ante fallos del sistema.",
+    "objetivo": "Utilizo ACID y los niveles de Isolation para garantizar que cada operación de escritura sobre mis bases de datos sea fiable, predecible y libre de efectos colaterales inesperados. Resuelvo problemas de pérdida de datos, lecturas sucias y resultados inconsistentes que aparecen cuando varios procesos acceden concurrentemente a los mismos registros. En mi día a día como ingeniero de datos y analista senior, aplico estas garantías al diseñar pipelines ETL, al ejecutar actualizaciones masivas y al ofrecer dashboards que dependen de datos siempre consistentes. Después de entender ACID puedo decidir cuándo usar transacciones explícitas, cuándo ajustar el nivel de aislamiento y cuándo confiar en mecanismos de control de concurrencia de la base. No necesito preocuparme por ACID cuando trabajo con almacenes de solo lectura o con sistemas que aceptan consistencia eventual por diseño.",
+    "preguntas_repaso": "1. ¿Qué garantiza la atomicidad dentro de una transacción y cómo se revierte si ocurre un error?  \r\n2. ¿En qué situaciones elegirías el nivel de aislamiento `SERIALIZABLE` en lugar de `READ COMMITTED`?  \r\n3. ¿Cómo evita MVCC los bloqueos de lectura mientras mantiene la consistencia de los datos?  \r\n4. ¿Cuál es la diferencia principal entre ACID y la consistencia eventual en sistemas NoSQL?  \r\n5. ¿Qué papel juega el protocolo two‑phase commit en una transacción distribuida?",
+    "ruta_estudio": "1. **Prerequisitos**: SQL básico, conceptos de claves primarias/foráneas y manejo de índices.  \r\n2. **Fundamentos**: estudiar los cuatro principios ACID y los niveles de Isolation en la documentación oficial de PostgreSQL o MySQL.  \r\n3. **Intermedio**: practicar con bloqueos explícitos, observar bloqueos con `pg_locks`, y experimentar con `READ COMMITTED` vs `SERIALIZABLE`.  \r\n4. **Avanzado**: profundizar en MVCC, analizar fenómenos de aislamiento (phantom reads) y aprender two‑phase commit con herramientas como `pg_prepared_xact`.  \r\n5. **Especialización**: explorar ACID en bases de datos distribuidas (CockroachDB, Google Spanner) y comparar con modelos de consistencia eventual."
+  },
+  "sections_missing": [],
+  "slug": "acid-isolation",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/database-data-analytics"
+  ],
+  "title": "ACID & Isolation",
+  "uid": "c_J3Q7F3X33C",
+  "verification_marks": []
+}

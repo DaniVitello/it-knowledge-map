@@ -1,0 +1,38 @@
+{
+  "aliases": [
+    "Distributed Systems"
+  ],
+  "area_uid": "software-engineering",
+  "content_hash": "82cfb31912f06fb72a536a4f8f0ad3441689e3389871d1102ff47d2284649935",
+  "numero": 28,
+  "related_uids": [
+    "c_PDOZ7FBH2J",
+    "c_SCSLG2OETM",
+    "c_VXNPWGQTHB",
+    "c_XGWNYRU3HQ",
+    "c_Y2M5VLS32J"
+  ],
+  "sections": {
+    "como_funciona": "1. Se identifican los límites funcionales y se encapsulan en **servicios** independientes.  \r\n2. Cada servicio decide qué datos deben **replicarse** y el número de réplicas necesarias.  \r\n3. Se elige un modelo de **consistencia** (fuerte, causal, eventual) que determina cuándo una escritura se considera visible.  \r\n4. Los servicios se comunican mediante **mensajería** (REST, gRPC, Kafka, etc.), garantizando entrega y orden según la necesidad.  \r\n5. Un mecanismo de detección de fallos desplaza el tráfico a réplicas sanas, manteniendo la **disponibilidad**.",
+    "conexiones": "- **Reliability** – La replicación y la detección de fallos aumentan la fiabilidad del sistema.  \r\n- **CDN / Load Balancing** – Distribuyen peticiones entre réplicas, reduciendo latencia y evitando sobrecarga.  \r\n- **Advanced Data Architecture** – Los modelos de consistencia y replicación son pilares de bases de datos distribuidas y almacenes de eventos.",
+    "detalles": "- **Básico**: arquitectura de micro‑servicios, uso de HTTP/REST y replicación primaria‑secundaria.  \r\n- **Intermedio**: patrones de consenso (Raft, Paxos) para consistencia fuerte, colas de mensajes con entrega al menos una vez.  \r\n- **Avanzado**: replicación multi‑master, consistencia eventual con CRDTs, sharding dinámico y tolerancia a particiones (CAP theorem).",
+    "ejemplo_minimo": "```python\r\n# Servicio simple que replica un contador en dos procesos usando Redis Pub/Sub\r\nimport redis, threading, time\r\n\r\nr = redis.Redis()\r\nchannel = 'counter'\r\n\r\ndef listener():\r\n    pubsub = r.pubsub()\r\n    pubsub.subscribe(channel)\r\n    for msg in pubsub.listen():\r\n        if msg['type'] == 'message':\r\n            print('Valor actualizado:', int(msg['data']))\r\n\r\nthreading.Thread(target=listener, daemon=True).start()\r\n\r\ndef increment():\r\n    val = r.incr('cnt')\r\n    r.publish(channel, val)\r\n\r\n# Simular dos incrementos\r\nincrement()\r\ntime.sleep(0.1)\r\nincrement()\r\n```",
+    "errores_comunes": "- **Suponer consistencia fuerte sin un protocolo de consenso** → usar Raft o Paxos.  \r\n- **Ignorar la latencia de la red en la lógica de tiempo de espera** → ajustar timeouts según la topología.  \r\n- **Replicar sin considerar la partición de datos** → aplicar sharding para evitar cuellos de botella.",
+    "estado_actual": "- **Fundamentos estables**: modelo cliente‑servidor, replicación primaria‑secundaria, protocolos de consenso clásicos.  \r\n- **Práctica moderna**: uso de CRDTs para consistencia eventual, orquestadores como Kubernetes para despliegue automático, y plataformas de mensajería distribuida (Kafka, NATS) que ofrecen tolerancia a fallos y escalado horizontal.",
+    "ideas_clave": "1. **Servicios** – Cada funcionalidad se expone como un servicio independiente que puede ejecutarse en cualquier nodo.  \r\n2. **Replicación** – Los datos o componentes críticos se copian en varios nodos para evitar pérdida y mejorar la lectura.  \r\n3. **Consistencia** – Se define cómo los replicas convergen a un estado único (por ejemplo, fuerte, eventual).  \r\n4. **Mensajería** – Los servicios intercambian información mediante colas o protocolos de red, permitiendo acoplamiento flexible.",
+    "objetivo": "Utilizo los sistemas distribuidos para diseñar aplicaciones que deben operar sobre múltiples máquinas, garantizando disponibilidad y escalabilidad frente a fallos de hardware o picos de carga. Resuelvo el problema de mantener datos y servicios coherentes cuando están replicados en diferentes nodos y de comunicar componentes de forma asíncrona o síncrona. En mi día a día como ingeniero de software, los sistemas distribuidos aparecen al definir micro‑servicios, bases de datos replicadas o infraestructuras de entrega de contenido. Después de comprender sus principios, puedo diseñar arquitecturas tolerantes a fallos, elegir estrategias de replicación y definir políticas de consistencia. No necesito preocuparme cuando la aplicación se ejecuta en un único proceso o cuando la latencia y la disponibilidad no son requisitos críticos.",
+    "preguntas_repaso": "1. ¿Qué diferencia hay entre consistencia fuerte y consistencia eventual en un sistema distribuido?  \r\n2. ¿Cómo ayuda la mensajería asíncrona a desacoplar servicios?  \r\n3. ¿Cuál es el papel de un algoritmo de consenso como Raft en la replicación?  \r\n4. ¿Por qué una estrategia de load balancing es esencial para la disponibilidad?  \r\n5. ¿Qué problemas pueden surgir al replicar datos sin considerar el sharding?",
+    "ruta_estudio": "1. **Prerequisitos**: redes básicas (TCP/IP), conceptos de concurrencia y bases de datos relacionales.  \r\n2. **Fundamentos**: micro‑servicios, HTTP/REST, replicación primaria‑secundaria, CAP theorem.  \r\n3. **Intermedio**: algoritmos de consenso (Raft), colas de mensajes (Kafka), patrones de tolerancia a fallos.  \r\n4. **Avanzado**: CRDTs, replicación multi‑master, orquestación con Kubernetes, observabilidad distribuida (tracing, metrics).  \r\n5. **Especialización**: diseño de sistemas de alta disponibilidad en la nube (AWS, GCP) y arquitectura de edge computing."
+  },
+  "sections_missing": [],
+  "slug": "distributed-systems",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/software-engineering"
+  ],
+  "title": "Distributed Systems",
+  "uid": "c_GFXWIQR3NM",
+  "verification_marks": []
+}

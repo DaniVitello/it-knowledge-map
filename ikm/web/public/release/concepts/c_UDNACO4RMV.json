@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "Stack & Heap"
+  ],
+  "area_uid": "os-linux",
+  "content_hash": "901953edd10af78cf01dc0246654ef0c9ad02422cc648e0e2dee9d796ec03fac",
+  "numero": 7,
+  "related_uids": [
+    "c_472Y6TAHCW",
+    "c_WYUWDZEETM"
+  ],
+  "sections": {
+    "como_funciona": "1. Al crear un proceso, el kernel reserva un espacio de direcciones virtuales y fija el punto de partida del stack (por ejemplo, `0x7ff…`).  \r\n2. Cada llamada a función empuja un *frame* al stack; al retornar, el frame se desapila.  \r\n3. Cuando el programa solicita memoria con `malloc`, el runtime pide al kernel más páginas para el heap mediante `brk` o `mmap`.  \r\n4. El heap crece hacia direcciones más altas mientras el stack crece hacia direcciones más bajas; el kernel vigila que no se crucen.  \r\n5. Si la aplicación supera los límites, el kernel genera `SIGSEGV` y el proceso termina.",
+    "conexiones": "- **Processes**: cada proceso posee su propio espacio de direcciones con stack y heap independientes.  \r\n- **Memory Management**: el kernel administra la asignación de páginas al stack y al heap mediante su subsistema de gestión de memoria.  \r\n- **Security**: mecanismos como ASLR y stack canaries dependen de la separación y protección del stack y el heap.",
+    "detalles": "- **Básico**: el stack está limitado por `ulimit -s`; el heap está limitado por la disponibilidad de RAM y por `ulimit -v`.  \r\n- **Intermedio**: el uso de `mprotect` permite marcar páginas del stack como no ejecutables (protección *NX*) y el heap puede fragmentarse; herramientas como `valgrind` detectan fugas.  \r\n- **Avanzado**: técnicas de *stack canaries* y *address space layout randomization* (ASLR) refuerzan la seguridad; el heap puede gestionarse con allocadores alternativos (`jemalloc`, `tcmalloc`) para reducir fragmentación y mejorar rendimiento en servidores de alta carga.",
+    "ejemplo_minimo": "```c\r\n#include <stdio.h>\r\n#include <stdlib.h>\r\n\r\nint main(void) {\r\n    int stack_var = 42;\r\n    int *heap_var = malloc(sizeof(int));\r\n    *heap_var = 99;\r\n\r\n    printf(\"Dirección stack_var : %p\\n\", (void *)&stack_var);\r\n    printf(\"Dirección heap_var  : %p\\n\", (void *)heap_var);\r\n\r\n    free(heap_var);\r\n    return 0;\r\n}\r\n```\r\nSalida típica (las direcciones varían por ASLR):  \r\n```\r\nDirección stack_var : 0x7ffd5c3a1abc\r\nDirección heap_var  : 0x602010\r\n```",
+    "errores_comunes": "- **Desbordar el stack** con recursión infinita → usar recursión limitada o convertir a iteración.  \r\n- **Olvidar liberar** memoria del heap → usar `valgrind --leak-check=full` o patrones RAII.  \r\n- **Confundir punteros** entre stack y heap → revisar la procedencia del puntero antes de liberarlo.",
+    "estado_actual": "- **Fundamentos estables**: la arquitectura de stack/heap y los syscalls `brk`/`mmap` no han cambiado desde hace décadas en Linux.  \r\n- **Práctica moderna**: la mayoría de distribuciones habilitan ASLR por defecto; los allocadores de alto rendimiento (`jemalloc`, `tcmalloc`) son recomendados para aplicaciones de servidor que manejan gran cantidad de objetos dinámicos.",
+    "ideas_clave": "1. **Stack**: zona de memoria de crecimiento descendente donde se guardan variables locales y marcos de pila de funciones.  \r\n2. **Heap**: zona de crecimiento ascendente usada por la asignación dinámica (`malloc`, `new`).  \r\n3. **Límites físicos**: el kernel define un límite superior para el stack y un límite inferior para el heap dentro del espacio de direcciones del proceso.  \r\n4. **Colisión**: si stack y heap se expanden demasiado pueden encontrarse, provocando fallos de segmentación.",
+    "objetivo": "Utilizo el stack y el heap para organizar la memoria de cada proceso que administro en Linux. Resuelvo problemas de asignación dinámica y de gestión de variables locales, evitando desbordamientos y fugas que pueden colapsar servicios críticos. Aparecen cada vez que compilo o depuro aplicaciones, cuando analizo core dumps o reviso el consumo de RAM con `pmap` o `smem`. Después de comprender su funcionamiento, puedo optimizar el uso de memoria, detectar errores de acceso y diseñar programas que escalen sin agotar recursos. Cuando trabajo solo con scripts o binarios que no manejan memoria explícita, no necesito preocuparme por estos detalles.",
+    "preguntas_repaso": "1. ¿Qué diferencia hay entre la dirección de una variable local y la de una variable obtenida con `malloc`?  \r\n2. ¿Cómo impide el kernel que el stack y el heap se colisionen?  \r\n3. ¿Qué comando permite visualizar el límite máximo de stack para un proceso?  \r\n4. ¿Cuál es el efecto de habilitar ASLR sobre las direcciones mostradas en el ejemplo mínimo?  \r\n5. ¿Por qué un allocador alternativo como `jemalloc` puede mejorar el rendimiento de una aplicación de servidor?",
+    "ruta_estudio": "1. Prerrequisitos: comprensión de direcciones virtuales, syscalls `brk` y `mmap`, y uso de `ulimit`.  \r\n2. Estudio básico: leer la sección *Memory Layout* del manual de `proc(5)` y experimentar con `pmap`.  \r\n3. Intermedio: practicar con `valgrind` y `gdb` para observar el crecimiento del stack y del heap en tiempo real.  \r\n4. Avanzado: comparar allocadores (`glibc malloc` vs `jemalloc`) y habilitar opciones de seguridad (`execstack -s`, `gcc -fstack-protector`)."
+  },
+  "sections_missing": [],
+  "slug": "stack-heap",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/operating-systems-linux"
+  ],
+  "title": "Stack & Heap",
+  "uid": "c_UDNACO4RMV",
+  "verification_marks": []
+}

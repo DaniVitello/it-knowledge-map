@@ -1,0 +1,34 @@
+{
+  "aliases": [
+    "Prioritization"
+  ],
+  "area_uid": "product-management",
+  "content_hash": "b9994b30ac6ff1c55cae40d9d891cc32150ccbc0056b6e159abac0686ad09ed7",
+  "numero": 11,
+  "related_uids": [
+    "c_WBXKNJ46YZ"
+  ],
+  "sections": {
+    "como_funciona": "1. Reúno los criterios de valor, urgencia, capacidad y riesgo.  \r\n2. Asigno una puntuación o categoría a cada ítem del backlog.  \r\n3. Ordeno los ítems de mayor a menor puntuación, respetando dependencias técnicas.  \r\n4. Comunico el orden al equipo y al sponsor, obteniendo su validación.  \r\n5. Durante la ejecución, reviso el ranking en cada reunión de planificación y lo ajusto si cambian los criterios.",
+    "conexiones": "- **Backlog grooming** – La priorización define qué ítems se refinan y cuándo se incluyen en el sprint.  \r\n- **Risk management** – El factor de riesgo dentro de la priorización ayuda a mitigar amenazas tempranas.  \r\n- **Resource allocation** – La capacidad del equipo, evaluada en la priorización, guía la asignación de recursos.",
+    "detalles": "- **Básico:** Uso una matriz simple (valor × urgencia) para clasificar tareas en alta, media y baja prioridad.  \r\n- **Intermedio:** Implemento un modelo de puntuación ponderada que incluye riesgo y capacidad, facilitado por una hoja de cálculo compartida.  \r\n- **Avanzado:** Integro herramientas de gestión (Jira, Azure DevOps) con algoritmos de scoring automático y reglas de negocio que reordenan el backlog en tiempo real.",
+    "ejemplo_minimo": "```python\r\n# Lista de tareas con atributos (valor, urgencia, riesgo)\r\ntasks = [\r\n    {\"id\": \"A\", \"value\": 8, \"urgency\": 5, \"risk\": 2},\r\n    {\"id\": \"B\", \"value\": 5, \"urgency\": 9, \"risk\": 4},\r\n    {\"id\": \"C\", \"value\": 7, \"urgency\": 3, \"risk\": 1},\r\n]\r\n\r\n# Scoring simple: value*urgency - risk\r\nfor t in tasks:\r\n    t[\"score\"] = t[\"value\"] * t[\"urgency\"] - t[\"risk\"]\r\n\r\n# Ordenar por score descendente\r\ntasks.sort(key=lambda x: x[\"score\"], reverse=True)\r\n\r\nprint([t[\"id\"] for t in tasks])   # Resultado: ['B', 'A', 'C']\r\n```",
+    "errores_comunes": "- **Priorizar solo por valor** sin considerar urgencia o dependencia → se generan cuellos de botella.  \r\n- **Ignorar la capacidad del equipo** → sobrecarga y retrasos.  \r\n- **No actualizar la prioridad** después de cambios → decisiones desalineadas.  \r\n- **Usar puntuaciones arbitrarias** sin consenso → pérdida de confianza.  \r\n*Cómo evitarlos:* establecer criterios claros, validar con el equipo y revisar periódicamente.",
+    "estado_actual": "Los fundamentos de priorización (valor, urgencia, riesgo) son estables y se aplican en la mayoría de los marcos ágiles y tradicionales. La práctica moderna incorpora automatización mediante herramientas de gestión que calculan scores en tiempo real y sincronizan prioridades con métricas de flujo de trabajo.",
+    "ideas_clave": "1. **Valor de negocio** – Priorizo las tareas que generan mayor retorno o alineación estratégica.  \r\n2. **Urgencia y dependencia** – Ordeno según fechas límite y relaciones de precedencia entre actividades.  \r\n3. **Capacidad del equipo** – Ajusto la lista a la disponibilidad y habilidades del personal.  \r\n4. **Riesgo** – Doy preferencia a los ítems que reducen incertidumbres críticas.  \r\n5. **Feedback continuo** – Reviso y actualizo la prioridad al recibir nueva información.",
+    "objetivo": "Utilizo la priorización para decidir qué actividades del proyecto se ejecutan primero, alineando el trabajo del equipo con los objetivos de negocio y los plazos críticos. Resuelvo la sobrecarga de tareas y la incertidumbre sobre qué abordar cuando los recursos son limitados. Aparece en la planificación de sprints, la elaboración del cronograma y la gestión de cambios, donde debo garantizar que el valor entregado sea máximo con el menor riesgo. Después de entenderla, puedo estructurar backlog, negociar alcance y comunicar decisiones de forma transparente. No necesito preocuparme cuando el proyecto está en fase de cierre o cuando todas las tareas ya están definidas y asignadas.",
+    "preguntas_repaso": "1. ¿Cómo influye la capacidad del equipo en la decisión de qué tarea priorizar?  \r\n2. ¿Qué riesgo corre un proyecto si solo se prioriza por valor de negocio?  \r\n3. Describe el paso en que se valida el orden de prioridades con el sponsor.  \r\n4. ¿Cuál es la diferencia entre una matriz de valor × urgencia y un modelo de puntuación ponderada?  \r\n5. ¿Por qué es importante revisar y actualizar la prioridad después de cada sprint?",
+    "ruta_estudio": "1. **Prerequisitos:** Conocer los conceptos de valor de negocio, dependencias y capacidad del equipo.  \r\n2. **Fundamentos:** Practicar matrices de valor × urgencia y crear scoring simple en una hoja de cálculo.  \r\n3. **Intermedio:** Aprender a usar filtros y campos personalizados en Jira o Azure DevOps para automatizar scores.  \r\n4. **Avanzado:** Implementar reglas de negocio que ajusten prioridades según métricas de riesgo y velocidad del equipo, y validar con retrospectives."
+  },
+  "sections_missing": [],
+  "slug": "prioritization",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/project-management"
+  ],
+  "title": "Prioritization",
+  "uid": "c_TW757IOGRQ",
+  "verification_marks": []
+}

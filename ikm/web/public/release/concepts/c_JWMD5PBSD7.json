@@ -1,0 +1,37 @@
+{
+  "aliases": [
+    "Database Architecture"
+  ],
+  "area_uid": "database",
+  "content_hash": "39b7258dada31b9294bc4cef42eb20fbfa32a475aeaed4c310c82a94d2f4ad3d",
+  "numero": 12,
+  "related_uids": [
+    "c_3IEBYDYAQB",
+    "c_LIWOFAKHEO",
+    "c_O5H6HCDAXZ",
+    "c_QTK2SYOTSW"
+  ],
+  "sections": {
+    "como_funciona": "1. Un cliente abre una **connection** y se autentica.  \r\n2. La **query engine** recibe la sentencia, la analiza y elige un plan óptimo usando metadatos y **indexes**.  \r\n3. El plan se envía al **storage engine**, que localiza los bloques de datos en disco o en memoria y aplica los algoritmos de acceso (B‑Tree, LSM, etc.).  \r\n4. Los resultados se devuelven a través de la **connection** al cliente.  \r\n5. Cada capa puede estar distribuida: el storage engine en nodos de almacenamiento, el query engine en servidores de cómputo y el gestor de connections en un proxy o load balancer.",
+    "conexiones": "- **Bases de datos** – la arquitectura define cómo cualquier base de datos expone sus datos al usuario.  \r\n- **Relational Databases** – utilizan storage y query engines especializados para ejecutar SQL y mantener ACID.  \r\n- **NoSQL** – adapta la arquitectura para modelos de datos flexibles, a menudo con un query engine menos complejo pero con storage engine optimizado para escrituras masivas.",
+    "detalles": "- **Básico**: Entender que la arquitectura separa *persistencia* (storage) de *cómputo* (query) y de *acceso* (connections).  \r\n- **Intermedio**: Configurar parámetros del storage engine (p. ej., innodb_buffer_pool_size) y del query engine (p. ej., optimizer_switch) para mejorar latencia.  \r\n- **Avanzado**: Desplegar arquitectura distribuida, usando sharding o replicación; integrar un pool de connections y un router de consultas para balancear carga entre varios motores (relacionales y NoSQL).",
+    "ejemplo_minimo": "```sql\r\n-- 1. Abrir conexión (implícita en la herramienta cliente)\r\n-- 2. Ejecutar consulta simple\r\nSELECT name, total_sales\r\nFROM sales\r\nWHERE sale_date >= '2024-01-01'\r\nORDER BY total_sales DESC\r\nLIMIT 5;\r\n```\r\nEl motor de consultas genera un plan que usa el índice `idx_sale_date`, el storage engine lee los bloques correspondientes y la conexión devuelve las filas al cliente.",
+    "errores_comunes": "- **Confundir storage engine con query engine** – evitar asignar tareas de optimización de consultas al motor de almacenamiento.  \r\n- **No dimensionar el pool de connections** – puede saturar el servidor; ajustar `max_connections` según carga esperada.  \r\n- **Ignorar la afinidad entre índices y storage engine** – crear índices que el motor no soporta reduce el rendimiento; usar tipos de índice compatibles.",
+    "estado_actual": "- **Fundamentos estables**: la separación de storage engine, query engine y connections sigue siendo la base de sistemas como MySQL, PostgreSQL y MongoDB.  \r\n- **Práctica moderna**: se combinan motores híbridos (p. ej., PostgreSQL con extensiones de columnar), se emplean proxies de connections (p. ej., PgBouncer) y se orquestan clústeres de storage mediante soluciones de nube (p. ej., Amazon Aurora, Google Cloud Spanner).",
+    "ideas_clave": "1. **Storage engine** – administra la persistencia física de tablas, índices y transacciones.  \r\n2. **Query engine** – interpreta y ejecuta sentencias SQL o de otro lenguaje, generando planes de ejecución.  \r\n3. **Connections** – controla la apertura, autenticación y multiplexado de sesiones de cliente.  \r\n4. **Separación de responsabilidades** – permite escalar cada capa de forma independiente.  \r\n5. **Compatibilidad con tipos de bases** – la arquitectura se adapta tanto a bases relacionales como a NoSQL.",
+    "objetivo": "Utilizo la arquitectura de base de datos para organizar cómo se almacenan, procesan y acceden los datos en los sistemas que gestiono. Resuelvo problemas de rendimiento y escalabilidad al separar la capa de almacenamiento físico (storage engine) de la capa de interpretación de consultas (query engine) y de la gestión de conexiones de clientes. Aparece en mi día a día cuando diseño esquemas, optimizo consultas y configuro clústeres de datos. Después de entenderla puedo elegir el motor adecuado, ajustar índices y dimensionar recursos. No necesito preocuparme cuando trabajo con bases de datos embebidas de un solo proceso o con consultas triviales que no superan los límites de la configuración por defecto.",
+    "preguntas_repaso": "1. ¿Qué papel juega el storage engine en la latencia de una consulta?  \r\n2. ¿Cómo afecta el pool de connections al número máximo de usuarios concurrentes?  \r\n3. ¿Por qué es importante que el query engine conozca los índices disponibles?  \r\n4. ¿En qué situaciones elegirías una arquitectura híbrida que combine motores relacionales y NoSQL?  \r\n5. ¿Qué pasos seguirías para diagnosticar un cuello de botella en la capa de storage?",
+    "ruta_estudio": "1. **Prerequisitos**: SQL básico, conceptos de sistemas operativos (memoria y disco) y redes (sockets).  \r\n2. **Fundamentos**: estudiar storage engines (InnoDB, RocksDB) y query optimizers (cost‑based).  \r\n3. **Práctica**: configurar pools de connections, analizar planes de ejecución con `EXPLAIN`.  \r\n4. **Avanzado**: implementar sharding, replicación y usar proxies de connections; comparar arquitecturas relacionales vs NoSQL."
+  },
+  "sections_missing": [],
+  "slug": "database-architecture",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/database-data-analytics"
+  ],
+  "title": "Database Architecture",
+  "uid": "c_JWMD5PBSD7",
+  "verification_marks": []
+}

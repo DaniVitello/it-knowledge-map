@@ -1,0 +1,34 @@
+{
+  "aliases": [
+    "Routing"
+  ],
+  "area_uid": "frontend",
+  "content_hash": "9d0a926de487f1245e14596b4a2b638a6ab3b02521ea8696c173df7a296443dd",
+  "numero": 16,
+  "related_uids": [
+    "c_DWZHOC5BVU"
+  ],
+  "sections": {
+    "como_funciona": "1. El usuario solicita una URL o se dispara una acción de navegación.  \r\n2. El router compara la URL con la tabla de rutas declarada.  \r\n3. Si la ruta coincide, extrae los parámetros y los pasa al componente asociado.  \r\n4. Antes de montar el componente, se ejecutan los guards definidos; si alguno bloquea, la navegación se cancela o redirige.  \r\n5. Finalmente, el componente se renderiza y la barra de direcciones se actualiza sin recargar la página.",
+    "conexiones": "- **State Management** – El router a menudo sincroniza la URL con el store global para que el estado de la aplicación sea reproducible desde cualquier punto.  \r\n- **API Integration** – Los parámetros de ruta se usan para construir peticiones a APIs REST o GraphQL y cargar datos específicos antes de renderizar.  \r\n- **Build Tools** – Herramientas como Vite o Webpack generan automáticamente el `base` y el `publicPath` necesarios para que el router funcione correctamente en entornos de producción.",
+    "detalles": "- **Básico**: Definir una tabla de rutas con `path` y `component`. El router escucha cambios en `window.location` (HTML5 History API) y renderiza la vista correspondiente.  \r\n- **Intermedio**: Añadir parámetros dinámicos y usar `useParams` (o equivalente) para obtener valores y cargar datos mediante fetch o GraphQL.  \r\n- **Avanzado**: Implementar guards (`canActivate`, `beforeEnter`) para control de acceso y pre‑carga de datos; combinar con lazy‑loading de módulos para reducir el bundle inicial; sincronizar el estado de la URL con el store global (Redux, Pinia) para mantener consistencia.",
+    "ejemplo_minimo": "```jsx\r\n// index.jsx (React + React Router v6)\r\nimport { BrowserRouter, Routes, Route, Link } from \"react-router-dom\";\r\n\r\nfunction Home() {\r\n  return <h2>Inicio</h2>;\r\n}\r\nfunction User({ id }) {\r\n  return <h2>Usuario {id}</h2>;\r\n}\r\nfunction App() {\r\n  return (\r\n    <BrowserRouter>\r\n      <nav>\r\n        <Link to=\"/\">Inicio</Link>{\" | \"}\r\n        <Link to=\"/user/42\">Usuario 42</Link>\r\n      </nav>\r\n      <Routes>\r\n        <Route path=\"/\" element={<Home />} />\r\n        <Route\r\n          path=\"/user/:id\"\r\n          element={<UserWrapper />}\r\n        />\r\n      </Routes>\r\n    </BrowserRouter>\r\n  );\r\n}\r\nfunction UserWrapper() {\r\n  const { id } = useParams();\r\n  return <User id={id} />;\r\n}\r\nexport default App;\r\n```",
+    "errores_comunes": "- **Olvidar envolver la aplicación en `BrowserRouter`** → la navegación no funciona; envolver siempre la raíz.  \r\n- **Usar rutas absolutas en enlaces internos** → provoca recarga completa; usar `Link` o `navigate` del router.  \r\n- **No validar parámetros** → errores de runtime al intentar usar valores `undefined`; validar o proveer valores por defecto.  \r\n- **Colocar guards después del renderizado** → la vista se muestra brevemente; los guards deben ejecutarse antes de montar el componente.",
+    "estado_actual": "- **Fundamentos estables**: la idea de mapear URLs a componentes, el uso de la History API y la extracción de parámetros son conceptos consolidados en la mayoría de los frameworks (React Router, Vue Router, Angular Router).  \r\n- **Práctica moderna**: los guards se utilizan para autorización basada en tokens JWT y para pre‑cargar datos con técnicas como `loader` (React Router v6.4) o `resolve` (Angular). El lazy‑loading de rutas es la recomendación actual para optimizar el tiempo de carga inicial.",
+    "ideas_clave": "1. **SPA y rutas** – Cada ruta corresponde a un componente o vista que se renderiza sin recargar la página.  \r\n2. **Parámetros** – Las rutas pueden contener segmentos dinámicos (`/users/:id`) que se usan para cargar datos específicos.  \r\n3. **Navegación** – El framework provee funciones (`push`, `replace`) para cambiar la URL programáticamente.  \r\n4. **Guards** – Interceptan la transición de ruta para validar permisos o cargar datos antes de renderizar.",
+    "objetivo": "Utilizo el routing para decidir qué vista se muestra al usuario según la URL que visita dentro de una Single‑Page Application (SPA). Resuelvo el problema de mantener una experiencia fluida sin recargar la página completa, permitiendo que la aplicación cambie de contenido de forma instantánea mientras la URL refleja el estado actual. En mi trabajo como desarrollador Frontend, el routing aparece cada vez que estructuro la navegación de la app, ya sea con rutas estáticas, parámetros dinámicos o protección de acceso mediante guards. Después de comprenderlo, puedo diseñar flujos de usuario coherentes, integrar lazy‑loading de módulos y coordinar la autorización de rutas. No necesito preocuparme por el routing cuando la aplicación es puramente estática o cuando la navegación se maneja exclusivamente mediante enlaces externos que recargan la página completa.",
+    "preguntas_repaso": "1. ¿Qué ventaja ofrece el routing dentro de una SPA frente a la navegación tradicional basada en recargas de página?  \r\n2. ¿Cómo se acceden a los parámetros dinámicos de una ruta y para qué se suelen utilizar?  \r\n3. ¿Qué es un guard y en qué momento del ciclo de navegación se ejecuta?  \r\n4. ¿Cuál es la diferencia entre `push` y `replace` al cambiar la URL programáticamente?  \r\n5. ¿Por qué es recomendable combinar lazy‑loading de rutas con guards de autorización?\r\n\r\n<!-- trazabilidad: run_id=run-20261111-222727-9d221d concept=02-frontend-16-routing written_at=2026-11-12T01:27:32.349399+00:00 -->",
+    "ruta_estudio": "1. **Prerequisitos**: HTML5 History API, conceptos de SPA, fundamentos de JavaScript ES6.  \r\n2. **Fundamentos**: crear una tabla de rutas simple, usar `Link`/`navigate`, extraer parámetros.  \r\n3. **Intermedio**: implementar guards, manejar redirecciones y fallback 404, integrar con un store (Redux, Pinia).  \r\n4. **Avanzado**: lazy‑loading de módulos, usar loaders/resolvers, sincronizar URL con estado global, pruebas unitarias de rutas.  \r\n5. **Especialización**: explorar routers específicos (React Router, Vue Router, Angular Router) y sus extensiones (data fetching, scroll behavior)."
+  },
+  "sections_missing": [],
+  "slug": "routing",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/frontend"
+  ],
+  "title": "Routing",
+  "uid": "c_Z3T24W22GR",
+  "verification_marks": []
+}

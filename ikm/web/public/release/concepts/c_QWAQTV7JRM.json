@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "JavaScript"
+  ],
+  "area_uid": "frontend",
+  "content_hash": "30eecc6a664f10c23ed0ec7b1dda9f9fa3adc846ba78132977e5464e77aa7d04",
+  "numero": 6,
+  "related_uids": [
+    "c_3G2O5BM4F2",
+    "c_LFYZZYAIJK",
+    "c_NTNITJDH3Q"
+  ],
+  "sections": {
+    "como_funciona": "1. El motor JavaScript parsea el código siguiendo la **sintaxis básica** y crea un árbol de ejecución.  \r\n2. Cada literal se tipa según los **tipos de datos**, lo que define las operaciones permitidas.  \r\n3. Cuando se encuentra una **función**, se registra su definición (hoisting) y queda disponible en el **scope** correspondiente.  \r\n4. Al invocarse, la función recibe argumentos, ejecuta su bloque y devuelve un valor que puede ser usado por otras partes del programa.  \r\n5. Los **objetos** y **arrays** se crean mediante literales o constructores; sus propiedades o elementos se acceden y modifican mediante notación de punto o corchetes, respetando el **scope** vigente.",
+    "conexiones": "- **JavaScript avanzado** amplía los conceptos básicos con patrones de diseño, programación funcional y manejo de memoria, construyendo sobre funciones, objetos y scope.  \r\n- **Eventos** dependen de la capacidad de JavaScript para registrar callbacks y responder a interacciones del usuario, vinculándose a la manipulación del DOM.  \r\n- **Asincronía** se basa en funciones y promesas para gestionar operaciones que no se completan inmediatamente, como peticiones a APIs, manteniendo la UI reactiva.",
+    "detalles": "- **Básico**: comprender la sintaxis, los tipos primitivos y la declaración de variables (`let`, `const`).  \r\n- **Intermedio**: dominar funciones (incluyendo arrow functions), manejo de `this`, y estructuras de datos como objetos y arrays, así como los conceptos de scope y hoisting.  \r\n- **Avanzado**: aplicar patrones de cierre (closures), programación funcional (map, filter, reduce) y manipulación profunda de objetos (desestructuración, spread).",
+    "ejemplo_minimo": "```javascript\r\n// Hola Mundo en JavaScript\r\nconst saludo = \"¡Hola, mundo!\";\r\nfunction mostrar() {\r\n  console.log(saludo);\r\n}\r\nmostrar(); // → ¡Hola, mundo!\r\n```",
+    "errores_comunes": "- Declarar variables con `var` y olvidar su alcance funcional → usar siempre `let` o `const`.  \r\n- Confundir `==` y `===` → preferir la comparación estricta `===`.  \r\n- Modificar objetos o arrays directamente en lugar de crear copias → usar el operador spread o métodos como `slice`.  \r\n- Olvidar que `this` cambia según el contexto de llamada → usar arrow functions o bind cuando sea necesario.",
+    "estado_actual": "**Fundamentos estables**: la sintaxis básica, los tipos de datos, el modelo de objetos y el manejo de funciones son parte del estándar ECMAScript y se mantienen compatibles entre navegadores modernos.  \r\n**Práctica moderna**: el uso de `let`/`const`, arrow functions, desestructuración y operadores spread son recomendados para código más legible y seguro; además, los módulos ES (`import`/`export`) permiten organizar proyectos de forma escalable.",
+    "ideas_clave": "1. **Sintaxis básica** – reglas de escritura de expresiones, declaraciones y bloques que permiten que el motor del navegador entienda el código.  \r\n2. **Tipos de datos** – primitivos (string, number, boolean, null, undefined, symbol) y objetos, que definen cómo se almacena y manipula la información.  \r\n3. **Funciones** – bloques reutilizables que pueden recibir parámetros y devolver valores, base de la programación modular.  \r\n4. **Objetos y arrays** – estructuras de colección que organizan datos complejos y facilitan la iteración y el acceso por clave o índice.  \r\n5. **Scope y hoisting** – reglas de visibilidad y elevación que determinan el ciclo de vida de variables y funciones.",
+    "objetivo": "Utilizo JavaScript para dotar a las interfaces web de interactividad y lógica del lado del cliente. Resuelvo el problema de transformar datos estáticos en experiencias dinámicas, como validar formularios, actualizar contenidos sin recargar la página o responder a la interacción del usuario. En mi trabajo como desarrollador Frontend, JavaScript aparece en cada componente que necesita reaccionar a eventos, manipular el DOM o comunicarse con APIs. Después de comprender sus fundamentos, puedo crear aplicaciones SPA, integrar librerías de UI y optimizar el rendimiento del cliente. No necesito preocuparme por JavaScript cuando el proyecto es puramente estático o cuando la lógica se delega completamente al backend.",
+    "preguntas_repaso": "1. ¿Cuál es la diferencia entre `let` y `const` y cuándo usar cada una?  \r\n2. ¿Cómo afecta el hoisting a la declaración de funciones y variables?  \r\n3. ¿Qué es un closure y cómo se crea en JavaScript?  \r\n4. ¿De qué manera los arrays y objetos facilitan la manipulación de datos en una aplicación Frontend?  \r\n5. ¿Por qué es preferible usar `===` en lugar de `==` al comparar valores?\r\n\r\n<!-- trazabilidad: run_id=run-20261111-221518-d98c7b concept=02-frontend-06-javascript written_at=2026-11-12T01:15:22.882784+00:00 -->",
+    "ruta_estudio": "1. **Prerequisitos**: HTML básico, conceptos de CSS y familiaridad con la línea de comandos.  \r\n2. **Fundamentos**: sintaxis, tipos, variables, funciones y estructuras de datos.  \r\n3. **Intermedio**: scope, hoisting, `this`, manejo de errores y depuración con el console.  \r\n4. **Avanzado**: closures, programación funcional, módulos ES, patrones de arquitectura (MVC, Redux).  \r\n5. **Especialización**: profundizar en eventos del DOM, APIs de Fetch/Axios y técnicas de asincronía (async/await)."
+  },
+  "sections_missing": [],
+  "slug": "javascript",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/frontend"
+  ],
+  "title": "JavaScript",
+  "uid": "c_QWAQTV7JRM",
+  "verification_marks": []
+}

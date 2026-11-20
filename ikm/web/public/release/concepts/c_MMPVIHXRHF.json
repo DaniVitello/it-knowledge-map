@@ -1,0 +1,38 @@
+{
+  "aliases": [
+    "Observability"
+  ],
+  "area_uid": "ai-engineering",
+  "content_hash": "7ec8739fc2712e34262d14f338db615a94c27eeac9c78ec5544b84bc486c4c25",
+  "numero": 22,
+  "related_uids": [
+    "c_5VSM4JTVVK",
+    "c_BQ2OLMROJZ",
+    "c_CSHCCYYZWJ",
+    "c_H7VQOVE2NF",
+    "c_MKC6PGQUM7"
+  ],
+  "sections": {
+    "como_funciona": "1. Al recibir una solicitud, el middleware inserta un **trace id** y lo propaga a todos los micro‑servicios.  \r\n2. Cada componente registra su **latencia** y **token usage** en un collector (por ejemplo, Prometheus).  \r\n3. Si ocurre una excepción, se genera un evento de **failure** con contexto del trace.  \r\n4. Los datos se envían a un sistema de **monitoring** que correlaciona métricas y permite crear alertas basadas en umbrales definidos.  \r\n5. Los dashboards muestran la salud del pipeline y facilitan la investigación de incidentes.",
+    "conexiones": "- **Logs & System Monitoring**: los logs estructurados alimentan los sistemas de monitoring que visualizan latencia y fallos.  \r\n- **Evaluation**: los datos de token usage y latencia informan métricas de rendimiento usadas en la evaluación continua del modelo.  \r\n- **AI Safety & Security**: la detección temprana de fallas y anomalías mediante observabilidad ayuda a prevenir comportamientos inseguros o sesgados.",
+    "detalles": "- **Básico**: habilitar logs estructurados y generar un trace id único por petición.  \r\n- **Intermedio**: instrumentar latencia y token usage con métricas de tipo counter/gauge; configurar alertas de alta latencia y consumo excesivo.  \r\n- **Avanzado**: integrar tracing distribuido (OpenTelemetry), crear paneles de correlación entre métricas de modelo y métricas de infraestructura, y aplicar políticas de auto‑remediación.",
+    "ejemplo_minimo": "```python\r\nimport openai, time, uuid\r\nfrom prometheus_client import Counter, Histogram, start_http_server\r\n\r\n# Métricas\r\nREQ_LATENCY = Histogram('llm_latency_seconds', 'Latency of LLM calls')\r\nTOKENS_USED = Counter('llm_tokens_total', 'Total tokens consumed')\r\nFAILURES = Counter('llm_failures_total', 'Number of failed LLM calls')\r\n\r\nstart_http_server(8000)   # exposa métricas en /metrics\r\n\r\ndef call_llm(prompt: str):\r\n    trace_id = str(uuid.uuid4())\r\n    start = time.time()\r\n    try:\r\n        resp = openai.ChatCompletion.create(\r\n            model=\"gpt-4o-mini\",\r\n            messages=[{\"role\": \"user\", \"content\": prompt}],\r\n            request_id=trace_id   # pseudo‑campo para trazas\r\n        )\r\n        TOKENS_USED.inc(resp['usage']['total_tokens'])\r\n        return resp['choices'][0]['message']['content']\r\n    except Exception:\r\n        FAILURES.inc()\r\n        raise\r\n    finally:\r\n        REQ_LATENCY.observe(time.time() - start)\r\n\r\nprint(call_llm(\"¿Cuál es la capital de Francia?\"))\r\n```",
+    "errores_comunes": "- **Olvidar propagar el trace id** → los logs no se pueden correlacionar; evitar pasando el id en cabeceras de cada llamada.  \r\n- **Métricas sin etiquetas** → dificultan filtrar por modelo o versión; siempre etiquetar con `model`, `version`.  \r\n- **Alertas demasiado sensibles** → generan ruido; calibrar umbrales con datos históricos.",
+    "estado_actual": "- **Fundamentos estables**: generación de logs estructurados, recolección de métricas de latencia y consumo de tokens, y alertas basadas en umbrales simples.  \r\n- **Práctica moderna**: adopción de OpenTelemetry para tracing distribuido, dashboards unificados (Grafana + Loki), y políticas de auto‑escalado basadas en métricas de observabilidad.",
+    "ideas_clave": "1. **Traces** – Capturan el flujo de una petición a través de los componentes del stack de IA.  \r\n2. **Latency** – Mide el tiempo que tarda cada llamada al modelo y a los servicios auxiliares.  \r\n3. **Token usage** – Registra cuántos tokens se consumen por petición, útil para control de costos.  \r\n4. **Failures** – Detecta errores de inferencia, time‑outs y excepciones de infraestructura.  \r\n5. **Monitoring** – Agrupa métricas y logs en dashboards y sistemas de alertas.",
+    "objetivo": "Utilizo la observabilidad para saber en tiempo real cómo se comporta mi pipeline de IA: desde la latencia de las llamadas a modelo, el consumo de tokens, hasta los fallos inesperados. Resuelvo el problema de no poder diagnosticar degradaciones de calidad o cuellos de botella que afectan la experiencia del usuario y la fiabilidad del producto. Aparece en cada fase del ciclo de vida del modelo, especialmente en la integración y el despliegue continuo. Después de entenderla, puedo diseñar alertas automáticas, optimizar costos y garantizar que los SLAs se cumplan. No necesito preocuparme cuando el sistema es estático, de bajo tráfico y no está sujeto a requisitos de disponibilidad o seguridad críticos.",
+    "preguntas_repaso": "1. ¿Qué información clave captura un trace y por qué es esencial en un pipeline de IA?  \r\n2. ¿Cómo se relaciona la métrica de token usage con el control de costos del producto?  \r\n3. ¿Qué pasos sigue el sistema cuando una llamada al modelo falla?  \r\n4. ¿Cuál es la ventaja de usar OpenTelemetry frente a logs manuales?  \r\n5. ¿Cómo puedes evitar que las alertas de alta latencia generen ruido en el equipo?",
+    "ruta_estudio": "1. **Prerequisitos**: conceptos de APIs REST, métricas Prometheus, y logging estructurado.  \r\n2. **Fundamentos**: implementar tracing básico y métricas de latencia/token usage.  \r\n3. **Intermedio**: configurar alertas y dashboards; integrar OpenTelemetry.  \r\n4. **Avanzado**: diseñar pipelines de auto‑remediación y correlacionar observabilidad con métricas de evaluación y seguridad.  \r\n5. **Especialización**: estudios de caso de observabilidad en LLMs a gran escala y patrones de resiliencia."
+  },
+  "sections_missing": [],
+  "slug": "observability",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/ai-engineering"
+  ],
+  "title": "Observability",
+  "uid": "c_MMPVIHXRHF",
+  "verification_marks": []
+}

@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "DNS"
+  ],
+  "area_uid": "networking",
+  "content_hash": "57959fc5d57fb6c9f3e546a63383ae1a0ae47c727ca54a00518e71953fde4e0c",
+  "numero": 7,
+  "related_uids": [
+    "c_2PTU533FKL",
+    "c_E6UZ37VTA5"
+  ],
+  "sections": {
+    "como_funciona": "1. El host genera una consulta DNS (por ejemplo, `example.com`).  \r\n2. El resolver local verifica su caché; si la entrada está fresca, devuelve la IP.  \r\n3. Si no está en caché, el resolver envía la consulta al **root server**.  \r\n4. El root server indica el **TLD server** (.com).  \r\n5. El TLD server responde con la dirección del **authoritative server** de `example.com`.  \r\n6. El servidor autoritativo devuelve el registro A (IPv4) o AAAA (IPv6) con la IP solicitada.  \r\n7. El resolver almacena la respuesta según el TTL y la entrega al cliente.",
+    "conexiones": "- **IP** – DNS traduce nombres a direcciones IP, permitiendo que los protocolos de capa de red operen.  \r\n- **HTTP** – Los navegadores usan DNS antes de iniciar una conexión HTTP/HTTPS a un servidor web.  \r\n- **CDN** – Las redes de distribución de contenido utilizan respuestas DNS geográficas para dirigir al cliente al nodo más cercano.",
+    "detalles": "- **Básico**: Entender los tipos de registros (A, AAAA, CNAME) y el flujo de consulta descrito en el esqueleto.  \r\n- **Intermedio**: Configurar zonas, delegar sub‑dominios y ajustar TTL para balancear frescura y carga.  \r\n- **Avanzado**: Implementar DNSSEC para firmar respuestas, usar servidores de resolución recursiva internos y aplicar políticas de split‑horizon para entornos híbridos.",
+    "ejemplo_minimo": "```bash\r\n$ nslookup example.com 8.8.8.8\r\nServer:  8.8.8.8\r\nAddress: 8.8.8.8#53\r\n\r\nNon-authoritative answer:\r\nName:    example.com\r\nAddress: 93.184.216.34\r\n```\r\nLa salida muestra la IP que el resolver de Google (8.8.8.8) devolvió para `example.com`.",
+    "errores_comunes": "- **Olvidar actualizar la zona** después de cambiar la IP de un servidor → la resolución sigue apuntando a la dirección antigua.  \r\n- **TTL demasiado bajo** genera tráfico innecesario a los servidores autoritativos.  \r\n- **Confundir registros CNAME con A** provoca bucles de resolución o respuestas inesperadas.",
+    "estado_actual": "- **Fundamentos estables**: El modelo jerárquico de root → TLD → autoritativo y los tipos de registro básicos siguen sin cambios.  \r\n- **Práctica moderna**: DNSSEC se está adoptando para evitar envenenamiento; los resolvers recursivos incorporan filtrado de malware y políticas de privacidad (p. ej., DNS over HTTPS).",
+    "ideas_clave": "1. **Resolución de nombres** – Un cliente envía una consulta DNS y recibe la IP correspondiente.  \r\n2. **Jerarquía de servidores** – La petición recorre una cadena de servidores autoritativos y cachés.  \r\n3. **Zonas y registros** – Cada zona contiene registros (A, AAAA, CNAME, MX, etc.) que describen recursos.  \r\n4. **Caché y TTL** – Los resolvers guardan respuestas temporales para acelerar consultas posteriores.",
+    "objetivo": "Utilizo DNS para traducir los nombres de dominio que escribo en el navegador a direcciones IP que las máquinas de la red pueden enrutar. Resuelvo el problema de que los usuarios recuerden nombres legibles en vez de largas secuencias numéricas, y lo aplico cada vez que configuro o depuro la conectividad de clientes y servidores. Después de entender DNS puedo diseñar zonas, delegar sub‑dominios y diagnosticar fallos de resolución que impiden el acceso a servicios. No necesito preocuparme cuando la comunicación se realiza exclusivamente entre direcciones IP estáticas dentro de una red aislada.",
+    "preguntas_repaso": "1. ¿Qué papel juega el servidor raíz en una consulta DNS?  \r\n2. ¿Cuál es la diferencia funcional entre un registro A y un registro CNAME?  \r\n3. ¿Cómo afecta el valor de TTL al tráfico generado hacia los servidores autoritativos?  \r\n4. ¿Qué mecanismo se utiliza para proteger la integridad de las respuestas DNS en entornos modernos?  \r\n5. En un escenario de split‑horizon, ¿por qué se necesita más de un servidor autoritativo?",
+    "ruta_estudio": "1. **Prerequisitos**: comprensión de direcciones IP, modelo cliente‑servidor y conceptos básicos de TCP/UDP.  \r\n2. **Fundamentos**: tipos de registros DNS, flujo de consulta y configuración de zonas en BIND o PowerDNS.  \r\n3. **Intermedio**: delegación de sub‑dominios, ajuste de TTL y uso de herramientas de diagnóstico (`dig`, `nslookup`).  \r\n4. **Avanzado**: implementación de DNSSEC, despliegue de resolvers recursivos internos, integración con DNS over TLS/HTTPS y políticas de split‑horizon."
+  },
+  "sections_missing": [],
+  "slug": "dns",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/networking-internet"
+  ],
+  "title": "DNS",
+  "uid": "c_LJXCYJ6ING",
+  "verification_marks": []
+}

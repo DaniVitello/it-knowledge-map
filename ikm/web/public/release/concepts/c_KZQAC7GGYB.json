@@ -1,0 +1,32 @@
+{
+  "aliases": [
+    "TypeScript"
+  ],
+  "area_uid": "frontend",
+  "content_hash": "fefd848cabf6c8393b85c853af8e20b28bcfd4fe915399192e422165ab65f031",
+  "numero": 12,
+  "related_uids": [],
+  "sections": {
+    "como_funciona": "1. Escribo código con anotaciones de tipo (`number`, `string`, interfaces, etc.).  \r\n2. El compilador de TypeScript analiza el árbol sintáctico y verifica que cada asignación respete los tipos declarados.  \r\n3. En los puntos de control (condiciones `if`, `switch`, etc.) aplica narrowing para inferir tipos más precisos.  \r\n4. Cuando uso generics, el compilador sustituye los parámetros de tipo por los valores reales en cada llamada, manteniendo la consistencia.  \r\n5. Finalmente, el compilador transpila el código a JavaScript estándar, eliminando las anotaciones de tipo.",
+    "conexiones": "- **JSON & APIs** – TypeScript permite describir la forma de los objetos recibidos de una API mediante interfaces, garantizando que el consumo sea seguro.  \r\n- **Componentización** – En bibliotecas de UI, los tipos definen las props de los componentes, facilitando la reutilización y la detección de errores en tiempo de desarrollo.  \r\n- **Testing** – Los tipos actúan como una primera capa de validación que complementa pruebas unitarias, reduciendo la cantidad de casos de prueba necesarios para validar la forma de los datos.",
+    "detalles": "- **Básico**: tipos primitivos, anotaciones de función y `any` como escape temporal.  \r\n- **Intermedio**: interfaces, tipos de unión (`|`), tipos de intersección (`&`) y utilidades como `Partial` y `Pick`.  \r\n- **Avanzado**: generics con restricciones (`extends`), inferencia de tipos en funciones auxiliares, y técnicas de narrowing con discriminated unions.",
+    "ejemplo_minimo": "```ts\r\ninterface Usuario {\r\n  id: number;\r\n  nombre: string;\r\n}\r\n\r\nfunction saludo(u: Usuario): string {\r\n  return `Hola, ${u.nombre}`;\r\n}\r\n\r\nconst juan: Usuario = { id: 1, nombre: \"Juan\" };\r\nconsole.log(saludo(juan));\r\n```",
+    "errores_comunes": "- **Usar `any` indiscriminadamente** – pierde la ventaja del tipado; usarlo solo como último recurso.  \r\n- **Olvidar exportar interfaces** – impide que otros módulos las importen; exportar siempre que se compartan.  \r\n- **Confundir tipos estructurales con nominales** – TypeScript compara la forma, no el nombre; definir propiedades únicas si se necesita distinción.  \r\n- **No aprovechar narrowing** – escribir verificaciones redundantes; confiar en que el compilador refina el tipo después de `if (typeof x === \"string\")`.",
+    "estado_actual": "- **Fundamentos estables**: tipado estático, interfaces, generics y narrowing son parte del núcleo del lenguaje y se mantienen compatibles entre versiones.  \r\n- **Práctica moderna**: se combina con frameworks como React o Angular, usando tipos para props y estados; herramientas como ESLint y Prettier integran reglas específicas de TypeScript para mantener la calidad del código.",
+    "ideas_clave": "1. **Tipado estático** – Declaro tipos para variables, parámetros y retornos, evitando asignaciones incompatibles.  \r\n2. **Interfaces y tipos** – Defino la forma de objetos y estructuras de datos, facilitando la colaboración entre componentes.  \r\n3. **Generics** – Parametro tipos en funciones y clases para reutilizar lógica sin perder seguridad.  \r\n4. **Narrowing (refinamiento de tipos)** – El compilador reduce el tipo de una variable según controles de flujo, permitiendo operaciones seguras.",
+    "objetivo": "Utilizo TypeScript para escribir código JavaScript con tipos estáticos, lo que me permite detectar errores de forma temprana y describir la forma de los datos que manejo. Resuelvo problemas de mantenimiento y escalabilidad en aplicaciones Frontend, donde los componentes y las llamadas a APIs deben cumplir contratos claros. Después de entender TypeScript puedo crear librerías reutilizables, integrar herramientas de compilación y aprovechar la autocompletación avanzada del editor. No necesito preocuparme por TypeScript cuando desarrollo prototipos rápidos o scripts muy pequeños donde la sobrecarga de configuración supera sus beneficios.",
+    "preguntas_repaso": "1. ¿Qué ventaja principal aporta el tipado estático en una aplicación Frontend?  \r\n2. ¿Cómo se declara y utiliza una interface para describir la forma de un objeto?  \r\n3. ¿Qué es un generic y cuándo es útil emplearlo en una función?  \r\n4. ¿De qué manera el narrowing permite operar con un valor después de una comprobación de tipo?  \r\n5. ¿Cuál es la relación entre TypeScript y la definición de tipos para respuestas de una API JSON?",
+    "ruta_estudio": "1. **Prerequisitos**: JavaScript ES6, conceptos de funciones y objetos.  \r\n2. **Fundamentos**: tipos primitivos, anotaciones de función, `interface` y `type`.  \r\n3. **Intermedio**: uniones, intersecciones, utilidades de tipo, manejo de `null` y `undefined`.  \r\n4. **Avanzado**: generics con restricciones, inferencia avanzada, discriminated unions y patrones de narrowing.  \r\n5. **Integración**: aplicar TypeScript en un proyecto React o Angular, configurar `tsconfig.json`, usar linters y pruebas.  \r\n6. **Especialización**: crear librerías tipadas, publicar paquetes en npm con definiciones de tipo."
+  },
+  "sections_missing": [],
+  "slug": "typescript",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/frontend"
+  ],
+  "title": "TypeScript",
+  "uid": "c_KZQAC7GGYB",
+  "verification_marks": []
+}

@@ -1,0 +1,38 @@
+{
+  "aliases": [
+    "Clean Code"
+  ],
+  "area_uid": "software-engineering",
+  "content_hash": "4bf0d343f62d95128469ce95256a9a0dbb88219958bc55e7660c5893e67e4e04",
+  "numero": 14,
+  "related_uids": [
+    "c_3UAMR6JQWV",
+    "c_53KOHLSCN5",
+    "c_IMFWIGRRUB",
+    "c_K2J2R52QLA",
+    "c_VA6ETRQ2HH"
+  ],
+  "sections": {
+    "como_funciona": "1. Analizo el dominio del problema y elijo nombres claros para variables, funciones y clases.  \r\n2. Divido la lógica en funciones pequeñas, asegurándome de que cada una tenga una única responsabilidad.  \r\n3. Agrupo esas funciones en módulos con alta cohesión, de modo que cada módulo represente un concepto del dominio.  \r\n4. Reviso las dependencias y refactorizo para reducir el acoplamiento, introduciendo interfaces o inyección de dependencias cuando sea necesario.  \r\n5. Realizo revisiones de código para validar que los criterios anteriores se mantengan a lo largo del ciclo de vida del proyecto.",
+    "conexiones": "- **Code Quality** – Clean Code es una de las principales estrategias para elevar la calidad del código, ya que facilita la detección temprana de defectos.  \r\n- **SOLID & Design Principles** – Los principios SOLID complementan Clean Code al proporcionar reglas específicas para lograr alta cohesión y bajo acoplamiento.  \r\n- **Refactoring** – Aplicar Clean Code a menudo implica refactorizar código existente, lo que mejora la mantenibilidad sin cambiar el comportamiento externo.",
+    "detalles": "- **Básico**: aplicar reglas de naming y limitar la longitud de funciones.  \r\n- **Intermedio**: medir la cohesión mediante métricas como LCOM y usar patrones de diseño para reducir el acoplamiento.  \r\n- **Avanzado**: integrar Clean Code en pipelines de CI, combinarlo con principios SOLID y automatizar revisiones con linters y herramientas de análisis estático.",
+    "ejemplo_minimo": "```python\r\n# Nombre claro, función pequeña y única responsabilidad\r\ndef calcular_descuento(precio: float, porcentaje: float) -> float:\r\n    \"\"\"Devuelve el precio después de aplicar el descuento.\"\"\"\r\n    return precio * (1 - porcentaje / 100)\r\n\r\ntotal = calcular_descuento(200.0, 15)  # 170.0\r\nprint(total)\r\n```",
+    "errores_comunes": "- Usar nombres genéricos como `data` o `temp`; evitarlos eligiendo nombres que expresen el tipo y propósito.  \r\n- Crear funciones largas que hacen varias cosas; dividirlas en sub‑funciones con responsabilidades claras.  \r\n- Agrupar código sin relación en la misma clase; reorganizarlo en módulos con alta cohesión.  \r\n- Introducir dependencias circulares; romperlas mediante interfaces o capas de abstracción.",
+    "estado_actual": "- **Fundamentos estables**: las prácticas de naming, funciones pequeñas, alta cohesión y bajo acoplamiento siguen siendo pilares aceptados en la comunidad.  \r\n- **Práctica moderna**: la integración de Clean Code con metodologías ágiles, pipelines de CI/CD y herramientas de análisis estático ha ampliado su alcance, permitiendo validar automáticamente la calidad del código en cada commit.",
+    "ideas_clave": "1. **Naming** – Los nombres deben describir su intención; un buen nombre elimina la necesidad de comentarios adicionales.  \r\n2. **Functions** – Las funciones deben ser pequeñas, hacer una sola cosa y tener nombres que reflejen esa responsabilidad.  \r\n3. **Cohesion** – Cada módulo o clase debe agrupar funcionalidades estrechamente relacionadas, evitando mezclar conceptos dispares.  \r\n4. **Coupling** – Minimizar dependencias entre módulos facilita el aislamiento y la reutilización del código.",
+    "objetivo": "Utilizo Clean Code para escribir código que sea fácil de leer, mantener y ampliar, lo que reduce errores y acelera la entrega de valor. Resuelvo el problema de la complejidad oculta y la ambigüedad que aparecen cuando el código crece sin una disciplina clara. En mi día a día como ingeniero de software aplico Clean Code al diseñar nuevas funcionalidades, al refactorizar módulos existentes y al revisar el trabajo de otros. Después de entenderlo, puedo estructurar mis proyectos con mayor confianza, estimar mejor los cambios y colaborar de forma más eficaz. No necesito preocuparme por Clean Code cuando escribo scripts de un solo uso o prototipos que no van a ser mantenidos a largo plazo.",
+    "preguntas_repaso": "1. ¿Por qué un buen naming puede eliminar la necesidad de comentarios?  \r\n2. ¿Cuál es la diferencia entre cohesión y acoplamiento y cómo impactan la mantenibilidad?  \r\n3. ¿Qué características debe tener una función para considerarse “pequeña” y con única responsabilidad?  \r\n4. ¿Cómo se puede medir la cohesión de una clase o módulo?  \r\n5. ¿De qué manera la integración de linters en CI ayuda a mantener Clean Code a lo largo del tiempo?",
+    "ruta_estudio": "1. **Prerequisitos**: dominar al menos un lenguaje de programación, comprender estructuras de datos básicas y saber usar un sistema de control de versiones.  \r\n2. **Fundamentos**: leer “Clean Code” de Robert C. Martin, practicar naming y extracción de funciones en pequeños proyectos.  \r\n3. **Intermedio**: estudiar métricas de cohesión y acoplamiento, aplicar patrones de diseño y realizar revisiones de código en equipos.  \r\n4. **Avanzado**: integrar linters, herramientas de análisis estático y pipelines de CI/CD; combinar Clean Code con principios SOLID y técnicas de refactorización continua."
+  },
+  "sections_missing": [],
+  "slug": "clean-code",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/software-engineering"
+  ],
+  "title": "Clean Code",
+  "uid": "c_ZUGE3YIJ5I",
+  "verification_marks": []
+}

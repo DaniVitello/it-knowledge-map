@@ -1,0 +1,37 @@
+{
+  "aliases": [
+    "APIs"
+  ],
+  "area_uid": "backend",
+  "content_hash": "9ad1f713264c9f523cf43b0de4fe9712aa7202d68e330aa7cc8847c82c1ef6ad",
+  "numero": 7,
+  "related_uids": [
+    "c_3OASTRUQ7K",
+    "c_3P4PYNPIER",
+    "c_LG2UZSQPXG",
+    "c_OD7QLNQ7GN"
+  ],
+  "sections": {
+    "como_funciona": "1. Defino el **contrato** de la API (esquema OpenAPI, archivo .proto, etc.).  \r\n2. Implemento los **endpoints** en el servidor backend siguiendo el contrato.  \r\n3. El cliente construye la solicitud HTTP o el mensaje RPC según el contrato.  \r\n4. El servidor procesa la petición, accede a la lógica de negocio y devuelve la respuesta en el formato acordado (JSON, protobuf, etc.).  \r\n5. En caso de GraphQL, el cliente envía una única petición con la consulta; el servidor resuelve los campos solicitados y devuelve un objeto JSON con la forma exacta requerida.",
+    "conexiones": "- **API Design**: la forma en que estructuro los recursos, verbos y contratos determina la calidad y mantenibilidad de la API.  \r\n- **Web APIs**: las APIs que expongo son consumidas por navegadores y clientes HTTP, por lo que deben cumplir con los estándares de la web.  \r\n- **LLM APIs & Model Serving**: al exponer modelos de lenguaje como servicios, utilizo los mismos principios de contrato y versionado que en cualquier API backend.",
+    "detalles": "- **Básico**: comprender los verbos HTTP, códigos de estado y el uso de JSON como payload.  \r\n- **Intermedio**: diseñar contratos con OpenAPI, versionar la API y aplicar patrones de seguridad (API keys, OAuth).  \r\n- **Avanzado**: implementar RPC con gRPC (proto buffers), optimizar consultas con GraphQL, y gestionar contratos evolutivos mediante herramientas de generación de código y pruebas contractuales.",
+    "ejemplo_minimo": "```python\r\n# FastAPI (REST) – endpoint mínimo\r\nfrom fastapi import FastAPI\r\n\r\napp = FastAPI()\r\n\r\n@app.get(\"/ping\")\r\ndef ping():\r\n    return {\"msg\": \"pong\"}\r\n```",
+    "errores_comunes": "- **Sobrecargar la URL con acciones** (p.ej., `/getUser`) en lugar de usar recursos (`/users/{id}`). Evitarlo siguiendo la convención de recursos REST.  \r\n- **Ignorar versionado** y romper clientes existentes. Solucionarlo añadiendo un prefijo de versión (`/v1/...`).  \r\n- **Exponer datos internos** en la respuesta. Limitar el modelo de salida a lo necesario mediante DTOs o esquemas GraphQL.",
+    "estado_actual": "- **Fundamentos estables**: los principios de REST, la semántica de los códigos HTTP y el uso de JSON como formato de intercambio siguen siendo la base de la mayoría de las APIs web.  \r\n- **Práctica moderna**: la adopción de gRPC para comunicaciones de alto rendimiento entre microservicios, y el creciente uso de GraphQL para front‑ends que requieren flexibilidad en la forma de los datos, están consolidándose como complementos al enfoque REST tradicional.",
+    "ideas_clave": "1. **REST** – estilo arquitectónico que usa verbos HTTP (GET, POST, PUT, DELETE) y recursos identificados por URLs.  \r\n2. **RPC** – invocación remota de procedimientos donde el cliente llama a una función como si estuviera local, típicamente con protocolos binarios o JSON‑RPC.  \r\n3. **GraphQL** – lenguaje de consulta que permite al cliente especificar exactamente los campos que necesita, reduciendo el over‑fetching.  \r\n4. **Contratos** – definición explícita (por ejemplo, OpenAPI o gRPC proto) que describe los endpoints, tipos de datos y códigos de error.",
+    "objetivo": "Utilizo una API para exponer la funcionalidad de mis servicios backend a clientes internos o externos de forma estructurada y predecible. Resuelvo el problema de la comunicación entre procesos al definir un contrato claro que describe los recursos, los verbos disponibles y los formatos de datos. En mi día a día como ingeniero backend, diseño y mantengo APIs para que aplicaciones móviles, front‑ends web y otros microservicios puedan consumir mis lógica de negocio sin conocer su implementación interna. Después de comprender cómo funcionan las APIs, puedo crear servicios reutilizables, integrar terceros y escalar sistemas mediante desacoplamiento. No necesito preocuparme por la capa de API cuando trabajo exclusivamente con código monolítico que no expone interfaces externas.",
+    "preguntas_repaso": "1. ¿Cuál es la diferencia principal entre un endpoint REST y una llamada RPC?  \r\n2. ¿Por qué es importante versionar una API y cómo se suele hacer?  \r\n3. ¿Qué ventaja ofrece GraphQL respecto al consumo de datos en comparación con REST?  \r\n4. ¿Qué información contiene un contrato OpenAPI y cómo ayuda al desarrollo?  \r\n5. ¿En qué situaciones elegirías gRPC en lugar de una API basada en HTTP/JSON?",
+    "ruta_estudio": "1. **Prerequisitos**: HTTP, JSON, conceptos de servidor y cliente, programación en al menos un lenguaje backend.  \r\n2. **Fundamentos**: estudiar REST y OpenAPI; crear APIs simples con frameworks como FastAPI o Express.  \r\n3. **Intermedio**: aprender sobre autenticación (OAuth2), versionado y pruebas contractuales.  \r\n4. **Avanzado**: profundizar en gRPC (proto files, streaming) y GraphQL (esquemas, resolvers).  \r\n5. **Especialización**: explorar patrones de arquitectura (API Gateway, Service Mesh) y casos de uso de LLM APIs."
+  },
+  "sections_missing": [],
+  "slug": "apis",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/backend"
+  ],
+  "title": "APIs",
+  "uid": "c_MBMF42FTPA",
+  "verification_marks": []
+}

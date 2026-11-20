@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "Lenguaje Backend"
+  ],
+  "area_uid": "backend",
+  "content_hash": "b489305f8c816bd4bbbde7cae62315811e7d0718ef903119ff0738200285c2e4",
+  "numero": 4,
+  "related_uids": [
+    "c_GQXGQSF53L",
+    "c_HAZD53NJ7A",
+    "c_THBEXYTI7F"
+  ],
+  "sections": {
+    "como_funciona": "1. Selecciono el lenguaje que mejor cubre los requisitos del proyecto.  \r\n2. Escribo la lógica de negocio usando las estructuras del lenguaje (clases, funciones, goroutines, async/await).  \r\n3. Compilo o interpreto el código dentro del runtime correspondiente, que prepara el entorno de ejecución (carga de clases, gestión de goroutines, etc.).  \r\n4. Configuro un framework de servidor que expone rutas HTTP y delega la petición a la lógica escrita.  \r\n5. El runtime procesa la solicitud, ejecuta la lógica, accede a recursos externos y devuelve la respuesta al cliente.",
+    "conexiones": "- **Programming Fundamentals**: los lenguajes de backend aplican los principios básicos de programación como abstracción, modularidad y manejo de errores.  \r\n- **Runtime**: cada lenguaje depende de un runtime que administra la ejecución, la memoria y la concurrencia, influyendo en el rendimiento de la aplicación.  \r\n- **Python & Programming**: Python ejemplifica cómo un lenguaje de alto nivel puede usarse en backend mediante frameworks como FastAPI, demostrando la flexibilidad de los conceptos de programación en diferentes entornos.",
+    "detalles": "- **Básico**: sintaxis del lenguaje, tipos de datos y estructuras de control.  \r\n- **Intermedio**: manejo de dependencias, uso de un framework web ligero y pruebas unitarias.  \r\n- **Avanzado**: tuning del runtime (p. ej. ajustes de GC en JVM), programación concurrente avanzada (goroutines, async/await), y despliegue en entornos de orquestación (Kubernetes, serverless).",
+    "ejemplo_minimo": "```go\r\npackage main\r\n\r\nimport (\r\n\t\"fmt\"\r\n\t\"net/http\"\r\n)\r\n\r\nfunc hello(w http.ResponseWriter, r *http.Request) {\r\n\tfmt.Fprint(w, \"¡Hola desde Go!\")\r\n}\r\n\r\nfunc main() {\r\n\thttp.HandleFunc(\"/\", hello)\r\n\thttp.ListenAndServe(\":8080\", nil)\r\n}\r\n```\r\nEste programa en Go crea un servidor HTTP que responde “¡Hola desde Go!” a cualquier petición en el puerto 8080.",
+    "errores_comunes": "- **Confundir tipado estático y dinámico** – usar tipos incorrectos genera errores en tiempo de compilación; validar con pruebas evita sorpresas.  \r\n- **Ignorar la gestión de recursos del runtime** – no cerrar conexiones o goroutines puede provocar fugas de memoria; usar `defer` o bloques `finally` los previene.  \r\n- **Sobrecargar el servidor con lógica pesada** – delegar tareas intensivas a workers o colas evita bloquear el hilo de petición.",
+    "estado_actual": "Los fundamentos del lenguaje (sintaxis, tipos, estructuras de control) son estables y ampliamente documentados. En la práctica moderna, la tendencia es combinar tipado estático (TypeScript, C#, Java) con frameworks que facilitan la creación de APIs y la integración con plataformas cloud; los runtimes continúan evolucionando para mejorar la concurrencia y el consumo de recursos.",
+    "ideas_clave": "1. **Elección del lenguaje** – Java, Go, Python, C# y JavaScript/TypeScript son los más usados; la decisión depende de rendimiento, ecosistema y experiencia del equipo.  \r\n2. **Modelo de ejecución** – Cada lenguaje se ejecuta sobre un runtime (JVM, Go runtime, CPython, .NET CLR, Node.js) que gestiona memoria, hilos y recolección de basura.  \r\n3. **Paradigmas y bibliotecas** – Los lenguajes comparten fundamentos de programación (tipado, manejo de errores, concurrencia) y disponen de frameworks específicos para crear APIs (Spring, Gin, FastAPI, ASP.NET, Express).  \r\n4. **Integración con infraestructura** – El código backend se despliega en contenedores, servidores o funciones serverless, y se comunica con bases de datos, colas y servicios externos.  \r\n5. **Mantenimiento y evolución** – Buenas prácticas de testing, tipado estático (cuando es posible) y versionado facilitan la evolución del código a lo largo del tiempo.",
+    "objetivo": "Utilizo los lenguajes de backend para escribir la lógica del servidor que procesa peticiones, accede a bases de datos y expone APIs. Resuelvo el problema de transformar datos de entrada en respuestas útiles, garantizando rendimiento, seguridad y mantenibilidad. En mi día a día como experto en backend elijo el lenguaje que mejor se adapta al dominio del proyecto, al equipo y a los requisitos de concurrencia o velocidad. Después de comprender los lenguajes de backend puedo diseñar micro‑servicios, integrar sistemas heterogéneos y optimizar la infraestructura de ejecución. No necesito preocuparme por el lenguaje cuando la arquitectura ya está definida y el código está encapsulado en componentes reutilizables.",
+    "preguntas_repaso": "1. ¿Qué criterios utilizo para elegir un lenguaje de backend en un proyecto nuevo?  \r\n2. ¿Cómo influye el runtime en la gestión de memoria y la concurrencia de una aplicación?  \r\n3. ¿Cuál es la diferencia práctica entre un framework ligero y uno completo en el contexto de backend?  \r\n4. ¿Por qué es importante separar la lógica pesada del hilo que atiende la petición HTTP?  \r\n5. ¿Qué pasos seguiría para migrar una API escrita en Python a un entorno serverless?",
+    "ruta_estudio": "1. **Prerequisitos**: lógica de programación, estructuras de datos y conceptos de redes (HTTP, REST).  \r\n2. **Fundamentos**: aprender la sintaxis y el modelo de ejecución de un lenguaje (p. ej. Java o Go).  \r\n3. **Frameworks**: estudiar un framework web popular del lenguaje elegido (Spring, Gin, FastAPI, ASP.NET, Express).  \r\n4. **Concurrencia y rendimiento**: profundizar en hilos, async/await o goroutines y en la configuración del runtime.  \r\n5. **Despliegue**: practicar contenedores Docker, orquestación con Kubernetes y despliegue serverless.  \r\n6. **Avanzado**: patrones de arquitectura (microservicios, CQRS), pruebas de carga y observabilidad."
+  },
+  "sections_missing": [],
+  "slug": "lenguaje-backend",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/backend"
+  ],
+  "title": "Lenguaje Backend",
+  "uid": "c_EDRNN4EAFB",
+  "verification_marks": []
+}

@@ -1,0 +1,39 @@
+{
+  "aliases": [
+    "Architecture"
+  ],
+  "area_uid": "software-engineering",
+  "content_hash": "73b1d6a89667330997226f0704736f6e16d18ecdbb88ba0657a4e24ca7bcae64",
+  "numero": 22,
+  "related_uids": [
+    "c_A2ZXZTXBH5",
+    "c_DVLX2W7PQH",
+    "c_HISOSDWX75",
+    "c_TSM6OQKLAB",
+    "c_UAIG2N6OVP",
+    "c_WSNDQEO6MW"
+  ],
+  "sections": {
+    "como_funciona": "1. **Definir capas**: se establece una jerarquía (por ejemplo, presentación → lógica de negocio → persistencia).  \r\n2. **Crear módulos** dentro de cada capa, agrupando código con una única responsabilidad.  \r\n3. **Exponer servicios** en los bordes de los módulos que necesiten ser consumidos por otros módulos o por sistemas externos.  \r\n4. **Aplicar límites**: se introducen interfaces o APIs que actúan como fronteras, de modo que los módulos solo interactúen a través de ellas.  \r\n5. **Iterar**: a medida que el sistema evoluciona, se revisan los límites y se refactorizan módulos para mantener la claridad estructural.",
+    "conexiones": "- **Abstraction**: la arquitectura usa la abstracción para ocultar detalles internos de módulos y servicios, exponiendo solo lo necesario.  \r\n- **Modularity**: los módulos son la unidad básica que permite la modularidad, facilitando la reutilización y el reemplazo independiente.  \r\n- **Arquitectura Frontend**: la capa de presentación en una arquitectura típica se alinea con la arquitectura frontend, que define cómo la UI consume los servicios del backend.",
+    "detalles": "- **Básico**: comprender la separación de preocupaciones mediante capas y la encapsulación de código en módulos.  \r\n- **Intermedio**: diseñar servicios con contratos claros (REST, gRPC, etc.) y establecer fronteras de comunicación mediante interfaces o adaptadores.  \r\n- **Avanzado**: gestionar trade‑offs de rendimiento vs. flexibilidad, aplicar patrones de arquitectura distribuida (microservicios, serverless) y combinar arquitecturas específicas (frontend, AI) con la estructura de capas y módulos.",
+    "ejemplo_minimo": "```python\r\n# capa de presentación\r\ndef handle_request(data):\r\n    result = business_logic.process(data)   # llama al módulo de negocio\r\n    return result\r\n\r\n# módulo de negocio\r\nclass BusinessLogic:\r\n    def process(self, payload):\r\n        return service_layer.compute(payload)   # delega al servicio\r\n\r\nbusiness_logic = BusinessLogic()\r\n\r\n# servicio\r\nclass ServiceLayer:\r\n    def compute(self, value):\r\n        return value * 2   # lógica simple de servicio\r\n\r\nservice_layer = ServiceLayer()\r\n```",
+    "errores_comunes": "- **Acoplar módulos directamente**: evita usar interfaces y genera dependencias rígidas.  \r\n- **Ignorar límites**: permite que cambios en un módulo propaguen efectos colaterales inesperados.  \r\n- **Sobrecargar capas**: colocar demasiada lógica en la capa de presentación rompe la separación de responsabilidades.",
+    "estado_actual": "Los fundamentos de capas, módulos, servicios y límites son estables y se enseñan en los curricula de ingeniería de software. En la práctica moderna, se combinan con patrones de microservicios, arquitectura basada en eventos y despliegues en la nube, lo que exige una mayor atención a la definición de límites de red y a la gestión de contratos de API.",
+    "ideas_clave": "1. **Capas (Layers)** – Agrupan funcionalidades según su nivel de abstracción, separando la lógica de negocio de la presentación y del acceso a datos.  \r\n2. **Módulos (Modules)** – Encapsulan un conjunto de clases o funciones relacionadas, ofreciendo una unidad de reutilización y despliegue.  \r\n3. **Servicios (Services)** – Exponen capacidades a través de interfaces bien definidas, facilitando la comunicación entre módulos o sistemas externos.  \r\n4. **Límites (Boundaries)** – Delimitan responsabilidades y controlan el flujo de información, evitando dependencias cíclicas y acoplamientos innecesarios.",
+    "objetivo": "Utilizo la arquitectura para organizar y estructurar un sistema de software de modo que sus componentes interactúen de forma predecible y mantenible. Resuelvo el problema de la complejidad creciente al dividir la solución en capas, módulos y servicios con límites claros. En mi trabajo como ingeniero de software, la arquitectura aparece al diseñar la estructura inicial de un proyecto, al decidir cómo se comunican los subsistemas y al evaluar los compromisos de rendimiento, escalabilidad y flexibilidad. Después de entenderla, puedo definir la hoja de ruta técnica, seleccionar patrones adecuados y guiar a los equipos en la implementación coherente. No necesito preocuparme por la arquitectura cuando estoy trabajando en una tarea puntual dentro de un componente ya bien definido y estable.",
+    "preguntas_repaso": "1. ¿Qué ventaja principal aporta la separación en capas a un sistema de software?  \r\n2. ¿Cómo ayuda una frontera bien definida a prevenir el acoplamiento entre módulos?  \r\n3. ¿En qué situación elegirías un servicio sobre una simple llamada de método interno?  \r\n4. ¿Cuál es la diferencia entre modularidad y abstracción dentro de una arquitectura?  \r\n5. ¿Qué trade‑off consideras crítico al decidir entre una arquitectura monolítica y una basada en microservicios?",
+    "ruta_estudio": "1. **Prerequisitos**: conceptos de programación orientada a objetos, patrones de diseño básicos y fundamentos de redes.  \r\n2. **Fundamentos**: estudiar capas y módulos mediante ejemplos simples (MVC, n‑tier).  \r\n3. **Servicios y límites**: profundizar en diseño de APIs, contratos y patrones de integración (Facade, Adapter).  \r\n4. **Arquitecturas específicas**: explorar arquitectura frontend (SPA, componentes) y microservicios.  \r\n5. **Avanzado**: analizar trade‑offs de escalabilidad, resiliencia y consistencia en sistemas distribuidos, incluyendo AI System Architecture."
+  },
+  "sections_missing": [],
+  "slug": "architecture",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/software-engineering"
+  ],
+  "title": "Architecture",
+  "uid": "c_KZDA6HODJU",
+  "verification_marks": []
+}

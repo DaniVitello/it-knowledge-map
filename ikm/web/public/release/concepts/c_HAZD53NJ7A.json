@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "Programming Fundamentals"
+  ],
+  "area_uid": "software-engineering",
+  "content_hash": "4374e16ccaa0ad30a612fcceb4002e549b616c3a7a2906910f80382e22533ed3",
+  "numero": 1,
+  "related_uids": [
+    "c_EDRNN4EAFB",
+    "c_GQXGQSF53L",
+    "c_THBEXYTI7F"
+  ],
+  "sections": {
+    "como_funciona": "1. Declaro una **variable** con un **tipo** adecuado para representar el dato que necesito.  \r\n2. Encapsulo la lógica que opera sobre esas variables dentro de una **función**, definiendo sus parámetros y valor de retorno.  \r\n3. Utilizo **control flow** (if/else, for, while) dentro de la función para decidir qué caminos seguir según los valores de las variables.  \r\n4. Expongo la función mediante una **abstracción** (por ejemplo, una API o una clase) de modo que otros componentes la consuman sin conocer su implementación interna.  \r\n5. En tiempo de ejecución, el motor del lenguaje evalúa el **control flow**, manipula las **variables** y devuelve resultados a quien llamó la **función**.",
+    "conexiones": "- **Testing** – los fundamentos permiten escribir pruebas unitarias que verifican el comportamiento de funciones aisladas.  \r\n- **Design Patterns** – la abstracción es la base de patrones como Strategy o Factory, que estructuran la creación y uso de objetos.  \r\n- **Version Control** – al modularizar código con funciones y tipos, los cambios se pueden rastrear y fusionar de forma más segura.",
+    "detalles": "- **Básico**: declaración de variables simples, tipos primitivos y uso de `if`/`else`.  \r\n- **Intermedio**: funciones con parámetros, retorno de valores compuestos (objetos, arrays) y bucles `for`/`while`.  \r\n- **Avanzado**: funciones de orden superior, closures, manejo de errores, y diseño de interfaces que abstraen múltiples funciones y tipos.",
+    "ejemplo_minimo": "```python\r\n# Variables y tipos\r\ncontador: int = 0\r\n\r\n# Función con control flow\r\ndef incrementar(limite: int) -> int:\r\n    while contador < limite:\r\n        contador += 1\r\n    return contador\r\n\r\nprint(incrementar(5))  # 5\r\n```",
+    "errores_comunes": "- **Olvidar inicializar una variable** → genera errores de referencia; siempre asignar un valor inicial.  \r\n- **Confundir tipos** (por ejemplo, sumar string y número) → usar conversiones explícitas.  \r\n- **No devolver valor en una función** → la llamada recibe `None`; asegurar `return`.  \r\n- **Anidar excesivo el control flow** → dificulta la lectura; refactorizar en funciones auxiliares.",
+    "estado_actual": "- **Fundamentos estables**: la existencia de variables, tipos, funciones, y estructuras de control es constante en todos los lenguajes de propósito general.  \r\n- **Práctica moderna**: se promueve la **abstracción** mediante programación funcional (lambdas, map/reduce) y orientada a objetos (interfaces, inyección de dependencias) para mejorar la testabilidad y la escalabilidad del código.",
+    "ideas_clave": "1. **Variables** – espacio nombrado en memoria que almacena valores y permite su reutilización.  \r\n2. **Funciones** – bloques de código reutilizables que reciben parámetros y devuelven resultados.  \r\n3. **Tipos** – clasificación de valores (números, texto, booleanos, estructuras) que define operaciones válidas.  \r\n4. **Control flow** – estructuras (condicionales, bucles) que determinan el orden de ejecución.  \r\n5. **Abstracción** – ocultar detalles internos mediante interfaces o módulos para simplificar la interacción.",
+    "objetivo": "Utilizo los fundamentos de programación para traducir requisitos del negocio en instrucciones ejecutables por una máquina. Resuelvo el problema de cómo estructurar datos, encapsular lógica y controlar el flujo de ejecución de manera predecible y mantenible. En mi día a día como ingeniero senior, estos conceptos aparecen al diseñar módulos, escribir APIs y depurar comportamientos inesperados. Cuando los domino, puedo crear componentes reutilizables, aplicar pruebas automatizadas y colaborar eficazmente con equipos multidisciplinarios. No necesito preocuparme de los fundamentos cuando trabajo exclusivamente con herramientas de bajo código o cuando delego la lógica a servicios externos que ya los encapsulan.",
+    "preguntas_repaso": "1. ¿Cómo afecta la elección del tipo de una variable al comportamiento del control flow?  \r\n2. ¿Por qué es importante que una función siempre tenga un valor de retorno explícito?  \r\n3. ¿Qué ventaja aporta la abstracción al trabajar con equipos multidisciplinarios?  \r\n4. ¿Cómo puedes transformar un bucle `while` en una expresión funcional equivalente?  \r\n5. ¿En qué situaciones podrías decidir ignorar la creación de una función adicional?",
+    "ruta_estudio": "1. **Prerequisitos**: lógica básica, familiaridad con al menos un lenguaje de programación.  \r\n2. **Fundamentos**: practicar declaración de variables, tipos y control flow mediante ejercicios cortos.  \r\n3. **Funciones y abstracción**: crear módulos reutilizables, introducir pruebas unitarias.  \r\n4. **Profundización**: estudiar closures, programación funcional y patrones de diseño que extienden la abstracción.  \r\n5. **Aplicación**: integrar los conceptos en un proyecto real, usando control de versiones y CI/CD."
+  },
+  "sections_missing": [],
+  "slug": "programming-fundamentals",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/software-engineering"
+  ],
+  "title": "Programming Fundamentals",
+  "uid": "c_HAZD53NJ7A",
+  "verification_marks": []
+}

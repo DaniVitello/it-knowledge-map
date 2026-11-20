@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "DOM"
+  ],
+  "area_uid": "frontend",
+  "content_hash": "feb1a7c013a10ba0a1dbce1c3921354e9913b6d3a58854e394086a0166bc858e",
+  "numero": 5,
+  "related_uids": [
+    "c_HRF35BCROZ",
+    "c_IFH4CCKUM6",
+    "c_ZIBCUCIHW3"
+  ],
+  "sections": {
+    "como_funciona": "1. El navegador parsea el HTML y construye el árbol del DOM.  \r\n2. Cada nodo queda accesible a través de `document` y sus métodos (`getElementById`, `querySelector`, etc.).  \r\n3. Cuando el código JavaScript llama a un método de manipulación (por ejemplo `appendChild`), el nodo objetivo se modifica en memoria.  \r\n4. El motor de renderizado detecta los cambios, calcula si el layout necesita actualizarse (reflujo) y vuelve a pintar la zona afectada (repintado).  \r\n5. Los listeners de eventos asociados a los nodos se disparan, permitiendo que la UI responda a la interacción del usuario.",
+    "conexiones": "- **HTML** – El DOM es la representación estructural del código HTML que el navegador interpreta.  \r\n- **CSS** – Los cambios en el DOM pueden afectar el cálculo de estilos y el layout definido por CSS.  \r\n- **Layout** – Cada modificación del árbol puede desencadenar un reflujo, proceso que determina la posición y tamaño de los elementos en la página.",
+    "detalles": "- **Básico**: comprender la estructura de árbol, acceder a nodos con selectores y modificar propiedades como `textContent` o `className`.  \r\n- **Intermedio**: crear nodos con `createElement`, insertar fragmentos con `appendChild` o `insertBefore`, y gestionar eventos con `addEventListener`.  \r\n- **Avanzado**: optimizar manipulaciones agrupando cambios en `DocumentFragment`, minimizar reflujo usando técnicas como `requestAnimationFrame`, y usar APIs modernas como `MutationObserver` para reaccionar a cambios externos.",
+    "ejemplo_minimo": "```html\r\n<!DOCTYPE html>\r\n<html>\r\n<head>\r\n  <title>DOM básico</title>\r\n</head>\r\n<body>\r\n  <p id=\"msg\">Hola</p>\r\n  <button id=\"btn\">Cambiar</button>\r\n\r\n  <script>\r\n    const btn = document.getElementById('btn');\r\n    const msg = document.getElementById('msg');\r\n\r\n    btn.addEventListener('click', () => {\r\n      msg.textContent = '¡Mundo!';\r\n    });\r\n  </script>\r\n</body>\r\n</html>\r\n```",
+    "errores_comunes": "- **Acceder a nodos antes de que existan** – colocar el script en `<head` sin `defer` o `DOMContentLoaded`. Solución: usar `defer` o esperar el evento `DOMContentLoaded`.  \r\n- **Modificar estilos directamente en bucle** – provoca múltiples reflujo. Solución: aplicar cambios en lote o usar `classList`.  \r\n- **Olvidar remover listeners** – genera fugas de memoria. Solución: llamar a `removeEventListener` cuando el nodo se elimina.",
+    "estado_actual": "- **Fundamentos estables**: la representación en árbol, los tipos de nodo (element, text, comment) y la API básica (`getElementById`, `appendChild`, `removeChild`) son parte del estándar DOM Level 1 y se mantienen sin cambios.  \r\n- **Práctica moderna**: el uso de `querySelectorAll`, `classList`, `requestAnimationFrame` y `MutationObserver` refleja las mejoras introducidas en versiones posteriores del estándar y es recomendado para aplicaciones con alta interactividad.",
+    "ideas_clave": "1. **Árbol de documentos** – El navegador representa el HTML como una jerarquía de nodos llamada árbol del DOM.  \r\n2. **Nodos** – Cada elemento, atributo y fragmento de texto es un nodo que expone propiedades y métodos.  \r\n3. **Manipulación** – JavaScript puede crear, leer, actualizar o eliminar nodos mediante la API del DOM.  \r\n4. **Reflujo y repintado** – Cambios en el árbol pueden desencadenar recalculaciones de layout y renderizado.  \r\n5. **Eventos** – Los nodos pueden escuchar y responder a eventos del usuario, conectando la lógica con la UI.",
+    "objetivo": "Utilizo el DOM para interactuar programáticamente con la estructura de una página web, lo que me permite leer, crear, modificar o eliminar elementos sin recargar la página. Resuelvo el problema de que el contenido estático de HTML no puede responder a eventos del usuario ni a datos dinámicos. En mi día a día como desarrollador Frontend, el DOM está presente cada vez que escribo JavaScript que actualiza la interfaz, conecta formularios o implementa animaciones. Después de comprenderlo, puedo construir componentes reactivos, integrar APIs y optimizar la experiencia del usuario. No necesito preocuparme por el DOM cuando trabajo exclusivamente con herramientas que abstraen su manipulación, como frameworks que gestionan el árbol virtual por mí.",
+    "preguntas_repaso": "1. ¿Qué estructura de datos utiliza el navegador para representar el HTML?  \r\n2. ¿Cómo accedo a un elemento con id `header` usando la API del DOM?  \r\n3. ¿Cuál es la diferencia entre `appendChild` y `insertBefore`?  \r\n4. ¿Por qué es importante minimizar los reflujo al manipular el DOM?  \r\n5. ¿Qué herramienta del DOM permite observar cambios en la estructura sin usar polling?",
+    "ruta_estudio": "1. **Prerequisitos**: entender la sintaxis básica de HTML y la finalidad de CSS.  \r\n2. **Fundamentos**: leer la especificación del DOM Level 1, practicar selectores y propiedades de nodos.  \r\n3. **Interactividad**: aprender a manejar eventos y a crear nodos dinámicamente.  \r\n4. **Optimización**: estudiar reflujo/repintado, `DocumentFragment` y `requestAnimationFrame`.  \r\n5. **Avanzado**: explorar `MutationObserver`, APIs de Shadow DOM y técnicas de renderizado fuera del hilo principal."
+  },
+  "sections_missing": [],
+  "slug": "dom",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/frontend"
+  ],
+  "title": "DOM",
+  "uid": "c_UTVABXNLDY",
+  "verification_marks": []
+}

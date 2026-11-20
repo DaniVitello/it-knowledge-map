@@ -1,0 +1,40 @@
+{
+  "aliases": [
+    "Analytics Metrics"
+  ],
+  "area_uid": "database",
+  "content_hash": "fa67f9326ca2cbffabe23004f665cdf1b8eae77cec7a1f794a56614b872e138a",
+  "numero": 22,
+  "related_uids": [
+    "c_DMG36WFAUY",
+    "c_FHDALEC2NY",
+    "c_K2XQL2MKUK",
+    "c_OO3XXXZMWY",
+    "c_SNCAJUJCGH",
+    "c_VIGZHRVRFY",
+    "c_VZFUJQTAUP"
+  ],
+  "sections": {
+    "como_funciona": "1. **Definir objetivo** → selecciono el KPI que refleje la meta (p. ej. “ventas netas”).  \r\n2. **Identificar dimensiones** → determino los atributos que permitirán segmentar el KPI (fecha, producto).  \r\n3. **Modelar la métrica** → creo la expresión SQL o la lógica de transformación que calcule el KPI.  \r\n4. **Agregar ratios** → si necesito eficiencia, divido el KPI entre otra métrica (p. ej. “ventas / visitas”).  \r\n5. **Persistir y exponer** → almaceno el resultado en una tabla de métricas o lo envío a una herramienta de BI.",
+    "conexiones": "- **Data Visualization**: las métricas alimentan gráficos y dashboards que hacen comprensible el rendimiento.  \r\n- **BI & Reporting**: los KPI son los bloques centrales de los informes corporativos y de auto‑servicio.  \r\n- **Product Metrics**: los ratios de uso (p. ej. “retención 30‑días”) son métricas analíticas aplicadas al ciclo de vida del producto.",
+    "detalles": "- **Básico**: Selección de KPI y dimensiones; cálculo directo con `SUM`, `COUNT`.  \r\n- **Intermedio**: Uso de ventanas (`OVER`) para ratios y comparaciones temporales; creación de tablas de hechos de métricas.  \r\n- **Avanzado**: Métricas de tipo *slowly changing dimensions*, cálculo de percentiles, integración con pipelines de streaming para métricas en tiempo real, y modelado de métricas compuestas (p. ej. LTV = ARPU × churn‑rate⁻¹).",
+    "ejemplo_minimo": "```sql\r\n-- KPI: ingresos netos por día y categoría\r\nSELECT\r\n    DATE(order_timestamp)      AS fecha,\r\n    product_category           AS categoria,\r\n    SUM(order_amount)          AS ingresos_neto,\r\n    COUNT(*)                   AS total_ordenes,\r\n    SUM(order_amount) / COUNT(*) AS ticket_promedio\r\nFROM orders\r\nWHERE order_status = 'completed'\r\nGROUP BY DATE(order_timestamp), product_category;\r\n```",
+    "errores_comunes": "- **Confundir KPI con métrica operativa** → elegir una métrica que no se alinea con la meta del negocio.  \r\n- **Olvidar dimensiones** → perder capacidad de segmentar y detectar patrones.  \r\n- **Dividir por cero en ratios** → generar valores nulos o errores; validar denominadores.",
+    "estado_actual": "- **Fundamentos estables**: definición de KPI, uso de dimensiones y cálculo de ratios con SQL estándar.  \r\n- **Práctica moderna**: pipelines de métricas en tiempo real con herramientas como dbt + Snowflake, métricas almacenadas en *data vault* para auditoría, y visualización automática mediante plataformas de BI que consumen modelos de métricas predefinidos.",
+    "ideas_clave": "1. **KPI (Key Performance Indicator)** – Métrica clave alineada con objetivos de negocio.  \r\n2. **Dimensiones** – Atributos (p. ej. fecha, región, canal) que segmentan la métrica.  \r\n3. **Ratios** – Relaciones entre dos o más métricas que revelan eficiencia o calidad.  \r\n4. **Métricas derivadas** – Cálculos (p. ej. crecimiento % mensual) construidos a partir de métricas base.",
+    "objetivo": "Utilizo **Analytics Metrics** para transformar datos crudos en indicadores accionables que guían decisiones de negocio y de producto. Resuelvo el problema de “¿qué está pasando?” y “¿cómo lo medimos?” al definir métricas que combinan valores numéricos (KPIs, ratios) con contextos (dimensiones). En mi día a día como ingeniero de datos y analista senior, las métricas aparecen al diseñar modelos de datos, crear dashboards y validar hipótesis. Después de entenderlas, puedo diseñar pipelines que calculen métricas en tiempo real, comparar resultados entre segmentos y automatizar alertas. No necesito preocuparme cuando el objetivo es simplemente explorar datos sin necesidad de seguimiento continuo o cuando los stakeholders no requieren indicadores de rendimiento.",
+    "preguntas_repaso": "1. ¿Qué diferencia hay entre un KPI y una métrica operativa?  \r\n2. ¿Cómo se usan las dimensiones para segmentar un KPI?  \r\n3. ¿Cuál es la forma segura de calcular un ratio que pueda dividir por cero?  \r\n4. ¿Qué ventajas aporta un pipeline de métricas en tiempo real frente a un cálculo batch?  \r\n5. ¿De qué manera una métrica de producto puede influir en un dashboard de BI?",
+    "ruta_estudio": "1. **Prerequisitos**: SQL básico, conceptos de modelado dimensional (hechos y dimensiones).  \r\n2. **Fundamentos**: aprender a definir KPI y a crear métricas simples con `GROUP BY`.  \r\n3. **Intermedio**: dominar funciones de ventana y cálculo de ratios; diseñar tablas de métricas.  \r\n4. **Avanzado**: implementar pipelines de métricas en tiempo real (dbt, streaming), versionado de métricas y auditoría.  \r\n5. **Especialización**: adaptar métricas a dominios específicos (marketing, producto, operaciones) y conectar con herramientas de BI."
+  },
+  "sections_missing": [],
+  "slug": "analytics-metrics",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/database-data-analytics"
+  ],
+  "title": "Analytics Metrics",
+  "uid": "c_E2BEEPTCLY",
+  "verification_marks": []
+}

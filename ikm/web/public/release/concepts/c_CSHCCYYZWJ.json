@@ -1,0 +1,39 @@
+{
+  "aliases": [
+    "AI Safety & Security"
+  ],
+  "area_uid": "ai-engineering",
+  "content_hash": "351a62930942f49c01d1c292ad7467364536e74598475fd99e2b1edebc35573f",
+  "numero": 21,
+  "related_uids": [
+    "c_5VSM4JTVVK",
+    "c_D2IZ67V6IU",
+    "c_F4IWLYRXT4",
+    "c_KUZUIAJVV7",
+    "c_MMPVIHXRHF",
+    "c_USKUN3IVRZ"
+  ],
+  "sections": {
+    "como_funciona": "1. **Diseño de la superficie de ataque**: se identifican puntos donde el prompt llega al modelo (API, UI).  \r\n2. **Validación de entrada**: se aplican filtros y sanitización para bloquear patrones de inyección.  \r\n3. **Control de salida**: se usan heurísticas y modelos de detección para impedir que se devuelvan datos sensibles.  \r\n4. **Gestión de permisos**: se asignan roles y tokens con scopes limitados que definen qué prompts pueden enviarse.  \r\n5. **Monitoreo y respuesta**: logs de requests se analizan en tiempo real para detectar abuso y activar bloqueos.",
+    "conexiones": "- **Security Engineering**: provee metodologías de threat modeling que se adaptan a los vectores de ataque de IA.  \r\n- **HTTPS / TLS**: asegura la confidencialidad e integridad de los datos en tránsito entre cliente y servicio de IA.  \r\n- **Observability**: permite rastrear métricas de uso y anomalías que indican posibles inyecciones o abusos.",
+    "detalles": "- **Básico**: aplicar listas blancas de palabras y limitar la longitud del prompt.  \r\n- **Intermedio**: integrar un modelo secundario de detección de contenido tóxico y usar técnicas de differential privacy para reducir leakage.  \r\n- **Avanzado**: implementar sandboxing de ejecución, auditorías de datos de entrenamiento y políticas de zero‑trust en la cadena de suministro de modelos.",
+    "ejemplo_minimo": "```python\r\nimport openai\r\n\r\ndef safe_completion(prompt, api_key):\r\n    # 1. Sanitizar prompt\r\n    forbidden = [\"system:\", \"reset\", \"ignore\"]\r\n    if any(tok in prompt.lower() for tok in forbidden):\r\n        raise ValueError(\"Prompt contiene comandos prohibidos\")\r\n    # 2. Llamada segura\r\n    response = openai.ChatCompletion.create(\r\n        model=\"gpt-4o-mini\",\r\n        messages=[{\"role\": \"user\", \"content\": prompt}],\r\n        api_key=api_key,\r\n        max_tokens=200,\r\n        temperature=0.0,\r\n    )\r\n    # 3. Filtrar salida sensible (ejemplo simple)\r\n    if \"password\" in response.choices[0].message.content.lower():\r\n        raise ValueError(\"Posible fuga de datos\")\r\n    return response.choices[0].message.content\r\n\r\nprint(safe_completion(\"¿Cuál es la capital de Francia?\", \"sk-...\"))\r\n```",
+    "errores_comunes": "- **Filtrar solo palabras clave**: no captura variaciones; usar expresiones regulares o modelos de detección.  \r\n- **Confiar únicamente en logs**: sin alertas en tiempo real se pierde la ventana de mitigación; implementar detección automática.  \r\n- **Asignar permisos demasiado amplios**: aplicar el principio de menor privilegio desde el inicio.",
+    "estado_actual": "Los fundamentos de AI Safety & Security (filtrado de prompts, control de salida y gestión de permisos) son prácticas estables y ampliamente adoptadas en la industria. La práctica moderna incorpora técnicas de **differential privacy**, **red teaming** de modelos y **observability** basada en trazas de inferencia para detectar abuso en tiempo real.",
+    "ideas_clave": "1. **Prompt injection** – los usuarios pueden insertar instrucciones que desvían el modelo de su propósito original.  \r\n2. **Data leakage** – el modelo puede reproducir información confidencial presente en los datos de entrenamiento.  \r\n3. **Abuse** – actores externos pueden explotar la IA para generar contenido dañino o automatizar ataques.  \r\n4. **Permissions** – la gestión de quién puede invocar el modelo y con qué parámetros es clave para limitar riesgos.",
+    "objetivo": "Utilizo AI Safety & Security para garantizar que los sistemas de IA que despliego sean confiables, no filtren datos sensibles y no puedan ser manipulados por usuarios malintencionados. Resuelvo problemas como la inyección de prompts que alteran el comportamiento del modelo, la filtración inadvertida de información de entrenamiento y el uso indebido de la API. Aparece en cada fase del ciclo de vida del producto: diseño, integración, pruebas y monitoreo. Después de entenderlo, puedo diseñar controles de acceso, validar salidas y establecer observabilidad que detecte abusos. No necesito preocuparme cuando el modelo se usa internamente sin exposición a usuarios externos y sin datos sensibles.",
+    "preguntas_repaso": "1. ¿Qué es una inyección de prompt y cómo afecta la confiabilidad del modelo?  \r\n2. ¿De qué manera el control de permisos reduce el riesgo de abuso en una API de IA?  \r\n3. ¿Cuál es la diferencia entre filtrado estático de palabras y un modelo de detección de contenido?  \r\n4. ¿Cómo ayuda la observabilidad a identificar intentos de data leakage en tiempo real?  \r\n5. ¿Qué técnicas de privacidad diferencial pueden aplicarse para mitigar la fuga de datos?",
+    "ruta_estudio": "1. **Prerequisitos**: conceptos de redes (TLS), control de acceso (OAuth scopes) y fundamentos de ML.  \r\n2. **Fundamentos**: estudiar prompt sanitization, técnicas de redacción segura y políticas de permisos.  \r\n3. **Intermedio**: aprender differential privacy y modelos de detección de contenido.  \r\n4. **Avanzado**: practicar red teaming de LLMs, implementar sandboxing y diseñar pipelines de observabilidad con tracing."
+  },
+  "sections_missing": [],
+  "slug": "ai-safety-security",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/ai-engineering"
+  ],
+  "title": "AI Safety & Security",
+  "uid": "c_CSHCCYYZWJ",
+  "verification_marks": []
+}

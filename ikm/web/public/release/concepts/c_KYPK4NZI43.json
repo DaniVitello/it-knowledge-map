@@ -1,0 +1,32 @@
+{
+  "aliases": [
+    "Documentation"
+  ],
+  "area_uid": "software-engineering",
+  "content_hash": "20fba45ff2c5a62fdd77a8791480438ecd998fe82f791255804843c5763c5506",
+  "numero": 21,
+  "related_uids": [],
+  "sections": {
+    "como_funciona": "1. Al iniciar un proyecto, creo un README que sintetiza el objetivo y los pasos de puesta en marcha.  \r\n2. Durante el desarrollo, añado comentarios (code docs) cerca de lógica compleja o APIs públicas.  \r\n3. Cuando surge una decisión de arquitectura relevante, redacto un ADR que justifica la elección y sus trade‑offs.  \r\n4. A medida que el sistema crece, elaboro documentación técnica que detalla componentes, contratos y procedimientos de despliegue.  \r\n5. Cada artefacto se versiona junto al código, de modo que cualquier cambio en el software obliga a revisar y actualizar la documentación correspondiente.",
+    "conexiones": "- **Refactoring** – Una buena documentación reduce el riesgo al refactorizar, pues permite entender rápidamente la intención original del código.  \r\n- **Architecture** – Los ADRs forman parte de la documentación y capturan decisiones que definen la arquitectura del sistema.  \r\n- **Testing** – La documentación técnica describe escenarios de prueba y configuraciones, facilitando la creación de suites de pruebas automatizadas.",
+    "detalles": "- **Básico**: Mantener un README actualizado y comentarios claros; suficiente para equipos pequeños y proyectos de corta vida.  \r\n- **Intermedio**: Introducir ADRs para decisiones que impactan la arquitectura; usar herramientas de generación automática de docs (p. ej., Javadoc, Sphinx) para mantener la consistencia entre código y documentación.  \r\n- **Avanzado**: Crear documentación técnica integral que incluya diagramas de arquitectura, guías de integración continua y manuales de operación; integrar la documentación en pipelines de CI para validar su vigencia y publicar versiones en un portal interno.",
+    "ejemplo_minimo": "```markdown\r\n# README.md\r\n# Calculadora simple\r\nEste proyecto implementa una calculadora de línea de comandos.\r\n\r\n## Instalación\r\n```bash\r\npip install -r requirements.txt\r\n```\r\n\r\n## Uso\r\n```bash\r\npython calc.py 2 + 3\r\n```\r\n```\r\n\r\n```python\r\n# calc.py\r\ndef sumar(a: int, b: int) -> int:\r\n    \"\"\"Devuelve la suma de a y b.\"\"\"\r\n    return a + b\r\n```",
+    "errores_comunes": "- **Olvidar actualizar el README** después de cambiar la forma de ejecución → revisarlo en cada release.  \r\n- **Documentar código sin valor** (comentarios obvios) → enfocarse en la lógica no trivial.  \r\n- **No versionar ADRs** → usar el mismo control de versiones que el código fuente.",
+    "estado_actual": "Los fundamentos de la documentación (README, comentarios y ADRs) son estables y ampliamente adoptados. La práctica moderna incorpora generación automática de documentación a partir del código y la integración de revisiones de docs en pipelines de CI/CD para asegurar su sincronía con el código.",
+    "ideas_clave": "1. **Code docs** – Comentarios y anotaciones dentro del código que explican la intención de funciones, clases y parámetros.  \r\n2. **README** – Documento de nivel superior que describe el propósito del proyecto, cómo instalarlo y cómo usarlo.  \r\n3. **ADRs (Architecture Decision Records)** – Registro estructurado de decisiones arquitectónicas clave y sus motivaciones.  \r\n4. **Technical docs** – Guías más profundas que cubren APIs, flujos de datos, configuraciones y procesos operacionales.",
+    "objetivo": "Utilizo la documentación para comunicar de forma estructurada el “qué”, “por qué” y “cómo” de un sistema de software, evitando que el conocimiento quede atrapado en la cabeza de una sola persona. Resuelvo la falta de claridad que genera el mantenimiento, la incorporación de nuevos miembros al equipo y la evolución del producto. En mi día a día como ingeniero de software, la documentación aparece en cada repositorio, en cada entrega y en cada decisión arquitectónica importante. Después de comprenderla, puedo crear y mantener artefactos como READMEs, guías técnicas y registros de decisiones que facilitan el refactorizado y la evolución de la arquitectura. No necesito preocuparme por una documentación exhaustiva cuando el proyecto es experimental, de corta duración o cuando el código es auto‑explicativo y el equipo es muy pequeño.",
+    "preguntas_repaso": "1. ¿Cuál es la diferencia principal entre un README y una guía técnica?  \r\n2. ¿En qué situaciones deberías crear un ADR y qué información debe contener?  \r\n3. ¿Cómo ayuda la documentación a reducir el riesgo durante un refactorizado?  \r\n4. ¿Qué pasos incluirías en un pipeline de CI para asegurar la calidad de la documentación?  \r\n5. ¿Por qué es importante versionar la documentación junto al código fuente?",
+    "ruta_estudio": "1. **Prerequisitos**: Conocer control de versiones (Git) y conceptos básicos de código limpio.  \r\n2. **Fundamentos**: Crear y mantener README y comentarios claros en proyectos pequeños.  \r\n3. **Intermedio**: Aprender el formato de ADRs y practicar su redacción en decisiones reales.  \r\n4. **Avanzado**: Dominar herramientas de generación automática (p. ej., Doxygen, MkDocs) y configurar pipelines de CI para validar la documentación.  \r\n5. **Especialización**: Explorar documentación de APIs (OpenAPI/Swagger) y guías de operación para entornos de producción."
+  },
+  "sections_missing": [],
+  "slug": "documentation",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/software-engineering"
+  ],
+  "title": "Documentation",
+  "uid": "c_KYPK4NZI43",
+  "verification_marks": []
+}

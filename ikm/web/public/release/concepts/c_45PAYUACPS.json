@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "Data Structures"
+  ],
+  "area_uid": "software-engineering",
+  "content_hash": "188cc67f47d3cdab9fd4135c9ae04c8b563893be97ba5e80e1b289e1585b9828",
+  "numero": 2,
+  "related_uids": [
+    "c_KEMF6IFKTQ",
+    "c_Q242GFM3KF"
+  ],
+  "sections": {
+    "como_funciona": "1. Identifico el tipo de operación dominante (acceso aleatorio, inserción frecuente, búsqueda ordenada, etc.).  \r\n2. Elijo la estructura que minimiza el coste de esa operación según el esqueleto anterior.  \r\n3. Creo la instancia de la estructura (p. ej., un array de tamaño fijo o una lista enlazada vacía).  \r\n4. Inserto, busco o elimino datos siguiendo los algoritmos propios de la estructura elegida.  \r\n5. Evalúo el rendimiento observando la complejidad esperada y, si es necesario, sustituyo la estructura por una más adecuada.",
+    "conexiones": "- **Algorithms**: las estructuras de datos determinan qué algoritmos son factibles y su coste; por ejemplo, Dijkstra necesita un grafo y una cola de prioridad.  \r\n- **Complexity Analysis**: la elección de una estructura afecta directamente la complejidad temporal y espacial que se evalúa en el análisis de algoritmos.  \r\n- **Memory Management**: la forma en que una estructura almacena sus elementos influye en la gestión de la memoria, especialmente en entornos con recolección automática o en sistemas embebidos.",
+    "detalles": "- **Básico**: entender la memoria contigua de los arrays y la diferencia entre arrays estáticos y dinámicos; reconocer la simplicidad de las listas enlazadas simples.  \r\n- **Intermedio**: aprender árboles binarios de búsqueda, árboles AVL o Red‑Black para mantener balance; comprender la colisión y la resolución en hash tables (encadenamiento o direccionamiento abierto).  \r\n- **Avanzado**: trabajar con estructuras especializadas como B‑trees para bases de datos, trie para búsquedas de prefijos, y grafos dirigidos o ponderados con representaciones de lista de adyacencia o matriz de adyacencia.",
+    "ejemplo_minimo": "```python\r\n# Array (lista) y hash table (diccionario) en Python\r\narr = [10, 20, 30]          # acceso por índice O(1)\r\nprint(arr[1])              # 20\r\n\r\nhash_table = {\"a\": 1, \"b\": 2}\r\nhash_table[\"c\"] = 3        # inserción O(1) promedio\r\nprint(hash_table[\"b\"])     # 2\r\n```",
+    "errores_comunes": "- Confundir la complejidad promedio de una hash table con su peor caso; evitarlo eligiendo buenas funciones de hash.  \r\n- Usar una lista enlazada cuando se necesita acceso aleatorio frecuente; prefiera un array.  \r\n- No balancear un árbol binario de búsqueda, lo que degrada su rendimiento a O(n).  \r\n- Olvidar liberar referencias en estructuras enlazadas en lenguajes sin recolección automática, provocando fugas de memoria.",
+    "estado_actual": "**Fundamentos estables**: los conceptos de arrays, listas enlazadas, árboles binarios y hash tables están bien definidos y su complejidad teórica es aceptada universalmente.  \r\n**Práctica moderna**: los lenguajes de alto nivel proporcionan colecciones genéricas optimizadas (p. ej., `std::vector`, `ArrayList`, `HashMap`). En entornos de gran escala se prefieren estructuras persistentes o concurrentes, como `ConcurrentHashMap` o árboles B‑tree en sistemas de bases de datos.",
+    "ideas_clave": "1. **Arrays** – colección contigua de elementos del mismo tipo con acceso O(1) por índice.  \r\n2. **Lists** – estructuras lineales (por ejemplo, listas enlazadas) que permiten inserciones y eliminaciones O(1) en los extremos.  \r\n3. **Trees** – estructuras jerárquicas que facilitan búsquedas ordenadas, típicamente O(log n) en árboles balanceados.  \r\n4. **Hash tables** – mapeo clave‑valor que ofrece acceso promedio O(1) mediante una función de hash.  \r\n5. **Graphs** – conjuntos de nodos y aristas que modelan relaciones arbitrarias entre elementos.",
+    "objetivo": "Utilizo las estructuras de datos para organizar la información que mi programa necesita procesar de forma eficiente. Resuelvo problemas de acceso rápido, inserción, eliminación y búsqueda que aparecen en cualquier proyecto de software, desde una aplicación web hasta un motor de búsqueda. En mi día a día como ingeniero de software selecciono la estructura adecuada según los requisitos de rendimiento y la naturaleza de los datos. Después de comprenderlas puedo diseñar algoritmos más precisos y predecir su comportamiento. No necesito preocuparme por ellas cuando trabajo con datos triviales que caben en unas pocas variables o cuando utilizo una API que ya abstrae la gestión interna.",
+    "preguntas_repaso": "1. ¿En qué situaciones prefiero un array a una lista enlazada y por qué?  \r\n2. ¿Cómo afecta la función de hash a la complejidad promedio de una hash table?  \r\n3. ¿Qué propiedad garantiza que un árbol binario de búsqueda mantenga O(log n) en operaciones básicas?  \r\n4. ¿Cuál es la diferencia principal entre una representación de grafo por lista de adyacencia y por matriz de adyacencia?  \r\n5. ¿Cómo influye la elección de una estructura de datos en el análisis de complejidad de un algoritmo?",
+    "ruta_estudio": "1. **Prerequisitos**: lógica de programación, tipos de datos básicos y conceptos de memoria.  \r\n2. **Fundamentos**: estudiar arrays y listas, implementar una lista enlazada simple.  \r\n3. **Intermedio**: profundizar en árboles binarios y hash tables, practicar con ejercicios de inserción y búsqueda.  \r\n4. **Avanzado**: explorar árboles balanceados, grafos y estructuras concurrentes; aplicar en proyectos reales como un motor de búsqueda o una base de datos ligera.  \r\n5. **Especialización**: leer sobre estructuras persistentes, estructuras externas (disk‑based) y patrones de diseño relacionados (p. ej., Iterator, Factory)."
+  },
+  "sections_missing": [],
+  "slug": "data-structures",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/software-engineering"
+  ],
+  "title": "Data Structures",
+  "uid": "c_45PAYUACPS",
+  "verification_marks": []
+}

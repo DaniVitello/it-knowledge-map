@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "Spacing & Layout"
+  ],
+  "area_uid": "ux-ui",
+  "content_hash": "63928a8fcf315603b8d153d79f3549d3819e451a344bb6697d6f11ffffc963b8",
+  "numero": 15,
+  "related_uids": [
+    "c_CLVNVR43CK",
+    "c_OYXEXTPWLS",
+    "c_WI7XS25GM5"
+  ],
+  "sections": {
+    "como_funciona": "1. Defino el número de columnas y el gutter (espacio entre columnas) según el contenido y el contexto del producto.  \r\n2. Selecciono la escala de spacing del sistema de diseño y la aplico a márgenes y paddings de los componentes.  \r\n3. Distribuyo los componentes en el grid respetando la escala, alineando bordes y creando “gutters” visuales.  \r\n4. Ajusto los valores de spacing en los breakpoints para que la composición siga siendo legible y equilibrada en móviles, tablets y desktop.  \r\n5. Verifico que la distancia entre bloques de texto y entre elementos interactivos siga la regla de la tipografía, reforzando la jerarquía visual.",
+    "conexiones": "- **Visual Hierarchy:** el spacing define la separación entre niveles de información, reforzando qué elementos deben captar la atención primero.  \r\n- **Typography:** la escala de spacing vertical se alinea con la línea base y los leading de la tipografía para crear un ritmo legible.  \r\n- **Color:** los bloques de color se delimitan mediante spacing, evitando que áreas de fondo se mezclen y manteniendo claridad visual.",
+    "detalles": "- **Básico:** elegir una cuadrícula de 8‑columnas y una escala de spacing basada en 8 px. Aplicar márgenes uniformes a contenedores principales.  \r\n- **Intermedio:** crear variantes de columnas (por ejemplo 4‑4‑4 o 6‑6) para secciones con diferentes prioridades, y usar “nested grids” para componentes complejos. Introducir “spacing tokens” en el sistema de diseño para que desarrolladores los consuman directamente.  \r\n- **Avanzado:** combinar grids flexibles (CSS Grid) con utilities de spacing dinámico (CSS variables) que respondan a la densidad de contenido. Implementar “layout shift detection” para asegurar que los cambios de spacing no generen saltos inesperados en la UI.",
+    "ejemplo_minimo": "```html\r\n<!-- Grid de 4 columnas con spacing de 16 px -->\r\n<div style=\"display:grid; grid-template-columns:repeat(4,1fr); gap:16px;\">\r\n  <div style=\"background:#e0f7fa; padding:16px;\">Card 1</div>\r\n  <div style=\"background:#e0f7fa; padding:16px;\">Card 2</div>\r\n  <div style=\"background:#e0f7fa; padding:16px;\">Card 3</div>\r\n  <div style=\"background:#e0f7fa; padding:16px;\">Card 4</div>\r\n</div>\r\n```",
+    "errores_comunes": "- Usar valores de spacing arbitrarios en lugar de la escala definida; se evita manteniendo una tabla de tokens.  \r\n- Ignorar el gutter del grid y colocar componentes directamente en los bordes; se corrige alineando siempre a la cuadrícula.  \r\n- Cambiar el spacing entre breakpoints sin probar la legibilidad; se evita con pruebas de usabilidad responsiva.  \r\n- Mezclar unidades (px, em, rem) sin una regla clara; se soluciona estandarizando en rem y vinculando a la escala tipográfica.",
+    "estado_actual": "**Fundamentos estables:** la idea de un grid estructurado y una escala de spacing coherente sigue siendo la base de los sistemas de diseño modernos.  \r\n**Práctica moderna:** el uso de CSS Grid y variables CSS para generar spacing dinámico, así como la integración de tokens de diseño en herramientas de desarrollo (Figma Tokens, Storybook) son tendencias consolidadas en la industria.",
+    "ideas_clave": "1. **Grid** – estructura de columnas y filas que define dónde colocar los elementos y cómo alinearlos.  \r\n2. **Spacing system** – escala de márgenes y paddings (por ejemplo 4‑8‑16‑32 px) que se aplica de forma coherente en todo el producto.  \r\n3. **Composición** – organización de bloques de contenido dentro del grid, equilibrando densidad y respiración visual.  \r\n4. **Consistencia responsiva** – adaptación del grid y del spacing a diferentes breakpoints sin romper la jerarquía.  \r\n5. **Relación con la tipografía** – el espaciado vertical entre bloques de texto sigue la escala tipográfica para mantener ritmo visual.",
+    "objetivo": "Utilizo el sistema de spacing y layout para organizar visualmente los componentes de una interfaz, garantizando que la información se perciba de forma clara y que la interacción sea fluida. Resuelvo problemas de desorden visual, ambigüedad en la jerarquía y dificultad para escalar diseños a diferentes tamaños de pantalla. Aparece en cada fase del trabajo de un diseñador de producto senior: desde la creación de wireframes hasta la entrega de especificaciones de alta fidelidad. Después de entenderlo, puedo diseñar sistemas consistentes que aceleren la colaboración con desarrolladores y reduzcan la necesidad de ajustes posteriores. No necesito preocuparme cuando el proyecto es un prototipo de baja fidelidad que no será implementado o cuando el producto ya está bajo un sistema de diseño rígido que impone sus propias reglas de espaciado.",
+    "preguntas_repaso": "1. ¿Cómo influye la escala de spacing en la percepción de la jerarquía visual?  \r\n2. ¿Qué pasos seguirías para adaptar un grid de 12 columnas a una pantalla móvil?  \r\n3. ¿Por qué es importante alinear los bloques de texto al grid mediante la escala tipográfica?  \r\n4. ¿Cuál es la diferencia entre gutter y padding dentro de un layout?  \r\n5. ¿Cómo evitarías que los cambios de spacing generen “layout shift” en producción?",
+    "ruta_estudio": "1. **Prerequisitos:** comprender principios básicos de alineación, márgenes y paddings; familiarizarse con CSS Grid y Flexbox.  \r\n2. **Fundamentos:** estudiar guías de sistemas de diseño (Material, Carbon) que describen grids y spacing systems.  \r\n3. **Práctica:** crear un layout simple en Figma aplicando una escala de 8 px y exportar los tokens a código.  \r\n4. **Avanzado:** implementar el layout con CSS Grid y variables CSS, probar en varios breakpoints y medir “layout shift”.  \r\n5. **Especialización:** explorar herramientas de token management (Style Dictionary) y patrones de composición responsiva en aplicaciones reales."
+  },
+  "sections_missing": [],
+  "slug": "spacing-layout",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/ux-ui"
+  ],
+  "title": "Spacing & Layout",
+  "uid": "c_AEJ6QCIQ75",
+  "verification_marks": []
+}

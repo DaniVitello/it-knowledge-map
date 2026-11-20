@@ -1,0 +1,38 @@
+{
+  "aliases": [
+    "Dependencies"
+  ],
+  "area_uid": "project-management",
+  "content_hash": "0931e97aaab6774689b6917276ecf6897aa08e60da117a067136d5320f2d5e60",
+  "numero": 7,
+  "related_uids": [
+    "c_CDAPU4W4IV",
+    "c_CQ3MBF4W7W",
+    "c_OXV4OR4VYX",
+    "c_S37BPPLTVF",
+    "c_YRDFIS7XCB"
+  ],
+  "sections": {
+    "como_funciona": "1. Al desglosar el proyecto en la **Work Breakdown Structure**, asigno un identificador a cada paquete de trabajo.  \r\n2. En la herramienta de **Task Management**, establezco para cada tarea su predecesora(s) según el flujo de trabajo real.  \r\n3. Selecciono el tipo de dependencia (FS, SS, etc.) que mejor refleja la interacción entre equipos.  \r\n4. El motor de **Scheduling** calcula fechas de inicio y fin, resaltando la **ruta crítica**.  \r\n5. Cuando surge un cambio (re‑estimación o retraso), actualizo la dependencia y el cronograma se reajusta automáticamente.",
+    "conexiones": "- **Work Breakdown Structure**: la WBS provee la lista jerárquica de entregables que luego se convierten en tareas con dependencias.  \r\n- **Estimation**: una estimación precisa de duración es necesaria para que las dependencias produzcan un cronograma realista.  \r\n- **Planning**: las dependencias son el esqueleto que transforma la planificación estratégica en un calendario operativo.",
+    "detalles": "- **Básico**: reconocer que una tarea no puede comenzar hasta que otra finalice (FS).  \r\n- **Intermedio**: usar SS para actividades que pueden ejecutarse en paralelo una vez iniciada la predecesora, o FF para entregas que deben concluir simultáneamente.  \r\n- **Avanzado**: combinar varios tipos en una red compleja, aplicar **lag** (retardo) y **lead** (anticipación) para modelar tiempos de espera o solapamiento, y analizar la ruta crítica con técnicas de **Critical Path Method**.",
+    "ejemplo_minimo": "```yaml\r\ntasks:\r\n  - id: 1\r\n    name: \"Diseñar arquitectura\"\r\n    duration: 5d\r\n  - id: 2\r\n    name: \"Desarrollar módulo A\"\r\n    duration: 8d\r\n    depends_on:\r\n      - id: 1\r\n        type: FS   # solo empieza cuando la arquitectura está terminada\r\n  - id: 3\r\n    name: \"Pruebas de integración\"\r\n    duration: 4d\r\n    depends_on:\r\n      - id: 2\r\n        type: FS\r\n```",
+    "errores_comunes": "- **Asumir que todas las dependencias son FS** → genera planes inflexibles; revisar si SS o FF son más adecuados.  \r\n- **Olvidar lag/lead** → subestima tiempos de espera entre entregas; añadir márgenes explícitos.  \r\n- **No actualizar dependencias tras cambios** → el cronograma queda desalineado; re‑evaluar siempre que se modifique una tarea.",
+    "estado_actual": "Las dependencias siguen siendo un pilar estable de la gestión de proyectos; la mayoría de las herramientas de planificación (MS Project, Jira, Primavera) implementan los cuatro tipos clásicos y permiten lag/lead. En la práctica moderna, se complementan con **visualizaciones de red** y análisis de riesgo automatizado, pero el concepto básico no ha cambiado.",
+    "ideas_clave": "1. **Identificación de predecesoras y sucesoras** – Cada tarea se enlaza con las que necesita antes de iniciar.  \r\n2. **Tipo de dependencia** – Finish‑to‑Start (FS) es la más común; existen también Start‑to‑Start (SS), Finish‑to‑Finish (FF) y Start‑to‑Finish (SF).  \r\n3. **Impacto en la planificación** – Las dependencias determinan la ruta crítica y la holgura disponible.  \r\n4. **Gestión de cambios** – Modificar una dependencia implica re‑calcular fechas y recursos.",
+    "objetivo": "Utilizo las **dependencies** para ordenar las actividades del proyecto de modo que cada tarea empiece sólo cuando sus predecesoras estén terminadas, evitando bloqueos y retrasos inesperados. Resuelvo el problema de coordinación entre equipos que dependen de entregas parciales, garantizando que la planificación refleje la realidad operativa. Aparecen en la fase de planificación y durante la actualización del cronograma, cuando ajusto fechas y recursos. Después de comprenderlas, puedo diseñar cronogramas más fiables, anticipar cuellos de botella y comunicar riesgos de forma clara. No necesito preocuparme por ellas cuando el proyecto es tan pequeño que todas las tareas se ejecutan en paralelo o cuando el alcance está totalmente definido y no hay interdependencias técnicas.",
+    "preguntas_repaso": "1. ¿Qué diferencia hay entre una dependencia Finish‑to‑Start y una Start‑to‑Start?  \r\n2. ¿Cómo afecta una dependencia mal definida a la ruta crítica del proyecto?  \r\n3. ¿En qué situaciones es útil introducir un lag entre dos tareas?  \r\n4. ¿Qué pasos seguirías para actualizar el cronograma después de que una tarea predecesora se retrase?  \r\n5. ¿Por qué es importante revisar las dependencias al cerrar la fase de estimación?",
+    "ruta_estudio": "1. **Prerequisitos**: comprender la WBS y los fundamentos de estimación de duración.  \r\n2. **Fundamentos**: estudiar los cuatro tipos de dependencia y practicar con ejemplos simples en una herramienta de scheduling.  \r\n3. **Intermedio**: aprender a aplicar lag/lead y a identificar la ruta crítica.  \r\n4. **Avanzado**: integrar dependencias en gestión de riesgos, usar análisis de Monte Carlo y explorar plugins de visualización de redes.  \r\n5. **Aplicación**: crear y mantener un cronograma completo en un proyecto real, revisando y ajustando dependencias en cada fase de control."
+  },
+  "sections_missing": [],
+  "slug": "dependencies",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/project-management"
+  ],
+  "title": "Dependencies",
+  "uid": "c_GYUCO2KNED",
+  "verification_marks": []
+}

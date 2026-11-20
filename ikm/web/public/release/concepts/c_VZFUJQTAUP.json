@@ -1,0 +1,39 @@
+{
+  "aliases": [
+    "Project Metrics"
+  ],
+  "area_uid": "project-management",
+  "content_hash": "dcd553100c7aa1dbb5062e1496dca4b1fb086e9dca36e12025911768d6d3d97c",
+  "numero": 24,
+  "related_uids": [
+    "c_CQ3MBF4W7W",
+    "c_E2BEEPTCLY",
+    "c_FBWIOD73FI",
+    "c_FHDALEC2NY",
+    "c_K2XQL2MKUK",
+    "c_O73WVZARSW"
+  ],
+  "sections": {
+    "como_funciona": "1. Defino los ítems medibles (historias, tickets, features).  \r\n2. Registro la fecha de inicio y fin de cada ítem en el tablero.  \r\n3. Calculo la **Velocity** sumando los puntos completados por sprint.  \r\n4. Extraigo el **Cycle Time** de cada ítem y calculo el promedio.  \r\n5. Determino el **Throughput** contando los ítems terminados por semana.  \r\n6. Comparo la **Velocity** y el **Throughput** con la planificación para evaluar la **Predictability** y decidir ajustes.",
+    "conexiones": "- **Engineering Processes**: los Project Metrics se alimentan de la forma en que el equipo implementa CI/CD y revisiones de código, reflejando la eficiencia del proceso técnico.  \r\n- **Product Metrics**: la predictabilidad del proyecto influye en la capacidad de entregar funcionalidades que impacten métricas de uso y satisfacción del producto.  \r\n- **Retrospectives & Improvement**: los resultados de Velocity y Cycle Time son los datos clave que el equipo analiza en cada retrospectiva para definir acciones de mejora.",
+    "detalles": "- **Básico**: usar un tablero Kanban o Scrum y anotar fechas de inicio/fin.  \r\n- **Intermedio**: automatizar la captura de datos con herramientas de analytics y generar gráficos de tendencia.  \r\n- **Avanzado**: aplicar análisis de series temporales para predecir la Velocity futura y simular escenarios de riesgo.",
+    "ejemplo_minimo": "```json\r\n{\r\n  \"sprint\": 5,\r\n  \"velocity\": 42,\r\n  \"cycleTimeDays\": 3.2,\r\n  \"throughput\": 12,\r\n  \"predictability\": \"high\"\r\n}\r\n```\r\nEn este sprint el equipo completó 42 puntos, cada historia tardó 3.2 días en promedio, entregó 12 ítems y la predictibilidad se calificó como alta.",
+    "errores_comunes": "- **Mide solo la velocidad** sin observar el Cycle Time → se ignoran cuellos de botella.  \r\n- **Confundir throughput con calidad** → alta cantidad no garantiza que el trabajo cumpla los criterios de aceptación.  \r\n- **Ignorar la variabilidad** de la predictabilidad → se asume que la tendencia siempre será lineal.",
+    "estado_actual": "- **Fundamentos estables**: Velocity, Cycle Time, Throughput y Predictability siguen siendo los indicadores básicos aceptados en la mayoría de los marcos ágiles.  \r\n- **Práctica moderna**: integración de métricas en dashboards en tiempo real, uso de machine learning para pronosticar la Velocity y adopción de métricas de valor de negocio (por ejemplo, impacto en ingresos) junto a las métricas de proceso.",
+    "ideas_clave": "1. **Velocity** – cantidad de trabajo completado por iteración, sirve para estimar la capacidad futura.  \r\n2. **Cycle Time** – tiempo que tarda una unidad de trabajo en pasar de “en progreso” a “terminado”, indica rapidez del flujo.  \r\n3. **Throughput** – número de ítems entregados en un periodo, muestra la productividad total del equipo.  \r\n4. **Predictability** – consistencia entre lo planificado y lo entregado, permite confiar en los compromisos.",
+    "objetivo": "Utilizo **Project Metrics** para medir el ritmo y la calidad del trabajo del equipo durante la planificación y la ejecución del proyecto. Resuelvo la incertidumbre sobre si estamos cumpliendo los compromisos y detecto cuellos de botella antes de que impacten la fecha de entrega. Aparecen en cada fase de seguimiento: al crear el roadmap, al ajustar el sprint y al cerrar el proyecto con una retrospectiva. Después de entenderlas, puedo establecer umbrales de desempeño, comunicar progreso a los stakeholders y priorizar mejoras en los procesos. No necesito preocuparme por ellas cuando el proyecto es extremadamente pequeño o cuando el cliente solo requiere entregas puntuales sin seguimiento de desempeño continuo.",
+    "preguntas_repaso": "1. ¿Cómo utilizo la Velocity para ajustar la planificación de futuros sprints?  \r\n2. ¿Qué información me brinda el Cycle Time que la Velocity no muestra?  \r\n3. ¿De qué manera el Throughput afecta la percepción de la productividad del equipo?  \r\n4. ¿Cuál es la diferencia entre medir predictability y simplemente comparar la planificación con la entrega?  \r\n5. ¿Qué pasos sigo para transformar datos de métricas en acciones concretas durante una retrospectiva?",
+    "ruta_estudio": "1. **Prerequisitos**: comprender Scrum/Kanban, saber leer un backlog y manejar herramientas de seguimiento (Jira, Azure Boards).  \r\n2. **Fundamentos**: practicar la captura manual de Velocity y Cycle Time en un proyecto piloto.  \r\n3. **Intermedio**: configurar reportes automáticos y aprender a interpretar gráficos de tendencia.  \r\n4. **Avanzado**: estudiar técnicas de forecasting (Monte Carlo, regresión) y explorar la correlación entre Project Metrics y Product Metrics.  \r\n5. **Especialización**: aplicar métricas en entornos híbridos (SAFe, LeSS) y combinar con indicadores de calidad (defect density, test coverage)."
+  },
+  "sections_missing": [],
+  "slug": "project-metrics",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/project-management"
+  ],
+  "title": "Project Metrics",
+  "uid": "c_VZFUJQTAUP",
+  "verification_marks": []
+}

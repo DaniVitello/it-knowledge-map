@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "Scope"
+  ],
+  "area_uid": "project-management",
+  "content_hash": "88848ef038c0ce10aae22f03f942c67239f4756e7424ee320e6a0eb767f5268c",
+  "numero": 2,
+  "related_uids": [
+    "c_BF7HN4NHO2",
+    "c_RIRVA7AOPS",
+    "c_ZZNQZABFF3"
+  ],
+  "sections": {
+    "como_funciona": "1. Reúno a los stakeholders y documento los requisitos críticos.  \r\n2. Transformo esos requisitos en entregables claros y los agrupo en la **declaración de alcance**.  \r\n3. Identifico explícitamente las exclusiones y las añado al documento.  \r\n4. Distribuyo la declaración de alcance y obtengo la aprobación formal.  \r\n5. Durante la ejecución, cualquier solicitud de cambio se compara con la declaración; si no está dentro, se procesa como cambio formal.",
+    "conexiones": "- **Project Fundamentals**: el Scope constituye uno de los pilares que define el éxito del proyecto junto con tiempo, costo y calidad.  \r\n- **Requirements**: cada ítem del Scope debe trazarse a un requisito aprobado, garantizando que lo que se entrega satisface la necesidad del cliente.  \r\n- **Deliverables**: el Scope determina los entregables que se producirán; sin un Scope claro, los entregables pueden quedar incompletos o fuera de objetivo.",
+    "detalles": "- **Básico**: crear una declaración de alcance simple (objetivo, entregables, exclusiones).  \r\n- **Intermedio**: usar una Work Breakdown Structure (WBS) para descomponer los entregables en paquetes de trabajo y vincular cada paquete a un requisito.  \r\n- **Avanzado**: integrar el control de cambios mediante un Change Control Board (CCB) y métricas de variación del alcance (por ejemplo, % de requisitos añadidos vs. planificados).",
+    "ejemplo_minimo": "```json\r\n{\r\n  \"projectScope\": {\r\n    \"inScope\": [\r\n      \"Desarrollo módulo de facturación\",\r\n      \"Pruebas unitarias y de integración\"\r\n    ],\r\n    \"outOfScope\": [\r\n      \"Migración de datos legacy\",\r\n      \"Soporte post‑lanzamiento por 6 meses\"\r\n    ]\r\n  }\r\n}\r\n```",
+    "errores_comunes": "- **Confundir requisitos con alcance** – evitar incluir cada deseo del cliente sin validar su valor.  \r\n- **No documentar exclusiones** – genera expectativas falsas y aumenta el riesgo de scope creep.  \r\n- **Ignorar la aprobación formal** – decisiones informales dificultan el control de cambios.",
+    "estado_actual": "- **Fundamentos estables**: la declaración de alcance, la identificación de inclusiones/exclusiones y la alineación con requisitos siguen siendo prácticas esenciales en PMBOK y PRINCE2.  \r\n- **Práctica moderna**: el uso de herramientas colaborativas (Jira, Azure DevOps) para rastrear la trazabilidad del alcance y la automatización de flujos de control de cambios está ganando adopción.",
+    "ideas_clave": "1. **Definir qué está dentro del proyecto**: lista de funcionalidades, productos o resultados que se entregarán.  \r\n2. **Definir qué está fuera del proyecto**: exclusiones que evitan malentendidos y controlan expectativas.  \r\n3. **Alinear el Scope con los requisitos del cliente**: cada ítem del alcance debe rastrearse a un requisito aprobado.  \r\n4. **Comunicar el Scope a todo el equipo**: la declaración de alcance sirve como referencia para decisiones y cambios.",
+    "objetivo": "Utilizo el concepto de **Scope** para delimitar con precisión qué se incluye y qué se excluye del proyecto, lo que me permite evitar trabajos fuera de contrato y controlar los costos. Resuelvo el problema de la expansión descontrolada (scope creep) al establecer un marco claro para la planificación, la asignación de recursos y la comunicación con el cliente. Aparece en la fase de iniciación y se revisa continuamente durante la planificación y la ejecución. Después de comprenderlo, puedo crear una declaración de alcance, priorizar requisitos y negociar cambios de forma estructurada. No necesito preocuparme por el Scope cuando el proyecto es una tarea interna de mantenimiento sin entregables formales.",
+    "preguntas_repaso": "1. ¿Cómo diferencia una declaración de alcance entre lo que está dentro y lo que está fuera del proyecto?  \r\n2. ¿Qué riesgo principal se mitiga al alinear el Scope con los requisitos del cliente?  \r\n3. ¿Cuál es el papel de la aprobación formal del Scope en la gestión de cambios?  \r\n4. ¿Qué herramienta o técnica permite descomponer los entregables en paquetes de trabajo manejables?  \r\n5. ¿Cómo influye la trazabilidad del Scope en la calidad de los entregables?",
+    "ruta_estudio": "1. **Prerequisitos**: comprender los conceptos de *Stakeholder* y *Requirement* y familiarizarse con la estructura de un *Project Charter*.  \r\n2. **Fundamentos**: estudiar la elaboración de la declaración de alcance y la creación de una WBS.  \r\n3. **Avanzado**: aprender a implementar un proceso de control de cambios y a usar métricas de variación del alcance en informes de estado."
+  },
+  "sections_missing": [],
+  "slug": "scope",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/project-management"
+  ],
+  "title": "Scope",
+  "uid": "c_7HCWIHGY3Y",
+  "verification_marks": []
+}

@@ -1,0 +1,6077 @@
+{
+  "edges": [
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_SCSLG2OETM",
+      "target": "c_VXNPWGQTHB",
+      "type": "untyped",
+      "uid": "r_00223a5462798d102b4d7c0a81da2f477c01edc938cd93505c9f15bd7ff04d3c"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_WM2AMCYFR6",
+      "target": "c_ZVUDKC7ITK",
+      "type": "untyped",
+      "uid": "r_0074467737b08f9ad5a3f496b65cec41b91ec1dbd6b5eb30dcd3faa4d829fd3d"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_KEMF6IFKTQ",
+      "target": "c_Q242GFM3KF",
+      "type": "untyped",
+      "uid": "r_0169c09185a4dcf8162ba8caa30c797deb1f5041cd870a6cda24dad985a6b0ed"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_CQ3MBF4W7W",
+      "target": "c_S37BPPLTVF",
+      "type": "untyped",
+      "uid": "r_01f1b2e7be1583a990cc8bfab35cf8886e6c41a61c7bc8c82194c75a7a6bd095"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_FYUNN3WTKX",
+      "target": "c_YPMUNOMCWL",
+      "type": "untyped",
+      "uid": "r_02be3c6250ddf9550c5100d31c85d14c10de15fd3589b97ccfd9eac2277160b9"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_FIPB4YV5WK",
+      "target": "c_UAIG2N6OVP",
+      "type": "untyped",
+      "uid": "r_0310010ac13c63db18ac9c619d58a87aed0868a7e11cb01c3fca1626580e3bc5"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_W6OI2NX5NW",
+      "target": "c_WI7XS25GM5",
+      "type": "untyped",
+      "uid": "r_034d1fa09f2f5047b2fa78a899d096d170a73f6f508ff2472893e290cb332e87"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_FBWIOD73FI",
+      "target": "c_Q56AS5I5XQ",
+      "type": "untyped",
+      "uid": "r_034d306228a76c7a72f7e1bdd07d01825bf8c5a3859734a1757d9ac4a8ea5859"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_FIPB4YV5WK",
+      "target": "c_ZBRCPB5GFK",
+      "type": "untyped",
+      "uid": "r_03d14870f3c98f8d63d948487995b0d9fdd4785c2c01e6684a8923a27c5601b1"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_DHDG7TOBNK",
+      "target": "c_KUZUIAJVV7",
+      "type": "untyped",
+      "uid": "r_043db6d3176c7fcf68cee39525ff034ecba1e4356773f9342d76f284a20c9a4f"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_4VLGBOP6NP",
+      "target": "c_PLSS7K466J",
+      "type": "untyped",
+      "uid": "r_04b412e29d058594ae305f74d5115fc98475e5d53f0a2c1497840f945cdd0707"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_J2J5LSR7ZQ",
+      "target": "c_NWJKJRLXFG",
+      "type": "untyped",
+      "uid": "r_04ece844e97f67cb38583e165d78cb7cfac6f39dbfc7afadb562a9ae4b11fb82"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_CHBELWMYEO",
+      "target": "c_SWJ7STVZDR",
+      "type": "untyped",
+      "uid": "r_0682f09c2e23bdaf2f1f0610a72debff2364146b17b389e1b4ae883fc18f7117"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_RIRVA7AOPS",
+      "target": "c_ZZNQZABFF3",
+      "type": "untyped",
+      "uid": "r_07b9ac11fd4da76471a5f9041a69f535ef305c6d059543c06ed78fbda0a1be75"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_XPKAEIKUDL",
+      "target": "c_YFKRGNUXRH",
+      "type": "untyped",
+      "uid": "r_0845c4141f4e2415a6f74ac8a192718fe4d9824bea6e392360afe2020fb1b002"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_FBWIOD73FI",
+      "target": "c_O73WVZARSW",
+      "type": "untyped",
+      "uid": "r_0899c18a3d274448e3e18df66db536045fdecef7ffd297b5f42bd6252ce38ffe"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_R42HL4B5YW",
+      "target": "c_YFKRGNUXRH",
+      "type": "untyped",
+      "uid": "r_08dc3b76538b00033bf654524aca7b0c3b044705c461ea691d859167d16170e8"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_DHDG7TOBNK",
+      "target": "c_USKUN3IVRZ",
+      "type": "untyped",
+      "uid": "r_0919079b374563f055e6cd194b5654d53d2e6b51b198643785edd56ccc5e63e4"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_4ZEK2ZN5ZJ",
+      "target": "c_QM2SFYU3HE",
+      "type": "untyped",
+      "uid": "r_092982f771212d361e4450d058a8c8d3a992f71c5f4b64b982dfa99b2d263385"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_NWJKJRLXFG",
+      "target": "c_YVRZUYOANU",
+      "type": "untyped",
+      "uid": "r_09b39dc30c9e9fe9fdfb56eef82a28c2823282bdc077f33c595c29b605bdf462"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_5SYU65SFA4",
+      "target": "c_UQ26LMCZYY",
+      "type": "untyped",
+      "uid": "r_0b3e57fda0c83f99b979b33e9152a3eda09c5b66cdadf89b5ee35f9e63d1b4c1"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_7FPNVGV76Q",
+      "target": "c_ZVUDKC7ITK",
+      "type": "untyped",
+      "uid": "r_0bca57903e62ad10d31fec35b3fc259925495f927198e0776518146814a12e3f"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_DMG36WFAUY",
+      "target": "c_SNCAJUJCGH",
+      "type": "untyped",
+      "uid": "r_0bcf8b0431b1c3e36622b2cce64cd2806db944f83e83ff438fe344f04b625e20"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_LIWOFAKHEO",
+      "target": "c_QTK2SYOTSW",
+      "type": "untyped",
+      "uid": "r_0c037dd5e8c195832d9c2c917e79be2cd712e1de58f90384e70c9d853db5ad9a"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_2ZLVQ443PW",
+      "target": "c_L5MHDZ22JR",
+      "type": "untyped",
+      "uid": "r_0c5927ad91f46a57a751fe25d2fb87b36af8d27dd9f2544e399ede23090015c2"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_J3Q7F3X33C",
+      "target": "c_R72555O3AV",
+      "type": "untyped",
+      "uid": "r_0c78dd1c01c28c25128d2ab0d3a101eb29cd3b99b5e79a50a58d683e6df8db43"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_4NELIH6YTV",
+      "target": "c_ECB42D4UZM",
+      "type": "untyped",
+      "uid": "r_0cb5eb3f43abab829f78fd3e9b00455f9282ab3aec8c2f6d12f259ce8885f19a"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_4ZEK2ZN5ZJ",
+      "target": "c_5SYU65SFA4",
+      "type": "untyped",
+      "uid": "r_0cfbd1d06d452fe9c8e2a16d811d8b4068c33d981de39312b91137afea0a6167"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_E6UZ37VTA5",
+      "target": "c_LJXCYJ6ING",
+      "type": "untyped",
+      "uid": "r_0d480706ab1f87128be407d680cc88f8f0333d7000bfe99475deaee8b343b64c"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_BQNWLPZECX",
+      "target": "c_CIR4QHKD6Q",
+      "type": "untyped",
+      "uid": "r_0d5ad7581f993c1e89c0a715971d04c0b37b951a47b8f11ac357325bf3d714dc"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_CXEBUKNZHV",
+      "target": "c_ORX7MOBSU6",
+      "type": "untyped",
+      "uid": "r_0dac7aedcb34edcb50dc9a9b88c35257ef9af640ad79cfd76b55252bea9f2496"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_2WZCMX2XER",
+      "target": "c_F4IWLYRXT4",
+      "type": "untyped",
+      "uid": "r_0e023076952b42ca7b5a8aba468481dd82765edafc612535c1c838aedbecddf8"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_HRF35BCROZ",
+      "target": "c_IFH4CCKUM6",
+      "type": "untyped",
+      "uid": "r_0ed5012ca97dfeadb4547a9f059848a7dbcc6eed85aaec83acd5a5b276c4d11e"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_6QUR6EX2HV",
+      "target": "c_OX2ZGYHT7N",
+      "type": "untyped",
+      "uid": "r_0fc587b87c8d833b85ff9e551184c8a9666d396cf885fa3c2275de907e0d683c"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_J2J5LSR7ZQ",
+      "target": "c_YVRZUYOANU",
+      "type": "untyped",
+      "uid": "r_1093b4ff0b9bd1f6b5f53e223694de438e961d0fff737a515dbf5aaf33a37489"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_5N3OJBWASE",
+      "target": "c_QM2SFYU3HE",
+      "type": "untyped",
+      "uid": "r_10a4db3ee6ea9405e15de737b76325c815d446b8ea8eab7cfc8c17d89d949b22"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_FBWIOD73FI",
+      "target": "c_VZFUJQTAUP",
+      "type": "untyped",
+      "uid": "r_110280383d13f974cae775e03fa5d74bceae683ede71ec15cbd07b3d254b9dca"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_5SYU65SFA4",
+      "target": "c_QM2SFYU3HE",
+      "type": "untyped",
+      "uid": "r_11a6a1a1629b0fc4e537d26b8fbfad188ea1af517f0895a2c5c4236d6d18aa45"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_KUZUIAJVV7",
+      "target": "c_USKUN3IVRZ",
+      "type": "untyped",
+      "uid": "r_11cb761e2ae0fa99edbf27af3ab5a909e6c7c2a59f228aed5cb64ce3c36c6d9c"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_3IEBYDYAQB",
+      "target": "c_6QUR6EX2HV",
+      "type": "untyped",
+      "uid": "r_11e37011e25faa940775d1246300bfb23deb8c0585a099de9cae15ac42336087"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_HRF35BCROZ",
+      "target": "c_ZIBCUCIHW3",
+      "type": "untyped",
+      "uid": "r_1219f10e69147ad1dda48d9ef4ed02089d532712a47814108f1257ea1f36c2b8"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_267BQAZTKD",
+      "target": "c_NYZQU435OZ",
+      "type": "untyped",
+      "uid": "r_133fb1040410e0b57ce67330eec476a7a553df19eb95f214633d858563688ada"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_CHBELWMYEO",
+      "target": "c_OPRQ4KKLEV",
+      "type": "untyped",
+      "uid": "r_1370d16d060d54c0af9e5f20fcf5c394311ce9384773850001f72359e1e46783"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_5P4YM7PKKX",
+      "target": "c_FBWIOD73FI",
+      "type": "untyped",
+      "uid": "r_1387bb0bf8cb7b04c36a15aafdffc3e2c59f447444d3c25ee383ed451836a2b9"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_5USWL4QXOA",
+      "target": "c_R6PYD64O36",
+      "type": "untyped",
+      "uid": "r_151ba84cf783069962f945c568ae53c84458cea9672e19d9c123dc1f382302a0"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_I4SP5V3R2E",
+      "target": "c_TSM6OQKLAB",
+      "type": "untyped",
+      "uid": "r_156754ee4caad9d80cdbd481f5365bc6ec0366c85afe9018165ee2c14b17a95a"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_CSHCCYYZWJ",
+      "target": "c_USKUN3IVRZ",
+      "type": "untyped",
+      "uid": "r_15cd96d5bff1105ea83409b4bcbc523883ccd3a253f8ea18662b11d6e6d9b631"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_VIGZHRVRFY",
+      "target": "c_WI7XS25GM5",
+      "type": "untyped",
+      "uid": "r_1659a6ffa1f3045b7fdcdf8e1c47b7ef10899441fc3829b86f31fbbd2f609545"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_4NFC4562JQ",
+      "target": "c_YBQTBM72V5",
+      "type": "untyped",
+      "uid": "r_1664b9611a8f42e2bf9f217383c22e9b5c809b71e40db24ba0fe86fdd2937127"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_CDAPU4W4IV",
+      "target": "c_S37BPPLTVF",
+      "type": "untyped",
+      "uid": "r_166877742c09acd2198ea61e2f3c4dee3a46623832f6826f3d89f4c477248099"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_RPCIXH4YRU",
+      "target": "c_SCSLG2OETM",
+      "type": "untyped",
+      "uid": "r_1691724ca043acccaadbc9803fffc8a81fbe83d82ae82a7c3fdf0b2a216408af"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_36OGTOCIKG",
+      "target": "c_OAPY46OJKC",
+      "type": "untyped",
+      "uid": "r_16adc6c633d361702aa67e0bb041812c5fa0d4c8f8c3d79d6058fe28186fba3d"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_IMFWIGRRUB",
+      "target": "c_ZUGE3YIJ5I",
+      "type": "untyped",
+      "uid": "r_16ba24e7805a0050d86f97f48b9fa220791fac8611ae561dc3e8353b40d5f1c8"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_6QUR6EX2HV",
+      "target": "c_BHKPT7WX3D",
+      "type": "untyped",
+      "uid": "r_16f3342ba0b502e0ac1a38ea95f034e44404afc4d8a23de77df882792141ec04"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_KZDA6HODJU",
+      "target": "c_UAIG2N6OVP",
+      "type": "untyped",
+      "uid": "r_17b64e8df15d81c0407042b08c3f8d163991f39b10c9c501d3cb857bc3817edd"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_3TYHEZGHL5",
+      "target": "c_DJDORY2E6F",
+      "type": "untyped",
+      "uid": "r_17fc72bf5771049326d617a41e9278505e4874a89964df2429a37123def387b5"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_SNCAJUJCGH",
+      "target": "c_VIGZHRVRFY",
+      "type": "untyped",
+      "uid": "r_1971c967ffda9085e933abcc44da104ee7859930fba5097ee4d0541ae19e3be9"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_4ZDQZL6GC7",
+      "target": "c_JS77WZ6QYB",
+      "type": "untyped",
+      "uid": "r_19746bd6e59d2927496603769a0b0a55795059029c8907df9b53ea44a05f9aec"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_ETWVMQBZXQ",
+      "target": "c_MZ7L6JLNSU",
+      "type": "untyped",
+      "uid": "r_19d03b64e72f6ab729a56ebbf1ef805e21ef75890e9282c748d81fb4fcc2f645"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_3OASTRUQ7K",
+      "target": "c_OD7QLNQ7GN",
+      "type": "untyped",
+      "uid": "r_1bdbe1553f2afbafb52ba288e31b0f10b5a7d4da1035eeda70905c21b880315a"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_UAIG2N6OVP",
+      "target": "c_WSNDQEO6MW",
+      "type": "untyped",
+      "uid": "r_1c1fb8a84b0dc0980f5889a8e1a7703fe511c941d5b13f54fb4e6c95ed00a02e"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_KFFEDHVX2D",
+      "target": "c_WYVLRHHAGA",
+      "type": "untyped",
+      "uid": "r_1c7fbc04ba7b010ee6bd87d024cce1f22963882dbd19c8d9a9dd862619de8f67"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_HIO7YVG2DS",
+      "target": "c_JTW257OVQT",
+      "type": "untyped",
+      "uid": "r_1cb6867154a590692bafff72b9ac6e1058bc68e4e4e3de3f64a757b56e3784b8"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_FHDALEC2NY",
+      "target": "c_L5MHDZ22JR",
+      "type": "untyped",
+      "uid": "r_1cda941d46f64a633612fc37c2843578d16a8e61edeeaf2ac51c620175d9fec1"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_5BZPAUGDCC",
+      "target": "c_MZ7L6JLNSU",
+      "type": "untyped",
+      "uid": "r_1d44ff55993372527e219cb3a41df438b5ae8ea085a08d77f0c630435c459705"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_2WZCMX2XER",
+      "target": "c_SCSLG2OETM",
+      "type": "untyped",
+      "uid": "r_1d9c24a80ed933e14bee9c62eb80e01525cab071eb4d8811929e380aa66550be"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_OO3XXXZMWY",
+      "target": "c_WI7XS25GM5",
+      "type": "untyped",
+      "uid": "r_1e9523d24894532bfef517be72bffe830a9dbf78f7156117cdf8d17bebf8fba8"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_D2IZ67V6IU",
+      "target": "c_KMBVXYCQPO",
+      "type": "untyped",
+      "uid": "r_1f0374f648a49ff8230667e216d12b1604600abbd620788772db0085b61d8ed0"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_472Y6TAHCW",
+      "target": "c_WYUWDZEETM",
+      "type": "untyped",
+      "uid": "r_1f14ff0538391df813291d93a258d56c0bf39f2f388cc6838cdcc2802b71dbb6"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_BKADYY4BKV",
+      "target": "c_XXNA5W3TON",
+      "type": "untyped",
+      "uid": "r_1f4fffe1714662c6d71913d0840cb3617b8ce34795ed944055b25271357717ef"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_FYUNN3WTKX",
+      "target": "c_ZIFKUN562S",
+      "type": "untyped",
+      "uid": "r_1f5a38974800d5ad38a162599f277ad5698499e91d5626a3bccb7943ac6306b5"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_KFFEDHVX2D",
+      "target": "c_SCSLG2OETM",
+      "type": "untyped",
+      "uid": "r_202d9ece267ac84917c38f75cf04a6f1a9548f3cf6ede43f30fdf1d8c74da917"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_6QUR6EX2HV",
+      "target": "c_6WHYRNWVHH",
+      "type": "untyped",
+      "uid": "r_20c16c3574564dcce1abbc59d1b1c40de8cde071342b5d4b0ad83099253e38d5"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_7HCWIHGY3Y",
+      "target": "c_RIRVA7AOPS",
+      "type": "untyped",
+      "uid": "r_20d8194fb9be9574dc9bd2d6e936282e90a5b4b8a34467045161fbaee862b1df"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_E6UZ37VTA5",
+      "target": "c_MSTGJ6MKWW",
+      "type": "untyped",
+      "uid": "r_21ac54e65267a49bfdd47749b6afcd689bfb05b7a4cf0a65b589c888ed9e3dc3"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_HIO7YVG2DS",
+      "target": "c_W4GRE7UMJ6",
+      "type": "untyped",
+      "uid": "r_2359e1bb902a21e7a7bb191fdd91e0ac5e382e0bd456da7584a487a1cde662b3"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_3UAMR6JQWV",
+      "target": "c_53KOHLSCN5",
+      "type": "untyped",
+      "uid": "r_239c57f20ebf3d0a077fffabf2a25c1b453a2d1dcbe0292b00ad06d7db95ff70"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_IMFWIGRRUB",
+      "target": "c_K2J2R52QLA",
+      "type": "untyped",
+      "uid": "r_243b875112760dc5f05b8aedeef8b48311ada05cbf96dd78d2cff4a98ff91fb8"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_D2IZ67V6IU",
+      "target": "c_F4IWLYRXT4",
+      "type": "untyped",
+      "uid": "r_244c8f606f48cc88fa7632d4cc5dc0434abfa3526c05b61864ed396a787e84b0"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_DCYZGXRVW2",
+      "target": "c_QTK2SYOTSW",
+      "type": "untyped",
+      "uid": "r_26b70b0b27ca2f511bc630fd33e5a0a5e16045e5c7b21b56da1d8ab76027e630"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_5N3OJBWASE",
+      "target": "c_UQ26LMCZYY",
+      "type": "untyped",
+      "uid": "r_26c604ad574d838bb24c61c571680ba358f7ff3ed67f576af6f8fb75202d2e81"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_KKF3Z6FUAE",
+      "target": "c_ZXNIK6IFVD",
+      "type": "untyped",
+      "uid": "r_27adc84e7e1afd784d1ce5cb048a429821238e7b72bf96c06f60b8dfcb73af06"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_5P4YM7PKKX",
+      "target": "c_K2VG7SUBID",
+      "type": "untyped",
+      "uid": "r_27eee066f4c7510a6ee7a23f6a786ff6211f67277d2e34a661ffb6d452e0961a"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_NTNITJDH3Q",
+      "target": "c_QWAQTV7JRM",
+      "type": "untyped",
+      "uid": "r_2809d1fa07661ccc20df2460a0649f6f230f1660ad48fe04e625e6565662c53c"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_6ETCQ4KE2I",
+      "target": "c_HRF35BCROZ",
+      "type": "untyped",
+      "uid": "r_286b48255d23b6e3487f4e3392f79ba6cf49c1c4bca3cec629004f870f3ca96e"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_K2XQL2MKUK",
+      "target": "c_YTEYG3YOCU",
+      "type": "uses",
+      "uid": "r_297b688910cbaf25c782af0de7edf4d72134f283fa4e55d4e7e55c8ba6826840"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_64ZKUJ47VT",
+      "target": "c_NTZ6VGXWNA",
+      "type": "untyped",
+      "uid": "r_2a15f3e109febebad3b1436317e80b4c46ff84b2b1e263668200a05958fc3863"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_3YET5TARBZ",
+      "target": "c_XNSCZALME2",
+      "type": "untyped",
+      "uid": "r_2a33372a0a7871571c0f0d4a812c17d10f68cd659b9c2c8f79f9b966f1336d59"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_3YET5TARBZ",
+      "target": "c_KMBVXYCQPO",
+      "type": "untyped",
+      "uid": "r_2a3b342843212bb5dd226b51ea1a652846b1ee3fb1e14799042e9b279ccd62cb"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_JTW257OVQT",
+      "target": "c_OJEU3FYCQW",
+      "type": "untyped",
+      "uid": "r_2abddef6f4f2505bafc23254323b0ea4282cd11371c8fd4b7d138da88cb9a795"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_LQGB44U4DC",
+      "target": "c_RJE3D4II2X",
+      "type": "untyped",
+      "uid": "r_2b3843cd24ad45cc94720342bad88bee689fda3ef8c70cfca8c20d3deb7ca468"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_FLXMOQWDJK",
+      "target": "c_K5E3UA3HBU",
+      "type": "untyped",
+      "uid": "r_2b88a5baf82cf4fc005e503c07cf9f3d5f5747f48bada80440234b5ff1c8343d"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_P3UX76MNNO",
+      "target": "c_YN4BSBEZRX",
+      "type": "untyped",
+      "uid": "r_2cadb7da290b79be3931ca938fafb888d94203836a42860c942831c6455e0b64"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_5BZPAUGDCC",
+      "target": "c_F45REZFNEG",
+      "type": "untyped",
+      "uid": "r_2d25f6c14f633dcd7cf46d4e368d243186bd2157c2166b540e136843827bfa58"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_CXEBUKNZHV",
+      "target": "c_MFJRR5DWJK",
+      "type": "untyped",
+      "uid": "r_2d486675d0fa6c59180ddc929ac016a786a3f99c2c24bd0a12165de848837493"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_CQ3MBF4W7W",
+      "target": "c_VZFUJQTAUP",
+      "type": "untyped",
+      "uid": "r_2e279c99bae8fd9ef8974964b9ffd3b0e00adb79813759ae0b0a179f6ad60d27"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_KMBVXYCQPO",
+      "target": "c_XNSCZALME2",
+      "type": "untyped",
+      "uid": "r_2e7149dec86e73f7191257997189ed2934babca14b90fed6c55e1de28eef17e4"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_OO3XXXZMWY",
+      "target": "c_SNCAJUJCGH",
+      "type": "untyped",
+      "uid": "r_2f3d5ed0d4c4af2e5c4a42ddc04bee5a3efe13362f40512a0f014ce60772e298"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_K2VG7SUBID",
+      "target": "c_QZTOO636ZO",
+      "type": "untyped",
+      "uid": "r_306265326b0d83aadf83b6a0c57eeecc37489a464187987ffc6e5059e1f56845"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_TW757IOGRQ",
+      "target": "c_WBXKNJ46YZ",
+      "type": "untyped",
+      "uid": "r_3090763f2cab8a061cf27f0dcb9617fb48cda6767ed1ff9a13580708e205b707"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_BQ2OLMROJZ",
+      "target": "c_H7VQOVE2NF",
+      "type": "untyped",
+      "uid": "r_310e0acf2e8e24883c802ed4b9ce2b7a8c7bb164dd2256650f962cf99a695234"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_MSTGJ6MKWW",
+      "target": "c_NYZQU435OZ",
+      "type": "untyped",
+      "uid": "r_3173ec900939085843747adae4a1008527c6bcee862b63676af6bf99741790fb"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_AG5JLRF7W4",
+      "target": "c_APDCP5OPVF",
+      "type": "untyped",
+      "uid": "r_31a09e9318c3ed5cae2d9604f0b88381383443f8856eea1e0080fc9c522b70ad"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_267BQAZTKD",
+      "target": "c_XNSCZALME2",
+      "type": "untyped",
+      "uid": "r_321ac1df30f2959858713118fd040cc343dbb00e56a8701317e5910337cd7c28"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_7FPNVGV76Q",
+      "target": "c_YN4BSBEZRX",
+      "type": "untyped",
+      "uid": "r_32d7014e4cb62466222a0aeb16b12b90e4a6bb1cd8d1aaeb9a769c2c72a0d4f9"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_ESB3I2EXYR",
+      "target": "c_NTNITJDH3Q",
+      "type": "untyped",
+      "uid": "r_3309e41c1e8c5c8d940b1e035643f4bbd613cd0c22a7caf03e6d6d2fb869a5e0"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_D2IZ67V6IU",
+      "target": "c_USKUN3IVRZ",
+      "type": "untyped",
+      "uid": "r_33c18a132afd213b7b6e44c7adf2802912da6f15f7d044d92818e4961b027628"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_4ZDQZL6GC7",
+      "target": "c_R73S6QTQFN",
+      "type": "untyped",
+      "uid": "r_34794f369346d1425831ca00880c7bfc3676fe5d6f6359ee4867d95965cf5e65"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_4NELIH6YTV",
+      "target": "c_OPRQ4KKLEV",
+      "type": "untyped",
+      "uid": "r_3558d5df5f848737a95eb6d4f67b72633a599deb88a3c625ca3596d37c844700"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_OPRQ4KKLEV",
+      "target": "c_WM2AMCYFR6",
+      "type": "untyped",
+      "uid": "r_35d735b49fa98b57631f2cb68b70bb746e92c406d0d8c802ced7300ebc9b0d06"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_PAUDUA5YDA",
+      "target": "c_ZEMQLX7HXG",
+      "type": "untyped",
+      "uid": "r_3738ae0fb849060b21a5c02343125e11e9161f9c19674de4c130c34c3d29cfc0"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_OD7QLNQ7GN",
+      "target": "c_WYVLRHHAGA",
+      "type": "untyped",
+      "uid": "r_38819c48428ddb70a04bcbfb68dd417222e891fdd8fb6ef660156385a9235637"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_F4IWLYRXT4",
+      "target": "c_USKUN3IVRZ",
+      "type": "untyped",
+      "uid": "r_38fa5894b6d0845f614ff97e3ba471570283556302327b378929e748da370264"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_CQ3MBF4W7W",
+      "target": "c_GYUCO2KNED",
+      "type": "depends_on",
+      "uid": "r_3a632ee7c4f5a8d2088111ebf50e1f19b712b024f1a544eeea5ec4f29fc738de"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_J7TPLADZIN",
+      "target": "c_LAYNEBDIRF",
+      "type": "untyped",
+      "uid": "r_3bbc4b6b39e1bbadcbbde67745512f09baa6929be2b5f9c6096351cd2bb62652"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_KMBVXYCQPO",
+      "target": "c_PJZHQDBJWY",
+      "type": "untyped",
+      "uid": "r_3c1a3d3d0097201988a2acae54ccfd0e4da6519516374842ebc031924f4fc8eb"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_OPRQ4KKLEV",
+      "target": "c_YN4BSBEZRX",
+      "type": "untyped",
+      "uid": "r_3cb0cb99efddb169e51a2788cbbf1e57f8b6a74c9362b8b5f167504f61621cf3"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_53KOHLSCN5",
+      "target": "c_K2J2R52QLA",
+      "type": "untyped",
+      "uid": "r_3cdaf9eae67d42d9a773fc895e1c373450d97fc515d435cf271a7f5f964b5f3f"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_36FC2H5MMW",
+      "target": "c_IL3BOUYPJN",
+      "type": "untyped",
+      "uid": "r_3ce1bef49c7e35083c5427f6ed0d4371f57382dca1eed21772e453e78ba17f32"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_CIR4QHKD6Q",
+      "target": "c_FH3Q7KENJU",
+      "type": "untyped",
+      "uid": "r_3d367bac9b8b2bc8811443737406e7132ecab75357a88a76fc4b6b0f2c120b93"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_KZHQNGA3LM",
+      "target": "c_TSM6OQKLAB",
+      "type": "untyped",
+      "uid": "r_3d837925150a1f9d9d9f9f5b15e6402beee185940710ab13d565d336ba210518"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_2PTU533FKL",
+      "target": "c_KFUMZO44RS",
+      "type": "untyped",
+      "uid": "r_3dbd3a654fff0e7b1ecb61743c52ddfe979f58961b1d38214425dde208afe3f8"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_JS77WZ6QYB",
+      "target": "c_LQGB44U4DC",
+      "type": "untyped",
+      "uid": "r_3dc11105c655d37ca9d7b7e5726b9912622b9ff2560e73a6b9d156b6b3ce4597"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_7HAIPW7HG2",
+      "target": "c_Q56AS5I5XQ",
+      "type": "untyped",
+      "uid": "r_3ded3cf68270823a0053cb9b582ff8596aa5743048d1790e51de3a373ef2ec37"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_JS77WZ6QYB",
+      "target": "c_XPKAEIKUDL",
+      "type": "untyped",
+      "uid": "r_3f534b6e0538739f67b423c11b2e8eed174e158d951aee68620302c5e197968b"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_SQK5OV6EKB",
+      "target": "c_WYOKFAK6RE",
+      "type": "untyped",
+      "uid": "r_3f7653fedca664714bd3754e530995d5a3754786c01458b9c794c0e249569aa6"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_BQ2OLMROJZ",
+      "target": "c_MKC6PGQUM7",
+      "type": "untyped",
+      "uid": "r_4064b61d4f8b2ecf2ea2672c77ffd8441d0cce14ee544e545ec685656d94a0a0"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_CLVNVR43CK",
+      "target": "c_WI7XS25GM5",
+      "type": "untyped",
+      "uid": "r_40d5fd138ff5f4040d7355293e5224813cffcfaf3ca1bbeba4dfb7dd4233962a"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_5P4YM7PKKX",
+      "target": "c_QZTOO636ZO",
+      "type": "untyped",
+      "uid": "r_4104f588db70a8ca8124fcd3d6feba39007df6de4e4bc4f49de553613fdbd980"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_45PAYUACPS",
+      "target": "c_Q242GFM3KF",
+      "type": "untyped",
+      "uid": "r_41a4cb12b1042f6b57f16f37cd75340719735f574b2b0309f2ace3b118992540"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_FLXMOQWDJK",
+      "target": "c_NWJKJRLXFG",
+      "type": "untyped",
+      "uid": "r_41fb7c9faa0a3f2d09f3b751d47b61c2f21b3f4be5f1f686c57b13b45b7f0342"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_4ZEK2ZN5ZJ",
+      "target": "c_6XO5SGEQV5",
+      "type": "untyped",
+      "uid": "r_43ba72ebdab1124aaf42e080b8b641515b1932558f0660a5d39a66c24bfcd924"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_UDNACO4RMV",
+      "target": "c_WYUWDZEETM",
+      "type": "untyped",
+      "uid": "r_4550a2dd74071d9558220ab469ab1a7c7aa99bf12dae3f75bce9d0eb3ee42adb"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_JPHEZJIFHI",
+      "target": "c_VXHILN4GCI",
+      "type": "untyped",
+      "uid": "r_46388e6f85c658b467ea7b7294fc0cf78e95e63348f943a7825155bdfd15e2fd"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_2SYCRXYECS",
+      "target": "c_D2IZ67V6IU",
+      "type": "untyped",
+      "uid": "r_466c27f85c3580f6cac04755f51bdd3837abe73135c7d2e72e5311fffd231976"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_LG2UZSQPXG",
+      "target": "c_MBMF42FTPA",
+      "type": "untyped",
+      "uid": "r_46b59dea3a3a7668ecede87ea8dc58ff7e905f3d2a1b490e976026de27868b2c"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_DWZHOC5BVU",
+      "target": "c_Z3T24W22GR",
+      "type": "untyped",
+      "uid": "r_4713cb53a7853e4283081ab3bc3240ce2fdb90cfd69d045d6bafc668017c54c8"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_GYUCO2KNED",
+      "target": "c_OXV4OR4VYX",
+      "type": "depends_on",
+      "uid": "r_4782bef4539ee16a059fe284e6799e4ac083ab446922cff48f73e00843b4cfbd"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_KFUMZO44RS",
+      "target": "c_U5JT2ERKLO",
+      "type": "untyped",
+      "uid": "r_47adf2c142894fd1df72330c3375e371e8afe1ed1dda0b5ade60358f895f2f4b"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_NYZQU435OZ",
+      "target": "c_XNSCZALME2",
+      "type": "untyped",
+      "uid": "r_47c610aca9e81c23ee46d335e84a325747832f38f5f5136c7bca1b499f3bc7ad"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_SCSLG2OETM",
+      "target": "c_ZEMQLX7HXG",
+      "type": "untyped",
+      "uid": "r_47cd238f0b3fe8f69ea92c014d7da48b2330e295744fe65243aa1b8e63fe812c"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_OE65ZR7OR4",
+      "target": "c_XUZJWYTELS",
+      "type": "untyped",
+      "uid": "r_4834fc6b682e1e83607cbaa13f4811296907446a23b614c6981a42b460c32112"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_BYSBDXVLVP",
+      "target": "c_MFJRR5DWJK",
+      "type": "untyped",
+      "uid": "r_48cd71fb3ca6ecc8b6c9b1cde7cd6b49571e97749f4e322b3d7b7bf5c37fe112"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_F4IWLYRXT4",
+      "target": "c_KUZUIAJVV7",
+      "type": "untyped",
+      "uid": "r_4a26c669fcd87859850bc6dd0c5b3b1f675266e45dcb857be1064cd8ab48f083"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_JPHEZJIFHI",
+      "target": "c_UAIG2N6OVP",
+      "type": "untyped",
+      "uid": "r_4b043e800d76897448b9d60f8b584f229aa3493ffdcafd9ac0442e473909d9ac"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_3IEBYDYAQB",
+      "target": "c_OX2ZGYHT7N",
+      "type": "untyped",
+      "uid": "r_4b2770e877029b6f491fc1dad2a3314fc405cefa333c3c7578c94667ef8fe326"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_AEJ6QCIQ75",
+      "target": "c_OYXEXTPWLS",
+      "type": "untyped",
+      "uid": "r_4b33975816fb17197cdb8e9db9034578255370314503599a71fdcbc177eb101b"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_FEMWCHWWED",
+      "target": "c_KFFEDHVX2D",
+      "type": "untyped",
+      "uid": "r_4bc414a769f14f44a754c7fd06a58a20769ac0394bb8ddd6e82ae812e68db6db"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_JWMD5PBSD7",
+      "target": "c_LIWOFAKHEO",
+      "type": "untyped",
+      "uid": "r_4c47756b6b7a6694168f8960b2de665c56f43fc26ca835ab64f0185591e16c40"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_UAIG2N6OVP",
+      "target": "c_VXHILN4GCI",
+      "type": "untyped",
+      "uid": "r_4e17c7288fdce1856c4bb2e55fc699126679a72cfc19da3b11da65b0f6b7c6c5"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_KFFEDHVX2D",
+      "target": "c_ZEMQLX7HXG",
+      "type": "untyped",
+      "uid": "r_4ec95ccd7426fd1f9d02518c7601837864a4a2fb20a8db2ce24ec392c405beae"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_DVLX2W7PQH",
+      "target": "c_UAIG2N6OVP",
+      "type": "untyped",
+      "uid": "r_4f08fedc9ac0369a957a557f0afdcf224f83572bb1d4b6b3a1ba3e1acf38b009"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_BHLQEBT4GM",
+      "target": "c_Q3YN3JYKSD",
+      "type": "untyped",
+      "uid": "r_4f097ff7b75230a7a5bb3597684c02774053462d264a867a8e9805de2624ff4b"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_LFYZZYAIJK",
+      "target": "c_NTNITJDH3Q",
+      "type": "untyped",
+      "uid": "r_4f4d006abc0f8c55799bb488fc00632e5c8e75aec97fdc0ff4bed190a87c2fba"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_NH4DBCJPVZ",
+      "target": "c_ZXNIK6IFVD",
+      "type": "untyped",
+      "uid": "r_4fda763ed7aaae13e2e04ff4fc14bdf769c770c9fcf1445d3a1dbf709f6078d0"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_PLSS7K466J",
+      "target": "c_ZZNQZABFF3",
+      "type": "untyped",
+      "uid": "r_504d4b4a382972b3dad7cd2f575b785cf15aac1ad08e54c8ea6e9cb7c0f70525"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_FYUNN3WTKX",
+      "target": "c_NNWQH47RM7",
+      "type": "untyped",
+      "uid": "r_50aa252acbde8ba5c26223057b10de0598ce84baa2ad2eb66434d00fb59456a0"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_KKF3Z6FUAE",
+      "target": "c_R6PYD64O36",
+      "type": "untyped",
+      "uid": "r_5129b87daf552855e05a40a68d7dd25160940ee786ac54488e25020287bad5af"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_JTW257OVQT",
+      "target": "c_W4GRE7UMJ6",
+      "type": "untyped",
+      "uid": "r_5254ff1c3730eb9f782b93aede480c827f677effbe0497312fa923b666ad6321"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_2PTU533FKL",
+      "target": "c_BYSBDXVLVP",
+      "type": "untyped",
+      "uid": "r_52659cfaf5badb73d7a8540cdee962b8f5a52e2a82b35a97747d92677950c34a"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_BQ2OLMROJZ",
+      "target": "c_MMPVIHXRHF",
+      "type": "untyped",
+      "uid": "r_528780d108e1919cd52587c29afa9ea0527489386c10053f664f37e6d6e29f21"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_RQAR6DO3SU",
+      "target": "c_W6OI2NX5NW",
+      "type": "uses",
+      "uid": "r_52984eda01b82e5906dde0fbf56335ba7c5ef73eb20835e4759f3d482cdf409b"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_4ZEK2ZN5ZJ",
+      "target": "c_CHBELWMYEO",
+      "type": "untyped",
+      "uid": "r_52ca2c2289a55ad81a69065d81baf5078701b201363ffae36ec30f1d435df8b8"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_4Q26FRTYNL",
+      "target": "c_YLNAJABAUR",
+      "type": "untyped",
+      "uid": "r_52f93d741492f7c2196abf905e2ed06352bd62361c16dd9e936f3fbcb56c5b14"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_3YET5TARBZ",
+      "target": "c_NYZQU435OZ",
+      "type": "untyped",
+      "uid": "r_5426bfdd41724aa4a14b2df507a989be6ce1faf5722878d56e86c3a53e471c2c"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_GQXGQSF53L",
+      "target": "c_HAZD53NJ7A",
+      "type": "untyped",
+      "uid": "r_5444f3a49dde404488ac31942d16874e7ca92f36d49f46cab9a5c5b17e1538e5"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_R6PYD64O36",
+      "target": "c_ZXNIK6IFVD",
+      "type": "untyped",
+      "uid": "r_5496f2f6c8128794c7f46dca8549c7653b3c762a0a2fb9ceec6ba5cd059a35fd"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_2SYCRXYECS",
+      "target": "c_IRKTW3AVGM",
+      "type": "untyped",
+      "uid": "r_54b3f0ca28a5739d7013b95cdc65881c4ddc4b395dd2a3ae2f9a8b30e517fb74"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_7FPNVGV76Q",
+      "target": "c_OPRQ4KKLEV",
+      "type": "untyped",
+      "uid": "r_571116d8e5a75c913027a76dfaa34a49b6a8d2d8e3ccb582034aec2459ba1359"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_DCYZGXRVW2",
+      "target": "c_JS77WZ6QYB",
+      "type": "untyped",
+      "uid": "r_58b4074b6809906eab089ef43cd09e5e246277028bcc8110f7eaa0be89541121"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_4OYZ6EPV64",
+      "target": "c_DWZHOC5BVU",
+      "type": "untyped",
+      "uid": "r_58bc723ca327cf1e0c7330098cb81428df9102f0bd02a75770fc3a4d9ab2d8fc"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_FIPB4YV5WK",
+      "target": "c_JPHEZJIFHI",
+      "type": "untyped",
+      "uid": "r_592058ee844ca85f2027aebe51a303ff61bbb4ed3d121481449ad6447c6b88ca"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_CDAPU4W4IV",
+      "target": "c_YRDFIS7XCB",
+      "type": "untyped",
+      "uid": "r_59e313e0c8e793a0b3118bbd718b3bdb044469d5334cb70f550145605d5206dd"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_3G2O5BM4F2",
+      "target": "c_NTNITJDH3Q",
+      "type": "untyped",
+      "uid": "r_5aef52cc59a6363df99119c914b4a099ae273c33a5b2496b283b12a66514f84f"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_2PTU533FKL",
+      "target": "c_MFJRR5DWJK",
+      "type": "untyped",
+      "uid": "r_5b0dab44e838fb6b9da6efb3c2e279eba23216f4d0de00740e32fd457d8be6fb"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_EDRNN4EAFB",
+      "target": "c_GQXGQSF53L",
+      "type": "untyped",
+      "uid": "r_5b4215f14368c5ceefb6debb2d9bf80ef5889d5400707ed82dc80c7737005da5"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_BYSBDXVLVP",
+      "target": "c_KMBVXYCQPO",
+      "type": "untyped",
+      "uid": "r_5b82d3c620b72267e8b5de9977a85d903dde80226206404f7e1f99e4ed72286c"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_CDAPU4W4IV",
+      "target": "c_GYUCO2KNED",
+      "type": "depends_on",
+      "uid": "r_5b83a39e7822401e160e4bb0de9ec165aae62a63cee08e4c613e009b71104b57"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_2SYCRXYECS",
+      "target": "c_ORX7MOBSU6",
+      "type": "untyped",
+      "uid": "r_5caa6e5c49530faf0e01f248c30e7da25f122af7791e5e02ac243fca6d801149"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_3IEBYDYAQB",
+      "target": "c_QTK2SYOTSW",
+      "type": "untyped",
+      "uid": "r_5cbdf6fff3e8cb33b1c0332564c22ed4992dba51f8f8bc05c4f4c7415aa2fa5d"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_CSHCCYYZWJ",
+      "target": "c_F4IWLYRXT4",
+      "type": "untyped",
+      "uid": "r_5ced4f1d8d0ec2acfc3daa109a8875eea6695f50714917916aa94c6e4594e2b7"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_27KJZ2SSUT",
+      "target": "c_CG3CPXKFLT",
+      "type": "untyped",
+      "uid": "r_5e0ddcd980369aec137c17ec5bbaf64ce5530348a0ad6345c958873cfbf1ca31"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_E2BEEPTCLY",
+      "target": "c_VIGZHRVRFY",
+      "type": "untyped",
+      "uid": "r_5e45701f70c685d3e95c04a849854e31ed076f471591654ea4dbdc6d63991ed9"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_3UAMR6JQWV",
+      "target": "c_ZUGE3YIJ5I",
+      "type": "untyped",
+      "uid": "r_5e631c920e1de8231ab90aeea2731622195c5d02fb75d2613f48e7d9658e2716"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_CG3CPXKFLT",
+      "target": "c_J7TPLADZIN",
+      "type": "untyped",
+      "uid": "r_5f90c05d69bcfbe67f7830ede8b27bf381cbc6130f070af24d56552b4af6ea14"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_267BQAZTKD",
+      "target": "c_3YET5TARBZ",
+      "type": "untyped",
+      "uid": "r_610599068ee0595095cf2f8fc157cd589c4be4618037eeaeb2ccc52826dac198"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_DVLX2W7PQH",
+      "target": "c_KZDA6HODJU",
+      "type": "untyped",
+      "uid": "r_6243f638f12e8302185bb989a3ab61b7dafdcdcc4ea9248ae5c6f16d5da6bea8"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_3UAMR6JQWV",
+      "target": "c_IMFWIGRRUB",
+      "type": "untyped",
+      "uid": "r_6453629737ccd1be486ba8bf551ce5d6132ea1a31514bbf48ef6c8b0bfa9706d"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_PJZHQDBJWY",
+      "target": "c_XNSCZALME2",
+      "type": "untyped",
+      "uid": "r_64a23843a451c3f20a9a1a812e1bfee744ed98606bdbc4b05edb6d4e6b551163"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_27KJZ2SSUT",
+      "target": "c_J7TPLADZIN",
+      "type": "untyped",
+      "uid": "r_6504cef80235a2c7d2ea00620b337833afef401212986dda597ca7f5e1e297ea"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_EDRNN4EAFB",
+      "target": "c_HAZD53NJ7A",
+      "type": "untyped",
+      "uid": "r_6563ea480138c9c0ba6ea1c30d25ae1198c7f66e7a1d27b1b62bc7f1e1e8c717"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_3G2O5BM4F2",
+      "target": "c_QWAQTV7JRM",
+      "type": "untyped",
+      "uid": "r_674ceaaf0f0e43e5eb59d9b324073c15e1aa6301b3d4ea061a0bec396895d5f1"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_AW3CMP3J7S",
+      "target": "c_UQ7BW2UQHQ",
+      "type": "uses",
+      "uid": "r_67cabb3afa6fe481ccb334c8c2faef72fa5db16c54759d8167ae0381afb60fb4"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_53KOHLSCN5",
+      "target": "c_VA6ETRQ2HH",
+      "type": "untyped",
+      "uid": "r_68aac6a4fec24f109e0b7fc3a542233f11aa641976bf38d6f3d153bf3b220feb"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_IRKTW3AVGM",
+      "target": "c_PJZHQDBJWY",
+      "type": "untyped",
+      "uid": "r_6921e5a4304394e456508941674556a5e846a920e6c4c1e70fc1ee3a04465411"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_3IEBYDYAQB",
+      "target": "c_JWMD5PBSD7",
+      "type": "untyped",
+      "uid": "r_6a2925d7e7055b1272482b8b3c4d4634660d7dc2abfe7a4a720f9a4e1c934b8b"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_J7K4IRROGC",
+      "target": "c_PPPZUFR2JG",
+      "type": "untyped",
+      "uid": "r_6aa1a10979e41bdd84dd183355a2e72b6599ef94275f3ddc6986273f101db6d1"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_Q3YN3JYKSD",
+      "target": "c_Q62PGX2MP4",
+      "type": "untyped",
+      "uid": "r_6ad7c0710e6294f968068952d6847d68b3be24270655a580be1e4749e47cbb2b"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_27KJZ2SSUT",
+      "target": "c_LAYNEBDIRF",
+      "type": "untyped",
+      "uid": "r_6cbac19219a00a37b3f31840a9e3fe384659b022acd1a81ba54a2dcb8f52ba73"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_64ZKUJ47VT",
+      "target": "c_R73S6QTQFN",
+      "type": "untyped",
+      "uid": "r_6d17f5b4809337c61cf6caeb69050a5dae38cada6458e675bcf33a65a0221483"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_UTVABXNLDY",
+      "target": "c_ZIBCUCIHW3",
+      "type": "untyped",
+      "uid": "r_6e175ad0f88b3a0b75067ecb9ff5ef33453f36e77124b83c26f0808588a4b5c8"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_OPRQ4KKLEV",
+      "target": "c_ZVUDKC7ITK",
+      "type": "untyped",
+      "uid": "r_6e1a2c472cc899d5fc903e89142c032fab2a7086f90d8bb19891af86e24791c5"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_N6K5FPOTSK",
+      "target": "c_ODRXW7IAT4",
+      "type": "untyped",
+      "uid": "r_6e9754c32219d3e8239b6ae52b32009f256952f0323c7cba007a5e2af17ac156"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_7HAIPW7HG2",
+      "target": "c_N6K5FPOTSK",
+      "type": "untyped",
+      "uid": "r_6ee1693fc31f0d6d2a11fb488afa35adf36e350da4aaedb3cc32a6e896afbe6e"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_56N6B2BTGY",
+      "target": "c_NNWQH47RM7",
+      "type": "untyped",
+      "uid": "r_7126ba96049c1ec57c7d52b1cbf5bc17ac4fb75e1f38db3eefae12cb3801a5fc"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_7FPNVGV76Q",
+      "target": "c_P3UX76MNNO",
+      "type": "untyped",
+      "uid": "r_71e69e7768c1a73734c619a920782475ce1ee1dbf35e9f9b6cb4007f7453ac7e"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_IL3BOUYPJN",
+      "target": "c_P3AM7QSPS6",
+      "type": "untyped",
+      "uid": "r_721d2f985982f0d00bbef06d9f30ecea02891d51b3e52c3779dc5b9c741ec55e"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_CDAPU4W4IV",
+      "target": "c_OXV4OR4VYX",
+      "type": "untyped",
+      "uid": "r_72a1ec50018fa446208e42c0d25c5a660f3db3b6809eaf4ae505e96c84064fb1"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_KMBVXYCQPO",
+      "target": "c_NYZQU435OZ",
+      "type": "untyped",
+      "uid": "r_72d60db578766b9855358fafc56004ed45507c97036e937a8571f9151a1013a2"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_5HU37V2FFX",
+      "target": "c_U5JT2ERKLO",
+      "type": "untyped",
+      "uid": "r_7311528e0ee722cf08a6e02bc71f385ae65683953bcdc5ce9f76ad924c21f644"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_JWMD5PBSD7",
+      "target": "c_O5H6HCDAXZ",
+      "type": "untyped",
+      "uid": "r_73bb0820f5cdbe30ee2b17dd76f6e2a5dda54c51c57c8aa29e4d053c6d1cc0ee"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_4ZDQZL6GC7",
+      "target": "c_64ZKUJ47VT",
+      "type": "untyped",
+      "uid": "r_7460b58d031a44c4dd60ea7144f52e2ecb76003957b36cf56a73c7d3b9997921"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_CG3CPXKFLT",
+      "target": "c_LAYNEBDIRF",
+      "type": "untyped",
+      "uid": "r_747f5540f24230718ef4bb1ea10f4bed5ed2ee55d736e2a65bf0206d896439f8"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_36FC2H5MMW",
+      "target": "c_P3AM7QSPS6",
+      "type": "untyped",
+      "uid": "r_74944c23efd5984a5060bcca057537fc8b162da920ec8a11126167e857aa1627"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_PDOZ7FBH2J",
+      "target": "c_VXNPWGQTHB",
+      "type": "untyped",
+      "uid": "r_750d9971319ec0c17abb328e9e71410a21c7c26494145b52907b50a727a25878"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_BHLQEBT4GM",
+      "target": "c_Q62PGX2MP4",
+      "type": "untyped",
+      "uid": "r_755f60c2f4b43a04b9e15f98a7a7ae12431af0214cc9b07ca9468c4497afb23a"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_P3UX76MNNO",
+      "target": "c_ZVUDKC7ITK",
+      "type": "untyped",
+      "uid": "r_764eadf66a01419574a2516a41c68e200126d5154b7a2acc18ef50b96020ce52"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_A2ZXZTXBH5",
+      "target": "c_KZDA6HODJU",
+      "type": "untyped",
+      "uid": "r_76bb06acf13bbcbd509761fc1995132cbbd85f1f2a9c5b038092130f29e0abfb"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_J7K4IRROGC",
+      "target": "c_MOYKN3IWS5",
+      "type": "untyped",
+      "uid": "r_781e880036ede5fd4f93a5cf086f67e6741b1c05fd41380f3da16284b9ba57c7"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_BGANTCDDFJ",
+      "target": "c_FLXMOQWDJK",
+      "type": "untyped",
+      "uid": "r_78f6c7135554875609317dd9b1912a6af0a4982f2d5b6f69f6be0f61af94ef0d"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_E2BEEPTCLY",
+      "target": "c_VZFUJQTAUP",
+      "type": "untyped",
+      "uid": "r_796cfb759a35da1b5c412e36475a2221dd20d4950237c14e276ecd4f2e3ca4f8"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_472Y6TAHCW",
+      "target": "c_UNJ4CCPCKV",
+      "type": "untyped",
+      "uid": "r_7995f448e25f7a1f395ac34d9ce5a2eb69cf9c55393d904fd261c99939575a35"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_K2XQL2MKUK",
+      "target": "c_VZFUJQTAUP",
+      "type": "untyped",
+      "uid": "r_79e500c2646cd731928e5919bdcc29fd5c2eb24b754a9a8ae703eb49971a209a"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_3P4PYNPIER",
+      "target": "c_LG2UZSQPXG",
+      "type": "untyped",
+      "uid": "r_7a02f068fb1f6bef1711732ea7a3a367f8a23d5b490c1f8b7e4cd27add2a11a8"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_472Y6TAHCW",
+      "target": "c_SQK5OV6EKB",
+      "type": "untyped",
+      "uid": "r_7ad31969f35a125524d2a270c87eed28265703341f60e424e7157c09ab4f3712"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_MBMF42FTPA",
+      "target": "c_OD7QLNQ7GN",
+      "type": "untyped",
+      "uid": "r_7b2b7df0b6681177ec732833feeb913cc5724fd837ae1303f4454ee945fb1119"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_ECB42D4UZM",
+      "target": "c_OPRQ4KKLEV",
+      "type": "untyped",
+      "uid": "r_7b7f4a5d0719b47c7302d3806556a810f9a4de8b612aa387db4f8ec9f120cb91"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_GYUCO2KNED",
+      "target": "c_YRDFIS7XCB",
+      "type": "depends_on",
+      "uid": "r_7ba84be13f548e87f8e29cd62317d6ddf7e7e86e14bb77d05f6144bea0c242f3"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_AG5JLRF7W4",
+      "target": "c_CG3CPXKFLT",
+      "type": "untyped",
+      "uid": "r_7c0909a7c04f527635e1890c99916e86f157062404755fcd601894ffcd8fa68a"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_S37BPPLTVF",
+      "target": "c_YRDFIS7XCB",
+      "type": "untyped",
+      "uid": "r_7c46441f00d18cf342e886add3d6aa6df31e2e75d9eff1b50a8166e792ba52e8"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_3G2O5BM4F2",
+      "target": "c_LFYZZYAIJK",
+      "type": "untyped",
+      "uid": "r_7c680e610ba39bfbea3c2a8205a08ba7f841cbcbeab0b5d0d94829ed32ac998d"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_3IEBYDYAQB",
+      "target": "c_LIWOFAKHEO",
+      "type": "untyped",
+      "uid": "r_7d0f5404ea83e29fe495ab7e1740235e6d1a9ba5f9d06e1cbcb32b5522811231"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_VXHILN4GCI",
+      "target": "c_WYVLRHHAGA",
+      "type": "untyped",
+      "uid": "r_7d745e039d06432a58ad5218b1506be5e8b907979cd6da9e9123455a8ca172e1"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_RQAR6DO3SU",
+      "target": "c_YTEYG3YOCU",
+      "type": "uses",
+      "uid": "r_7e57d764c5364c3c5f7597b21debc9ec3b36425f6da74b0e95b03d68818d1c61"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_A2ZXZTXBH5",
+      "target": "c_TSM6OQKLAB",
+      "type": "untyped",
+      "uid": "r_7ec68f0bef051423200496ca7b9a3748960a7b1068e84ad5fc61a6af5fb81018"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_7FPNVGV76Q",
+      "target": "c_WM2AMCYFR6",
+      "type": "untyped",
+      "uid": "r_7f94834aa3cc1ee0c46ceb6da858ead08aff79d1e92f9c0f3da1d0d748c50c41"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_YN4BSBEZRX",
+      "target": "c_ZVUDKC7ITK",
+      "type": "untyped",
+      "uid": "r_81042b33653ae432cdda863e2b44bed866557cdb301c4aeb8d21004a7c5dc146"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_RPCIXH4YRU",
+      "target": "c_ZEMQLX7HXG",
+      "type": "untyped",
+      "uid": "r_81b8dd6ce0cf2c929fbcd18552552d2ce714bd2b340c68b0d22696032e38287f"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_CG3CPXKFLT",
+      "target": "c_YFKRGNUXRH",
+      "type": "untyped",
+      "uid": "r_822839a0b3d871451cca778ccda6ca311711d315789ebd130098a291677082be"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_JPHEZJIFHI",
+      "target": "c_ZBRCPB5GFK",
+      "type": "untyped",
+      "uid": "r_83094a93c223bd6918680bf9a701090ee4731e1c0314d4ac8d9a90438dfccef1"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_5N3OJBWASE",
+      "target": "c_6XO5SGEQV5",
+      "type": "untyped",
+      "uid": "r_84331f710ed38123681be6d945ee76f3f2d3e6a710a475d9163f562696c135b2"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_APDCP5OPVF",
+      "target": "c_YFKRGNUXRH",
+      "type": "untyped",
+      "uid": "r_84dc83fbbdef4f571b15df7d4bff85346ee09bdda1f5abb172414a6cfd6e0b43"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_5N3OJBWASE",
+      "target": "c_FJSN2KSLMV",
+      "type": "untyped",
+      "uid": "r_85e28dea7beb31b454d4d8eb16363674508ce20f816f55351ea21835cb736f7a"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_CJT5ACWXAB",
+      "target": "c_KFUMZO44RS",
+      "type": "untyped",
+      "uid": "r_884f38ed34c1f97affbc4648b3ccf76133fbca5de429884bc73f42e4404a091c"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_45PAYUACPS",
+      "target": "c_KEMF6IFKTQ",
+      "type": "untyped",
+      "uid": "r_88deb92bfe515b33468fc020b9541ae1729c18f1d6b67f9c3336f8a53309ce4b"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_DWZHOC5BVU",
+      "target": "c_KFUMZO44RS",
+      "type": "untyped",
+      "uid": "r_898275ebd1ba04dba4005223fd3c85d584d25921b049353b9d4d23eea468dfd4"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_3IEBYDYAQB",
+      "target": "c_BHKPT7WX3D",
+      "type": "untyped",
+      "uid": "r_899c4db5c9407a5db4aca78739abcb094fcb836e03ba2198629eff8cfd9e758e"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_FHDALEC2NY",
+      "target": "c_K2XQL2MKUK",
+      "type": "untyped",
+      "uid": "r_89c66fc888389e2cb61cae945dffe5e8979fa150dd606cbb74ff03dcf6713d8a"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_OE65ZR7OR4",
+      "target": "c_TXS5EDLI4R",
+      "type": "untyped",
+      "uid": "r_8a6106e745e047a98717ea1c5d492b6c4b9668d05bade2556055a4ec6cd8b3ad"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_HISOSDWX75",
+      "target": "c_TSM6OQKLAB",
+      "type": "untyped",
+      "uid": "r_8b1496f002e9cc272690a73342b91897a6d907f052dc61fdbebe10d4df1e9b51"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_KMBVXYCQPO",
+      "target": "c_MFJRR5DWJK",
+      "type": "untyped",
+      "uid": "r_8b4d913982870789f574b423d17b2da89308666d3b904af35ab9b1e7c16056d7"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_QTK2SYOTSW",
+      "target": "c_YFKRGNUXRH",
+      "type": "untyped",
+      "uid": "r_8b6d1f9d1f949c6f3198808af885f65a4664bccc8d1bb80696ffac8e882090cc"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_5BZPAUGDCC",
+      "target": "c_ETWVMQBZXQ",
+      "type": "untyped",
+      "uid": "r_8c134edc0b6035dbc9771c0a94c039c0ce8730ae31988da979311151f06e4209"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_GQXGQSF53L",
+      "target": "c_THBEXYTI7F",
+      "type": "untyped",
+      "uid": "r_8c2fc3dece25ba96b4b7c48644c42f720ce8277fdeeab3057a7c7112e71f399c"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_MFJRR5DWJK",
+      "target": "c_ORX7MOBSU6",
+      "type": "untyped",
+      "uid": "r_8d371fd70c75f75b06344701eebbbdf3ef1bd60bd5781e4821837e0aa0ec6ef0"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_3IEBYDYAQB",
+      "target": "c_6WHYRNWVHH",
+      "type": "untyped",
+      "uid": "r_8d91b0d8a18486da47235b05f572eb475c72254e0122bc3fbc2ba1bf7135e1dc"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_472Y6TAHCW",
+      "target": "c_WYOKFAK6RE",
+      "type": "untyped",
+      "uid": "r_8ed07afea6e330b3ecf3eba5b84f250f338da6172193a91ecd80b0acfa4105fe"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_FF2SVKAIK5",
+      "target": "c_QSNPL7HRIY",
+      "type": "untyped",
+      "uid": "r_8f09a4077461a13dd3855772c1f98aed2b50c0777557ee26c7e2a4fb0bfab0bd"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_CDAPU4W4IV",
+      "target": "c_FJSN2KSLMV",
+      "type": "untyped",
+      "uid": "r_908a35305a7f07f9aede357a777ae90fdf1ed91a8d6c3fb94147695ba90fb706"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_ETWVMQBZXQ",
+      "target": "c_F45REZFNEG",
+      "type": "untyped",
+      "uid": "r_910f437c670e8c3a67f96ed182e53c59fccd66925f7be10149fc355119930f08"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_LFYZZYAIJK",
+      "target": "c_QWAQTV7JRM",
+      "type": "untyped",
+      "uid": "r_91b8f6f9e3290155bef34c76adda5f072f080f5ca3d6dcca498ab647f08b2180"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_EDRNN4EAFB",
+      "target": "c_THBEXYTI7F",
+      "type": "untyped",
+      "uid": "r_91c3b2bcff1d6acf70d066c46896af8138676522269f19517356d37ad588df14"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_NH4DBCJPVZ",
+      "target": "c_R6PYD64O36",
+      "type": "untyped",
+      "uid": "r_920b2ac59b3035c087be3ae1e391613ab9e50a79cb66a625b0dd6aaafb532db2"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_CLBL3KTWT4",
+      "target": "c_D7P4FE3X2D",
+      "type": "untyped",
+      "uid": "r_924ec61a26d0881bc90f83f5b55b3ac70a8c0d68081e1fd26ba2b3ea20bc4339"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_UAIG2N6OVP",
+      "target": "c_ZBRCPB5GFK",
+      "type": "untyped",
+      "uid": "r_92ca1656ebb485108a2a345ac56cb5714dfa0523bee7a1428f19f0265c4e1f27"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_LG2UZSQPXG",
+      "target": "c_OD7QLNQ7GN",
+      "type": "untyped",
+      "uid": "r_932a2ad0d7a8ce651c157e1a7695b0959f6ccf0b19e919722207a3c54b79fc87"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_QM2SFYU3HE",
+      "target": "c_UQ26LMCZYY",
+      "type": "untyped",
+      "uid": "r_94468841df8dcdc47e033ec62ac00c6793214220ef7e2dc4c0feabdaa194b38f"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_2PTU533FKL",
+      "target": "c_U5JT2ERKLO",
+      "type": "untyped",
+      "uid": "r_945ae08febcd3740ed5bc2cc03eaaf3439070239fb32c7f01fceb71025346be6"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_FLXMOQWDJK",
+      "target": "c_J2J5LSR7ZQ",
+      "type": "untyped",
+      "uid": "r_95dedfc1808c806af5af011e524ede90bf3ffc043c8c2160b379be444c54c5ce"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_R73S6QTQFN",
+      "target": "c_RJE3D4II2X",
+      "type": "untyped",
+      "uid": "r_97a2b7599d0c5426928a779c29edf1b7065594b69429667fa443a4e247f3d509"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_3OASTRUQ7K",
+      "target": "c_MBMF42FTPA",
+      "type": "untyped",
+      "uid": "r_97dce39c0ced44ef2103e67433494e2f1fad708b2c69018253565ebc58cc2216"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_JS77WZ6QYB",
+      "target": "c_R73S6QTQFN",
+      "type": "untyped",
+      "uid": "r_97fa92dc4bb30a7f5ef1a7d33df5d1364274dec549f4e6ee50ba416cc07e6700"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_2ZLVQ443PW",
+      "target": "c_FHDALEC2NY",
+      "type": "untyped",
+      "uid": "r_97fefc43e833e5d78f6b0fd80dc3ff6d0968a153984d5db1a1547376050c84fe"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_3P4PYNPIER",
+      "target": "c_MBMF42FTPA",
+      "type": "untyped",
+      "uid": "r_9891b5a40ea031fd8a8fb817c54e2aadbe2aa843466a8bb5ecee1870e297463c"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_DVLX2W7PQH",
+      "target": "c_WSNDQEO6MW",
+      "type": "untyped",
+      "uid": "r_98fab133ee7fc822a1e767f59dd5ebf3e463bd56464be6d412f7862ac17a0555"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_B32XQT5J5V",
+      "target": "c_R72555O3AV",
+      "type": "untyped",
+      "uid": "r_99ac9008603e7a4b9b394c71b0b73f8eacca086c360d9664a40ebe3826f59227"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_VXNPWGQTHB",
+      "target": "c_Y2M5VLS32J",
+      "type": "untyped",
+      "uid": "r_99be0c7e22d55e28ac0dc4de625ebc8a81ad6264188ff6c4e79a67c2cdf479aa"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_GFXWIQR3NM",
+      "target": "c_Y2M5VLS32J",
+      "type": "untyped",
+      "uid": "r_9a2e3dcb5b238dde16ea8a9148bbcc8a577f3e5569350188cd4f1cdc75de0b05"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_4NELIH6YTV",
+      "target": "c_CHBELWMYEO",
+      "type": "untyped",
+      "uid": "r_9a9a905bfbdaf5b483ada86afed463defb1834d22b2b00c1c79ffd4321a48c19"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_VXNPWGQTHB",
+      "target": "c_XGWNYRU3HQ",
+      "type": "untyped",
+      "uid": "r_9aab36d1269d872e6ef47419c9854bab5b16a0d3e0a880e8788a005a21784c96"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_H7VQOVE2NF",
+      "target": "c_MMPVIHXRHF",
+      "type": "untyped",
+      "uid": "r_9acdf4b51081a001aa748fc95196870ede5ef51f0f623d6e2ef7d437cdf60080"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_3GNOH5HEH5",
+      "target": "c_6WHYRNWVHH",
+      "type": "untyped",
+      "uid": "r_9c577dc57acc11cf69bb8668dcd476df5645c9ef56a5255ac60021d4891fe047"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_4ZEK2ZN5ZJ",
+      "target": "c_5N3OJBWASE",
+      "type": "untyped",
+      "uid": "r_9cefe906a5ce7c2f68502fa1771bfa56558da00ad32e4d16f2d4e92069303fb9"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_PDOZ7FBH2J",
+      "target": "c_SCSLG2OETM",
+      "type": "untyped",
+      "uid": "r_9d0c3e146cc7a99a67a1f254a91cb18bd9b86592338101b7f4421d64aac2204d"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_5HU37V2FFX",
+      "target": "c_KFUMZO44RS",
+      "type": "untyped",
+      "uid": "r_9d25c66e1d3ba344709c95e0b4e0b1523f66819b3b9fbdb40a72269a681e019b"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_3OASTRUQ7K",
+      "target": "c_LG2UZSQPXG",
+      "type": "untyped",
+      "uid": "r_9d4018925a923919596d4a52ce9710f573c885a4ad5a0c5d8c482dbe477782a9"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_K2J2R52QLA",
+      "target": "c_ZUGE3YIJ5I",
+      "type": "untyped",
+      "uid": "r_9db395d428a22cfe62daa1304a5869b0c2a0a007c31ecf7443d1bdf2979cde54"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_FF2SVKAIK5",
+      "target": "c_GQ3G6NABQ6",
+      "type": "untyped",
+      "uid": "r_9dd66921a69cd7e4eb0535ea2cc2685583b21bb11e8a7d631d0e9969a889e895"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_NTZ6VGXWNA",
+      "target": "c_UQ7BW2UQHQ",
+      "type": "untyped",
+      "uid": "r_9ddfb23d88447a4a76d803e5e8038031742fd043f68b833c8f76cfc7cb2ef05a"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_HAZD53NJ7A",
+      "target": "c_THBEXYTI7F",
+      "type": "untyped",
+      "uid": "r_9e26c25abe376ebde3fcd340e1bdce2460c6197dc7394be48a2f2314f4c36a4a"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_472Y6TAHCW",
+      "target": "c_UDNACO4RMV",
+      "type": "untyped",
+      "uid": "r_9ec0ceda4daaf52d6ad0e00934ec00b552dcbb691b7f44486e438c0b46ff6712"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_CQ3MBF4W7W",
+      "target": "c_FBWIOD73FI",
+      "type": "untyped",
+      "uid": "r_9eecd5840962184d5697f88e4a439265d602e02803050e686e2d0921e3d07c81"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_DMG36WFAUY",
+      "target": "c_VIGZHRVRFY",
+      "type": "untyped",
+      "uid": "r_9fec7ec739e806865bff7b369570dfc3cfe2a9f749d6b2eb733aa604757520fa"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_AG5JLRF7W4",
+      "target": "c_YFKRGNUXRH",
+      "type": "untyped",
+      "uid": "r_9ff549b900d7d8c2de68cd763b0eebdd195824027908f789da6b56c270901cb2"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_5N3OJBWASE",
+      "target": "c_CDAPU4W4IV",
+      "type": "untyped",
+      "uid": "r_a0113ad1743675ac5eaadcb9460c0b1dd4f58308ae3b55074cd25ba02475fde7"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_2ZLVQ443PW",
+      "target": "c_P2ZB42B6RQ",
+      "type": "untyped",
+      "uid": "r_a04e95cc30f19c34e7a73e5694563845b603445fef7f65b76faa10d08258fe91"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_CSHCCYYZWJ",
+      "target": "c_D2IZ67V6IU",
+      "type": "untyped",
+      "uid": "r_a359c339e5376ffeb2f3151027d9e673dc5bf1d210456aca4c8a44cca1320da2"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_APDCP5OPVF",
+      "target": "c_R42HL4B5YW",
+      "type": "untyped",
+      "uid": "r_a3aaa3b7a61102401fe30c9e48d7651ef63de23d9875878917fa2256c89b1037"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_I4SP5V3R2E",
+      "target": "c_KZHQNGA3LM",
+      "type": "untyped",
+      "uid": "r_a3c63f0a73d5849562bec0676fc6d3a823bf6561d147dc10d5a8d86da789ba79"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_K5E3UA3HBU",
+      "target": "c_YVRZUYOANU",
+      "type": "untyped",
+      "uid": "r_a497bfd1c98bd6ac1cfa3fc332aad27e07dff8123a0265b844d40ca06fdbf255"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_GFXWIQR3NM",
+      "target": "c_SCSLG2OETM",
+      "type": "untyped",
+      "uid": "r_a4bc74c9656667cd9f4255c4fba4d7477708a50345d750c36b0eaa5b44839ec0"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_CLBL3KTWT4",
+      "target": "c_N3N6CTKPIA",
+      "type": "untyped",
+      "uid": "r_a5950aa765415894445cb108fccbd58f592cef9bf8af0f5f438f031463e38330"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_7HCWIHGY3Y",
+      "target": "c_BF7HN4NHO2",
+      "type": "untyped",
+      "uid": "r_a5b722e21fbaf0f89684078b235ad630522518a78e60a69ca88e6f3dea3062d9"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_J2J5LSR7ZQ",
+      "target": "c_K5E3UA3HBU",
+      "type": "untyped",
+      "uid": "r_a70c8cf635e468b176c1c11d4906900e489f883e6295307b2d260b1deca888fa"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_5N3OJBWASE",
+      "target": "c_5SYU65SFA4",
+      "type": "untyped",
+      "uid": "r_a71ef050262e4c705445c09bef24fe7360e00531f34fa302f71a80ee375b35f9"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_CLVNVR43CK",
+      "target": "c_OYXEXTPWLS",
+      "type": "untyped",
+      "uid": "r_a7acad774e7b18f9e02a0efa377f5a46f2c444585777c60c69ef2691a2c32e63"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_WM2AMCYFR6",
+      "target": "c_YN4BSBEZRX",
+      "type": "untyped",
+      "uid": "r_a83fd59ead8a50c1d0734cbd4f348120f6f33b0ae5549ac157528f83d20d0503"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_5SYU65SFA4",
+      "target": "c_6XO5SGEQV5",
+      "type": "untyped",
+      "uid": "r_a8f191953e4d3266c2df5976f2bbbf56db8b484d012ec54b71bb6b57b0b4d7e0"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_7HAIPW7HG2",
+      "target": "c_VQIWAM3DJF",
+      "type": "untyped",
+      "uid": "r_a9384def0bade92c1a688b1bd67659f5fda2ae4741afd7c2ef112896522c8193"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_OO3XXXZMWY",
+      "target": "c_VIGZHRVRFY",
+      "type": "untyped",
+      "uid": "r_a962d274cb771537bec9b34f1b7f63f7df07f7fd282520f03777a175446de6b6"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_GFXWIQR3NM",
+      "target": "c_PDOZ7FBH2J",
+      "type": "untyped",
+      "uid": "r_a9a935e18627522307cc159eb6e47995075921f8f9f4cd487409ca3aa5ba6e95"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_LAYNEBDIRF",
+      "target": "c_SNCAJUJCGH",
+      "type": "untyped",
+      "uid": "r_a9ab3db7015f323203b07542ec609c70e82cc36937fa6e8d187fab52606b1c01"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_3GNOH5HEH5",
+      "target": "c_3IEBYDYAQB",
+      "type": "untyped",
+      "uid": "r_aaa4a826f1eb072d46b27c4d2b4d5065a74017163801cdaadb69e7886f02a1e1"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_4NFC4562JQ",
+      "target": "c_NH4DBCJPVZ",
+      "type": "untyped",
+      "uid": "r_abe96d885b1042205917022b7795a893b20d5da621d57494fc86b6c6ba02b6b8"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_64ZKUJ47VT",
+      "target": "c_EIJI27LM76",
+      "type": "untyped",
+      "uid": "r_ac8ab88e4e1e358de6ac602f0367f5ea206d6822429ad32e02aba36954e90c43"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_5USWL4QXOA",
+      "target": "c_ORX7MOBSU6",
+      "type": "untyped",
+      "uid": "r_acd2d0e32466d5ab5c31737b7c2dff862c39d87dd2483784d83ee81317256bb8"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_6XO5SGEQV5",
+      "target": "c_QM2SFYU3HE",
+      "type": "untyped",
+      "uid": "r_ae0011e7c741658b8a4c2631520baec18ca70640ff179f3f876c825b87381401"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_472Y6TAHCW",
+      "target": "c_DCMEIR6SK3",
+      "type": "untyped",
+      "uid": "r_ae3440503afaa22e33f405886643c64f245d81ede986083dfd04d5034ba2d6b4"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_BF7HN4NHO2",
+      "target": "c_RIRVA7AOPS",
+      "type": "untyped",
+      "uid": "r_ae37d2f7660725a7715f22f215c8f730f72c2a7b3c958abe5a2208d6ed730239"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_F45REZFNEG",
+      "target": "c_MZ7L6JLNSU",
+      "type": "untyped",
+      "uid": "r_ae5118c5bb1d2c9c6b9af5c223c560fa7c41a966527ea5e6a77e81666ea01f7a"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_64ZKUJ47VT",
+      "target": "c_EC777UCG67",
+      "type": "untyped",
+      "uid": "r_aeab6d6a63323be6ec8962d083ea4d3ed3d0c83a6c216b238c2d3e4100cf406d"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_JS77WZ6QYB",
+      "target": "c_YFKRGNUXRH",
+      "type": "untyped",
+      "uid": "r_aeaedd7d4b09b1793161340439d2ccd771fd8e7fa506e10dbdc468d51175f56e"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_IRKTW3AVGM",
+      "target": "c_KMBVXYCQPO",
+      "type": "untyped",
+      "uid": "r_aefbc593fefc0bb2d218a78ecbdd4b5b421544edf7115828834884a62107206d"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_F4IWLYRXT4",
+      "target": "c_SCSLG2OETM",
+      "type": "untyped",
+      "uid": "r_af25ecd59e2a5e60082555a0a774c539130586dc1a7f5a944cf99d40f5d86aeb"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_BQNWLPZECX",
+      "target": "c_FH3Q7KENJU",
+      "type": "untyped",
+      "uid": "r_af5caac129021619a84f3cbe3bd269af7dd56379999b8b03e3c88c2716c2929a"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_NH4DBCJPVZ",
+      "target": "c_YBQTBM72V5",
+      "type": "untyped",
+      "uid": "r_afb4ea5f359e63e3f263edcf5e9899da13041057c79f6a7448b5f6d2252cad88"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_HIO7YVG2DS",
+      "target": "c_OJEU3FYCQW",
+      "type": "untyped",
+      "uid": "r_b0818429578b736379f2d49bc9879b576ef0e478bc16837da9177121f4f5ef41"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_OYXEXTPWLS",
+      "target": "c_WI7XS25GM5",
+      "type": "untyped",
+      "uid": "r_b125f0f8f6c52b8437f05e44a700c10467619f392640036d220a4e2f07c1ada8"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_DCYZGXRVW2",
+      "target": "c_YFKRGNUXRH",
+      "type": "untyped",
+      "uid": "r_b19fcae8b250dba7d7d5cc6db70c3e72a1319d54cc30f1452f5d12740e1d0a42"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_D7P4FE3X2D",
+      "target": "c_N3N6CTKPIA",
+      "type": "untyped",
+      "uid": "r_b1c44068b405e0a0a182899a7c19e8932ed02b188799f8af9297f8a19a076ad5"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_K5E3UA3HBU",
+      "target": "c_NWJKJRLXFG",
+      "type": "untyped",
+      "uid": "r_b2eddfbba6f86c4a022ae82a33a9258ff1ae7f8ac428445246d7e158ac316af4"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_EIJI27LM76",
+      "target": "c_UQ7BW2UQHQ",
+      "type": "untyped",
+      "uid": "r_b3a178024acb5e4d61dbdff3fdf6ce6435f65b69bc01d40e8029daf141c5e8ac"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_KZDA6HODJU",
+      "target": "c_TSM6OQKLAB",
+      "type": "untyped",
+      "uid": "r_b3e431f5702c72cc70d066ef332b4c25303c1734a7fb281b6d00b1d0cd210802"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_UAIG2N6OVP",
+      "target": "c_WYVLRHHAGA",
+      "type": "untyped",
+      "uid": "r_b555b25508e15da875336fe6892048cbfeb42ee6d3d1c26d36257816a2ff23dd"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_4ZDQZL6GC7",
+      "target": "c_EC777UCG67",
+      "type": "untyped",
+      "uid": "r_b55bf0e43a6daa96633af339e68768119e68dc40ef4f7d2e2094538bf97fbf23"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_CJT5ACWXAB",
+      "target": "c_DWZHOC5BVU",
+      "type": "untyped",
+      "uid": "r_b74c6914ad468cae889660a6bf7fb0f5d31f62f6fa1bab94303615cec2995f6a"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_APDCP5OPVF",
+      "target": "c_CG3CPXKFLT",
+      "type": "untyped",
+      "uid": "r_b75034eea6f927c7918e5fe4b0a3fbcbe5b0d1b025c43f8bf15250acb146f9b9"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_5VSM4JTVVK",
+      "target": "c_MMPVIHXRHF",
+      "type": "untyped",
+      "uid": "r_b8aa27f28488e0e342d9502a1be5b707f2e9b69498a8687a0a253731c52ae6ab"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_4Q26FRTYNL",
+      "target": "c_ETWVMQBZXQ",
+      "type": "untyped",
+      "uid": "r_ba24b1918a028daf9dbcff9ee1f3b3816002edda27cc251e9617ba288e6d7026"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_4OYZ6EPV64",
+      "target": "c_CJT5ACWXAB",
+      "type": "untyped",
+      "uid": "r_bc081e14673fe719e0288210bc9c74b17d017b19d0657053bca63c7304147db0"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_DMG36WFAUY",
+      "target": "c_OAPY46OJKC",
+      "type": "untyped",
+      "uid": "r_bcb2754671e4c360a12464ae58285e840716b1aee856f576b55a743289d72b75"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_B32XQT5J5V",
+      "target": "c_J3Q7F3X33C",
+      "type": "untyped",
+      "uid": "r_bdc0519d51dbb2e3df9b712dc79c14d6b30ee1e2f8d0ec59379224c6dca98123"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_AEJ6QCIQ75",
+      "target": "c_WI7XS25GM5",
+      "type": "untyped",
+      "uid": "r_be2b4ab4a26079a1aee30dcd724d16cc44d6788ca4ce74761625e08b1c6ca5bf"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_E2BEEPTCLY",
+      "target": "c_OO3XXXZMWY",
+      "type": "untyped",
+      "uid": "r_bf1f90d2f798b7fc55fa78fed45a2ee56b485f7bd97d0390eb5084aaab0da050"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_3YET5TARBZ",
+      "target": "c_IRKTW3AVGM",
+      "type": "untyped",
+      "uid": "r_bf757bf7becf6e86389596123fbf27d114d098464e434bc5191807c9fe9839e6"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_NYZQU435OZ",
+      "target": "c_PJZHQDBJWY",
+      "type": "untyped",
+      "uid": "r_c0a7354c916021da885c4c624777ae10926f4561f5ddb11c3865505256f7947d"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_CSHCCYYZWJ",
+      "target": "c_MMPVIHXRHF",
+      "type": "untyped",
+      "uid": "r_c1b18bb118013d669da2bffb700140f16f5df124eb03604e292af73827b2d0c6"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_4ZEK2ZN5ZJ",
+      "target": "c_SWJ7STVZDR",
+      "type": "untyped",
+      "uid": "r_c1f578c6a4ef33637566a07613cd0e4cacc489fa7fe99520c518dabfd2ba1ede"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_KZDA6HODJU",
+      "target": "c_WSNDQEO6MW",
+      "type": "untyped",
+      "uid": "r_c24d0ad72e57988ad347dcebb329bc1449253b4b90c9e9f1e59fa33e7b5b461d"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_PAUDUA5YDA",
+      "target": "c_SCSLG2OETM",
+      "type": "untyped",
+      "uid": "r_c25d049d1309626d8be012a5d440aef4c74434bc3aa28e7dd97461cd74fa9b67"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_K2J2R52QLA",
+      "target": "c_VA6ETRQ2HH",
+      "type": "untyped",
+      "uid": "r_c361f69512d920b36d344cfce175038ce122be5ed7d9848e4060ff4c8f593c3b"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_2JD2BRCXIP",
+      "target": "c_2PTU533FKL",
+      "type": "untyped",
+      "uid": "r_c4257147fdc3724ab50ed17265cb9a75c51405b1502bc47420e3ca4ad106c5d1"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_3GNOH5HEH5",
+      "target": "c_OX2ZGYHT7N",
+      "type": "untyped",
+      "uid": "r_c498f48db6787f0a35d3ac47e3c5564ea28505957388ae3d7de26cbf3beb8a04"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_OXV4OR4VYX",
+      "target": "c_S37BPPLTVF",
+      "type": "untyped",
+      "uid": "r_c5f72de0e03fb0060c619c7896fac44a3e93106e89de0c18aa25f8c925710916"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_KFFEDHVX2D",
+      "target": "c_OD7QLNQ7GN",
+      "type": "untyped",
+      "uid": "r_c68dd48b2713202b1cbe0ac5c47a8566249b6879be5e883c1f2b6339c9e4da24"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_267BQAZTKD",
+      "target": "c_PJZHQDBJWY",
+      "type": "untyped",
+      "uid": "r_c6ca4199492f6900a185629fc43a433ff96432e92df4885724fc7df80e5ea309"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_472Y6TAHCW",
+      "target": "c_HEPP5R7NCU",
+      "type": "untyped",
+      "uid": "r_c78009777eccfa922a621a661be73098c580333257aaf7aae0f0bd1649acba04"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_K2XQL2MKUK",
+      "target": "c_RQAR6DO3SU",
+      "type": "uses",
+      "uid": "r_c7a866af7d844b772247759d9f383960846426eeb3dad9d6d9562d16f38f86b9"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_2PTU533FKL",
+      "target": "c_LJXCYJ6ING",
+      "type": "untyped",
+      "uid": "r_c7b0e9d9323ba744279a20bb705ff1835ca809a9e5a38b05150398806d6d92a6"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_UNJ4CCPCKV",
+      "target": "c_WYOKFAK6RE",
+      "type": "untyped",
+      "uid": "r_c805601613934785ad6a080ccd676003044134bc46ac2cb494f3cbf029fd4fc6"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_AG5JLRF7W4",
+      "target": "c_R42HL4B5YW",
+      "type": "untyped",
+      "uid": "r_c8643470a563ac153908b90fb96027d53b9f739aa7a686477752a27757e0cb8f"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_ORX7MOBSU6",
+      "target": "c_R6PYD64O36",
+      "type": "untyped",
+      "uid": "r_c9b1f085cc7df19b08b9c98468082fa3d044da153992de3828f026664dd32bd9"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_BKADYY4BKV",
+      "target": "c_MFJRR5DWJK",
+      "type": "untyped",
+      "uid": "r_c9c5ce038649ca436f2b32f97b8608f2fc2f9731891a7ff85d54429b29333fc3"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_5N3OJBWASE",
+      "target": "c_YRDFIS7XCB",
+      "type": "untyped",
+      "uid": "r_ca101c71048a7d0e6ed3ddf879c8f05fae8ae02d88eb8747eb07e4892509fc4f"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_NTNITJDH3Q",
+      "target": "c_WYOKFAK6RE",
+      "type": "untyped",
+      "uid": "r_ca50e89d5932357297557222235cec8379d30482d90072b53bc841e2a6c5b5bc"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_6XO5SGEQV5",
+      "target": "c_UQ26LMCZYY",
+      "type": "untyped",
+      "uid": "r_ca9141e805b8a381e0c967a183db75c2ae1530606e80b64d52b9df14a7157e56"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_CQ3MBF4W7W",
+      "target": "c_OXV4OR4VYX",
+      "type": "untyped",
+      "uid": "r_caa44e4919062df7a11ba37c38ce9094c7aba63d2580cb0da5dae2727047d583"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_NNWQH47RM7",
+      "target": "c_YPMUNOMCWL",
+      "type": "untyped",
+      "uid": "r_cbc17e861ba6c921a19f5cbfa3682688f5ed9362843ac316934cd52db88eb7eb"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_7HCWIHGY3Y",
+      "target": "c_ZZNQZABFF3",
+      "type": "untyped",
+      "uid": "r_cbde0dd41232f6dd494e45d4ade84c3dce86a8cc15cfe493437af5f871c95327"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_DHDG7TOBNK",
+      "target": "c_NNWQH47RM7",
+      "type": "untyped",
+      "uid": "r_ce465f0abc3ad05630a90e38351a1dbc354982bb6fca1ae9857b4712875cc4d2"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_DMG36WFAUY",
+      "target": "c_OO3XXXZMWY",
+      "type": "untyped",
+      "uid": "r_d277c4e8eade83457147469f29f6ab2aab8d9e895b2f79973f59ac6c07f5a627"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_36OGTOCIKG",
+      "target": "c_DMG36WFAUY",
+      "type": "untyped",
+      "uid": "r_d3340e59290633da281a96f35cbe91fcb434ebc8462f9316f64ae9f1375099f9"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_DCYZGXRVW2",
+      "target": "c_XPKAEIKUDL",
+      "type": "untyped",
+      "uid": "r_d3a3cce2398e6eb9c14934e8bb025fa6f6ede9d22da724c79398389252e71466"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_5VSM4JTVVK",
+      "target": "c_CSHCCYYZWJ",
+      "type": "untyped",
+      "uid": "r_d45daeeccb55b55e2740d48b504864728ac891fcd2089faf6343fb5b3ea4f97d"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_JPHEZJIFHI",
+      "target": "c_WYVLRHHAGA",
+      "type": "untyped",
+      "uid": "r_d5447b9237417c361108de0f50fb0a3d3e9b5b78ef91d2deaa5914a0a6f218ad"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_AEJ6QCIQ75",
+      "target": "c_CLVNVR43CK",
+      "type": "untyped",
+      "uid": "r_d54514eac94c6994152b06909b58aa930b2da5421333fe6af15214982c1c9ef3"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_2SYCRXYECS",
+      "target": "c_KMBVXYCQPO",
+      "type": "untyped",
+      "uid": "r_d55da300dc59c3579f06e1d2263814fcce37a18763c7d9093f11e4d763831ced"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_KKF3Z6FUAE",
+      "target": "c_NH4DBCJPVZ",
+      "type": "untyped",
+      "uid": "r_d59c531ada624e733f70235870609c693876823c0a38b2e9a5af5b5d779a630b"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_267BQAZTKD",
+      "target": "c_IRKTW3AVGM",
+      "type": "untyped",
+      "uid": "r_d5d1c7b6825d2e4fba85bb7c850e9dae9c39eaf331ab1cc83f4e1d2add1be4a4"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_CHBELWMYEO",
+      "target": "c_ECB42D4UZM",
+      "type": "untyped",
+      "uid": "r_d68ec203309eeda9afb8151642567d0dff25166d94b0233983bd4dfb17ef6f28"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_2JD2BRCXIP",
+      "target": "c_5HU37V2FFX",
+      "type": "untyped",
+      "uid": "r_d7077c6c70a16e18c7bd8256e1ef5ac1a0409afb7555e8e919941ff1c7cac40b"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_3YET5TARBZ",
+      "target": "c_PJZHQDBJWY",
+      "type": "untyped",
+      "uid": "r_d71343de7d7a65cfe1a698252e9911e97c957d9b0361a09d4bdfb531ad3ef08b"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_DMG36WFAUY",
+      "target": "c_E2BEEPTCLY",
+      "type": "untyped",
+      "uid": "r_d81afbc8c944a4be9182536af5f04a03c1f1d13deb72ab7ea7c3609e2d613d38"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_AW3CMP3J7S",
+      "target": "c_EIJI27LM76",
+      "type": "uses",
+      "uid": "r_d94543be53be96690ee5a649ecdb7b3f6f80ad676b1da58e913f33b70221c617"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_TXS5EDLI4R",
+      "target": "c_XUZJWYTELS",
+      "type": "untyped",
+      "uid": "r_d9c47fc71fc79bcbd8ba538b66d694745a54a071346fad05fc4802ab187bce60"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_4VLGBOP6NP",
+      "target": "c_ZZNQZABFF3",
+      "type": "untyped",
+      "uid": "r_d9ccb1a030c26d03f43246bcddf3a5a205dfd9cedb95339a96020a41bf17e75c"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_4OYZ6EPV64",
+      "target": "c_KFUMZO44RS",
+      "type": "untyped",
+      "uid": "r_d9eff690990ff56f32545413afc4919f24d0866e73daa3a225c456a662bae07c"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_BKADYY4BKV",
+      "target": "c_CXEBUKNZHV",
+      "type": "untyped",
+      "uid": "r_db84b3a5f2417008c89740f401027c1fc1e50f3281fc82a11c5dfb055b11e0ee"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_6WHYRNWVHH",
+      "target": "c_OX2ZGYHT7N",
+      "type": "untyped",
+      "uid": "r_dd401f9bf23165d82a7f4d64b7d8e793b7b0f39ecce8452bce1a29854310d332"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_AG5JLRF7W4",
+      "target": "c_FLXMOQWDJK",
+      "type": "untyped",
+      "uid": "r_ddfb6dbb57d08421c6b4c89dbcfa06a0ff2a8e5803b34e22e58fd85451ebfb30"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_7HAIPW7HG2",
+      "target": "c_ODRXW7IAT4",
+      "type": "untyped",
+      "uid": "r_df51c7de3f0e4932af859731677c92301d814a132732a3a9e19a4e11ae593940"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_CDAPU4W4IV",
+      "target": "c_CQ3MBF4W7W",
+      "type": "untyped",
+      "uid": "r_df6f03ccd1819152b3601d1617ff53ed21100dc519ae968c8c98879f7185fee6"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_4ZDQZL6GC7",
+      "target": "c_RJE3D4II2X",
+      "type": "untyped",
+      "uid": "r_dfed87cb531b416eca1e6f4982a36cd47ed1671385289707f6b1f3542b9d0ae6"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_JWMD5PBSD7",
+      "target": "c_QTK2SYOTSW",
+      "type": "untyped",
+      "uid": "r_e023a408dc23716bf3c09f88ddfe2108a70b72e4bf8641ae5a56bd6ef49b5195"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_FBWIOD73FI",
+      "target": "c_K2VG7SUBID",
+      "type": "untyped",
+      "uid": "r_e0368a68d3e5df8386859bf4e1cdd5a20a29476588577881a98bc778475780bc"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_GYUCO2KNED",
+      "target": "c_S37BPPLTVF",
+      "type": "depends_on",
+      "uid": "r_e07dda7a754e4054a76e24a63d3b248729257152c66fdec664067c9d2b78f914"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_MFJRR5DWJK",
+      "target": "c_XXNA5W3TON",
+      "type": "untyped",
+      "uid": "r_e0b26566cd2b4cbddaf61842e621b5bf14f41c5de40cd8c301ab45430d623206"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_N6K5FPOTSK",
+      "target": "c_Q56AS5I5XQ",
+      "type": "untyped",
+      "uid": "r_e0b9d19a1451be995eaebae88b95db65bd2b967c8dc95052ed8b9ff27db85404"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_2JD2BRCXIP",
+      "target": "c_KFUMZO44RS",
+      "type": "untyped",
+      "uid": "r_e10b327f84fa19a3a3bb236bddebb39d5576efcf120ba1b434eec3a5369ef989"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_3UAMR6JQWV",
+      "target": "c_VA6ETRQ2HH",
+      "type": "untyped",
+      "uid": "r_e14ecdfcce7721b03e72e76e6d1d4eeefb44f263cfa66f8ed0da702503e1b4c6"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_IFH4CCKUM6",
+      "target": "c_ZIBCUCIHW3",
+      "type": "untyped",
+      "uid": "r_e1756902a2b74f6bb2ad58898ef88b184c3cf5156624a59505e9554b9cc91a6a"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_4ZEK2ZN5ZJ",
+      "target": "c_UQ26LMCZYY",
+      "type": "untyped",
+      "uid": "r_e1e097b4b4c62a76279df6531ffb738027623ffdd96b675902e01ae3356539f4"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_AG5JLRF7W4",
+      "target": "c_BGANTCDDFJ",
+      "type": "untyped",
+      "uid": "r_e1e84f48174600e9094cb5663538f9093b856cc43730e5dd05e4a73a4ab6e075"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_IRKTW3AVGM",
+      "target": "c_NYZQU435OZ",
+      "type": "untyped",
+      "uid": "r_e255d3c285c927953ed79efd3d35507bc8c6d07b55a756a59ab9a54966856a37"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_OXV4OR4VYX",
+      "target": "c_YRDFIS7XCB",
+      "type": "untyped",
+      "uid": "r_e2826fa31135ff37ca9e83cf512f493ac3c60763906961955312306375390817"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_A2ZXZTXBH5",
+      "target": "c_HISOSDWX75",
+      "type": "untyped",
+      "uid": "r_e335dfe582d078534baa924f9cef358498984e52a18fe00efbe52ba47571eed5"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_GQ3G6NABQ6",
+      "target": "c_QSNPL7HRIY",
+      "type": "untyped",
+      "uid": "r_e35ebe1e8381a400f0b7ff413fe64ee183ec68a46b7ec9b26607cbbb4d54b48d"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_FBWIOD73FI",
+      "target": "c_QZTOO636ZO",
+      "type": "untyped",
+      "uid": "r_e3692c4c4978887ed7956bcfb60a936d8e09ec3e7dc66e41ebe6bbda4858e9b3"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_56N6B2BTGY",
+      "target": "c_DHDG7TOBNK",
+      "type": "untyped",
+      "uid": "r_e376b2dec8c7b219ede7cb02b96a2c8749a500d17f690878104174d61726ebf4"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_Q56AS5I5XQ",
+      "target": "c_VQIWAM3DJF",
+      "type": "untyped",
+      "uid": "r_e3e244996c1caf63d5f908bfceb0d5afeaa96914465bc949cc861902e47f207a"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_CSHCCYYZWJ",
+      "target": "c_KUZUIAJVV7",
+      "type": "untyped",
+      "uid": "r_e40d6d69726c6e29ab10d881d7d9321687587fb20fb84f0d9d843a26616f324c"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_ETWVMQBZXQ",
+      "target": "c_YLNAJABAUR",
+      "type": "untyped",
+      "uid": "r_e4bfafd28bd058acbe50d62bd1e66ba2ff36b66c0da0bbc10b247c5c8529efa4"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_CG3CPXKFLT",
+      "target": "c_R42HL4B5YW",
+      "type": "untyped",
+      "uid": "r_e4c47868ceed3dd87d6d605671543349b308178df6e3b2fafc2872330bb5fcb8"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_BKADYY4BKV",
+      "target": "c_ORX7MOBSU6",
+      "type": "untyped",
+      "uid": "r_e4e74b7bca237015188c48eb50b57de9480a699def5ed0451e6160eb38b48c83"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_NWJKJRLXFG",
+      "target": "c_X4YMC3NLRL",
+      "type": "untyped",
+      "uid": "r_e623a48f7890f4cf30c2aacf29dc92332f309485c6583d9270d2c1092ac32751"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_O73WVZARSW",
+      "target": "c_VZFUJQTAUP",
+      "type": "untyped",
+      "uid": "r_e6342139a40343b47637c550c1bd121a2c3405a5b7bfba142305a560f77aad32"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_MKC6PGQUM7",
+      "target": "c_MMPVIHXRHF",
+      "type": "untyped",
+      "uid": "r_e663f6582b611411e28728ad01d9f955699e0052d3cb3cb4a02fe83772288997"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_L5MHDZ22JR",
+      "target": "c_P2ZB42B6RQ",
+      "type": "untyped",
+      "uid": "r_e7282009a0c3f60ed5c7682e231cffbc380cc10e9360a5f390147bb0f6376b32"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_2PTU533FKL",
+      "target": "c_5HU37V2FFX",
+      "type": "untyped",
+      "uid": "r_e7478106b16d38376d8bc72a3f2795d2caebfe800df57f1e3d206b7466942e27"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_HISOSDWX75",
+      "target": "c_KZDA6HODJU",
+      "type": "untyped",
+      "uid": "r_e75700daa1e349c543013bff3b72ccf37d51a668d96101670265be5f3c9261ae"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_J7TPLADZIN",
+      "target": "c_SNCAJUJCGH",
+      "type": "untyped",
+      "uid": "r_e796f63861d926db081a6a19e38b73229dfad0f3ec12f1ed018707a5a41356ee"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_JS77WZ6QYB",
+      "target": "c_RJE3D4II2X",
+      "type": "untyped",
+      "uid": "r_e7b39b37394afb5fc1dfd9aed51e6b871a62bec7c63cca2850c0ccbae35dee7d"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_4ZDQZL6GC7",
+      "target": "c_LQGB44U4DC",
+      "type": "untyped",
+      "uid": "r_e7b6ed1c071b5d3da2a050552ec077b71322ebb184566289db434ebc063588d9"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_2JD2BRCXIP",
+      "target": "c_U5JT2ERKLO",
+      "type": "untyped",
+      "uid": "r_e803ee7c95a4cf8dad65405271480a73b598098623316c62f4dbc8c94b5008ba"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_D2IZ67V6IU",
+      "target": "c_IRKTW3AVGM",
+      "type": "untyped",
+      "uid": "r_e83a14fe6abe2d35122e1c9e2bf22a278e7369edb05e72c1b4cc18c0c26fbaba"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_ESB3I2EXYR",
+      "target": "c_SQK5OV6EKB",
+      "type": "untyped",
+      "uid": "r_e844807e071532cd08da11a06c4ee8b72e95f6e4de39842d7745db29f2b5d225"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_HRF35BCROZ",
+      "target": "c_UTVABXNLDY",
+      "type": "untyped",
+      "uid": "r_e89a2f81e13eb61555abfc870caa5b4bd60941a114be910b76882463388a1092"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_VA6ETRQ2HH",
+      "target": "c_ZUGE3YIJ5I",
+      "type": "untyped",
+      "uid": "r_e8e4abe560ba44b62f7b94f0e89ec12f305f1cf779289a1012b67e2c0e21c4cd"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_E2BEEPTCLY",
+      "target": "c_FHDALEC2NY",
+      "type": "untyped",
+      "uid": "r_eae7d78349bc6b48e90ff1e274663618138cf5d9d2f79fc71019b4f58d1ad7ad"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_FHDALEC2NY",
+      "target": "c_VZFUJQTAUP",
+      "type": "untyped",
+      "uid": "r_eb93020cb5dacdeba617f00401ad3640466cbd1bdb8848373d63fc4a6d101086"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_267BQAZTKD",
+      "target": "c_KMBVXYCQPO",
+      "type": "untyped",
+      "uid": "r_ebac41830ac7d6347aa053632ba1897731f39644d3fd55182150070950893fa0"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_2PTU533FKL",
+      "target": "c_E6UZ37VTA5",
+      "type": "untyped",
+      "uid": "r_ebbc23e22ac2fb54bf73fa9eacdf0e32621fdc7bdeeb0db3810a42ca07c2c4c9"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_IFH4CCKUM6",
+      "target": "c_UTVABXNLDY",
+      "type": "untyped",
+      "uid": "r_ebbcaf806d6e5b60208c4e2120a69372ab50bb957a51f6f392de4a36397730ba"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_RQAR6DO3SU",
+      "target": "c_WI7XS25GM5",
+      "type": "uses",
+      "uid": "r_ec5aa65041fa91bd7593d50562087ba1b035abec020750bc7a11cd3f952a3c31"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_53KOHLSCN5",
+      "target": "c_ZUGE3YIJ5I",
+      "type": "untyped",
+      "uid": "r_ec9abc57f0368c35f9fa7d808f85632c446846aa640f1b8893878d6d0e6dc7fa"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_53KOHLSCN5",
+      "target": "c_IMFWIGRRUB",
+      "type": "untyped",
+      "uid": "r_ecf3b9b48a3c5948e1945e2751c4531619c7b3d34d208863b6267179590a7ba1"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_AW3CMP3J7S",
+      "target": "c_NTZ6VGXWNA",
+      "type": "uses",
+      "uid": "r_ed145d967a88d52992eaa225d8cc901007c94c19aead52162746a08a24c70283"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_56N6B2BTGY",
+      "target": "c_KUZUIAJVV7",
+      "type": "untyped",
+      "uid": "r_edc4feae72b73712ddb8fbde91d65f0c5194522aace286b795f606435e298bee"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_2PTU533FKL",
+      "target": "c_KMBVXYCQPO",
+      "type": "untyped",
+      "uid": "r_ee27f282b247ebf2439c023507752d2a705898c545c4286c8b36d5a27626f4ad"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_CQ3MBF4W7W",
+      "target": "c_YRDFIS7XCB",
+      "type": "untyped",
+      "uid": "r_eed21b75b2735fdd9789ee533287865e79195d5ee77411aec4a9d5884a087569"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_FJSN2KSLMV",
+      "target": "c_YRDFIS7XCB",
+      "type": "untyped",
+      "uid": "r_f00014792201cc4d5e80a5e2f90bf8dc8cd3fb4702aa8506dd6818d793565a31"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_H7VQOVE2NF",
+      "target": "c_MKC6PGQUM7",
+      "type": "untyped",
+      "uid": "r_f01a93493713c104c8e3fb0872b558454414cf462b20ce2747d5f2471950ec36"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_DWZHOC5BVU",
+      "target": "c_US5R27XHAB",
+      "type": "untyped",
+      "uid": "r_f13de9ef1013653ba3621fa0c76a1a436245ac373f8e6407aa55c6fd35042bb9"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_LQGB44U4DC",
+      "target": "c_R73S6QTQFN",
+      "type": "untyped",
+      "uid": "r_f23d4123690623e0c8ed976bc7d63e0f4a7c8118264488eee2c3e576ae6213f9"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_LIWOFAKHEO",
+      "target": "c_O5H6HCDAXZ",
+      "type": "untyped",
+      "uid": "r_f26630b2f90f732f82b2a6a279f49e78c7fba195a4f0100977cbd970d2f10718"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_P3UX76MNNO",
+      "target": "c_WM2AMCYFR6",
+      "type": "untyped",
+      "uid": "r_f2695d17047bc0ac57f4c97ed893f0507f6b3a01b4bcfb3228a5b3148e6f0b18"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_GFXWIQR3NM",
+      "target": "c_XGWNYRU3HQ",
+      "type": "untyped",
+      "uid": "r_f2c5b1e7c4907e7db3f3c743035673ed6b0cf2a55cacc8250191b3865dc82eff"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_IMFWIGRRUB",
+      "target": "c_VA6ETRQ2HH",
+      "type": "untyped",
+      "uid": "r_f455848c85cec4271ab8719618224326ab4d5689242cb60ec825863d43fbb784"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_DCMEIR6SK3",
+      "target": "c_HEPP5R7NCU",
+      "type": "untyped",
+      "uid": "r_f4780d42cf1d70f4ab7419f93a97ac6ff0ba556c853ecae321343f9594d38e2c"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_E6UZ37VTA5",
+      "target": "c_NYZQU435OZ",
+      "type": "untyped",
+      "uid": "r_f4a852e857b63d44ca58f989a350259ab506aa477c9e49d2e624b077e15e7909"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_3GNOH5HEH5",
+      "target": "c_6QUR6EX2HV",
+      "type": "untyped",
+      "uid": "r_f5491eeb8566f18c8f8bdba7cffd80c9ac4fc872df374d41096cd94eaf0b4a98"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_IRKTW3AVGM",
+      "target": "c_XNSCZALME2",
+      "type": "untyped",
+      "uid": "r_f58aae5bf322861a387ef7f31ce672ebd125efd2f200f3f65187d3e277ac67a5"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_XGWNYRU3HQ",
+      "target": "c_Y2M5VLS32J",
+      "type": "untyped",
+      "uid": "r_f632893ad89f056772e0fb1a112b6a362501ed1a5bb6db4ccded65f972ab96d6"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_D2IZ67V6IU",
+      "target": "c_KUZUIAJVV7",
+      "type": "untyped",
+      "uid": "r_f67d51ef8b3b30bbb1c40097ed0def0930d7fba0c37f9719b1561e11d8948b2d"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_3UAMR6JQWV",
+      "target": "c_K2J2R52QLA",
+      "type": "untyped",
+      "uid": "r_f8658731449f26901c9e8cab1f191f551b202f32f2d3bcd8bcbe99a1d9bd0df1"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_FLXMOQWDJK",
+      "target": "c_YVRZUYOANU",
+      "type": "untyped",
+      "uid": "r_f881fa36e5838bb2f335ee3c9dba42cc951aabf49ccd1236ea9a1544996ed162"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_KFFEDHVX2D",
+      "target": "c_PAUDUA5YDA",
+      "type": "untyped",
+      "uid": "r_f88493ecb58cd81b420df4aa7d46f9acba2fb4040ef299d4bf169889a642bf64"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_E2BEEPTCLY",
+      "target": "c_SNCAJUJCGH",
+      "type": "untyped",
+      "uid": "r_f975d25ce7a472efed5bfcbd61ee71a55e00841fea11f0fdb2e9652cc8e7af8f"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_FBWIOD73FI",
+      "target": "c_N6K5FPOTSK",
+      "type": "untyped",
+      "uid": "r_fa8633ec51b7d6ed66b7ef97c253480268e0806234dadbb30f99dc5974b985c7"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_SQK5OV6EKB",
+      "target": "c_UNJ4CCPCKV",
+      "type": "untyped",
+      "uid": "r_fa98f10a4aef9d8c0e30d3de9329ad44ed09be6c1046bee589cfbb71353dd500"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_56N6B2BTGY",
+      "target": "c_USKUN3IVRZ",
+      "type": "untyped",
+      "uid": "r_fac544bb0867211b0757f4601bdaeae732f4fa02fc7cf9d430eaee5719b49db4"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_MOYKN3IWS5",
+      "target": "c_PPPZUFR2JG",
+      "type": "untyped",
+      "uid": "r_fae6869068bef9df244b5c543ec6df7c39d1171cf4d15eaf567c96846dfd99d5"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_EIJI27LM76",
+      "target": "c_NTZ6VGXWNA",
+      "type": "untyped",
+      "uid": "r_fb2680d3785611bc4d12e130be8fcc6b0b15c8480e19ac955daac1e2f35d63e9"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_BF7HN4NHO2",
+      "target": "c_ZZNQZABFF3",
+      "type": "untyped",
+      "uid": "r_fb79523d40b7b4960bb51a08c9ce2dc9a090681ed9e0d5fb3ea569abf13e57db"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_OPRQ4KKLEV",
+      "target": "c_P3UX76MNNO",
+      "type": "untyped",
+      "uid": "r_fc8ba9c9c1042e9b38a440268f544280eb84ee71d7ff0ebec09a88556edbc6f7"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_EC777UCG67",
+      "target": "c_R73S6QTQFN",
+      "type": "untyped",
+      "uid": "r_fcdbfc4e94195ad8d34ed1c494e6de469ca29b1688e7054f10f6eff041f27e79"
+    },
+    {
+      "cross_area": false,
+      "has_explanation": true,
+      "source": "c_FHDALEC2NY",
+      "target": "c_P2ZB42B6RQ",
+      "type": "untyped",
+      "uid": "r_fd2fda708a02475cd6d76566a9cef9821cfa51e0611d971b76915107cf041f05"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_OJEU3FYCQW",
+      "target": "c_W4GRE7UMJ6",
+      "type": "untyped",
+      "uid": "r_fdaf9e57bcd7a64088a5366414a241ecd341aab96805b4fd48b4813b1e61daaa"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_E2BEEPTCLY",
+      "target": "c_K2XQL2MKUK",
+      "type": "untyped",
+      "uid": "r_ff165b97626ed4d1de36a3bd6256598559d3bb68dc06f8bcaee11ef908177e68"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_GFXWIQR3NM",
+      "target": "c_VXNPWGQTHB",
+      "type": "untyped",
+      "uid": "r_ffa43fe41e6fc35da1cd1e60c5584912676bb0a32d637af150e8dda84f069a48"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_ESB3I2EXYR",
+      "target": "c_WYOKFAK6RE",
+      "type": "untyped",
+      "uid": "r_ffc3c09269b57f3490f1ada80ecd8d1abf6e4ecc24f9c66ea98ce41dca88fd3b"
+    },
+    {
+      "cross_area": true,
+      "has_explanation": true,
+      "source": "c_NTNITJDH3Q",
+      "target": "c_SQK5OV6EKB",
+      "type": "untyped",
+      "uid": "r_ffd4ca1d40e0de6c227a68167367261ba08cb7993b2bad599366b2a2482a8edf"
+    }
+  ],
+  "nodes": [
+    {
+      "area_uid": "backend",
+      "grado": 6,
+      "slug": "http",
+      "title": "HTTP",
+      "uid": "c_267BQAZTKD",
+      "x": 471.43,
+      "y": 329.16
+    },
+    {
+      "area_uid": "ai-engineering",
+      "grado": 3,
+      "slug": "linear-algebra-probability",
+      "title": "Linear Algebra & Probability",
+      "uid": "c_27KJZ2SSUT",
+      "x": 578.38,
+      "y": 0.0
+    },
+    {
+      "area_uid": "networking",
+      "grado": 4,
+      "slug": "ipv4-ipv6",
+      "title": "IPv4 / IPv6",
+      "uid": "c_2JD2BRCXIP",
+      "x": -434.66,
+      "y": 329.16
+    },
+    {
+      "area_uid": "networking",
+      "grado": 9,
+      "slug": "ip",
+      "title": "IP",
+      "uid": "c_2PTU533FKL",
+      "x": -476.53,
+      "y": 350.67
+    },
+    {
+      "area_uid": "networking",
+      "grado": 4,
+      "slug": "websockets",
+      "title": "WebSockets",
+      "uid": "c_2SYCRXYECS",
+      "x": -449.46,
+      "y": 288.21
+    },
+    {
+      "area_uid": "networking",
+      "grado": 2,
+      "slug": "proxies-reverse-proxies",
+      "title": "Proxies / Reverse Proxies",
+      "uid": "c_2WZCMX2XER",
+      "x": -423.45,
+      "y": 367.76
+    },
+    {
+      "area_uid": "product-management",
+      "grado": 3,
+      "slug": "retention",
+      "title": "Retention",
+      "uid": "c_2ZLVQ443PW",
+      "x": -434.66,
+      "y": -329.16
+    },
+    {
+      "area_uid": "ux-ui",
+      "grado": 2,
+      "slug": "interaction-design",
+      "title": "Interaction Design",
+      "uid": "c_36FC2H5MMW",
+      "x": 471.43,
+      "y": -329.16
+    },
+    {
+      "area_uid": "database",
+      "grado": 2,
+      "slug": "data-quality",
+      "title": "Data Quality",
+      "uid": "c_36OGTOCIKG",
+      "x": 191.43,
+      "y": 532.59
+    },
+    {
+      "area_uid": "frontend",
+      "grado": 3,
+      "slug": "javascript-avanzado",
+      "title": "JavaScript avanzado",
+      "uid": "c_3G2O5BM4F2",
+      "x": -154.66,
+      "y": 532.59
+    },
+    {
+      "area_uid": "database",
+      "grado": 4,
+      "slug": "data-modeling",
+      "title": "Data Modeling",
+      "uid": "c_3GNOH5HEH5",
+      "x": 149.57,
+      "y": 554.1
+    },
+    {
+      "area_uid": "database",
+      "grado": 8,
+      "slug": "relational-databases",
+      "title": "Relational Databases",
+      "uid": "c_3IEBYDYAQB",
+      "x": 176.64,
+      "y": 491.64
+    },
+    {
+      "area_uid": "frontend",
+      "grado": 3,
+      "slug": "web-apis",
+      "title": "Web APIs",
+      "uid": "c_3OASTRUQ7K",
+      "x": -196.53,
+      "y": 554.1
+    },
+    {
+      "area_uid": "ai-engineering",
+      "grado": 2,
+      "slug": "llm-apis-model-serving",
+      "title": "LLM APIs & Model Serving",
+      "uid": "c_3P4PYNPIER",
+      "x": 536.52,
+      "y": 21.51
+    },
+    {
+      "area_uid": "project-management",
+      "grado": 1,
+      "slug": "budget-cost",
+      "title": "Budget & Cost",
+      "uid": "c_3TYHEZGHL5",
+      "x": -154.66,
+      "y": -532.59
+    },
+    {
+      "area_uid": "software-engineering",
+      "grado": 5,
+      "slug": "design-patterns",
+      "title": "Design Patterns",
+      "uid": "c_3UAMR6JQWV",
+      "x": 191.43,
+      "y": -532.59
+    },
+    {
+      "area_uid": "networking",
+      "grado": 6,
+      "slug": "request-response",
+      "title": "Request / Response",
+      "uid": "c_3YET5TARBZ",
+      "x": -507.36,
+      "y": 319.55
+    },
+    {
+      "area_uid": "software-engineering",
+      "grado": 2,
+      "slug": "data-structures",
+      "title": "Data Structures",
+      "uid": "c_45PAYUACPS",
+      "x": 149.57,
+      "y": -511.08
+    },
+    {
+      "area_uid": "os-linux",
+      "grado": 7,
+      "slug": "processes",
+      "title": "Processes",
+      "uid": "c_472Y6TAHCW",
+      "x": -541.62,
+      "y": 0.0
+    },
+    {
+      "area_uid": "networking",
+      "grado": 0,
+      "slug": "mac-ethernet",
+      "title": "MAC / Ethernet",
+      "uid": "c_4ITHESA6PF",
+      "x": -401.6,
+      "y": 296.43
+    },
+    {
+      "area_uid": "product-management",
+      "grado": 3,
+      "slug": "problem-discovery",
+      "title": "Problem Discovery",
+      "uid": "c_4NELIH6YTV",
+      "x": -476.53,
+      "y": -307.65
+    },
+    {
+      "area_uid": "os-linux",
+      "grado": 2,
+      "slug": "package-management",
+      "title": "Package Management",
+      "uid": "c_4NFC4562JQ",
+      "x": -583.48,
+      "y": 21.51
+    },
+    {
+      "area_uid": "networking",
+      "grado": 3,
+      "slug": "nat",
+      "title": "NAT",
+      "uid": "c_4OYZ6EPV64",
+      "x": -470.26,
+      "y": 393.17
+    },
+    {
+      "area_uid": "product-management",
+      "grado": 2,
+      "slug": "experimentation",
+      "title": "Experimentation",
+      "uid": "c_4Q26FRTYNL",
+      "x": -449.46,
+      "y": -370.11
+    },
+    {
+      "area_uid": "product-management",
+      "grado": 2,
+      "slug": "requirements",
+      "title": "Requirements",
+      "uid": "c_4VLGBOP6NP",
+      "x": -423.45,
+      "y": -290.56
+    },
+    {
+      "area_uid": "ai-engineering",
+      "grado": 6,
+      "slug": "memory",
+      "title": "Memory",
+      "uid": "c_4ZDQZL6GC7",
+      "x": 563.59,
+      "y": -40.95
+    },
+    {
+      "area_uid": "product-management",
+      "grado": 7,
+      "slug": "value-proposition",
+      "title": "Value Proposition",
+      "uid": "c_4ZEK2ZN5ZJ",
+      "x": -507.36,
+      "y": -338.77
+    },
+    {
+      "area_uid": "software-engineering",
+      "grado": 5,
+      "slug": "code-quality",
+      "title": "Code Quality",
+      "uid": "c_53KOHLSCN5",
+      "x": 176.64,
+      "y": -573.54
+    },
+    {
+      "area_uid": "backend",
+      "grado": 4,
+      "slug": "autorizacion",
+      "title": "Autorización",
+      "uid": "c_56N6B2BTGY",
+      "x": 429.57,
+      "y": 350.67
+    },
+    {
+      "area_uid": "product-management",
+      "grado": 3,
+      "slug": "go-to-market",
+      "title": "Go-to-Market",
+      "uid": "c_5BZPAUGDCC",
+      "x": -401.6,
+      "y": -361.89
+    },
+    {
+      "area_uid": "networking",
+      "grado": 4,
+      "slug": "arp",
+      "title": "ARP",
+      "uid": "c_5HU37V2FFX",
+      "x": -485.87,
+      "y": 265.97
+    },
+    {
+      "area_uid": "product-management",
+      "grado": 8,
+      "slug": "product-roadmap",
+      "title": "Product Roadmap",
+      "uid": "c_5N3OJBWASE",
+      "x": -470.26,
+      "y": -265.15
+    },
+    {
+      "area_uid": "project-management",
+      "grado": 3,
+      "slug": "kanban",
+      "title": "Kanban",
+      "uid": "c_5P4YM7PKKX",
+      "x": -196.53,
+      "y": -511.08
+    },
+    {
+      "area_uid": "product-management",
+      "grado": 5,
+      "slug": "product-strategy",
+      "title": "Product Strategy",
+      "uid": "c_5SYU65SFA4",
+      "x": -485.87,
+      "y": -392.35
+    },
+    {
+      "area_uid": "os-linux",
+      "grado": 2,
+      "slug": "processes-ipc",
+      "title": "Processes IPC",
+      "uid": "c_5USWL4QXOA",
+      "x": -556.41,
+      "y": -40.95
+    },
+    {
+      "area_uid": "ai-engineering",
+      "grado": 2,
+      "slug": "evaluation",
+      "title": "Evaluation",
+      "uid": "c_5VSM4JTVVK",
+      "x": 589.6,
+      "y": 38.6
+    },
+    {
+      "area_uid": "ai-engineering",
+      "grado": 5,
+      "slug": "ai-workflows",
+      "title": "AI Workflows",
+      "uid": "c_64ZKUJ47VT",
+      "x": 505.69,
+      "y": -9.61
+    },
+    {
+      "area_uid": "ux-ui",
+      "grado": 1,
+      "slug": "responsive-design",
+      "title": "Responsive Design",
+      "uid": "c_6ETCQ4KE2I",
+      "x": 429.57,
+      "y": -307.65
+    },
+    {
+      "area_uid": "backend",
+      "grado": 5,
+      "slug": "modelado-de-datos",
+      "title": "Modelado de datos",
+      "uid": "c_6QUR6EX2HV",
+      "x": 456.64,
+      "y": 288.21
+    },
+    {
+      "area_uid": "database",
+      "grado": 4,
+      "slug": "keys-constraints",
+      "title": "Keys & Constraints",
+      "uid": "c_6WHYRNWVHH",
+      "x": 202.64,
+      "y": 571.19
+    },
+    {
+      "area_uid": "product-management",
+      "grado": 5,
+      "slug": "product-vision",
+      "title": "Product Vision",
+      "uid": "c_6XO5SGEQV5",
+      "x": -381.85,
+      "y": -303.16
+    },
+    {
+      "area_uid": "ux-ui",
+      "grado": 5,
+      "slug": "user-research",
+      "title": "User Research",
+      "uid": "c_7FPNVGV76Q",
+      "x": 456.64,
+      "y": -370.11
+    },
+    {
+      "area_uid": "project-management",
+      "grado": 4,
+      "slug": "stakeholder-management",
+      "title": "Stakeholder Management",
+      "uid": "c_7HAIPW7HG2",
+      "x": -169.46,
+      "y": -573.54
+    },
+    {
+      "area_uid": "project-management",
+      "grado": 3,
+      "slug": "scope",
+      "title": "Scope",
+      "uid": "c_7HCWIHGY3Y",
+      "x": -143.45,
+      "y": -493.99
+    },
+    {
+      "area_uid": "software-engineering",
+      "grado": 3,
+      "slug": "modularity",
+      "title": "Modularity",
+      "uid": "c_A2ZXZTXBH5",
+      "x": 202.64,
+      "y": -493.99
+    },
+    {
+      "area_uid": "ux-ui",
+      "grado": 3,
+      "slug": "spacing-layout",
+      "title": "Spacing & Layout",
+      "uid": "c_AEJ6QCIQ75",
+      "x": 482.64,
+      "y": -290.56
+    },
+    {
+      "area_uid": "ai-engineering",
+      "grado": 6,
+      "slug": "llms",
+      "title": "LLMs",
+      "uid": "c_AG5JLRF7W4",
+      "x": 611.45,
+      "y": -32.73
+    },
+    {
+      "area_uid": "ai-engineering",
+      "grado": 4,
+      "slug": "tokenization",
+      "title": "Tokenization",
+      "uid": "c_APDCP5OPVF",
+      "x": 542.79,
+      "y": 64.01
+    },
+    {
+      "area_uid": "database",
+      "grado": 3,
+      "slug": "data-warehouses",
+      "title": "Data Warehouses",
+      "uid": "c_AW3CMP3J7S",
+      "x": 118.74,
+      "y": 522.98
+    },
+    {
+      "area_uid": "backend",
+      "grado": 2,
+      "slug": "transacciones",
+      "title": "Transacciones",
+      "uid": "c_B32XQT5J5V",
+      "x": 482.64,
+      "y": 367.76
+    },
+    {
+      "area_uid": "project-management",
+      "grado": 3,
+      "slug": "project-fundamentals",
+      "title": "Project Fundamentals",
+      "uid": "c_BF7HN4NHO2",
+      "x": -227.36,
+      "y": -542.2
+    },
+    {
+      "area_uid": "ux-ui",
+      "grado": 0,
+      "slug": "human-centered-design",
+      "title": "Human-Centered Design",
+      "uid": "c_BFS5SFW7H2",
+      "x": 398.74,
+      "y": -338.77
+    },
+    {
+      "area_uid": "ai-engineering",
+      "grado": 2,
+      "slug": "fine-tuning-adaptation",
+      "title": "Fine-tuning & Adaptation",
+      "uid": "c_BGANTCDDFJ",
+      "x": 527.18,
+      "y": -63.19
+    },
+    {
+      "area_uid": "backend",
+      "grado": 2,
+      "slug": "orm-data-access",
+      "title": "ORM / Data Access",
+      "uid": "c_BHKPT7WX3D",
+      "x": 398.74,
+      "y": 319.55
+    },
+    {
+      "area_uid": "ux-ui",
+      "grado": 2,
+      "slug": "information-architecture",
+      "title": "Information Architecture",
+      "uid": "c_BHLQEBT4GM",
+      "x": 504.5,
+      "y": -361.89
+    },
+    {
+      "area_uid": "networking",
+      "grado": 4,
+      "slug": "puertos",
+      "title": "Puertos",
+      "uid": "c_BKADYY4BKV",
+      "x": -381.85,
+      "y": 355.16
+    },
+    {
+      "area_uid": "os-linux",
+      "grado": 3,
+      "slug": "logs-system-monitoring",
+      "title": "Logs & System Monitoring",
+      "uid": "c_BQ2OLMROJZ",
+      "x": -530.4,
+      "y": 38.6
+    },
+    {
+      "area_uid": "project-management",
+      "grado": 2,
+      "slug": "risk-management",
+      "title": "Risk Management",
+      "uid": "c_BQNWLPZECX",
+      "x": -121.6,
+      "y": -565.32
+    },
+    {
+      "area_uid": "networking",
+      "grado": 3,
+      "slug": "osi-tcp-ip-model",
+      "title": "OSI / TCP-IP Model",
+      "uid": "c_BYSBDXVLVP",
+      "x": -527.12,
+      "y": 359.74
+    },
+    {
+      "area_uid": "project-management",
+      "grado": 7,
+      "slug": "planning",
+      "title": "Planning",
+      "uid": "c_CDAPU4W4IV",
+      "x": -190.26,
+      "y": -468.58
+    },
+    {
+      "area_uid": "ai-engineering",
+      "grado": 7,
+      "slug": "neural-networks",
+      "title": "Neural Networks",
+      "uid": "c_CG3CPXKFLT",
+      "x": 631.2,
+      "y": 26.0
+    },
+    {
+      "area_uid": "product-management",
+      "grado": 5,
+      "slug": "product-thinking",
+      "title": "Product Thinking",
+      "uid": "c_CHBELWMYEO",
+      "x": -527.12,
+      "y": -298.58
+    },
+    {
+      "area_uid": "project-management",
+      "grado": 2,
+      "slug": "issue-management",
+      "title": "Issue Management",
+      "uid": "c_CIR4QHKD6Q",
+      "x": -205.87,
+      "y": -595.78
+    },
+    {
+      "area_uid": "networking",
+      "grado": 3,
+      "slug": "routers",
+      "title": "Routers",
+      "uid": "c_CJT5ACWXAB",
+      "x": -417.34,
+      "y": 252.85
+    },
+    {
+      "area_uid": "software-engineering",
+      "grado": 2,
+      "slug": "error-handling",
+      "title": "Error Handling",
+      "uid": "c_CLBL3KTWT4",
+      "x": 118.74,
+      "y": -542.2
+    },
+    {
+      "area_uid": "ux-ui",
+      "grado": 3,
+      "slug": "typography",
+      "title": "Typography",
+      "uid": "c_CLVNVR43CK",
+      "x": 435.84,
+      "y": -265.15
+    },
+    {
+      "area_uid": "project-management",
+      "grado": 7,
+      "slug": "estimation",
+      "title": "Estimation",
+      "uid": "c_CQ3MBF4W7W",
+      "x": -101.85,
+      "y": -506.59
+    },
+    {
+      "area_uid": "ai-engineering",
+      "grado": 6,
+      "slug": "ai-safety-security",
+      "title": "AI Safety & Security",
+      "uid": "c_CSHCCYYZWJ",
+      "x": 485.93,
+      "y": 30.58
+    },
+    {
+      "area_uid": "os-linux",
+      "grado": 3,
+      "slug": "networking-en-linux",
+      "title": "Networking en Linux",
+      "uid": "c_CXEBUKNZHV",
+      "x": -614.31,
+      "y": -9.61
+    },
+    {
+      "area_uid": "networking",
+      "grado": 7,
+      "slug": "https-tls",
+      "title": "HTTPS / TLS",
+      "uid": "c_D2IZ67V6IU",
+      "x": -426.66,
+      "y": 413.29
+    },
+    {
+      "area_uid": "backend",
+      "grado": 2,
+      "slug": "validacion",
+      "title": "Validación",
+      "uid": "c_D7P4FE3X2D",
+      "x": 504.5,
+      "y": 296.43
+    },
+    {
+      "area_uid": "backend",
+      "grado": 2,
+      "slug": "servidor",
+      "title": "Servidor",
+      "uid": "c_DCMEIR6SK3",
+      "x": 435.84,
+      "y": 393.17
+    },
+    {
+      "area_uid": "ai-engineering",
+      "grado": 4,
+      "slug": "vector-databases",
+      "title": "Vector Databases",
+      "uid": "c_DCYZGXRVW2",
+      "x": 595.71,
+      "y": -76.31
+    },
+    {
+      "area_uid": "backend",
+      "grado": 4,
+      "slug": "autenticacion",
+      "title": "Autenticación",
+      "uid": "c_DHDG7TOBNK",
+      "x": 420.23,
+      "y": 265.97
+    },
+    {
+      "area_uid": "project-management",
+      "grado": 1,
+      "slug": "resource-management",
+      "title": "Resource Management",
+      "uid": "c_DJDORY2E6F",
+      "x": -247.12,
+      "y": -502.01
+    },
+    {
+      "area_uid": "database",
+      "grado": 6,
+      "slug": "data-analysis",
+      "title": "Data Analysis",
+      "uid": "c_DMG36WFAUY",
+      "x": 224.5,
+      "y": 499.86
+    },
+    {
+      "area_uid": "backend",
+      "grado": 3,
+      "slug": "arquitectura-de-aplicaciones",
+      "title": "Arquitectura de aplicaciones",
+      "uid": "c_DVLX2W7PQH",
+      "x": 524.25,
+      "y": 355.16
+    },
+    {
+      "area_uid": "networking",
+      "grado": 5,
+      "slug": "routing",
+      "title": "Routing",
+      "uid": "c_DWZHOC5BVU",
+      "x": -532.58,
+      "y": 283.07
+    },
+    {
+      "area_uid": "database",
+      "grado": 7,
+      "slug": "analytics-metrics",
+      "title": "Analytics Metrics",
+      "uid": "c_E2BEEPTCLY",
+      "x": 155.84,
+      "y": 596.61
+    },
+    {
+      "area_uid": "networking",
+      "grado": 4,
+      "slug": "internet",
+      "title": "Internet",
+      "uid": "c_E6UZ37VTA5",
+      "x": -359.75,
+      "y": 308.65
+    },
+    {
+      "area_uid": "ai-engineering",
+      "grado": 3,
+      "slug": "agents",
+      "title": "Agents",
+      "uid": "c_EC777UCG67",
+      "x": 586.39,
+      "y": 84.13
+    },
+    {
+      "area_uid": "product-management",
+      "grado": 3,
+      "slug": "market-research",
+      "title": "Market Research",
+      "uid": "c_ECB42D4UZM",
+      "x": -417.34,
+      "y": -405.47
+    },
+    {
+      "area_uid": "backend",
+      "grado": 3,
+      "slug": "lenguaje-backend",
+      "title": "Lenguaje Backend",
+      "uid": "c_EDRNN4EAFB",
+      "x": 378.97,
+      "y": 359.74
+    },
+    {
+      "area_uid": "database",
+      "grado": 4,
+      "slug": "etl-elt",
+      "title": "ETL / ELT",
+      "uid": "c_EIJI27LM76",
+      "x": 140.23,
+      "y": 469.4
+    },
+    {
+      "area_uid": "backend",
+      "grado": 3,
+      "slug": "asincronia-concurrencia",
+      "title": "Asincronía & Concurrencia",
+      "uid": "c_ESB3I2EXYR",
+      "x": 488.76,
+      "y": 252.85
+    },
+    {
+      "area_uid": "product-management",
+      "grado": 5,
+      "slug": "mvp",
+      "title": "MVP",
+      "uid": "c_ETWVMQBZXQ",
+      "x": -426.66,
+      "y": -245.03
+    },
+    {
+      "area_uid": "product-management",
+      "grado": 3,
+      "slug": "product-lifecycle",
+      "title": "Product Lifecycle",
+      "uid": "c_F45REZFNEG",
+      "x": -532.58,
+      "y": -375.25
+    },
+    {
+      "area_uid": "networking",
+      "grado": 6,
+      "slug": "firewalls",
+      "title": "Firewalls",
+      "uid": "c_F4IWLYRXT4",
+      "x": -509.99,
+      "y": 410.15
+    },
+    {
+      "area_uid": "software-engineering",
+      "grado": 8,
+      "slug": "engineering-processes",
+      "title": "Engineering Processes",
+      "uid": "c_FBWIOD73FI",
+      "x": 224.5,
+      "y": -565.32
+    },
+    {
+      "area_uid": "ux-ui",
+      "grado": 1,
+      "slug": "states-feedback",
+      "title": "States & Feedback",
+      "uid": "c_FEMWCHWWED",
+      "x": 420.23,
+      "y": -392.35
+    },
+    {
+      "area_uid": "frontend",
+      "grado": 2,
+      "slug": "testing",
+      "title": "Testing",
+      "uid": "c_FF2SVKAIK5",
+      "x": -169.46,
+      "y": 491.64
+    },
+    {
+      "area_uid": "project-management",
+      "grado": 2,
+      "slug": "change-management",
+      "title": "Change Management",
+      "uid": "c_FH3Q7KENJU",
+      "x": -137.34,
+      "y": -608.9
+    },
+    {
+      "area_uid": "product-management",
+      "grado": 6,
+      "slug": "product-metrics",
+      "title": "Product Metrics",
+      "uid": "c_FHDALEC2NY",
+      "x": -359.75,
+      "y": -349.67
+    },
+    {
+      "area_uid": "ux-ui",
+      "grado": 3,
+      "slug": "ui-components",
+      "title": "UI Components",
+      "uid": "c_FIPB4YV5WK",
+      "x": 524.25,
+      "y": -303.16
+    },
+    {
+      "area_uid": "project-management",
+      "grado": 3,
+      "slug": "milestones-releases",
+      "title": "Milestones & Releases",
+      "uid": "c_FJSN2KSLMV",
+      "x": -146.66,
+      "y": -448.46
+    },
+    {
+      "area_uid": "ai-engineering",
+      "grado": 6,
+      "slug": "ai-infrastructure",
+      "title": "AI Infrastructure",
+      "uid": "c_FLXMOQWDJK",
+      "x": 480.47,
+      "y": -46.09
+    },
+    {
+      "area_uid": "database",
+      "grado": 0,
+      "slug": "data-fundamentals",
+      "title": "Data Fundamentals",
+      "uid": "c_FTJALUGRAX",
+      "x": 244.25,
+      "y": 558.59
+    },
+    {
+      "area_uid": "frontend",
+      "grado": 3,
+      "slug": "accesibilidad",
+      "title": "Accesibilidad",
+      "uid": "c_FYUNN3WTKX",
+      "x": -143.45,
+      "y": 571.19
+    },
+    {
+      "area_uid": "software-engineering",
+      "grado": 5,
+      "slug": "distributed-systems",
+      "title": "Distributed Systems",
+      "uid": "c_GFXWIQR3NM",
+      "x": 155.84,
+      "y": -468.58
+    },
+    {
+      "area_uid": "backend",
+      "grado": 2,
+      "slug": "testing-backend",
+      "title": "Testing Backend",
+      "uid": "c_GQ3G6NABQ6",
+      "x": 479.44,
+      "y": 413.29
+    },
+    {
+      "area_uid": "ai-engineering",
+      "grado": 3,
+      "slug": "python-programming",
+      "title": "Python & Programming",
+      "uid": "c_GQXGQSF53L",
+      "x": 653.3,
+      "y": -20.51
+    },
+    {
+      "area_uid": "project-management",
+      "grado": 5,
+      "slug": "dependencies",
+      "title": "Dependencies",
+      "uid": "c_GYUCO2KNED",
+      "x": -252.58,
+      "y": -578.68
+    },
+    {
+      "area_uid": "backend",
+      "grado": 3,
+      "slug": "observabilidad",
+      "title": "Observabilidad",
+      "uid": "c_H7VQOVE2NF",
+      "x": 373.52,
+      "y": 283.07
+    },
+    {
+      "area_uid": "software-engineering",
+      "grado": 3,
+      "slug": "programming-fundamentals",
+      "title": "Programming Fundamentals",
+      "uid": "c_HAZD53NJ7A",
+      "x": 140.23,
+      "y": -595.78
+    },
+    {
+      "area_uid": "os-linux",
+      "grado": 2,
+      "slug": "daemons-services",
+      "title": "Daemons / Services",
+      "uid": "c_HEPP5R7NCU",
+      "x": -508.55,
+      "y": -32.73
+    },
+    {
+      "area_uid": "database",
+      "grado": 3,
+      "slug": "joins",
+      "title": "JOINs",
+      "uid": "c_HIO7YVG2DS",
+      "x": 98.97,
+      "y": 563.17
+    },
+    {
+      "area_uid": "software-engineering",
+      "grado": 3,
+      "slug": "design-trade-offs",
+      "title": "Design Trade-offs",
+      "uid": "c_HISOSDWX75",
+      "x": 244.25,
+      "y": -506.59
+    },
+    {
+      "area_uid": "frontend",
+      "grado": 4,
+      "slug": "layout",
+      "title": "Layout",
+      "uid": "c_HRF35BCROZ",
+      "x": -227.36,
+      "y": 522.98
+    },
+    {
+      "area_uid": "frontend",
+      "grado": 0,
+      "slug": "tooling",
+      "title": "Tooling",
+      "uid": "c_HXX4IZHTB2",
+      "x": -121.6,
+      "y": 499.86
+    },
+    {
+      "area_uid": "software-engineering",
+      "grado": 2,
+      "slug": "functional-programming",
+      "title": "Functional Programming",
+      "uid": "c_I4SP5V3R2E",
+      "x": 98.97,
+      "y": -502.01
+    },
+    {
+      "area_uid": "frontend",
+      "grado": 3,
+      "slug": "html",
+      "title": "HTML",
+      "uid": "c_IFH4CCKUM6",
+      "x": -190.26,
+      "y": 596.61
+    },
+    {
+      "area_uid": "ux-ui",
+      "grado": 2,
+      "slug": "prototyping",
+      "title": "Prototyping",
+      "uid": "c_IL3BOUYPJN",
+      "x": 378.97,
+      "y": -298.58
+    },
+    {
+      "area_uid": "software-engineering",
+      "grado": 5,
+      "slug": "code-review",
+      "title": "Code Review",
+      "uid": "c_IMFWIGRRUB",
+      "x": 208.76,
+      "y": -608.9
+    },
+    {
+      "area_uid": "networking",
+      "grado": 8,
+      "slug": "headers-cookies",
+      "title": "Headers / Cookies",
+      "uid": "c_IRKTW3AVGM",
+      "x": -466.2,
+      "y": 227.65
+    },
+    {
+      "area_uid": "os-linux",
+      "grado": 4,
+      "slug": "virtualization-infrastructure",
+      "title": "Virtualization & Infrastructure",
+      "uid": "c_J2J5LSR7ZQ",
+      "x": -577.21,
+      "y": 64.01
+    },
+    {
+      "area_uid": "database",
+      "grado": 2,
+      "slug": "acid-isolation",
+      "title": "ACID & Isolation",
+      "uid": "c_J3Q7F3X33C",
+      "x": 208.76,
+      "y": 456.28
+    },
+    {
+      "area_uid": "os-linux",
+      "grado": 2,
+      "slug": "operating-system",
+      "title": "Operating System",
+      "uid": "c_J7K4IRROGC",
+      "x": -592.82,
+      "y": -63.19
+    },
+    {
+      "area_uid": "ai-engineering",
+      "grado": 4,
+      "slug": "ai-ml-fundamentals",
+      "title": "AI / ML Fundamentals",
+      "uid": "c_J7TPLADZIN",
+      "x": 503.06,
+      "y": 80.99
+    },
+    {
+      "area_uid": "frontend",
+      "grado": 5,
+      "slug": "componentizacion",
+      "title": "Componentización",
+      "uid": "c_JPHEZJIFHI",
+      "x": -205.87,
+      "y": 469.4
+    },
+    {
+      "area_uid": "ai-engineering",
+      "grado": 7,
+      "slug": "context-engineering",
+      "title": "Context Engineering",
+      "uid": "c_JS77WZ6QYB",
+      "x": 546.85,
+      "y": -101.51
+    },
+    {
+      "area_uid": "database",
+      "grado": 3,
+      "slug": "filtering-aggregation",
+      "title": "Filtering & Aggregation",
+      "uid": "c_JTW257OVQT",
+      "x": 199.44,
+      "y": 616.72
+    },
+    {
+      "area_uid": "database",
+      "grado": 4,
+      "slug": "database-architecture",
+      "title": "Database Architecture",
+      "uid": "c_JWMD5PBSD7",
+      "x": 93.52,
+      "y": 486.5
+    },
+    {
+      "area_uid": "software-engineering",
+      "grado": 5,
+      "slug": "solid-design-principles",
+      "title": "SOLID & Design Principles",
+      "uid": "c_K2J2R52QLA",
+      "x": 199.44,
+      "y": -448.46
+    },
+    {
+      "area_uid": "project-management",
+      "grado": 3,
+      "slug": "agile",
+      "title": "Agile",
+      "uid": "c_K2VG7SUBID",
+      "x": -79.75,
+      "y": -553.1
+    },
+    {
+      "area_uid": "ux-ui",
+      "grado": 5,
+      "slug": "ux-metrics",
+      "title": "UX Metrics",
+      "uid": "c_K2XQL2MKUK",
+      "x": 488.76,
+      "y": -405.47
+    },
+    {
+      "area_uid": "os-linux",
+      "grado": 4,
+      "slug": "containers",
+      "title": "Containers",
+      "uid": "c_K5E3UA3HBU",
+      "x": -488.8,
+      "y": 26.0
+    },
+    {
+      "area_uid": "software-engineering",
+      "grado": 2,
+      "slug": "complexity-analysis",
+      "title": "Complexity Analysis",
+      "uid": "c_KEMF6IFKTQ",
+      "x": 93.52,
+      "y": -578.68
+    },
+    {
+      "area_uid": "frontend",
+      "grado": 6,
+      "slug": "data-fetching",
+      "title": "Data fetching",
+      "uid": "c_KFFEDHVX2D",
+      "x": -101.85,
+      "y": 558.59
+    },
+    {
+      "area_uid": "networking",
+      "grado": 7,
+      "slug": "subnetting-cidr",
+      "title": "Subnetting / CIDR",
+      "uid": "c_KFUMZO44RS",
+      "x": -372.29,
+      "y": 397.22
+    },
+    {
+      "area_uid": "os-linux",
+      "grado": 3,
+      "slug": "bash-shell-scripting",
+      "title": "Bash / Shell Scripting",
+      "uid": "c_KKF3Z6FUAE",
+      "x": -634.07,
+      "y": 30.58
+    },
+    {
+      "area_uid": "networking",
+      "grado": 11,
+      "slug": "http",
+      "title": "HTTP",
+      "uid": "c_KMBVXYCQPO",
+      "x": -561.72,
+      "y": 333.65
+    },
+    {
+      "area_uid": "backend",
+      "grado": 6,
+      "slug": "seguridad",
+      "title": "Seguridad",
+      "uid": "c_KUZUIAJVV7",
+      "x": 546.35,
+      "y": 308.65
+    },
+    {
+      "area_uid": "software-engineering",
+      "grado": 0,
+      "slug": "documentation",
+      "title": "Documentation",
+      "uid": "c_KYPK4NZI43",
+      "x": 266.35,
+      "y": -553.1
+    },
+    {
+      "area_uid": "software-engineering",
+      "grado": 6,
+      "slug": "architecture",
+      "title": "Architecture",
+      "uid": "c_KZDA6HODJU",
+      "x": 116.11,
+      "y": -451.6
+    },
+    {
+      "area_uid": "software-engineering",
+      "grado": 2,
+      "slug": "object-oriented-programming",
+      "title": "Object-Oriented Programming",
+      "uid": "c_KZHQNGA3LM",
+      "x": 159.89,
+      "y": -634.1
+    },
+    {
+      "area_uid": "frontend",
+      "grado": 0,
+      "slug": "typescript",
+      "title": "TypeScript",
+      "uid": "c_KZQAC7GGYB",
+      "x": -247.12,
+      "y": 563.17
+    },
+    {
+      "area_uid": "product-management",
+      "grado": 3,
+      "slug": "product-analytics",
+      "title": "Product Analytics",
+      "uid": "c_L5MHDZ22JR",
+      "x": -509.99,
+      "y": -248.17
+    },
+    {
+      "area_uid": "ai-engineering",
+      "grado": 4,
+      "slug": "machine-learning-fundamentals",
+      "title": "Machine Learning Fundamentals",
+      "uid": "c_LAYNEBDIRF",
+      "x": 640.76,
+      "y": 68.06
+    },
+    {
+      "area_uid": "frontend",
+      "grado": 3,
+      "slug": "eventos",
+      "title": "Eventos",
+      "uid": "c_LFYZZYAIJK",
+      "x": -137.34,
+      "y": 456.28
+    },
+    {
+      "area_uid": "software-engineering",
+      "grado": 4,
+      "slug": "api-design",
+      "title": "API Design",
+      "uid": "c_LG2UZSQPXG",
+      "x": 253.81,
+      "y": -464.53
+    },
+    {
+      "area_uid": "backend",
+      "grado": 4,
+      "slug": "bases-de-datos",
+      "title": "Bases de datos",
+      "uid": "c_LIWOFAKHEO",
+      "x": 396.11,
+      "y": 410.15
+    },
+    {
+      "area_uid": "networking",
+      "grado": 2,
+      "slug": "dns",
+      "title": "DNS",
+      "uid": "c_LJXCYJ6ING",
+      "x": -373.78,
+      "y": 250.28
+    },
+    {
+      "area_uid": "ai-engineering",
+      "grado": 4,
+      "slug": "structured-outputs",
+      "title": "Structured Outputs",
+      "uid": "c_LQGB44U4DC",
+      "x": 451.33,
+      "y": 4.49
+    },
+    {
+      "area_uid": "software-engineering",
+      "grado": 0,
+      "slug": "debugging",
+      "title": "Debugging",
+      "uid": "c_M4XCMAJ4Y5",
+      "x": 64.38,
+      "y": -528.1
+    },
+    {
+      "area_uid": "backend",
+      "grado": 4,
+      "slug": "apis",
+      "title": "APIs",
+      "uid": "c_MBMF42FTPA",
+      "x": 439.89,
+      "y": 227.65
+    },
+    {
+      "area_uid": "networking",
+      "grado": 7,
+      "slug": "tcp",
+      "title": "TCP",
+      "uid": "c_MFJRR5DWJK",
+      "x": -458.35,
+      "y": 443.85
+    },
+    {
+      "area_uid": "software-engineering",
+      "grado": 3,
+      "slug": "observability",
+      "title": "Observability",
+      "uid": "c_MKC6PGQUM7",
+      "x": 252.32,
+      "y": -611.47
+    },
+    {
+      "area_uid": "ai-engineering",
+      "grado": 5,
+      "slug": "observability",
+      "title": "Observability",
+      "uid": "c_MMPVIHXRHF",
+      "x": 639.27,
+      "y": -78.88
+    },
+    {
+      "area_uid": "os-linux",
+      "grado": 2,
+      "slug": "kernel",
+      "title": "Kernel",
+      "uid": "c_MOYKN3IWS5",
+      "x": -524.29,
+      "y": -76.31
+    },
+    {
+      "area_uid": "backend",
+      "grado": 2,
+      "slug": "cliente-servidor",
+      "title": "Cliente-Servidor",
+      "uid": "c_MSTGJ6MKWW",
+      "x": 533.81,
+      "y": 397.22
+    },
+    {
+      "area_uid": "product-management",
+      "grado": 3,
+      "slug": "product-market-fit",
+      "title": "Product-Market Fit",
+      "uid": "c_MZ7L6JLNSU",
+      "x": -466.2,
+      "y": -430.67
+    },
+    {
+      "area_uid": "backend",
+      "grado": 2,
+      "slug": "middleware",
+      "title": "Middleware",
+      "uid": "c_N3N6CTKPIA",
+      "x": 344.38,
+      "y": 333.65
+    },
+    {
+      "area_uid": "project-management",
+      "grado": 4,
+      "slug": "team-coordination",
+      "title": "Team Coordination",
+      "uid": "c_N6K5FPOTSK",
+      "x": -229.99,
+      "y": -451.6
+    },
+    {
+      "area_uid": "os-linux",
+      "grado": 5,
+      "slug": "shell",
+      "title": "Shell",
+      "uid": "c_NH4DBCJPVZ",
+      "x": -533.61,
+      "y": 84.13
+    },
+    {
+      "area_uid": "frontend",
+      "grado": 4,
+      "slug": "autenticacion-en-frontend",
+      "title": "Autenticación en Frontend",
+      "uid": "c_NNWQH47RM7",
+      "x": -146.66,
+      "y": 616.72
+    },
+    {
+      "area_uid": "frontend",
+      "grado": 6,
+      "slug": "asincronia",
+      "title": "Asincronía",
+      "uid": "c_NTNITJDH3Q",
+      "x": -252.58,
+      "y": 486.5
+    },
+    {
+      "area_uid": "database",
+      "grado": 4,
+      "slug": "data-pipelines",
+      "title": "Data Pipelines",
+      "uid": "c_NTZ6VGXWNA",
+      "x": 266.35,
+      "y": 512.08
+    },
+    {
+      "area_uid": "software-engineering",
+      "grado": 5,
+      "slug": "ci-cd",
+      "title": "CI/CD",
+      "uid": "c_NWJKJRLXFG",
+      "x": 167.75,
+      "y": -417.9
+    },
+    {
+      "area_uid": "frontend",
+      "grado": 8,
+      "slug": "internet-web",
+      "title": "Internet & Web",
+      "uid": "c_NYZQU435OZ",
+      "x": -79.75,
+      "y": 512.08
+    },
+    {
+      "area_uid": "database",
+      "grado": 2,
+      "slug": "indexes",
+      "title": "Indexes",
+      "uid": "c_O5H6HCDAXZ",
+      "x": 116.11,
+      "y": 613.58
+    },
+    {
+      "area_uid": "project-management",
+      "grado": 2,
+      "slug": "retrospectives-improvement",
+      "title": "Retrospectives & Improvement",
+      "uid": "c_O73WVZARSW",
+      "x": -186.2,
+      "y": -634.1
+    },
+    {
+      "area_uid": "database",
+      "grado": 2,
+      "slug": "data-cleaning",
+      "title": "Data Cleaning",
+      "uid": "c_OAPY46OJKC",
+      "x": 159.89,
+      "y": 431.08
+    },
+    {
+      "area_uid": "frontend",
+      "grado": 5,
+      "slug": "json-apis",
+      "title": "JSON & APIs",
+      "uid": "c_OD7QLNQ7GN",
+      "x": -229.99,
+      "y": 613.58
+    },
+    {
+      "area_uid": "project-management",
+      "grado": 2,
+      "slug": "status-reporting",
+      "title": "Status & Reporting",
+      "uid": "c_ODRXW7IAT4",
+      "x": -92.29,
+      "y": -464.53
+    },
+    {
+      "area_uid": "os-linux",
+      "grado": 2,
+      "slug": "users-groups",
+      "title": "Users & Groups",
+      "uid": "c_OE65ZR7OR4",
+      "x": -639.53,
+      "y": -46.09
+    },
+    {
+      "area_uid": "backend",
+      "grado": 3,
+      "slug": "sql",
+      "title": "SQL",
+      "uid": "c_OJEU3FYCQW",
+      "x": 532.32,
+      "y": 250.28
+    },
+    {
+      "area_uid": "database",
+      "grado": 5,
+      "slug": "bi-reporting",
+      "title": "BI & Reporting",
+      "uid": "c_OO3XXXZMWY",
+      "x": 253.81,
+      "y": 600.65
+    },
+    {
+      "area_uid": "product-management",
+      "grado": 8,
+      "slug": "user-research",
+      "title": "User Research",
+      "uid": "c_OPRQ4KKLEV",
+      "x": -372.29,
+      "y": -261.1
+    },
+    {
+      "area_uid": "os-linux",
+      "grado": 6,
+      "slug": "sockets",
+      "title": "Sockets",
+      "uid": "c_ORX7MOBSU6",
+      "x": -466.7,
+      "y": -20.51
+    },
+    {
+      "area_uid": "database",
+      "grado": 4,
+      "slug": "normalization",
+      "title": "Normalization",
+      "uid": "c_OX2ZGYHT7N",
+      "x": 64.38,
+      "y": 537.09
+    },
+    {
+      "area_uid": "project-management",
+      "grado": 5,
+      "slug": "work-breakdown-structure",
+      "title": "Work Breakdown Structure",
+      "uid": "c_OXV4OR4VYX",
+      "x": -281.72,
+      "y": -528.1
+    },
+    {
+      "area_uid": "ux-ui",
+      "grado": 3,
+      "slug": "color",
+      "title": "Color",
+      "uid": "c_OYXEXTPWLS",
+      "x": 479.44,
+      "y": -245.03
+    },
+    {
+      "area_uid": "product-management",
+      "grado": 3,
+      "slug": "funnels",
+      "title": "Funnels",
+      "uid": "c_P2ZB42B6RQ",
+      "x": -561.72,
+      "y": -324.67
+    },
+    {
+      "area_uid": "ux-ui",
+      "grado": 2,
+      "slug": "wireframing",
+      "title": "Wireframing",
+      "uid": "c_P3AM7QSPS6",
+      "x": 373.52,
+      "y": -375.25
+    },
+    {
+      "area_uid": "ux-ui",
+      "grado": 5,
+      "slug": "user-needs-problems",
+      "title": "User Needs & Problems",
+      "uid": "c_P3UX76MNNO",
+      "x": 546.35,
+      "y": -349.67
+    },
+    {
+      "area_uid": "backend",
+      "grado": 3,
+      "slug": "caching",
+      "title": "Caching",
+      "uid": "c_PAUDUA5YDA",
+      "x": 447.75,
+      "y": 443.85
+    },
+    {
+      "area_uid": "software-engineering",
+      "grado": 3,
+      "slug": "reliability",
+      "title": "Reliability",
+      "uid": "c_PDOZ7FBH2J",
+      "x": 97.63,
+      "y": -622.98
+    },
+    {
+      "area_uid": "networking",
+      "grado": 6,
+      "slug": "http-methods",
+      "title": "HTTP Methods",
+      "uid": "c_PJZHQDBJWY",
+      "x": -528.47,
+      "y": 238.78
+    },
+    {
+      "area_uid": "product-management",
+      "grado": 2,
+      "slug": "user-stories",
+      "title": "User Stories",
+      "uid": "c_PLSS7K466J",
+      "x": -373.78,
+      "y": -408.04
+    },
+    {
+      "area_uid": "os-linux",
+      "grado": 2,
+      "slug": "system-calls",
+      "title": "System Calls",
+      "uid": "c_PPPZUFR2JG",
+      "x": -616.94,
+      "y": 80.99
+    },
+    {
+      "area_uid": "software-engineering",
+      "grado": 2,
+      "slug": "algorithms",
+      "title": "Algorithms",
+      "uid": "c_Q242GFM3KF",
+      "x": 292.53,
+      "y": -516.52
+    },
+    {
+      "area_uid": "ux-ui",
+      "grado": 2,
+      "slug": "user-flows",
+      "title": "User Flows",
+      "uid": "c_Q3YN3JYKSD",
+      "x": 396.11,
+      "y": -248.17
+    },
+    {
+      "area_uid": "software-engineering",
+      "grado": 4,
+      "slug": "technical-leadership",
+      "title": "Technical Leadership",
+      "uid": "c_Q56AS5I5XQ",
+      "x": 71.81,
+      "y": -462.15
+    },
+    {
+      "area_uid": "ux-ui",
+      "grado": 2,
+      "slug": "navigation",
+      "title": "Navigation",
+      "uid": "c_Q62PGX2MP4",
+      "x": 439.89,
+      "y": -430.67
+    },
+    {
+      "area_uid": "product-management",
+      "grado": 5,
+      "slug": "goals-outcomes",
+      "title": "Goals & Outcomes",
+      "uid": "c_QM2SFYU3HE",
+      "x": -458.35,
+      "y": -214.47
+    },
+    {
+      "area_uid": "software-engineering",
+      "grado": 2,
+      "slug": "testing",
+      "title": "Testing",
+      "uid": "c_QSNPL7HRIY",
+      "x": 200.71,
+      "y": -655.56
+    },
+    {
+      "area_uid": "database",
+      "grado": 5,
+      "slug": "nosql",
+      "title": "NoSQL",
+      "uid": "c_QTK2SYOTSW",
+      "x": 252.32,
+      "y": 453.71
+    },
+    {
+      "area_uid": "frontend",
+      "grado": 3,
+      "slug": "javascript",
+      "title": "JavaScript",
+      "uid": "c_QWAQTV7JRM",
+      "x": -186.2,
+      "y": 431.08
+    },
+    {
+      "area_uid": "project-management",
+      "grado": 3,
+      "slug": "scrum",
+      "title": "Scrum",
+      "uid": "c_QZTOO636ZO",
+      "x": -93.78,
+      "y": -611.47
+    },
+    {
+      "area_uid": "ai-engineering",
+      "grado": 4,
+      "slug": "transformers",
+      "title": "Transformers",
+      "uid": "c_R42HL4B5YW",
+      "x": 554.7,
+      "y": 114.69
+    },
+    {
+      "area_uid": "os-linux",
+      "grado": 5,
+      "slug": "signals",
+      "title": "Signals",
+      "uid": "c_R6PYD64O36",
+      "x": -573.15,
+      "y": -101.51
+    },
+    {
+      "area_uid": "os-linux",
+      "grado": 0,
+      "slug": "i-o",
+      "title": "I/O",
+      "uid": "c_R6YCGCU7FX",
+      "x": -479.24,
+      "y": 68.06
+    },
+    {
+      "area_uid": "database",
+      "grado": 2,
+      "slug": "transactions",
+      "title": "Transactions",
+      "uid": "c_R72555O3AV",
+      "x": 167.75,
+      "y": 647.28
+    },
+    {
+      "area_uid": "ai-engineering",
+      "grado": 6,
+      "slug": "tool-calling",
+      "title": "Tool Calling",
+      "uid": "c_R73S6QTQFN",
+      "x": 484.58,
+      "y": -90.38
+    },
+    {
+      "area_uid": "project-management",
+      "grado": 3,
+      "slug": "deliverables",
+      "title": "Deliverables",
+      "uid": "c_RIRVA7AOPS",
+      "x": -178.35,
+      "y": -417.9
+    },
+    {
+      "area_uid": "ai-engineering",
+      "grado": 4,
+      "slug": "prompt-engineering",
+      "title": "Prompt Engineering",
+      "uid": "c_RJE3D4II2X",
+      "x": 679.48,
+      "y": 16.08
+    },
+    {
+      "area_uid": "frontend",
+      "grado": 2,
+      "slug": "rendering-moderno",
+      "title": "Rendering moderno",
+      "uid": "c_RPCIXH4YRU",
+      "x": -92.29,
+      "y": 600.65
+    },
+    {
+      "area_uid": "ux-ui",
+      "grado": 4,
+      "slug": "usability",
+      "title": "Usability",
+      "uid": "c_RQAR6DO3SU",
+      "x": 533.81,
+      "y": -261.1
+    },
+    {
+      "area_uid": "project-management",
+      "grado": 5,
+      "slug": "task-management",
+      "title": "Task Management",
+      "uid": "c_S37BPPLTVF",
+      "x": -248.47,
+      "y": -622.98
+    },
+    {
+      "area_uid": "networking",
+      "grado": 9,
+      "slug": "cdn-load-balancing",
+      "title": "CDN / Load Balancing",
+      "uid": "c_SCSLG2OETM",
+      "x": -333.57,
+      "y": 345.24
+    },
+    {
+      "area_uid": "database",
+      "grado": 6,
+      "slug": "statistics",
+      "title": "Statistics",
+      "uid": "c_SNCAJUJCGH",
+      "x": 97.63,
+      "y": 442.21
+    },
+    {
+      "area_uid": "os-linux",
+      "grado": 5,
+      "slug": "threads",
+      "title": "Threads",
+      "uid": "c_SQK5OV6EKB",
+      "x": -668.67,
+      "y": 4.49
+    },
+    {
+      "area_uid": "ux-ui",
+      "grado": 2,
+      "slug": "product-design",
+      "title": "Product Design",
+      "uid": "c_SWJ7STVZDR",
+      "x": 344.38,
+      "y": -324.67
+    },
+    {
+      "area_uid": "backend",
+      "grado": 3,
+      "slug": "runtime",
+      "title": "Runtime",
+      "uid": "c_THBEXYTI7F",
+      "x": 377.63,
+      "y": 238.78
+    },
+    {
+      "area_uid": "software-engineering",
+      "grado": 5,
+      "slug": "abstraction",
+      "title": "Abstraction",
+      "uid": "c_TSM6OQKLAB",
+      "x": 237.03,
+      "y": -420.93
+    },
+    {
+      "area_uid": "product-management",
+      "grado": 1,
+      "slug": "prioritization",
+      "title": "Prioritization",
+      "uid": "c_TW757IOGRQ",
+      "x": -528.47,
+      "y": -419.54
+    },
+    {
+      "area_uid": "os-linux",
+      "grado": 2,
+      "slug": "file-systems",
+      "title": "File Systems",
+      "uid": "c_TXS5EDLI4R",
+      "x": -480.73,
+      "y": -78.88
+    },
+    {
+      "area_uid": "networking",
+      "grado": 4,
+      "slug": "dhcp",
+      "title": "DHCP",
+      "uid": "c_U5JT2ERKLO",
+      "x": -554.29,
+      "y": 399.6
+    },
+    {
+      "area_uid": "frontend",
+      "grado": 8,
+      "slug": "arquitectura-frontend",
+      "title": "Arquitectura Frontend",
+      "uid": "c_UAIG2N6OVP",
+      "x": -281.72,
+      "y": 537.09
+    },
+    {
+      "area_uid": "os-linux",
+      "grado": 2,
+      "slug": "stack-heap",
+      "title": "Stack & Heap",
+      "uid": "c_UDNACO4RMV",
+      "x": -565.3,
+      "y": 114.69
+    },
+    {
+      "area_uid": "os-linux",
+      "grado": 3,
+      "slug": "cpu-scheduling",
+      "title": "CPU & Scheduling",
+      "uid": "c_UNJ4CCPCKV",
+      "x": -635.42,
+      "y": -90.38
+    },
+    {
+      "area_uid": "product-management",
+      "grado": 5,
+      "slug": "product-strategy-at-scale",
+      "title": "Product Strategy at Scale",
+      "uid": "c_UQ26LMCZYY",
+      "x": -333.57,
+      "y": -313.08
+    },
+    {
+      "area_uid": "database",
+      "grado": 3,
+      "slug": "oltp-vs-olap",
+      "title": "OLTP vs OLAP",
+      "uid": "c_UQ7BW2UQHQ",
+      "x": 292.53,
+      "y": 548.67
+    },
+    {
+      "area_uid": "backend",
+      "grado": 1,
+      "slug": "routing",
+      "title": "Routing",
+      "uid": "c_US5R27XHAB",
+      "x": 572.53,
+      "y": 345.24
+    },
+    {
+      "area_uid": "software-engineering",
+      "grado": 6,
+      "slug": "security-engineering",
+      "title": "Security Engineering",
+      "uid": "c_USKUN3IVRZ",
+      "x": 47.97,
+      "y": -572.5
+    },
+    {
+      "area_uid": "frontend",
+      "grado": 3,
+      "slug": "dom",
+      "title": "DOM",
+      "uid": "c_UTVABXNLDY",
+      "x": -93.78,
+      "y": 453.71
+    },
+    {
+      "area_uid": "software-engineering",
+      "grado": 5,
+      "slug": "refactoring",
+      "title": "Refactoring",
+      "uid": "c_VA6ETRQ2HH",
+      "x": 294.55,
+      "y": -588.73
+    },
+    {
+      "area_uid": "database",
+      "grado": 5,
+      "slug": "data-visualization",
+      "title": "Data Visualization",
+      "uid": "c_VIGZHRVRFY",
+      "x": 71.81,
+      "y": 603.03
+    },
+    {
+      "area_uid": "product-management",
+      "grado": 2,
+      "slug": "stakeholder-management",
+      "title": "Stakeholder Management",
+      "uid": "c_VQIWAM3DJF",
+      "x": -554.29,
+      "y": -258.72
+    },
+    {
+      "area_uid": "frontend",
+      "grado": 3,
+      "slug": "frameworks-ui",
+      "title": "Frameworks UI",
+      "uid": "c_VXHILN4GCI",
+      "x": -178.35,
+      "y": 647.28
+    },
+    {
+      "area_uid": "backend",
+      "grado": 5,
+      "slug": "sistemas-distribuidos",
+      "title": "Sistemas distribuidos",
+      "uid": "c_VXNPWGQTHB",
+      "x": 351.81,
+      "y": 399.6
+    },
+    {
+      "area_uid": "project-management",
+      "grado": 6,
+      "slug": "project-metrics",
+      "title": "Project Metrics",
+      "uid": "c_VZFUJQTAUP",
+      "x": -53.57,
+      "y": -516.52
+    },
+    {
+      "area_uid": "database",
+      "grado": 3,
+      "slug": "sql",
+      "title": "SQL",
+      "uid": "c_W4GRE7UMJ6",
+      "x": 200.71,
+      "y": 409.63
+    },
+    {
+      "area_uid": "ux-ui",
+      "grado": 2,
+      "slug": "behavior-psychology",
+      "title": "Behavior & Psychology",
+      "uid": "c_W6OI2NX5NW",
+      "x": 532.32,
+      "y": -408.04
+    },
+    {
+      "area_uid": "project-management",
+      "grado": 1,
+      "slug": "prioritization",
+      "title": "Prioritization",
+      "uid": "c_WBXKNJ46YZ",
+      "x": -274.29,
+      "y": -462.15
+    },
+    {
+      "area_uid": "ux-ui",
+      "grado": 7,
+      "slug": "visual-hierarchy",
+      "title": "Visual Hierarchy",
+      "uid": "c_WI7XS25GM5",
+      "x": 447.75,
+      "y": -214.47
+    },
+    {
+      "area_uid": "product-management",
+      "grado": 5,
+      "slug": "user-personas",
+      "title": "User Personas",
+      "uid": "c_WM2AMCYFR6",
+      "x": -425.39,
+      "y": -452.13
+    },
+    {
+      "area_uid": "ai-engineering",
+      "grado": 3,
+      "slug": "ai-system-architecture",
+      "title": "AI System Architecture",
+      "uid": "c_WSNDQEO6MW",
+      "x": 458.76,
+      "y": 70.44
+    },
+    {
+      "area_uid": "software-engineering",
+      "grado": 5,
+      "slug": "concurrency",
+      "title": "Concurrency",
+      "uid": "c_WYOKFAK6RE",
+      "x": 120.41,
+      "y": -406.82
+    },
+    {
+      "area_uid": "os-linux",
+      "grado": 2,
+      "slug": "memory-management",
+      "title": "Memory Management",
+      "uid": "c_WYUWDZEETM",
+      "x": -440.52,
+      "y": 16.08
+    },
+    {
+      "area_uid": "frontend",
+      "grado": 5,
+      "slug": "estado",
+      "title": "Estado",
+      "uid": "c_WYVLRHHAGA",
+      "x": -248.47,
+      "y": 442.21
+    },
+    {
+      "area_uid": "software-engineering",
+      "grado": 1,
+      "slug": "git-version-control",
+      "title": "Git / Version Control",
+      "uid": "c_X4YMC3NLRL",
+      "x": 126.07,
+      "y": -663.2
+    },
+    {
+      "area_uid": "database",
+      "grado": 3,
+      "slug": "advanced-data-architecture",
+      "title": "Advanced Data Architecture",
+      "uid": "c_XGWNYRU3HQ",
+      "x": 237.03,
+      "y": 644.25
+    },
+    {
+      "area_uid": "networking",
+      "grado": 6,
+      "slug": "http-status-codes",
+      "title": "HTTP Status Codes",
+      "uid": "c_XNSCZALME2",
+      "x": -425.39,
+      "y": 206.19
+    },
+    {
+      "area_uid": "ai-engineering",
+      "grado": 3,
+      "slug": "rag",
+      "title": "RAG",
+      "uid": "c_XPKAEIKUDL",
+      "x": 587.66,
+      "y": -122.97
+    },
+    {
+      "area_uid": "os-linux",
+      "grado": 2,
+      "slug": "file-permissions",
+      "title": "File Permissions",
+      "uid": "c_XUZJWYTELS",
+      "x": -661.24,
+      "y": 70.44
+    },
+    {
+      "area_uid": "networking",
+      "grado": 2,
+      "slug": "udp",
+      "title": "UDP",
+      "uid": "c_XXNA5W3TON",
+      "x": -389.07,
+      "y": 440.82
+    },
+    {
+      "area_uid": "backend",
+      "grado": 3,
+      "slug": "mensajeria",
+      "title": "Mensajería",
+      "uid": "c_Y2M5VLS32J",
+      "x": 480.71,
+      "y": 206.19
+    },
+    {
+      "area_uid": "os-linux",
+      "grado": 2,
+      "slug": "environment-variables",
+      "title": "Environment Variables",
+      "uid": "c_YBQTBM72V5",
+      "x": -532.34,
+      "y": -122.97
+    },
+    {
+      "area_uid": "ai-engineering",
+      "grado": 8,
+      "slug": "embeddings",
+      "title": "Embeddings",
+      "uid": "c_YFKRGNUXRH",
+      "x": 623.98,
+      "y": 111.66
+    },
+    {
+      "area_uid": "product-management",
+      "grado": 2,
+      "slug": "product-discovery",
+      "title": "Product Discovery",
+      "uid": "c_YLNAJABAUR",
+      "x": -389.07,
+      "y": -217.5
+    },
+    {
+      "area_uid": "ux-ui",
+      "grado": 5,
+      "slug": "personas-user-models",
+      "title": "Personas & User Models",
+      "uid": "c_YN4BSBEZRX",
+      "x": 377.63,
+      "y": -419.54
+    },
+    {
+      "area_uid": "frontend",
+      "grado": 2,
+      "slug": "formularios",
+      "title": "Formularios",
+      "uid": "c_YPMUNOMCWL",
+      "x": -53.57,
+      "y": 548.67
+    },
+    {
+      "area_uid": "project-management",
+      "grado": 7,
+      "slug": "scheduling",
+      "title": "Scheduling",
+      "uid": "c_YRDFIS7XCB",
+      "x": -145.39,
+      "y": -655.56
+    },
+    {
+      "area_uid": "ux-ui",
+      "grado": 2,
+      "slug": "usability-testing",
+      "title": "Usability Testing",
+      "uid": "c_YTEYG3YOCU",
+      "x": 572.53,
+      "y": -313.08
+    },
+    {
+      "area_uid": "backend",
+      "grado": 4,
+      "slug": "deploy-infraestructura",
+      "title": "Deploy & Infraestructura",
+      "uid": "c_YVRZUYOANU",
+      "x": 517.03,
+      "y": 440.82
+    },
+    {
+      "area_uid": "frontend",
+      "grado": 1,
+      "slug": "routing",
+      "title": "Routing",
+      "uid": "c_Z3T24W22GR",
+      "x": -274.29,
+      "y": 603.03
+    },
+    {
+      "area_uid": "ux-ui",
+      "grado": 3,
+      "slug": "design-systems",
+      "title": "Design Systems",
+      "uid": "c_ZBRCPB5GFK",
+      "x": 351.81,
+      "y": -258.72
+    },
+    {
+      "area_uid": "frontend",
+      "grado": 4,
+      "slug": "performance",
+      "title": "Performance",
+      "uid": "c_ZEMQLX7HXG",
+      "x": -145.39,
+      "y": 409.63
+    },
+    {
+      "area_uid": "frontend",
+      "grado": 3,
+      "slug": "css",
+      "title": "CSS",
+      "uid": "c_ZIBCUCIHW3",
+      "x": -109.07,
+      "y": 644.25
+    },
+    {
+      "area_uid": "ux-ui",
+      "grado": 1,
+      "slug": "accessibility",
+      "title": "Accessibility",
+      "uid": "c_ZIFKUN562S",
+      "x": 480.71,
+      "y": -452.13
+    },
+    {
+      "area_uid": "software-engineering",
+      "grado": 5,
+      "slug": "clean-code",
+      "title": "Clean Code",
+      "uid": "c_ZUGE3YIJ5I",
+      "x": 298.05,
+      "y": -466.89
+    },
+    {
+      "area_uid": "ux-ui",
+      "grado": 5,
+      "slug": "user-journeys",
+      "title": "User Journeys",
+      "uid": "c_ZVUDKC7ITK",
+      "x": 517.03,
+      "y": -217.5
+    },
+    {
+      "area_uid": "os-linux",
+      "grado": 3,
+      "slug": "linux-cli",
+      "title": "Linux CLI",
+      "uid": "c_ZXNIK6IFVD",
+      "x": -496.02,
+      "y": 111.66
+    },
+    {
+      "area_uid": "project-management",
+      "grado": 5,
+      "slug": "requirements",
+      "title": "Requirements",
+      "uid": "c_ZZNQZABFF3",
+      "x": -109.07,
+      "y": -420.93
+    }
+  ]
+}

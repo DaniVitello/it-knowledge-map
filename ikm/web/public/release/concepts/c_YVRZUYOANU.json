@@ -1,0 +1,37 @@
+{
+  "aliases": [
+    "Deploy & Infraestructura"
+  ],
+  "area_uid": "backend",
+  "content_hash": "dd1e17a27dee6f25e531e5abe58a5d3abcde91f63fbc7c5c54e802428fbcd903",
+  "numero": 24,
+  "related_uids": [
+    "c_FLXMOQWDJK",
+    "c_J2J5LSR7ZQ",
+    "c_K5E3UA3HBU",
+    "c_NWJKJRLXFG"
+  ],
+  "sections": {
+    "como_funciona": "1. Escribo el código y lo guardo en un repositorio Git.  \r\n2. El pipeline de CI (por ejemplo GitHub Actions) detecta el push, ejecuta pruebas y construye una **imagen Docker** usando un `Dockerfile` sobre **Linux**.  \r\n3. La imagen se publica en un registro (Docker Hub, ECR).  \r\n4. El pipeline de CD extrae la imagen y la despliega en la **cloud** mediante un servicio de orquestación (ECS, GKE, etc.).  \r\n5. La infraestructura provisionada mantiene el contenedor en ejecución, aplica escalado y monitoriza su salud.",
+    "conexiones": "- **CI/CD**: el pipeline automatiza la construcción y despliegue de la imagen Docker.  \r\n- **Containers**: Docker es la tecnología que permite empaquetar la aplicación para que la infraestructura la ejecute sin variaciones.  \r\n- **Virtualization & Infrastructure**: la capa de virtualización (VM o Kubernetes) provee los recursos donde los contenedores se ejecutan, conectando la lógica de negocio con la hardware subyacente.",
+    "detalles": "- **Básico**: crear un `Dockerfile` sencillo, usar `docker build` y `docker run` en una máquina Linux local.  \r\n- **Intermedio**: integrar pruebas unitarias en el pipeline CI, versionar imágenes con tags semánticos y usar variables de entorno para configuración.  \r\n- **Avanzado**: desplegar con Kubernetes, gestionar secretos con herramientas como Vault, aplicar blue‑green o canary deployments y usar infraestructura como código (Terraform) para provisionar la **cloud**.",
+    "ejemplo_minimo": "```bash\r\n# Dockerfile\r\nFROM python:3.11-slim\r\nWORKDIR /app\r\nCOPY requirements.txt .\r\nRUN pip install -r requirements.txt\r\nCOPY main.py .\r\nCMD [\"python\", \"main.py\"]\r\n```\r\n```bash\r\n# Construir y ejecutar localmente\r\ndocker build -t mi-api:dev .\r\ndocker run -p 8000:8000 mi-api:dev\r\n```",
+    "errores_comunes": "- **Olvidar .dockerignore** → la imagen incluye archivos innecesarios; evita copiando solo lo necesario.  \r\n- **Hardcodear rutas o credenciales** → rompe en otros entornos; usa variables de entorno o secret managers.  \r\n- **No versionar la imagen** → no se puede reproducir un despliegue anterior; etiqueta con versiones.",
+    "estado_actual": "- **Fundamentos estables**: Linux como SO subyacente, Docker para contenedorización y los principios de CI/CD (build‑test‑deploy).  \r\n- **Práctica moderna**: uso de Kubernetes o servicios serverless en la **cloud**, pipelines declarativos (GitHub Actions, GitLab CI) y gestión de infraestructura con Terraform o Pulumi.",
+    "ideas_clave": "1. **Linux** – base del entorno de ejecución; todas las imágenes de contenedor se construyen sobre un kernel Linux.  \r\n2. **Docker** – empaqueta la aplicación y sus dependencias en una imagen portable.  \r\n3. **CI/CD** – automatiza la construcción, pruebas y despliegue de la imagen en cada commit.  \r\n4. **Cloud** – provee la infraestructura (VM, Kubernetes, serverless) donde se ejecutan los contenedores.",
+    "objetivo": "Utilizo Deploy & Infraestructura para pasar código escrito en mi máquina local a un entorno donde pueda ser consumido por otras aplicaciones, garantizando que el servicio esté disponible, escalable y seguro. Resuelvo el problema de reproducir exactamente la misma configuración y dependencias en producción, evitando “funciona en mi máquina”. Aparece cada vez que entrego una API o micro‑servicio: preparo la imagen, la envío a la nube y configuro el pipeline que la actualiza automáticamente. Después de entenderlo puedo orquestar despliegues sin interrupciones, aplicar rollback y monitorizar la salud del servicio. No necesito preocuparme cuando el proyecto es un script puntual que nunca será reutilizado ni expuesto a usuarios externos.",
+    "preguntas_repaso": "1. ¿Por qué es importante que la imagen Docker se construya sobre una base Linux en entornos de backend?  \r\n2. ¿Qué pasos automatiza un pipeline CI/CD al publicar una API?  \r\n3. ¿Cómo evita el archivo `.dockerignore*` que la imagen sea innecesariamente grande?  \r\n4. ¿Cuál es la diferencia entre desplegar un contenedor en una VM y en un clúster Kubernetes?  \r\n5. ¿Qué estrategia de despliegue usarías para introducir una nueva versión sin interrumpir a los usuarios?",
+    "ruta_estudio": "1. **Prerequisitos**: línea de comandos Linux, Git y fundamentos de redes.  \r\n2. **Docker**: crear Dockerfiles, usar `docker compose` y publicar en un registro.  \r\n3. **CI/CD**: diseñar pipelines con GitHub Actions o GitLab CI, incluir pruebas automatizadas.  \r\n4. **Cloud**: familiarizarse con al menos un proveedor (AWS, GCP, Azure), lanzar una VM y desplegar contenedores con ECS, GKE o Cloud Run.  \r\n5. **Orquestación**: aprender conceptos de Kubernetes (pods, deployments, services) y patrones de despliegue (blue‑green, canary)."
+  },
+  "sections_missing": [],
+  "slug": "deploy-infraestructura",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/backend"
+  ],
+  "title": "Deploy & Infraestructura",
+  "uid": "c_YVRZUYOANU",
+  "verification_marks": []
+}

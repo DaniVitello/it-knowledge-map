@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "Object-Oriented Programming"
+  ],
+  "area_uid": "software-engineering",
+  "content_hash": "d19869285b3afc23eaa4767539ef7cc18d668bdee8980e042f3b8d14d88bafb6",
+  "numero": 5,
+  "related_uids": [
+    "c_I4SP5V3R2E",
+    "c_TSM6OQKLAB"
+  ],
+  "sections": {
+    "como_funciona": "1. Defino una clase que encapsula atributos y métodos relevantes.  \r\n2. Si necesito reutilizar comportamiento, creo una subclase que hereda de la clase base.  \r\n3. Sobreescribo o extiendo métodos en la subclase para lograr polimorfismo.  \r\n4. En lugar de profundizar la jerarquía, combino objetos mediante composición, delegando responsabilidades.  \r\n5. El código cliente interactúa solo con la interfaz pública, sin conocer la implementación interna.",
+    "conexiones": "- **Functional Programming**: ofrece alternativas a la mutabilidad y al estado encapsulado, complementando OOP en lenguajes híbridos.  \r\n- **Abstraction**: es la capa conceptual que permite definir interfaces y clases abstractas, esencial para el polimorfismo.  \r\n- **Design Patterns**: encapsulan soluciones recurrentes basadas en los principios de OOP, como Factory o Observer.",
+    "detalles": "- **Básico**: Encapsulación y definición de clases simples; uso de getters/setters para proteger el estado.  \r\n- **Intermedio**: Herencia y polimorfismo mediante interfaces o clases abstractas; sustitución de implementaciones sin cambiar el código cliente.  \r\n- **Avanzado**: Composición y patrones como Strategy o Decorator; diseño de sistemas desacoplados que favorecen la inyección de dependencias y la prueba unitarias.",
+    "ejemplo_minimo": "```python\r\nclass Animal:\r\n    def __init__(self, nombre):\r\n        self._nombre = nombre          # encapsulación\r\n\r\n    def hablar(self):\r\n        raise NotImplementedError()    # polimorfismo\r\n\r\nclass Perro(Animal):\r\n    def hablar(self):\r\n        return \"Guau\"\r\n\r\nclass Gato(Animal):\r\n    def hablar(self):\r\n        return \"Miau\"\r\n\r\nmascota = Perro(\"Luna\")\r\nprint(mascota.hablar())   # → Guau\r\n```",
+    "errores_comunes": "- **Abusar de la herencia**: genera jerarquías rígidas; prefiera composición.  \r\n- **Exponer atributos directamente**: rompe la encapsulación; use métodos de acceso.  \r\n- **Olvidar el polimorfismo**: duplicar código en subclases; delegue en interfaces comunes.",
+    "estado_actual": "Los conceptos de encapsulación, herencia, polimorfismo y composición siguen siendo fundamentos estables de la OOP. En la práctica moderna, la composición y los principios SOLID son enfatizados para lograr sistemas más flexibles y testeables, mientras que la herencia se usa con moderación.",
+    "ideas_clave": "1. **Encapsulación** – Oculta el estado interno de un objeto y expone solo una interfaz controlada.  \r\n2. **Herencia** – Permite que una clase derive comportamientos y atributos de otra, creando jerarquías reutilizables.  \r\n3. **Polimorfismo** – Hace posible que distintas clases respondan al mismo mensaje de forma específica, facilitando la sustitución.  \r\n4. **Composición** – Favorece la construcción de objetos a partir de otros objetos, evitando la rigidez de la herencia múltiple.",
+    "objetivo": "Utilizo la Programación Orientada a Objetos (OOP) para estructurar el código en unidades reutilizables que modelan conceptos del dominio del problema. Resuelvo la complejidad de sistemas grandes al agrupar datos y comportamiento en objetos, facilitando el mantenimiento y la extensibilidad. En mi día a día como ingeniero de software, OOP aparece al diseñar APIs, componentes de UI, servicios backend y cualquier arquitectura que requiera claridad de responsabilidades. Después de comprender OOP, puedo aplicar patrones de diseño, refactorizar código heredado y colaborar eficazmente en equipos que siguen principios de arquitectura limpia. No necesito preocuparme por OOP cuando trabajo con scripts simples o algoritmos aislados donde la sobrecarga de clases no aporta valor.",
+    "preguntas_repaso": "1. ¿Qué ventaja aporta la encapsulación al mantener la integridad del estado interno de un objeto?  \r\n2. ¿En qué situaciones es preferible usar composición en lugar de herencia?  \r\n3. ¿Cómo permite el polimorfismo que diferentes clases respondan al mismo método?  \r\n4. ¿Qué papel juegan las interfaces en la implementación del polimorfismo?  \r\n5. ¿Cómo se relaciona la abstracción con la definición de clases abstractas en OOP?",
+    "ruta_estudio": "1. **Prerequisitos**: conceptos de variables, tipos de datos y estructuras de control.  \r\n2. **Fundamentos**: clases, objetos, encapsulación y métodos.  \r\n3. **Profundización**: herencia, interfaces y polimorfismo.  \r\n4. **Avanzado**: composición, inyección de dependencias y patrones de diseño.  \r\n5. **Práctica**: refactorizar un proyecto existente aplicando SOLID y patrones basados en OOP."
+  },
+  "sections_missing": [],
+  "slug": "object-oriented-programming",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/software-engineering"
+  ],
+  "title": "Object-Oriented Programming",
+  "uid": "c_KZHQNGA3LM",
+  "verification_marks": []
+}

@@ -409,32 +409,31 @@ export default function GraphCanvas({
       }
     }
 
-    // Labels: foco (hover/selección/vecinos/camino) siempre; el resto aparece
-    // al acercar (text-fade por zoom, como Obsidian).
-    const zoomLabel = Math.max(0, Math.min(1, (k - 1.05) / 0.5));
-    ctx.font = '11px system-ui, sans-serif';
+    // Labels: por defecto solo los títulos estructurales (cabezas de área en
+    // mapa; áreas + raíz en Obsidian). El resto aparece al hover/selección/camino.
     ctx.textBaseline = 'middle';
     for (const n of nodes) {
       const p = P.get(n.uid);
       if (!p) continue;
-      const isFocus = focusSet.has(n.uid) || n.uid === selectedUid || (activeSet?.has(n.uid) ?? false) || (p.isHead ?? false) || (obsidian && nodeKind(n.uid) !== 'concept');
-      const la = isFocus ? 1 : zoomLabel;
-      if (la <= 0.02) continue;
+      const isStructural = (p.isHead ?? false) || (obsidian && nodeKind(n.uid) !== 'concept');
+      const isRevealed = focusSet.has(n.uid) || (activeSet?.has(n.uid) ?? false);
+      if (!isStructural && !isRevealed) continue;
       const na = nodeAlpha(n);
-      if (na < 0.3) continue;
-      if (areaFilter && n.area_uid !== areaFilter && !isFocus) continue;
+      if (na < 0.3 && !isStructural) continue;
+      if (areaFilter && n.area_uid !== areaFilter && !isRevealed) continue;
       const x = sx(p.x);
       const y = sy(p.y);
       if (x < -120 || x > w + 120 || y < -20 || y > h + 20) continue;
       const r = Math.max((obsidian ? obsR(n.grado) : nodeR(n.grado)) * k, 1.6);
+      ctx.font = isStructural ? '600 10px system-ui, sans-serif' : '9px system-ui, sans-serif';
       const text = n.title;
       const tw = ctx.measureText(text).width;
-      const lx = x + r + 6;
+      const lx = x + r + 5;
       const ly = y;
-      const a = la * (isFocus ? 1 : na);
+      const a = isRevealed ? 1 : 0.95;
       ctx.fillStyle = pal.bg.replace('rgb(', 'rgba(').replace(')', ` / ${0.82 * a})`);
       ctx.beginPath();
-      ctx.roundRect(lx - 4, ly - 9, tw + 8, 18, 4);
+      ctx.roundRect(lx - 3, ly - 7, tw + 6, 14, 3);
       ctx.fill();
       ctx.fillStyle = (n.uid === selectedUid || n.uid === hover.current ? pal.accent : pal.ink)
         .replace('rgb(', 'rgba(').replace(')', ` / ${a})`);

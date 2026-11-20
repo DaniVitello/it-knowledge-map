@@ -1,0 +1,2370 @@
+{
+  "areas": [
+    {
+      "count": 30,
+      "name": "Software Engineering",
+      "order": 1,
+      "uid": "software-engineering"
+    },
+    {
+      "count": 25,
+      "name": "Frontend",
+      "order": 2,
+      "uid": "frontend"
+    },
+    {
+      "count": 25,
+      "name": "Backend",
+      "order": 3,
+      "uid": "backend"
+    },
+    {
+      "count": 25,
+      "name": "Database & Data Analytics",
+      "order": 4,
+      "uid": "database"
+    },
+    {
+      "count": 25,
+      "name": "Networking & Internet",
+      "order": 5,
+      "uid": "networking"
+    },
+    {
+      "count": 25,
+      "name": "Operating Systems & Linux",
+      "order": 6,
+      "uid": "os-linux"
+    },
+    {
+      "count": 25,
+      "name": "AI Engineering",
+      "order": 7,
+      "uid": "ai-engineering"
+    },
+    {
+      "count": 25,
+      "name": "UX & UI",
+      "order": 8,
+      "uid": "ux-ui"
+    },
+    {
+      "count": 25,
+      "name": "Product Management",
+      "order": 9,
+      "uid": "product-management"
+    },
+    {
+      "count": 25,
+      "name": "Project Management",
+      "order": 10,
+      "uid": "project-management"
+    }
+  ],
+  "concepts": [
+    {
+      "area_uid": "ai-engineering",
+      "marks_count": 3,
+      "numero": 1,
+      "sections_missing": [],
+      "slug": "ai-ml-fundamentals",
+      "title": "AI / ML Fundamentals",
+      "uid": "c_J7TPLADZIN"
+    },
+    {
+      "area_uid": "ai-engineering",
+      "marks_count": 0,
+      "numero": 2,
+      "sections_missing": [],
+      "slug": "python-programming",
+      "title": "Python & Programming",
+      "uid": "c_GQXGQSF53L"
+    },
+    {
+      "area_uid": "ai-engineering",
+      "marks_count": 0,
+      "numero": 3,
+      "sections_missing": [],
+      "slug": "linear-algebra-probability",
+      "title": "Linear Algebra & Probability",
+      "uid": "c_27KJZ2SSUT"
+    },
+    {
+      "area_uid": "ai-engineering",
+      "marks_count": 0,
+      "numero": 4,
+      "sections_missing": [],
+      "slug": "machine-learning-fundamentals",
+      "title": "Machine Learning Fundamentals",
+      "uid": "c_LAYNEBDIRF"
+    },
+    {
+      "area_uid": "ai-engineering",
+      "marks_count": 0,
+      "numero": 5,
+      "sections_missing": [],
+      "slug": "neural-networks",
+      "title": "Neural Networks",
+      "uid": "c_CG3CPXKFLT"
+    },
+    {
+      "area_uid": "ai-engineering",
+      "marks_count": 0,
+      "numero": 6,
+      "sections_missing": [],
+      "slug": "transformers",
+      "title": "Transformers",
+      "uid": "c_R42HL4B5YW"
+    },
+    {
+      "area_uid": "ai-engineering",
+      "marks_count": 0,
+      "numero": 7,
+      "sections_missing": [],
+      "slug": "llms",
+      "title": "LLMs",
+      "uid": "c_AG5JLRF7W4"
+    },
+    {
+      "area_uid": "ai-engineering",
+      "marks_count": 0,
+      "numero": 8,
+      "sections_missing": [],
+      "slug": "tokenization",
+      "title": "Tokenization",
+      "uid": "c_APDCP5OPVF"
+    },
+    {
+      "area_uid": "ai-engineering",
+      "marks_count": 0,
+      "numero": 9,
+      "sections_missing": [],
+      "slug": "embeddings",
+      "title": "Embeddings",
+      "uid": "c_YFKRGNUXRH"
+    },
+    {
+      "area_uid": "ai-engineering",
+      "marks_count": 0,
+      "numero": 10,
+      "sections_missing": [],
+      "slug": "prompt-engineering",
+      "title": "Prompt Engineering",
+      "uid": "c_RJE3D4II2X"
+    },
+    {
+      "area_uid": "ai-engineering",
+      "marks_count": 0,
+      "numero": 11,
+      "sections_missing": [],
+      "slug": "structured-outputs",
+      "title": "Structured Outputs",
+      "uid": "c_LQGB44U4DC"
+    },
+    {
+      "area_uid": "ai-engineering",
+      "marks_count": 0,
+      "numero": 12,
+      "sections_missing": [],
+      "slug": "llm-apis-model-serving",
+      "title": "LLM APIs & Model Serving",
+      "uid": "c_3P4PYNPIER"
+    },
+    {
+      "area_uid": "ai-engineering",
+      "marks_count": 0,
+      "numero": 13,
+      "sections_missing": [],
+      "slug": "tool-calling",
+      "title": "Tool Calling",
+      "uid": "c_R73S6QTQFN"
+    },
+    {
+      "area_uid": "ai-engineering",
+      "marks_count": 0,
+      "numero": 14,
+      "sections_missing": [],
+      "slug": "rag",
+      "title": "RAG",
+      "uid": "c_XPKAEIKUDL"
+    },
+    {
+      "area_uid": "ai-engineering",
+      "marks_count": 0,
+      "numero": 15,
+      "sections_missing": [],
+      "slug": "vector-databases",
+      "title": "Vector Databases",
+      "uid": "c_DCYZGXRVW2"
+    },
+    {
+      "area_uid": "ai-engineering",
+      "marks_count": 0,
+      "numero": 16,
+      "sections_missing": [],
+      "slug": "agents",
+      "title": "Agents",
+      "uid": "c_EC777UCG67"
+    },
+    {
+      "area_uid": "ai-engineering",
+      "marks_count": 0,
+      "numero": 17,
+      "sections_missing": [],
+      "slug": "ai-workflows",
+      "title": "AI Workflows",
+      "uid": "c_64ZKUJ47VT"
+    },
+    {
+      "area_uid": "ai-engineering",
+      "marks_count": 0,
+      "numero": 18,
+      "sections_missing": [],
+      "slug": "context-engineering",
+      "title": "Context Engineering",
+      "uid": "c_JS77WZ6QYB"
+    },
+    {
+      "area_uid": "ai-engineering",
+      "marks_count": 0,
+      "numero": 19,
+      "sections_missing": [],
+      "slug": "memory",
+      "title": "Memory",
+      "uid": "c_4ZDQZL6GC7"
+    },
+    {
+      "area_uid": "ai-engineering",
+      "marks_count": 0,
+      "numero": 20,
+      "sections_missing": [],
+      "slug": "evaluation",
+      "title": "Evaluation",
+      "uid": "c_5VSM4JTVVK"
+    },
+    {
+      "area_uid": "ai-engineering",
+      "marks_count": 0,
+      "numero": 21,
+      "sections_missing": [],
+      "slug": "ai-safety-security",
+      "title": "AI Safety & Security",
+      "uid": "c_CSHCCYYZWJ"
+    },
+    {
+      "area_uid": "ai-engineering",
+      "marks_count": 0,
+      "numero": 22,
+      "sections_missing": [],
+      "slug": "observability",
+      "title": "Observability",
+      "uid": "c_MMPVIHXRHF"
+    },
+    {
+      "area_uid": "ai-engineering",
+      "marks_count": 0,
+      "numero": 23,
+      "sections_missing": [],
+      "slug": "ai-infrastructure",
+      "title": "AI Infrastructure",
+      "uid": "c_FLXMOQWDJK"
+    },
+    {
+      "area_uid": "ai-engineering",
+      "marks_count": 0,
+      "numero": 24,
+      "sections_missing": [],
+      "slug": "fine-tuning-adaptation",
+      "title": "Fine-tuning & Adaptation",
+      "uid": "c_BGANTCDDFJ"
+    },
+    {
+      "area_uid": "ai-engineering",
+      "marks_count": 0,
+      "numero": 25,
+      "sections_missing": [],
+      "slug": "ai-system-architecture",
+      "title": "AI System Architecture",
+      "uid": "c_WSNDQEO6MW"
+    },
+    {
+      "area_uid": "backend",
+      "marks_count": 0,
+      "numero": 1,
+      "sections_missing": [],
+      "slug": "cliente-servidor",
+      "title": "Cliente-Servidor",
+      "uid": "c_MSTGJ6MKWW"
+    },
+    {
+      "area_uid": "backend",
+      "marks_count": 0,
+      "numero": 2,
+      "sections_missing": [],
+      "slug": "http",
+      "title": "HTTP",
+      "uid": "c_267BQAZTKD"
+    },
+    {
+      "area_uid": "backend",
+      "marks_count": 0,
+      "numero": 3,
+      "sections_missing": [],
+      "slug": "servidor",
+      "title": "Servidor",
+      "uid": "c_DCMEIR6SK3"
+    },
+    {
+      "area_uid": "backend",
+      "marks_count": 0,
+      "numero": 4,
+      "sections_missing": [],
+      "slug": "lenguaje-backend",
+      "title": "Lenguaje Backend",
+      "uid": "c_EDRNN4EAFB"
+    },
+    {
+      "area_uid": "backend",
+      "marks_count": 0,
+      "numero": 5,
+      "sections_missing": [],
+      "slug": "runtime",
+      "title": "Runtime",
+      "uid": "c_THBEXYTI7F"
+    },
+    {
+      "area_uid": "backend",
+      "marks_count": 0,
+      "numero": 6,
+      "sections_missing": [],
+      "slug": "routing",
+      "title": "Routing",
+      "uid": "c_US5R27XHAB"
+    },
+    {
+      "area_uid": "backend",
+      "marks_count": 0,
+      "numero": 7,
+      "sections_missing": [],
+      "slug": "apis",
+      "title": "APIs",
+      "uid": "c_MBMF42FTPA"
+    },
+    {
+      "area_uid": "backend",
+      "marks_count": 0,
+      "numero": 8,
+      "sections_missing": [],
+      "slug": "middleware",
+      "title": "Middleware",
+      "uid": "c_N3N6CTKPIA"
+    },
+    {
+      "area_uid": "backend",
+      "marks_count": 0,
+      "numero": 9,
+      "sections_missing": [],
+      "slug": "validacion",
+      "title": "Validación",
+      "uid": "c_D7P4FE3X2D"
+    },
+    {
+      "area_uid": "backend",
+      "marks_count": 0,
+      "numero": 10,
+      "sections_missing": [],
+      "slug": "arquitectura-de-aplicaciones",
+      "title": "Arquitectura de aplicaciones",
+      "uid": "c_DVLX2W7PQH"
+    },
+    {
+      "area_uid": "backend",
+      "marks_count": 0,
+      "numero": 11,
+      "sections_missing": [],
+      "slug": "bases-de-datos",
+      "title": "Bases de datos",
+      "uid": "c_LIWOFAKHEO"
+    },
+    {
+      "area_uid": "backend",
+      "marks_count": 0,
+      "numero": 12,
+      "sections_missing": [],
+      "slug": "sql",
+      "title": "SQL",
+      "uid": "c_OJEU3FYCQW"
+    },
+    {
+      "area_uid": "backend",
+      "marks_count": 0,
+      "numero": 13,
+      "sections_missing": [],
+      "slug": "modelado-de-datos",
+      "title": "Modelado de datos",
+      "uid": "c_6QUR6EX2HV"
+    },
+    {
+      "area_uid": "backend",
+      "marks_count": 0,
+      "numero": 14,
+      "sections_missing": [],
+      "slug": "orm-data-access",
+      "title": "ORM / Data Access",
+      "uid": "c_BHKPT7WX3D"
+    },
+    {
+      "area_uid": "backend",
+      "marks_count": 0,
+      "numero": 15,
+      "sections_missing": [],
+      "slug": "transacciones",
+      "title": "Transacciones",
+      "uid": "c_B32XQT5J5V"
+    },
+    {
+      "area_uid": "backend",
+      "marks_count": 0,
+      "numero": 16,
+      "sections_missing": [],
+      "slug": "autenticacion",
+      "title": "Autenticación",
+      "uid": "c_DHDG7TOBNK"
+    },
+    {
+      "area_uid": "backend",
+      "marks_count": 0,
+      "numero": 17,
+      "sections_missing": [],
+      "slug": "autorizacion",
+      "title": "Autorización",
+      "uid": "c_56N6B2BTGY"
+    },
+    {
+      "area_uid": "backend",
+      "marks_count": 0,
+      "numero": 18,
+      "sections_missing": [],
+      "slug": "seguridad",
+      "title": "Seguridad",
+      "uid": "c_KUZUIAJVV7"
+    },
+    {
+      "area_uid": "backend",
+      "marks_count": 0,
+      "numero": 19,
+      "sections_missing": [],
+      "slug": "caching",
+      "title": "Caching",
+      "uid": "c_PAUDUA5YDA"
+    },
+    {
+      "area_uid": "backend",
+      "marks_count": 0,
+      "numero": 20,
+      "sections_missing": [],
+      "slug": "asincronia-concurrencia",
+      "title": "Asincronía & Concurrencia",
+      "uid": "c_ESB3I2EXYR"
+    },
+    {
+      "area_uid": "backend",
+      "marks_count": 0,
+      "numero": 21,
+      "sections_missing": [],
+      "slug": "mensajeria",
+      "title": "Mensajería",
+      "uid": "c_Y2M5VLS32J"
+    },
+    {
+      "area_uid": "backend",
+      "marks_count": 0,
+      "numero": 22,
+      "sections_missing": [],
+      "slug": "observabilidad",
+      "title": "Observabilidad",
+      "uid": "c_H7VQOVE2NF"
+    },
+    {
+      "area_uid": "backend",
+      "marks_count": 0,
+      "numero": 23,
+      "sections_missing": [],
+      "slug": "testing-backend",
+      "title": "Testing Backend",
+      "uid": "c_GQ3G6NABQ6"
+    },
+    {
+      "area_uid": "backend",
+      "marks_count": 0,
+      "numero": 24,
+      "sections_missing": [],
+      "slug": "deploy-infraestructura",
+      "title": "Deploy & Infraestructura",
+      "uid": "c_YVRZUYOANU"
+    },
+    {
+      "area_uid": "backend",
+      "marks_count": 0,
+      "numero": 25,
+      "sections_missing": [],
+      "slug": "sistemas-distribuidos",
+      "title": "Sistemas distribuidos",
+      "uid": "c_VXNPWGQTHB"
+    },
+    {
+      "area_uid": "database",
+      "marks_count": 2,
+      "numero": 1,
+      "sections_missing": [],
+      "slug": "data-fundamentals",
+      "title": "Data Fundamentals",
+      "uid": "c_FTJALUGRAX"
+    },
+    {
+      "area_uid": "database",
+      "marks_count": 0,
+      "numero": 2,
+      "sections_missing": [],
+      "slug": "data-modeling",
+      "title": "Data Modeling",
+      "uid": "c_3GNOH5HEH5"
+    },
+    {
+      "area_uid": "database",
+      "marks_count": 0,
+      "numero": 3,
+      "sections_missing": [],
+      "slug": "relational-databases",
+      "title": "Relational Databases",
+      "uid": "c_3IEBYDYAQB"
+    },
+    {
+      "area_uid": "database",
+      "marks_count": 0,
+      "numero": 4,
+      "sections_missing": [],
+      "slug": "sql",
+      "title": "SQL",
+      "uid": "c_W4GRE7UMJ6"
+    },
+    {
+      "area_uid": "database",
+      "marks_count": 0,
+      "numero": 5,
+      "sections_missing": [],
+      "slug": "filtering-aggregation",
+      "title": "Filtering & Aggregation",
+      "uid": "c_JTW257OVQT"
+    },
+    {
+      "area_uid": "database",
+      "marks_count": 0,
+      "numero": 6,
+      "sections_missing": [],
+      "slug": "joins",
+      "title": "JOINs",
+      "uid": "c_HIO7YVG2DS"
+    },
+    {
+      "area_uid": "database",
+      "marks_count": 0,
+      "numero": 7,
+      "sections_missing": [],
+      "slug": "keys-constraints",
+      "title": "Keys & Constraints",
+      "uid": "c_6WHYRNWVHH"
+    },
+    {
+      "area_uid": "database",
+      "marks_count": 0,
+      "numero": 8,
+      "sections_missing": [],
+      "slug": "normalization",
+      "title": "Normalization",
+      "uid": "c_OX2ZGYHT7N"
+    },
+    {
+      "area_uid": "database",
+      "marks_count": 0,
+      "numero": 9,
+      "sections_missing": [],
+      "slug": "indexes",
+      "title": "Indexes",
+      "uid": "c_O5H6HCDAXZ"
+    },
+    {
+      "area_uid": "database",
+      "marks_count": 0,
+      "numero": 10,
+      "sections_missing": [],
+      "slug": "transactions",
+      "title": "Transactions",
+      "uid": "c_R72555O3AV"
+    },
+    {
+      "area_uid": "database",
+      "marks_count": 0,
+      "numero": 11,
+      "sections_missing": [],
+      "slug": "acid-isolation",
+      "title": "ACID & Isolation",
+      "uid": "c_J3Q7F3X33C"
+    },
+    {
+      "area_uid": "database",
+      "marks_count": 0,
+      "numero": 12,
+      "sections_missing": [],
+      "slug": "database-architecture",
+      "title": "Database Architecture",
+      "uid": "c_JWMD5PBSD7"
+    },
+    {
+      "area_uid": "database",
+      "marks_count": 0,
+      "numero": 13,
+      "sections_missing": [],
+      "slug": "nosql",
+      "title": "NoSQL",
+      "uid": "c_QTK2SYOTSW"
+    },
+    {
+      "area_uid": "database",
+      "marks_count": 0,
+      "numero": 14,
+      "sections_missing": [],
+      "slug": "data-warehouses",
+      "title": "Data Warehouses",
+      "uid": "c_AW3CMP3J7S"
+    },
+    {
+      "area_uid": "database",
+      "marks_count": 0,
+      "numero": 15,
+      "sections_missing": [],
+      "slug": "oltp-vs-olap",
+      "title": "OLTP vs OLAP",
+      "uid": "c_UQ7BW2UQHQ"
+    },
+    {
+      "area_uid": "database",
+      "marks_count": 0,
+      "numero": 16,
+      "sections_missing": [],
+      "slug": "etl-elt",
+      "title": "ETL / ELT",
+      "uid": "c_EIJI27LM76"
+    },
+    {
+      "area_uid": "database",
+      "marks_count": 0,
+      "numero": 17,
+      "sections_missing": [],
+      "slug": "data-pipelines",
+      "title": "Data Pipelines",
+      "uid": "c_NTZ6VGXWNA"
+    },
+    {
+      "area_uid": "database",
+      "marks_count": 0,
+      "numero": 18,
+      "sections_missing": [],
+      "slug": "data-quality",
+      "title": "Data Quality",
+      "uid": "c_36OGTOCIKG"
+    },
+    {
+      "area_uid": "database",
+      "marks_count": 0,
+      "numero": 19,
+      "sections_missing": [],
+      "slug": "data-cleaning",
+      "title": "Data Cleaning",
+      "uid": "c_OAPY46OJKC"
+    },
+    {
+      "area_uid": "database",
+      "marks_count": 0,
+      "numero": 20,
+      "sections_missing": [],
+      "slug": "data-analysis",
+      "title": "Data Analysis",
+      "uid": "c_DMG36WFAUY"
+    },
+    {
+      "area_uid": "database",
+      "marks_count": 1,
+      "numero": 21,
+      "sections_missing": [],
+      "slug": "statistics",
+      "title": "Statistics",
+      "uid": "c_SNCAJUJCGH"
+    },
+    {
+      "area_uid": "database",
+      "marks_count": 0,
+      "numero": 22,
+      "sections_missing": [],
+      "slug": "analytics-metrics",
+      "title": "Analytics Metrics",
+      "uid": "c_E2BEEPTCLY"
+    },
+    {
+      "area_uid": "database",
+      "marks_count": 0,
+      "numero": 23,
+      "sections_missing": [],
+      "slug": "data-visualization",
+      "title": "Data Visualization",
+      "uid": "c_VIGZHRVRFY"
+    },
+    {
+      "area_uid": "database",
+      "marks_count": 0,
+      "numero": 24,
+      "sections_missing": [],
+      "slug": "bi-reporting",
+      "title": "BI & Reporting",
+      "uid": "c_OO3XXXZMWY"
+    },
+    {
+      "area_uid": "database",
+      "marks_count": 0,
+      "numero": 25,
+      "sections_missing": [],
+      "slug": "advanced-data-architecture",
+      "title": "Advanced Data Architecture",
+      "uid": "c_XGWNYRU3HQ"
+    },
+    {
+      "area_uid": "frontend",
+      "marks_count": 0,
+      "numero": 1,
+      "sections_missing": [],
+      "slug": "internet-web",
+      "title": "Internet & Web",
+      "uid": "c_NYZQU435OZ"
+    },
+    {
+      "area_uid": "frontend",
+      "marks_count": 0,
+      "numero": 2,
+      "sections_missing": [],
+      "slug": "html",
+      "title": "HTML",
+      "uid": "c_IFH4CCKUM6"
+    },
+    {
+      "area_uid": "frontend",
+      "marks_count": 0,
+      "numero": 3,
+      "sections_missing": [],
+      "slug": "css",
+      "title": "CSS",
+      "uid": "c_ZIBCUCIHW3"
+    },
+    {
+      "area_uid": "frontend",
+      "marks_count": 1,
+      "numero": 4,
+      "sections_missing": [],
+      "slug": "layout",
+      "title": "Layout",
+      "uid": "c_HRF35BCROZ"
+    },
+    {
+      "area_uid": "frontend",
+      "marks_count": 0,
+      "numero": 5,
+      "sections_missing": [],
+      "slug": "dom",
+      "title": "DOM",
+      "uid": "c_UTVABXNLDY"
+    },
+    {
+      "area_uid": "frontend",
+      "marks_count": 0,
+      "numero": 6,
+      "sections_missing": [],
+      "slug": "javascript",
+      "title": "JavaScript",
+      "uid": "c_QWAQTV7JRM"
+    },
+    {
+      "area_uid": "frontend",
+      "marks_count": 0,
+      "numero": 7,
+      "sections_missing": [],
+      "slug": "javascript-avanzado",
+      "title": "JavaScript avanzado",
+      "uid": "c_3G2O5BM4F2"
+    },
+    {
+      "area_uid": "frontend",
+      "marks_count": 0,
+      "numero": 8,
+      "sections_missing": [],
+      "slug": "eventos",
+      "title": "Eventos",
+      "uid": "c_LFYZZYAIJK"
+    },
+    {
+      "area_uid": "frontend",
+      "marks_count": 0,
+      "numero": 9,
+      "sections_missing": [],
+      "slug": "asincronia",
+      "title": "Asincronía",
+      "uid": "c_NTNITJDH3Q"
+    },
+    {
+      "area_uid": "frontend",
+      "marks_count": 0,
+      "numero": 10,
+      "sections_missing": [],
+      "slug": "web-apis",
+      "title": "Web APIs",
+      "uid": "c_3OASTRUQ7K"
+    },
+    {
+      "area_uid": "frontend",
+      "marks_count": 0,
+      "numero": 11,
+      "sections_missing": [],
+      "slug": "json-apis",
+      "title": "JSON & APIs",
+      "uid": "c_OD7QLNQ7GN"
+    },
+    {
+      "area_uid": "frontend",
+      "marks_count": 0,
+      "numero": 12,
+      "sections_missing": [],
+      "slug": "typescript",
+      "title": "TypeScript",
+      "uid": "c_KZQAC7GGYB"
+    },
+    {
+      "area_uid": "frontend",
+      "marks_count": 0,
+      "numero": 13,
+      "sections_missing": [],
+      "slug": "componentizacion",
+      "title": "Componentización",
+      "uid": "c_JPHEZJIFHI"
+    },
+    {
+      "area_uid": "frontend",
+      "marks_count": 0,
+      "numero": 14,
+      "sections_missing": [],
+      "slug": "frameworks-ui",
+      "title": "Frameworks UI",
+      "uid": "c_VXHILN4GCI"
+    },
+    {
+      "area_uid": "frontend",
+      "marks_count": 0,
+      "numero": 15,
+      "sections_missing": [],
+      "slug": "estado",
+      "title": "Estado",
+      "uid": "c_WYVLRHHAGA"
+    },
+    {
+      "area_uid": "frontend",
+      "marks_count": 0,
+      "numero": 16,
+      "sections_missing": [],
+      "slug": "routing",
+      "title": "Routing",
+      "uid": "c_Z3T24W22GR"
+    },
+    {
+      "area_uid": "frontend",
+      "marks_count": 0,
+      "numero": 17,
+      "sections_missing": [],
+      "slug": "formularios",
+      "title": "Formularios",
+      "uid": "c_YPMUNOMCWL"
+    },
+    {
+      "area_uid": "frontend",
+      "marks_count": 3,
+      "numero": 18,
+      "sections_missing": [],
+      "slug": "data-fetching",
+      "title": "Data fetching",
+      "uid": "c_KFFEDHVX2D"
+    },
+    {
+      "area_uid": "frontend",
+      "marks_count": 0,
+      "numero": 19,
+      "sections_missing": [],
+      "slug": "autenticacion-en-frontend",
+      "title": "Autenticación en Frontend",
+      "uid": "c_NNWQH47RM7"
+    },
+    {
+      "area_uid": "frontend",
+      "marks_count": 0,
+      "numero": 20,
+      "sections_missing": [],
+      "slug": "accesibilidad",
+      "title": "Accesibilidad",
+      "uid": "c_FYUNN3WTKX"
+    },
+    {
+      "area_uid": "frontend",
+      "marks_count": 0,
+      "numero": 21,
+      "sections_missing": [],
+      "slug": "tooling",
+      "title": "Tooling",
+      "uid": "c_HXX4IZHTB2"
+    },
+    {
+      "area_uid": "frontend",
+      "marks_count": 0,
+      "numero": 22,
+      "sections_missing": [],
+      "slug": "testing",
+      "title": "Testing",
+      "uid": "c_FF2SVKAIK5"
+    },
+    {
+      "area_uid": "frontend",
+      "marks_count": 0,
+      "numero": 23,
+      "sections_missing": [],
+      "slug": "performance",
+      "title": "Performance",
+      "uid": "c_ZEMQLX7HXG"
+    },
+    {
+      "area_uid": "frontend",
+      "marks_count": 0,
+      "numero": 24,
+      "sections_missing": [],
+      "slug": "rendering-moderno",
+      "title": "Rendering moderno",
+      "uid": "c_RPCIXH4YRU"
+    },
+    {
+      "area_uid": "frontend",
+      "marks_count": 0,
+      "numero": 25,
+      "sections_missing": [],
+      "slug": "arquitectura-frontend",
+      "title": "Arquitectura Frontend",
+      "uid": "c_UAIG2N6OVP"
+    },
+    {
+      "area_uid": "networking",
+      "marks_count": 0,
+      "numero": 1,
+      "sections_missing": [],
+      "slug": "internet",
+      "title": "Internet",
+      "uid": "c_E6UZ37VTA5"
+    },
+    {
+      "area_uid": "networking",
+      "marks_count": 0,
+      "numero": 2,
+      "sections_missing": [],
+      "slug": "ip",
+      "title": "IP",
+      "uid": "c_2PTU533FKL"
+    },
+    {
+      "area_uid": "networking",
+      "marks_count": 0,
+      "numero": 3,
+      "sections_missing": [],
+      "slug": "ipv4-ipv6",
+      "title": "IPv4 / IPv6",
+      "uid": "c_2JD2BRCXIP"
+    },
+    {
+      "area_uid": "networking",
+      "marks_count": 0,
+      "numero": 4,
+      "sections_missing": [],
+      "slug": "tcp",
+      "title": "TCP",
+      "uid": "c_MFJRR5DWJK"
+    },
+    {
+      "area_uid": "networking",
+      "marks_count": 0,
+      "numero": 5,
+      "sections_missing": [],
+      "slug": "udp",
+      "title": "UDP",
+      "uid": "c_XXNA5W3TON"
+    },
+    {
+      "area_uid": "networking",
+      "marks_count": 0,
+      "numero": 6,
+      "sections_missing": [],
+      "slug": "puertos",
+      "title": "Puertos",
+      "uid": "c_BKADYY4BKV"
+    },
+    {
+      "area_uid": "networking",
+      "marks_count": 0,
+      "numero": 7,
+      "sections_missing": [],
+      "slug": "dns",
+      "title": "DNS",
+      "uid": "c_LJXCYJ6ING"
+    },
+    {
+      "area_uid": "networking",
+      "marks_count": 0,
+      "numero": 8,
+      "sections_missing": [],
+      "slug": "dhcp",
+      "title": "DHCP",
+      "uid": "c_U5JT2ERKLO"
+    },
+    {
+      "area_uid": "networking",
+      "marks_count": 0,
+      "numero": 9,
+      "sections_missing": [],
+      "slug": "mac-ethernet",
+      "title": "MAC / Ethernet",
+      "uid": "c_4ITHESA6PF"
+    },
+    {
+      "area_uid": "networking",
+      "marks_count": 0,
+      "numero": 10,
+      "sections_missing": [],
+      "slug": "arp",
+      "title": "ARP",
+      "uid": "c_5HU37V2FFX"
+    },
+    {
+      "area_uid": "networking",
+      "marks_count": 0,
+      "numero": 11,
+      "sections_missing": [],
+      "slug": "routing",
+      "title": "Routing",
+      "uid": "c_DWZHOC5BVU"
+    },
+    {
+      "area_uid": "networking",
+      "marks_count": 0,
+      "numero": 12,
+      "sections_missing": [],
+      "slug": "routers",
+      "title": "Routers",
+      "uid": "c_CJT5ACWXAB"
+    },
+    {
+      "area_uid": "networking",
+      "marks_count": 0,
+      "numero": 13,
+      "sections_missing": [],
+      "slug": "nat",
+      "title": "NAT",
+      "uid": "c_4OYZ6EPV64"
+    },
+    {
+      "area_uid": "networking",
+      "marks_count": 0,
+      "numero": 14,
+      "sections_missing": [],
+      "slug": "subnetting-cidr",
+      "title": "Subnetting / CIDR",
+      "uid": "c_KFUMZO44RS"
+    },
+    {
+      "area_uid": "networking",
+      "marks_count": 0,
+      "numero": 15,
+      "sections_missing": [],
+      "slug": "osi-tcp-ip-model",
+      "title": "OSI / TCP-IP Model",
+      "uid": "c_BYSBDXVLVP"
+    },
+    {
+      "area_uid": "networking",
+      "marks_count": 0,
+      "numero": 16,
+      "sections_missing": [],
+      "slug": "http",
+      "title": "HTTP",
+      "uid": "c_KMBVXYCQPO"
+    },
+    {
+      "area_uid": "networking",
+      "marks_count": 0,
+      "numero": 17,
+      "sections_missing": [],
+      "slug": "https-tls",
+      "title": "HTTPS / TLS",
+      "uid": "c_D2IZ67V6IU"
+    },
+    {
+      "area_uid": "networking",
+      "marks_count": 0,
+      "numero": 18,
+      "sections_missing": [],
+      "slug": "request-response",
+      "title": "Request / Response",
+      "uid": "c_3YET5TARBZ"
+    },
+    {
+      "area_uid": "networking",
+      "marks_count": 0,
+      "numero": 19,
+      "sections_missing": [],
+      "slug": "http-methods",
+      "title": "HTTP Methods",
+      "uid": "c_PJZHQDBJWY"
+    },
+    {
+      "area_uid": "networking",
+      "marks_count": 0,
+      "numero": 20,
+      "sections_missing": [],
+      "slug": "http-status-codes",
+      "title": "HTTP Status Codes",
+      "uid": "c_XNSCZALME2"
+    },
+    {
+      "area_uid": "networking",
+      "marks_count": 0,
+      "numero": 21,
+      "sections_missing": [],
+      "slug": "headers-cookies",
+      "title": "Headers / Cookies",
+      "uid": "c_IRKTW3AVGM"
+    },
+    {
+      "area_uid": "networking",
+      "marks_count": 0,
+      "numero": 22,
+      "sections_missing": [],
+      "slug": "websockets",
+      "title": "WebSockets",
+      "uid": "c_2SYCRXYECS"
+    },
+    {
+      "area_uid": "networking",
+      "marks_count": 0,
+      "numero": 23,
+      "sections_missing": [],
+      "slug": "proxies-reverse-proxies",
+      "title": "Proxies / Reverse Proxies",
+      "uid": "c_2WZCMX2XER"
+    },
+    {
+      "area_uid": "networking",
+      "marks_count": 0,
+      "numero": 24,
+      "sections_missing": [],
+      "slug": "firewalls",
+      "title": "Firewalls",
+      "uid": "c_F4IWLYRXT4"
+    },
+    {
+      "area_uid": "networking",
+      "marks_count": 0,
+      "numero": 25,
+      "sections_missing": [],
+      "slug": "cdn-load-balancing",
+      "title": "CDN / Load Balancing",
+      "uid": "c_SCSLG2OETM"
+    },
+    {
+      "area_uid": "os-linux",
+      "marks_count": 24,
+      "numero": 1,
+      "sections_missing": [],
+      "slug": "operating-system",
+      "title": "Operating System",
+      "uid": "c_J7K4IRROGC"
+    },
+    {
+      "area_uid": "os-linux",
+      "marks_count": 0,
+      "numero": 2,
+      "sections_missing": [],
+      "slug": "kernel",
+      "title": "Kernel",
+      "uid": "c_MOYKN3IWS5"
+    },
+    {
+      "area_uid": "os-linux",
+      "marks_count": 0,
+      "numero": 3,
+      "sections_missing": [],
+      "slug": "processes",
+      "title": "Processes",
+      "uid": "c_472Y6TAHCW"
+    },
+    {
+      "area_uid": "os-linux",
+      "marks_count": 0,
+      "numero": 4,
+      "sections_missing": [],
+      "slug": "threads",
+      "title": "Threads",
+      "uid": "c_SQK5OV6EKB"
+    },
+    {
+      "area_uid": "os-linux",
+      "marks_count": 0,
+      "numero": 5,
+      "sections_missing": [],
+      "slug": "cpu-scheduling",
+      "title": "CPU & Scheduling",
+      "uid": "c_UNJ4CCPCKV"
+    },
+    {
+      "area_uid": "os-linux",
+      "marks_count": 0,
+      "numero": 6,
+      "sections_missing": [],
+      "slug": "memory-management",
+      "title": "Memory Management",
+      "uid": "c_WYUWDZEETM"
+    },
+    {
+      "area_uid": "os-linux",
+      "marks_count": 0,
+      "numero": 7,
+      "sections_missing": [],
+      "slug": "stack-heap",
+      "title": "Stack & Heap",
+      "uid": "c_UDNACO4RMV"
+    },
+    {
+      "area_uid": "os-linux",
+      "marks_count": 0,
+      "numero": 8,
+      "sections_missing": [],
+      "slug": "file-systems",
+      "title": "File Systems",
+      "uid": "c_TXS5EDLI4R"
+    },
+    {
+      "area_uid": "os-linux",
+      "marks_count": 0,
+      "numero": 9,
+      "sections_missing": [],
+      "slug": "file-permissions",
+      "title": "File Permissions",
+      "uid": "c_XUZJWYTELS"
+    },
+    {
+      "area_uid": "os-linux",
+      "marks_count": 0,
+      "numero": 10,
+      "sections_missing": [],
+      "slug": "users-groups",
+      "title": "Users & Groups",
+      "uid": "c_OE65ZR7OR4"
+    },
+    {
+      "area_uid": "os-linux",
+      "marks_count": 0,
+      "numero": 11,
+      "sections_missing": [],
+      "slug": "system-calls",
+      "title": "System Calls",
+      "uid": "c_PPPZUFR2JG"
+    },
+    {
+      "area_uid": "os-linux",
+      "marks_count": 0,
+      "numero": 12,
+      "sections_missing": [],
+      "slug": "i-o",
+      "title": "I/O",
+      "uid": "c_R6YCGCU7FX"
+    },
+    {
+      "area_uid": "os-linux",
+      "marks_count": 0,
+      "numero": 13,
+      "sections_missing": [],
+      "slug": "processes-ipc",
+      "title": "Processes IPC",
+      "uid": "c_5USWL4QXOA"
+    },
+    {
+      "area_uid": "os-linux",
+      "marks_count": 1,
+      "numero": 14,
+      "sections_missing": [],
+      "slug": "sockets",
+      "title": "Sockets",
+      "uid": "c_ORX7MOBSU6"
+    },
+    {
+      "area_uid": "os-linux",
+      "marks_count": 0,
+      "numero": 15,
+      "sections_missing": [],
+      "slug": "environment-variables",
+      "title": "Environment Variables",
+      "uid": "c_YBQTBM72V5"
+    },
+    {
+      "area_uid": "os-linux",
+      "marks_count": 0,
+      "numero": 16,
+      "sections_missing": [],
+      "slug": "shell",
+      "title": "Shell",
+      "uid": "c_NH4DBCJPVZ"
+    },
+    {
+      "area_uid": "os-linux",
+      "marks_count": 0,
+      "numero": 17,
+      "sections_missing": [],
+      "slug": "linux-cli",
+      "title": "Linux CLI",
+      "uid": "c_ZXNIK6IFVD"
+    },
+    {
+      "area_uid": "os-linux",
+      "marks_count": 0,
+      "numero": 18,
+      "sections_missing": [],
+      "slug": "bash-shell-scripting",
+      "title": "Bash / Shell Scripting",
+      "uid": "c_KKF3Z6FUAE"
+    },
+    {
+      "area_uid": "os-linux",
+      "marks_count": 0,
+      "numero": 19,
+      "sections_missing": [],
+      "slug": "signals",
+      "title": "Signals",
+      "uid": "c_R6PYD64O36"
+    },
+    {
+      "area_uid": "os-linux",
+      "marks_count": 0,
+      "numero": 20,
+      "sections_missing": [],
+      "slug": "daemons-services",
+      "title": "Daemons / Services",
+      "uid": "c_HEPP5R7NCU"
+    },
+    {
+      "area_uid": "os-linux",
+      "marks_count": 0,
+      "numero": 21,
+      "sections_missing": [],
+      "slug": "package-management",
+      "title": "Package Management",
+      "uid": "c_4NFC4562JQ"
+    },
+    {
+      "area_uid": "os-linux",
+      "marks_count": 0,
+      "numero": 22,
+      "sections_missing": [],
+      "slug": "networking-en-linux",
+      "title": "Networking en Linux",
+      "uid": "c_CXEBUKNZHV"
+    },
+    {
+      "area_uid": "os-linux",
+      "marks_count": 0,
+      "numero": 23,
+      "sections_missing": [],
+      "slug": "logs-system-monitoring",
+      "title": "Logs & System Monitoring",
+      "uid": "c_BQ2OLMROJZ"
+    },
+    {
+      "area_uid": "os-linux",
+      "marks_count": 0,
+      "numero": 24,
+      "sections_missing": [],
+      "slug": "containers",
+      "title": "Containers",
+      "uid": "c_K5E3UA3HBU"
+    },
+    {
+      "area_uid": "os-linux",
+      "marks_count": 0,
+      "numero": 25,
+      "sections_missing": [],
+      "slug": "virtualization-infrastructure",
+      "title": "Virtualization & Infrastructure",
+      "uid": "c_J2J5LSR7ZQ"
+    },
+    {
+      "area_uid": "product-management",
+      "marks_count": 0,
+      "numero": 1,
+      "sections_missing": [],
+      "slug": "product-thinking",
+      "title": "Product Thinking",
+      "uid": "c_CHBELWMYEO"
+    },
+    {
+      "area_uid": "product-management",
+      "marks_count": 0,
+      "numero": 2,
+      "sections_missing": [],
+      "slug": "problem-discovery",
+      "title": "Problem Discovery",
+      "uid": "c_4NELIH6YTV"
+    },
+    {
+      "area_uid": "product-management",
+      "marks_count": 0,
+      "numero": 3,
+      "sections_missing": [],
+      "slug": "user-research",
+      "title": "User Research",
+      "uid": "c_OPRQ4KKLEV"
+    },
+    {
+      "area_uid": "product-management",
+      "marks_count": 0,
+      "numero": 4,
+      "sections_missing": [],
+      "slug": "market-research",
+      "title": "Market Research",
+      "uid": "c_ECB42D4UZM"
+    },
+    {
+      "area_uid": "product-management",
+      "marks_count": 0,
+      "numero": 5,
+      "sections_missing": [],
+      "slug": "user-personas",
+      "title": "User Personas",
+      "uid": "c_WM2AMCYFR6"
+    },
+    {
+      "area_uid": "product-management",
+      "marks_count": 0,
+      "numero": 6,
+      "sections_missing": [],
+      "slug": "value-proposition",
+      "title": "Value Proposition",
+      "uid": "c_4ZEK2ZN5ZJ"
+    },
+    {
+      "area_uid": "product-management",
+      "marks_count": 0,
+      "numero": 7,
+      "sections_missing": [],
+      "slug": "product-vision",
+      "title": "Product Vision",
+      "uid": "c_6XO5SGEQV5"
+    },
+    {
+      "area_uid": "product-management",
+      "marks_count": 0,
+      "numero": 8,
+      "sections_missing": [],
+      "slug": "product-strategy",
+      "title": "Product Strategy",
+      "uid": "c_5SYU65SFA4"
+    },
+    {
+      "area_uid": "product-management",
+      "marks_count": 0,
+      "numero": 9,
+      "sections_missing": [],
+      "slug": "goals-outcomes",
+      "title": "Goals & Outcomes",
+      "uid": "c_QM2SFYU3HE"
+    },
+    {
+      "area_uid": "product-management",
+      "marks_count": 0,
+      "numero": 10,
+      "sections_missing": [],
+      "slug": "product-roadmap",
+      "title": "Product Roadmap",
+      "uid": "c_5N3OJBWASE"
+    },
+    {
+      "area_uid": "product-management",
+      "marks_count": 0,
+      "numero": 11,
+      "sections_missing": [],
+      "slug": "prioritization",
+      "title": "Prioritization",
+      "uid": "c_TW757IOGRQ"
+    },
+    {
+      "area_uid": "product-management",
+      "marks_count": 0,
+      "numero": 12,
+      "sections_missing": [],
+      "slug": "requirements",
+      "title": "Requirements",
+      "uid": "c_4VLGBOP6NP"
+    },
+    {
+      "area_uid": "product-management",
+      "marks_count": 0,
+      "numero": 13,
+      "sections_missing": [],
+      "slug": "user-stories",
+      "title": "User Stories",
+      "uid": "c_PLSS7K466J"
+    },
+    {
+      "area_uid": "product-management",
+      "marks_count": 0,
+      "numero": 14,
+      "sections_missing": [],
+      "slug": "product-discovery",
+      "title": "Product Discovery",
+      "uid": "c_YLNAJABAUR"
+    },
+    {
+      "area_uid": "product-management",
+      "marks_count": 0,
+      "numero": 15,
+      "sections_missing": [],
+      "slug": "mvp",
+      "title": "MVP",
+      "uid": "c_ETWVMQBZXQ"
+    },
+    {
+      "area_uid": "product-management",
+      "marks_count": 0,
+      "numero": 16,
+      "sections_missing": [],
+      "slug": "experimentation",
+      "title": "Experimentation",
+      "uid": "c_4Q26FRTYNL"
+    },
+    {
+      "area_uid": "product-management",
+      "marks_count": 0,
+      "numero": 17,
+      "sections_missing": [],
+      "slug": "product-metrics",
+      "title": "Product Metrics",
+      "uid": "c_FHDALEC2NY"
+    },
+    {
+      "area_uid": "product-management",
+      "marks_count": 0,
+      "numero": 18,
+      "sections_missing": [],
+      "slug": "funnels",
+      "title": "Funnels",
+      "uid": "c_P2ZB42B6RQ"
+    },
+    {
+      "area_uid": "product-management",
+      "marks_count": 0,
+      "numero": 19,
+      "sections_missing": [],
+      "slug": "retention",
+      "title": "Retention",
+      "uid": "c_2ZLVQ443PW"
+    },
+    {
+      "area_uid": "product-management",
+      "marks_count": 0,
+      "numero": 20,
+      "sections_missing": [],
+      "slug": "product-analytics",
+      "title": "Product Analytics",
+      "uid": "c_L5MHDZ22JR"
+    },
+    {
+      "area_uid": "product-management",
+      "marks_count": 0,
+      "numero": 21,
+      "sections_missing": [],
+      "slug": "product-market-fit",
+      "title": "Product-Market Fit",
+      "uid": "c_MZ7L6JLNSU"
+    },
+    {
+      "area_uid": "product-management",
+      "marks_count": 0,
+      "numero": 22,
+      "sections_missing": [],
+      "slug": "product-lifecycle",
+      "title": "Product Lifecycle",
+      "uid": "c_F45REZFNEG"
+    },
+    {
+      "area_uid": "product-management",
+      "marks_count": 0,
+      "numero": 23,
+      "sections_missing": [],
+      "slug": "stakeholder-management",
+      "title": "Stakeholder Management",
+      "uid": "c_VQIWAM3DJF"
+    },
+    {
+      "area_uid": "product-management",
+      "marks_count": 0,
+      "numero": 24,
+      "sections_missing": [],
+      "slug": "go-to-market",
+      "title": "Go-to-Market",
+      "uid": "c_5BZPAUGDCC"
+    },
+    {
+      "area_uid": "product-management",
+      "marks_count": 0,
+      "numero": 25,
+      "sections_missing": [],
+      "slug": "product-strategy-at-scale",
+      "title": "Product Strategy at Scale",
+      "uid": "c_UQ26LMCZYY"
+    },
+    {
+      "area_uid": "project-management",
+      "marks_count": 0,
+      "numero": 1,
+      "sections_missing": [],
+      "slug": "project-fundamentals",
+      "title": "Project Fundamentals",
+      "uid": "c_BF7HN4NHO2"
+    },
+    {
+      "area_uid": "project-management",
+      "marks_count": 0,
+      "numero": 2,
+      "sections_missing": [],
+      "slug": "scope",
+      "title": "Scope",
+      "uid": "c_7HCWIHGY3Y"
+    },
+    {
+      "area_uid": "project-management",
+      "marks_count": 0,
+      "numero": 3,
+      "sections_missing": [],
+      "slug": "requirements",
+      "title": "Requirements",
+      "uid": "c_ZZNQZABFF3"
+    },
+    {
+      "area_uid": "project-management",
+      "marks_count": 0,
+      "numero": 4,
+      "sections_missing": [],
+      "slug": "deliverables",
+      "title": "Deliverables",
+      "uid": "c_RIRVA7AOPS"
+    },
+    {
+      "area_uid": "project-management",
+      "marks_count": 0,
+      "numero": 5,
+      "sections_missing": [],
+      "slug": "work-breakdown-structure",
+      "title": "Work Breakdown Structure",
+      "uid": "c_OXV4OR4VYX"
+    },
+    {
+      "area_uid": "project-management",
+      "marks_count": 0,
+      "numero": 6,
+      "sections_missing": [],
+      "slug": "task-management",
+      "title": "Task Management",
+      "uid": "c_S37BPPLTVF"
+    },
+    {
+      "area_uid": "project-management",
+      "marks_count": 0,
+      "numero": 7,
+      "sections_missing": [],
+      "slug": "dependencies",
+      "title": "Dependencies",
+      "uid": "c_GYUCO2KNED"
+    },
+    {
+      "area_uid": "project-management",
+      "marks_count": 0,
+      "numero": 8,
+      "sections_missing": [],
+      "slug": "estimation",
+      "title": "Estimation",
+      "uid": "c_CQ3MBF4W7W"
+    },
+    {
+      "area_uid": "project-management",
+      "marks_count": 0,
+      "numero": 9,
+      "sections_missing": [],
+      "slug": "planning",
+      "title": "Planning",
+      "uid": "c_CDAPU4W4IV"
+    },
+    {
+      "area_uid": "project-management",
+      "marks_count": 0,
+      "numero": 10,
+      "sections_missing": [],
+      "slug": "scheduling",
+      "title": "Scheduling",
+      "uid": "c_YRDFIS7XCB"
+    },
+    {
+      "area_uid": "project-management",
+      "marks_count": 0,
+      "numero": 11,
+      "sections_missing": [],
+      "slug": "prioritization",
+      "title": "Prioritization",
+      "uid": "c_WBXKNJ46YZ"
+    },
+    {
+      "area_uid": "project-management",
+      "marks_count": 0,
+      "numero": 12,
+      "sections_missing": [],
+      "slug": "resource-management",
+      "title": "Resource Management",
+      "uid": "c_DJDORY2E6F"
+    },
+    {
+      "area_uid": "project-management",
+      "marks_count": 0,
+      "numero": 13,
+      "sections_missing": [],
+      "slug": "risk-management",
+      "title": "Risk Management",
+      "uid": "c_BQNWLPZECX"
+    },
+    {
+      "area_uid": "project-management",
+      "marks_count": 0,
+      "numero": 14,
+      "sections_missing": [],
+      "slug": "issue-management",
+      "title": "Issue Management",
+      "uid": "c_CIR4QHKD6Q"
+    },
+    {
+      "area_uid": "project-management",
+      "marks_count": 0,
+      "numero": 15,
+      "sections_missing": [],
+      "slug": "change-management",
+      "title": "Change Management",
+      "uid": "c_FH3Q7KENJU"
+    },
+    {
+      "area_uid": "project-management",
+      "marks_count": 0,
+      "numero": 16,
+      "sections_missing": [],
+      "slug": "agile",
+      "title": "Agile",
+      "uid": "c_K2VG7SUBID"
+    },
+    {
+      "area_uid": "project-management",
+      "marks_count": 0,
+      "numero": 17,
+      "sections_missing": [],
+      "slug": "scrum",
+      "title": "Scrum",
+      "uid": "c_QZTOO636ZO"
+    },
+    {
+      "area_uid": "project-management",
+      "marks_count": 0,
+      "numero": 18,
+      "sections_missing": [],
+      "slug": "kanban",
+      "title": "Kanban",
+      "uid": "c_5P4YM7PKKX"
+    },
+    {
+      "area_uid": "project-management",
+      "marks_count": 0,
+      "numero": 19,
+      "sections_missing": [],
+      "slug": "milestones-releases",
+      "title": "Milestones & Releases",
+      "uid": "c_FJSN2KSLMV"
+    },
+    {
+      "area_uid": "project-management",
+      "marks_count": 0,
+      "numero": 20,
+      "sections_missing": [],
+      "slug": "status-reporting",
+      "title": "Status & Reporting",
+      "uid": "c_ODRXW7IAT4"
+    },
+    {
+      "area_uid": "project-management",
+      "marks_count": 0,
+      "numero": 21,
+      "sections_missing": [],
+      "slug": "stakeholder-management",
+      "title": "Stakeholder Management",
+      "uid": "c_7HAIPW7HG2"
+    },
+    {
+      "area_uid": "project-management",
+      "marks_count": 0,
+      "numero": 22,
+      "sections_missing": [],
+      "slug": "team-coordination",
+      "title": "Team Coordination",
+      "uid": "c_N6K5FPOTSK"
+    },
+    {
+      "area_uid": "project-management",
+      "marks_count": 0,
+      "numero": 23,
+      "sections_missing": [],
+      "slug": "budget-cost",
+      "title": "Budget & Cost",
+      "uid": "c_3TYHEZGHL5"
+    },
+    {
+      "area_uid": "project-management",
+      "marks_count": 0,
+      "numero": 24,
+      "sections_missing": [],
+      "slug": "project-metrics",
+      "title": "Project Metrics",
+      "uid": "c_VZFUJQTAUP"
+    },
+    {
+      "area_uid": "project-management",
+      "marks_count": 0,
+      "numero": 25,
+      "sections_missing": [],
+      "slug": "retrospectives-improvement",
+      "title": "Retrospectives & Improvement",
+      "uid": "c_O73WVZARSW"
+    },
+    {
+      "area_uid": "software-engineering",
+      "marks_count": 0,
+      "numero": 1,
+      "sections_missing": [],
+      "slug": "programming-fundamentals",
+      "title": "Programming Fundamentals",
+      "uid": "c_HAZD53NJ7A"
+    },
+    {
+      "area_uid": "software-engineering",
+      "marks_count": 0,
+      "numero": 2,
+      "sections_missing": [],
+      "slug": "data-structures",
+      "title": "Data Structures",
+      "uid": "c_45PAYUACPS"
+    },
+    {
+      "area_uid": "software-engineering",
+      "marks_count": 0,
+      "numero": 3,
+      "sections_missing": [],
+      "slug": "algorithms",
+      "title": "Algorithms",
+      "uid": "c_Q242GFM3KF"
+    },
+    {
+      "area_uid": "software-engineering",
+      "marks_count": 0,
+      "numero": 4,
+      "sections_missing": [],
+      "slug": "complexity-analysis",
+      "title": "Complexity Analysis",
+      "uid": "c_KEMF6IFKTQ"
+    },
+    {
+      "area_uid": "software-engineering",
+      "marks_count": 0,
+      "numero": 5,
+      "sections_missing": [],
+      "slug": "object-oriented-programming",
+      "title": "Object-Oriented Programming",
+      "uid": "c_KZHQNGA3LM"
+    },
+    {
+      "area_uid": "software-engineering",
+      "marks_count": 0,
+      "numero": 6,
+      "sections_missing": [],
+      "slug": "functional-programming",
+      "title": "Functional Programming",
+      "uid": "c_I4SP5V3R2E"
+    },
+    {
+      "area_uid": "software-engineering",
+      "marks_count": 0,
+      "numero": 7,
+      "sections_missing": [],
+      "slug": "abstraction",
+      "title": "Abstraction",
+      "uid": "c_TSM6OQKLAB"
+    },
+    {
+      "area_uid": "software-engineering",
+      "marks_count": 0,
+      "numero": 8,
+      "sections_missing": [],
+      "slug": "modularity",
+      "title": "Modularity",
+      "uid": "c_A2ZXZTXBH5"
+    },
+    {
+      "area_uid": "software-engineering",
+      "marks_count": 0,
+      "numero": 9,
+      "sections_missing": [],
+      "slug": "api-design",
+      "title": "API Design",
+      "uid": "c_LG2UZSQPXG"
+    },
+    {
+      "area_uid": "software-engineering",
+      "marks_count": 0,
+      "numero": 10,
+      "sections_missing": [],
+      "slug": "error-handling",
+      "title": "Error Handling",
+      "uid": "c_CLBL3KTWT4"
+    },
+    {
+      "area_uid": "software-engineering",
+      "marks_count": 0,
+      "numero": 11,
+      "sections_missing": [],
+      "slug": "concurrency",
+      "title": "Concurrency",
+      "uid": "c_WYOKFAK6RE"
+    },
+    {
+      "area_uid": "software-engineering",
+      "marks_count": 0,
+      "numero": 12,
+      "sections_missing": [],
+      "slug": "git-version-control",
+      "title": "Git / Version Control",
+      "uid": "c_X4YMC3NLRL"
+    },
+    {
+      "area_uid": "software-engineering",
+      "marks_count": 0,
+      "numero": 13,
+      "sections_missing": [],
+      "slug": "code-quality",
+      "title": "Code Quality",
+      "uid": "c_53KOHLSCN5"
+    },
+    {
+      "area_uid": "software-engineering",
+      "marks_count": 0,
+      "numero": 14,
+      "sections_missing": [],
+      "slug": "clean-code",
+      "title": "Clean Code",
+      "uid": "c_ZUGE3YIJ5I"
+    },
+    {
+      "area_uid": "software-engineering",
+      "marks_count": 0,
+      "numero": 15,
+      "sections_missing": [],
+      "slug": "design-patterns",
+      "title": "Design Patterns",
+      "uid": "c_3UAMR6JQWV"
+    },
+    {
+      "area_uid": "software-engineering",
+      "marks_count": 0,
+      "numero": 16,
+      "sections_missing": [],
+      "slug": "solid-design-principles",
+      "title": "SOLID & Design Principles",
+      "uid": "c_K2J2R52QLA"
+    },
+    {
+      "area_uid": "software-engineering",
+      "marks_count": 0,
+      "numero": 17,
+      "sections_missing": [],
+      "slug": "testing",
+      "title": "Testing",
+      "uid": "c_QSNPL7HRIY"
+    },
+    {
+      "area_uid": "software-engineering",
+      "marks_count": 0,
+      "numero": 18,
+      "sections_missing": [],
+      "slug": "debugging",
+      "title": "Debugging",
+      "uid": "c_M4XCMAJ4Y5"
+    },
+    {
+      "area_uid": "software-engineering",
+      "marks_count": 0,
+      "numero": 19,
+      "sections_missing": [],
+      "slug": "code-review",
+      "title": "Code Review",
+      "uid": "c_IMFWIGRRUB"
+    },
+    {
+      "area_uid": "software-engineering",
+      "marks_count": 0,
+      "numero": 20,
+      "sections_missing": [],
+      "slug": "refactoring",
+      "title": "Refactoring",
+      "uid": "c_VA6ETRQ2HH"
+    },
+    {
+      "area_uid": "software-engineering",
+      "marks_count": 0,
+      "numero": 21,
+      "sections_missing": [],
+      "slug": "documentation",
+      "title": "Documentation",
+      "uid": "c_KYPK4NZI43"
+    },
+    {
+      "area_uid": "software-engineering",
+      "marks_count": 0,
+      "numero": 22,
+      "sections_missing": [],
+      "slug": "architecture",
+      "title": "Architecture",
+      "uid": "c_KZDA6HODJU"
+    },
+    {
+      "area_uid": "software-engineering",
+      "marks_count": 0,
+      "numero": 23,
+      "sections_missing": [],
+      "slug": "design-trade-offs",
+      "title": "Design Trade-offs",
+      "uid": "c_HISOSDWX75"
+    },
+    {
+      "area_uid": "software-engineering",
+      "marks_count": 0,
+      "numero": 24,
+      "sections_missing": [],
+      "slug": "security-engineering",
+      "title": "Security Engineering",
+      "uid": "c_USKUN3IVRZ"
+    },
+    {
+      "area_uid": "software-engineering",
+      "marks_count": 0,
+      "numero": 25,
+      "sections_missing": [],
+      "slug": "ci-cd",
+      "title": "CI/CD",
+      "uid": "c_NWJKJRLXFG"
+    },
+    {
+      "area_uid": "software-engineering",
+      "marks_count": 0,
+      "numero": 26,
+      "sections_missing": [],
+      "slug": "observability",
+      "title": "Observability",
+      "uid": "c_MKC6PGQUM7"
+    },
+    {
+      "area_uid": "software-engineering",
+      "marks_count": 0,
+      "numero": 27,
+      "sections_missing": [],
+      "slug": "reliability",
+      "title": "Reliability",
+      "uid": "c_PDOZ7FBH2J"
+    },
+    {
+      "area_uid": "software-engineering",
+      "marks_count": 0,
+      "numero": 28,
+      "sections_missing": [],
+      "slug": "distributed-systems",
+      "title": "Distributed Systems",
+      "uid": "c_GFXWIQR3NM"
+    },
+    {
+      "area_uid": "software-engineering",
+      "marks_count": 0,
+      "numero": 29,
+      "sections_missing": [],
+      "slug": "technical-leadership",
+      "title": "Technical Leadership",
+      "uid": "c_Q56AS5I5XQ"
+    },
+    {
+      "area_uid": "software-engineering",
+      "marks_count": 0,
+      "numero": 30,
+      "sections_missing": [],
+      "slug": "engineering-processes",
+      "title": "Engineering Processes",
+      "uid": "c_FBWIOD73FI"
+    },
+    {
+      "area_uid": "ux-ui",
+      "marks_count": 2,
+      "numero": 1,
+      "sections_missing": [],
+      "slug": "human-centered-design",
+      "title": "Human-Centered Design",
+      "uid": "c_BFS5SFW7H2"
+    },
+    {
+      "area_uid": "ux-ui",
+      "marks_count": 0,
+      "numero": 2,
+      "sections_missing": [],
+      "slug": "user-research",
+      "title": "User Research",
+      "uid": "c_7FPNVGV76Q"
+    },
+    {
+      "area_uid": "ux-ui",
+      "marks_count": 0,
+      "numero": 3,
+      "sections_missing": [],
+      "slug": "user-needs-problems",
+      "title": "User Needs & Problems",
+      "uid": "c_P3UX76MNNO"
+    },
+    {
+      "area_uid": "ux-ui",
+      "marks_count": 0,
+      "numero": 4,
+      "sections_missing": [],
+      "slug": "personas-user-models",
+      "title": "Personas & User Models",
+      "uid": "c_YN4BSBEZRX"
+    },
+    {
+      "area_uid": "ux-ui",
+      "marks_count": 0,
+      "numero": 5,
+      "sections_missing": [],
+      "slug": "user-journeys",
+      "title": "User Journeys",
+      "uid": "c_ZVUDKC7ITK"
+    },
+    {
+      "area_uid": "ux-ui",
+      "marks_count": 0,
+      "numero": 6,
+      "sections_missing": [],
+      "slug": "information-architecture",
+      "title": "Information Architecture",
+      "uid": "c_BHLQEBT4GM"
+    },
+    {
+      "area_uid": "ux-ui",
+      "marks_count": 0,
+      "numero": 7,
+      "sections_missing": [],
+      "slug": "navigation",
+      "title": "Navigation",
+      "uid": "c_Q62PGX2MP4"
+    },
+    {
+      "area_uid": "ux-ui",
+      "marks_count": 0,
+      "numero": 8,
+      "sections_missing": [],
+      "slug": "interaction-design",
+      "title": "Interaction Design",
+      "uid": "c_36FC2H5MMW"
+    },
+    {
+      "area_uid": "ux-ui",
+      "marks_count": 0,
+      "numero": 9,
+      "sections_missing": [],
+      "slug": "user-flows",
+      "title": "User Flows",
+      "uid": "c_Q3YN3JYKSD"
+    },
+    {
+      "area_uid": "ux-ui",
+      "marks_count": 0,
+      "numero": 10,
+      "sections_missing": [],
+      "slug": "wireframing",
+      "title": "Wireframing",
+      "uid": "c_P3AM7QSPS6"
+    },
+    {
+      "area_uid": "ux-ui",
+      "marks_count": 0,
+      "numero": 11,
+      "sections_missing": [],
+      "slug": "prototyping",
+      "title": "Prototyping",
+      "uid": "c_IL3BOUYPJN"
+    },
+    {
+      "area_uid": "ux-ui",
+      "marks_count": 0,
+      "numero": 12,
+      "sections_missing": [],
+      "slug": "visual-hierarchy",
+      "title": "Visual Hierarchy",
+      "uid": "c_WI7XS25GM5"
+    },
+    {
+      "area_uid": "ux-ui",
+      "marks_count": 0,
+      "numero": 13,
+      "sections_missing": [],
+      "slug": "typography",
+      "title": "Typography",
+      "uid": "c_CLVNVR43CK"
+    },
+    {
+      "area_uid": "ux-ui",
+      "marks_count": 0,
+      "numero": 14,
+      "sections_missing": [],
+      "slug": "color",
+      "title": "Color",
+      "uid": "c_OYXEXTPWLS"
+    },
+    {
+      "area_uid": "ux-ui",
+      "marks_count": 0,
+      "numero": 15,
+      "sections_missing": [],
+      "slug": "spacing-layout",
+      "title": "Spacing & Layout",
+      "uid": "c_AEJ6QCIQ75"
+    },
+    {
+      "area_uid": "ux-ui",
+      "marks_count": 0,
+      "numero": 16,
+      "sections_missing": [],
+      "slug": "design-systems",
+      "title": "Design Systems",
+      "uid": "c_ZBRCPB5GFK"
+    },
+    {
+      "area_uid": "ux-ui",
+      "marks_count": 0,
+      "numero": 17,
+      "sections_missing": [],
+      "slug": "ui-components",
+      "title": "UI Components",
+      "uid": "c_FIPB4YV5WK"
+    },
+    {
+      "area_uid": "ux-ui",
+      "marks_count": 0,
+      "numero": 18,
+      "sections_missing": [],
+      "slug": "states-feedback",
+      "title": "States & Feedback",
+      "uid": "c_FEMWCHWWED"
+    },
+    {
+      "area_uid": "ux-ui",
+      "marks_count": 0,
+      "numero": 19,
+      "sections_missing": [],
+      "slug": "responsive-design",
+      "title": "Responsive Design",
+      "uid": "c_6ETCQ4KE2I"
+    },
+    {
+      "area_uid": "ux-ui",
+      "marks_count": 0,
+      "numero": 20,
+      "sections_missing": [],
+      "slug": "accessibility",
+      "title": "Accessibility",
+      "uid": "c_ZIFKUN562S"
+    },
+    {
+      "area_uid": "ux-ui",
+      "marks_count": 0,
+      "numero": 21,
+      "sections_missing": [],
+      "slug": "usability",
+      "title": "Usability",
+      "uid": "c_RQAR6DO3SU"
+    },
+    {
+      "area_uid": "ux-ui",
+      "marks_count": 0,
+      "numero": 22,
+      "sections_missing": [],
+      "slug": "usability-testing",
+      "title": "Usability Testing",
+      "uid": "c_YTEYG3YOCU"
+    },
+    {
+      "area_uid": "ux-ui",
+      "marks_count": 0,
+      "numero": 23,
+      "sections_missing": [],
+      "slug": "ux-metrics",
+      "title": "UX Metrics",
+      "uid": "c_K2XQL2MKUK"
+    },
+    {
+      "area_uid": "ux-ui",
+      "marks_count": 0,
+      "numero": 24,
+      "sections_missing": [],
+      "slug": "behavior-psychology",
+      "title": "Behavior & Psychology",
+      "uid": "c_W6OI2NX5NW"
+    },
+    {
+      "area_uid": "ux-ui",
+      "marks_count": 0,
+      "numero": 25,
+      "sections_missing": [],
+      "slug": "product-design",
+      "title": "Product Design",
+      "uid": "c_SWJ7STVZDR"
+    }
+  ],
+  "counts": {
+    "areas": 10,
+    "chunks": 2295,
+    "concepts": 255,
+    "evidence": 0,
+    "journey_records": 0,
+    "relations": 472
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,38 @@
+{
+  "aliases": [
+    "Estado"
+  ],
+  "area_uid": "frontend",
+  "content_hash": "02ef766eedcc487bf36a7299b7ef6f052c8ab94f19f81037e78679fe56742b1a",
+  "numero": 15,
+  "related_uids": [
+    "c_JPHEZJIFHI",
+    "c_KFFEDHVX2D",
+    "c_OD7QLNQ7GN",
+    "c_UAIG2N6OVP",
+    "c_VXHILN4GCI"
+  ],
+  "sections": {
+    "como_funciona": "1. El componente declara su estado local (por ejemplo, con `useState`).  \r\n2. Cuando el usuario interactúa, la función de actualización modifica ese estado.  \r\n3. La UI se vuelve a renderizar automáticamente con el nuevo valor.  \r\n4. Si varios componentes necesitan el mismo dato, se eleva a un estado global (p. ej., Context o Redux) y se comparte mediante suscriptores.  \r\n5. Los valores derivados se recalculan en cada renderizado a partir de los estados base.  \r\n6. Para datos del servidor, se ejecuta una petición (fetch, Axios, React Query) que actualiza el server state y, a su vez, dispara una nueva renderización.",
+    "conexiones": "- **JSON & APIs**: el server state se obtiene mediante respuestas JSON de APIs, por lo que la estructura del estado debe reflejar el contrato de la API.  \r\n- **Componentización**: cada componente decide si su estado es local o necesita ser compartido, lo que guía la granularidad de la componentización.  \r\n- **Data fetching**: la estrategia de obtención de datos (fetch, React Query) determina cómo se sincroniza el server state con la UI y cómo se manejan loading y errores.",
+    "detalles": "- **Básico**: uso de `useState` para manejar valores simples dentro de un componente.  \r\n- **Intermedio**: elevación de estado a un contexto o store, introducción de memoización (`useMemo`) para evitar cálculos innecesarios de estados derivados.  \r\n- **Avanzado**: gestión de server state con librerías especializadas (React Query, SWR) que ofrecen caching, revalidación y sincronización automática; combinación de global y server state mediante patrones como “dual source of truth”.",
+    "ejemplo_minimo": "```tsx\r\nimport { useState } from 'react';\r\n\r\nfunction Contador() {\r\n  const [cuenta, setCuenta] = useState(0); // estado local\r\n\r\n  return (\r\n    <button onClick={() => setCuenta(c => c + 1)}>\r\n      Pulsado {cuenta} veces\r\n    </button>\r\n  );\r\n}\r\n```",
+    "errores_comunes": "- **Mutar directamente el estado** → la UI no se actualiza; usar siempre la función de setState.  \r\n- **Almacenar datos derivados** → genera fuentes de verdad duplicadas; calcularlos en render.  \r\n- **Mezclar server state y UI state sin separación** → dificulta el manejo de loading/error; usar librerías de data fetching.  \r\n- **Elevar demasiado el estado** → complejiza la arquitectura; mantener lo local siempre que sea posible.",
+    "estado_actual": "**Fundamentos estables**: `useState`, `useEffect`, Context API, patrones de elevación de estado.  \r\n**Práctica moderna**: uso de React Query o SWR para server state, Redux Toolkit para global state con slices, y herramientas de tipado (TypeScript) para describir la forma del estado y prevenir errores en tiempo de compilación.",
+    "ideas_clave": "1. **Estado local** – datos que viven dentro de un componente y solo afectan a ese componente.  \r\n2. **Estado global** – información compartida entre varios componentes, gestionada en un nivel superior o mediante una librería.  \r\n3. **Estado derivado** – valores calculados a partir de otros estados, sin almacenarse de forma independiente.  \r\n4. **Server state** – datos que provienen de una API y que deben mantenerse sincronizados con el backend.",
+    "objetivo": "Utilizo el concepto de **estado** para representar la información que determina cómo se renderiza y se comporta la UI de una aplicación frontend. Resuelvo el problema de mantener sincronizados los datos que provienen de distintas fuentes (interacción del usuario, lógica interna, respuestas del servidor) y la representación visual. Aparece en cada componente que necesita reaccionar a cambios, desde botones simples hasta vistas complejas. Después de entenderlo puedo diseñar flujos de datos claros, elegir la estrategia de gestión adecuada y evitar inconsistencias. No necesito preocuparme por el estado cuando construyo componentes puramente estáticos o cuando delego toda la lógica a un backend sin interacción directa.",
+    "preguntas_repaso": "1. ¿Cuál es la diferencia entre estado local y estado global en una aplicación React?  \r\n2. ¿Por qué no se recomienda almacenar valores derivados en el estado?  \r\n3. ¿Cómo una librería de data fetching como React Query ayuda a gestionar el server state?  \r\n4. ¿Qué problemas aparecen si mutas directamente un objeto de estado en lugar de usar la función de actualización?  \r\n5. ¿En qué situaciones es preferible elevar el estado a un contexto en lugar de mantenerlo local?",
+    "ruta_estudio": "1. **Prerequisitos**: HTML, CSS, JavaScript básico, conceptos de funciones y closures.  \r\n2. **Fundamentos**: aprender `useState` y `useEffect` en React; practicar con componentes simples.  \r\n3. **Global state**: estudiar Context API y Redux Toolkit, crear un store y conectar componentes.  \r\n4. **Server state**: explorar React Query o SWR, implementar caching y revalidación.  \r\n5. **Avanzado**: combinar global y server state, aplicar TypeScript para tipar el estado, optimizar renders con `useMemo` y `React.memo`."
+  },
+  "sections_missing": [],
+  "slug": "estado",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/frontend"
+  ],
+  "title": "Estado",
+  "uid": "c_WYVLRHHAGA",
+  "verification_marks": []
+}

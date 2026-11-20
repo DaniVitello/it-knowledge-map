@@ -1,0 +1,43 @@
+{
+  "aliases": [
+    "Web APIs"
+  ],
+  "area_uid": "frontend",
+  "content_hash": "044c6c63ba557900af03aec8104f5c5f7267545fe3c45d0557671e06d20b8689",
+  "numero": 10,
+  "related_uids": [
+    "c_LG2UZSQPXG",
+    "c_MBMF42FTPA",
+    "c_OD7QLNQ7GN"
+  ],
+  "sections": {
+    "como_funciona": "1. El código llama a `fetch()` indicando la URL y, opcionalmente, método y cabeceras.  \r\n2. `fetch` devuelve una promesa; al resolverse se obtiene un objeto `Response`.  \r\n3. El contenido de la respuesta se procesa (p. ej., `response.json()`).  \r\n4. Si se necesita persistir datos, se elige una API de Storage: `localStorage.setItem()` para datos simples o `IndexedDB` para estructuras complejas.  \r\n5. Para cambiar la URL sin recargar la página, se crea un objeto `URL`, se modifican sus parámetros con `URLSearchParams` y se llama a `history.pushState()` o `history.replaceState()`.  \r\n6. Otros Web APIs pueden usarse de forma similar: se invoca la función global correspondiente y se manejan sus callbacks o promesas.",
+    "conexiones": "- **React** – Las Web APIs proporcionan los datos y el estado que los componentes de React consumen y actualizan.  \r\n- **Service Workers** – Interceptan peticiones `fetch` para implementar caché y funcionalidades offline.  \r\n- **GraphQL** – Se consume mediante `fetch`, pero la estructura de la respuesta difiere de una API REST tradicional.",
+    "detalles": "- **Básico**: `fetch` y `localStorage` cubren la mayoría de los casos de consumo de APIs y guardado de preferencias.  \r\n- **Intermedio**: `sessionStorage` para datos que solo deben vivir durante la sesión, y `history.pushState` para SPA que requieren URLs amigables.  \r\n- **Avanzado**: `IndexedDB` permite almacenar grandes volúmenes y consultas indexadas; `URL` y `URLSearchParams` facilitan la manipulación de rutas complejas; combinaciones de `fetch` con `AbortController` para cancelar peticiones y con `Cache API` para estrategias offline.",
+    "ejemplo_minimo": "```html\r\n<!DOCTYPE html>\r\n<html>\r\n<body>\r\n  <button id=\"load\">Cargar dato</button>\r\n  <pre id=\"out\"></pre>\r\n\r\n  <script>\r\n    document.getElementById('load').onclick = async () => {\r\n      const resp = await fetch('https://jsonplaceholder.typicode.com/todos/1');\r\n      const data = await resp.json();\r\n      localStorage.setItem('todo', JSON.stringify(data));\r\n      document.getElementById('out').textContent = JSON.stringify(data, null, 2);\r\n    };\r\n  </script>\r\n</body>\r\n</html>\r\n```",
+    "errores_comunes": "- Olvidar convertir la respuesta de `fetch` (p. ej., usar `response.text()` cuando se espera JSON).  \r\n- Usar `localStorage` para datos sensibles sin cifrado.  \r\n- Manipular el historial con `pushState` sin actualizar la UI, provocando inconsistencias.  \r\n- Modificar la URL directamente en la barra en vez de usar la API, lo que recarga la página.  \r\n- No manejar errores de red, lo que deja la aplicación en estado bloqueado.",
+    "estado_actual": "**Fundamentos estables**: `fetch`, `localStorage`, `sessionStorage`, `history`, `URL` y `URLSearchParams` son parte del estándar del navegador y su comportamiento es consistente entre versiones modernas.  \r\n**Práctica moderna**: el uso de `AbortController` con `fetch`, la adopción de `Cache API` para PWAs, y la preferencia por `IndexedDB` (a través de librerías como `idb`) para almacenamiento estructurado son tendencias actuales que mejoran rendimiento y experiencia offline.",
+    "ideas_clave": "1. **Fetch** – API para realizar peticiones HTTP y recibir respuestas asíncronas.  \r\n2. **Storage** – Conjunto de APIs (localStorage, sessionStorage, IndexedDB) que permiten guardar datos en el cliente.  \r\n3. **History** – API que controla el historial de navegación, habilitando navegación programática y gestión de estados.  \r\n4. **URL** – API URL y URLSearchParams para leer y modificar la dirección del documento y sus parámetros.  \r\n5. **Web APIs del navegador** – Conjunto de interfaces nativas que exponen capacidades del entorno (p. ej., Clipboard, Geolocation) y que se acceden mediante objetos globales.",
+    "objetivo": "Utilizo las Web APIs del navegador para interactuar con funcionalidades del entorno del cliente sin necesidad de librerías externas. Resuelvo la necesidad de obtener datos remotos, almacenar información local, manipular el historial de navegación y trabajar con la URL actual, tareas que aparecen cotidianamente al construir interfaces dinámicas. Después de comprenderlas, puedo diseñar aplicaciones que carguen contenido bajo demanda, mantengan el estado entre sesiones y gestionen la navegación de forma programática. Sólo me preocupo por ellas cuando la lógica de la UI depende de datos externos o de la persistencia en el cliente; en componentes puramente estáticos o en servidores no es necesario involucrarlas.",
+    "preguntas_repaso": "1. ¿Qué diferencia hay entre `localStorage` y `sessionStorage` en cuanto a duración de los datos?  \r\n2. ¿Cómo se cancela una petición `fetch` en curso?  \r\n3. ¿Cuál es la función de `history.pushState` y cómo afecta al comportamiento del navegador?  \r\n4. ¿En qué situaciones es preferible usar `IndexedDB` en lugar de `localStorage`?  \r\n5. ¿Cómo puedes leer y modificar los parámetros de consulta de la URL actual?\r\n\r\n<!-- trazabilidad: run_id=run-20261111-222723-5be21b concept=02-frontend-10-web-apis written_at=2026-11-12T01:27:27.217404+00:00 -->",
+    "ruta_estudio": "1. **Prerequisitos**: HTML, JavaScript ES6, promesas y async/await.  \r\n2. **Fundamentos**: practicar `fetch` con APIs públicas y almacenar resultados en `localStorage`.  \r\n3. **Intermedio**: explorar `history.pushState`, `URL` y `URLSearchParams` en una SPA sencilla.  \r\n4. **Avanzado**: aprender `IndexedDB` (usar la librería `idb`), combinar `fetch` con `AbortController` y experimentar con `Cache API` dentro de un Service Worker.  \r\n5. **Especialización**: integrar las APIs en frameworks (React, Vue) y en arquitecturas de PWA."
+  },
+  "sections_missing": [],
+  "slug": "web-apis",
+  "sources": [
+    "https://jsonplaceholder.typicode.com/todos/1"
+  ],
+  "sources_detail": [
+    {
+      "title": null,
+      "url": "https://jsonplaceholder.typicode.com/todos/1"
+    }
+  ],
+  "tags": [
+    "concepto",
+    "it/frontend"
+  ],
+  "title": "Web APIs",
+  "uid": "c_3OASTRUQ7K",
+  "verification_marks": []
+}

@@ -1,0 +1,39 @@
+{
+  "aliases": [
+    "Tool Calling"
+  ],
+  "area_uid": "ai-engineering",
+  "content_hash": "8b4cb890b63fd7077b6a63bd640c9d257c88949fd3ebc9ac3e63c8395433b9a1",
+  "numero": 13,
+  "related_uids": [
+    "c_4ZDQZL6GC7",
+    "c_64ZKUJ47VT",
+    "c_EC777UCG67",
+    "c_JS77WZ6QYB",
+    "c_LQGB44U4DC",
+    "c_RJE3D4II2X"
+  ],
+  "sections": {
+    "como_funciona": "1. El ingeniero registra una o más funciones (p. ej., `buscar_usuario(id)`).  \r\n2. En el prompt se describe cada función con su nombre, parámetros y propósito.  \r\n3. El modelo genera una respuesta que sigue el esquema estructurado (JSON) indicando la función a llamar y sus argumentos.  \r\n4. El motor de ejecución parsea esa respuesta, invoca la función real y captura su salida.  \r\n5. La salida se inserta en el contexto del modelo y se solicita la siguiente respuesta, completando el ciclo.",
+    "conexiones": "- **Prompt Engineering**: el diseño del prompt determina si el modelo reconoce y utiliza correctamente las herramientas descritas.  \r\n- **Agents**: los agentes deciden dinámicamente cuál herramienta llamar en función del objetivo y del estado del diálogo.  \r\n- **Memory**: la memoria del modelo permite que decisiones de llamadas anteriores influyan en llamadas futuras, manteniendo coherencia en flujos largos.",
+    "detalles": "- **Básico**: registrar funciones simples y usar prompts con pocos ejemplos.  \r\n- **Intermedio**: manejar tipos de datos complejos, validar argumentos y gestionar errores de llamada.  \r\n- **Avanzado**: orquestar múltiples herramientas en un mismo turno, combinar con **Agents** que eligen la herramienta adecuada y mantener **Memory** para decisiones dependientes del historial.",
+    "ejemplo_minimo": "```python\r\nimport json\r\n\r\n# 1. Definir la herramienta\r\ndef obtener_clima(ciudad: str) -> str:\r\n    return f\"El clima en {ciudad} es soleado.\"\r\n\r\n# 2. Prompt con descripción de la herramienta\r\nprompt = \"\"\"\r\nYou can call the following function:\r\n{\r\n  \"name\": \"obtener_clima\",\r\n  \"description\": \"Devuelve el clima actual de una ciudad.\",\r\n  \"parameters\": {\r\n    \"type\": \"object\",\r\n    \"properties\": {\r\n      \"ciudad\": {\"type\": \"string\", \"description\": \"Nombre de la ciudad\"}\r\n    },\r\n    \"required\": [\"ciudad\"]\r\n  }\r\n}\r\nUser: ¿Cuál es el clima en Madrid?\r\n\"\"\"\r\n\r\n# 3. Simular respuesta del modelo (en producción sería la API de LLM)\r\nmodel_response = '{\"name\": \"obtener_clima\", \"arguments\": {\"ciudad\": \"Madrid\"}}'\r\n\r\n# 4. Parsear y ejecutar\r\ncall = json.loads(model_response)\r\nresult = obtener_clima(**call[\"arguments\"])\r\nprint(result)  # → El clima en Madrid es soleado.\r\n```",
+    "errores_comunes": "- **Formato incorrecto**: devolver JSON mal formado; evitarlo validando con un parser antes de ejecutar.  \r\n- **Argumentos faltantes**: omitir parámetros obligatorios; incluir validación de esquema en el runtime.  \r\n- **Confusión de tipos**: pasar strings donde se esperan números; usar descripciones claras en el prompt.",
+    "estado_actual": "- **Fundamentos estables**: la especificación de llamadas estructuradas (p. ej., JSON) y la práctica de describir funciones en el prompt son ampliamente adoptadas.  \r\n- **Práctica moderna**: frameworks como LangChain y LlamaIndex proveen wrappers que automatizan el registro, el parsing y la gestión de errores, facilitando la integración de Tool Calling en **AI Workflows** complejos.",
+    "ideas_clave": "1. **Definición de herramientas**: se describen funciones o APIs que el modelo puede invocar.  \r\n2. **Prompt que expone la capacidad**: el prompt incluye instrucciones y ejemplos que enseñan al modelo a devolver una llamada estructurada.  \r\n3. **Interpretación de la salida**: el runtime parsea la respuesta del modelo y ejecuta la herramienta correspondiente.  \r\n4. **Ciclo de retroalimentación**: el resultado de la herramienta se vuelve a inyectar al modelo para continuar la conversación o el flujo.",
+    "objetivo": "Utilizo **Tool Calling** para que un modelo de lenguaje pueda invocar funciones, APIs o herramientas externas directamente desde la generación de texto. Resuelvo el problema de que el modelo solo produce palabras, mientras que el producto necesita ejecutar acciones concretas como consultar una base de datos, enviar un correo o generar un gráfico. Aparece en la arquitectura de cualquier sistema de IA que combine razonamiento natural con operaciones determinísticas, por ejemplo en asistentes virtuales o pipelines de análisis de datos. Después de entenderlo, puedo diseñar flujos donde el modelo decide cuándo y cómo llamar a recursos externos, lo que simplifica la integración y mejora la fiabilidad. No necesito preocuparme por Tool Calling cuando el producto solo requiere respuestas estáticas o cuando la lógica de negocio ya está codificada sin interacción dinámica con el modelo.",
+    "preguntas_repaso": "1. ¿Qué ventaja aporta Tool Calling frente a que el modelo solo genere texto?  \r\n2. ¿Cómo se describe una herramienta en el prompt para que el modelo pueda llamarla?  \r\n3. ¿Qué paso del ciclo garantiza que el resultado de la herramienta influya en la siguiente respuesta del modelo?  \r\n4. ¿Cuál es un error típico al parsear la salida del modelo y cómo se previene?  \r\n5. ¿De qué manera los Agents amplían la capacidad de Tool Calling en un sistema de IA?",
+    "ruta_estudio": "1. **Prerequisitos**: familiaridad con JSON, APIs REST y conceptos básicos de LLMs.  \r\n2. **Fundamentos**: leer la guía oficial de Tool Calling del proveedor de LLM que uses; practicar con ejemplos simples.  \r\n3. **Integración**: experimentar con un framework (p. ej., LangChain) para registrar funciones y manejar respuestas.  \r\n4. **Escalado**: combinar con Agents y Memory, diseñar flujos donde varias herramientas interactúan y se gestionan errores de red y tiempo de ejecución."
+  },
+  "sections_missing": [],
+  "slug": "tool-calling",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/ai-engineering"
+  ],
+  "title": "Tool Calling",
+  "uid": "c_R73S6QTQFN",
+  "verification_marks": []
+}

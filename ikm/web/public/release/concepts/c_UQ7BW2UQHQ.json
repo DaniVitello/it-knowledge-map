@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "OLTP vs OLAP"
+  ],
+  "area_uid": "database",
+  "content_hash": "09531efcb22f14cc26956e6be0a68ff5e2a5c2a49aa9031b1714ab17da85b12d",
+  "numero": 15,
+  "related_uids": [
+    "c_AW3CMP3J7S",
+    "c_EIJI27LM76",
+    "c_NTZ6VGXWNA"
+  ],
+  "sections": {
+    "como_funciona": "1. **Ingreso de datos**: la aplicación escribe en la base OLTP (INSERT/UPDATE) garantizando ACID.  \r\n2. **Extracción**: un proceso ETL/ELT copia los cambios a un staging area.  \r\n3. **Transformación**: los datos se desnormalizan y se organizan en tablas de hechos y dimensiones.  \r\n4. **Carga**: el resultado se inserta en el almacén OLAP.  \r\n5. **Consulta analítica**: los analistas ejecutan SELECT con GROUP BY, WINDOW y funciones de agregación contra OLAP, sin impactar la latencia de OLTP.",
+    "conexiones": "- **Data Warehouse**: el almacén OLAP es la pieza central del Data Warehouse, donde se consolidan los datos para reporting.  \r\n- **ETL / ELT**: estos procesos trasladan y transforman datos desde OLTP hacia OLAP, habilitando la separación de cargas.  \r\n- **Data Pipelines**: orquestan la extracción continua (CDC) y la carga incremental, manteniendo sincronizados los entornos transaccional y analítico.",
+    "detalles": "- **Básico**: distinguir los tipos de consultas (transaccional vs analítica) y elegir la base adecuada.  \r\n- **Intermedio**: diseñar esquemas; normalización para OLTP, modelado dimensional para OLAP; definir índices de inserción vs índices de lectura.  \r\n- **Avanzado**: implementar replicación en tiempo real (CDC), particionar tablas de hechos, usar materialized views y columnar storage para acelerar OLAP, y aplicar políticas de retención de datos en OLTP.",
+    "ejemplo_minimo": "```sql\r\n-- OLTP: tabla de órdenes operacionales\r\nCREATE TABLE orders (\r\n    order_id   INTEGER PRIMARY KEY,\r\n    client_id  INTEGER,\r\n    amount     NUMERIC,\r\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\r\n);\r\n\r\nINSERT INTO orders (client_id, amount) VALUES (101, 250.00);\r\n\r\n-- OLAP: tabla de hechos desnormalizada (copia simplificada)\r\nCREATE TABLE fact_orders (\r\n    order_id   INTEGER,\r\n    client_id  INTEGER,\r\n    amount     NUMERIC,\r\n    year_month TEXT\r\n);\r\n\r\nINSERT INTO fact_orders\r\nSELECT order_id, client_id, amount,\r\n       strftime('%Y-%m', created_at) AS year_month\r\nFROM orders;\r\n\r\n-- Consulta analítica en OLAP\r\nSELECT year_month, SUM(amount) AS total_sales\r\nFROM fact_orders\r\nGROUP BY year_month\r\nORDER BY year_month;\r\n```",
+    "errores_comunes": "- **Usar la misma base para OLTP y OLAP** → la carga analítica degrada la respuesta transaccional; evitarlo separando los sistemas.  \r\n- **Normalizar excesivamente en OLAP** → dificulta agregaciones; usar esquemas dimensionales.  \r\n- **Olvidar la captura de cambios (CDC)** → los datos analíticos quedan desactualizados; implementar procesos de extracción incremental.",
+    "estado_actual": "- **Fundamentos estables**: la separación OLTP/OLAP, los principios de ACID para transacciones y los modelos dimensionales para análisis siguen siendo la base.  \r\n- **Práctica moderna**: se adopta la arquitectura Lambda o Kappa con streaming CDC, almacenes columnar en la nube (Snowflake, BigQuery) y materialized views para reducir la latencia entre OLTP y OLAP.",
+    "ideas_clave": "1. **OLTP**: sistemas optimizados para transacciones rápidas, consistencia inmediata y alta concurrencia.  \r\n2. **OLAP**: entornos diseñados para consultas analíticas, agregaciones y exploración de historiales.  \r\n3. **Separación de cargas**: mantener bases operacionales y de análisis independientes evita cuellos de botella.  \r\n4. **Modelo de datos distinto**: OLTP usa esquemas normalizados; OLAP emplea esquemas dimensionales (estrella, copo de nieve).",
+    "objetivo": "Utilizo la distinción entre OLTP y OLAP para decidir cómo estructurar y consultar los datos que manejo a diario. Resuelvo el problema de mezclar cargas de trabajo transaccionales (alta concurrencia, escrituras rápidas) con análisis de gran volumen (consultas complejas, agregaciones). En mi rol de ingeniero de datos, aplico OLTP al diseñar bases operacionales que soportan aplicaciones de negocio y OLAP al construir almacenes de datos donde los analistas generan reportes y modelos predictivos. Después de comprender esta separación, puedo definir esquemas, elegir tecnologías y planificar pipelines de carga sin que una carga degrade a la otra. Cuando solo trabajo con datos de referencia estáticos o con consultas triviales, no es necesario preocuparse por la separación OLTP/OLAP.",
+    "preguntas_repaso": "1. ¿Qué característica de rendimiento distingue a un sistema OLTP de uno OLAP?  \r\n2. ¿Por qué es problemático ejecutar consultas agregadas complejas directamente sobre una base OLTP?  \r\n3. ¿Cuál es la diferencia principal entre un esquema normalizado y uno dimensional?  \r\n4. ¿Cómo ayuda un proceso CDC a mantener actualizado un almacén OLAP?  \r\n5. ¿Qué tipo de índice es más apropiado en una tabla de hechos de un Data Warehouse?",
+    "ruta_estudio": "1. **Prerequisitos**: SQL básico, conceptos de transacciones y normalización.  \r\n2. **Fundamentos**: estudiar diferencias de workload, modelos de datos OLTP vs OLAP y principios de ACID vs BASE.  \r\n3. **Intermedio**: aprender modelado dimensional (estrella, copo de nieve) y diseñar pipelines ETL/ELT simples.  \r\n4. **Avanzado**: profundizar en CDC, streaming de datos, almacenes columnar y optimizaciones de consultas analíticas.  \r\n5. **Especialización**: explorar herramientas específicas (Snowflake, Redshift, Apache Flink) y patrones de arquitectura Lambda/Kappa."
+  },
+  "sections_missing": [],
+  "slug": "oltp-vs-olap",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/database-data-analytics"
+  ],
+  "title": "OLTP vs OLAP",
+  "uid": "c_UQ7BW2UQHQ",
+  "verification_marks": []
+}

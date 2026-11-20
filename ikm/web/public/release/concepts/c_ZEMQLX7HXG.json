@@ -1,0 +1,37 @@
+{
+  "aliases": [
+    "Performance"
+  ],
+  "area_uid": "frontend",
+  "content_hash": "443d3a0e43b8cbf9fe0fb61409120d7ed1db968a3215936d711f5c962e8e89bb",
+  "numero": 23,
+  "related_uids": [
+    "c_KFFEDHVX2D",
+    "c_PAUDUA5YDA",
+    "c_RPCIXH4YRU",
+    "c_SCSLG2OETM"
+  ],
+  "sections": {
+    "como_funciona": "1. **Análisis del bundle**: se inspecciona el tamaño y la composición del bundle generado por la herramienta de empaquetado.  \r\n2. **División inteligente**: se aplican técnicas de code‑splitting para crear bundles más pequeños que puedan cargarse bajo demanda.  \r\n3. **Implementación de lazy loading**: los componentes o rutas no críticos se importan dinámicamente, de modo que el navegador solo los solicita cuando el usuario los necesita.  \r\n4. **Configuración de caching**: se establecen encabezados HTTP (`Cache‑Control`, `ETag`) y se aprovechan Service Workers para almacenar recursos estáticos.  \r\n5. **Medición con Web Vitals**: se recopilan los valores de LCP, FID y CLS en producción; los resultados orientan ajustes en rendering y carga de recursos.",
+    "conexiones": "- **Data fetching**: la forma en que se obtienen datos influye en el rendering; una carga diferida de datos complementa el lazy loading de componentes.  \r\n- **Rendering moderno**: técnicas como Concurrent Mode en React o Suspense para datos amplían el modelo de rendering y dependen de una gestión cuidadosa de la performance.  \r\n- **CDN / Load Balancing**: distribuir bundles y recursos estáticos a través de una CDN reduce la latencia y complementa las estrategias de caching del navegador.",
+    "detalles": "- **Básico**: comprender el ciclo de vida del rendering y usar herramientas como Chrome DevTools para observar el tamaño de los bundles y los tiempos de carga.  \r\n- **Intermedio**: aplicar code‑splitting con `import()` y configurar políticas de caching en el servidor; introducir `preload` y `prefetch` para recursos críticos.  \r\n- **Avanzado**: optimizar el rendering mediante técnicas como memoization, uso de `requestIdleCallback` y `scheduler`; integrar métricas de Web Vitals con la API `web-vitals` y automatizar alertas en CI/CD.",
+    "ejemplo_minimo": "```js\r\n// lazy‑load de un componente React\r\nimport React, { Suspense, lazy } from 'react';\r\n\r\nconst Dashboard = lazy(() => import('./Dashboard'));\r\n\r\nfunction App() {\r\n  return (\r\n    <Suspense fallback={<div>Cargando...</div>}>\r\n      <Dashboard />\r\n    </Suspense>\r\n  );\r\n}\r\nexport default App;\r\n```\r\nEste fragmento muestra cómo el componente *Dashboard* se descarga solo cuando se necesita, reduciendo el bundle inicial.",
+    "errores_comunes": "- **Sobrecargar lazy loading**: cargar demasiados componentes de forma diferida genera múltiples peticiones simultáneas; agruparlos en chunks lógicos evita este problema.  \r\n- **Ignorar caché del navegador**: no establecer encabezados de expiración provoca descargas repetidas; usar `Cache‑Control: max‑age` corrige la situación.  \r\n- **Medir solo tiempo de carga**: enfocarse únicamente en el tamaño del bundle sin observar LCP o CLS puede dejar problemas de experiencia sin detectar; combinar métricas brinda una visión completa.",
+    "estado_actual": "- **Fundamentos estables**: el concepto de rendering, la existencia de bundles y la práctica de lazy loading son pilares consolidados en el ecosistema Frontend.  \r\n- **Práctica moderna**: Web Vitals se ha convertido en la referencia de facto para medir la experiencia del usuario; las herramientas de bundling (es. Vite, esbuild) ofrecen configuraciones automáticas de code‑splitting y caching inteligente, mientras que los Service Workers permiten estrategias de caching avanzadas.",
+    "ideas_clave": "1. **Rendering** – El proceso de transformar el árbol de componentes en DOM visible; su costo determina la rapidez con que el usuario ve cambios.  \r\n2. **Bundles** – Agrupación de módulos JavaScript y CSS; tamaños menores reducen el tiempo de descarga inicial.  \r\n3. **Lazy loading** – Carga diferida de recursos que no son críticos en el primer render, evitando bloquear la interacción inicial.  \r\n4. **Caching** – Reutilización de recursos ya descargados mediante el navegador o capas intermedias, disminuyendo peticiones repetidas.  \r\n5. **Web Vitals** – Métricas estandarizadas (LCP, FID, CLS) que cuantifican la experiencia del usuario y guían la priorización de mejoras.",
+    "objetivo": "Utilizo la optimización de performance para que las aplicaciones web carguen y respondan de forma rápida, reduciendo la fricción del usuario. Resuelvo problemas de lentitud percibida, consumo excesivo de ancho de banda y bloqueos del hilo principal que aparecen al renderizar interfaces complejas. En mi día a día como desarrollador Frontend, la performance está presente en la elección de cómo empaquetar código, cuándo cargar recursos y cómo medir la experiencia real del usuario. Después de comprenderla, puedo diseñar arquitecturas que escalen sin degradar la velocidad y priorizar mejoras basadas en datos. Sólo me preocupo por la performance cuando la aplicación supera los umbrales de carga aceptables o cuando el negocio exige tiempos de respuesta muy bajos; en prototipos internos o herramientas de uso restringido, la optimización profunda puede posponerse.",
+    "preguntas_repaso": "1. ¿Qué métricas conforman los Web Vitals y por qué son relevantes para la performance?  \r\n2. ¿Cómo afecta el tamaño de un bundle al tiempo de carga percibido por el usuario?  \r\n3. Describe el flujo de ejecución cuando se usa `import()` para lazy loading de un componente.  \r\n4. ¿Cuál es la diferencia entre `preload` y `prefetch` y cuándo deberías usar cada uno?  \r\n5. ¿De qué manera un Service Worker puede mejorar la estrategia de caching de una aplicación Frontend?",
+    "ruta_estudio": "1. **Prerequisitos**: HTML, CSS, JavaScript básico y conceptos de DOM.  \r\n2. **Fundamentos**: estudiar el ciclo de vida del rendering y usar Chrome DevTools para auditar bundles.  \r\n3. **Code‑splitting y lazy loading**: practicar con `import()` en proyectos React/Vue y medir el impacto.  \r\n4. **Caching**: aprender encabezados HTTP, Service Workers y estrategias de invalidación.  \r\n5. **Web Vitals**: integrar la librería `web-vitals`, interpretar LCP, FID y CLS, y crear alertas en CI.  \r\n6. **Avanzado**: explorar técnicas de rendering concurrente, optimizaciones de scheduler y automatización de auditorías de performance."
+  },
+  "sections_missing": [],
+  "slug": "performance",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/frontend"
+  ],
+  "title": "Performance",
+  "uid": "c_ZEMQLX7HXG",
+  "verification_marks": []
+}

@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "Error Handling"
+  ],
+  "area_uid": "software-engineering",
+  "content_hash": "bd03890af9544779b79e9f241c776218e5977570a6844ed3a9445df92cc8e947",
+  "numero": 10,
+  "related_uids": [
+    "c_D7P4FE3X2D",
+    "c_N3N6CTKPIA"
+  ],
+  "sections": {
+    "como_funciona": "1. El código detecta una condición anómala y lanza una **excepción**.  \r\n2. El runtime busca el bloque `catch`/`except` más cercano que coincida con el **tipo de error** lanzado.  \r\n3. Dentro del manejador se ejecuta la **recuperación** elegida: reintento, uso de valores por defecto o registro del incidente.  \r\n4. Si la recuperación no es posible, el flujo sigue el **modo de falla** definido (por ejemplo, abortar la transacción).",
+    "conexiones": "- **Middleware**: permite interceptar excepciones en un punto único y aplicar políticas de logging y retry antes de que alcancen la lógica de negocio.  \r\n- **Validación**: al detectar datos inválidos se lanzan excepciones de validación, evitando que errores de entrada se propaguen más allá de la capa de entrada.  \r\n- **Circuit Breaker**: patrón que, basado en la frecuencia de fallos, abre un circuito para prevenir llamadas a servicios inestables, integrándose con la estrategia de modos de falla.",
+    "detalles": "- **Básico**: usar `try/catch` (o `try/except`) para capturar excepciones específicas y evitar que se propaguen sin control.  \r\n- **Intermedio**: crear jerarquías de excepciones propias que reflejen los **tipos de error** del dominio y aplicar patrones como *Exception Translation* para aislar capas.  \r\n- **Avanzado**: combinar manejo de errores con *middleware* que centralice logging, métricas y políticas de retry; implementar *circuit breakers* para controlar modos de falla en sistemas distribuidos.",
+    "ejemplo_minimo": "```python\r\ndef dividir(a, b):\r\n    try:\r\n        return a / b\r\n    except ZeroDivisionError as e:\r\n        # recuperación simple: devolver 0 y registrar\r\n        print(f\"Error: {e}\")\r\n        return 0\r\n\r\nresultado = dividir(10, 0)   # imprime \"Error: division by zero\"\r\nprint(resultado)            # 0\r\n```",
+    "errores_comunes": "- Capturar la excepción genérica `Exception` y ocultar errores reales → usar tipos específicos.  \r\n- Colocar lógica de negocio dentro del bloque `catch` → mantener los manejadores enfocados en la recuperación.  \r\n- No liberar recursos en caso de error → usar bloques `finally` o context managers.",
+    "estado_actual": "Los fundamentos del manejo de excepciones son estables y forman parte del lenguaje en la mayoría de los entornos de desarrollo. En la práctica moderna, se complementan con patrones de resiliencia (retry, circuit breaker) y con *middleware* que centraliza la gestión de errores, logging y métricas, especialmente en arquitecturas de microservicios.",
+    "ideas_clave": "1. **Excepciones** – mecanismo estructurado para señalizar condiciones de error y transferir el control a un manejador.  \r\n2. **Tipos de error** – clasificación entre errores de programación (bugs), errores de entorno (IO, red) y errores de negocio (validación).  \r\n3. **Recuperación** – estrategia para volver a un estado consistente: retry, fallback, compensación o abortar.  \r\n4. **Modos de falla** – decidir si el sistema falla rápido (fail‑fast) o degrada su funcionalidad (graceful degradation).",
+    "objetivo": "Utilizo el manejo de errores para anticipar y controlar situaciones inesperadas que pueden romper la ejecución de un programa. Resuelvo el problema de que una excepción no capturada cause la caída del sistema o la pérdida de datos. En mi día a día como ingeniero de software, lo aplico al diseñar APIs, servicios backend y componentes críticos donde la robustez es obligatoria. Después de comprenderlo, puedo definir políticas de recuperación, elegir entre lanzar o envolver excepciones y estructurar flujos de fallback. No necesito preocuparme cuando el código está aislado en scripts de uso puntual y la tolerancia a fallos no es un requisito del negocio.",
+    "preguntas_repaso": "1. ¿Cuál es la diferencia entre lanzar una excepción y devolver un código de error?  \r\n2. ¿Por qué es importante distinguir entre tipos de error (programa, entorno, negocio) al diseñar manejadores?  \r\n3. ¿Qué estrategia de recuperación elegirías para una operación de escritura en base de datos que falla por un timeout?  \r\n4. ¿Cómo afecta el modo de falla “fail‑fast” al diseño de un servicio crítico?  \r\n5. ¿De qué manera un middleware puede simplificar el manejo de excepciones en una arquitectura de microservicios?",
+    "ruta_estudio": "1. **Prerequisitos**: conceptos de control de flujo, tipos de datos y estructuras de excepción en el lenguaje elegido.  \r\n2. **Fundamentos**: práctica con `try/catch`, creación de excepciones propias y clasificación de errores.  \r\n3. **Intermedio**: patrones de traducción de excepciones, uso de `finally`/context managers y logging estructurado.  \r\n4. **Avanzado**: integración con middleware, implementación de retries y circuit breakers, y monitoreo de métricas de fallos."
+  },
+  "sections_missing": [],
+  "slug": "error-handling",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/software-engineering"
+  ],
+  "title": "Error Handling",
+  "uid": "c_CLBL3KTWT4",
+  "verification_marks": []
+}

@@ -1,0 +1,38 @@
+{
+  "aliases": [
+    "UX Metrics"
+  ],
+  "area_uid": "ux-ui",
+  "content_hash": "a135c11cee9f61e6e6d60d0d6303b01034cfebf92191e89845f7073fcfc90b6d",
+  "numero": 23,
+  "related_uids": [
+    "c_E2BEEPTCLY",
+    "c_FHDALEC2NY",
+    "c_RQAR6DO3SU",
+    "c_VZFUJQTAUP",
+    "c_YTEYG3YOCU"
+  ],
+  "sections": {
+    "como_funciona": "1. Defino la tarea o evento crítico que quiero medir (p. ej. completar el checkout).  \r\n2. Configuro la captura de datos en la herramienta de analítica (eventos de “start” y “complete”).  \r\n3. Calculo el **completion rate** dividiendo completados entre iniciados.  \r\n4. Registro timestamps para cada evento y obtengo el **time‑on‑task** promedio.  \r\n5. Analizo la **retention** mediante cohortes que comparan la actividad de usuarios nuevos a lo largo del tiempo.  \r\n6. Mido la **conversion** en cada paso del funnel y la relaciono con cambios de diseño para validar hipótesis.",
+    "conexiones": "- **Analytics Metrics**: proporcionan el contexto cuantitativo (tráfico, fuentes) que complementa los UX Metrics centrados en la experiencia.  \r\n- **Usability**: los UX Metrics son indicadores operacionales que reflejan la usabilidad percibida por los usuarios.  \r\n- **Product Metrics**: la conversión y retención alimentan métricas de negocio como ingresos y churn, cerrando el ciclo entre experiencia y resultados comerciales.",
+    "detalles": "- **Básico**: elegir métricas alineadas con los objetivos de negocio y configurar eventos simples.  \r\n- **Intermedio**: segmentar los datos por dispositivo, canal de adquisición o perfil de usuario para identificar patrones ocultos.  \r\n- **Avanzado**: combinar UX Metrics con **Analytics Metrics** (páginas vistas, bounce rate) y con indicadores de **Product Metrics** (ARPU, churn) para crear un cuadro de mando integral que guíe decisiones estratégicas.",
+    "ejemplo_minimo": "```json\r\n{\r\n  \"event\": \"checkout_complete\",\r\n  \"userId\": \"12345\",\r\n  \"timestamp\": \"2026-11-06T14:23:10Z\",\r\n  \"task\": \"checkout\",\r\n  \"durationMs\": 8420\r\n}\r\n```\r\nEste registro permite calcular tanto el completion rate (contando eventos “checkout_start” vs “checkout_complete”) como el time‑on‑task (duración en milisegundos).",
+    "errores_comunes": "- Medir métricas sin vincularlas a un objetivo de negocio → evita la acción al no saber qué mejorar.  \r\n- Ignorar la segmentación de usuarios → se pierden diferencias críticas entre grupos.  \r\n- Confundir correlación con causalidad → no atribuyas mejoras de métricas a cambios de diseño sin pruebas controladas.",
+    "estado_actual": "**Fundamentos estables**: los cuatro indicadores (completion rate, time‑on‑task, retention, conversion) siguen siendo la base para evaluar usabilidad y efectividad de flujos.  \r\n**Práctica moderna**: se integran con plataformas de análisis de eventos en tiempo real y se combinan con métricas de **Usability Testing** (task success, error rate) para validar hipótesis antes de lanzar cambios a producción.",
+    "ideas_clave": "1. **Completion rate** – porcentaje de usuarios que finalizan una tarea clave.  \r\n2. **Time‑on‑task** – tiempo medio que tarda un usuario en completar esa tarea.  \r\n3. **Retention** – frecuencia con la que los usuarios vuelven al producto después de la primera visita.  \r\n4. **Conversion** – proporción de usuarios que pasan de un estado a otro deseado (p. ej. registro, compra).",
+    "objetivo": "Utilizo los UX Metrics para cuantificar cómo los usuarios interactúan con una interfaz y detectar cuellos de botella en la experiencia. Resuelvo la incertidumbre de si un flujo de usuario está cumpliendo sus objetivos y si el producto está generando valor sostenido. Aparecen en cada fase del diseño de producto senior: al validar prototipos, al priorizar mejoras y al demostrar el impacto de decisiones de diseño a stakeholders. Después de entenderlos, puedo definir experimentos, comparar versiones y alinear el roadmap con datos reales. No necesito preocuparme cuando el producto está en fase de ideación sin usuarios reales o cuando la métrica no aporta información accionable para la decisión actual.",
+    "preguntas_repaso": "1. ¿Qué diferencia hay entre completion rate y conversion en el contexto de un funnel de compra?  \r\n2. ¿Cómo se calcula el time‑on‑task a partir de eventos de “start” y “complete”?  \r\n3. ¿Por qué es importante segmentar la retención por cohortes en lugar de usar un promedio global?  \r\n4. ¿Qué riesgo implica interpretar una mejora en conversion sin validar mediante Usability Testing?  \r\n5. ¿Cómo pueden los UX Metrics influir en la priorización del roadmap de producto?",
+    "ruta_estudio": "1. **Prerequisitos**: conceptos básicos de investigación de usuarios, definición de tareas y familiaridad con herramientas de analítica de eventos.  \r\n2. **Fundamentos**: aprender a definir y capturar completion rate y time‑on‑task; practicar con datasets simples.  \r\n3. **Intermedio**: profundizar en cohort analysis para retention y en funnel analysis para conversion; usar dashboards para visualización.  \r\n4. **Avanzado**: integrar UX Metrics con Analytics Metrics y Product Metrics; diseñar experimentos A/B que midan impacto directo de cambios de UI."
+  },
+  "sections_missing": [],
+  "slug": "ux-metrics",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/ux-ui"
+  ],
+  "title": "UX Metrics",
+  "uid": "c_K2XQL2MKUK",
+  "verification_marks": []
+}

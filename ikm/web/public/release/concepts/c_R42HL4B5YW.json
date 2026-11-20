@@ -1,0 +1,37 @@
+{
+  "aliases": [
+    "Transformers"
+  ],
+  "area_uid": "ai-engineering",
+  "content_hash": "06d658775469ffdc526ba6efaf97de4fa07cf8336396ebd30efc2d37bb901a59",
+  "numero": 6,
+  "related_uids": [
+    "c_AG5JLRF7W4",
+    "c_APDCP5OPVF",
+    "c_CG3CPXKFLT",
+    "c_YFKRGNUXRH"
+  ],
+  "sections": {
+    "como_funciona": "1. **Tokenización**: el input se corta en tokens y se convierten en índices del vocabulario.  \r\n2. **Embedding**: cada índice se transforma en un vector mediante una tabla de embeddings.  \r\n3. **Positional Encoding**: al vector de embedding se suma un vector que indica su posición en la secuencia.  \r\n4. **Self‑Attention**: en cada capa, los vectores generan *queries*, *keys* y *values*; el producto escalar entre queries y keys produce pesos que se aplican a los values.  \r\n5. **Multi‑Head**: se repite el proceso en varios subespacios paralelos y sus resultados se concatenan.  \r\n6. **Feed‑Forward**: la salida de la atención pasa por una red neuronal densa y se normaliza.  \r\n7. **Stacking**: los pasos 4‑6 se repiten N veces; la salida final se proyecta a la tarea (clasificación, generación, etc.).",
+    "conexiones": "- **Neural Networks**: los Transformers son una familia de redes neuronales que sustituyen la recurrencia por atención paralela.  \r\n- **LLMs**: los grandes modelos de lenguaje (GPT, LLaMA) están construidos sobre arquitecturas Transformer, heredando sus mecanismos de atención y embeddings.  \r\n- **Tokenization**: el proceso de dividir texto en tokens es el punto de entrada que permite a los Transformers trabajar con datos discretos.",
+    "detalles": "- **Básico**: comprender que la atención sustituye a la recurrencia y que cada capa es idéntica en estructura.  \r\n- **Intermedio**: ajustar el número de cabezas, la dimensión de los embeddings y la profundidad para equilibrar capacidad y coste computacional.  \r\n- **Avanzado**: aplicar técnicas como *Layer Normalization* pre‑norm, *Dropout* en atención, *Sparse Attention* para secuencias largas y *Fine‑Tuning* con *LoRA* o *Adapter* para especializar modelos sin re‑entrenar todo el peso.",
+    "ejemplo_minimo": "```python\r\nfrom transformers import AutoTokenizer, AutoModel\r\nimport torch\r\n\r\ntokenizer = AutoTokenizer.from_pretrained(\"distilbert-base-uncased\")\r\nmodel = AutoModel.from_pretrained(\"distilbert-base-uncased\")\r\n\r\nsentence = \"Los Transformers cambian la IA.\"\r\ninputs = tokenizer(sentence, return_tensors=\"pt\")\r\nwith torch.no_grad():\r\n    outputs = model(**inputs)\r\n\r\n# embeddings de la primera token [CLS]\r\ncls_embedding = outputs.last_hidden_state[:, 0, :]\r\nprint(cls_embedding.shape)   # (1, 768)\r\n```",
+    "errores_comunes": "- **Olvidar Positional Encoding**: la atención pierde orden; usar embeddings sin posición genera resultados incoherentes.  \r\n- **Confundir tokens con palabras**: asumir que cada palabra es un token lleva a errores de longitud y OOV.  \r\n- **Sobredimensionar el modelo**: usar una arquitectura demasiado grande para el dataset provoca overfitting y consumo innecesario.",
+    "estado_actual": "- **Fundamentos estables**: la arquitectura de capas de self‑attention, embeddings y positional encoding se mantiene desde el artículo original y es la base de la mayoría de los modelos.  \r\n- **Práctica moderna**: se emplean variantes como *Transformer‑XL* para dependencias más largas, *Sparse Transformers* para eficiencia, y técnicas de ajuste ligero (LoRA, Adapters) que permiten personalizar LLMs sin re‑entrenar todo el modelo.",
+    "ideas_clave": "1. **Self‑Attention** – permite que cada token pese la información de todos los demás tokens en la misma secuencia.  \r\n2. **Tokens y Embeddings** – el texto se divide en tokens y cada token se proyecta a un vector denso que alimenta la atención.  \r\n3. **Arquitectura en capas** – bloques repetidos de atención multi‑cabeza + feed‑forward forman la profundidad del modelo.  \r\n4. **Positional Encoding** – agrega información de posición porque la atención es invariantes al orden.",
+    "objetivo": "Utilizo Transformers para construir componentes de IA que procesen texto, código o cualquier secuencia de tokens de forma eficiente y con capacidad de generalizar. Resuelvo el problema de capturar dependencias a largo plazo sin recurrir a arquitecturas recurrentes, lo que permite que los modelos respondan rápidamente a consultas de usuarios y mantengan coherencia en diálogos extensos. En mi día a día como AI engineer senior, los Transformers aparecen en la fase de integración de modelos de lenguaje grande (LLM), en la generación de embeddings y en la adaptación de prompts a tareas específicas. Después de entender su arquitectura, puedo diseñar pipelines de inferencia, ajustar hiper‑parámetros y combinar varios modelos en un mismo producto. Cuando el problema es puramente tabular o de visión sin texto, no es necesario preocuparme por Transformers.",
+    "preguntas_repaso": "1. ¿Qué papel juega el mecanismo de self‑attention dentro de un bloque Transformer?  \r\n2. ¿Por qué es necesario añadir Positional Encoding a los embeddings?  \r\n3. ¿Cómo afecta el número de cabezas de atención al comportamiento del modelo?  \r\n4. ¿Cuál es la diferencia entre fine‑tuning completo y ajuste ligero (LoRA/Adapters) en un LLM?  \r\n5. ¿En qué situaciones elegirías una arquitectura Sparse Transformer en lugar de la estándar?",
+    "ruta_estudio": "1. **Prerequisitos**: álgebra lineal, cálculo de gradientes y conceptos básicos de redes neuronales (feed‑forward, backpropagation).  \r\n2. **Fundamentos**: estudiar el mecanismo de self‑attention y la arquitectura de capas; practicar con modelos pre‑entrenados en HuggingFace.  \r\n3. **Especialización**: explorar variantes (Transformer‑XL, Sparse Attention) y técnicas de ajuste ligero (LoRA, Adapters).  \r\n4. **Aplicación**: diseñar pipelines de inferencia, integrar prompts dinámicos y medir métricas de latencia y fiabilidad en producción."
+  },
+  "sections_missing": [],
+  "slug": "transformers",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/ai-engineering"
+  ],
+  "title": "Transformers",
+  "uid": "c_R42HL4B5YW",
+  "verification_marks": []
+}

@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "Product Discovery"
+  ],
+  "area_uid": "product-management",
+  "content_hash": "88afbba5563d9062ac551c179fd01991742b2cd28e3c54f1a1f0c43e389c5c85",
+  "numero": 14,
+  "related_uids": [
+    "c_4Q26FRTYNL",
+    "c_ETWVMQBZXQ"
+  ],
+  "sections": {
+    "como_funciona": "1. Reúno insights de usuarios y del mercado para definir una necesidad clara.  \r\n2. Con esa necesidad, redacto una hipótesis concreta: “Si entregamos X, los usuarios aumentarán Y”.  \r\n3. Selecciono el método de experimentación más barato (paper prototype, mockup clickable, landing page).  \r\n4. Ejecutó el experimento con un grupo representativo y recojo métricas cualitativas y cuantitativas.  \r\n5. Analizo los datos; si la hipótesis se confirma, paso a diseñar un MVP; si no, pivoto o descarto.",
+    "conexiones": "- **MVP:** el resultado validado del Product Discovery alimenta la definición del Minimum Viable Product, que lleva la solución probada al mercado con el menor esfuerzo.  \r\n- **Experimentation:** la fase de descubrimiento se apoya en técnicas de experimentación para probar hipótesis de forma controlada.  \r\n- **User Research:** las entrevistas y observaciones que inician el descubrimiento provienen de prácticas estructuradas de investigación de usuarios.",
+    "detalles": "- **Básico:** entrevistas breves y mapas de empatía para captar la necesidad.  \r\n- **Intermedio:** creación de prototipos de baja fidelidad y pruebas A/B en landing pages para validar la hipótesis.  \r\n- **Avanzado:** simulaciones de flujo de usuario, pruebas de usabilidad con métricas de tiempo y éxito, y análisis estadístico de resultados para decisiones de pivote.",
+    "ejemplo_minimo": "```python\r\n# Simulación rápida de una landing page para validar interés en una nueva función\r\nimport random\r\n\r\ndef simulate_visitors(n):\r\n    conversions = 0\r\n    for _ in range(n):\r\n        # supongamos una tasa de conversión esperada del 10%\r\n        if random.random() < 0.10:\r\n            conversions += 1\r\n    return conversions / n\r\n\r\ntasa = simulate_visitors(200)\r\nprint(f\"Tasa de conversión simulada: {tasa:.2%}\")\r\n```\r\nSi la tasa supera el umbral definido (p. ej. 8 %), la hipótesis se considera validada y se procede al MVP.",
+    "errores_comunes": "- **Asumir que la necesidad está confirmada** sin datos reales; evitarlo con entrevistas y pruebas tempranas.  \r\n- **Construir un prototipo demasiado completo** que consume tiempo y recursos; mantener la mínima fidelidad necesaria.  \r\n- **Interpretar resultados sin métricas claras**; definir criterios de éxito antes del experimento.",
+    "estado_actual": "- **Fundamentos estables:** la práctica de validar hipótesis antes de construir es un pilar del Lean Product Development y se mantiene como base del proceso de descubrimiento.  \r\n- **Práctica moderna:** uso de herramientas de prototipado colaborativo (Figma, Miro) y plataformas de pruebas rápidas (LaunchDarkly, Optimizely) para acelerar la experimentación y obtener datos en tiempo real.",
+    "ideas_clave": "1. **Identificar una necesidad real del usuario** mediante entrevistas, observación o análisis de datos.  \r\n2. **Formular hipótesis de solución** que puedan ser validadas rápidamente.  \r\n3. **Diseñar experimentos de bajo costo** (prototipos, pruebas de concepto) para probar esas hipótesis.  \r\n4. **Medir resultados y decidir** si se avanza, se pivota o se abandona la idea.",
+    "objetivo": "Utilizo el Product Discovery para validar que el problema que quiero resolver realmente existe y que la solución propuesta genera valor antes de invertir recursos en su construcción. Resuelvo la incertidumbre de “¿estamos construyendo lo correcto?” y lo aplico en la fase inicial de cualquier iniciativa de producto digital, cuando defino la visión, priorizo el backlog y alineo a los stakeholders. Después de entenderlo, puedo diseñar hipótesis, planificar experimentos y decidir si avanzar a un MVP o descartar la idea. No necesito preocuparme por Product Discovery cuando el producto ya está en fase de crecimiento estable y las decisiones se basan en métricas de rendimiento consolidadas.",
+    "preguntas_repaso": "1. ¿Cómo diferencia el Product Discovery de la fase de desarrollo de un MVP?  \r\n2. ¿Qué criterios utilizas para decidir si una hipótesis está suficientemente validada?  \r\n3. ¿Por qué es importante mantener la mínima fidelidad en los prototipos durante el descubrimiento?  \r\n4. ¿Qué papel juega la experimentación en la reducción del riesgo de producto?  \r\n5. ¿Cómo integras los insights obtenidos en el descubrimiento al roadmap de producto?",
+    "ruta_estudio": "1. **Prerequisitos:** fundamentos de User Research y métricas de producto.  \r\n2. **Fundamental:** leer casos de estudio de Product Discovery y practicar entrevistas estructuradas.  \r\n3. **Intermedio:** aprender a crear prototipos de baja fidelidad y a diseñar pruebas A/B.  \r\n4. **Avanzado:** dominar herramientas de prototipado colaborativo y análisis estadístico de experimentos.  \r\n5. **Especialización:** integrar descubrimiento con roadmaps estratégicos y gestión de stakeholders."
+  },
+  "sections_missing": [],
+  "slug": "product-discovery",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/product-management"
+  ],
+  "title": "Product Discovery",
+  "uid": "c_YLNAJABAUR",
+  "verification_marks": []
+}

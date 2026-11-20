@@ -1,0 +1,37 @@
+{
+  "aliases": [
+    "API Design"
+  ],
+  "area_uid": "software-engineering",
+  "content_hash": "20d4fed813be92b0e17ba564ff438d4e1ede568a426e526ace7bc414cea41352",
+  "numero": 9,
+  "related_uids": [
+    "c_3OASTRUQ7K",
+    "c_3P4PYNPIER",
+    "c_MBMF42FTPA",
+    "c_OD7QLNQ7GN"
+  ],
+  "sections": {
+    "como_funciona": "1. **Definir el contrato**: se describen los recursos, operaciones (GET, POST, etc.) y esquemas de datos.  \r\n2. **Aplicar convenciones**: se eligen nombres de endpoints, códigos de respuesta y formatos (JSON, XML) siguiendo una guía de estilo.  \r\n3. **Publicar la especificación**: se genera un documento (OpenAPI/Swagger) que los consumidores pueden consultar y validar.  \r\n4. **Implementar la lógica**: el servidor expone los endpoints según la especificación, manejando validaciones y errores.  \r\n5. **Versionar**: al introducir cambios incompatibles, se crea una nueva versión del endpoint y se mantiene la anterior operativa.",
+    "conexiones": "- **Web APIs** – El diseño de APIs es la disciplina que permite crear Web APIs, definiendo cómo los recursos se exponen a través de HTTP.  \r\n- **JSON & APIs** – JSON es el formato de datos más frecuente en APIs modernas; su estructura ligera facilita la serialización de los contratos definidos.  \r\n- **LLM APIs & Model Serving** – Las interfaces que exponen modelos de lenguaje grande siguen los mismos principios de versionado y documentación que cualquier API, garantizando que los consumidores puedan invocar modelos de forma predecible.",
+    "detalles": "- **Básico**: comprender recursos y verbos HTTP, definir esquemas de datos simples y usar códigos de estado estándar.  \r\n- **Intermedio**: adoptar una guía de estilo (naming, paginación, filtros), generar documentación automática y establecer pruebas de contrato.  \r\n- **Avanzado**: gestionar versionado semántico, implementar políticas de seguridad (OAuth2, API keys), usar herramientas de gateway y aplicar patrones de diseño como API‑First y contract testing.",
+    "ejemplo_minimo": "```python\r\n# API mínima con Flask que devuelve un saludo en JSON\r\nfrom flask import Flask, jsonify\r\n\r\napp = Flask(__name__)\r\n\r\n@app.route(\"/v1/hello/<string:name>\", methods=[\"GET\"])\r\ndef hello(name):\r\n    return jsonify({\"message\": f\"Hola, {name}!\"}), 200\r\n\r\nif __name__ == \"__main__\":\r\n    app.run(debug=True)\r\n```",
+    "errores_comunes": "- **Ignorar el versionado** – Cambiar la firma de un endpoint rompe a los clientes; usar versiones evita este problema.  \r\n- **Mezclar formatos de datos** – Alternar entre JSON y XML sin claridad genera confusión; elegir un formato único y documentarlo.  \r\n- **Omitir códigos de estado** – Devolver siempre 200 oculta errores reales; emplear códigos HTTP apropiados.  \r\n- **Documentación desactualizada** – No sincronizar la especificación con la implementación lleva a integraciones fallidas; generar la documentación a partir del código ayuda a mantenerla alineada.",
+    "estado_actual": "- **Fundamentos estables**: los principios de contrato explícito, consistencia y versionado son ampliamente aceptados y forman la base del API Design.  \r\n- **Práctica moderna**: el uso de especificaciones OpenAPI para generar código cliente/servidor, la adopción de API gateways para gestión de seguridad y tráfico, y la integración de contract testing en pipelines CI/CD son tendencias actuales que complementan los fundamentos clásicos.",
+    "ideas_clave": "1. **Contrato explícito** – La API define de manera formal los métodos, parámetros y tipos de datos que pueden intercambiarse.  \r\n2. **Consistencia de estilo** – Se aplican convenciones (nombres, códigos de estado, formatos) para que todos los consumidores tengan expectativas uniformes.  \r\n3. **Versionado controlado** – Cada cambio significativo se introduce mediante una nueva versión para evitar rupturas inesperadas.  \r\n4. **Documentación accesible** – La descripción de la API está disponible en un formato legible (por ejemplo, OpenAPI) que sirve tanto a humanos como a herramientas automáticas.  \r\n5. **Seguridad declarada** – Los mecanismos de autenticación y autorización se especifican como parte del contrato.",
+    "objetivo": "Utilizo el diseño de APIs para definir de forma clara y consistente cómo los componentes y sistemas se comunican entre sí. Resuelvo la ambigüedad que surge al integrar módulos internos o servicios externos, garantizando que cada interacción sea predecible y mantenible. En mi trabajo como ingeniero de software, el API Design aparece cada vez que expongo funcionalidades a otros equipos, a clientes o a sistemas de terceros, y también cuando estructuro la arquitectura interna de microservicios. Al comprenderlo, puedo crear contratos de servicio robustos, automatizar pruebas de integración y facilitar la evolución de la base de código sin romper dependencias. Cuando consumo una API ya establecida y no necesito modificar su contrato, no es necesario preocuparme por su diseño interno.",
+    "preguntas_repaso": "1. ¿Qué elementos conforman un contrato explícito en el diseño de una API?  \r\n2. ¿Por qué es importante versionar una API y cómo se suele expresar la versión en la URL?  \r\n3. ¿Cuál es la ventaja de generar la documentación a partir de una especificación OpenAPI?  \r\n4. ¿Cómo se utilizan los códigos de estado HTTP para comunicar errores a los consumidores?  \r\n5. ¿Qué diferencia hay entre la gestión de seguridad en una Web API tradicional y en una LLM API?",
+    "ruta_estudio": "1. **Prerequisitos**: conceptos básicos de HTTP, estructuras de datos (JSON) y programación de servidores web.  \r\n2. **Fundamentos**: estudiar el modelo REST, aprender a escribir especificaciones OpenAPI y practicar con herramientas como Swagger UI.  \r\n3. **Intermedio**: profundizar en versionado semántico, patrones de paginación y filtros, y en la implementación de seguridad (OAuth2).  \r\n4. **Avanzado**: explorar API gateways, contract testing (pact.io), y estrategias de despliegue continuo para APIs.  \r\n5. **Especialización**: aplicar los conocimientos a dominios específicos como microservicios, GraphQL o LLM APIs."
+  },
+  "sections_missing": [],
+  "slug": "api-design",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/software-engineering"
+  ],
+  "title": "API Design",
+  "uid": "c_LG2UZSQPXG",
+  "verification_marks": []
+}

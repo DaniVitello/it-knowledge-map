@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "Typography"
+  ],
+  "area_uid": "ux-ui",
+  "content_hash": "5c5c698d04578dbdcde277673e07269b59f9bc36e424f9b3e9503064d09df939",
+  "numero": 13,
+  "related_uids": [
+    "c_AEJ6QCIQ75",
+    "c_OYXEXTPWLS",
+    "c_WI7XS25GM5"
+  ],
+  "sections": {
+    "como_funciona": "1. **Analizo el contenido** y determino cuántos niveles de información (título, subtítulo, cuerpo, microcopy) necesita la pantalla.  \r\n2. **Establezco una escala** asignando un tamaño base y calculando múltiplos (por ejemplo, 1 rem, 1.25 rem, 1.5 rem).  \r\n3. **Aplico estilos de peso y estilo** (regular, bold, italic) para diferenciar cada nivel y reforzar la jerarquía.  \r\n4. **Ajusto interlineado y tracking** para maximizar la legibilidad según el ancho del contenedor.  \r\n5. **Valido en diferentes dispositivos** asegurándome de que la escala sea responsiva y mantenga la claridad.",
+    "conexiones": "- **Visual Hierarchy** – La tipografía define niveles de importancia que estructuran la jerarquía visual de la interfaz.  \r\n- **Color** – El contraste de color entre texto y fondo es esencial para la legibilidad y refuerza la distinción jerárquica.  \r\n- **Spacing & Layout** – El interlineado y los márgenes alrededor del texto interactúan con el espaciado general para crear una composición equilibrada.",
+    "detalles": "- **Básico:** Selección de una familia legible, definición del tamaño de cuerpo (p.ej., 16 px) y uso de negrita para encabezados.  \r\n- **Intermedio:** Creación de una escala modular (p.ej., 4:5 ratio), ajuste de line‑height (1.4 – 1.6) y uso de variantes de peso para sub‑niveles.  \r\n- **Avanzado:** Implementación de variables CSS para la escala, tipografía variable (variable fonts) que permite ajustes dinámicos, y pruebas de accesibilidad de contraste y tamaño mínimo en diferentes contextos de uso.",
+    "ejemplo_minimo": "```html\r\n<!-- Tipografía mínima con escala modular -->\r\n<style>\r\n  :root {\r\n    --font-base: 1rem;               /* 16px */\r\n    --scale-ratio: 1.25;\r\n  }\r\n  body { font-family: \"Inter\", sans-serif; font-size: var(--font-base); line-height: 1.5; }\r\n  h1 { font-size: calc(var(--font-base) * var(--scale-ratio) * var(--scale-ratio)); font-weight: 700; }\r\n  p  { margin-top: 0.5rem; }\r\n</style>\r\n\r\n<h1>Guía de estilo</h1>\r\n<p>Este texto muestra la escala tipográfica básica.</p>\r\n```",
+    "errores_comunes": "- Usar demasiadas familias tipográficas → limita la coherencia; elijo una principal y una de apoyo.  \r\n- Ignorar el contraste entre texto y fondo → dificulta la lectura; verifico con herramientas de accesibilidad.  \r\n- Aplicar tamaños absolutos sin considerar la responsividad → rompe la jerarquía en móviles; utilizo unidades relativas (rem, em).",
+    "estado_actual": "**Fundamentos estables:** La necesidad de una escala tipográfica clara, la importancia del contraste y la legibilidad, y la práctica de limitar familias tipográficas siguen siendo principios aceptados.  \r\n**Práctica moderna:** El uso de variable fonts para ajustar peso y ancho en tiempo real, y la integración de sistemas de diseño que exponen la escala tipográfica como tokens CSS, son tendencias actuales adoptadas por equipos de producto avanzados.",
+    "ideas_clave": "1. **Escala tipográfica** – Define tamaños relativos (por ejemplo, 12 px, 16 px, 24 px) que crean una progresión visual clara.  \r\n2. **Legibilidad** – Garantiza que el texto sea fácil de leer mediante contraste adecuado, interlineado y longitud de línea.  \r\n3. **Jerarquía visual** – Usa variaciones de peso, tamaño y estilo para señalar la importancia de cada elemento textual.  \r\n4. **Consistencia de familia** – Selecciona una o dos familias tipográficas que se complementen y mantengan la coherencia en todo el producto.",
+    "objetivo": "Utilizo la tipografía para transformar texto en una herramienta de comunicación visual que guía al usuario, mejora la legibilidad y refuerza la jerarquía de la información. Resuelvo el problema de que el contenido escrito sea difícil de escanear o interpretar, especialmente en interfaces con mucho texto o con diferentes niveles de importancia. Aparece en cada pantalla que contiene etiquetas, botones, encabezados o cuerpos de texto, y es una de mis primeras decisiones al crear un mockup o un prototipo de alta fidelidad. Después de dominarla, puedo definir sistemas de escala tipográfica, combinar fuentes de forma coherente y alinear la tipografía con la identidad de marca. No necesito preocuparme de la tipografía cuando el proyecto usa componentes predefinidos de un design system que ya establecen la escala y los estilos.",
+    "preguntas_repaso": "1. ¿Cómo determina la escala tipográfica la jerarquía visual en una pantalla?  \r\n2. ¿Qué ajustes de interlineado y tracking favorecen la legibilidad en bloques de texto extensos?  \r\n3. ¿Por qué es arriesgado usar más de dos familias tipográficas en un mismo producto?  \r\n4. ¿Cómo se puede validar que el contraste de color entre texto y fondo cumple con los estándares de accesibilidad?  \r\n5. ¿Qué ventajas aportan las variable fonts frente a las fuentes estáticas en un design system?",
+    "ruta_estudio": "1. **Prerequisitos:** Conocer los principios básicos de usabilidad y tener nociones de CSS (font‑family, font‑size, line‑height).  \r\n2. **Fundamentos:** Estudiar escalas tipográficas (modular, perfecta) y pruebas de legibilidad (WCAG contrast).  \r\n3. **Intermedio:** Practicar la creación de tokens tipográficos en un design system y usar variable fonts.  \r\n4. **Avanzado:** Implementar tipografía responsiva con media queries y explorar herramientas de medición de lectura (e.g., eye‑tracking).  \r\n5. **Especialización:** Integrar tipografía con motion design y adaptar la escala a interfaces de voz o AR/VR."
+  },
+  "sections_missing": [],
+  "slug": "typography",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/ux-ui"
+  ],
+  "title": "Typography",
+  "uid": "c_CLVNVR43CK",
+  "verification_marks": []
+}

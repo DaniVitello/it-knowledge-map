@@ -1,0 +1,38 @@
+{
+  "aliases": [
+    "Abstraction"
+  ],
+  "area_uid": "software-engineering",
+  "content_hash": "c391abc26af94e5e58e0518ec28a4fa4b7a09edd487114ca6316355b120a4e55",
+  "numero": 7,
+  "related_uids": [
+    "c_A2ZXZTXBH5",
+    "c_HISOSDWX75",
+    "c_I4SP5V3R2E",
+    "c_KZDA6HODJU",
+    "c_KZHQNGA3LM"
+  ],
+  "sections": {
+    "como_funciona": "1. Identifico la responsabilidad que debe quedar aislada.  \r\n2. Defino una interfaz o contrato que describa los métodos y datos requeridos.  \r\n3. Implemento la lógica interna en una clase o función que cumpla ese contrato.  \r\n4. Otros módulos consumen la interfaz sin conocer la lógica subyacente.  \r\n5. Si la implementación cambia, el contrato permanece estable y los consumidores no se ven afectados.",
+    "conexiones": "- **Object-Oriented Programming**: la abstracción se materializa a través de clases abstractas e interfaces, facilitando la herencia y el polimorfismo.  \r\n- **Functional Programming**: utiliza funciones puras y tipos algebraicos para abstraer comportamientos sin estado, ofreciendo una alternativa a las interfaces orientadas a objetos.  \r\n- **Modularity**: la separación de preocupaciones que brinda la abstracción permite construir módulos independientes que pueden ser ensamblados en sistemas más grandes.",
+    "detalles": "- **Básico**: crear una interfaz simple y una única implementación.  \r\n- **Intermedio**: usar múltiples implementaciones intercambiables mediante inyección de dependencias; aplicar principios SOLID para reforzar la separación de preocupaciones.  \r\n- **Avanzado**: combinar abstracción con patrones como Strategy, Factory o Adapter; emplear tipos genéricos y programación funcional para expresar contratos de forma declarativa; gestionar versiones de contratos en APIs públicas.",
+    "ejemplo_minimo": "```java\r\n// Interface que representa el contrato\r\npublic interface Logger {\r\n    void log(String mensaje);\r\n}\r\n\r\n// Implementación concreta\r\npublic class ConsoleLogger implements Logger {\r\n    public void log(String mensaje) {\r\n        System.out.println(mensaje);\r\n    }\r\n}\r\n\r\n// Uso de la abstracción\r\npublic class Servicio {\r\n    private final Logger logger;\r\n    public Servicio(Logger logger) {\r\n        this.logger = logger;\r\n    }\r\n    public void ejecutar() {\r\n        logger.log(\"Ejecución iniciada\");\r\n    }\r\n}\r\n```",
+    "errores_comunes": "- Definir interfaces demasiado granulares que generan sobrecarga de código. *Evitarlo manteniendo la cohesión.*  \r\n- Exponer detalles internos en la firma del contrato. *Mantener la encapsulación.*  \r\n- Cambiar el contrato sin versionar la API, rompiendo consumidores. *Aplicar versionado semántico.*  \r\n- Usar abstracción donde una solución directa sería más clara. *Evaluar la complejidad antes de abstraer.*",
+    "estado_actual": "- **Fundamentos estables**: la noción de ocultar implementación mediante interfaces y contratos es un pilar de la ingeniería de software y se mantiene sin cambios significativos.  \r\n- **Práctica moderna**: la inyección de dependencias y los frameworks de contenedores (por ejemplo, Spring, .NET Core) automatizan la gestión de abstracciones, mientras que los lenguajes funcionales promueven tipos de datos inmutables y funciones de orden superior como formas de abstracción declarativa.",
+    "ideas_clave": "1. **Interfaces** – Definen el contrato visible de un componente sin revelar su implementación.  \r\n2. **Contracts** – Garantizan que los consumidores y proveedores cumplan expectativas mutuas.  \r\n3. **Separation of Concerns** – Aísla responsabilidades para que cada módulo se ocupe de una única tarea.  \r\n4. **Encapsulación** – Agrupa datos y comportamiento, exponiendo solo lo necesario.  \r\n5. **Nivel de detalle adecuado** – Selecciona la cantidad de información que se oculta según el contexto del proyecto.",
+    "objetivo": "Utilizo la abstracción para centrarme en lo que hace un componente sin preocuparme por cómo lo implementa. Resuelvo la complejidad al ocultar detalles internos y exponer solo la interfaz necesaria, lo que permite que distintos equipos trabajen de forma independiente. Aparece en cada fase del desarrollo de software: al diseñar APIs, al definir contratos entre módulos y al estructurar capas de una arquitectura. Después de entenderla, puedo crear sistemas más flexibles, reutilizables y fáciles de mantener, y aplicar patrones de diseño que dependen de la separación de responsabilidades. No necesito preocuparme por la abstracción cuando estoy trabajando en scripts muy pequeños o en pruebas rápidas donde la sobrecarga de definir interfaces no aporta valor.",
+    "preguntas_repaso": "1. ¿Qué diferencia hay entre una interfaz y una clase concreta en términos de abstracción?  \r\n2. ¿Cómo ayuda un contrato a mantener la estabilidad de un sistema cuando cambian las implementaciones?  \r\n3. ¿Por qué la separación de preocupaciones es esencial al crear módulos reutilizables?  \r\n4. ¿En qué situaciones podría ser contraproducente introducir una capa de abstracción?  \r\n5. ¿Qué patrón de diseño combina la abstracción con la creación flexible de objetos?",
+    "ruta_estudio": "1. **Prerequisitos**: comprender tipos de datos, control de flujo y conceptos básicos de programación orientada a objetos.  \r\n2. **Fundamentos**: estudiar interfaces, contratos y encapsulación; practicar con ejemplos simples en un lenguaje de tu elección.  \r\n3. **Intermedio**: aprender inyección de dependencias, patrones de diseño relacionados (Strategy, Factory) y principios SOLID.  \r\n4. **Avanzado**: explorar abstracción en programación funcional, versionado de APIs y herramientas de gestión de dependencias.  \r\n5. **Aplicación**: diseñar una arquitectura de microservicios donde cada servicio exponga una API abstracta y evolucione de forma independiente."
+  },
+  "sections_missing": [],
+  "slug": "abstraction",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/software-engineering"
+  ],
+  "title": "Abstraction",
+  "uid": "c_TSM6OQKLAB",
+  "verification_marks": []
+}

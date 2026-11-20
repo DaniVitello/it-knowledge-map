@@ -1,0 +1,39 @@
+{
+  "aliases": [
+    "Memory"
+  ],
+  "area_uid": "ai-engineering",
+  "content_hash": "c50d9d178e5fd49f98e3e742203618cff7f4787942c9f2c8e1843c49da56028c",
+  "numero": 19,
+  "related_uids": [
+    "c_64ZKUJ47VT",
+    "c_EC777UCG67",
+    "c_JS77WZ6QYB",
+    "c_LQGB44U4DC",
+    "c_R73S6QTQFN",
+    "c_RJE3D4II2X"
+  ],
+  "sections": {
+    "como_funciona": "1. Al iniciar la conversación, el agente crea un **conversation state** vacío.  \r\n2. Cada mensaje del usuario se añade al estado y, si corresponde, se actualiza la **long‑term memory** mediante la **update policy**.  \r\n3. Cuando el modelo necesita contexto, se ejecuta **retrieval**: se consultan tanto el estado actual como la memoria persistente usando claves o embeddings.  \r\n4. Los resultados recuperados se inyectan en el prompt (prompt engineering) y el modelo genera la respuesta.  \r\n5. Periodicamente, el sistema aplica **expiration** para limpiar entradas viejas.",
+    "conexiones": "- **Prompt Engineering** – la memoria provee los fragmentos que se insertan en el prompt para guiar al modelo.  \r\n- **Tool Calling** – la información recuperada puede decidir qué herramienta externa invocar (p. ej., buscar en una API).  \r\n- **AI Workflows** – la gestión de memoria es un paso clave dentro de pipelines que incluyen pre‑procesado, inferencia y post‑procesado.",
+    "detalles": "- **Básico**: usar una lista en memoria RAM para el conversation state; actualizarla después de cada turno.  \r\n- **Intermedio**: integrar un vector store (p. ej., FAISS) para la long‑term memory y emplear embeddings de los mensajes para una recuperación semántica.  \r\n- **Avanzado**: definir políticas de actualización basadas en importancia (p. ej., puntuación de relevancia) y combinar múltiples fuentes de memoria (caché, base de datos relacional, knowledge graph).  \r\n- **Seguridad**: aplicar encriptación y control de acceso a la long‑term memory cuando se almacena información sensible.  \r\n- **Escalabilidad**: shardear el vector store y usar índices invertidos para búsquedas rápidas en grandes volúmenes de datos.",
+    "ejemplo_minimo": "```python\r\nfrom collections import deque\r\n\r\n# 1. Conversation state (FIFO de 3 turnos)\r\nstate = deque(maxlen=3)\r\n\r\ndef add_to_state(user_msg, assistant_msg):\r\n    state.append({\"role\": \"user\", \"content\": user_msg})\r\n    state.append({\"role\": \"assistant\", \"content\": assistant_msg})\r\n\r\ndef build_prompt(new_msg):\r\n    # 2. Inyectar estado en el prompt\r\n    prompt = \"\\n\".join([f\"{m['role']}: {m['content']}\" for m in state])\r\n    prompt += f\"\\nuser: {new_msg}\"\r\n    return prompt\r\n\r\n# Simulación\r\nadd_to_state(\"Hola\", \"¡Hola! ¿En qué puedo ayudar?\")\r\nprint(build_prompt(\"¿Cuál es mi última compra?\"))\r\n```",
+    "errores_comunes": "- **Sobrecargar la memoria** con información irrelevante → usar políticas de expiración y filtrado.  \r\n- **Olvidar actualizar la long‑term memory** después de eventos críticos → incluir hooks de actualización en cada acción importante.  \r\n- **Confundir estado de conversación con memoria persistente** → mantener separadas las estructuras de datos y sus ciclos de vida.",
+    "estado_actual": "- **Fundamentos estables**: uso de colas para conversation state y bases de datos vectoriales para recuperación semántica.  \r\n- **Práctica moderna**: integración de Retrieval‑Augmented Generation (RAG) con LLMs, políticas de actualización basadas en atención y métricas de relevancia, y despliegues de memoria distribuida en infraestructuras cloud.",
+    "ideas_clave": "1. **Conversation state** – guarda el contexto inmediato de la interacción para que el modelo genere respuestas coherentes.  \r\n2. **Long‑term memory** – persiste información más allá de la sesión actual, permitiendo reutilizar aprendizajes y datos de usuario.  \r\n3. **Retrieval** – mecanismo que busca en la memoria (caché, base de datos, vector store) la información más relevante para la petición actual.  \r\n4. **Update policy** – regla que decide cuándo y cómo se añaden o modifican entradas en la memoria.  \r\n5. **Expiration** – criterio que elimina datos obsoletos para evitar ruido y sobrecarga.",
+    "objetivo": "Utilizo la **Memory** para que un agente de IA mantenga información relevante entre interacciones, evitando que el modelo tenga que recomponer todo el contexto en cada llamada. Resuelvo la pérdida de coherencia en conversaciones largas y la incapacidad de reutilizar conocimientos adquiridos previamente, lo que mejora la fiabilidad y la experiencia del usuario. Aparece cada vez que diseño un chatbot, un asistente personal o un flujo de trabajo que requiere recordar preferencias, historial de acciones o resultados de inferencias anteriores. Después de entenderla, puedo diseñar sistemas que combinen memoria a corto plazo (estado de la conversación) y a largo plazo (persistencia en bases de datos) y decidir cuándo delegar la recuperación a un motor de búsqueda externo. No necesito preocuparme por Memory cuando el producto solo procesa consultas aisladas sin dependencia temporal.",
+    "preguntas_repaso": "1. ¿Cómo diferencia la **conversation state** de la **long‑term memory** en un agente de IA?  \r\n2. ¿Qué papel juega la **retrieval** al generar una respuesta con contexto?  \r\n3. ¿Cuándo deberías aplicar una **policy de expiración** y cuál es su beneficio?  \r\n4. ¿De qué manera la **Memory** influye en la **Tool Calling** dentro de un workflow?  \r\n5. ¿Qué ventajas aporta usar un vector store frente a una lista en RAM para la memoria a largo plazo?",
+    "ruta_estudio": "1. **Prerequisitos**: Python, conceptos de LLMs, fundamentos de bases de datos y embeddings.  \r\n2. **Fundamental**: implementar conversation state con estructuras de datos simples; experimentar con prompts que incluyan historial.  \r\n3. **Intermedio**: aprender a usar FAISS o Elastic Vector para long‑term memory; practicar retrieval con embeddings.  \r\n4. **Avanzado**: diseñar políticas de actualización y expiración; combinar RAG con tool calling; escalar la memoria en entornos distribuidos.  \r\n5. **Especialización**: seguridad de datos en memoria, optimización de latencia y costos, y evaluación de impacto en métricas de fiabilidad del producto."
+  },
+  "sections_missing": [],
+  "slug": "memory",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/ai-engineering"
+  ],
+  "title": "Memory",
+  "uid": "c_4ZDQZL6GC7",
+  "verification_marks": []
+}

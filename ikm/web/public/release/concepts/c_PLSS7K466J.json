@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "User Stories"
+  ],
+  "area_uid": "product-management",
+  "content_hash": "bb7ef60bec41cbd2f8925614188e4d8d63dbe43e073aa3c855c1e240730bbb8d",
+  "numero": 13,
+  "related_uids": [
+    "c_4VLGBOP6NP",
+    "c_ZZNQZABFF3"
+  ],
+  "sections": {
+    "como_funciona": "1. **Identifico** la necesidad escuchando a usuarios, analizando datos y definiendo el objetivo del negocio.  \r\n2. **Redacto** la User Story usando el formato “Como <rol> quiero <acción> para <beneficio>”.  \r\n3. **Defino** criterios de aceptación que el equipo usará para validar la entrega.  \r\n4. **Estimo** el esfuerzo (puntos, horas) y la priorizo en el backlog según valor y riesgo.  \r\n5. **Desgloso** la historia en tareas técnicas y la asigno al sprint correspondiente.  \r\n6. **Al final del sprint**, el equipo verifica los criterios de aceptación y el Product Manager valida el valor entregado.",
+    "conexiones": "- **Roadmap**: las épicas derivadas de User Stories se agrupan para definir hitos en el roadmap del producto.  \r\n- **Metrics**: los criterios de aceptación se traducen en métricas de éxito que alimentan dashboards de rendimiento.  \r\n- **Design Sprint**: durante un sprint de diseño, las User Stories guían la generación de prototipos centrados en la necesidad del usuario.",
+    "detalles": "- **Básico**: redactar historias simples con un solo objetivo y criterios claros.  \r\n- **Intermedio**: agrupar historias en épicas, usar “investigación” y “spikes” para reducir incertidumbre, y aplicar técnicas de estimación como Planning Poker.  \r\n- **Avanzado**: integrar historias con mapas de experiencia (experience maps), alinear con OKR y métricas de producto, y emplear “Story Mapping” para visualizar el flujo de valor completo.",
+    "ejemplo_minimo": "```yaml\r\n# User Story mínima\r\n- role: \"Cliente\"\r\n  wants: \"recibir notificaciones por email cuando su pedido cambie de estado\"\r\n  benefit: \"estar informado sin tener que revisar la app\"\r\n  acceptance_criteria:\r\n    - \"El email se envía dentro de 5 minutos del cambio de estado\"\r\n    - \"El contenido incluye número de pedido y nuevo estado\"\r\n    - \"El email respeta la preferencia de idioma del cliente\"\r\n```",
+    "errores_comunes": "- **Demasiada granularidad**: escribir historias tan pequeñas que pierden contexto; evitar dividiéndolas en tareas antes de validar el valor.  \r\n- **Falta de criterios de aceptación**: genera ambigüedad en la definición de “terminado”; siempre incluir al menos un criterio verificable.  \r\n- **Confundir requisitos con historias**: los requisitos son condiciones técnicas, mientras que la historia debe centrarse en el beneficio para el usuario; mantenga la perspectiva del usuario.",
+    "estado_actual": "- **Fundamentos estables**: el formato “Como… quiero… para…” y los criterios de aceptación siguen siendo la base aceptada en la práctica de gestión de productos.  \r\n- **Práctica moderna**: la combinación de User Stories con Story Mapping y la alineación a OKR está ganando adopción para conectar el trabajo diario con objetivos estratégicos.",
+    "ideas_clave": "1. **Necesidad del usuario** – la historia parte de una necesidad o problema real expresado por el usuario.  \r\n2. **Formato “Como… quiero… para…”** – estructura que garantiza claridad de rol, acción y valor.  \r\n3. **Criterios de aceptación** – condiciones verificables que definen cuándo la historia está completa.  \r\n4. **Priorización basada en valor** – se ordenan según impacto en métricas de negocio y esfuerzo estimado.  \r\n5. **Descomposición en tareas** – la historia se desglosa en actividades técnicas que el equipo ejecuta.",
+    "objetivo": "Utilizo las User Stories para capturar, en lenguaje del usuario, la necesidad que el producto debe satisfacer. Resuelvo la ambigüedad que surge al traducir requisitos técnicos a valor real para el cliente, y las empleo cada vez que debo priorizar el backlog, definir el alcance de una iteración o validar una hipótesis de negocio. Cuando entiendo cómo redactarlas y usarlas, puedo alinear a desarrollo, diseño y stakeholders en torno a un objetivo concreto y medible; después puedo pasar a estructurar épicas, mapear dependencias y planificar releases. No me preocupo por las User Stories cuando el producto está en fase de mantenimiento sin cambios funcionales o cuando la decisión es puramente operativa (por ejemplo, ajustes de infraestructura).",
+    "preguntas_repaso": "1. ¿Cuál es la ventaja de estructurar una User Story con “Como… quiero… para…”?  \r\n2. ¿Cómo se relacionan los criterios de aceptación con la definición de “Done”?  \r\n3. ¿Qué ocurre si una historia carece de criterios de aceptación claros?  \r\n4. ¿De qué manera una épica ayuda a conectar varias User Stories con el roadmap?  \r\n5. ¿Cómo puedes usar métricas para validar que una User Story entregó valor al usuario?",
+    "ruta_estudio": "1. **Prerequisitos**: conceptos de persona de usuario, backlog y priorización.  \r\n2. **Fundamentos**: práctica del formato “Como… quiero… para…” y definición de criterios de aceptación.  \r\n3. **Intermedio**: técnicas de estimación, Story Mapping y gestión de épicas.  \r\n4. **Avanzado**: alineación con OKR, integración con métricas de producto y uso de Design Sprint para validar historias antes del desarrollo.  \r\n5. **Recursos**: guías de Scrum, cursos de Product Discovery y workshops de Story Mapping."
+  },
+  "sections_missing": [],
+  "slug": "user-stories",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/product-management"
+  ],
+  "title": "User Stories",
+  "uid": "c_PLSS7K466J",
+  "verification_marks": []
+}

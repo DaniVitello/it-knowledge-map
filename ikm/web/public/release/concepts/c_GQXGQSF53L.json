@@ -1,0 +1,43 @@
+{
+  "aliases": [
+    "Python & Programming"
+  ],
+  "area_uid": "ai-engineering",
+  "content_hash": "561863cd3426ff8466eac7b40c06cfbfd60e6f2205b608eff52593ca075d8a52",
+  "numero": 2,
+  "related_uids": [
+    "c_EDRNN4EAFB",
+    "c_HAZD53NJ7A",
+    "c_THBEXYTI7F"
+  ],
+  "sections": {
+    "como_funciona": "1. Defino la estructura de datos que recibirá el modelo (p. ej., dict con texto y metadatos).  \r\n2. Creo una función que envía la petición al modelo mediante una API HTTP o llama al modelo localmente.  \r\n3. Si la carga es alta, marco la función como `async` y utilizo `await` para lanzar múltiples inferencias en paralelo.  \r\n4. Empaqueto la lógica en un módulo y lo pruebo con `pytest`, asegurando que los tipos y valores sean correctos.  \r\n5. Despliego el módulo dentro de un contenedor o servidor FastAPI, donde el runtime de Python ejecuta el código bajo demanda.",
+    "conexiones": "- **Programming Fundamentals**: los conceptos de variables y control de flujo son la base sobre la que se construyen los pipelines de IA.  \r\n- **Lenguaje Backend**: Python actúa como el lenguaje de servidor que expone modelos a través de APIs REST.  \r\n- **Runtime**: el intérprete de Python y su gestión de memoria influyen directamente en la latencia de inferencia y en la escalabilidad del servicio.",
+    "detalles": "- **Básico**: sintaxis de Python, tipos primitivos y estructuras de datos; uso de `pip` y entornos virtuales.  \r\n- **Intermedio**: manejo de paquetes de IA, creación de clientes HTTP, introducción a `asyncio`.  \r\n- **Avanzado**: patrones de concurrencia con `asyncio` + `httpx`, integración CI/CD con pruebas de modelo, profiling de rendimiento con `cProfile` y `py-spy`.",
+    "ejemplo_minimo": "```python\r\nimport asyncio, httpx\r\n\r\nasync def infer(text: str) -> str:\r\n    async with httpx.AsyncClient() as client:\r\n        resp = await client.post(\r\n            \"https://api.ejemplo.com/v1/predict\",\r\n            json={\"input\": text}\r\n        )\r\n        return resp.json()[\"output\"]\r\n\r\n# Uso rápido\r\nresult = asyncio.run(infer(\"Hola mundo\"))\r\nprint(result)\r\n```",
+    "errores_comunes": "- Olvidar `await` en una llamada `async` → la coroutine nunca se ejecuta.  \r\n- Usar objetos mutables como claves de diccionario → errores de hash.  \r\n- No aislar dependencias en un entorno virtual → conflictos de versiones.  \r\n- Ignorar manejo de excepciones en llamadas HTTP → caídas del servicio.",
+    "estado_actual": "- **Fundamentos estables**: sintaxis de Python, estructuras de datos nativas y paquetes de IA como `torch` y `tensorflow`.  \r\n- **Práctica moderna**: uso de `asyncio` y `httpx` para alta concurrencia, despliegue con FastAPI y contenedores Docker, pruebas automatizadas con `pytest` y cobertura de tipos mediante `mypy`.",
+    "ideas_clave": "1. **Estructuras de datos** – listas, diccionarios y tensores facilitan la manipulación de entradas y salidas de modelos.  \r\n2. **APIs y clientes HTTP** – `requests` o `httpx` permiten consumir servicios de modelo y exponer endpoints.  \r\n3. **Programación asíncrona** – `asyncio` y `await` gestionan llamadas concurrentes a modelos sin bloquear.  \r\n4. **Tooling de desarrollo** – entornos virtuales, linters y pruebas unitarias garantizan reproducibilidad y calidad.  \r\n5. **Integración con librerías de IA** – `torch`, `tensorflow` y `transformers` se usan directamente desde Python.",
+    "objetivo": "Utilizo Python como el lenguaje principal para orquestar pipelines de IA, conectar modelos a APIs y gestionar la lógica de negocio que rodea a los sistemas de inferencia. Resuelvo la necesidad de un entorno flexible que permita manipular datos, ejecutar código asíncrono y desplegar servicios de manera rápida y reproducible. Aparece en cada fase del producto de IA, desde la preparación de datos y el entrenamiento de modelos hasta la exposición de endpoints y el monitoreo de métricas. Después de dominar Python, puedo diseñar arquitecturas de backend, automatizar pruebas de modelo y escalar inferencias en la nube. No necesito preocuparme cuando el proyecto se limita a prototipos estáticos sin integración ni despliegue continuo.",
+    "preguntas_repaso": "1. ¿Cómo estructuro los datos de entrada para que un modelo de IA los consuma eficientemente en Python?  \r\n2. ¿Qué ventaja ofrece `asyncio` al llamar a un endpoint de inferencia desde un servicio de alta carga?  \r\n3. ¿Cuál es la diferencia entre usar `requests` y `httpx` en un proyecto de IA?  \r\n4. ¿Por qué es crítico aislar dependencias en un entorno virtual antes de desplegar un modelo?  \r\n5. ¿Qué pasos incluye una prueba unitária típica para una función que envía una petición a un modelo?",
+    "ruta_estudio": "1. **Prerequisitos**: lógica de programación, manejo de listas/diccionarios y conceptos básicos de HTTP.  \r\n2. **Fundamentos**: tutoriales oficiales de Python, ejercicios con `requests` y creación de funciones síncronas.  \r\n3. **Intermedio**: introducción a `asyncio`, práctica con `httpx` y primeros experimentos con `torch` o `tensorflow`.  \r\n4. **Avanzado**: diseño de APIs con FastAPI, pruebas unitarias y de integración, CI/CD con GitHub Actions, profiling y optimización de inferencias."
+  },
+  "sections_missing": [],
+  "slug": "python-programming",
+  "sources": [
+    "https://api.ejemplo.com/v1/predict"
+  ],
+  "sources_detail": [
+    {
+      "title": null,
+      "url": "https://api.ejemplo.com/v1/predict"
+    }
+  ],
+  "tags": [
+    "concepto",
+    "it/ai-engineering"
+  ],
+  "title": "Python & Programming",
+  "uid": "c_GQXGQSF53L",
+  "verification_marks": []
+}

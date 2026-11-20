@@ -1,0 +1,45 @@
+{
+  "aliases": [
+    "JSON & APIs"
+  ],
+  "area_uid": "frontend",
+  "content_hash": "45015b37f1b1298aa2e1ee940ed4f8c7727458a27116f6007ac97ab3813bebcb",
+  "numero": 11,
+  "related_uids": [
+    "c_3OASTRUQ7K",
+    "c_KFFEDHVX2D",
+    "c_LG2UZSQPXG",
+    "c_MBMF42FTPA",
+    "c_WYVLRHHAGA"
+  ],
+  "sections": {
+    "como_funciona": "1. El componente dispara una petición `fetch` (u otra librería) a la URL de la API.  \r\n2. El navegador recibe la respuesta y, si el código HTTP indica éxito, llama a `response.json()` para deserializar.  \r\n3. El objeto resultante se valida contra el contrato esperado (por ejemplo, con TypeScript o una librería de esquemas).  \r\n4. Los datos validados se insertan en el estado de la UI o se usan directamente para renderizar.  \r\n5. Si la operación requiere enviar datos, el objeto JavaScript se serializa con `JSON.stringify` y se envía en el cuerpo de la petición POST/PUT.  \r\n6. En cualquier paso, los errores se capturan y se propagan a la UI para mostrar feedback al usuario.",
+    "conexiones": "- **API Design** – Un buen diseño de API define los contratos JSON que el frontend consume, facilitando la serialización y el manejo de errores.  \r\n- **Estado** – Los datos obtenidos de una API se integran en el estado de la aplicación (por ejemplo, en Redux o en hooks) y su actualización dispara re‑renderizados.  \r\n- **Data fetching** – Herramientas de data fetching abstraen el consumo, la serialización y el manejo de errores, permitiendo centrarse en la lógica de UI.",
+    "detalles": "- **Básico**: Uso de `fetch`, `await response.json()`, y actualización de estado con `setState` o hooks.  \r\n- **Intermedio**: Implementación de capas de servicio que encapsulan URLs, encabezados y lógica de reintentos; uso de TypeScript para tipar la forma del JSON.  \r\n- **Avanzado**: Validación de esquemas con `ajv` o `zod`, manejo de cancelación de peticiones con `AbortController`, y caching inteligente mediante `React Query` o `SWR`. También se incluyen patrones de contrato versionado y estrategias de fallback cuando el contrato cambia.",
+    "ejemplo_minimo": "```js\r\n// consumo de una API que devuelve [{ \"id\": 1, \"title\": \"Todo\" }]\r\nasync function cargarTodos() {\r\n  try {\r\n    const resp = await fetch('https://api.ejemplo.com/todos');\r\n    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);\r\n    const datos = await resp.json(); // deserializa\r\n    console.log(datos); // [{id:1, title:\"Todo\"}]\r\n  } catch (e) {\r\n    console.error('Error al cargar:', e);\r\n  }\r\n}\r\ncargarTodos();\r\n```",
+    "errores_comunes": "- **Olvidar `await` en `response.json()`** → se obtiene una promesa en vez del objeto; usar `await`.  \r\n- **No comprobar `response.ok`** → se procesan respuestas de error como si fueran exitosas; validar el código de estado antes de deserializar.  \r\n- **Enviar objetos con propiedades no serializables** (funciones, `undefined`) → `JSON.stringify` los omite; asegurar que solo se envíen datos primitivos o estructuras JSON válidas.  \r\n- **Ignorar el contrato** → cambios en la API rompen la UI; mantener tipos o esquemas sincronizados.",
+    "estado_actual": "- **Fundamentos estables**: JSON sigue siendo el formato de intercambio de datos más usado en la web; `fetch` y `Response.json()` son parte del estándar del navegador.  \r\n- **Práctica moderna**: Librerías como `React Query`, `SWR` y el uso de `AbortController` para gestión de ciclo de vida de peticiones son ampliamente adoptadas. La tipificación con TypeScript y la validación de esquemas en tiempo de ejecución se consideran buenas prácticas para reforzar los contratos.",
+    "ideas_clave": "1. **Consumo** – Obtener datos mediante peticiones HTTP y convertir el cuerpo JSON a objetos JavaScript.  \r\n2. **Serialización** – Transformar objetos JavaScript a JSON para enviarlos al servidor.  \r\n3. **Contratos** – Definir la forma esperada del JSON (esquema) para garantizar compatibilidad entre cliente y servidor.  \r\n4. **Manejo de errores** – Detectar fallos de red, códigos de estado HTTP y problemas de validación del JSON.",
+    "objetivo": "Utilizo JSON y APIs para intercambiar datos estructurados entre el navegador y los servicios backend. Resuelvo el problema de cómo obtener, enviar y actualizar información de forma consistente sin acoplar la lógica de la UI a la forma interna del servidor. En mi día a día como desarrollador Frontend, consumo endpoints RESTful o GraphQL que devuelven JSON, los deserializo a objetos JavaScript y los utilizo para renderizar componentes, gestionar el estado de la aplicación y reaccionar a eventos del usuario. Después de comprender este flujo, puedo diseñar componentes reutilizables que manejan la carga y el error de datos, crear capas de abstracción para llamadas a APIs y decidir cuándo delegar la lógica al backend. Sólo me preocupo por JSON y APIs cuando la aplicación necesita datos externos o persiste información; en casos puramente estáticos o con datos incrustados en el bundle, el consumo de APIs no es necesario.",
+    "preguntas_repaso": "1. ¿Qué pasos sigue el navegador para transformar la respuesta HTTP en un objeto JavaScript usable?  \r\n2. ¿Por qué es importante validar el contrato JSON antes de actualizar el estado de la UI?  \r\n3. ¿Cómo se envía un objeto JavaScript como cuerpo de una petición POST?  \r\n4. ¿Qué ventaja aporta `AbortController` al consumo de APIs en componentes React?  \r\n5. ¿En qué situaciones podrías prescindir de consumir una API y trabajar solo con datos estáticos?",
+    "ruta_estudio": "1. **Prerequisitos**: JavaScript básico, promesas y async/await, conceptos de HTTP (métodos, códigos de estado).  \r\n2. **Fundamentos**: Practicar `fetch` con GET y POST, leer y escribir JSON, manejar errores simples.  \r\n3. **Intermedio**: Introducir TypeScript para tipar respuestas, crear una capa de servicio reutilizable, usar `AbortController`.  \r\n4. **Avanzado**: Implementar validación de esquemas (`zod`/`ajv`), explorar `React Query` o `SWR` para caching y revalidación, versionar contratos y aplicar patrones de fallback."
+  },
+  "sections_missing": [],
+  "slug": "json-apis",
+  "sources": [
+    "https://api.ejemplo.com/todos"
+  ],
+  "sources_detail": [
+    {
+      "title": null,
+      "url": "https://api.ejemplo.com/todos"
+    }
+  ],
+  "tags": [
+    "concepto",
+    "it/frontend"
+  ],
+  "title": "JSON & APIs",
+  "uid": "c_OD7QLNQ7GN",
+  "verification_marks": []
+}

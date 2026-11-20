@@ -1,0 +1,45 @@
+{
+  "aliases": [
+    "Sistemas distribuidos"
+  ],
+  "area_uid": "backend",
+  "content_hash": "b9f685f89a888acdb06d05f474ea6e985d56ed295ad5decfc825402e80f0310f",
+  "numero": 25,
+  "related_uids": [
+    "c_GFXWIQR3NM",
+    "c_PDOZ7FBH2J",
+    "c_SCSLG2OETM",
+    "c_XGWNYRU3HQ",
+    "c_Y2M5VLS32J"
+  ],
+  "sections": {
+    "como_funciona": "1. El cliente envía una solicitud al punto de entrada (por ejemplo, un DNS o un reverse proxy).  \r\n2. El balanceador de carga selecciona una instancia saludable según la política configurada (round‑robin, least‑connections, etc.).  \r\n3. La instancia procesa la lógica de negocio; si necesita datos, accede a un cluster replicado.  \r\n4. El mecanismo de replicación asegura que la escritura se propague a los seguidores según el modelo de consistencia elegido (strong, eventual, etc.).  \r\n5. Si la carga aumenta, el orquestador lanza nuevas réplicas y el balanceador actualiza su pool automáticamente.",
+    "conexiones": "- **Reliability** – la replicación y el balanceo aumentan la tolerancia a fallos, garantizando que el servicio siga operativo pese a caídas de nodos.  \r\n- **Mensajería** – los sistemas distribuidos a menudo usan colas (Kafka, RabbitMQ) para desacoplar componentes y manejar picos de carga.  \r\n- **CDN / Load Balancing** – los CDN actúan como balanceadores de nivel de red, reduciendo la latencia al servir contenido estático cercano al cliente.",
+    "detalles": "- **Básico**: configuración de un reverse proxy (NGINX, HAProxy) como balanceador y despliegue de varias copias del mismo contenedor.  \r\n- **Intermedio**: uso de orquestadores (Kubernetes) para auto‑escalar pods y definir políticas de replicación (StatefulSet, ReplicaSet).  \r\n- **Avanzado**: implementación de protocolos de consenso (Raft, Paxos) para strong consistency, y de sharding + quorum reads/writes para escalar bases de datos distribuidas.",
+    "ejemplo_minimo": "```yaml\r\n# docker‑compose.yml – 2 instancias detrás de un balanceador simple\r\nversion: \"3.8\"\r\nservices:\r\n  api:\r\n    image: my/backend:latest\r\n    deploy:\r\n      replicas: 2\r\n  lb:\r\n    image: nginx:alpine\r\n    ports:\r\n      - \"80:80\"\r\n    volumes:\r\n      - ./nginx.conf:/etc/nginx/nginx.conf\r\n```\r\n```nginx\r\n# nginx.conf – round‑robin entre los contenedores api\r\nevents {}\r\nhttp {\r\n    upstream backend {\r\n        server api:8080;\r\n        server api:8080;\r\n    }\r\n    server {\r\n        listen 80;\r\n        location / { proxy_pass http://backend; }\r\n    }\r\n}\r\n```",
+    "errores_comunes": "- **Sobrecargar el balanceador**: usar una única instancia sin alta disponibilidad; evitarlo desplegando al menos dos balanceadores en modo activo‑pasivo.  \r\n- **Ignorar la latencia de replicación**: asumir que los datos están instantáneamente consistentes; elegir el nivel de consistencia acorde al caso de uso.  \r\n- **Escalar sin monitorear**: añadir nodos sin métricas de uso; usar alertas de CPU/memoria y de latencia de respuesta.",
+    "estado_actual": "- **Fundamentos estables**: el patrón de separación entre cliente → balanceador → instancias y la replicación de datos con modelos de consistencia son pilares consolidados.  \r\n- **Práctica moderna**: los orquestadores (Kubernetes) gestionan automáticamente el balanceo y el auto‑escalado; los sistemas de consenso como etcd o Consul proporcionan strong consistency para configuraciones críticas.",
+    "ideas_clave": "1. **Load balancing** – distribuye las peticiones entrantes entre varias instancias para evitar cuellos de botella.  \r\n2. **Scaling** – añade o quita nodos (horizontal) para ajustar la capacidad al nivel de demanda.  \r\n3. **Replication** – copia datos o estado en varios nodos para mejorar disponibilidad y latencia de lectura.  \r\n4. **Consistency** – define cómo se sincronizan esas copias y qué garantías de lectura/escritura se ofrecen.",
+    "objetivo": "Utilizo sistemas distribuidos para diseñar y operar servicios backend que deben atender miles de peticiones por segundo sin perder disponibilidad. Resuelvo el problema de que una única máquina no puede escalar ni tolerar fallos, distribuyendo la lógica de negocio, los datos y la carga entre varios nodos. Aparecen en cada API que necesita alta concurrencia, replicación de datos o tolerancia a fallos, y me permiten añadir capacidad o reemplazar instancias sin interrumpir el servicio. Después de entenderlos, puedo planificar arquitecturas que escalen horizontalmente, aplicar patrones de replicación y elegir estrategias de consistencia adecuadas. No necesito preocuparme cuando el servicio es monolítico, de bajo tráfico y no requiere alta disponibilidad.",
+    "preguntas_repaso": "1. ¿Cómo ayuda el load balancing a evitar cuellos de botella en una API backend?  \r\n2. ¿Qué diferencia hay entre escalar horizontalmente y verticalmente, y cuándo elegir cada uno?  \r\n3. ¿En qué situaciones es preferible una consistencia eventual frente a una fuerte?  \r\n4. ¿Qué papel juega un orquestador como Kubernetes en la replicación automática de servicios?  \r\n5. ¿Cómo se relaciona la replicación de datos con la mejora de la reliability del sistema?",
+    "ruta_estudio": "1. **Prerequisitos**: redes TCP/IP, conceptos de HTTP, contenedores Docker.  \r\n2. **Fundamentos**: configurar NGINX/HAProxy como balanceador; desplegar múltiples instancias de una API.  \r\n3. **Orquestación**: aprender Kubernetes (Deployments, Services, HPA).  \r\n4. **Consistencia**: estudiar CAP theorem, modelos de consistencia (strong vs eventual) y protocolos de consenso (Raft).  \r\n5. **Especialización**: implementar sharding, usar bases de datos distribuidas (Cassandra, CockroachDB) y explorar service mesh (Istio) para control de tráfico avanzado."
+  },
+  "sections_missing": [],
+  "slug": "sistemas-distribuidos",
+  "sources": [
+    "http://backend"
+  ],
+  "sources_detail": [
+    {
+      "title": null,
+      "url": "http://backend"
+    }
+  ],
+  "tags": [
+    "concepto",
+    "it/backend"
+  ],
+  "title": "Sistemas distribuidos",
+  "uid": "c_VXNPWGQTHB",
+  "verification_marks": []
+}

@@ -1,0 +1,41 @@
+{
+  "aliases": [
+    "Data Fundamentals"
+  ],
+  "area_uid": "database",
+  "content_hash": "70b395a5d8fdc5fbdf8c73b610cdd12942209e3358d3297189101d41d5ce8a0d",
+  "numero": 1,
+  "related_uids": [],
+  "sections": {
+    "como_funciona": "1. Identifico los **datos** que necesito para responder a una pregunta de negocio.  \r\n2. Los agrupo en **entidades** lógicas y defino sus **atributos** (tipo, nullable, dominio).  \r\n3. Cada **registro** se inserta siguiendo la estructura de atributos, garantizando que cada fila sea una instancia válida.  \r\n4. Establezco **relaciones** mediante claves primarias y foráneas; el motor de base de datos usa esas relaciones para ejecutar joins eficientes.  \r\n5. Las consultas posteriores (SELECT, GROUP BY, etc.) operan sobre este modelo fundamental, obteniendo resultados consistentes y predecibles.",
+    "conexiones": "- **Data Modeling** – Data Fundamentals es la capa mínima sobre la que se construye cualquier modelo de datos lógico o físico.  \r\n- **ETL/ELT** – los atributos y relaciones guían la transformación y carga de datos entre sistemas.  \r\n- **Indexing** – la definición de claves primarias y foráneas determina qué índices son necesarios para consultas rápidas.  \r\n- **Data Governance** – la claridad en entidades y atributos facilita la aplicación de políticas de calidad y seguridad.",
+    "detalles": "- **Básico**: reconocer datos crudos y mapearlos a atributos simples (int, varchar, date).  \r\n- **Intermedio**: aplicar normalización (1NF, 2NF, 3NF) para eliminar redundancia y definir claves primarias.  \r\n- **Avanzado**: diseñar relaciones complejas (many‑to‑many con tablas de asociación), usar claves compuestas y aplicar constraints de integridad referencial; combinar con técnicas de modelado dimensional (star/snowflake) para analítica.",
+    "ejemplo_minimo": "```sql\r\n-- 1. Definir entidad Clientes con atributos\r\nCREATE TABLE Clientes (\r\n    cliente_id   INT PRIMARY KEY,\r\n    nombre       VARCHAR(50) NOT NULL,\r\n    email        VARCHAR(100) UNIQUE,\r\n    fecha_reg    DATE\r\n);\r\n\r\n-- 2. Definir entidad Pedidos y su relación con Clientes\r\nCREATE TABLE Pedidos (\r\n    pedido_id    INT PRIMARY KEY,\r\n    cliente_id   INT REFERENCES Clientes(cliente_id),\r\n    total        DECIMAL(10,2),\r\n    fecha_pedido DATE\r\n);\r\n```\r\n?? verificar",
+    "errores_comunes": "- **Duplicar atributos** en varias tablas → genera inconsistencias; usar claves foráneas en lugar de copiar datos.  \r\n- **Olvidar definir claves primarias** → impide identificar registros únicos y rompe relaciones.  \r\n- **Usar tipos de dato inadecuados** (e.g., VARCHAR para fechas) → dificulta filtros y agrega sobrecarga de conversión.  \r\n- **Crear relaciones sin índices** → joins muy lentos; crear índices en columnas foreign key.",
+    "estado_actual": "- **Fundamentos estables**: concepto de dato, atributo, registro, entidad y relación siguen siendo la base de cualquier RDBMS (sin verificar).  \r\n- **Práctica moderna**: uso de esquemas de datos en entornos de cloud (Snowflake, BigQuery) y de modelos de datos semi‑estructurados (JSON, Parquet) que extienden los atributos tradicionales (sin verificar).",
+    "ideas_clave": "1. **Dato** – unidad mínima de información que tiene significado dentro del dominio.  \r\n2. **Atributo** – columna que describe una característica del dato; define el tipo y la restricción.  \r\n3. **Registro** – fila que agrupa atributos relacionados, representa una instancia de una entidad.  \r\n4. **Entidad** – conjunto lógico de registros que comparten los mismos atributos (ej. tabla Customers).  \r\n5. **Relación** – vínculo entre dos entidades mediante claves (primary/foreign) que permite combinar datos.",
+    "objetivo": "- Uso: estructurar cualquier conjunto de datos para que pueda ser almacenado, consultado y analizado de forma consistente.  \r\n- Problema que resuelve: evita ambigüedades y redundancias que hacen que las consultas sean lentas o incorrectas.  \r\n- Aparición en el día a día: al diseñar tablas en un data warehouse, al crear esquemas de eventos de streaming o al preparar datasets para dashboards.  \r\n- Qué puedo hacer después de entenderlo: diseñar esquemas normalizados, escribir consultas que aprovechen índices y construir pipelines de ETL que respeten la integridad de los datos.  \r\n- Cuándo no preocuparse: en análisis ad‑hoc sobre archivos CSV pequeños donde la sobrecarga de modelado no aporta valor inmediato.",
+    "preguntas_repaso": "1. ¿Qué diferencia hay entre un atributo y un registro en el contexto de una tabla?  \r\n2. ¿Cómo una clave foránea permite que una consulta JOIN sea eficiente?  \r\n3. ¿En qué situaciones podrías omitir la normalización y trabajar con una tabla desnormalizada?  \r\n4. ¿Qué problema resuelve la definición de una clave primaria en una entidad?  \r\n5. ¿Cómo afecta la elección del tipo de dato de un atributo al rendimiento de una consulta de filtrado?  \r\n\r\n<!-- trazabilidad: run_id=run-20261105-123330-ba214c concept=04-database-data-analytics-01-data-fundamentals written_at=2026-11-05T15:34:38.921331+00:00 -->",
+    "ruta_estudio": "1. **Prerequisitos**: conceptos básicos de SQL y tipos de datos.  \r\n2. **Fundamentos**: estudiar cada elemento del esqueleto y practicar con tablas simples.  \r\n3. **Normalización**: aprender las formas normales y aplicarlas a casos reales.  \r\n4. **Modelado dimensional**: pasar de modelos transaccionales a esquemas star/snowflake para BI.  \r\n5. **Avanzado**: explorar modelado de datos en data lakes y sistemas NoSQL, manteniendo la disciplina de atributos y relaciones."
+  },
+  "sections_missing": [],
+  "slug": "data-fundamentals",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/database-data-analytics"
+  ],
+  "title": "Data Fundamentals",
+  "uid": "c_FTJALUGRAX",
+  "verification_marks": [
+    {
+      "kind": "sin_verificar",
+      "section": "Estado actual"
+    },
+    {
+      "kind": "sin_verificar",
+      "section": "Estado actual"
+    }
+  ]
+}

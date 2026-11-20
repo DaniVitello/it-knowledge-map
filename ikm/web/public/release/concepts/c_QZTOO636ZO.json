@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "Scrum"
+  ],
+  "area_uid": "project-management",
+  "content_hash": "838b5a5ef161ff4a5cf7b2324fe6044100138295aa84e48cf5b4a6a8bed3eac3",
+  "numero": 17,
+  "related_uids": [
+    "c_5P4YM7PKKX",
+    "c_FBWIOD73FI",
+    "c_K2VG7SUBID"
+  ],
+  "sections": {
+    "como_funciona": "1. **Planificación del Sprint**: el equipo selecciona del Product Backlog los ítems que pueden completar en el próximo Sprint, creando el Sprint Backlog.  \r\n2. **Daily Scrum**: cada día, 15 min de sincronización para inspeccionar el progreso y ajustar el plan.  \r\n3. **Desarrollo**: el Development Team trabaja los ítems, respetando la Definition of Done.  \r\n4. **Sprint Review**: al final del Sprint se muestra el incremento al cliente y se recoge feedback, que alimenta el Product Backlog.  \r\n5. **Sprint Retrospective**: el equipo reflexiona sobre el proceso y define mejoras para el siguiente Sprint.",
+    "conexiones": "- **Agile** – Scrum es una de las implementaciones más extendidas del enfoque Agile, compartiendo valores de colaboración y adaptación.  \r\n- **Kanban** – se puede combinar con Kanban para visualizar el flujo de trabajo dentro del Sprint y limitar el WIP.  \r\n- **Engineering Processes** – la Definition of Done y la entrega de Incrementes dependen de procesos de calidad, pruebas automatizadas y gestión de configuración.",
+    "detalles": "- **Básico**: comprender los tres artefactos (Product Backlog, Sprint Backlog, Increment) y los cuatro eventos.  \r\n- **Intermedio**: aplicar técnicas de estimación (Planning Poker), refinar el Backlog continuamente y usar métricas como Velocity para predecir capacidad.  \r\n- **Avanzado**: escalar Scrum (Scrum of Scrums, Nexus), integrar DevOps para automatizar la entrega del Increment y combinar con otras metodologías ágiles (Kanban) para flujos híbridos.",
+    "ejemplo_minimo": "```yaml\r\n# Sprint Planning (2‑week sprint)\r\nSprintBacklog:\r\n  - US001: \"Como usuario, quiero registrarme\"\r\n  - US002: \"Como usuario, quiero iniciar sesión\"\r\nDefinitionOfDone:\r\n  - Código compilado\r\n  - Pruebas unitarias 100 %\r\n  - Documentación mínima\r\n```\r\nEn la Daily Scrum cada miembro indica: *Qué hice ayer, qué haré hoy, qué bloquea*; al final del sprint el Product Owner acepta los dos user stories como “Done”.",
+    "errores_comunes": "- **Convertir la Daily en una reunión de reporte** → mantenerla enfocada en el progreso del Sprint.  \r\n- **Sobrecargar el Sprint Backlog** → respetar la capacidad real del equipo.  \r\n- **Ignorar la Definition of Done** → asegurar calidad y evitar “deuda técnica”.  \r\n- **No actualizar el Product Backlog** → perder la visión del cliente y la priorización.",
+    "estado_actual": "- **Fundamentos estables**: Sprint, Backlog, ceremonias y roles siguen siendo la base aceptada por la guía Scrum.  \r\n- **Práctica moderna**: adopción de métricas de flujo (Lead Time, Cycle Time), integración continua y entrega continua (CI/CD) para acortar el tiempo entre “Done” y despliegue al cliente.",
+    "ideas_clave": "1. **Sprint** – ciclo de tiempo fijo (usualmente 2‑4 semanas) donde se entrega un incremento de producto.  \r\n2. **Product Backlog** – lista priorizada de todo lo que el producto necesita, gestionada por el Product Owner.  \r\n3. **Ceremonias** – eventos estructurados (Sprint Planning, Daily Scrum, Sprint Review, Sprint Retrospective) que sincronizan al equipo.  \r\n4. **Roles** – Scrum Master (facilitador), Product Owner (visionario) y Development Team (creadores).  \r\n5. **Definition of Done** – criterio compartido que determina cuándo un ítem está realmente terminado.",
+    "objetivo": "Utilizo Scrum para estructurar el trabajo del equipo en ciclos cortos y predecibles, lo que me permite entregar valor de forma incremental y detectar desviaciones antes de que se vuelvan críticas. Resuelvo la incertidumbre de los requisitos cambiantes y la falta de visibilidad del progreso, garantizando que el proyecto avanza alineado con los objetivos del cliente. En mi día a día como project manager senior, Scrum aparece cuando necesito coordinar a varios perfiles técnicos, priorizar funcionalidades y mantener una cadencia de entregas. Después de comprenderlo, puedo planificar releases, gestionar riesgos y facilitar la toma de decisiones basada en datos reales. No necesito preocuparme por Scrum cuando el proyecto es estático, con requisitos fijos y entregas únicas, o cuando el equipo no está dispuesto a trabajar en iteraciones.",
+    "preguntas_repaso": "1. ¿Cómo ayuda el Sprint Planning a alinear la capacidad del equipo con la prioridad del negocio?  \r\n2. ¿Qué diferencia hay entre la Definition of Done y la Definition of Ready?  \r\n3. ¿Cuál es el objetivo principal de la Sprint Retrospective y cómo se traduce en mejora continua?  \r\n4. ¿En qué situaciones combinar Scrum con Kanban aporta valor añadido?  \r\n5. ¿Qué métricas usarías para estimar la velocidad del equipo y predecir la entrega de un release?",
+    "ruta_estudio": "1. **Prerequisitos**: conceptos básicos de gestión de proyectos y principios Agile.  \r\n2. **Fundamentos**: leer la Guía Scrum, practicar Scrum ceremonies en un proyecto piloto.  \r\n3. **Intermedio**: aprender estimación de historias, métricas de rendimiento y refinamiento continuo del Backlog.  \r\n4. **Avanzado**: estudiar escalado (Scrum of Scrums, Nexus), integración con DevOps y adaptación a entornos híbridos con Kanban."
+  },
+  "sections_missing": [],
+  "slug": "scrum",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/project-management"
+  ],
+  "title": "Scrum",
+  "uid": "c_QZTOO636ZO",
+  "verification_marks": []
+}

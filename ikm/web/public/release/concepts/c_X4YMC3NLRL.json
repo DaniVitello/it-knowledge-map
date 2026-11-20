@@ -1,0 +1,34 @@
+{
+  "aliases": [
+    "Git / Version Control"
+  ],
+  "area_uid": "software-engineering",
+  "content_hash": "7d1b9ddc871e3267e9a16de729ebb54e46ebcfbc8267d58f321f24d9fc0eeaca",
+  "numero": 12,
+  "related_uids": [
+    "c_NWJKJRLXFG"
+  ],
+  "sections": {
+    "como_funciona": "1. Inicializo un repositorio con `git init`.  \r\n2. Modifico archivos y los añado al área de preparación con `git add`.  \r\n3. Creo un **commit** mediante `git commit`, que genera un nuevo nodo en el **history**.  \r\n4. Cuando necesito una línea de trabajo independiente, creo una **branch** con `git branch` y cambio a ella con `git checkout`.  \r\n5. Al terminar la tarea, utilizo **merge** (`git merge`) o **rebase** (`git rebase`) para integrar los cambios en la rama principal, actualizando el **history** nuevamente.",
+    "conexiones": "- **CI/CD**: los pipelines de integración continua extraen el código desde repositorios Git y ejecutan pruebas automáticas en cada commit, garantizando que el historial siempre compile.  \r\n- **Docker**: las imágenes de contenedores suelen versionarse mediante etiquetas que se alinean con commits de Git, facilitando la trazabilidad entre código y artefactos desplegables.  \r\n- **Issue Tracking** (por ejemplo, Jira): los tickets se enlazan a commits mediante referencias en los mensajes, permitiendo rastrear qué cambio resolvió cada incidencia.",
+    "detalles": "- **Básico**: entender el ciclo *add‑commit*, visualizar el historial con `git log` y crear ramas simples.  \r\n- **Intermedio**: manejar conflictos de merge, usar `git stash` para guardar cambios temporales y aplicar `git rebase` para limpiar la historia antes de compartirla.  \r\n- **Avanzado**: trabajar con repositorios remotos (`git push`, `git pull`), configurar flujos de trabajo como GitFlow, y emplear herramientas de inspección de historial (`git bisect`, `git reflog`) para depuración profunda.",
+    "ejemplo_minimo": "```bash\r\n# crear repositorio\r\ngit init mi-proyecto\r\ncd mi-proyecto\r\n\r\n# crear archivo y registrar primer commit\r\necho \"Hola Mundo\" > saludo.txt\r\ngit add saludo.txt\r\ngit commit -m \"Primer commit\"\r\n\r\n# crear rama y añadir cambio\r\ngit branch nueva-funcion\r\ngit checkout nueva-funcion\r\necho \"Versión 2\" >> saludo.txt\r\ngit commit -am \"Actualiza saludo en nueva-funcion\"\r\n\r\n# volver a main y combinar\r\ngit checkout main\r\ngit merge nueva-funcion\r\n```",
+    "errores_comunes": "- **Olvidar `git add` antes de `commit`** → el commit queda vacío; revisar siempre el estado con `git status`.  \r\n- **Hacer merge sin resolver conflictos** → el código queda inconsistente; usar herramientas de merge y probar antes de finalizar.  \r\n- **Reescribir historial público con `rebase`** → rompe el trabajo de otros; limitar rebase a ramas locales no compartidas.",
+    "estado_actual": "- **Fundamentos estables**: el modelo de objetos (commit, tree, blob), los comandos básicos (`add`, `commit`, `branch`, `merge`) y la arquitectura distribuida son conceptos consolidados y ampliamente documentados.  \r\n- **Práctica moderna**: el uso de flujos de trabajo basados en pull‑request, la automatización de pruebas mediante CI/CD y la adopción de `rebase` interactivo para mantener historiales limpios son tendencias actuales en equipos profesionales.",
+    "ideas_clave": "1. **Commit** – captura un estado del proyecto y lo almacena en el historial.  \r\n2. **Branch** – crea una línea paralela de desarrollo que permite trabajar aisladamente.  \r\n3. **Merge** – combina el contenido de una rama en otra, preservando la historia.  \r\n4. **Rebase** – reescribe la base de una rama para obtener un historial lineal.  \r\n5. **History** – registro ordenado de todos los commits que facilita auditorías y retrocesos.",
+    "objetivo": "Utilizo Git para registrar de forma incremental los cambios del código fuente y poder volver a versiones anteriores cuando sea necesario. Resuelvo el problema de la pérdida de información y del trabajo concurrente sin coordinación explícita, ya que Git permite combinar aportes de varios desarrolladores mediante ramas y fusiones. En mi día a día como ingeniero de software, lo empleo al iniciar un proyecto, al añadir una nueva funcionalidad o al corregir un bug, y lo mantengo actualizado en los pipelines de integración continua. Después de comprender Git, puedo estructurar flujos de trabajo colaborativos, automatizar despliegues y aplicar buenas prácticas de gestión de código. No necesito preocuparme por Git cuando trabajo con artefactos que no requieren versionado, como documentos temporales o datos binarios que cambian sin necesidad de historial.",
+    "preguntas_repaso": "1. ¿Qué información almacena un commit y por qué es importante para el historial?  \r\n2. ¿En qué situaciones es preferible usar `merge` en lugar de `rebase`?  \r\n3. ¿Cómo se resuelve un conflicto que aparece durante un merge?  \r\n4. ¿Qué papel juega Git dentro de un pipeline de CI/CD?  \r\n5. ¿Cuál es la diferencia entre `git pull` y `git fetch` y cuándo usar cada uno?",
+    "ruta_estudio": "1. **Prerequisitos**: línea de comandos básica, conceptos de sistemas de archivos y nociones de programación.  \r\n2. **Fundamentos**: tutorial oficial de Git, práctica con `git init`, `add`, `commit`, `log` y `branch`.  \r\n3. **Intermedio**: aprender a resolver conflictos, usar `stash`, `rebase` y trabajar con repositorios remotos (`clone`, `push`, `pull`).  \r\n4. **Avanzado**: implementar flujos como GitFlow, automatizar revisiones con hooks, integrar Git en pipelines CI/CD y explorar herramientas de inspección (`bisect`, `reflog`)."
+  },
+  "sections_missing": [],
+  "slug": "git-version-control",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/software-engineering"
+  ],
+  "title": "Git / Version Control",
+  "uid": "c_X4YMC3NLRL",
+  "verification_marks": []
+}

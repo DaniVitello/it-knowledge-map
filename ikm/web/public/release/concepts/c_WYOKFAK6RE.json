@@ -1,0 +1,38 @@
+{
+  "aliases": [
+    "Concurrency"
+  ],
+  "area_uid": "software-engineering",
+  "content_hash": "cb4558da81e9c0eb64f2d97d6d17d7aa7dcac5f9768cdceb14932a881d9e75fb",
+  "numero": 11,
+  "related_uids": [
+    "c_472Y6TAHCW",
+    "c_ESB3I2EXYR",
+    "c_NTNITJDH3Q",
+    "c_SQK5OV6EKB",
+    "c_UNJ4CCPCKV"
+  ],
+  "sections": {
+    "como_funciona": "1. El programa crea uno o más **threads** o inicia una operación **async**.  \r\n2. Cada unidad de ejecución avanza independientemente, programada por el **CPU & scheduling** del sistema operativo.  \r\n3. Cuando dos hilos necesitan acceder a datos compartidos, se emplean **locks** para proteger la sección crítica.  \r\n4. Si los **locks** no se usan correctamente, pueden aparecer **race conditions**, donde el orden de los accesos produce resultados inesperados.  \r\n5. El runtime gestiona la finalización de las operaciones **async**, notificando al hilo original mediante callbacks o promesas.",
+    "conexiones": "- **Asincronía**: la concurrencia se implementa frecuentemente mediante programación asíncrona, que permite iniciar operaciones sin bloquear el hilo que las invoca.  \r\n- **Processes**: a diferencia de los hilos, los procesos no comparten memoria, lo que elimina la necesidad de **locks** pero implica mayor coste de comunicación inter‑process.  \r\n- **CPU & Scheduling**: el planificador del sistema operativo decide cuándo y en qué núcleo se ejecutan los hilos, influyendo directamente en el rendimiento concurrente.",
+    "detalles": "- **Básico**: comprender la diferencia entre **threads** (paralelismo real) y **async** (concurrencia cooperativa).  \r\n- **Intermedio**: aprender a usar primitivas de sincronización como **mutexes**, **semaphores** y **monitors** para evitar **race conditions**.  \r\n- **Avanzado**: diseñar arquitecturas que combinan **processes** y **threads**, aplicar patrones como *producer‑consumer* y *pipeline*, y ajustar el **CPU & scheduling** mediante afinidad de hilos y pools de trabajo.",
+    "ejemplo_minimo": "```python\r\nimport threading\r\n\r\ncounter = 0\r\nlock = threading.Lock()\r\n\r\ndef increment():\r\n    global counter\r\n    for _ in range(100_000):\r\n        with lock:          # protege la sección crítica\r\n            counter += 1\r\n\r\nt1 = threading.Thread(target=increment)\r\nt2 = threading.Thread(target=increment)\r\nt1.start()\r\nt2.start()\r\nt1.join()\r\nt2.join()\r\nprint(counter)   # 200000\r\n```",
+    "errores_comunes": "- Omitir **locks** en secciones críticas → se generan **race conditions**. *Solución*: siempre proteger el acceso a datos compartidos.  \r\n- Usar **locks** demasiado granulares → se degrada el rendimiento por contención. *Solución*: limitar la zona protegida al mínimo necesario.  \r\n- Confundir **async** con paralelismo real → se asume que la tarea se ejecuta en varios núcleos cuando solo se intercalan. *Solución*: elegir **threads** o **processes** cuando se requiere ejecución simultánea.",
+    "estado_actual": "Los conceptos fundamentales de **threads**, **async**, **locks** y **race conditions** son estables y forman la base de la programación concurrente en la mayoría de los lenguajes modernos. En la práctica contemporánea, los frameworks y runtimes (por ejemplo, async/await en JavaScript, Python o C#) favorecen la programación **async** por su menor sobrecarga y mayor facilidad de composición, mientras que los **threads** siguen siendo esenciales para tareas CPU‑intensivas y para aprovechar arquitecturas multinúcleo.",
+    "ideas_clave": "1. **Threads** – unidades de ejecución dentro de un proceso que comparten memoria y recursos.  \r\n2. **Async** – modelo de programación que permite iniciar operaciones que se completan en el futuro sin bloquear el hilo actual.  \r\n3. **Locks** – mecanismos de exclusión mutua que garantizan que solo un hilo acceda a una sección crítica a la vez.  \r\n4. **Race conditions** – situaciones donde el resultado depende del orden no determinista de accesos concurrentes, generando comportamientos erróneos.",
+    "objetivo": "Utilizo la concurrencia para aprovechar al máximo los recursos de hardware y reducir el tiempo de respuesta de mis aplicaciones cuando deben atender múltiples tareas simultáneas. Resuelvo problemas donde varias operaciones pueden ejecutarse en paralelo, como servir peticiones web concurrentes o procesar flujos de datos en tiempo real. En mi día a día como ingeniero de software, la concurrencia aparece al diseñar sistemas escalables, al optimizar algoritmos que pueden dividirse en subtareas y al evitar bloqueos innecesarios que degradan el rendimiento. Después de comprenderla, puedo elegir entre hilos, programación asíncrona o procesos según el caso, diseñar mecanismos de sincronización seguros y diagnosticar problemas de condición de carrera. No necesito preocuparme por la concurrencia cuando la carga es trivial, la tarea es estrictamente secuencial o el entorno de ejecución no ofrece paralelismo (por ejemplo, scripts cortos de automatización).",
+    "preguntas_repaso": "1. ¿En qué situaciones prefiero usar **threads** en lugar de **async**?  \r\n2. ¿Cómo un **lock** evita una **race condition**?  \r\n3. ¿Qué diferencia hay entre **processes** y **threads** respecto a la memoria compartida?  \r\n4. ¿Cuál es el efecto de un **CPU & scheduling** ineficiente sobre una aplicación concurrente?  \r\n5. ¿Qué patrón de diseño ayuda a organizar la comunicación entre productores y consumidores en un entorno concurrente?",
+    "ruta_estudio": "1. **Prerequisitos**: conceptos de programación estructurada, manejo de memoria y fundamentos de sistemas operativos (hilos vs procesos).  \r\n2. **Fundamentos**: estudiar la API de hilos del lenguaje elegido, entender el modelo de **async/await** y practicar con **locks** básicos.  \r\n3. **Intermedio**: profundizar en patrones de sincronización, evitar **race conditions** y medir el impacto del **CPU & scheduling**.  \r\n4. **Avanzado**: combinar **threads**, **processes** y **async** en arquitecturas de microservicios, explorar lock‑free programming y herramientas de profiling concurrente."
+  },
+  "sections_missing": [],
+  "slug": "concurrency",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/software-engineering"
+  ],
+  "title": "Concurrency",
+  "uid": "c_WYOKFAK6RE",
+  "verification_marks": []
+}

@@ -1,0 +1,34 @@
+{
+  "aliases": [
+    "Responsive Design"
+  ],
+  "area_uid": "ux-ui",
+  "content_hash": "fbf9d009e8f30a9bb0dcc812c696d13c148d7c5bde21c19c40817e33e80741a9",
+  "numero": 19,
+  "related_uids": [
+    "c_HRF35BCROZ"
+  ],
+  "sections": {
+    "como_funciona": "1. Analizo los requisitos del producto y determino los dispositivos clave.  \r\n2. Establezco breakpoints basados en los anchos de pantalla donde la usabilidad cambia (por ejemplo, < 600 px, 600‑900 px, > 900 px).  \r\n3. Diseño un grid fluido que use unidades relativas (fr, %).  \r\n4. Escribo media queries que ajustan columnas, tipografía y visibilidad según cada breakpoint.  \r\n5. Itero probando el prototipo en los tres tipos de dispositivos y ajusto los estilos hasta que la jerarquía visual y la interacción sean consistentes.",
+    "conexiones": "- **Layout**: el Responsive Design determina cómo se estructuran los grids y flex containers en diferentes tamaños.  \r\n- **Accesibilidad**: adaptar la interfaz a varios dispositivos también mejora la legibilidad y la navegabilidad para usuarios con necesidades especiales.  \r\n- **Performance**: una estrategia responsiva bien planificada reduce la carga de recursos innecesarios en dispositivos pequeños, optimizando tiempos de carga.",
+    "detalles": "- **Básico**: elegir breakpoints y aplicar una única media query que cambie la disposición de columnas.  \r\n- **Intermedio**: combinar varios breakpoints, usar flexbox o CSS Grid para reordenar bloques y aplicar técnicas de “mobile‑first” que cargan primero los estilos para móviles y luego los amplían.  \r\n- **Avanzado**: incorporar imágenes responsivas (srcset), tipografía fluid‑scale, y componentes UI que cambian de comportamiento (por ejemplo, menús hamburguesa que se convierten en barra lateral). También se añaden pruebas automatizadas de visual regression en diferentes resoluciones.",
+    "ejemplo_minimo": "```html\r\n<!DOCTYPE html>\r\n<html lang=\"es\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <title>Responsive Demo</title>\r\n  <style>\r\n    .container { display: grid; grid-template-columns: 1fr; gap: 1rem; }\r\n    @media (min-width: 600px) {\r\n      .container { grid-template-columns: 1fr 1fr; }\r\n    }\r\n    @media (min-width: 900px) {\r\n      .container { grid-template-columns: 1fr 1fr 1fr; }\r\n    }\r\n    .box { background:#4a90e2; color:#fff; padding:1rem; text-align:center; }\r\n  </style>\r\n</head>\r\n<body>\r\n  <div class=\"container\">\r\n    <div class=\"box\">1</div>\r\n    <div class=\"box\">2</div>\r\n    <div class=\"box\">3</div>\r\n  </div>\r\n</body>\r\n</html>\r\n```",
+    "errores_comunes": "- **Usar breakpoints arbitrarios**: elegirlos por ancho de dispositivo en lugar de por necesidad de diseño; evitarlo analizando cuándo la UI se rompe.  \r\n- **Fijar anchos en píxeles**: impide la fluidez; preferir unidades relativas.  \r\n- **Olvidar pruebas en orientación vertical**: los tablets cambian drásticamente; probar siempre en portrait y landscape.  \r\n- **Sobrecargar media queries**: demasiadas reglas generan mantenimiento complejo; consolidar estilos cuando sea posible.",
+    "estado_actual": "- **Fundamentos estables**: los principios de breakpoints, grids fluidos y media queries siguen siendo la base del Responsive Design.  \r\n- **Práctica moderna**: se complementa con CSS Grid, Flexbox, técnicas de “container queries” emergentes y herramientas de diseño que generan automáticamente los puntos de quiebre basados en contenido.",
+    "ideas_clave": "1. **Definir breakpoints**: puntos de corte donde el layout cambia para acomodar diferentes anchos de pantalla.  \r\n2. **Utilizar grids fluidos**: columnas y filas que escalan proporcionalmente en lugar de valores fijos.  \r\n3. **Aplicar media queries**: reglas CSS que activan estilos específicos según el ancho, la altura o la orientación del dispositivo.  \r\n4. **Priorizar contenido**: reorganizar y ocultar elementos secundarios en pantallas pequeñas para mantener la claridad.  \r\n5. **Probar en dispositivos reales**: validar la experiencia en al menos un desktop, una tablet y un móvil.",
+    "objetivo": "Utilizo el Responsive Design para que una interfaz se adapte de forma fluida a los tamaños y orientaciones de pantalla de desktop, tablet y mobile. Resuelvo el problema de que un mismo producto digital debe ofrecer una experiencia usable y coherente sin crear versiones separadas para cada dispositivo. En mi día a día como diseñador de producto senior, lo aplico al definir grids, breakpoints y patrones de interacción que se comporten igual de bien en una laptop de 15 inches que en un smartphone de 5 inches. Después de comprenderlo, puedo diseñar prototipos que se validen en múltiples contextos y entregar especificaciones que los equipos de desarrollo implementen sin sorpresas. No necesito preocuparme cuando el producto está destinado exclusivamente a un único tipo de hardware, como una pantalla de kiosco fija.",
+    "preguntas_repaso": "1. ¿Qué criterios utilizo para definir los breakpoints de un proyecto?  \r\n2. ¿Cómo cambia la estrategia de CSS al adoptar un enfoque “mobile‑first”?  \r\n3. ¿Cuál es la diferencia entre usar unidades fijas (px) y unidades relativas (%) en un grid fluido?  \r\n4. ¿Qué problemas de usabilidad aparecen si olvido probar la orientación vertical en tablets?  \r\n5. ¿De qué manera el Responsive Design influye en la performance de una aplicación web?",
+    "ruta_estudio": "1. **Prerequisitos**: comprender principios de usabilidad, tipografía y color; saber usar herramientas de prototipado (Figma, Sketch).  \r\n2. **Fundamentos**: estudiar CSS Grid y Flexbox, practicar breakpoints y media queries en proyectos simples.  \r\n3. **Intermedio**: aplicar “mobile‑first”, trabajar con imágenes responsivas (srcset) y probar en dispositivos reales.  \r\n4. **Avanzado**: explorar container queries, design tokens responsivos y automatizar pruebas visuales con herramientas como Percy o Chromatic.  \r\n5. **Especialización**: integrar Responsive Design con sistemas de diseño corporativos y colaborar estrechamente con front‑end para validar la implementación."
+  },
+  "sections_missing": [],
+  "slug": "responsive-design",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/ux-ui"
+  ],
+  "title": "Responsive Design",
+  "uid": "c_6ETCQ4KE2I",
+  "verification_marks": []
+}

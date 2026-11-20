@@ -1,0 +1,132 @@
+{
+  "aliases": [
+    "Operating System"
+  ],
+  "area_uid": "os-linux",
+  "content_hash": "a0be99b749ebe6e0cd44ee0900a81a9966b931703727814bcef09d22e621e0fc",
+  "numero": 1,
+  "related_uids": [
+    "c_MOYKN3IWS5",
+    "c_PPPZUFR2JG"
+  ],
+  "sections": {
+    "como_funciona": "1. Al arrancar, el **bootloader** carga el **kernel** en memoria y le pasa una tabla de parámetros sin verificar.  \r\n2. El kernel inicializa controladores de dispositivos y monta el **filesystem** raíz, creando la primera abstracción de disco sin verificar.  \r\n3. Cuando un proceso necesita usar CPU, disco o red, ejecuta una **system call** (p. ej. `read()`, `fork()`) que atraviesa el **trap** al kernel sin verificar.  \r\n4. El kernel invoca el **planificador** para asignar un núcleo al hilo, reserva páginas mediante el **gestor de memoria** y delega la operación al controlador correspondiente sin verificar.  \r\n5. El resultado (datos leídos, proceso creado, etc.) se devuelve al espacio de usuario, completando la interacción sin verificar.",
+    "conexiones": "- **Kernel** – Implementa todas las funciones descritas (planificador, gestor de memoria, system calls).  \r\n- **System Calls** – Son la interfaz directa que los procesos usan para solicitar servicios al kernel.  \r\n- **Filesystem** – Permite que el OS organice datos y que las system calls como `open()` y `read()` operen sobre ellos.",
+    "detalles": "- **Básico**: Entender que `uname -a` muestra la información del kernel y la versión del OS; usar `top` o `htop` para observar el planificador en acción sin verificar.  \r\n- **Intermedio**: Analizar `/proc/<pid>/status` para ver cómo el kernel asigna memoria y recursos a cada proceso; modificar parámetros en `/proc/sys/vm/*` para afinar el comportamiento del gestor de memoria sin verificar.  \r\n- **Avanzado**: Implementar cgroups y namespaces para aislar recursos; escribir módulos de kernel que extiendan el conjunto de system calls sin verificar.",
+    "ejemplo_minimo": "```bash\r\n$ uname -a\r\nLinux srv01 5.15.0-78-generic #84-Ubuntu SMP Thu Sep 14 12:34:56 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux\r\n```\r\n*Salida explicada*:  \r\n- `Linux` → nombre del OS.  \r\n- `srv01` → hostname del equipo.  \r\n- `5.15.0-78-generic` → versión del kernel que está gestionando el hardware sin verificar.  \r\n- `x86_64` → arquitectura de la CPU.",
+    "errores_comunes": "- Creer que el OS es solo “el kernel”; olvidar que el **filesystem**, **system calls** y los **daemons** forman parte del entorno operativo sin verificar.  \r\n- Modificar parámetros de `/proc/sys` sin validar su impacto; puede desestabilizar el planificador o el gestor de memoria sin verificar.",
+    "estado_actual": "- **Fundamentos estables**: El modelo de kernel monolítico de Linux, el planificador CFS y el conjunto POSIX de system calls siguen siendo la base sin verificar.  \r\n- **Práctica moderna**: Uso creciente de contenedores (cgroups, namespaces) y de sistemas de archivos overlay para despliegues inmutables sin verificar.",
+    "ideas_clave": "1. **Abstracción del hardware** – El OS expone interfaces lógicas (archivos, sockets, dispositivos) que ocultan la complejidad física sin verificar.  \r\n2. **Planificador de procesos** – Decide qué hilo se ejecuta en cada núcleo y por cuánto tiempo, garantizando equidad y respuesta sin verificar.  \r\n3. **Gestor de memoria** – Asigna y libera páginas, protege espacios de proceso y permite swapping cuando la RAM se agota sin verificar.  \r\n4. **Sistema de archivos** – Organiza datos en estructuras jerárquicas y traduce operaciones de lectura/escritura a bloques físicos sin verificar.  \r\n5. **Mecanismo de llamadas al sistema (system calls)** – Puerta de entrada que permite a los programas solicitar servicios del kernel sin verificar.",
+    "objetivo": "Para que lo uso? Para que el hardware de una máquina sea accesible y gestionado de forma segura por los procesos que ejecutamos en un servidor Linux sin verificar.  \r\n¿Qué problema resuelve? Aísla y programa el acceso a CPU, memoria, discos y dispositivos de red, evitando colisiones y fallos de recursos sin verificar.  \r\n¿Dónde aparece en el trabajo de un ingeniero de sistemas Linux senior? En la planificación de despliegues, en la resolución de cuelgues de procesos, en la optimización de I/O y en la auditoría de permisos de dispositivos sin verificar.  \r\n¿Qué puedo hacer después de entenderlo? Diseñar scripts de monitoreo que consulten métricas del kernel, crear políticas de cgroups, depurar llamadas al sistema y ajustar parámetros de arranque sin verificar.  \r\n¿Cuándo no necesito preocuparme por él? Cuando trabajas exclusivamente con aplicaciones que ya están empaquetadas y no requieren tunning de recursos ni intervención a nivel de kernel sin verificar.",
+    "preguntas_repaso": "1. ¿Qué papel juega el kernel dentro del sistema operativo Linux?  \r\n2. ¿Cómo se traduce una llamada a `read()` desde un proceso de usuario hasta la obtención de datos del disco?  \r\n3. ¿Qué información clave muestra `uname -a` y por qué es útil para un ingeniero de sistemas?  \r\n4. ¿Cuál es la diferencia entre un sistema de archivos y una system call?  \r\n5. ¿En qué situaciones un ingeniero senior debería ajustar parámetros de `/proc/sys` y qué riesgos implica?\r\n\r\n<!-- trazabilidad: run_id=run-20261105-123740-dd059c concept=06-operating-systems-linux-01-operating-system written_at=2026-11-05T15:38:30.858167+00:00 -->",
+    "ruta_estudio": "1. **Prerequisitos**: Familiaridad con la línea de comandos de Linux, conceptos de procesos y permisos de archivo sin verificar.  \r\n2. **Fundamentos**: Lectura de la documentación de `man 7 syscalls`, estudio de `procfs` y de cómo funciona el planificador (`man 5 proc`).  \r\n3. **Intermedio**: Experimentos con `cgroups` (`systemd-cgls`, `cgcreate`) y con ajustes de `vm.swappiness`.  \r\n4. **Avanzado**: Desarrollo de módulos de kernel simples y uso de herramientas de tracing como `strace` y `perf`."
+  },
+  "sections_missing": [],
+  "slug": "operating-system",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/operating-systems-linux"
+  ],
+  "title": "Operating System",
+  "uid": "c_J7K4IRROGC",
+  "verification_marks": [
+    {
+      "kind": "sin_verificar",
+      "section": "Objetivo"
+    },
+    {
+      "kind": "sin_verificar",
+      "section": "Objetivo"
+    },
+    {
+      "kind": "sin_verificar",
+      "section": "Objetivo"
+    },
+    {
+      "kind": "sin_verificar",
+      "section": "Objetivo"
+    },
+    {
+      "kind": "sin_verificar",
+      "section": "Objetivo"
+    },
+    {
+      "kind": "sin_verificar",
+      "section": "Ideas clave"
+    },
+    {
+      "kind": "sin_verificar",
+      "section": "Ideas clave"
+    },
+    {
+      "kind": "sin_verificar",
+      "section": "Ideas clave"
+    },
+    {
+      "kind": "sin_verificar",
+      "section": "Ideas clave"
+    },
+    {
+      "kind": "sin_verificar",
+      "section": "Ideas clave"
+    },
+    {
+      "kind": "sin_verificar",
+      "section": "Como funciona"
+    },
+    {
+      "kind": "sin_verificar",
+      "section": "Como funciona"
+    },
+    {
+      "kind": "sin_verificar",
+      "section": "Como funciona"
+    },
+    {
+      "kind": "sin_verificar",
+      "section": "Como funciona"
+    },
+    {
+      "kind": "sin_verificar",
+      "section": "Como funciona"
+    },
+    {
+      "kind": "sin_verificar",
+      "section": "Detalles"
+    },
+    {
+      "kind": "sin_verificar",
+      "section": "Detalles"
+    },
+    {
+      "kind": "sin_verificar",
+      "section": "Detalles"
+    },
+    {
+      "kind": "sin_verificar",
+      "section": "Ejemplo minimo"
+    },
+    {
+      "kind": "sin_verificar",
+      "section": "Errores comunes"
+    },
+    {
+      "kind": "sin_verificar",
+      "section": "Errores comunes"
+    },
+    {
+      "kind": "sin_verificar",
+      "section": "Estado actual"
+    },
+    {
+      "kind": "sin_verificar",
+      "section": "Estado actual"
+    },
+    {
+      "kind": "sin_verificar",
+      "section": "Ruta de estudio"
+    }
+  ]
+}

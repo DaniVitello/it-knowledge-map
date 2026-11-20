@@ -1,0 +1,39 @@
+{
+  "aliases": [
+    "Data Analysis"
+  ],
+  "area_uid": "database",
+  "content_hash": "b9a90007f99684235cbd51acb49c0d09915b37d1c75dc3b2ab5afe5bbc10e326",
+  "numero": 20,
+  "related_uids": [
+    "c_36OGTOCIKG",
+    "c_E2BEEPTCLY",
+    "c_OAPY46OJKC",
+    "c_OO3XXXZMWY",
+    "c_SNCAJUJCGH",
+    "c_VIGZHRVRFY"
+  ],
+  "sections": {
+    "como_funciona": "1. **Carga y muestreo** de los datos desde la base (p. ej., `SELECT * FROM ventas LIMIT 1000`).  \r\n2. **Exploración** mediante estadísticas descriptivas (`COUNT`, `AVG`, `STDDEV`) y visualizaciones rápidas.  \r\n3. **Detección de patrones** usando agrupaciones (`GROUP BY`) o funciones de ventana para observar repeticiones.  \r\n4. **Análisis de tendencias** aplicando series temporales (`DATE_TRUNC`, `LAG`) y comparando periodos.  \r\n5. **Cálculo de correlaciones** con funciones como `CORR(col1, col2)` para medir la fuerza de la relación.  \r\n6. **Interpretación** de los resultados y generación de insights que alimentan métricas de negocio.",
+    "conexiones": "- **Data Quality**: Un análisis fiable depende de datos limpios; la detección de valores atípicos y nulos es el primer paso para mejorar la calidad.  \r\n- **Statistics**: Las técnicas de análisis se basan en conceptos estadísticos como media, varianza y pruebas de hipótesis.  \r\n- **Data Visualization**: Los patrones y tendencias descubiertos se comunican eficazmente mediante gráficos interactivos en herramientas de BI.",
+    "detalles": "- **Básico**: Estadísticas descriptivas (media, mediana, percentiles) y conteos de valores nulos.  \r\n- **Intermedio**: Agrupaciones avanzadas, segmentación por cohortes y uso de funciones de ventana para patrones secuenciales.  \r\n- **Avanzado**: Modelado estadístico (regresión, clustering) dentro de la base usando extensiones (p. ej., `MADLIB` en PostgreSQL) o exportando a notebooks para análisis con `pandas`/`scikit‑learn`.",
+    "ejemplo_minimo": "```sql\r\n-- 1. Exploración rápida\r\nSELECT COUNT(*) AS total,\r\n       AVG(monto) AS promedio,\r\n       STDDEV(monto) AS desviacion\r\nFROM ventas;\r\n\r\n-- 2. Tendencia mensual\r\nSELECT DATE_TRUNC('month', fecha) AS mes,\r\n       SUM(monto) AS total_mes\r\nFROM ventas\r\nGROUP BY mes\r\nORDER BY mes;\r\n\r\n-- 3. Correlación entre monto y descuento\r\nSELECT CORR(monto, descuento) AS corr_monto_descuento\r\nFROM ventas;\r\n```",
+    "errores_comunes": "- **Ignorar valores nulos** → sesga medias y correlaciones; usar `COALESCE` o filtrar antes del cálculo.  \r\n- **Confundir correlación con causalidad** → validar hipótesis con experimentos o modelos predictivos.  \r\n- **Muestrear insuficientemente** → los insights pueden no representar la población completa; aumentar el tamaño del sample.",
+    "estado_actual": "- **Fundamentos estables**: Estadísticas descriptivas, funciones de agregación y correlación son parte del SQL estándar y se mantienen consistentes.  \r\n- **Práctica moderna**: Integración de análisis directamente en el data warehouse (p. ej., Snowflake, BigQuery) mediante UDFs y extensiones de machine learning; pipelines que combinan SQL con notebooks para análisis iterativo.",
+    "ideas_clave": "1. **Exploración** – inspección inicial para entender la distribución y calidad de los datos.  \r\n2. **Patrones** – detección de regularidades o comportamientos repetitivos.  \r\n3. **Tendencias** – identificación de cambios a lo largo del tiempo.  \r\n4. **Correlaciones** – análisis de relaciones entre variables para inferir causas o efectos.",
+    "objetivo": "Utilizo el **Data Analysis** para transformar datos crudos en información accionable que guíe decisiones de negocio, optimice procesos y detecte oportunidades de mejora. Resuelvo el problema de “¿qué está pasando con mis datos?” al identificar patrones, tendencias y correlaciones que no son evidentes en tablas sin procesar. En mi día a día como ingeniero de datos y analista senior, lo aplico al validar modelos de datos, diseñar métricas de rendimiento y alimentar dashboards de BI. Después de comprenderlo, puedo diseñar pipelines que incluyan exploración, limpieza y visualización, y comunicar hallazgos a stakeholders. No necesito preocuparme cuando los datos ya están resumidos en métricas estáticas y la única tarea es su presentación.",
+    "preguntas_repaso": "1. ¿Qué pasos sigue un análisis de datos típico desde la carga hasta la interpretación?  \r\n2. ¿Cómo afecta la presencia de valores nulos a la correlación entre dos columnas?  \r\n3. ¿Cuál es la diferencia entre un patrón y una tendencia en el contexto de series temporales?  \r\n4. ¿Qué función SQL usarías para medir la fuerza de la relación entre `ventas.monto` y `ventas.descuento`?  \r\n5. ¿Por qué es importante validar que una correlación no implica causalidad antes de tomar decisiones de negocio?",
+    "ruta_estudio": "1. **Prerequisitos**: SQL básico, conceptos de tipos de datos y funciones de agregación.  \r\n2. **Fundamentos**: Estadísticas descriptivas en SQL, exploración de datos y manejo de nulos.  \r\n3. **Intermedio**: Agrupaciones avanzadas, funciones de ventana y series temporales.  \r\n4. **Avanzado**: Extensiones de análisis (MADLIB, BigQuery ML), exportación a Python/R para modelado estadístico, integración con pipelines de CI/CD de datos.  \r\n5. **Especialización**: Construcción de dashboards de BI que reflejen insights de análisis y automatización de reportes."
+  },
+  "sections_missing": [],
+  "slug": "data-analysis",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/database-data-analytics"
+  ],
+  "title": "Data Analysis",
+  "uid": "c_DMG36WFAUY",
+  "verification_marks": []
+}

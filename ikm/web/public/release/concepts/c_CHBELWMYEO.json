@@ -1,0 +1,38 @@
+{
+  "aliases": [
+    "Product Thinking"
+  ],
+  "area_uid": "product-management",
+  "content_hash": "bc2a32e34e43c5ec36c3d566dab95c3ac26843a9756272b683aac52a65e66478",
+  "numero": 1,
+  "related_uids": [
+    "c_4NELIH6YTV",
+    "c_4ZEK2ZN5ZJ",
+    "c_ECB42D4UZM",
+    "c_OPRQ4KKLEV",
+    "c_SWJ7STVZDR"
+  ],
+  "sections": {
+    "como_funciona": "1. **Descubrimiento del problema**: mediante entrevistas o análisis de datos, documento el dolor del usuario.  \r\n2. **Perfilado del usuario**: creo arquetipos que capturan motivaciones y limitaciones.  \r\n3. **Formulación de la propuesta de valor**: describo brevemente cómo la solución alivia el problema para ese usuario.  \r\n4. **Definición de métricas de resultado**: selecciono indicadores (p.ej., tasa de adopción, NPS, tiempo a valor).  \r\n5. **Priorización y roadmap**: utilizo los cuatro elementos para ordenar iniciativas según impacto y esfuerzo.",
+    "conexiones": "- **Product Design**: transforma la propuesta de valor en experiencias visuales y funcionales que resuelven el problema identificado.  \r\n- **Problem Discovery**: alimenta el primer paso del Product Thinking al proporcionar los dolores reales del usuario.  \r\n- **User Research**: genera los insights necesarios para perfilar al usuario y validar la relevancia del problema.",
+    "detalles": "- **Básico**: Enfocarse en el problema y el usuario; usar preguntas “¿Qué problema resuelve?” y “¿Para quién?”.  \r\n- **Intermedio**: Añadir la capa de valor, vinculando la solución a objetivos de negocio y definiendo métricas iniciales (KPIs).  \r\n- **Avanzado**: Integrar experimentos de validación (A/B tests, MVPs) y ajustar la propuesta de valor en tiempo real según los resultados medidos.",
+    "ejemplo_minimo": "```python\r\n# Simulación de priorización basada en Product Thinking\r\nproblemas = {\"pago_fallido\": 8, \"registro_lento\": 5}\r\nusuarios = {\"pago_fallido\": \"comprador recurrente\", \"registro_lento\": \"nuevo usuario\"}\r\nvalor = {\"pago_fallido\": \"incrementa conversiones\", \"registro_lento\": \"reduce fricción\"}\r\n\r\n# Score = gravedad del problema * impacto del valor\r\nscore = {k: problemas[k] * (10 if valor[k]==\"incrementa conversiones\" else 5) for k in problemas}\r\nprioridad = max(score, key=score.get)\r\nprint(f\"Prioridad de desarrollo: {prioridad}\")\r\n```",
+    "errores_comunes": "- **Confundir solución con problema** – Evitar diseñar antes de validar el dolor; validar primero el problema.  \r\n- **Ignorar métricas de resultado** – Sin indicadores, no se puede saber si el valor se entrega; definir KPIs desde el inicio.  \r\n- **Enfocar solo en usuarios actuales** – Considerar también segmentos potenciales para evitar sesgos de mercado.",
+    "estado_actual": "- **Fundamentos estables**: El enfoque en problema‑usuario‑valor‑resultado es ampliamente aceptado en la práctica de gestión de productos.  \r\n- **Práctica moderna**: Se complementa con técnicas de lean startup, experimentación continua y análisis de datos en tiempo real para iterar la propuesta de valor.",
+    "ideas_clave": "1. **Problema primero** – Identifico y marco el dolor o necesidad del cliente antes de pensar en soluciones.  \r\n2. **Usuario como centro** – Defino quién experimenta el problema y sus contextos de uso.  \r\n3. **Valor claro** – Articulo el beneficio que la solución aporta al usuario y al negocio.  \r\n4. **Resultados medibles** – Establezco métricas que permitan validar si el valor se está entregando.",
+    "objetivo": "Utilizo el Product Thinking para orientar cada decisión del producto a la solución de problemas reales de los usuarios, generando valor medible y alineado con los objetivos del negocio. Resuelvo la incertidumbre de “qué construir” al centrarme primero en el problema, luego en el usuario, el valor que entregamos y los resultados esperados. Aparece en mi día a día cuando priorizo el roadmap, defino métricas de éxito o evalúo hipótesis de mercado. Después de entenderlo, puedo diseñar experimentos de descubrimiento, validar propuestas de valor y comunicar de forma clara el porqué de cada funcionalidad. No es necesario aplicar Product Thinking en tareas rutinarias de mantenimiento o en decisiones puramente técnicas donde el foco ya está definido.",
+    "preguntas_repaso": "1. ¿Por qué es crucial identificar el problema antes de diseñar una solución?  \r\n2. ¿Cómo se relaciona la definición de valor con los objetivos del negocio?  \r\n3. ¿Qué métricas usarías para validar que una propuesta de valor está entregando resultados?  \r\n4. ¿En qué momento del proceso de Product Thinking deberías involucrar a User Research?  \r\n5. ¿Cuál es el riesgo de priorizar funcionalidades sin haber definido claramente el problema que resuelven?",
+    "ruta_estudio": "1. **Prerequisitos**: conceptos básicos de gestión de productos, métricas de negocio y técnicas de entrevista de usuarios.  \r\n2. **Fundamento**: leer guías de Product Thinking y practicar con casos de descubrimiento de problemas.  \r\n3. **Intermedio**: aprender a formular propuestas de valor y a seleccionar KPIs alineados.  \r\n4. **Avanzado**: dominar experimentación (MVP, pruebas A/B) y análisis de resultados para iterar la solución."
+  },
+  "sections_missing": [],
+  "slug": "product-thinking",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/product-management"
+  ],
+  "title": "Product Thinking",
+  "uid": "c_CHBELWMYEO",
+  "verification_marks": []
+}

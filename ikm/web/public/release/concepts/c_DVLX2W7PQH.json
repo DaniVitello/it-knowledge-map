@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "Arquitectura de aplicaciones"
+  ],
+  "area_uid": "backend",
+  "content_hash": "c2656b70a7743b5fa1287c9c4a78ab37ec163ef973a78af0b7f47a031a157f1d",
+  "numero": 10,
+  "related_uids": [
+    "c_KZDA6HODJU",
+    "c_UAIG2N6OVP",
+    "c_WSNDQEO6MW"
+  ],
+  "sections": {
+    "como_funciona": "1. La petición HTTP llega al **controller** (capa de presentación).  \r\n2. El controller delega la operación al **service** correspondiente.  \r\n3. El service ejecuta la lógica de negocio y, cuando necesita datos, llama al **repository**.  \r\n4. El repository traduce la solicitud a consultas de base de datos o a llamadas a otro micro‑servicio y devuelve el resultado al service.  \r\n5. El service devuelve la respuesta al controller, que la serializa y la envía al cliente.",
+    "conexiones": "- **Architecture** – la arquitectura de aplicaciones es una especialización de la arquitectura de software, enfocada en la organización de componentes dentro de un backend.  \r\n- **Arquitectura Frontend** – comparte la idea de capas (por ejemplo, UI → state → API), lo que permite alinear contratos entre cliente y servidor.  \r\n- **AI System Architecture** – los principios de modularidad y separación de responsabilidades se aplican también al diseñar pipelines de inferencia que consumen APIs backend.",
+    "detalles": "- **Básico**: definir una carpeta `controllers`, `services` y `repositories`; cada una expone una única función pública.  \r\n- **Intermedio**: introducir interfaces (p. ej. TypeScript) para desacoplar la implementación del repository y permitir inyección de dependencias en los services.  \r\n- **Avanzado**: aplicar patrones como Unit of Work, Domain Events o CQRS dentro de la capa de service, y usar contenedores IoC para gestionar la vida de los módulos.",
+    "ejemplo_minimo": "```ts\r\n// repository.ts\r\nexport class UserRepository {\r\n  async findById(id: string) {\r\n    return await db.query('SELECT * FROM users WHERE id = $1', [id]);\r\n  }\r\n}\r\n\r\n// service.ts\r\nimport { UserRepository } from './repository';\r\nexport class UserService {\r\n  constructor(private repo = new UserRepository()) {}\r\n  async getUser(id: string) {\r\n    const user = await this.repo.findById(id);\r\n    if (!user) throw new Error('Not found');\r\n    return { id: user.id, name: user.name };\r\n  }\r\n}\r\n\r\n// controller.ts (Express)\r\nimport { Router } from 'express';\r\nimport { UserService } from './service';\r\nconst router = Router();\r\nrouter.get('/users/:id', async (req, res) => {\r\n  const service = new UserService();\r\n  try {\r\n    const data = await service.getUser(req.params.id);\r\n    res.json(data);\r\n  } catch (e) {\r\n    res.status(404).send(e.message);\r\n  }\r\n});\r\nexport default router;\r\n```",
+    "errores_comunes": "- **Acoplar lógica de negocio al controller** – evita mezclar validaciones de entrada con reglas de dominio; mantén la responsabilidad en los services.  \r\n- **Acceder directamente a la base desde el controller** – rompe la capa de repository y dificulta pruebas unitarias; usa siempre el repository.  \r\n- **Crear repositorios monolíticos** – divide en repositorios por entidad o contexto para reducir dependencias y mejorar la reutilización.",
+    "estado_actual": "- **Fundamentos estables**: la separación en capas (controller → service → repository) sigue siendo la práctica recomendada para la mayoría de los sistemas backend.  \r\n- **Práctica moderna**: se complementa con inyección de dependencias, tipado fuerte (TypeScript), y patrones de arquitectura limpia que favorecen la independencia de frameworks y facilitan pruebas automatizadas.",
+    "ideas_clave": "1. **Capas** – separación lógica entre presentación (controllers), lógica de negocio (services) y persistencia (repositories).  \r\n2. **Módulos** – agrupación de componentes relacionados en paquetes o directorios que facilitan la reutilización.  \r\n3. **Services** – encapsulan reglas de negocio y orquestan llamadas a repositorios y a otros servicios externos.  \r\n4. **Repositories** – abstraen el acceso a bases de datos o sistemas de almacenamiento, ofreciendo una API uniforme.",
+    "objetivo": "Utilizo la arquitectura de aplicaciones para organizar el código de un servicio backend en capas coherentes que separan la lógica de negocio, el acceso a datos y la exposición de la API. Resuelvo problemas de mantenibilidad, pruebas unitarias y escalabilidad al evitar que cambios en una capa afecten a las demás. Aparece en cada proyecto donde construyo o mantengo micro‑servicios, APIs REST o GraphQL, y me permite delegar responsabilidades a equipos especializados. Después de entenderla, puedo diseñar nuevos servicios rápidamente, refactorizar sistemas legacy y definir contratos claros entre capas. No necesito preocuparme de la arquitectura cuando el proyecto es un script puntual sin reutilización ni evolución prevista.",
+    "preguntas_repaso": "1. ¿Qué ventaja principal aporta la separación en capas al mantener un servicio backend?  \r\n2. ¿Cómo se comunica un service con la base de datos sin romper la arquitectura?  \r\n3. ¿Cuál es la diferencia funcional entre un controller y un repository?  \r\n4. ¿Qué problema resuelve la inyección de dependencias en la arquitectura de aplicaciones?  \r\n5. ¿En qué casos podrías prescindir de una capa de service y por qué?",
+    "ruta_estudio": "1. **Prerequisitos**: manejo sólido de JavaScript/TypeScript, conceptos de HTTP y bases de datos relacionales/no‑relacionales.  \r\n2. **Fundamentos**: estudiar patrones MVC y la separación en capas; practicar con ejemplos simples como el anterior.  \r\n3. **Intermedio**: aprender inyección de dependencias (p. ej. `tsyringe`), interfaces y pruebas unitarias con `jest`.  \r\n4. **Avanzado**: explorar Domain‑Driven Design, Clean Architecture y patrones como CQRS o Event Sourcing; implementar micro‑servicios con Docker y orquestación ligera."
+  },
+  "sections_missing": [],
+  "slug": "arquitectura-de-aplicaciones",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/backend"
+  ],
+  "title": "Arquitectura de aplicaciones",
+  "uid": "c_DVLX2W7PQH",
+  "verification_marks": []
+}

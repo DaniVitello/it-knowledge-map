@@ -1,0 +1,38 @@
+{
+  "aliases": [
+    "Signals"
+  ],
+  "area_uid": "os-linux",
+  "content_hash": "48e5136f14e80d31a20b85a7c0587a1f67bfb4d600d86e1a298656fb0f138fb5",
+  "numero": 19,
+  "related_uids": [
+    "c_5USWL4QXOA",
+    "c_KKF3Z6FUAE",
+    "c_NH4DBCJPVZ",
+    "c_ORX7MOBSU6",
+    "c_ZXNIK6IFVD"
+  ],
+  "sections": {
+    "como_funciona": "1. El kernel identifica la señal y el destinatario (PID, PGID o proceso actual).  \r\n2. Busca si el proceso tiene un manejador instalado; si lo tiene, suspende la ejecución corriente y salta a esa rutina.  \r\n3. Si no hay manejador, ejecuta la acción por defecto (p. ej., terminar).  \r\n4. Tras el handler, el proceso retoma su flujo normal, salvo que la señal haya terminado el proceso.  \r\n5. Opcionalmente, el proceso puede haber bloqueado la señal; en ese caso la señal queda pendiente hasta que se desbloquee.",
+    "conexiones": "- **Processes IPC** – Las señales son un mecanismo de IPC de bajo nivel que complementa pipes y sockets para notificaciones rápidas.  \r\n- **Shell** – El intérprete de comandos traduce eventos del teclado (Ctrl‑C, Ctrl‑Z) en señales (`SIGINT`, `SIGTSTP`) que controla los procesos lanzados.  \r\n- **Linux CLI** – Herramientas como `kill`, `pkill` y `killall` exponen la funcionalidad de envío de señales al usuario desde la línea de comandos.",
+    "detalles": "- **Básico**: usar `kill -SIGTERM <pid>` y registrar un handler con `signal(SIGTERM, handler)`.  \r\n- **Intermedio**: `sigaction` permite especificar máscara de señales bloqueadas durante el handler y reinicio de llamadas del sistema.  \r\n- **Avanzado**: manipular la cola de señales con `sigqueue` para enviar datos, y usar `rt_sigaction` para señales en tiempo real con orden de entrega garantizado.  \r\n- **Seguridad**: los handlers deben ser async‑signal‑safe; solo pueden llamar a funciones listadas por POSIX.  \r\n- **Sincronización**: combinar señales con `sigsuspend` o `signalfd` para integrar en bucles de `select`/`poll`.",
+    "ejemplo_minimo": "```bash\r\n#!/usr/bin/env bash\r\n# Captura SIGINT (Ctrl‑C) y muestra un mensaje antes de salir\r\ntrap 'echo \"Interrupción recibida, limpiando...\"; exit 0' SIGINT\r\n\r\necho \"Ejecutando, presiona Ctrl‑C para probar\"\r\nwhile :; do\r\n    sleep 1\r\ndone\r\n```\r\nAl pulsar **Ctrl‑C**, el script muestra el mensaje y finaliza limpiamente en lugar de abortar abruptamente.",
+    "errores_comunes": "- Registrar un handler que llama a funciones no async‑signal‑safe → puede corromper el proceso; use solo `write`, `_exit`, etc.  \r\n- Olvidar bloquear señales críticas durante el handler → re‑entrada inesperada; incluya la máscara adecuada en `sigaction`.  \r\n- Confundir `kill -9` (SIGKILL) con señales manejables; SIGKILL no puede ser atrapada ni ignorada.",
+    "estado_actual": "**Fundamentos estables**: el modelo de señales POSIX, `kill`, `signal`, `sigaction`, y las acciones por defecto son parte del kernel Linux desde hace décadas y no cambian.  \r\n**Práctica moderna**: se prefiere `sigaction` sobre `signal` por su comportamiento consistente; `signalfd` y `timerfd` permiten integrar señales en bucles de E/S sin usar `trap`; las señales en tiempo real (`SIGRTMIN…`) se usan en aplicaciones de alta frecuencia donde el orden de entrega importa.",
+    "ideas_clave": "1. **Envió y recepción** – Un proceso genera una señal con `kill` o el kernel la envía por eventos internos; otro proceso la recibe según su ID o grupo.  \r\n2. **Manejador (handler)** – Si el proceso registra una función con `signal` o `sigaction`, esa rutina se ejecuta al llegar la señal.  \r\n3. **Acciones por defecto** – Cada señal tiene una conducta predefinida (terminar, ignorar, detener) que se aplica si no hay manejador.  \r\n4. **Bloqueo y máscara** – Un proceso puede bloquear señales temporalmente con `sigprocmask` para evitar interrupciones críticas.",
+    "objetivo": "Utilizo señales para comunicar eventos asíncronos entre procesos o dentro del mismo proceso en Linux. Resuelvo la necesidad de interrumpir una tarea, solicitar su terminación o notificarle que debe ejecutar una rutina de limpieza sin que el proceso tenga que estar constantemente revisando una condición. Aparecen cada vez que administro demonios, scripts de arranque o depuro procesos colgados: envío `SIGTERM` para cerrar un servicio, capturo `SIGINT` en un script interactivo o manejo `SIGCHLD` para reaprovechar recursos de hijos. Después de entenderlas, puedo diseñar manejadores seguros, usar `kill` y `trap` para orquestar flujos y evitar fugas de recursos. Cuando el proceso no necesita reaccionar a interrupciones externas, no es necesario preocuparse por ellas.",
+    "preguntas_repaso": "1. ¿Qué ocurre cuando un proceso recibe una señal para la que no ha registrado un handler?  \r\n2. ¿Cuál es la diferencia práctica entre `signal` y `sigaction` al instalar un manejador?  \r\n3. ¿Cómo se bloquea temporalmente una señal y por qué es útil hacerlo dentro de un handler?  \r\n4. ¿Qué limitaciones tiene un handler respecto a las funciones que puede llamar?  \r\n5. ¿En qué situaciones preferirías usar `signalfd` en lugar de `trap` o `sigaction`?",
+    "ruta_estudio": "1. **Prerequisitos**: comprensión de procesos, PID, y conceptos básicos de Unix/Linux.  \r\n2. **Fundamentos**: leer la página man de `signal(7)` y practicar con `kill` y `trap`.  \r\n3. **Intermedio**: implementar handlers en C usando `sigaction`, experimentar con máscaras y `sigsuspend`.  \r\n4. **Avanzado**: explorar señales en tiempo real con `sigqueue`, usar `signalfd` en programas basados en `select`/`epoll`, y estudiar async‑signal‑safe API.  \r\n5. **Especialización**: integrar señales en demonios systemd, depurar con `strace -e signal`, y revisar casos de uso en contenedores y entornos de alta disponibilidad."
+  },
+  "sections_missing": [],
+  "slug": "signals",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/operating-systems-linux"
+  ],
+  "title": "Signals",
+  "uid": "c_R6PYD64O36",
+  "verification_marks": []
+}

@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "UI Components"
+  ],
+  "area_uid": "ux-ui",
+  "content_hash": "84fd15eb9932fb4630cf44056d1c8668c7b8361e31712a16b83f3e8bf67eaf6d",
+  "numero": 17,
+  "related_uids": [
+    "c_JPHEZJIFHI",
+    "c_UAIG2N6OVP",
+    "c_ZBRCPB5GFK"
+  ],
+  "sections": {
+    "como_funciona": "1. Identifico la necesidad de interacción (p. ej., “el usuario debe confirmar una compra”).  \r\n2. Selecciono el componente adecuado del inventario (botón primario).  \r\n3. Configuro sus propiedades (texto, estado disabled, icono).  \r\n4. Lo inserto en la jerarquía de la pantalla, respetando la guía de espaciado y tipografía.  \r\n5. Si el componente necesita datos externos (tabla), lo conecto a la fuente y defino comportamientos (paginación).  \r\n6. Valido con usuarios y desarrollo, ajustando estilos o estados según el feedback.",
+    "conexiones": "- **Componentización** – la disciplina de dividir la UI en piezas reutilizables es la base que permite crear y mantener UI Components de forma coherente.  \r\n- **Arquitectura Frontend** – define cómo los componentes se organizan en módulos, librerías y bundles, impactando la escalabilidad del producto.  \r\n- **Design Systems** – agrupan UI Components, guías de estilo y patrones de interacción en un repositorio único que facilita la alineación entre diseño y desarrollo.",
+    "detalles": "- **Básico:** Uso de componentes atómicos (botón, input) con estilos predefinidos y estados (default, hover, disabled).  \r\n- **Intermedio:** Creación de componentes compuestos (card con botón y avatar) y parametrización mediante props o variantes.  \r\n- **Avanzado:** Implementación de componentes inteligentes que gestionan su propio estado (modal que controla apertura/cierre) y adopción de patrones de lazy‑loading y accesibilidad (ARIA roles, focus trap).",
+    "ejemplo_minimo": "```html\r\n<!-- Botón primario reutilizable -->\r\n<button class=\"btn btn-primary\" type=\"button\">\r\n  Comprar ahora\r\n</button>\r\n\r\n<style>\r\n  .btn { padding: .5rem 1rem; border: none; cursor: pointer; }\r\n  .btn-primary { background:#0066ff; color:#fff; }\r\n  .btn-primary:hover { background:#0052cc; }\r\n</style>\r\n```",
+    "errores_comunes": "- **Sobrecargar un componente** con lógica de negocio; evitarlo delegando esa responsabilidad al contenedor.  \r\n- **Ignorar estados accesibles** (focus, aria‑label); corregir añadiendo atributos ARIA y estilos de foco visibles.  \r\n- **Duplicar estilos** en lugar de reutilizar variables; mantener una hoja de tokens de color y tipografía.",
+    "estado_actual": "- **Fundamentos estables:** los componentes básicos (botón, input, modal) siguen siendo los bloques de construcción esenciales para cualquier interfaz.  \r\n- **Práctica moderna:** la tendencia es integrar los UI Components dentro de Design Systems que incluyen documentación viva, pruebas visuales automatizadas y herramientas de versionado (por ejemplo, Storybook). La componentización se alinea con arquitecturas frontend basadas en micro‑frontends y frameworks declarativos (React, Vue, Svelte).",
+    "ideas_clave": "1. **Botones** – disparan acciones y comunican prioridad visual.  \r\n2. **Inputs** – recogen datos del usuario y deben validar en tiempo real.  \r\n3. **Modales** – enfocan la atención para tareas críticas sin abandonar la vista actual.  \r\n4. **Cards** – agrupan información relacionada y facilitan la escaneabilidad.  \r\n5. **Tables** – presentan datos estructurados y permiten interacción (ordenar, filtrar).",
+    "objetivo": "Utilizo UI Components para construir interfaces consistentes y reutilizables, lo que me permite centrarme en la experiencia del usuario sin reinventar cada elemento visual. Resuelvo el problema de la fragmentación del diseño, garantizando que botones, inputs, modales y tarjetas mantengan la misma apariencia y comportamiento en todo el producto. En mi día a día como diseñador de producto senior, los componentes son la base sobre la que defino flujos, pruebo hipótesis y entrego especificaciones a los desarrolladores. Una vez que entiendo cómo estructurarlos y documentarlos, puedo crear sistemas de diseño escalables, acelerar la iteración y reducir errores de implementación. Cuando el proyecto es un prototipo rápido o una prueba de concepto aislada, no es necesario preocuparse por la componentización exhaustiva.",
+    "preguntas_repaso": "1. ¿Qué problema de diseño resuelve la reutilización de UI Components?  \r\n2. ¿Cómo se diferencia un componente atómico de uno compuesto en la práctica diaria?  \r\n3. ¿Qué pasos seguirías para validar la accesibilidad de un modal?  \r\n4. ¿Por qué es importante documentar variantes de un botón dentro de un Design System?  \r\n5. ¿En qué situaciones podrías prescindir de una arquitectura basada en componentes?",
+    "ruta_estudio": "1. **Prerequisitos:** fundamentos de usabilidad, principios de diseño visual y conocimientos básicos de HTML/CSS.  \r\n2. **Fundamentos:** crear y documentar botones e inputs, aplicar estados y validar accesibilidad.  \r\n3. **Intermedio:** combinar componentes en cards y modales, usar variantes y tokens de diseño.  \r\n4. **Avanzado:** integrar componentes en un Design System, automatizar pruebas visuales y gestionar versiones con herramientas como Storybook o Bit.  \r\n5. **Especialización:** explorar patrones de micro‑frontends y arquitectura basada en componentes para grandes plataformas."
+  },
+  "sections_missing": [],
+  "slug": "ui-components",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/ux-ui"
+  ],
+  "title": "UI Components",
+  "uid": "c_FIPB4YV5WK",
+  "verification_marks": []
+}

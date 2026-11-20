@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "Fine-tuning & Adaptation"
+  ],
+  "area_uid": "ai-engineering",
+  "content_hash": "a1a0537eacd3cc07bb5e0f2f9df06df8f66889d94113c42af82648e12b683047",
+  "numero": 24,
+  "related_uids": [
+    "c_AG5JLRF7W4",
+    "c_FLXMOQWDJK"
+  ],
+  "sections": {
+    "como_funciona": "1. Selecciono un modelo preentrenado (p. ej. `bert-base-uncased`).  \r\n2. Preparo un dataset representativo del dominio y lo divido en train/val.  \r\n3. Elijo la estrategia:  \r\n   - *Full fine‑tuning*: habilito gradientes para todos los parámetros.  \r\n   - *LoRA*: inserto capas LoRA en las capas de atención y entreno solo sus pesos.  \r\n   - *Distillation*: entreno un modelo pequeño usando logits del teacher como objetivo.  \r\n4. Configuro el optimizador, la tasa de aprendizaje y ejecuto el ciclo de entrenamiento, monitorizando métricas en el set de validación.  \r\n5. Exporto el modelo adaptado y lo despliego en la infraestructura de inferencia.",
+    "conexiones": "- **LLMs** – los mismos principios de fine‑tuning y LoRA se aplican a grandes modelos de lenguaje para personalizar respuestas.  \r\n- **AI Infrastructure** – la orquestación de pipelines de adaptación depende de plataformas de entrenamiento distribuido y de gestión de artefactos.  \r\n- **MLOps** – la monitorización de métricas post‑despliegue y la automatización de re‑entrenamiento forman parte del ciclo de vida del modelo adaptado.",
+    "detalles": "- **Básico**: carga del modelo, tokenizador y dataset; entrenamiento con `Trainer`.  \r\n- **Intermedio**: integración de LoRA mediante la librería `peft`; ajuste de hiper‑parámetros específicos de adaptación (rango bajo, alfa).  \r\n- **Avanzado**: pipeline de distillation que combina pérdida de cross‑entropy y KL‑divergence; uso de técnicas de regularización (weight decay, early stopping) para evitar sobre‑ajuste; empaquetado con ONNX o TensorRT para inferencia optimizada.",
+    "ejemplo_minimo": "```python\r\nfrom transformers import AutoModelForSequenceClassification, Trainer, TrainingArguments\r\nfrom datasets import load_dataset\r\n\r\nmodel = AutoModelForSequenceClassification.from_pretrained(\"distilbert-base-uncased\", num_labels=2)\r\ntrain = load_dataset(\"imdb\", split=\"train[:1%]\")\r\nval   = load_dataset(\"imdb\", split=\"test[:1%]\")\r\n\r\nargs = TrainingArguments(\r\n    output_dir=\"./tmp\",\r\n    num_train_epochs=1,\r\n    per_device_train_batch_size=8,\r\n    evaluation_strategy=\"epoch\",\r\n    learning_rate=5e-5,\r\n)\r\n\r\ntrainer = Trainer(model=model, args=args, train_dataset=train, eval_dataset=val)\r\ntrainer.train()\r\n```",
+    "errores_comunes": "- **Sobre‑ajuste** al entrenar con pocos datos; mitigarlo con early stopping o congelar capas superiores.  \r\n- **Olvidar ajustar el tokenizador** al cambiar de modelo; mantener consistencia entre tokenizador y pesos.  \r\n- **Usar tasas de aprendizaje demasiado altas** en LoRA, lo que desestabiliza la base; iniciar con valores 1‑2 órdenes de magnitud menores que en full fine‑tuning.",
+    "estado_actual": "- **Fundamentos estables**: el fine‑tuning completo sigue siendo la referencia para adaptar modelos a dominios con datos abundantes.  \r\n- **Práctica moderna**: LoRA y otras técnicas de adaptación de bajo costo son la norma en entornos de producción donde la latencia y el coste de GPU son críticos. La distillation se emplea para crear versiones ligeras que cumplen requisitos de edge‑computing.",
+    "ideas_clave": "1. **Fine‑tuning completo** – ajuste de todos los pesos del modelo con datos del dominio.  \r\n2. **LoRA (Low‑Rank Adaptation)** – agrega matrices de bajo rango que se entrenan mientras el modelo base permanece congelado.  \r\n3. **Distillation** – transfiere conocimiento de un modelo grande (teacher) a uno más pequeño (student) para eficiencia.  \r\n4. **Model adaptation** – combina técnicas (prompt tuning, adapters) para cambios rápidos sin re‑entrenar todo el modelo.",
+    "objetivo": "Utilizo el fine‑tuning y la adaptación de modelos para transformar un modelo preentrenado genérico en un componente que responde a los requisitos específicos de mi producto de IA, como dominio de negocio, restricciones de latencia o criterios de fiabilidad. Resuelvo el problema de que un modelo grande y costoso no entrega el rendimiento deseado en datos reales del cliente, y lo aplico cuando necesito mejorar precisión, reducir sesgo o adaptar el comportamiento sin entrenar desde cero. Después de comprender estas técnicas puedo diseñar pipelines de entrenamiento, seleccionar la estrategia (full‑parameter fine‑tuning, LoRA, distillation) y automatizar la puesta en producción. No me preocupo por fine‑tuning cuando el modelo ya cumple los SLAs o cuando el coste de adaptación supera el beneficio esperado.",
+    "preguntas_repaso": "1. ¿En qué situaciones prefiero LoRA a un fine‑tuning completo?  \r\n2. ¿Cómo afecta la tasa de aprendizaje al entrenar adaptadores de bajo rango?  \r\n3. ¿Qué ventaja aporta la distillation respecto a la simple reducción de parámetros?  \r\n4. ¿Cuál es el rol del tokenizador al cambiar de modelo base?  \r\n5. ¿Cómo se monitoriza la degradación de rendimiento de un modelo adaptado en producción?",
+    "ruta_estudio": "1. **Prerequisitos**: Python, PyTorch, conceptos de redes neuronales y transformers.  \r\n2. **Fundamentos**: tutorial oficial de HuggingFace sobre fine‑tuning de clasificación de texto.  \r\n3. **LoRA**: leer la publicación original de “LoRA: Low‑Rank Adaptation of Large Language Models” y practicar con la librería `peft`.  \r\n4. **Distillation**: estudiar “DistilBERT” y experimentar con `torch.nn.KLDivLoss`.  \r\n5. **MLOps**: integrar los pipelines en CI/CD usando MLflow o DVC para versionado y despliegue."
+  },
+  "sections_missing": [],
+  "slug": "fine-tuning-adaptation",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/ai-engineering"
+  ],
+  "title": "Fine-tuning & Adaptation",
+  "uid": "c_BGANTCDDFJ",
+  "verification_marks": []
+}

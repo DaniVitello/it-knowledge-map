@@ -1,0 +1,41 @@
+{
+  "aliases": [
+    "User Research"
+  ],
+  "area_uid": "product-management",
+  "content_hash": "79b3b76f14297eb521e538f580a3e807d4e1a9543129433d3c2ebf2efc7b295c",
+  "numero": 3,
+  "related_uids": [
+    "c_4NELIH6YTV",
+    "c_7FPNVGV76Q",
+    "c_CHBELWMYEO",
+    "c_ECB42D4UZM",
+    "c_P3UX76MNNO",
+    "c_WM2AMCYFR6",
+    "c_YN4BSBEZRX",
+    "c_ZVUDKC7ITK"
+  ],
+  "sections": {
+    "como_funciona": "1. **Defino la pregunta de negocio** (ej. “¿Por qué los usuarios abandonan el checkout?”).  \r\n2. **Selecciono la técnica de investigación** acorde a la pregunta: entrevistas semi‑estructuradas, encuestas o sesiones de usabilidad.  \r\n3. **Recluto participantes representativos** basados en segmentos de mercado o en la base de usuarios actual.  \r\n4. **Ejecuto la investigación** y registro observaciones, citas y métricas de comportamiento.  \r\n5. **Analizo los datos** buscando patrones que revelen necesidades latentes y fricciones.  \r\n6. **Construyo artefactos** (personas, mapas de journey) que comuniquen los hallazgos al equipo.  \r\n7. **Aplico los insights** para redefinir prioridades, diseñar experimentos A/B o crear nuevas funcionalidades.",
+    "conexiones": "- **User Needs & Problems:** los hallazgos de User Research se convierten directamente en una lista priorizada de necesidades y problemas que guían el roadmap.  \r\n- **Personas & User Models:** los datos recopilados alimentan la creación de personas, que sirven como referencia constante para decisiones de diseño y desarrollo.  \r\n- **Market Research:** mientras Market Research aporta información sobre la competencia y el tamaño del mercado, User Research profundiza en el “cómo” y “por qué” del comportamiento del usuario dentro de ese contexto.",
+    "detalles": "- **Básico:** formular preguntas abiertas, grabar entrevistas y extraer citas clave.  \r\n- **Intermedio:** aplicar técnicas de codificación temática, crear mapas de afinidad y validar hipótesis con pruebas de usabilidad.  \r\n- **Avanzado:** combinar datos cualitativos con analítica de producto (event tracking), usar métodos estadísticos para segmentación y alimentar modelos de predicción de churn.",
+    "ejemplo_minimo": "```json\r\n{\r\n  \"entrevista\": {\r\n    \"usuario_id\": \"U123\",\r\n    \"pregunta\": \"¿Qué te frustra al buscar un producto?\",\r\n    \"respuesta\": \"No encuentro filtros avanzados y pierdo tiempo navegando.\"\r\n  }\r\n}\r\n```\r\nEste registro JSON captura una necesidad concreta que puede alimentar la creación de una persona y guiar la mejora del filtro de búsqueda.",
+    "errores_comunes": "- **Suposiciones sin evidencia:** asumir que “sabemos” lo que quiere el usuario; evitarlo validando cada hipótesis con datos reales.  \r\n- **Muestreo sesgado:** entrevistar solo a usuarios satisfechos; mitigarlo diversificando perfiles.  \r\n- **Sobrecargar de datos:** recopilar información sin un objetivo claro; prevenirlo definiendo preguntas de negocio antes de la investigación.",
+    "estado_actual": "- **Fundamentos estables:** la práctica de entrevistas, observación directa y síntesis en personas sigue siendo la base de User Research.  \r\n- **Práctica moderna:** integración de herramientas de análisis de comportamiento (p. ej., heatmaps, session replay) y uso de plataformas de research colaborativo que permiten iterar rápidamente y compartir insights en tiempo real.",
+    "ideas_clave": "1. **Identificar necesidades y problemas** – mapear los “pain points” que el usuario experimenta en su contexto.  \r\n2. **Observar comportamiento real** – recopilar datos cualitativos y cuantitativos mediante entrevistas, pruebas de usabilidad o análisis de uso.  \r\n3. **Sintetizar hallazgos en artefactos** – transformar la información en personas, user journeys y requisitos accionables.  \r\n4. **Validar decisiones con evidencia** – usar los insights para priorizar backlog y medir el impacto de cambios.",
+    "objetivo": "Utilizo User Research para descubrir qué necesita realmente el usuario y cómo se comporta al interactuar con nuestro producto digital. Resuelvo la incertidumbre que surge al priorizar funcionalidades, alineando decisiones de roadmap con problemas reales del cliente. Aparece en mi día a día cuando debo validar hipótesis de descubrimiento, diseñar experimentos o justificar inversiones a stakeholders. Después de entenderlo, puedo estructurar entrevistas, definir métricas de éxito y traducir hallazgos en requisitos claros; cuando el producto ya está validado y la hoja de ruta está establecida, no necesito volver a profundizar en investigación de usuarios hasta que surja una señal de desviación.",
+    "preguntas_repaso": "1. ¿Cómo transforma User Research una necesidad latente en una decisión de priorización del backlog?  \r\n2. ¿Qué riesgos implica un muestreo sesgado y cómo puedes mitigarlos?  \r\n3. ¿En qué momento pasas de crear personas a diseñar experimentos A/B basados en sus insights?  \r\n4. ¿Cuál es la diferencia clave entre User Research y Market Research en el contexto de un producto digital?  \r\n5. ¿Qué artefactos típicos surgen de una investigación de usuarios y cómo los utilizas para comunicar al equipo?",
+    "ruta_estudio": "1. **Prerequisitos:** conceptos básicos de Product Management, métricas de producto (KPIs, OKRs) y técnicas de entrevista.  \r\n2. **Fundamentos:** leer guías de investigación cualitativa, practicar entrevistas y análisis de afinidad.  \r\n3. **Intermedio:** aprender a combinar datos cualitativos con analítica de producto, crear mapas de journey y definir criterios de éxito.  \r\n4. **Avanzado:** dominar herramientas de research colaborativo, aplicar análisis estadístico a resultados cualitativos y entrenar modelos de predicción de comportamiento."
+  },
+  "sections_missing": [],
+  "slug": "user-research",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/product-management"
+  ],
+  "title": "User Research",
+  "uid": "c_OPRQ4KKLEV",
+  "verification_marks": []
+}

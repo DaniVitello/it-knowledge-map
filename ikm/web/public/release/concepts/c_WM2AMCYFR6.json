@@ -1,0 +1,38 @@
+{
+  "aliases": [
+    "User Personas"
+  ],
+  "area_uid": "product-management",
+  "content_hash": "4aaf0713490dd078b875ff80ec2eddfa81e63a2183e75eefbfb79ca54544728e",
+  "numero": 5,
+  "related_uids": [
+    "c_7FPNVGV76Q",
+    "c_OPRQ4KKLEV",
+    "c_P3UX76MNNO",
+    "c_YN4BSBEZRX",
+    "c_ZVUDKC7ITK"
+  ],
+  "sections": {
+    "como_funciona": "1. Recolecto datos cualitativos y cuantitativos (entrevistas, analytics).  \r\n2. Identifico patrones y creo segmentos que representan grupos de usuarios con necesidades comunes.  \r\n3. Para cada segmento redacto una persona: nombre, edad, rol, metas, dolores y criterios de éxito.  \r\n4. Distribuyo las personas al equipo y las utilizo como criterio de aceptación en el backlog.  \r\n5. En cada ciclo de sprint reviso si la solución entregada satisface las metas de la persona correspondiente; si no, ajusto prioridades.",
+    "conexiones": "- **User Research** aporta los datos crudos que alimentan la creación y validación de las personas.  \r\n- **User Needs & Problems** se traducen en metas y frustraciones dentro de cada persona, guiando la priorización.  \r\n- **User Journeys** describen los pasos que la persona sigue, permitiendo identificar puntos de fricción y oportunidades de mejora.",
+    "detalles": "- **Básico:** Definir al menos una persona por segmento crítico y usarla para priorizar el backlog.  \r\n- **Intermedio:** Enlazar cada historia de usuario a una persona específica y medir el impacto mediante métricas alineadas a sus metas.  \r\n- **Avanzado:** Mantener un repositorio vivo de personas, integrar feedback de User Research continuo y aplicar técnicas de clustering automático para descubrir nuevos segmentos.",
+    "ejemplo_minimo": "```json\r\n{\r\n  \"name\": \"María, la estudiante universitaria\",\r\n  \"age\": 21,\r\n  \"role\": \"Estudiante de Ingeniería\",\r\n  \"goals\": [\"Organizar sus tareas\", \"Acceder a material de estudio rápido\"],\r\n  \"painPoints\": [\"Pérdida de tiempo buscando notas\", \"Dificultad para priorizar entregas\"],\r\n  \"successCriteria\": [\"Reduce en 30% el tiempo de búsqueda\", \"Recibe recordatorios de entrega\"]\r\n}\r\n```\r\nCon esta persona, el equipo decide crear una función de “favoritos” en la app de estudio y medir la reducción del tiempo de búsqueda.",
+    "errores_comunes": "- **Crear personas sin datos reales** – Evitar basarlas en suposiciones; usar siempre evidencia de User Research.  \r\n- **Demasiadas personas** – Limitar a los segmentos que realmente influyen en la estrategia; más de 7 suele ser inmanejable.  \r\n- **No actualizar** – Revisar y ajustar personas cada trimestre o cuando cambian los patrones de uso.",
+    "estado_actual": "- **Fundamentos estables:** La segmentación basada en comportamientos y la construcción de perfiles narrativos son prácticas consolidadas en Product Management.  \r\n- **Práctica moderna:** Integrar análisis de datos automatizados (clustering, machine learning) para descubrir segmentos emergentes y mantener un “persona canvas” colaborativo en herramientas de gestión de producto.",
+    "ideas_clave": "1. **Segmentación** – Agrupo usuarios por comportamientos, objetivos y contexto de uso.  \r\n2. **Perfil detallado** – Cada persona incluye nombre ficticio, metas, frustraciones y criterios de éxito.  \r\n3. **Uso como brújula** – Las decisiones de prioridad, diseño y métricas se filtran a través de las personas.  \r\n4. **Validación continua** – Las personas se actualizan con datos de User Research y pruebas reales.",
+    "objetivo": "Utilizo las User Personas para traducir la diversidad de usuarios en perfiles claros que guían cada decisión del producto. Resuelvo la ambigüedad de “quién necesita qué” al priorizar funcionalidades, diseñar experimentos y comunicar la visión al equipo. Aparecen cada vez que paso del descubrimiento a la definición del roadmap, cuando debo decidir entre una mejora de usabilidad y una nueva característica. Después de entenderlas, puedo alinear métricas, validar hipótesis y crear mensajes de marketing más precisos. No necesito preocuparme por ellas cuando el producto está en fase de mantenimiento sin cambios de alcance ni cuando el público es homogéneo y ya está bien documentado.",
+    "preguntas_repaso": "1. ¿Cómo transforma la segmentación en decisiones concretas dentro del backlog?  \r\n2. ¿Qué información mínima debe contener una persona para ser útil en la priorización?  \r\n3. ¿Cuál es la relación entre una persona y una User Journey?  \r\n4. ¿Por qué es crítico actualizar las personas después de cada ciclo de descubrimiento?  \r\n5. ¿Cómo puedes validar que una nueva funcionalidad satisface los criterios de éxito de una persona?",
+    "ruta_estudio": "1. **Prerequisitos:** Conocer técnicas básicas de entrevista y análisis de métricas de uso.  \r\n2. **Fundamento:** Leer guías de creación de personas y practicar con un proyecto piloto.  \r\n3. **Intermedio:** Aprender a mapear historias de usuario a personas y a definir métricas de éxito alineadas.  \r\n4. **Avanzado:** Explorar herramientas de clustering de datos, mantener un repositorio dinámico y aplicar pruebas A/B específicas por persona."
+  },
+  "sections_missing": [],
+  "slug": "user-personas",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/product-management"
+  ],
+  "title": "User Personas",
+  "uid": "c_WM2AMCYFR6",
+  "verification_marks": []
+}

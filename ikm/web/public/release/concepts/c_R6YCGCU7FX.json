@@ -1,0 +1,32 @@
+{
+  "aliases": [
+    "I/O"
+  ],
+  "area_uid": "os-linux",
+  "content_hash": "f7c2c1434d0ac376b1c005903783b48606df0849fad10e00f722cc986a445731",
+  "numero": 12,
+  "related_uids": [],
+  "sections": {
+    "como_funciona": "1. El proceso llama a `open()` indicando el pathname y flags; el kernel asigna un file descriptor y crea una estructura interna que enlaza al dispositivo o archivo.  \r\n2. Cuando se invoca `read(fd, buf, n)`, el kernel copia hasta *n* bytes desde el buffer del dispositivo al buffer de usuario `buf`. Si no hay datos disponibles y el descriptor es bloqueante, el proceso se suspende.  \r\n3. Con `write(fd, buf, n)` ocurre lo inverso: los bytes del proceso se copian al buffer del dispositivo; el kernel gestiona la escritura física o la entrega a otro proceso.  \r\n4. Al cerrar con `close(fd)` el kernel libera el descriptor y cualquier recurso asociado.  \r\n5. En pipelines, la salida de un proceso (`stdout`) se redirige a la entrada (`stdin`) de otro mediante un pipe creado con `pipe()`, y ambos procesos comparten los extremos del pipe como descriptors.",
+    "conexiones": "- **System Calls**: `read`, `write` y `open` son llamadas al kernel que implementan el mecanismo de I/O.  \r\n- **Processes IPC**: los pipes y sockets son streams de I/O que permiten la comunicación entre procesos.  \r\n- **Filesystem**: cada archivo del sistema se accede mediante I/O; la estructura de directorios y los metadatos se gestionan con las mismas llamadas.",
+    "detalles": "- **Básico**: uso de `open/read/write/close` en C o comandos de shell (`cat`, `echo`).  \r\n- **Intermedio**: manipulación de flags (`O_RDONLY`, `O_WRONLY`, `O_CREAT`), control de buffering con `setvbuf()` en la biblioteca estándar, y uso de `select()`/`poll()` para esperar datos en varios descriptors.  \r\n- **Avanzado**: APIs de I/O asíncrona como `aio_*`, `epoll` para gran número de sockets, y `io_uring` que delega la preparación y finalización de operaciones al kernel, reduciendo copias de datos y context switches.  \r\n- **Buffering**: la capa de libc (`stdio`) introduce un buffer interno que reduce llamadas al kernel; sin embargo, para alta performance se prefieren los descriptors sin buffering o se controla explícitamente con `fflush()` y `setbuf()`.",
+    "ejemplo_minimo": "```c\r\n#include <fcntl.h>\r\n#include <unistd.h>\r\n\r\nint main() {\r\n    int fd = open(\"/tmp/ejemplo.txt\", O_WRONLY|O_CREAT|O_TRUNC, 0644);\r\n    write(fd, \"hola\\n\", 5);\r\n    close(fd);\r\n    return 0;\r\n}\r\n```\r\nEste programa crea (o trunca) el archivo `/tmp/ejemplo.txt`, escribe la cadena `hola` y cierra el descriptor. La salida esperada es que el archivo contenga esa línea.",
+    "errores_comunes": "- No comprobar el valor de retorno de `read`/`write`; puede indicar error o lectura parcial.  \r\n- Olvidar cerrar descriptors, provocando fugas de recursos.  \r\n- Usar `O_NONBLOCK` sin manejar `EAGAIN`, lo que lleva a bucles de espera ocupada.  \r\n- Mezclar buffers de `stdio` y descriptors sin sincronizar (`fflush`).",
+    "estado_actual": "Los conceptos básicos de I/O (file descriptors, `read`/`write`, bloqueo) son estables y forman parte del estándar POSIX. En la práctica moderna, los administradores y desarrolladores prefieren APIs como `epoll` para multiplexar cientos de sockets y `io_uring` para minimizar la sobrecarga del kernel en aplicaciones de alto rendimiento. Estas técnicas están ampliamente soportadas en distribuciones Linux actuales.",
+    "ideas_clave": "1. **I/O como flujo de datos**: cualquier interacción con dispositivos o archivos se modela como un stream de bytes.  \r\n2. **System calls de bajo nivel**: `open`, `read`, `write`, `close` crean y manipulan file descriptors que representan esos streams.  \r\n3. **Bloqueo vs no‑bloqueo**: por defecto las operaciones son bloqueantes; la bandera `O_NONBLOCK` permite que el proceso continúe mientras el kernel espera datos.  \r\n4. **Redirección y pipelines**: la shell conecta streams mediante `|`, `>`, `<`, facilitando la comunicación entre procesos (IPC).",
+    "objetivo": "Utilizo I/O para mover datos entre el espacio de usuario y los dispositivos del sistema, ya sea un disco, una terminal o una tubería entre procesos. Resuelvo el problema de cómo un programa accede a recursos externos de forma controlada, evitando bloqueos inesperados y garantizando la integridad de la información. En mi día a día como ingeniero Linux senior, empleo I/O al inspeccionar logs, montar sistemas de archivos, depurar servicios con `strace` o diseñar demonios que procesan flujos continuos. Cuando entiendo los mecanismos de I/O puedo escribir scripts y programas que gestionen recursos eficientemente, diagnosticar cuellos de botella de disco o red, y elegir la API adecuada (bloqueante, no bloqueante, asíncrona). No necesito preocuparme por I/O cuando mi tarea es puramente cálculo interno sin interacción con archivos, sockets o dispositivos.",
+    "preguntas_repaso": "1. ¿Qué diferencia hay entre un descriptor de archivo bloqueante y uno no bloqueante?  \r\n2. ¿Cómo se crea y conecta un pipe entre dos procesos en C?  \r\n3. ¿Por qué es importante verificar el número de bytes devueltos por `read` o `write`?  \r\n4. ¿En qué situaciones resulta ventajoso usar `epoll` en lugar de `select`?  \r\n5. ¿Qué papel juega la biblioteca `stdio` en el manejo de I/O y cuándo conviene evitar su buffering?",
+    "ruta_estudio": "1. **Prerequisitos**: familiaridad con la línea de comandos de Linux, conceptos de procesos y programación en C.  \r\n2. **Fundamentos**: practicar `open/read/write/close`, entender los modos de apertura y los permisos de archivo.  \r\n3. **Multiplexado**: aprender `select` y `poll`, luego `epoll` para escalabilidad.  \r\n4. **I/O asíncrona**: explorar la API POSIX AIO y, posteriormente, `io_uring`.  \r\n5. **Optimización**: estudiar el impacto del buffering, alineación de bloques y técnicas de zero‑copy."
+  },
+  "sections_missing": [],
+  "slug": "i-o",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/operating-systems-linux"
+  ],
+  "title": "I/O",
+  "uid": "c_R6YCGCU7FX",
+  "verification_marks": []
+}

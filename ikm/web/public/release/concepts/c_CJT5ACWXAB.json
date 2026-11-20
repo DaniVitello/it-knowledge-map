@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "Routers"
+  ],
+  "area_uid": "networking",
+  "content_hash": "91ee57e9d936539b0ac497cdf101f3db9441d7a6361c188d7a90c65202dd1e1a",
+  "numero": 12,
+  "related_uids": [
+    "c_4OYZ6EPV64",
+    "c_DWZHOC5BVU",
+    "c_KFUMZO44RS"
+  ],
+  "sections": {
+    "como_funciona": "1. Un paquete llega a una de las interfaces del router.  \r\n2. El router inspecciona la dirección IP de destino y la compara con su tabla de rutas.  \r\n3. Si la ruta indica una interfaz local, el paquete se entrega directamente; si indica una red remota, el router lo reenvía por la interfaz correspondiente.  \r\n4. Cuando la salida es a Internet, el router aplica NAT, sustituyendo la IP origen privada por la IP pública configurada.  \r\n5. El proceso se repite en cada salto hasta que el paquete alcanza su destino final.",
+    "conexiones": "- **Firewall:** ambos inspeccionan y pueden modificar paquetes; el firewall suele colocarse después del router para aplicar políticas de seguridad.  \r\n- **Load Balancer:** distribuye tráfico entrante que el router ha dirigido a un pool de servidores, mejorando disponibilidad.  \r\n- **SD-WAN:** utiliza routers como nodos de borde para crear enlaces de red sobre Internet, aplicando políticas de ruta basadas en la calidad del enlace.",
+    "detalles": "- **Básico:** Configuración estática de rutas (e.g., `ip route 10.0.0.0/24 192.168.1.1`).  \r\n- **Intermedio:** Implementación de protocolos dinámicos (OSPF, EIGRP) que actualizan la tabla de rutas automáticamente.  \r\n- **Avanzado:** Uso de BGP para intercambio de rutas entre proveedores, políticas de ruta, y NAT de sobrecarga (PAT) para cientos de hosts.",
+    "ejemplo_minimo": "```bash\r\n# Configuración mínima en un router Cisco IOS\r\ninterface Gig0/0\r\n ip address 192.168.1.1 255.255.255.0\r\n no shutdown\r\n\r\ninterface Gig0/1\r\n ip address 10.0.0.1 255.255.255.0\r\n no shutdown\r\n\r\nip route 0.0.0.0 0.0.0.0 192.168.1.254   # ruta por defecto hacia Internet\r\n```\r\nEste fragmento crea dos interfaces, asigna subredes y define una ruta por defecto que enviará todo el tráfico no local al ISP.",
+    "errores_comunes": "- **Olvidar la ruta por defecto** → el tráfico fuera de las subredes locales se pierde; verifique siempre `ip route 0.0.0.0`.  \r\n- **Superposición de subredes** → causa bucles de encaminamiento; mantenga rangos CIDR únicos.  \r\n- **NAT mal configurado** → hosts internos no pueden acceder a Internet; revise la lista de acceso que define qué tráfico se traduce.",
+    "estado_actual": "Los principios de encaminamiento y NAT son estables y se encuentran en todas las plataformas de routing. En la práctica moderna, los routers virtuales (vRouter) y los servicios de routing en la nube (AWS Transit Gateway, Azure Virtual WAN) complementan a los dispositivos físicos, ofreciendo escalabilidad y automatización mediante APIs.",
+    "ideas_clave": "1. **Interconexión de redes** – el router recibe paquetes en una interfaz y los envía a otra según la tabla de rutas.  \r\n2. **Encaminamiento (routing)** – decide el mejor camino usando protocolos como OSPF o BGP.  \r\n3. **Traducción de direcciones (NAT)** – permite que múltiples hosts internos compartan una IP pública.  \r\n4. **Segmentación con Subnetting/CIDR** – define rangos de direcciones que el router reconoce como locales o remotas.",
+    "objetivo": "Utilizo routers para conectar dos o más redes distintas y permitir que el tráfico encuentre su camino entre ellas. Resuelvo el problema de que dispositivos en subredes diferentes no pueden comunicarse directamente, ya sea dentro de una empresa, entre sucursales o hacia Internet. En mi día a día como ingeniero de redes senior, configuro routers para establecer rutas, aplicar NAT y segmentar la topología con CIDR. Después de entender cómo funciona un router, puedo diseñar arquitecturas de red escalables, diagnosticar fallos de encaminamiento y optimizar el uso del ancho de banda. No necesito preocuparme por routers cuando todo el tráfico se mantiene dentro de una única LAN sin necesidad de salida a otras redes.",
+    "preguntas_repaso": "1. ¿Qué papel cumple la tabla de rutas en la decisión de envío de un paquete?  \r\n2. ¿Cómo se diferencia una ruta estática de una aprendida por OSPF?  \r\n3. ¿Qué problema resuelve NAT y por qué es esencial para la conectividad a Internet?  \r\n4. ¿Cuál es la consecuencia de superponer subredes en la configuración de un router?  \r\n5. ¿En qué situaciones elegirías un router virtual en la nube en lugar de un dispositivo físico?",
+    "ruta_estudio": "1. Prerrequisitos: modelo OSI, direcciones IP, máscara de subred y conceptos básicos de TCP/IP.  \r\n2. Fundamentos: configuración estática de rutas y NAT en routers de línea de comandos.  \r\n3. Intermedio: protocolos dinámicos (OSPF, EIGRP) y conceptos de métricas.  \r\n4. Avanzado: BGP, políticas de ruta, NAT de sobrecarga y arquitectura de routers virtuales en entornos cloud.  \r\n5. Laboratorio: montar una topología con al menos tres routers, implementar OSPF interno y BGP externo, y validar la conectividad con `ping` y `traceroute`."
+  },
+  "sections_missing": [],
+  "slug": "routers",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/networking-internet"
+  ],
+  "title": "Routers",
+  "uid": "c_CJT5ACWXAB",
+  "verification_marks": []
+}

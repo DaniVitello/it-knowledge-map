@@ -1,0 +1,52 @@
+{
+  "aliases": [
+    "Data fetching"
+  ],
+  "area_uid": "frontend",
+  "content_hash": "f679b9ea390b78ea829c3eb940b3fdeef75959d525746e13d8ced0fb187756f1",
+  "numero": 18,
+  "related_uids": [
+    "c_FEMWCHWWED",
+    "c_OD7QLNQ7GN",
+    "c_PAUDUA5YDA",
+    "c_SCSLG2OETM",
+    "c_WYVLRHHAGA",
+    "c_ZEMQLX7HXG"
+  ],
+  "sections": {
+    "como_funciona": "1. El componente llama a una función de fetch (p.ej., `fetch('/api/users')`).  \r\n2. Se establece `loading = true`; la UI muestra un spinner.  \r\n3. Cuando la respuesta llega, se parsea JSON y se guarda en el **estado** local o global; `loading = false`.  \r\n4. Si la respuesta falla, se captura el error y se setea `error`, mostrando feedback al usuario.  \r\n5. El resultado se inserta en la **cache** (memory, SWR, React Query, etc.).  \r\n6. Si después se ejecuta una mutation (POST/PUT/DELETE), el cache se invalida o se actualiza para que la UI refleje el nuevo estado sin volver a cargar todo.",
+    "conexiones": "- **JSON & APIs** – formato de respuesta que se parsea tras el fetch.  \r\n- **Estado** – los datos obtenidos se almacenan en estado local o global para que la UI los consuma.  \r\n- **Performance** – una buena estrategia de cache reduce latencia y tráfico de red.  \r\n- **Caching** – mecanismo interno o librerías que guardan respuestas y evitan peticiones repetidas.  \r\n- **CDN / Load Balancing** – influyen en la velocidad de la petición HTTP que el fetch realiza.  \r\n- **States & Feedback** – `loading` y `error` son estados de UI que comunican al usuario el progreso del fetch.",
+    "detalles": "- **Básico**: `fetch` + `useState` para `data`, `loading`, `error`.  \r\n- **Intermedio**: abstraer la lógica en un hook (`useFetch`) que maneje automáticamente los estados y la cache en memoria.  \r\n- **Avanzado**: usar librerías como **React Query** o **SWR** que implementan stale‑while‑revalidate, refetch automático, paginación y sincronización de mutaciones.  \r\n- **Cache**: puede ser simple (objeto en módulo) o sofisticada (IndexedDB, Service Workers).  \r\n- **Mutations**: después de una operación de escritura, usar `invalidateQueries` o actualizar el cache manualmente para evitar UI desactualizada.  \r\n- **Sincronización**: websockets o polling pueden complementar el fetch tradicional cuando los datos cambian frecuentemente.",
+    "ejemplo_minimo": "```tsx\r\nimport { useState, useEffect } from 'react';\r\n\r\nfunction Users() {\r\n  const [data, setData] = useState<any[]>([]);\r\n  const [loading, setLoading] = useState(true);\r\n  const [error, setError] = useState<string | null>(null);\r\n\r\n  useEffect(() => {\r\n    fetch('/api/users')\r\n      .then(res => res.json())\r\n      .then(setData)\r\n      .catch(err => setError(err.message))\r\n      .finally(() => setLoading(false));\r\n  }, []);\r\n\r\n  if (loading) return <p>Cargando...</p>;\r\n  if (error) return <p>Error: {error}</p>;\r\n\r\n  return (\r\n    <ul>\r\n      {data.map(u => (\r\n        <li key={u.id}>{u.name}</li>\r\n      ))}\r\n    </ul>\r\n  );\r\n}\r\n```\r\n*?? verificar* (ejemplo basado en práctica común, sin fuente explícita).",
+    "errores_comunes": "- **Olvidar limpiar el estado** al desmontar el componente → memory leak; usar `AbortController` o chequear `mounted`.  \r\n- **Renderizar antes de validar** `loading` → UI muestra datos vacíos; siempre chequear `loading` primero.  \r\n- **Mutar directamente el cache** sin invalidar → datos inconsistentes; usar funciones de actualización provistas por la librería.  \r\n- **No manejar errores** → caída silenciosa; siempre capturar y mostrar feedback.  \r\n- **Sobre‑cachar** peticiones idénticas → consumo innecesario de memoria; definir claves de cache apropiadas.",
+    "estado_actual": "- **Fundamentos estables**: `fetch` API, manejo de `loading/error` con `useState`, patrones de abortar peticiones. (sin verificar)  \r\n- **Práctica moderna**: React Query, SWR, TanStack Query, uso de `useSWR` para stale‑while‑revalidate, integración con GraphQL (Apollo Client) para cache automático y mutations. (sin verificar)  \r\n- **Tendencias**: Incremento del uso de **RTK Query** (Redux Toolkit) y de **React Server Components** que trasladan parte del fetching al servidor. (sin verificar)",
+    "ideas_clave": "1. **Solicitud (fetch / axios)** – dispara la petición HTTP al endpoint.  \r\n2. **Estados de carga** – `loading`, `error` y `success` guían la UI mientras llega la respuesta.  \r\n3. **Cache** – guarda la respuesta para evitar peticiones redundantes y mejorar la performance.  \r\n4. **Mutations** – actualizan el cache después de crear, actualizar o borrar datos.  \r\n5. **Sincronización** – mantiene el UI coherente con el servidor cuando cambian los datos.",
+    "objetivo": "Uso **data fetching** para obtener datos externos (por ejemplo, de una API REST) y llevarlos a la UI. Resuelve el problema de que la aplicación necesita información dinámica que no está embebida en el bundle. Aparece cada vez que una página muestra listas, detalles de usuario, resultados de búsqueda, etc. Después de entenderlo puedes diseñar flujos de carga, manejar estados de UI y decidir cuándo volver a solicitar o reutilizar datos. No necesitas preocuparte por él cuando la UI es estática o los datos vienen pre‑renderizados en el servidor.",
+    "preguntas_repaso": "1. ¿Qué estados de UI deberías mostrar mientras una petición está en curso?  \r\n2. ¿Cómo evita una capa de cache que se repitan peticiones idénticas?  \r\n3. ¿Cuál es la diferencia entre invalidar una query y actualizarla manualmente tras una mutation?  \r\n4. ¿Por qué es importante abortar una petición cuando el componente se desmonta?  \r\n5. ¿Qué ventajas aporta React Query sobre usar `fetch` + `useState` directamente?\r\n\r\n<!-- trazabilidad: run_id=run-20261111-222037-8886a8 concept=02-frontend-18-data-fetching written_at=2026-11-12T01:20:37.143332+00:00 -->",
+    "ruta_estudio": "1. **Prerequisitos**: HTML, CSS, JavaScript async/await, promesas, `fetch` API.  \r\n2. **Fundamentos**: crear hooks simples (`useFetch`), manejar `loading`/`error`.  \r\n3. **Cache básica**: memorizar respuestas en un objeto, invalidar manualmente.  \r\n4. **Librerías modernas**: React Query / SWR – tutorial oficial, ejemplos de mutations y refetch.  \r\n5. **Optimización**: integrar con CDN, usar `ETag`/`If-None-Match`, aplicar stale‑while‑revalidate.  \r\n6. **Avanzado**: GraphQL + Apollo, RTK Query, React Server Components."
+  },
+  "sections_missing": [],
+  "slug": "data-fetching",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/frontend"
+  ],
+  "title": "Data fetching",
+  "uid": "c_KFFEDHVX2D",
+  "verification_marks": [
+    {
+      "kind": "sin_verificar",
+      "section": "Estado actual"
+    },
+    {
+      "kind": "sin_verificar",
+      "section": "Estado actual"
+    },
+    {
+      "kind": "sin_verificar",
+      "section": "Estado actual"
+    }
+  ]
+}

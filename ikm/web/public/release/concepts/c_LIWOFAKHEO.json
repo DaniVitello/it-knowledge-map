@@ -1,0 +1,37 @@
+{
+  "aliases": [
+    "Bases de datos"
+  ],
+  "area_uid": "backend",
+  "content_hash": "6a73bba792023994a5e8434a44e07f5d97192c75526bb8387792dbe2ad34985c",
+  "numero": 11,
+  "related_uids": [
+    "c_3IEBYDYAQB",
+    "c_JWMD5PBSD7",
+    "c_O5H6HCDAXZ",
+    "c_QTK2SYOTSW"
+  ],
+  "sections": {
+    "como_funciona": "1. Defino el modelo de datos (tablas o colecciones) según los objetos del dominio.  \r\n2. Creo la estructura física (DDL) y los índices que soportarán los filtros más usados.  \r\n3. Cada petición del API ejecuta una operación CRUD contra la base mediante un driver o ORM.  \r\n4. El motor gestiona transacciones o versiones de documentos para asegurar consistencia.  \r\n5. Los resultados se devuelven al controlador, que los serializa y los envía al cliente.",
+    "conexiones": "- **Relational Databases**: comparten el concepto de tablas y claves foráneas; la elección entre un motor relacional y otro depende de los requisitos de consistencia.  \r\n- **Indexes**: son esenciales para que las consultas de API sean rápidas; su diseño está directamente ligado al modelo de datos.  \r\n- **NoSQL**: ofrece colecciones de documentos cuando la flexibilidad del esquema supera la necesidad de relaciones estrictas.",
+    "detalles": "- **Básico**: conexión, creación de tablas/colecciones, operaciones CRUD simples.  \r\n- **Intermedio**: uso de transacciones, manejo de claves foráneas, diseño de índices compuestos y consultas parametrizadas.  \r\n- **Avanzado**: sharding, replicación, tuning de rendimiento, patrones de eventual consistency y event sourcing.",
+    "ejemplo_minimo": "```python\r\nimport sqlite3\r\n\r\nconn = sqlite3.connect(\":memory:\")\r\ncur = conn.cursor()\r\ncur.execute(\"CREATE TABLE users (id INTEGER PRIMARY KEY, name TEXT)\")\r\ncur.execute(\"INSERT INTO users (name) VALUES ('Ana')\")\r\nconn.commit()\r\n\r\ncur.execute(\"SELECT * FROM users WHERE name = ?\", (\"Ana\",))\r\nprint(cur.fetchone())   # (1, 'Ana')\r\nconn.close()\r\n```",
+    "errores_comunes": "- **Olvidar índices** en columnas usadas en filtros → consultas lentas; crear índices antes de medir rendimiento.  \r\n- **Usar tipos de datos incorrectos** (e.g., almacenar fechas como texto) → errores de ordenación; definir tipos adecuados en el esquema.  \r\n- **Ignorar transacciones** en operaciones que deben ser atómicas → datos inconsistentes; envolver en `BEGIN…COMMIT`.",
+    "estado_actual": "- **Fundamentos estables**: modelo relacional, operaciones CRUD, índices B‑Tree, ACID.  \r\n- **Práctica moderna**: adopción de bases de datos distribuidas, uso de ORMs con soporte para migraciones automáticas, integración de observabilidad (metrics, tracing) en consultas, y despliegues de bases como servicio (DBaaS) que abstraen la gestión de clústeres.",
+    "ideas_clave": "1. **Persistencia** – los datos sobreviven al ciclo de vida de la aplicación y a reinicios del servidor.  \r\n2. **Tablas y documentos** – estructuras de almacenamiento; tablas para modelos relacionales, documentos para modelos orientados a JSON.  \r\n3. **Relaciones** – enlaces entre entidades que permiten consultas conjuntas y garantizan integridad referencial.  \r\n4. **Índices** – estructuras auxiliares que aceleran búsquedas y filtrados frecuentes.  \r\n5. **Arquitectura de base de datos** – elección entre un motor único, clústeres o servicios gestionados según requisitos de escalabilidad y disponibilidad.",
+    "objetivo": "Utilizo bases de datos para guardar de forma duradera la información que mis servicios y APIs necesitan leer y escribir. Resuelvo el problema de la pérdida de estado entre peticiones y de la concurrencia segura cuando varios procesos acceden a los mismos datos. Aparecen en cada endpoint que necesita crear, consultar, actualizar o eliminar recursos, y en los procesos batch que sincronizan información externa. Después de entenderlas puedo diseñar esquemas que reduzcan la latencia y el coste de operación, elegir el motor adecuado (relacional o NoSQL) y aplicar patrones de consistencia. No necesito preocuparme cuando el servicio es puramente computacional y no maneja datos persistentes.",
+    "preguntas_repaso": "1. ¿Por qué es importante crear índices en columnas que aparecen en filtros de consultas API?  \r\n2. ¿Cómo garantiza una transacción la atomicidad de varias operaciones CRUD?  \r\n3. ¿En qué situaciones elegirías una base de datos de documentos sobre una relacional?  \r\n4. ¿Qué diferencia hay entre consistencia fuerte y eventual en el contexto de replicación?  \r\n5. ¿Cuál es el efecto de un esquema mal normalizado sobre el rendimiento y la integridad de los datos?",
+    "ruta_estudio": "1. **Prerequisitos**: conocimientos de SQL básico, estructuras de datos y conceptos de HTTP/REST.  \r\n2. **Fundamentos**: practicar CRUD con SQLite o PostgreSQL, crear índices y entender transacciones.  \r\n3. **Intermedio**: aprender sobre claves foráneas, normalización y patrones de acceso (Repository, Unit of Work).  \r\n4. **Avanzado**: estudiar replicación, sharding, tuning de consultas, y comparar motores relacionales vs NoSQL según casos de uso.  \r\n5. **Especialización**: profundizar en observabilidad de bases de datos y en herramientas de migración (Flyway, Liquibase)."
+  },
+  "sections_missing": [],
+  "slug": "bases-de-datos",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/backend"
+  ],
+  "title": "Bases de datos",
+  "uid": "c_LIWOFAKHEO",
+  "verification_marks": []
+}

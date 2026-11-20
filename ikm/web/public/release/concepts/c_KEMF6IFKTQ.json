@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "Complexity Analysis"
+  ],
+  "area_uid": "software-engineering",
+  "content_hash": "c6d57d491d2421428c5c09351e4351d21a7821b3aaa0f10355223b78e11b8fc4",
+  "numero": 4,
+  "related_uids": [
+    "c_45PAYUACPS",
+    "c_Q242GFM3KF"
+  ],
+  "sections": {
+    "como_funciona": "1. Identifico la variable de entrada que controla el crecimiento del problema (por ejemplo, *n* elementos en una lista).  \r\n2. Descompongo el algoritmo en bloques básicos (bucle, recursión, operaciones constantes).  \r\n3. Asigno a cada bloque su costo en función de *n* y sumo los costos siguiendo las reglas de la notación Big O (el término dominante determina la clase).  \r\n4. Repetición del proceso para el uso de memoria, contabilizando estructuras auxiliares creadas durante la ejecución.  \r\n5. Interpreto los resultados para decidir si el algoritmo cumple los requisitos de rendimiento o si necesito una alternativa.",
+    "conexiones": "- **Data Structures**: la elección de una estructura (árbol balanceado, tabla hash, lista) determina la complejidad de operaciones básicas como búsqueda o inserción.  \r\n- **Algorithms**: cada algoritmo posee una clase de complejidad que permite compararlo con alternativas y seleccionar la más adecuada para el caso de uso.  \r\n- **Performance Engineering**: el análisis de complejidad alimenta la planificación de capacidad y la optimización de sistemas a gran escala.",
+    "detalles": "- **Básico**: reconocer operaciones O(1), O(log n), O(n) y O(n²). Entender que la constante oculta no afecta la clasificación asintótica.  \r\n- **Intermedio**: analizar algoritmos recursivos mediante el método de sustitución o el árbol de recursión; combinar complejidades de sub‑problemas (divide‑and‑conquer).  \r\n- **Avanzado**: trabajar con notaciones Θ y Ω para acotar tanto el peor como el mejor caso; aplicar análisis amortizado (p. ej., en estructuras de datos como tablas hash); considerar complejidad en entornos paralelos y distribuidos.",
+    "ejemplo_minimo": "```python\r\ndef suma_lineal(arr):\r\n    total = 0               # O(1)\r\n    for x in arr:           # O(n)\r\n        total += x          # O(1) por iteración\r\n    return total            # O(1)\r\n# Complejidad de tiempo: O(n)\r\n# Complejidad de espacio: O(1)\r\n```",
+    "errores_comunes": "- **Confundir complejidad de peor caso con caso promedio**: siempre especificar a qué caso se refiere.  \r\n- **Ignorar el costo de operaciones no‑constantes** (por ejemplo, acceso a listas enlazadas): analizar su complejidad también.  \r\n- **Olvidar el espacio adicional creado por estructuras temporales**: contabilizar memoria de pilas de recursión o buffers.  \r\n- **Asumir que una constante pequeña hace irrelevante una complejidad alta**: en grandes volúmenes la clase dominante prevalece.  \r\n- **Aplicar la notación Big O a código ya optimizado por el compilador**: el análisis sigue siendo válido a nivel algorítmico, no a nivel de ensamblado.",
+    "estado_actual": "- **Fundamentos estables**: la notación Big O, los conceptos de complejidad de tiempo y espacio y los trade‑offs entre ambos son pilares aceptados en la literatura académica y en la práctica industrial.  \r\n- **Práctica moderna**: el análisis amortizado y la complejidad en entornos paralelos se utilizan cada vez más para evaluar algoritmos en sistemas distribuidos y en aplicaciones de alto rendimiento. Herramientas de profiling automatizado complementan el análisis teórico al revelar cuellos de botella reales en tiempo de ejecución.",
+    "ideas_clave": "1. **Big O**: notación que describe el comportamiento asintótico del tiempo o espacio respecto al tamaño de la entrada.  \r\n2. **Complejidad de tiempo**: número de operaciones elementales que el algoritmo ejecuta en función del tamaño de la entrada.  \r\n3. **Complejidad de espacio**: cantidad de memoria adicional que necesita el algoritmo más allá de la entrada.  \r\n4. **Trade‑offs**: a menudo reducir el tiempo implica usar más memoria y viceversa; la elección depende de restricciones del proyecto.  \r\n5. **Límites prácticos**: la complejidad teórica guía decisiones, pero factores como caché, paralelismo y constantes ocultas también influyen.",
+    "objetivo": "Utilizo el análisis de complejidad para estimar cuánto tiempo y cuánta memoria requerirá un algoritmo antes de implementarlo. Resuelvo la incertidumbre de si una solución será viable en producción o si provocará cuellos de botella. En mi día a día como ingeniero de software, lo aplico al diseñar funciones críticas, al comparar alternativas y al justificar decisiones técnicas a los stakeholders. Después de dominarlo, puedo dimensionar recursos, elegir estructuras de datos adecuadas y negociar trade‑offs entre velocidad y consumo de memoria. Cuando el problema es trivial o el dominio está limitado a datos muy pequeños, no es necesario profundizar en el análisis de complejidad.",
+    "preguntas_repaso": "1. ¿Qué representa la notación Big O y por qué solo el término dominante importa?  \r\n2. ¿Cómo se diferencia la complejidad de tiempo de la de espacio en un algoritmo recursivo?  \r\n3. ¿En qué situaciones un trade‑off entre tiempo y espacio es preferible?  \r\n4. ¿Cuál es la diferencia entre análisis amortizado y análisis de peor caso?  \r\n5. ¿Cómo influye la elección de una estructura de datos en la complejidad de un algoritmo?",
+    "ruta_estudio": "1. **Prerequisitos**: lógica de programación, conceptos de estructuras de datos lineales y no lineales, y nociones básicas de matemáticas discretas (notación asintótica).  \r\n2. **Fundamentos**: estudiar Big O, casos peor/medio/mejor, y practicar con algoritmos clásicos (búsqueda lineal, ordenamiento por inserción).  \r\n3. **Intermedio**: profundizar en recursión, algoritmos divide‑and‑conquer y análisis amortizado.  \r\n4. **Avanzado**: explorar complejidad en entornos paralelos, análisis probabilístico y técnicas de profiling.  \r\n5. **Aplicación**: resolver ejercicios de dimensionamiento, comparar implementaciones reales y documentar decisiones de arquitectura."
+  },
+  "sections_missing": [],
+  "slug": "complexity-analysis",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/software-engineering"
+  ],
+  "title": "Complexity Analysis",
+  "uid": "c_KEMF6IFKTQ",
+  "verification_marks": []
+}

@@ -1,0 +1,38 @@
+{
+  "aliases": [
+    "Design Patterns"
+  ],
+  "area_uid": "software-engineering",
+  "content_hash": "52fdc89b0d16b89b34ef7f58e5c3e8af672df9f91b97bb0fdfbee0c198c865cc",
+  "numero": 15,
+  "related_uids": [
+    "c_53KOHLSCN5",
+    "c_IMFWIGRRUB",
+    "c_K2J2R52QLA",
+    "c_VA6ETRQ2HH",
+    "c_ZUGE3YIJ5I"
+  ],
+  "sections": {
+    "como_funciona": "1. Identifico el problema recurrente en el diseño (por ejemplo, necesidad de crear familias de objetos).  \r\n2. Selecciono el patrón que mejor modela esa necesidad (Factory, Abstract Factory, etc.).  \r\n3. Defino las interfaces o clases abstractas que representan los roles del patrón.  \r\n4. Implemento las clases concretas que cumplen esos roles, manteniendo el código cliente desacoplado.  \r\n5. Utilizo el patrón en el flujo de la aplicación, delegando la creación, composición o interacción a los componentes del patrón.",
+    "conexiones": "- **Code Quality** – los patrones promueven código más legible y mantenible, reduciendo la complejidad y la duplicación.  \r\n- **Clean Code** – aplicar un patrón adecuado ayuda a cumplir con los principios de claridad y simplicidad que defiende Clean Code.  \r\n- **Refactoring** – introducir o reemplazar patrones es una estrategia típica de refactorización para mejorar la arquitectura sin cambiar el comportamiento observable.",
+    "detalles": "- **Básico**: comprender la intención de cada familia de patrones (creación, estructural, comportamiento) y reconocer cuándo aplicarlos.  \r\n- **Intermedio**: aprender a combinar patrones (por ejemplo, usar Strategy dentro de un Factory) y a adaptar sus variantes (Singleton, Lazy Initialization).  \r\n- **Avanzado**: evaluar el impacto en rendimiento, pruebas unitarias y mantenibilidad; refactorizar código existente para introducir patrones de forma incremental.",
+    "ejemplo_minimo": "```java\r\n// Patrón Strategy para calcular descuentos\r\ninterface DiscountStrategy {\r\n    double apply(double price);\r\n}\r\n\r\nclass NoDiscount implements DiscountStrategy {\r\n    public double apply(double price) { return price; }\r\n}\r\n\r\nclass SeasonalDiscount implements DiscountStrategy {\r\n    public double apply(double price) { return price * 0.9; }\r\n}\r\n\r\nclass Cart {\r\n    private DiscountStrategy strategy;\r\n    Cart(DiscountStrategy strategy) { this.strategy = strategy; }\r\n    double total(double price) { return strategy.apply(price); }\r\n}\r\n\r\n// Uso\r\nCart cart = new Cart(new SeasonalDiscount());\r\nSystem.out.println(cart.total(100)); // 90.0\r\n```",
+    "errores_comunes": "- **Sobre‑ingeniería**: aplicar un patrón donde una solución simple basta; evitarlo evaluando la complejidad real del problema.  \r\n- **Violación de la intención**: usar un patrón sin respetar sus roles (por ejemplo, mezclar lógica de negocio dentro de un Singleton); mantener la separación de responsabilidades.  \r\n- **Acoplamiento excesivo**: crear dependencias circulares al combinar varios patrones; revisar la arquitectura para asegurar direcciones de dependencia claras.",
+    "estado_actual": "Los fundamentos de los Design Patterns (catalogados por la “Gang of Four”) son estables y siguen siendo referencia obligada en la práctica profesional. En la práctica moderna, se combinan con enfoques como la inyección de dependencias, los micro‑servicios y la programación funcional, lo que lleva a variantes ligeras o a la sustitución de algunos patrones por mecanismos del lenguaje (por ejemplo, lambdas en lugar de Strategy tradicional).",
+    "ideas_clave": "1. **Patrones de Creación** – abstraen la forma de instanciar objetos, permitiendo decidir qué clase concreta crear sin acoplar el código cliente.  \r\n2. **Patrones Estructurales** – organizan relaciones entre objetos para formar estructuras más grandes sin comprometer la flexibilidad.  \r\n3. **Patrones de Comportamiento** – definen la manera en que los objetos interactúan y distribuyen responsabilidades.  \r\n4. **Principio de Programación a Interfaces** – los patrones se basan en depender de abstracciones, no de implementaciones concretas.  \r\n5. **Facilitan la Aplicación de SOLID** – al aplicar patrones se refuerzan los principios de responsabilidad única, abierto/cerrado, sustitución de Liskov, segregación de interfaces e inversión de dependencias.",
+    "objetivo": "Utilizo los Design Patterns para estructurar soluciones de software que sean reutilizables, flexibles y fáciles de mantener. Resuelvo el problema de la duplicación de código y de la complejidad excesiva al enfrentar requisitos cambiantes. En mi día a día como ingeniero de software, los patrones aparecen al diseñar arquitecturas, al refactorizar módulos y al revisar código para asegurar que siga buenas prácticas. Después de comprenderlos, puedo elegir la solución más adecuada para un problema recurrente, comunicarme con el equipo usando un vocabulario común y anticipar los efectos de futuras extensiones. No necesito preocuparme por los Design Patterns cuando el proyecto es trivial, de corta duración o cuando una solución simple ya satisface los requisitos sin introducir sobrecarga estructural.",
+    "preguntas_repaso": "1. ¿Qué diferencia principal hay entre un patrón de creación y uno estructural?  \r\n2. ¿Cómo ayuda el patrón Strategy a cumplir el principio de abierto/cerrado?  \r\n3. ¿Cuándo es preferible no usar un patrón y optar por una solución directa?  \r\n4. ¿De qué manera la inyección de dependencias complementa el uso de patrones de creación?  \r\n5. ¿Qué riesgos aparecen al combinar varios patrones en una misma capa de la arquitectura?",
+    "ruta_estudio": "1. **Prerequisitos**: dominio de programación orientada a objetos, familiaridad con SOLID y con interfaces/abstract classes.  \r\n2. **Fundamentos**: leer el libro “Design Patterns: Elements of Reusable Object‑Oriented Software” y practicar cada patrón con ejercicios simples.  \r\n3. **Aplicación práctica**: integrar patrones en proyectos reales, revisando pull‑requests que los utilicen.  \r\n4. **Avanzado**: estudiar patrones en contextos de arquitectura de micro‑servicios, inyección de dependencias y programación funcional; participar en workshops o code katas centrados en refactorizaciones con patrones."
+  },
+  "sections_missing": [],
+  "slug": "design-patterns",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/software-engineering"
+  ],
+  "title": "Design Patterns",
+  "uid": "c_3UAMR6JQWV",
+  "verification_marks": []
+}

@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "Data Cleaning"
+  ],
+  "area_uid": "database",
+  "content_hash": "65241d9b881bfa6a2e1a8e92894b0c6562372e36608d88aaf6228523272adb15",
+  "numero": 19,
+  "related_uids": [
+    "c_36OGTOCIKG",
+    "c_DMG36WFAUY"
+  ],
+  "sections": {
+    "como_funciona": "1. **Exploración inicial**: se inspeccionan los datasets para detectar patrones de suciedad (ej. fechas en distintos formatos).  \r\n2. **Normalización**: se aplican funciones de formato (e.g., `to_date`, `lower`) para homogeneizar columnas.  \r\n3. **Transformación**: se convierten tipos (string → integer) y se crean columnas derivadas (p. ej., edad a partir de fecha de nacimiento).  \r\n4. **Deduplicación**: se generan claves compuestas y se usan `GROUP BY` o `ROW_NUMBER()` para conservar solo la fila “más completa”.  \r\n5. **Manejo de faltantes**: se elige una estrategia (media, mediana, valor constante) y se ejecuta la imputación.  \r\n6. **Validación**: se ejecutan checks (`CHECK` constraints, pruebas de integridad) y se registran los registros que fallan para revisión.",
+    "conexiones": "- **Data Quality**: el data cleaning es la primera capa para alcanzar alta calidad, ya que corrige errores antes de medir la calidad global.  \r\n- **Data Analysis**: datos limpios permiten análisis estadísticos y visualizaciones sin sesgos introducidos por valores erróneos.  \r\n- **Machine Learning**: los modelos dependen de datos consistentes; el cleaning reduce ruido y mejora la precisión predictiva.",
+    "detalles": "- **Básico**: uso de funciones SQL (`TRIM`, `UPPER`, `CAST`) y de pandas (`fillna`, `drop_duplicates`).  \r\n- **Intermedio**: creación de pipelines con herramientas como dbt o Apache Airflow que encadenan pasos de normalización, transformación y deduplicación.  \r\n- **Avanzado**: aplicación de técnicas de detección de outliers (Z‑score, IQR) y de imputación multivariante (KNN, regresión) dentro de entornos de Spark o Python, integrando pruebas de calidad automatizadas (Great Expectations).",
+    "ejemplo_minimo": "```sql\r\n-- Tabla cruda con fechas en distintos formatos y duplicados\r\nWITH raw AS (\r\n  SELECT 1 AS id, '2023-01-05' AS fecha UNION ALL\r\n  SELECT 2, '05/01/2023' UNION ALL\r\n  SELECT 2, '05/01/2023'   -- duplicado\r\n)\r\n\r\n-- Data cleaning: normalizar fecha, deduplicar\r\nSELECT DISTINCT\r\n       id,\r\n       TO_DATE(\r\n         CASE\r\n           WHEN fecha LIKE '%/%' THEN TO_DATE(fecha, 'DD/MM/YYYY')\r\n           ELSE TO_DATE(fecha, 'YYYY-MM-DD')\r\n         END\r\n       ) AS fecha_normalizada\r\nFROM raw;\r\n```",
+    "errores_comunes": "- **Eliminar duplicados sin revisar**: se pierden datos útiles; usar `ROW_NUMBER()` con criterio de prioridad.  \r\n- **Imputar valores faltantes con la media en variables categóricas**: genera categorías inexistentes; usar una categoría “Desconocido”.  \r\n- **Normalizar sin validar zona horaria**: produce desalineación temporal; incluir conversión explícita a UTC.",
+    "estado_actual": "- **Fundamentos estables**: normalización de tipos, deduplicación mediante claves, manejo de nulos con imputación simple.  \r\n- **Práctica moderna**: pipelines declarativos (dbt), pruebas de calidad automatizadas (Great Expectations), imputación basada en aprendizaje automático y detección de duplicados con fuzzy matching (e.g., `recordlinkage`).",
+    "ideas_clave": "1. **Normalización** – Unificar formatos y unidades para que los valores sean comparables.  \r\n2. **Transformación** – Aplicar reglas (p. ej., parsing, casting) que convierten datos sucios en tipos adecuados.  \r\n3. **Deduplicación** – Identificar y eliminar registros repetidos que inflarían conteos y promedios.  \r\n4. **Manejo de valores faltantes** – Decidir entre imputación, eliminación o flagging según el impacto analítico.  \r\n5. **Validación de reglas de negocio** – Verificar que los datos cumplan restricciones lógicas (rango, unicidad, consistencia referencial).",
+    "objetivo": "Utilizo el data cleaning para transformar datos crudos en información fiable que pueda alimentar modelos analíticos y consultas de negocio. Resuelvo problemas de valores faltantes, inconsistencias de formato y registros duplicados que, de otro modo, distorsionarían métricas y decisiones. En mi día a día como ingeniero de datos y analista senior, aplico estas técnicas antes de cargar datos en un data warehouse o de ejecutar dashboards de BI, garantizando que los resultados reflejen la realidad del negocio. Después de dominar el data cleaning, puedo diseñar pipelines automatizados, validar la calidad de datos y enfocarme en análisis avanzados sin preocuparme por errores de base. Sólo cuando los datos provienen de fuentes controladas y ya han sido validados previamente, el data cleaning exhaustivo no es necesario.",
+    "preguntas_repaso": "1. ¿Qué diferencia hay entre normalizar y transformar datos en un proceso de cleaning?  \r\n2. ¿Cómo evitarías eliminar información valiosa al deduplicar un dataset?  \r\n3. ¿Cuál es una estrategia adecuada para imputar valores faltantes en una columna categórica?  \r\n4. ¿Qué herramienta moderna permite definir pruebas de calidad de datos como código?  \r\n5. ¿Por qué el data cleaning es un paso crítico antes de entrenar un modelo de machine learning?",
+    "ruta_estudio": "1. **Prerequisitos**: SQL básico, pandas, conceptos de tipos de datos y claves primarias.  \r\n2. **Fundamentos**: ejercicios de normalización y deduplicación en SQL y pandas.  \r\n3. **Herramientas de pipeline**: aprender dbt o Airflow para orquestar pasos de cleaning.  \r\n4. **Validación automática**: implementar Great Expectations o Deequ.  \r\n5. **Imputación avanzada**: estudiar técnicas de KNN y regresión en scikit‑learn o Spark ML.  \r\n6. **Especialización**: fuzzy matching y deduplicación a gran escala con librerías como `recordlinkage` o `dedupe`."
+  },
+  "sections_missing": [],
+  "slug": "data-cleaning",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/database-data-analytics"
+  ],
+  "title": "Data Cleaning",
+  "uid": "c_OAPY46OJKC",
+  "verification_marks": []
+}

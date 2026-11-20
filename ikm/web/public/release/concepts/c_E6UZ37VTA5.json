@@ -1,0 +1,37 @@
+{
+  "aliases": [
+    "Internet"
+  ],
+  "area_uid": "networking",
+  "content_hash": "9337ad825162b1b8aca605f59e0c230e036f9511dbe145c11ec58699104d9fe2",
+  "numero": 1,
+  "related_uids": [
+    "c_2PTU533FKL",
+    "c_LJXCYJ6ING",
+    "c_MSTGJ6MKWW",
+    "c_NYZQU435OZ"
+  ],
+  "sections": {
+    "como_funciona": "1. Un host genera un paquete con la dirección IP del servidor de destino.  \r\n2. El paquete entra en la primera capa de red (LAN) y es enviado al router de borde.  \r\n3. El router consulta su tabla de rutas; si la red de destino está fuera de la LAN, reenvía el paquete a su ISP mediante BGP.  \r\n4. A lo largo del camino, cada router repite el proceso, actualizando la cabecera con la dirección MAC del siguiente salto.  \r\n5. Cuando el paquete llega al router del servidor, éste lo entrega al host destino, que responde con un paquete inverso siguiendo el mismo proceso.",
+    "conexiones": "- **DNS**: Resuelve nombres de dominio a direcciones IP, permitiendo que los clientes encuentren servidores en Internet.  \r\n- **Cloud Computing**: Los servicios en la nube dependen de la conectividad global que brinda Internet para ofrecer recursos bajo demanda.  \r\n- **QoS (Quality of Service)**: Se aplica sobre la infraestructura de Internet para priorizar tráfico crítico como voz o video.",
+    "detalles": "- **Básico**: Direccionamiento IPv4, máscara de subred y puerta de enlace predeterminada.  \r\n- **Intermedio**: Uso de NAT para traducir direcciones privadas a públicas, y configuración de DNS para resolver nombres de dominio.  \r\n- **Avanzado**: Implementación de IPv6 (128‑bit), políticas de enrutamiento basadas en BGP Communities, y técnicas de optimización como Anycast y CDNs.",
+    "ejemplo_minimo": "```bash\r\n# Verifico conectividad a un servidor público\r\nping -c 3 8.8.8.8\r\n```\r\nSalida típica:\r\n```\r\nPING 8.8.8.8 (8.8.8.8): 56 data bytes\r\n64 bytes from 8.8.8.8: icmp_seq=0 ttl=115 time=12.3 ms\r\n64 bytes from 8.8.8.8: icmp_seq=1 ttl=115 time=12.1 ms\r\n64 bytes from 8.8.8.8: icmp_seq=2 ttl=115 time=12.0 ms\r\n--- 8.8.8.8 ping statistics ---\r\n3 packets transmitted, 3 packets received, 0% packet loss\r\n```\r\nEl comando muestra que el host alcanza la red pública (Internet) y recibe respuesta del servidor DNS de Google.",
+    "errores_comunes": "- **Confundir dirección IP pública con la IP interna** – Verificar siempre la tabla de NAT antes de diagnosticar.  \r\n- **Asumir que “ping” siempre funciona** – Algunos servidores bloquean ICMP; usar TCP traceroute o curl para validar servicios.  \r\n- **Olvidar actualizar rutas estáticas** – Mantener la tabla de rutas sincronizada evita bucles de encaminamiento.",
+    "estado_actual": "- **Fundamentos estables**: El modelo de capas OSI, el protocolo IP y el funcionamiento de BGP siguen siendo la base de la Internet.  \r\n- **Práctica moderna**: La migración a IPv6 avanza para superar la escasez de direcciones IPv4; los proveedores despliegan CDNs y políticas de Zero‑Trust para mejorar rendimiento y seguridad.",
+    "ideas_clave": "1. **Red de redes** – Internet es la interconexión de múltiples redes autónomas mediante protocolos comunes.  \r\n2. **Modelo cliente‑servidor** – Los dispositivos actúan como clientes que solicitan recursos a servidores ubicados en cualquier punto de la red global.  \r\n3. **Protocolo IP** – Cada paquete lleva una dirección IP que permite su encaminamiento a través de la infraestructura intermedia.  \r\n4. **Enrutamiento** – Los routers utilizan tablas de rutas y protocolos dinámicos para decidir el camino óptimo entre origen y destino.",
+    "objetivo": "Utilizo el concepto de Internet para enlazar cualquier red local o remota a la red global que interconecta millones de dispositivos. Resuelvo el problema de cómo transportar datos más allá de los límites de una LAN, permitiendo que servidores y clientes se comuniquen sin importar su ubicación física. En mi día a día como ingeniero de redes senior, lo empleo al diseñar rutas de tráfico, validar la conectividad a servicios externos y diagnosticar fallas que aparecen sólo cuando el tráfico sale de la red corporativa. Después de comprender cómo funciona, puedo planificar arquitecturas híbridas, optimizar el uso de ancho de banda y aplicar políticas de seguridad basadas en la exposición a Internet. Cuando la comunicación se mantiene estrictamente dentro de la infraestructura interna, no necesito preocuparme por los detalles de Internet.",
+    "preguntas_repaso": "1. ¿Qué papel juega el protocolo IP en la interconexión de redes dentro de Internet?  \r\n2. ¿Cómo determina un router el siguiente salto para un paquete que sale de la LAN?  \r\n3. ¿Por qué un servidor puede no responder a un ping aunque el servicio esté disponible?  \r\n4. ¿Cuál es la ventaja principal de migrar de IPv4 a IPv6 en entornos de gran escala?  \r\n5. ¿De qué manera DNS y QoS interactúan para mejorar la experiencia del usuario final?\r\n\r\n<!-- trazabilidad: run_id=run-20261105-141304-38ca4d concept=05-networking-internet-01-internet written_at=2026-11-05T17:15:39.765495+00:00 -->",
+    "ruta_estudio": "1. **Prerequisitos**: Modelo OSI, conceptos de IP, máscara de subred y tabla de rutas.  \r\n2. **Fundamentos**: Configuración de interfaces, pruebas de conectividad (ping, traceroute) y uso de DNS.  \r\n3. **Intermedio**: NAT, DHCP, BGP básico y diagnóstico de problemas de latencia.  \r\n4. **Avanzado**: IPv6, políticas de BGP avanzadas, SDN y estrategias de seguridad Zero‑Trust."
+  },
+  "sections_missing": [],
+  "slug": "internet",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/networking-internet"
+  ],
+  "title": "Internet",
+  "uid": "c_E6UZ37VTA5",
+  "verification_marks": []
+}

@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "Design Trade-offs"
+  ],
+  "area_uid": "software-engineering",
+  "content_hash": "2da83c138b5f766492e361b07d52999dc5c81187d64ef62f6c8fd769e53029c4",
+  "numero": 23,
+  "related_uids": [
+    "c_A2ZXZTXBH5",
+    "c_KZDA6HODJU",
+    "c_TSM6OQKLAB"
+  ],
+  "sections": {
+    "como_funciona": "1. Identifico los requisitos críticos (p. ej., latencia, presupuesto).  \r\n2. Mapeo cada requisito a una de las ideas principales (performance, simplicity, cost, scalability).  \r\n3. Evalúo las alternativas de diseño y anoto cómo cada una afecta a los cuatro ejes.  \r\n4. Priorizo los ejes según el valor de negocio y descarto opciones que violen los límites críticos.  \r\n5. Document o la decisión y sus compensaciones para que el equipo entienda el razonamiento.",
+    "conexiones": "- **Abstraction**: reduce la complejidad del código, pero introduce capas que pueden afectar el rendimiento.  \r\n- **Modularity**: facilita la escalabilidad al permitir despliegues independientes, aunque puede incrementar el costo de integración.  \r\n- **Architecture**: establece los límites donde se negocian los trade‑offs, definiendo patrones que favorecen ciertos ejes sobre otros.",
+    "detalles": "- **Básico**: reconocer que toda decisión implica una compensación entre los cuatro ejes.  \r\n- **Intermedio**: usar matrices de trade‑off (p. ej., tabla de impacto) para comparar alternativas y cuantificar costos implícitos.  \r\n- **Avanzado**: aplicar técnicas de modelado (arquitectura basada en componentes, análisis de cuellos de botella) y simulaciones de carga para validar que el equilibrio elegido mantenga los SLA bajo diferentes escenarios.",
+    "ejemplo_minimo": "```python\r\n# Trade‑off simple entre rendimiento y simplicidad\r\ndef suma(lista):\r\n    # Opción 1: simple y legible\r\n    total = 0\r\n    for n in lista:\r\n        total += n\r\n    return total\r\n\r\ndef suma_numpy(lista):\r\n    # Opción 2: mayor rendimiento usando numpy, pero menos legible\r\n    import numpy as np\r\n    return np.sum(np.array(lista))\r\n```\r\nEn este caso, `suma` prioriza simplicidad y bajo costo de mantenimiento, mientras que `suma_numpy` mejora el rendimiento a costa de mayor complejidad y dependencia externa.",
+    "errores_comunes": "- **Ignorar el costo** al elegir la solución más rápida; evitarlo evaluando el presupuesto antes de decidir.  \r\n- **Sobrestimar la escalabilidad** sin validar la carga real; usar pruebas de carga tempranas.  \r\n- **Confundir abstracción con rendimiento**; medir siempre el impacto de capas adicionales.",
+    "estado_actual": "Los fundamentos de los trade‑offs (performance, simplicity, cost, scalability) son estables y forman parte de la práctica estándar en arquitectura de software. En la práctica moderna, herramientas de observabilidad y plataformas cloud permiten ajustar dinámicamente los trade‑offs, pero la necesidad de decisiones conscientes en la fase de diseño sigue siendo crítica.",
+    "ideas_clave": "1. **Rendimiento vs. Simplicidad** – Mejorar la velocidad suele requerir código más complejo; simplificar el código puede reducir el rendimiento.  \r\n2. **Costo vs. Escalabilidad** – Sistemas altamente escalables demandan mayor inversión en infraestructura y diseño.  \r\n3. **Equilibrio de prioridades** – Cada proyecto necesita una combinación distinta de los cuatro ejes según sus objetivos de negocio.  \r\n4. **Impacto de la abstracción** – Más abstracción facilita la modularidad pero puede introducir sobrecarga de tiempo de ejecución.  \r\n5. **Arquitectura como marco de decisiones** – La arquitectura elegida define los límites donde se negocian los trade‑offs.",
+    "objetivo": "Utilizo los design trade‑offs para decidir qué característica priorizar en un sistema cuando los recursos son limitados. Resuelvo el conflicto entre rendimiento, simplicidad, costo y escalabilidad, eligiendo la combinación que mejor satisface los requisitos del proyecto. Aparecen en cada fase del diseño de software: al definir la arquitectura, al seleccionar patrones de implementación y al estimar el presupuesto. Después de comprenderlos, puedo justificar decisiones técnicas, comunicar sus implicaciones al equipo y anticipar los efectos de cambios futuros. No necesito preocuparme cuando el proyecto es un prototipo interno sin restricciones de producción ni cuando los requisitos son tan triviales que cualquier solución cumple.",
+    "preguntas_repaso": "1. ¿Cómo afecta la elección de una arquitectura basada en microservicios al equilibrio entre costo y escalabilidad?  \r\n2. ¿Por qué una mayor abstracción puede reducir la simplicidad del código?  \r\n3. ¿Qué pasos seguirías para decidir entre una solución de alto rendimiento y una más simple en un proyecto con presupuesto limitado?  \r\n4. ¿Cómo puedes medir el impacto de un trade‑off de rendimiento antes de implementarlo en producción?  \r\n5. ¿En qué situaciones es aceptable posponer la consideración de los design trade‑offs?",
+    "ruta_estudio": "1. **Prerequisitos**: conceptos básicos de algoritmos (complejidad), fundamentos de costos de infraestructura y principios de arquitectura (capas, servicios).  \r\n2. **Fundamentos**: estudiar matrices de trade‑off y casos de estudio de decisiones de diseño.  \r\n3. **Intermedio**: practicar con herramientas de profiling y simulación de carga.  \r\n4. **Avanzado**: profundizar en arquitectura basada en eventos y microservicios, donde la escalabilidad y el costo son críticos, y aprender a usar plataformas de observabilidad para refinar los trade‑offs en producción."
+  },
+  "sections_missing": [],
+  "slug": "design-trade-offs",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/software-engineering"
+  ],
+  "title": "Design Trade-offs",
+  "uid": "c_HISOSDWX75",
+  "verification_marks": []
+}

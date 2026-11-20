@@ -1,0 +1,41 @@
+{
+  "aliases": [
+    "Arquitectura Frontend"
+  ],
+  "area_uid": "frontend",
+  "content_hash": "ebad7d0a36043fbaf166af1b6040da8179cd169c19713089e3091cb2274c6ae3",
+  "numero": 25,
+  "related_uids": [
+    "c_DVLX2W7PQH",
+    "c_FIPB4YV5WK",
+    "c_JPHEZJIFHI",
+    "c_KZDA6HODJU",
+    "c_VXHILN4GCI",
+    "c_WSNDQEO6MW",
+    "c_WYVLRHHAGA",
+    "c_ZBRCPB5GFK"
+  ],
+  "sections": {
+    "como_funciona": "1. Defino el design system y creo los tokens de color, tipografía y espaciado.  \r\n2. Construyo módulos que encapsulan componentes UI, lógica de presentación y estilos asociados.  \r\n3. Aplico un patrón arquitectónico (por ejemplo, componentización) para decidir cómo los módulos se comunican y se integran.  \r\n4. Implemento mecanismos de gestión de estado y carga diferida que soportan la escalabilidad prevista.  \r\n5. El proyecto evoluciona añadiendo nuevos módulos o extendiendo el design system sin romper la estructura existente.",
+    "conexiones": "- **Componentización**: la arquitectura frontend se basa en dividir la UI en componentes reutilizables, lo que simplifica el mantenimiento y la prueba.  \r\n- **Frameworks UI**: bibliotecas como React o Vue proporcionan la infraestructura para implementar la arquitectura mediante componentes y hooks.  \r\n- **Gestión de estado**: la forma en que se almacena y comparte el estado entre módulos afecta directamente la escalabilidad y la coherencia de la aplicación.",
+    "detalles": "- **Básico**: adopción de un design system sencillo y creación de componentes atómicos reutilizables.  \r\n- **Intermedio**: organización de componentes en módulos, introducción de un gestor de estado ligero (por ejemplo, Context API) y definición de convenciones de carpetas.  \r\n- **Avanzado**: aplicación de patrones como micro‑frontend, uso de herramientas de build para splitting de código, y automatización de la actualización del design system mediante tokens CSS‑in‑JS.",
+    "ejemplo_minimo": "```tsx\r\n// designTokens.ts\r\nexport const colors = { primary: '#0066ff', background: '#f5f5f5' };\r\n\r\n// Button.tsx\r\nimport { colors } from './designTokens';\r\n\r\nexport const Button = ({ label }: { label: string }) => (\r\n  <button style={{ background: colors.primary, color: '#fff' }}>\r\n    {label}\r\n  </button>\r\n);\r\n```",
+    "errores_comunes": "- **Ignorar el design system**: genera inconsistencias visuales; evitarlo definiendo y usando tokens desde el inicio.  \r\n- **Crear componentes demasiado grandes**: dificulta la reutilización; mantener los componentes atómicos y composables.  \r\n- **Mezclar lógica de negocio con UI**: aumenta el acoplamiento; separar la gestión de estado del renderizado visual.",
+    "estado_actual": "- **Fundamentos estables**: la necesidad de un design system, la práctica de componentizar UI y la separación de responsabilidades siguen siendo pilares aceptados.  \r\n- **Práctica moderna**: el uso de micro‑frontend para grandes organizaciones, la adopción de CSS‑in‑JS para tokenizar estilos y la integración de herramientas de análisis de dependencias están en expansión.",
+    "ideas_clave": "1. **Design systems** – Conjunto coherente de guías, tokens y componentes que garantiza consistencia visual y de interacción.  \r\n2. **Módulos** – Agrupación lógica de código (componentes, utilidades, estilos) que permite reutilización y aislamiento.  \r\n3. **Patrones de arquitectura** – Estrategias como componentización, micro‑frontend o monolito modular que guían la organización del proyecto.  \r\n4. **Escalabilidad** – Principios que facilitan el crecimiento del código sin perder rendimiento ni claridad, como la separación de responsabilidades y la carga diferida.",
+    "objetivo": "Utilizo la arquitectura frontend para organizar y estructurar el código de la interfaz de usuario de forma que sea mantenible, reutilizable y capaz de escalar a medida que el producto crece. Resuelvo problemas de fragmentación del código, inconsistencias visuales y dificultades al añadir nuevas funcionalidades. En mi día a día como experto en Frontend, la arquitectura define cómo se dividen los componentes, cómo se gestionan los estilos y el estado, y cómo se integran los design systems. Después de comprenderla, puedo diseñar aplicaciones modulares, elegir patrones adecuados y planificar la evolución del proyecto sin generar deuda técnica. Sólo cuando trabajo en prototipos muy pequeños o pruebas rápidas, la arquitectura profunda no es prioritaria.",
+    "preguntas_repaso": "1. ¿Qué beneficios aporta un design system a la arquitectura frontend?  \r\n2. ¿Cómo se diferencia un módulo de un simple componente?  \r\n3. ¿En qué situaciones es recomendable adoptar un patrón de micro‑frontend?  \r\n4. ¿Cuál es el riesgo de mezclar lógica de negocio con la capa de presentación?  \r\n5. ¿Qué pasos seguirías para migrar una aplicación monolítica a una arquitectura basada en módulos escalables?",
+    "ruta_estudio": "1. **Prerequisitos**: HTML, CSS, JavaScript y conceptos básicos de un framework UI (React, Vue o Angular).  \r\n2. **Fundamentos**: estudiar design systems (guías de estilo, tokens), patrones de componentización y organización de carpetas.  \r\n3. **Intermedio**: aprender gestión de estado (Context, Redux, Pinia) y técnicas de carga diferida (code‑splitting).  \r\n4. **Avanzado**: explorar micro‑frontend, CSS‑in‑JS, y herramientas de automatización de design tokens.  \r\n5. **Práctica**: crear un proyecto real aplicando cada capa y refactorizar según crezca el alcance."
+  },
+  "sections_missing": [],
+  "slug": "arquitectura-frontend",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/frontend"
+  ],
+  "title": "Arquitectura Frontend",
+  "uid": "c_UAIG2N6OVP",
+  "verification_marks": []
+}

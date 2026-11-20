@@ -1,0 +1,40 @@
+{
+  "aliases": [
+    "Scheduling"
+  ],
+  "area_uid": "project-management",
+  "content_hash": "507c37d063d74489dcf4e2b05a31c3a39a37f02ddd8ffce67f63832a6c2f6a07",
+  "numero": 10,
+  "related_uids": [
+    "c_5N3OJBWASE",
+    "c_CDAPU4W4IV",
+    "c_CQ3MBF4W7W",
+    "c_FJSN2KSLMV",
+    "c_GYUCO2KNED",
+    "c_OXV4OR4VYX",
+    "c_S37BPPLTVF"
+  ],
+  "sections": {
+    "como_funciona": "1. Parto del **Work Breakdown Structure (WBS)** para identificar todas las tareas necesarias.  \r\n2. Estimo la duración de cada tarea (horas, días) y asigno recursos.  \r\n3. Defino las **dependencias** (finish‑to‑start, start‑to‑start, etc.) que condicionan el orden.  \r\n4. Con esas duraciones y dependencias, calculo fechas de inicio y fin, creando el **schedule**.  \r\n5. Inserto **milestones** en los momentos críticos (fin de fase, entrega al cliente).  \r\n6. Verifico que los **deadlines** externos estén cubiertos; si no, ajusto estimaciones o recursos.  \r\n7. Durante la ejecución, monitorizo el avance y actualizo el schedule para reflejar desviaciones.",
+    "conexiones": "- **Product Roadmap** – El schedule traduce los objetivos estratégicos del roadmap en fechas operativas, asegurando que los entregables del roadmap tengan una base temporal realista.  \r\n- **Work Breakdown Structure** – El WBS provee la descomposición de trabajo que alimenta el schedule; sin un WBS claro, el schedule carece de precisión.  \r\n- **Dependencies** – Las dependencias determinan la secuencia de tareas dentro del schedule; gestionarlas correctamente evita retrasos en los milestones y deadlines.",
+    "detalles": "- **Básico**: Uso de una hoja de cálculo para listar tareas, duraciones y fechas; visualización simple de barras.  \r\n- **Intermedio**: Herramientas de diagramas de Gantt que gestionan dependencias y generan alertas automáticas cuando una tarea supera su deadline.  \r\n- **Avanzado**: Integración con metodologías ágiles (sprints) y con el **Product Roadmap**, permitiendo re‑planificación dinámica basada en capacidad real y cambios de prioridad. También se aplican técnicas de *critical path* para optimizar la secuencia de tareas y reducir la duración total del proyecto.",
+    "ejemplo_minimo": "```python\r\n# Ejemplo en Python usando la librería gantt\r\nimport gantt\r\n\r\n# Definir recursos\r\ndev = gantt.Resource('Desarrollador')\r\n\r\n# Crear proyecto y tareas\r\np = gantt.Project(name='Demo')\r\nt1 = gantt.Task(name='Diseño UI', start='2024-01-02', duration=3, resources=[dev])\r\nt2 = gantt.Task(name='Implementación', start='2024-01-05', duration=5, resources=[dev])\r\nt2.add_dependency(t1)   # dependencia finish‑to‑start\r\n\r\np.add_task(t1)\r\np.add_task(t2)\r\n\r\np.make_svg_for_tasks(filename='schedule.svg')\r\n```\r\nEl script genera un diagrama con fechas, dependencia y muestra el milestone implícito al terminar la tarea “Diseño UI”.",
+    "errores_comunes": "- **Subestimar duraciones** → genera retrasos; validar con datos históricos.  \r\n- **Ignorar dependencias** → provoca cuellos de botella inesperados; mapear siempre.  \r\n- **Confundir milestones con tareas** → dificulta el seguimiento; usar milestones solo como indicadores.  \r\n- **No actualizar el schedule** → la información queda obsoleta; revisarlo al menos semanalmente.",
+    "estado_actual": "- **Fundamentos estables**: definición de fechas, milestones y deadlines; uso de WBS y estimación basada en experiencia.  \r\n- **Práctica moderna**: adopción de herramientas colaborativas (Jira, Azure DevOps) que sincronizan el schedule con el backlog, y aplicación de algoritmos de *critical path* y *resource leveling* para optimizar la planificación en entornos híbridos (ágil + tradicional).",
+    "ideas_clave": "1. **Fechas** – Cada tarea recibe una fecha de inicio y una de fin que define su ventana de trabajo.  \r\n2. **Milestones** – Puntos de control que marcan entregas parciales o decisiones clave; no son tareas, sino indicadores de progreso.  \r\n3. **Deadlines** – Límites inquebrantables que deben respetarse para cumplir compromisos externos o contractuales.  \r\n4. **Dependencias** – Relaciones entre tareas que determinan el orden lógico del trabajo.  \r\n5. **Estimación** – Cálculo de la duración realista de cada actividad, base para fijar fechas y deadlines.",
+    "objetivo": "Utilizo el scheduling para transformar la visión del proyecto en un calendario operativo que indique cuándo se deben iniciar y terminar las actividades, alineando recursos y expectativas. Resuelvo la incertidumbre de “¿qué se hace y cuándo?” y garantizo que los hitos críticos (milestones) y las fechas de entrega (deadlines) sean visibles para todo el equipo. Aparece en la fase de planificación y se revisa continuamente durante la coordinación diaria; sin él, la gestión de riesgos y la comunicación con stakeholders se vuelve caótica. Después de dominar el scheduling puedo sincronizar el Product Roadmap con la ejecución real, anticipar cuellos de botella y ajustar el plan sin perder el foco en los objetivos. Cuando el proyecto es muy pequeño o está bajo control de un solo individuo, el detalle de scheduling puede simplificarse o omitirse.",
+    "preguntas_repaso": "1. ¿Cómo transforma una estimación de duración en una fecha de inicio y fin dentro del schedule?  \r\n2. ¿Qué diferencia hay entre un milestone y una tarea y por qué es importante no confundirlos?  \r\n3. ¿De qué manera una dependencia mal definida puede afectar un deadline crítico?  \r\n4. ¿Qué beneficio aporta integrar el schedule con el Product Roadmap en un proyecto híbrido?  \r\n5. ¿Cuál es el propósito del método de *critical path* y cuándo deberías aplicarlo?",
+    "ruta_estudio": "1. **Prerequisitos**: comprender el WBS, conceptos de estimación y gestión de recursos.  \r\n2. **Fundamentos**: crear schedules manuales en hoja de cálculo, practicar la identificación de dependencias y milestones.  \r\n3. **Herramientas**: aprender a usar un software de Gantt (MS Project, Jira Advanced Roadmaps) y a generar diagramas automáticos.  \r\n4. **Avanzado**: estudiar *critical path method* y *resource leveling*, integrar el schedule con metodologías ágiles y con el Product Roadmap.  \r\n5. **Especialización**: explorar técnicas de forecasting basadas en datos históricos y simulaciones de escenarios de riesgo."
+  },
+  "sections_missing": [],
+  "slug": "scheduling",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/project-management"
+  ],
+  "title": "Scheduling",
+  "uid": "c_YRDFIS7XCB",
+  "verification_marks": []
+}

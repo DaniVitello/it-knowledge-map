@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "Accesibilidad"
+  ],
+  "area_uid": "frontend",
+  "content_hash": "e296d683bf317286949e0814e83c92b94a0cdea858f2526c00388468df2f4e76",
+  "numero": 20,
+  "related_uids": [
+    "c_NNWQH47RM7",
+    "c_YPMUNOMCWL",
+    "c_ZIFKUN562S"
+  ],
+  "sections": {
+    "como_funciona": "1. Parto del marcado semántico; el navegador ya expone roles y propiedades básicas a los lectores de pantalla.  \r\n2. Evalúo si el elemento necesita información adicional y añado atributos ARIA apropiados.  \r\n3. Verifico que el elemento sea alcanzable con la tecla **Tab** y que el orden de tabulación siga una lógica de flujo.  \r\n4. Si el foco se desplaza a un modal o a un mensaje dinámico, utilizo `focus()` y `aria-live` para anunciar el cambio.  \r\n5. Reviso contraste de colores y añado `alt` a imágenes para cerrar cualquier brecha perceptual.",
+    "conexiones": "- **Formularios** – La accesibilidad dicta que cada campo tenga una etiqueta asociada (`<label>` o `aria-label`) y que los errores se comuniquen mediante `aria-live`.  \r\n- **Autenticación en Frontend** – Los flujos de login deben ser navegables con teclado y anunciar estados (error, éxito) a lectores de pantalla mediante ARIA.  \r\n- **Accessibility** – La accesibilidad es el paraguas que engloba Semantic HTML, ARIA y keyboard navigation, y se extiende a otras áreas como rendimiento y SEO.",
+    "detalles": "- **Básico**: comprender la diferencia entre elementos estructurales y presentacionales; aplicar `alt` y usar etiquetas correctas.  \r\n- **Intermedio**: introducir ARIA donde el HTML nativo no basta (por ejemplo, menús personalizados) y gestionar el foco en componentes dinámicos.  \r\n- **Avanzado**: crear patrones de interacción complejos (drag‑and‑drop, tablas dinámicas) con roles ARIA avanzados y `aria‑modal`, y validar con herramientas de auditoría automática y pruebas manuales de lectores de pantalla.",
+    "ejemplo_minimo": "```html\r\n<button aria-label=\"Cerrar ventana\">\r\n  ✖\r\n</button>\r\n```\r\nEl botón es nativo, por lo que ya es accesible con teclado; el atributo `aria-label` provee una descripción textual para usuarios de lectores de pantalla.",
+    "errores_comunes": "- Usar `role=\"button\"` en un `<div>` sin hacerlo enfocables con `tabindex=\"0\"` → el elemento no será navegable con teclado.  \r\n- Añadir ARIA redundante que contradice la semántica nativa → confunde a los lectores de pantalla.  \r\n- Olvidar actualizar el foco después de abrir o cerrar un modal → el usuario pierde la referencia de posición.  \r\n- No proporcionar texto alternativo a imágenes decorativas → se genera ruido auditivo.  \r\n- Ignorar el contraste de colores → usuarios con baja visión no perciben la información.",
+    "estado_actual": "**Fundamentos estables**: el uso de etiquetas semánticas y atributos `alt` es una práctica consolidada y respaldada por los estándares HTML.  \r\n**Práctica moderna**: la adopción de ARIA para componentes UI personalizados y la gestión programática del foco son recomendadas por guías de accesibilidad actuales y herramientas de auditoría como Lighthouse.",
+    "ideas_clave": "1. **Semantic HTML** – Usa etiquetas nativas (`<header>`, `<nav>`, `<button>`, `<form>`) que transmiten significado estructural a los agentes de usuario.  \r\n2. **ARIA** – Complementa o corrige la semántica cuando los elementos nativos no cubren una necesidad específica, mediante atributos como `role`, `aria-label` y `aria-describedby`.  \r\n3. **Keyboard navigation** – Garantiza que todas las interacciones sean accesibles mediante tabulación y atajos, sin depender exclusivamente del puntero.  \r\n4. **Focus management** – Controla el orden y la visibilidad del foco para que el usuario sepa dónde está y pueda avanzar lógicamente.  \r\n5. **Contraste y texto alternativo** – Asegura que el contenido visual sea perceptible y que las imágenes tengan descripciones útiles.",
+    "objetivo": "Utilizo la accesibilidad para que cualquier persona, independientemente de sus capacidades físicas o cognitivas, pueda interactuar con mis interfaces web. Resuelvo el problema de exclusión que surge cuando los componentes visuales no son interpretables por lectores de pantalla, teclados o tecnologías de asistencia. En mi día a día como desarrollador Frontend, la accesibilidad aparece al diseñar componentes, formularios y flujos de autenticación, garantizando que todos los usuarios puedan completar esas tareas. Después de comprenderla, puedo crear experiencias inclusivas, cumplir con normativas y mejorar la usabilidad general. Sólo dejo de preocuparme cuando el producto está destinado a un entorno controlado donde todos los usuarios comparten las mismas capacidades y no se requiere cumplimiento de estándares de accesibilidad.",
+    "preguntas_repaso": "1. ¿Por qué es preferible usar etiquetas HTML nativas antes de recurrir a ARIA?  \r\n2. ¿Cómo garantizo que un modal personalizado sea accesible para usuarios de teclado?  \r\n3. ¿Qué diferencia hay entre `aria-label` y `aria-labelledby`?  \r\n4. ¿Cuál es el impacto del contraste de colores en la accesibilidad visual?  \r\n5. ¿Cómo puedo validar que mis componentes cumplen con los criterios de accesibilidad sin depender solo de herramientas automáticas?",
+    "ruta_estudio": "1. **Prerequisitos**: HTML básico, CSS y manejo de eventos JavaScript.  \r\n2. **Fundamentos**: estudiar la especificación de HTML5 para identificar elementos semánticos; practicar `alt` y etiquetas de formulario.  \r\n3. **Intermedio**: aprender los roles y atributos ARIA más comunes; experimentar con gestión de foco en componentes dinámicos.  \r\n4. **Avanzado**: profundizar en patrones ARIA avanzados (grupos de radios, tablas accesibles), usar herramientas de auditoría (Lighthouse, axe) y realizar pruebas con lectores de pantalla (NVDA, VoiceOver).  \r\n5. **Especialización**: integrar accesibilidad en pipelines CI/CD y en frameworks modernos (React, Vue) mediante librerías como `react-aria`."
+  },
+  "sections_missing": [],
+  "slug": "accesibilidad",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/frontend"
+  ],
+  "title": "Accesibilidad",
+  "uid": "c_FYUNN3WTKX",
+  "verification_marks": []
+}

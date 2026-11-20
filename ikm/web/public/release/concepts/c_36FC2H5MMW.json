@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "Interaction Design"
+  ],
+  "area_uid": "ux-ui",
+  "content_hash": "a68bf46ef3652b1017de628140c58ccade0e539dc4062bc312054b54357e47e0",
+  "numero": 8,
+  "related_uids": [
+    "c_IL3BOUYPJN",
+    "c_P3AM7QSPS6"
+  ],
+  "sections": {
+    "como_funciona": "1. **Investigación de intención**: a través de entrevistas o análisis de tareas, descubro qué quiere lograr el usuario.  \r\n2. **Selección de patrones**: elijo entre botones, deslizamientos, arrastrar‑y‑soltar, etc., basándome en la intención y en las limitaciones del dispositivo.  \r\n3. **Diseño del flujo**: dibujo wireframes que conectan cada acción en una secuencia clara, asegurando que no haya pasos innecesarios.  \r\n4. **Construcción del prototipo**: paso de wireframes a un prototipo interactivo que permite al usuario ejecutar el flujo.  \r\n5. **Pruebas de usabilidad**: observo si los usuarios completan la tarea sin fricción y recojo datos de error y tiempo.  \r\n6. **Iteración**: refino los patrones y el orden de los pasos hasta alcanzar una interacción fluida.",
+    "conexiones": "- **Wireframing**: sirve como plano estático donde se definen los puntos de interacción antes de añadir dinamismo.  \r\n- **Prototyping**: transforma los wireframes en experiencias interactivas que permiten probar los patrones de Interaction Design.  \r\n- **Usability Testing**: evalúa si las interacciones diseñadas cumplen con las expectativas y metas del usuario.",
+    "detalles": "- **Básico**: reconocer la necesidad de una interacción y asignar un control UI simple (p.ej., botón “Enviar”).  \r\n- **Intermedio**: combinar varios controles en un flujo coherente, aplicar principios de affordance y feedback visual.  \r\n- **Avanzado**: diseñar interacciones adaptativas que cambian según contexto (modo oscuro, accesibilidad, dispositivos) y sincronizar con animaciones micro‑interactivas para reforzar la respuesta del sistema.",
+    "ejemplo_minimo": "```html\r\n<!-- Botón que envía un formulario al pulsar Enter o clic -->\r\n<form id=\"login\">\r\n  <input type=\"text\" placeholder=\"Usuario\" required>\r\n  <input type=\"password\" placeholder=\"Contraseña\" required>\r\n  <button type=\"submit\">Entrar</button>\r\n</form>\r\n\r\n<script>\r\ndocument.getElementById('login').addEventListener('submit', function(e){\r\n  e.preventDefault();               // evita recarga\r\n  // lógica de autenticación\r\n  alert('Acceso concedido');\r\n});\r\n</script>\r\n```\r\nEste fragmento muestra la interacción esencial: el usuario escribe datos y activa la acción mediante clic o tecla Enter, recibiendo feedback inmediato.",
+    "errores_comunes": "- **Sobrecargar la interfaz con demasiados gestos** – simplificar a los patrones más intuitivos.  \r\n- **Ignorar el feedback visual** – siempre proveer una respuesta clara (cambio de color, animación).  \r\n- **Diseñar sin pruebas de usabilidad** – validar con usuarios reales antes de cerrar el diseño.",
+    "estado_actual": "Los fundamentos de Interaction Design (intención, patrones, flujo) siguen siendo estables y se aplican en la mayoría de los productos digitales. La práctica moderna incorpora micro‑interacciones, diseño responsivo y accesibilidad como requisitos estándar, y se apoya en herramientas de prototipado rápido que permiten iterar en ciclos de días.",
+    "ideas_clave": "1. **Entender la intención del usuario** – identificar la meta que persigue en cada paso del flujo.  \r\n2. **Definir los patrones de interacción** – seleccionar gestos, clicks o teclas que mejor sirvan a esa intención.  \r\n3. **Mapear la secuencia de acciones** – ordenar los pasos de forma lógica y minimizar la carga cognitiva.  \r\n4. **Prototipar y testear** – crear representaciones interactivas y validar con usuarios reales.  \r\n5. **Iterar con feedback** – ajustar los patrones según los hallazgos de usabilidad.",
+    "objetivo": "Utilizo el Interaction Design para estructurar y guiar la forma en que los usuarios realizan acciones dentro de un producto digital. Resuelvo la ambigüedad de “¿cómo debería tocar, deslizar o escribir el usuario para conseguir su objetivo?” y, por tanto, mejoro la eficiencia, la satisfacción y la reducción de errores. En mi día a día como diseñador de producto senior, lo aplico al crear flujos de tareas, definir patrones de interacción y validar que cada elemento de la interfaz responde de manera predecible. Después de comprenderlo, puedo diseñar interacciones coherentes, evaluar prototipos y comunicar requisitos claros a desarrollo. No necesito enfocarme en Interaction Design cuando el proyecto se limita a contenido estático sin acciones del usuario.",
+    "preguntas_repaso": "1. ¿Cómo identifico la intención del usuario antes de definir un patrón de interacción?  \r\n2. ¿Qué diferencia hay entre un wireframe y un prototipo en el contexto de Interaction Design?  \r\n3. ¿Por qué es crítico incluir feedback visual en cada interacción?  \r\n4. ¿Cuál es el riesgo de introducir demasiados gestos diferentes en una misma pantalla?  \r\n5. ¿Cómo integraría pruebas de usabilidad en el ciclo de iteración de Interaction Design?",
+    "ruta_estudio": "1. **Prerequisitos**: conceptos básicos de UX research, arquitectura de información y principios de usabilidad.  \r\n2. **Fundamentos**: estudiar patrones de interacción comunes (botones, formularios, gestos) y principios de affordance.  \r\n3. **Herramientas**: aprender a usar Figma o Adobe XD para crear wireframes y prototipos interactivos.  \r\n4. **Práctica**: diseñar flujos de tareas simples, testear con usuarios y documentar hallazgos.  \r\n5. **Especialización**: explorar micro‑interacciones, diseño para accesibilidad y adaptación a dispositivos emergentes."
+  },
+  "sections_missing": [],
+  "slug": "interaction-design",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/ux-ui"
+  ],
+  "title": "Interaction Design",
+  "uid": "c_36FC2H5MMW",
+  "verification_marks": []
+}

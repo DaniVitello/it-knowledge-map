@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "Navigation"
+  ],
+  "area_uid": "ux-ui",
+  "content_hash": "dc9c41c4e6f1195a6a0210ef53a2779b9fa4281af30c59755f999feaf5e058f0",
+  "numero": 7,
+  "related_uids": [
+    "c_BHLQEBT4GM",
+    "c_Q3YN3JYKSD"
+  ],
+  "sections": {
+    "como_funciona": "1. Analizo la arquitectura de la información para identificar niveles de contenido.  \r\n2. Diseño un menú global que refleje los top‑level items de la jerarquía.  \r\n3. Dentro de cada sección, añado navegación local (sub‑menús o tabs) que siga la jerarquía interna.  \r\n4. Inserto breadcrumbs en páginas profundas para que el usuario vea su posición y pueda volver a niveles superiores.  \r\n5. Valido la estructura con pruebas de usabilidad, observando si los usuarios encuentran lo que buscan sin errores de ruta.",
+    "conexiones": "- **Information Architecture**: la navegación traduce la estructura de la información en componentes visuales que los usuarios pueden explorar.  \r\n- **User Flows**: los flujos de usuario dependen de la navegación para mover al usuario de un punto a otro de manera lógica y sin fricción.  \r\n- **Responsive Design**: la adaptación de la navegación a diferentes tamaños de pantalla es esencial para mantener la coherencia del producto en todos los dispositivos.",
+    "detalles": "- **Básico**: Definir un menú principal y asegurarse de que cada enlace sea descriptivo y accesible.  \r\n- **Intermedio**: Introducir sub‑menús y breadcrumbs, alineando la nomenclatura con la jerarquía de contenido y manteniendo la consistencia visual.  \r\n- **Avanzado**: Implementar navegación adaptativa (responsive) que cambie de barra horizontal a drawer o bottom nav según el dispositivo, y usar patrones de navegación contextual (por ejemplo, “related links”) para reducir la carga cognitiva.",
+    "ejemplo_minimo": "```html\r\n<nav aria-label=\"Navegación principal\">\r\n  <ul>\r\n    <li><a href=\"/dashboard\">Dashboard</a></li>\r\n    <li><a href=\"/projects\">Proyectos</a></li>\r\n    <li><a href=\"/settings\">Configuración</a></li>\r\n  </ul>\r\n</nav>\r\n\r\n<!-- Breadcrumb en una página de proyecto -->\r\n<nav aria-label=\"Miga de pan\">\r\n  <ol>\r\n    <li><a href=\"/projects\">Proyectos</a></li>\r\n    <li><a href=\"/projects/42\">Proyecto 42</a></li>\r\n    <li>Detalles</li>\r\n  </ol>\r\n</nav>\r\n```",
+    "errores_comunes": "- **Sobrecargar el menú** con demasiados ítems; evitarlo limitando los top‑level a 5‑7 opciones.  \r\n- **Breadcrumbs inconsistentes** que no reflejan la verdadera jerarquía; mantenerlos sincronizados con la arquitectura.  \r\n- **Navegación local ausente** en secciones complejas; añadir tabs o sub‑menús para reducir la profundidad de clics.  \r\n- **Falta de adaptabilidad** en dispositivos móviles; usar patrones responsive para mantener la usabilidad.",
+    "estado_actual": "**Fundamentos estables**: los principios de jerarquía clara, consistencia visual y uso de etiquetas descriptivas siguen siendo la base de cualquier sistema de navegación.  \r\n**Práctica moderna**: la navegación adaptativa y los patrones de “progressive disclosure” (revelado progresivo) se emplean para optimizar la experiencia en dispositivos móviles y reducir la sobrecarga cognitiva. Además, la integración de componentes de accesibilidad (ARIA roles, focus management) es ahora un requisito estándar.",
+    "ideas_clave": "1. **Menús** – Agrupan enlaces a secciones principales y se presentan de forma visible y consistente.  \r\n2. **Jerarquías** – Definen la relación de importancia entre páginas y ayudan a priorizar la información.  \r\n3. **Breadcrumbs** – Muestran la ruta de navegación actual y permiten retroceder rápidamente.  \r\n4. **Navegación global vs. local** – La global brinda acceso a áreas principales del producto; la local orienta dentro de una sección específica.",
+    "objetivo": "Utilizo la navegación para guiar al usuario a través del producto, asegurando que encuentre la información o la función que necesita sin perderse. Resuelvo la confusión que surge cuando la estructura de la interfaz no refleja claramente la jerarquía del contenido ni los caminos de interacción. Aparece en cada proyecto de diseño de producto senior cuando defino la arquitectura de la información, creo los flujos de usuario y diseño los componentes visuales que permiten moverse entre pantallas. Después de entenderla, puedo estructurar menús, breadcrumbs y enlaces de forma coherente y validar su efectividad con pruebas de usabilidad. No necesito preocuparme cuando el producto es una única vista estática sin interacción de cambio de contexto.",
+    "preguntas_repaso": "1. ¿Cómo determina la jerarquía la cantidad y el orden de los ítems en un menú global?  \r\n2. ¿En qué situaciones es más útil incluir breadcrumbs que un menú secundario?  \r\n3. ¿Qué diferencia hay entre navegación global y local y cómo se coordinan?  \r\n4. ¿Cuáles son los riesgos de un menú sobrecargado y cómo se pueden mitigar?  \r\n5. ¿Cómo afecta la navegación adaptativa a la experiencia del usuario en dispositivos móviles?",
+    "ruta_estudio": "1. **Prerequisitos**: comprender los conceptos básicos de arquitectura de la información y usabilidad.  \r\n2. **Fundamentos**: estudiar patrones de menú, jerarquía y breadcrumbs mediante guías de Nielsen Norman Group.  \r\n3. **Práctica**: crear wireframes que incluyan navegación global y local, y probarlos con usuarios reales.  \r\n4. **Avanzado**: aprender sobre navegación adaptativa, ARIA para accesibilidad y técnicas de “progressive disclosure”.  \r\n5. **Especialización**: explorar casos de estudio de productos SaaS y móviles para ver cómo se resuelven desafíos específicos de navegación."
+  },
+  "sections_missing": [],
+  "slug": "navigation",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/ux-ui"
+  ],
+  "title": "Navigation",
+  "uid": "c_Q62PGX2MP4",
+  "verification_marks": []
+}

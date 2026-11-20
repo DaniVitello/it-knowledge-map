@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "Product-Market Fit"
+  ],
+  "area_uid": "product-management",
+  "content_hash": "d4d36b7c44a84de04fcdeea8d9460cac0aa271dc185fdc8f7de463f63831dd98",
+  "numero": 21,
+  "related_uids": [
+    "c_5BZPAUGDCC",
+    "c_ETWVMQBZXQ",
+    "c_F45REZFNEG"
+  ],
+  "sections": {
+    "como_funciona": "1. **Descubrimiento** – entrevisto a usuarios del segmento objetivo para mapear el problema.  \r\n2. **Construcción del MVP** – desarrollo la solución mínima que aborda el dolor identificado.  \r\n3. **Lanzamiento controlado** – despliego el MVP a un grupo piloto y recojo datos de uso.  \r\n4. **Medición** – analizo retención a 30 días, tasa de activación y feedback cualitativo.  \r\n5. **Decisión** – si las métricas superan los umbrales predefinidos, paso a escalar; de lo contrario, itero o pivoto.",
+    "conexiones": "- **MVP**: El PMF se prueba primero con un MVP que permite validar hipótesis con el menor esfuerzo.  \r\n- **Product Lifecycle**: Alcanzar PMF marca la transición del ciclo de descubrimiento al de crecimiento.  \r\n- **Go‑to‑Market**: Un PMF confirmado define la propuesta de valor que se comunica en la estrategia Go‑to‑Market.",
+    "detalles": "- **Básico**: Enfocarse en una única hipótesis de problema‑solución‑mercado y validar con entrevistas y pruebas de concepto.  \r\n- **Intermedio**: Introducir experimentos A/B para optimizar la propuesta de valor y usar cohort analysis para medir retención.  \r\n- **Avanzado**: Integrar modelos de predicción de churn, segmentación dinámica y análisis de lifetime value (LTV) para refinar el PMF y guiar decisiones de precios y expansión geográfica.",
+    "ejemplo_minimo": "```python\r\n# Simulación simple de retención a 30 días\r\nusuarios_iniciales = 100\r\nretencion_30d = 0.45  # 45 % de usuarios siguen activos\r\n\r\nif retencion_30d >= 0.40:\r\n    print(\"PMF alcanzado: escalar\")\r\nelse:\r\n    print(\"PMF no alcanzado: iterar\")\r\n```",
+    "errores_comunes": "- Confundir alta adopción inicial con PMF; evitarlo midiendo retención a medio plazo.  \r\n- Ignorar el segmento de mercado y lanzar a todos; enfocarse en un nicho definido.  \r\n- Usar métricas de vanity (p.ej., descargas) sin validar uso real; priorizar retención y NPS.",
+    "estado_actual": "El PMF sigue siendo un criterio estable para decidir inversión en producto; la práctica moderna incorpora análisis de cohortes y métricas de LTV para complementar la evaluación tradicional de retención y crecimiento.",
+    "ideas_clave": "1. **Problema real**: Identificar un dolor del cliente que sea lo suficientemente importante para que busque una solución.  \r\n2. **Solución viable**: Construir un MVP que resuelva ese dolor de forma mínima pero funcional.  \r\n3. **Mercado objetivo**: Definir un segmento de usuarios que comparta ese problema y esté dispuesto a pagar.  \r\n4. **Validación de métricas**: Usar indicadores como retención, tasa de crecimiento y Net Promoter Score para confirmar el ajuste.  \r\n5. **Iteración o escalado**: Decidir si se pivota, se itera o se escala según los resultados de la validación.",
+    "objetivo": "Utilizo el concepto de Product‑Market Fit (PMF) para validar que el problema que mi equipo está resolviendo realmente importa al segmento de usuarios al que apuntamos y que la solución que entregamos satisface esa necesidad de forma sostenible. Resuelvo la incertidumbre de si seguir invirtiendo en desarrollo o pivotar, y lo aplico cada vez que analizo métricas de adopción, retención y crecimiento después del lanzamiento de un MVP. Cuando entiendo que el producto está alineado con el mercado, puedo concentrarme en escalar, definir la hoja de ruta y planificar la estrategia Go‑to‑Market; si el PMF no se alcanza, priorizo iteraciones o cambios de enfoque. No necesito preocuparme por el PMF una vez que el producto está en una fase de madurez estable y las métricas clave se mantienen consistentemente por encima de los umbrales de éxito definidos.",
+    "preguntas_repaso": "1. ¿Qué métricas utilizo para confirmar que he alcanzado Product‑Market Fit?  \r\n2. ¿Cómo afecta la definición del mercado objetivo a la validación del PMF?  \r\n3. ¿Cuál es la diferencia entre una alta adopción inicial y un verdadero PMF?  \r\n4. ¿Qué decisiones estratégicas se toman una vez que el PMF está confirmado?  \r\n5. ¿Cómo se relaciona el PMF con la fase de Go‑to‑Market?",
+    "ruta_estudio": "1. **Prerequisitos**: Conocer técnicas de entrevista de usuarios y fundamentos de métricas de producto.  \r\n2. **Fundamentos**: Lectura de casos de estudio de PMF y práctica con experimentos de MVP.  \r\n3. **Intermedio**: Aprender cohort analysis y herramientas de analítica (Mixpanel, Amplitude).  \r\n4. **Avanzado**: Modelado de LTV, churn prediction y estrategias de escalado post‑PMF."
+  },
+  "sections_missing": [],
+  "slug": "product-market-fit",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/product-management"
+  ],
+  "title": "Product-Market Fit",
+  "uid": "c_MZ7L6JLNSU",
+  "verification_marks": []
+}

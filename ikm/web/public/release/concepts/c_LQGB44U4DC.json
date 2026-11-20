@@ -1,0 +1,37 @@
+{
+  "aliases": [
+    "Structured Outputs"
+  ],
+  "area_uid": "ai-engineering",
+  "content_hash": "4902b02a7da947a7d0292a239ed1bdfc8eba1ba29c84574bbbac81f296499a02",
+  "numero": 11,
+  "related_uids": [
+    "c_4ZDQZL6GC7",
+    "c_JS77WZ6QYB",
+    "c_R73S6QTQFN",
+    "c_RJE3D4II2X"
+  ],
+  "sections": {
+    "como_funciona": "1. Se escribe un **JSON Schema** que describa los campos esperados (tipo, enum, rango).  \r\n2. El esquema se incluye en el prompt mediante la instrucción “devuelve un JSON que cumpla este esquema”.  \r\n3. El modelo realiza **Constrained Generation**, guiado por el esquema, y produce un texto que se valida contra él.  \r\n4. La respuesta se parsea automáticamente a **Typed Outputs**, por ejemplo a un `dataclass` en Python, listo para usar en el resto del sistema.",
+    "conexiones": "- **Prompt Engineering**: la redacción del prompt que incluye el esquema es una técnica clave de ingeniería de prompts.  \r\n- **Tool Calling**: cuando la generación estructurada es insuficiente, el modelo puede invocar una herramienta que devuelve datos ya validados.  \r\n- **Memory**: mantener el esquema y los resultados anteriores en la memoria del agente permite respuestas coherentes a lo largo de una conversación.",
+    "detalles": "- **Básico**: crear un esquema simple (string, number) y añadirlo al prompt.  \r\n- **Intermedio**: usar validaciones avanzadas (enum, patrones regex) y manejar errores de validación con re‑prompting.  \r\n- **Avanzado**: combinar varios esquemas mediante `oneOf`/`anyOf`, integrar con **Tool Calling** para que el modelo invoque funciones que devuelvan datos estructurados, y aplicar **Memory** para mantener consistencia entre llamadas sucesivas.",
+    "ejemplo_minimo": "```python\r\nimport openai\r\nimport json\r\nfrom pydantic import BaseModel\r\n\r\nclass Producto(BaseModel):\r\n    id: int\r\n    nombre: str\r\n    precio: float\r\n\r\nschema = {\r\n    \"type\": \"object\",\r\n    \"properties\": {\r\n        \"id\": {\"type\": \"integer\"},\r\n        \"nombre\": {\"type\": \"string\"},\r\n        \"precio\": {\"type\": \"number\"}\r\n    },\r\n    \"required\": [\"id\", \"nombre\", \"precio\"]\r\n}\r\n\r\nprompt = f\"\"\"Devuelve un JSON que cumpla este esquema:\r\n{json.dumps(schema, indent=2)}\"\"\"\r\n\r\nresp = openai.ChatCompletion.create(\r\n    model=\"gpt-4o-mini\",\r\n    messages=[{\"role\": \"user\", \"content\": prompt}],\r\n    temperature=0\r\n)\r\n\r\ndata = json.loads(resp.choices[0].message.content)\r\nproducto = Producto(**data)\r\nprint(producto)\r\n```",
+    "errores_comunes": "- **Olvidar validar** la salida contra el esquema → se generan excepciones al parsear.  \r\n- **Esquema demasiado rígido** (p.ej. campos obligatorios innecesarios) → el modelo falla al cumplirlo.  \r\n- **No usar temperature=0** en entornos críticos → aumenta la variabilidad y rompe la estructura.",
+    "estado_actual": "- **Fundamentos estables**: JSON Schema y la práctica de incluirlo en prompts son ampliamente soportados por los principales proveedores de LLM.  \r\n- **Práctica moderna**: los frameworks de IA (LangChain, LlamaIndex) ofrecen wrappers que automatizan la validación y el mapeo a tipos, y la integración con **Tool Calling** permite que el modelo delegue la generación estructurada a funciones externas cuando la complejidad supera la capacidad de generación directa.",
+    "ideas_clave": "1. **JSON Schema**: define la estructura, tipos y restricciones que la salida debe cumplir.  \r\n2. **Constrained Generation**: el modelo genera texto que respeta el esquema, evitando valores fuera de rango o campos faltantes.  \r\n3. **Typed Outputs**: la salida se interpreta directamente como objetos tipados en el lenguaje de programación, eliminando parsing manual.",
+    "objetivo": "Utilizo **Structured Outputs** para obligar a un modelo de IA a devolver datos en un formato predefinido, como JSON que sigue un esquema concreto. Resuelvo el problema de respuestas impredecibles o mal formateadas que dificultan la integración automática en pipelines de producción. Aparecen cada vez que el producto necesita consumir la salida del modelo en componentes posteriores, por ejemplo en validación de datos, generación de tickets o actualización de bases de datos. Después de entender este concepto, puedo diseñar prompts que garanticen tipado seguro y reducir la lógica de parsing en el código de la aplicación. No necesito preocuparme cuando la salida se usa solo para visualización humana o cuando el modelo ya entrega el formato requerido sin ambigüedad.",
+    "preguntas_repaso": "1. ¿Qué ventaja aporta un JSON Schema al diseñar la salida de un modelo de IA?  \r\n2. ¿Cómo afecta la temperatura del modelo a la fiabilidad de los Structured Outputs?  \r\n3. ¿Qué ocurre si la respuesta del modelo no pasa la validación contra el esquema?  \r\n4. ¿De qué manera se relaciona Structured Outputs con Tool Calling?  \r\n5. ¿Cuál es el beneficio de mapear la salida a un tipo tipado como un `dataclass` o `pydantic` model?",
+    "ruta_estudio": "1. **Prerequisitos**: manejo básico de prompts, familiaridad con JSON y tipos de datos en Python.  \r\n2. **Fundamentos**: aprender a escribir JSON Schemas y a incluirlos en prompts.  \r\n3. **Práctica**: implementar validación automática con `pydantic` o `dataclasses`.  \r\n4. **Avanzado**: explorar `oneOf`/`anyOf`, combinar con Tool Calling y gestionar estado con Memory.  \r\n5. **Especialización**: contribuir a librerías como LangChain que abstraen Structured Outputs para flujos de trabajo complejos."
+  },
+  "sections_missing": [],
+  "slug": "structured-outputs",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/ai-engineering"
+  ],
+  "title": "Structured Outputs",
+  "uid": "c_LQGB44U4DC",
+  "verification_marks": []
+}

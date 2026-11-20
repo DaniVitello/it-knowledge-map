@@ -1,0 +1,37 @@
+{
+  "aliases": [
+    "Technical Leadership"
+  ],
+  "area_uid": "software-engineering",
+  "content_hash": "efba16bb89b4a725debafedc50ad0d2c77e9a36e1f39722e9127837ea342aace",
+  "numero": 29,
+  "related_uids": [
+    "c_7HAIPW7HG2",
+    "c_FBWIOD73FI",
+    "c_N6K5FPOTSK",
+    "c_VQIWAM3DJF"
+  ],
+  "sections": {
+    "como_funciona": "1. Identifico los requerimientos del negocio y los traducido en criterios técnicos.  \r\n2. Evalúo alternativas tecnológicas y, basándome en los criterios, tomo una decisión informada.  \r\n3. Formalizo los estándares resultantes y los comunico al equipo mediante documentos y sesiones de revisión.  \r\n4. Establezco una hoja de ruta técnica que define hitos arquitectónicos y prioridades de refactorización.  \r\n5. Mantengo canales de feedback con stakeholders y con el equipo para ajustar la dirección según evoluciona el proyecto.",
+    "conexiones": "- **Engineering Processes** – El liderazgo técnico define y refina los procesos de desarrollo, como CI/CD y revisión de código.  \r\n- **Stakeholder Management** – Coordina expectativas entre clientes, product owners y el equipo técnico, asegurando que las decisiones técnicas soporten los objetivos de negocio.  \r\n- **Team Coordination** – Facilita la organización del trabajo, la asignación de tareas y la sincronización entre sub‑equipos.",
+    "detalles": "- **Básico:** Comprender la diferencia entre decisiones tácticas (corto plazo) y estratégicas (largo plazo). Adoptar un estilo de codificación uniforme y usar herramientas de linting.  \r\n- **Intermedio:** Implementar procesos de revisión de arquitectura, crear guías de estilo y establecer métricas de calidad (cobertura de pruebas, complejidad).  \r\n- **Avanzado:** Liderar la adopción de micro‑servicios o arquitectura basada en eventos, gestionar la deuda técnica mediante planes de refactorización y actuar como puente entre la visión del producto y la ejecución técnica.",
+    "ejemplo_minimo": "```python\r\n# Ejemplo de decisión técnica: elegir una librería de logging\r\nif environment == \"production\":\r\n    logger = structlog.get_logger()   # estándar para producción\r\nelse:\r\n    logger = logging.getLogger(__name__)  # estándar simple para desarrollo\r\n```",
+    "errores_comunes": "- **Decidir sin datos:** Evitar decisiones basadas solo en preferencias personales; usar pruebas de concepto y métricas.  \r\n- **Imponer estándares rígidos:** Adaptar normas al contexto del proyecto y revisarlas periódicamente.  \r\n- **Falta de comunicación:** Compartir decisiones y razones en tiempo real, no solo en documentos estáticos.  \r\n- **Descuidar la mentoría:** Invertir tiempo en revisiones constructivas para elevar la capacidad del equipo.",
+    "estado_actual": "Los fundamentos del liderazgo técnico —toma de decisiones, definición de estándares y visión arquitectónica— siguen siendo estables y ampliamente aceptados. En la práctica moderna, se complementan con metodologías de DevOps, automatización de pruebas y cultura de “continuous improvement”, que facilitan la aplicación de los estándares y la retroalimentación continua.",
+    "ideas_clave": "1. **Decisiones** – Selección de tecnologías, patrones y enfoques que resuelven los requerimientos del producto.  \r\n2. **Estándares** – Definición y difusión de normas de codificación, pruebas y revisión de código.  \r\n3. **Dirección técnica** – Visión a largo plazo que orienta la arquitectura y la evolución del sistema.  \r\n4. **Comunicación** – Intercambio constante con stakeholders y equipos para alinear expectativas.  \r\n5. **Mentoría** – Apoyo al crecimiento profesional de los miembros del equipo.",
+    "objetivo": "Utilizo el liderazgo técnico para guiar al equipo de desarrollo hacia soluciones coherentes, eficientes y alineadas con los objetivos del negocio. Resuelvo la necesidad de tomar decisiones arquitectónicas, definir estándares de código y establecer la dirección tecnológica del proyecto. Aparece en mi día a día cuando debo priorizar tecnologías, validar diseños y asegurar la calidad del producto. Después de entenderlo, puedo influir en la arquitectura, mentorizar a los desarrolladores y facilitar la adopción de buenas prácticas. No necesito preocuparme cuando el proyecto está en fase de mantenimiento sin cambios estructurales ni cuando la organización delega esas decisiones a un comité externo.",
+    "preguntas_repaso": "1. ¿Qué criterios utilizo para distinguir entre una decisión táctica y una estratégica?  \r\n2. ¿Cómo se traduce un estándar de codificación en una práctica diaria del equipo?  \r\n3. ¿De qué manera la dirección técnica influye en la gestión de stakeholders?  \r\n4. ¿Qué pasos sigo para validar una nueva tecnología antes de adoptarla?  \r\n5. ¿Cuál es el papel de la mentoría dentro del liderazgo técnico?",
+    "ruta_estudio": "1. **Prerequisitos:** Conocimientos sólidos de programación, patrones de diseño y fundamentos de arquitectura de software.  \r\n2. **Fundamentos:** Estudiar guías de estilo (p. ej., Google Style Guide), técnicas de toma de decisiones (análisis de trade‑offs) y principios de arquitectura (SOLID, capas).  \r\n3. **Intermedio:** Practicar revisiones de arquitectura, crear y mantener documentos de estándares, y liderar retrospectives técnicas.  \r\n4. **Avanzado:** Aprender sobre arquitectura evolutiva (micro‑servicios, event‑driven), gestión de deuda técnica y liderazgo de transformación cultural en organizaciones ágiles."
+  },
+  "sections_missing": [],
+  "slug": "technical-leadership",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/software-engineering"
+  ],
+  "title": "Technical Leadership",
+  "uid": "c_Q56AS5I5XQ",
+  "verification_marks": []
+}

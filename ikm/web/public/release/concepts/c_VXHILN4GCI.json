@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "Frameworks UI"
+  ],
+  "area_uid": "frontend",
+  "content_hash": "2a855d35560548dd4a576bec9fb3e73077c3c7697bc24330b81befe8976d5bec",
+  "numero": 14,
+  "related_uids": [
+    "c_JPHEZJIFHI",
+    "c_UAIG2N6OVP",
+    "c_WYVLRHHAGA"
+  ],
+  "sections": {
+    "como_funciona": "1. Defino un componente describiendo su UI en JSX (React) o en templates (Vue, Svelte).  \r\n2. Declaro el estado inicial mediante `useState`, `reactive` o `store`.  \r\n3. El framework renderiza el componente y crea un árbol virtual del DOM.  \r\n4. Cuando el estado cambia, el árbol virtual se actualiza y el algoritmo de reconciliación genera solo los cambios necesarios en el DOM real.  \r\n5. Los hooks de ciclo de vida (`useEffect`, `onMounted`, etc.) permiten ejecutar efectos secundarios después de cada render.  \r\n6. El router intercepta la URL y monta el componente correspondiente, manteniendo la navegación sin recargar la página.",
+    "conexiones": "- **Componentización** – los frameworks UI estructuran la UI en componentes, facilitando la reutilización y el aislamiento de lógica.  \r\n- **Estado** – la gestión de estado dentro del framework mantiene sincronizados los datos y la representación visual.  \r\n- **Arquitectura Frontend** – la elección de un framework UI influye en la organización de capas, la separación de responsabilidades y la estrategia de despliegue.",
+    "detalles": "- **Básico**: crear componentes funcionales, pasar props y manejar eventos simples.  \r\n- **Intermedio**: usar contextos o stores para compartir estado, aplicar memoization y dividir código con lazy loading.  \r\n- **Avanzado**: personalizar el compilador (por ejemplo, plugins de Babel), implementar renderizado del lado del servidor (SSR) y optimizar la hidratación para mejorar el Time‑to‑Interactive.",
+    "ejemplo_minimo": "```jsx\r\n// React – componente que muestra un contador\r\nimport { useState } from \"react\";\r\n\r\nfunction Contador() {\r\n  const [c, setC] = useState(0);\r\n  return (\r\n    <button onClick={() => setC(c + 1)}>\r\n      Clicks: {c}\r\n    </button>\r\n  );\r\n}\r\nexport default Contador;\r\n```",
+    "errores_comunes": "- **Mutar el estado directamente** → el UI no se actualiza; usar siempre la API de actualización del framework.  \r\n- **Olvidar limpiar efectos** (`useEffect` sin retorno) → fugas de memoria; devolver una función de cleanup.  \r\n- **Pasar props innecesarias** → re‑renders costosos; aplicar memoization o dividir componentes.",
+    "estado_actual": "- **Fundamentos estables**: la idea de componentes reutilizables, el árbol virtual y la gestión declarativa del estado son pilares consolidados en React, Vue y Svelte.  \r\n- **Práctica moderna**: el uso de hooks, la composición basada en funciones y la integración con TypeScript son tendencias predominantes; el SSR y la generación estática (Next.js, Nuxt, SvelteKit) están en expansión.",
+    "ideas_clave": "1. **Componentes** – unidades autónomas que encapsulan markup, estilo y lógica.  \r\n2. **Gestión de estado** – mecanismo centralizado o local para sincronizar datos y UI.  \r\n3. **Ciclo de vida** – hooks que permiten ejecutar código en momentos clave del componente.  \r\n4. **Enrutamiento** – integración con routers para mapear URLs a vistas.  \r\n5. **Herramientas de compilación** – bundlers y transpilers que convierten el código del framework a JavaScript ejecutable.",
+    "objetivo": "Utilizo un framework UI para estructurar la interfaz de usuario de una aplicación web de forma declarativa y reutilizable. Resuelvo la complejidad de gestionar componentes, su estado y la interacción con el DOM sin escribir código imperativo extenso. En mi día a día como desarrollador Frontend, elijo un framework UI cuando el proyecto requiere una UI dinámica, mantenible y escalable. Después de dominarlo puedo diseñar arquitecturas modulares, integrar pruebas unitarias y optimizar el rendimiento. No necesito preocuparme por un framework UI en proyectos estáticos muy simples o cuando el equipo decide usar una solución sin JavaScript.",
+    "preguntas_repaso": "1. ¿Qué ventaja ofrece el árbol virtual frente a la manipulación directa del DOM?  \r\n2. ¿Cómo se comparte estado entre componentes que no están directamente relacionados?  \r\n3. ¿En qué momento del ciclo de vida es apropiado iniciar una petición a una API?  \r\n4. ¿Cuál es la diferencia principal entre renderizado del lado del cliente y del lado del servidor?  \r\n5. ¿Por qué es importante limpiar efectos secundarios en los hooks?",
+    "ruta_estudio": "1. **Prerequisitos**: HTML, CSS, JavaScript ES6, conceptos de DOM.  \r\n2. **Fundamentos**: tutorial oficial del framework elegido (p. ej., “Getting Started” de React).  \r\n3. **Intermedio**: manejo de estado avanzado (Redux, Pinia, Svelte stores) y routing.  \r\n4. **Avanzado**: SSR con Next.js/Nuxt, pruebas con Jest/Testing Library, optimización de bundle con code‑splitting.  \r\n5. **Especialización**: crear librerías de componentes, migrar a monorepos y aplicar patrones de arquitectura como micro‑frontends."
+  },
+  "sections_missing": [],
+  "slug": "frameworks-ui",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/frontend"
+  ],
+  "title": "Frameworks UI",
+  "uid": "c_VXHILN4GCI",
+  "verification_marks": []
+}

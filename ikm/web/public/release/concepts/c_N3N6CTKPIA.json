@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "Middleware"
+  ],
+  "area_uid": "backend",
+  "content_hash": "8d0b193b2ed0050b040f7c57d26f57283d2bdb8a19905e06e1c2cf34bb6100d0",
+  "numero": 8,
+  "related_uids": [
+    "c_CLBL3KTWT4",
+    "c_D7P4FE3X2D"
+  ],
+  "sections": {
+    "como_funciona": "1. La petición llega al servidor y entra al primer middleware del pipeline.  \r\n2. Cada middleware ejecuta su lógica (p. ej., escribe un log) y llama a `next()` para pasar el control.  \r\n3. Si un middleware detecta una condición de error (auth fallida, validación incorrecta), puede responder inmediatamente o lanzar una excepción.  \r\n4. Las excepciones son atrapadas por el middleware de manejo de errores, que formatea la respuesta y finaliza el ciclo.  \r\n5. Cuando todos los middleware completan su trabajo, el controlador procesa la petición y devuelve la respuesta, que puede pasar por middleware de post‑processing antes de enviarse al cliente.",
+    "conexiones": "- **Error Handling**: el middleware de errores se coloca al final del pipeline y centraliza la generación de respuestas de fallo.  \r\n- **Validación**: los middleware de validación actúan antes del controlador, garantizando que los datos cumplen el contrato esperado.  \r\n- **Caching** (de la capa de infraestructura): un middleware puede servir respuestas almacenadas para reducir carga en los servicios de negocio.",
+    "detalles": "- **Básico**: Definir funciones con la firma `(req, res, next)` y registrarlas en el orden deseado.  \r\n- **Intermedio**: Utilizar middleware de terceros (p. ej., `morgan` para logging, `passport` para auth) y combinarlo con middleware propio.  \r\n- **Avanzado**: Crear middleware asincrónico que devuelve promesas, manejar contextos de request con `async‑local‑storage`, y diseñar pipelines reutilizables mediante composición funcional.",
+    "ejemplo_minimo": "```js\r\nconst express = require('express');\r\nconst app = express();\r\n\r\n// Middleware de logging simple\r\napp.use((req, res, next) => {\r\n  console.log(`${req.method} ${req.path}`);\r\n  next();\r\n});\r\n\r\n// Middleware de validación de query param \"id\"\r\napp.use((req, res, next) => {\r\n  if (!req.query.id) {\r\n    return res.status(400).json({ error: 'Missing id' });\r\n  }\r\n  next();\r\n});\r\n\r\napp.get('/', (req, res) => res.send('Hola Mundo'));\r\n\r\napp.listen(3000);\r\n```",
+    "errores_comunes": "- **Olvidar llamar `next()`**: la petición se queda colgada; siempre termina la cadena.  \r\n- **Orden incorrecto**: colocar el middleware de autenticación después del controlador impide su protección; ordenar según la prioridad de la lógica.  \r\n- **Capturar errores sin pasar al manejador**: lanzar una excepción sin `next(err)` evita que el middleware de error central lo procese; usar `next(err)` o `try/catch` async.",
+    "estado_actual": "Los fundamentos del middleware (pipeline, firma `(req, res, next)`) son estables y forman parte del core de frameworks como Express, Koa y Fastify. En la práctica moderna, se favorecen middleware asincrónicos, integración con sistemas de observabilidad (OpenTelemetry) y patrones de composición funcional para crear pipelines altamente reutilizables.",
+    "ideas_clave": "1. **Pipeline** – Cada middleware es una pieza del flujo que se ejecuta en orden, recibiendo `req`, `res` y una función `next`.  \r\n2. **Logging** – Un middleware registra información de la petición (método, ruta, tiempo) para auditoría y diagnóstico.  \r\n3. **Auth** – Verifica credenciales o tokens y decide si la solicitud puede continuar.  \r\n4. **Validación** – Comprueba que los datos de entrada cumplen con el esquema esperado antes de llegar al controlador.  \r\n5. **Errores** – Captura excepciones lanzadas por los middleware anteriores y genera respuestas de error uniformes.",
+    "objetivo": "Utilizo middleware para interceptar y transformar las peticiones y respuestas dentro de una aplicación backend. Resuelvo problemas como la generación de logs centralizados, la autenticación de usuarios, la validación de datos de entrada y el manejo consistente de errores, sin mezclar esa lógica con el código de negocio. Aparece en cada capa de la pila HTTP/REST, justo antes de que el controlador procese la solicitud y después de que genere la respuesta. Después de entenderlo, puedo diseñar pipelines reutilizables, componer funcionalidades y mantener el código limpio. No necesito preocuparme por middleware cuando la aplicación es trivial, sin requisitos de seguridad, logging o validación, o cuando utilizo un framework que ya lo gestiona internamente.",
+    "preguntas_repaso": "1. ¿Qué papel juega la función `next()` dentro de un middleware?  \r\n2. ¿Cómo afecta el orden de registro de los middleware al comportamiento de la aplicación?  \r\n3. ¿Cuál es la diferencia entre un middleware de validación y uno de manejo de errores?  \r\n4. ¿Por qué es importante que los middleware sean asincrónicos en aplicaciones modernas?  \r\n5. ¿Qué ventajas aporta la composición funcional al diseñar pipelines de middleware?",
+    "ruta_estudio": "1. **Prerequisitos**: Node.js, conceptos de HTTP, manejo de promesas y async/await.  \r\n2. **Fundamentos**: crear middleware básico en Express, entender el orden de ejecución.  \r\n3. **Herramientas**: explorar paquetes populares (`morgan`, `helmet`, `passport`).  \r\n4. **Patrones avanzados**: composición de middleware, manejo de contexto con `async‑local‑storage`.  \r\n5. **Observabilidad**: integrar logging estructurado y trazas distribuidas.  \r\n6. **Escalado**: diseñar pipelines que funcionen en entornos serverless y microservicios."
+  },
+  "sections_missing": [],
+  "slug": "middleware",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/backend"
+  ],
+  "title": "Middleware",
+  "uid": "c_N3N6CTKPIA",
+  "verification_marks": []
+}

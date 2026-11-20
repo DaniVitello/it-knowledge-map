@@ -1,0 +1,38 @@
+{
+  "aliases": [
+    "MVP"
+  ],
+  "area_uid": "product-management",
+  "content_hash": "7e7452968419e7e8407ac2bdbc93e5c8a491e493b963c8b3de3c8610f9036918",
+  "numero": 15,
+  "related_uids": [
+    "c_4Q26FRTYNL",
+    "c_5BZPAUGDCC",
+    "c_F45REZFNEG",
+    "c_MZ7L6JLNSU",
+    "c_YLNAJABAUR"
+  ],
+  "sections": {
+    "como_funciona": "1. En Product Discovery identifico una necesidad y formulo una hipótesis medible.  \r\n2. Con el equipo delimito el alcance mínimo que permita a los usuarios interactuar con la solución.  \r\n3. Construyo el MVP en el menor tiempo posible (sprint de 1‑2 semanas).  \r\n4. Lo lanzo a un segmento controlado y recojo datos (tasa de activación, retención, feedback).  \r\n5. Analizo los indicadores y tomo una decisión: escalar al Product‑Market Fit, pivotar la hipótesis o descartar la idea.",
+    "conexiones": "- **Product Discovery**: el MVP es la herramienta de ejecución que transforma ideas descubiertas en pruebas concretas.  \r\n- **Product‑Market Fit**: los resultados del MVP alimentan la evaluación de si el producto está alineado con una necesidad real del mercado.  \r\n- **Go‑to‑Market**: una vez validado el MVP, la estrategia de lanzamiento se basa en los aprendizajes para priorizar funcionalidades y canales.",
+    "detalles": "- **Básico**: definir hipótesis y métricas, crear una versión “casi‑nada” (landing page, mockup interactivo).  \r\n- **Intermedio**: implementar una funcionalidad mínima (registro + acción principal) y automatizar la recolección de métricas.  \r\n- **Avanzado**: integrar pruebas A/B, segmentación de usuarios y pipelines de datos para decisiones en tiempo real; conectar el MVP al ciclo de Product Lifecycle para planificar versiones posteriores.",
+    "ejemplo_minimo": "```python\r\n# MVP de una app de reservas de clases de yoga: solo registro y reserva\r\nfrom flask import Flask, request, jsonify\r\n\r\napp = Flask(__name__)\r\nreservas = []\r\n\r\n@app.route(\"/register\", methods=[\"POST\"])\r\ndef register():\r\n    user = request.json[\"email\"]\r\n    return jsonify({\"msg\": f\"Usuario {user} registrado\"}), 201\r\n\r\n@app.route(\"/book\", methods=[\"POST\"])\r\ndef book():\r\n    data = request.json\r\n    reservas.append({\"email\": data[\"email\"], \"clase\": data[\"clase\"]})\r\n    return jsonify({\"msg\": \"Reserva confirmada\"}), 200\r\n\r\nif __name__ == \"__main__\":\r\n    app.run(debug=True)\r\n```\r\nEste código permite validar si los usuarios completan registro y reserva, datos suficientes para medir interés inicial.",
+    "errores_comunes": "- **Construir demasiado**: añadir funcionalidades no esenciales diluye la velocidad de aprendizaje. *Evitar*: limitar el alcance a la hipótesis principal.  \r\n- **Métricas irrelevantes**: medir uso superficial en lugar de la métrica de éxito definida. *Evitar*: alinear cada dato recolectado con la hipótesis.  \r\n- **Ignorar feedback cualitativo**: enfocarse solo en números y perder insights de usuarios. *Evitar*: combinar análisis cuantitativo y entrevistas.",
+    "estado_actual": "- **Fundamentos estables**: el MVP sigue siendo la práctica recomendada para validar hipótesis con bajo riesgo y coste.  \r\n- **Práctica moderna**: se complementa con técnicas de Experimentation (feature flags, pruebas A/B) y con plataformas de low‑code que aceleran la entrega del MVP.",
+    "ideas_clave": "1. **Hipótesis clara** – Defino qué problema del cliente quiero validar y cuál es la métrica de éxito.  \r\n2. **Alcance mínimo** – Selecciono solo las funcionalidades imprescindibles para que el usuario pueda experimentar la solución.  \r\n3. **Iteración rápida** – Lanzo, mido, aprendo y ajusto en ciclos cortos de tiempo.  \r\n4. **Decisión basada en datos** – Uso los resultados para decidir si escalar, pivotar o abandonar.",
+    "objetivo": "Utilizo el MVP para validar, con el menor esfuerzo posible, una hipótesis de valor o de mercado antes de invertir en un producto completo. Resuelvo la incertidumbre de si los usuarios realmente necesitan la solución que imagino, evitando costos innecesarios y tiempo perdido. Aparece en mi día a día cuando paso de la fase de Product Discovery a la de construcción: defino el conjunto mínimo de funcionalidades que permitan medir el comportamiento real del usuario y tomo decisiones basadas en esos datos. Después de entender el MVP, puedo diseñar experimentos de Experimentation, priorizar el roadmap y planificar el Go‑to‑Market. No necesito preocuparme por el MVP cuando la hipótesis ya está probada o cuando el producto es una mejora incremental de una solución existente con usuarios ya comprometidos.",
+    "preguntas_repaso": "1. ¿Cuál es la diferencia entre una hipótesis de valor y una métrica de éxito en un MVP?  \r\n2. ¿Cómo determina el MVP el punto de decisión entre escalar, pivotar o abandonar?  \r\n3. ¿Qué riesgos implica añadir funcionalidades fuera del alcance mínimo?  \r\n4. ¿De qué manera el feedback cualitativo complementa los datos cuantitativos del MVP?  \r\n5. ¿Cómo se conecta el aprendizaje del MVP con la planificación del Go‑to‑Market?",
+    "ruta_estudio": "1. **Prerequisitos**: conceptos de Product Discovery, definición de hipótesis y métricas, fundamentos de Agile/Scrum.  \r\n2. **Fundamento**: leer casos de MVP en startups, practicar con landing pages y prototipos rápidos.  \r\n3. **Intermedio**: desarrollar MVPs funcionales usando frameworks ligeros (Flask, Node.js) y configurar analytics básicas.  \r\n4. **Avanzado**: dominar experimentación (feature flags, A/B testing), integración de datos en tiempo real y escalado a Product‑Market Fit."
+  },
+  "sections_missing": [],
+  "slug": "mvp",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/product-management"
+  ],
+  "title": "MVP",
+  "uid": "c_ETWVMQBZXQ",
+  "verification_marks": []
+}

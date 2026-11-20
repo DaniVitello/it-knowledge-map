@@ -1,0 +1,42 @@
+{
+  "aliases": [
+    "Layout"
+  ],
+  "area_uid": "frontend",
+  "content_hash": "49dcc9544b4ef614c62f8850ae0ea986f9753ce10a816ba53de7c8d714ef4c20",
+  "numero": 4,
+  "related_uids": [
+    "c_6ETCQ4KE2I",
+    "c_IFH4CCKUM6",
+    "c_UTVABXNLDY",
+    "c_ZIBCUCIHW3"
+  ],
+  "sections": {
+    "como_funciona": "1. El navegador construye el **DOM** y asigna estilos desde el **CSS**.  \r\n2. Si un contenedor tiene `display: flex`, el motor de layout calcula el eje principal y secundario, distribuye el espacio según `justify-content` y `align-items`.  \r\n3. Si el contenedor usa `display: grid`, se definen líneas de cuadrícula y el motor coloca cada hijo en la celda indicada por `grid-row/column`.  \r\n4. Cuando se activa una **media query**, los valores de `flex-direction`, `grid-template-columns`, etc., cambian, re‑ejecutando el algoritmo de layout para el nuevo ancho de viewport.  \r\n5. Si un elemento tiene `position: absolute` o `fixed`, se saca del flujo y se posiciona respecto a su ancestro posicionado o al viewport, sobrescribiendo el cálculo de Flexbox/Grid solo para ese nodo.",
+    "conexiones": "- **HTML** – los elementos estructurales (`section`, `article`, `nav`) son los nodos que reciben estilos de layout.  \r\n- **CSS** – define los algoritmos de Flexbox, Grid y posicionamiento que el navegador ejecuta.  \r\n- **DOM** – el árbol de nodos que el motor de layout recorre para calcular posiciones y tamaños.  \r\n- **Responsive Design** – depende de media queries y unidades relativas (`fr`, `vw`, `%`) para adaptar el layout.",
+    "detalles": "- **Básico**: usar `display: flex` para alinear botones en una barra; `margin` y `padding` siguen funcionando dentro del flex container.  \r\n- **Intermedio**: combinar `flex-wrap` con `gap` para crear filas que se envuelvan; usar `grid-template-areas` para nombrar zonas de layout (header, main, aside, footer).  \r\n- **Avanzado**: anidar Flexbox dentro de Grid (y viceversa) para layouts híbridos; emplear `minmax()` y `auto-fill/auto-fit` en Grid para crear columnas fluidas sin media queries; aplicar `position: sticky` para encabezados que permanecen visibles al hacer scroll.",
+    "ejemplo_minimo": "```html\r\n<!DOCTYPE html>\r\n<html lang=\"es\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <style>\r\n    .container { display: flex; gap: 1rem; }\r\n    .item { flex: 1; background:#e0e0e0; padding:1rem; text-align:center; }\r\n    @media (max-width:600px) {\r\n      .container { flex-direction: column; }\r\n    }\r\n  </style>\r\n</head>\r\n<body>\r\n  <div class=\"container\">\r\n    <div class=\"item\">A</div>\r\n    <div class=\"item\">B</div>\r\n    <div class=\"item\">C</div>\r\n  </div>\r\n</body>\r\n</html>\r\n```\r\n?? verificar (ejemplo basado en práctica común, sin fuente explícita).",
+    "errores_comunes": "- **Olvidar `box-sizing: border-box`** → los paddings alteran el ancho calculado; evitarlo con `* { box-sizing: border-box; }`.  \r\n- **Usar `float` para layout** → rompe el flujo y genera clearfix innecesario; reemplazar por Flexbox/Grid.  \r\n- **Aplicar `position: absolute` a todo** → pierde responsividad; usar solo cuando el elemento debe estar fuera del flujo.  \r\n- **No definir `gap` en navegadores antiguos** → los espacios desaparecen; fallback con margenes.",
+    "estado_actual": "- **Fundamentos estables**: Flexbox y Grid son parte del estándar CSS 3 y están soportados en todos los navegadores modernos (sin necesidad de prefijos).  \r\n- **Práctica moderna**: uso de `gap` en Flexbox, `minmax()` y `auto-fit` en Grid, y combinaciones de layout con CSS Custom Properties para temas dinámicos.  \r\n- **Sin verificar**: adopción de contenedores de layout basados en `subgrid` (aún en fase experimental en algunos navegadores).",
+    "ideas_clave": "1. **Flexbox** – alinea y distribuye elementos en una sola dimensión (fila o columna).  \r\n2. **Grid** – crea una cuadrícula bidimensional para posicionar elementos en filas y columnas.  \r\n3. **Posicionamiento** (static, relative, absolute, fixed, sticky) – controla cómo un elemento sale del flujo normal.  \r\n4. **Responsive** – combina media queries con Flexbox/Grid para adaptar el layout a distintos breakpoints.",
+    "objetivo": "Utilizo **Layout** para organizar visualmente los componentes de una página web, garantizando que la UI se adapte a diferentes tamaños de pantalla y que la interacción del usuario sea fluida. Resuelve el problema de colocar elementos de forma predecible sin depender de trucos de margen o posicionamiento absoluto que rompen el flujo del documento. Aparece en cada ticket de UI: desde una barra de navegación que colapsa en móvil hasta un dashboard con tarjetas alineadas. Después de dominarlo, puedo diseñar interfaces complejas (modal, grid de productos, formularios) sin escribir CSS redundante. No es necesario preocuparse por Layout cuando la UI es estática y solo necesita un flujo lineal de contenido.",
+    "preguntas_repaso": "1. ¿Qué diferencia hay entre `justify-content` y `align-items` en un contenedor Flexbox?  \r\n2. ¿Cómo usarías `grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))` para crear una galería responsive?  \r\n3. ¿En qué casos es apropiado usar `position: sticky` en lugar de `fixed`?  \r\n4. ¿Qué problema resuelve `gap` en Flexbox que antes se solucionaba con márgenes negativos?  \r\n5. ¿Cómo afecta el valor de `box-sizing` al cálculo del ancho de un elemento dentro de un layout?\r\n\r\n<!-- trazabilidad: run_id=run-20261111-221514-035111 concept=02-frontend-04-layout written_at=2026-11-12T01:15:14.686286+00:00 -->",
+    "ruta_estudio": "1. **Prerequisitos**: comprender la caja de CSS (`margin`, `border`, `padding`, `content`), y saber leer y escribir HTML semántico.  \r\n2. **Fundamentos**: tutoriales de Flexbox (eje principal, alineación, distribución) y Grid (líneas, áreas, funciones de pista).  \r\n3. **Responsive**: práctica con media queries y unidades fluidas.  \r\n4. **Avanzado**: anidamiento de layouts, `subgrid`, `gap` en Flexbox, y uso de CSS Variables para temas.  \r\n5. **Proyectos reales**: refactorizar una página existente usando solo Flexbox/Grid y medir mejoras de mantenimiento."
+  },
+  "sections_missing": [],
+  "slug": "layout",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/frontend"
+  ],
+  "title": "Layout",
+  "uid": "c_HRF35BCROZ",
+  "verification_marks": [
+    {
+      "kind": "sin_verificar",
+      "section": "Estado actual"
+    }
+  ]
+}

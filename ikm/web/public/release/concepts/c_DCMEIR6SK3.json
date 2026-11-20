@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "Servidor"
+  ],
+  "area_uid": "backend",
+  "content_hash": "354ae5c758bf9a7c6d2906c5a901f18796c0f270d14e3ee023a99a14f79be3de",
+  "numero": 3,
+  "related_uids": [
+    "c_472Y6TAHCW",
+    "c_HEPP5R7NCU"
+  ],
+  "sections": {
+    "como_funciona": "1. Al arrancar, el servidor crea el proceso principal y, según la configuración, procesos secundarios (workers).  \r\n2. Cada proceso abre uno o varios puertos y los enlaza al stack de red del sistema operativo.  \r\n3. Cuando un cliente abre una conexión al puerto expuesto, el kernel entrega la solicitud al proceso correspondiente.  \r\n4. El proceso procesa la petición, genera la respuesta y la envía por la misma conexión.  \r\n5. El servidor monitoriza señales (por ejemplo, SIGTERM) para iniciar un shutdown ordenado, cerrando conexiones y liberando recursos.",
+    "conexiones": "- **Processes** – Un servidor está compuesto por uno o varios procesos que ejecutan la lógica de la aplicación.  \r\n- **Daemons** – En sistemas Unix, el servidor suele ejecutarse como daemon para permanecer activo en segundo plano.  \r\n- **Services** – En entornos de orquestación, el servidor se expone como un Service que abstrae el acceso a sus puertos.",
+    "detalles": "- **Básico**: Configuración de puerto y arranque del proceso con un comando simple (`node server.js`, `python -m http.server`).  \r\n- **Intermedio**: Uso de *workers* o *thread pools* para manejar múltiples conexiones concurrentes sin bloquear. Se configuran límites de número de procesos y se habilita el *graceful shutdown*.  \r\n- **Avanzado**: Implementación de *hot reload* y *zero‑downtime deployments* mediante técnicas como *socket passing* entre procesos viejos y nuevos, y orquestación con contenedores que gestionan el lifecycle automáticamente.",
+    "ejemplo_minimo": "```python\r\n# server.py – servidor HTTP mínimo con la librería estándar\r\nimport http.server\r\nimport socketserver\r\n\r\nPORT = 8000\r\n\r\nclass Handler(http.server.SimpleHTTPRequestHandler):\r\n    pass\r\n\r\nwith socketserver.TCPServer((\"\", PORT), Handler) as httpd:\r\n    print(f\"Servidor escuchando en puerto {PORT}\")\r\n    httpd.serve_forever()\r\n```",
+    "errores_comunes": "- **Olvidar cerrar sockets** → provoca fugas de recursos; usar bloques `with` o manejadores de señal para asegurar el cierre.  \r\n- **Escuchar en puertos privilegiados sin permisos** → el proceso falla al iniciar; usar puertos >1024 o ejecutar con los privilegios adecuados.  \r\n- **No manejar excepciones en el ciclo de vida** → el servidor se detiene inesperadamente; envolver la lógica principal en `try/except` y registrar errores.",
+    "estado_actual": "Los fundamentos de procesos, puertos, conexiones y lifecycle son estables y forman la base de cualquier servidor backend. En la práctica moderna, se prefiere ejecutar servidores dentro de contenedores (Docker) y gestionarlos con orquestadores (Kubernetes) que automatizan el lifecycle y la exposición de puertos mediante *services* y *ingress*.",
+    "ideas_clave": "1. **Procesos** – El servidor inicia uno o varios procesos que ejecutan el código de la aplicación.  \r\n2. **Puertos** – Cada proceso escucha en un puerto TCP/UDP para aceptar conexiones entrantes.  \r\n3. **Conexiones** – Las peticiones de los clientes se establecen como conexiones de red sobre esos puertos.  \r\n4. **Lifecycle** – El servidor controla el ciclo de vida: arranque, ejecución, reinicio y apagado ordenado.",
+    "objetivo": "Utilizo un servidor para alojar y ejecutar la lógica de negocio de mis aplicaciones backend, de modo que pueda recibir peticiones a través de la red, procesarlas y devolver respuestas. Resuelvo el problema de centralizar recursos, gestionar concurrencia y mantener disponibilidad de los servicios que consumen los clientes. En mi día a día como experto en backend, el servidor es el punto de entrada donde configuro puertos, establezco conexiones y controlo el ciclo de vida de los procesos que atienden las solicitudes. Después de comprender su funcionamiento, puedo diseñar arquitecturas escalables, implementar balanceadores de carga y automatizar despliegues. No necesito preocuparme por los detalles internos del servidor cuando utilizo plataformas gestionadas que abstraen esas capas.",
+    "preguntas_repaso": "1. ¿Qué papel juegan los puertos en la comunicación entre cliente y servidor?  \r\n2. ¿Cómo se controla el ciclo de vida de un servidor para evitar pérdida de conexiones?  \r\n3. ¿Cuál es la diferencia entre un proceso y un daemon en el contexto de un servidor backend?  \r\n4. ¿Por qué es importante usar workers o thread pools en un servidor que atiende muchas conexiones simultáneas?  \r\n5. ¿Qué ventajas aporta ejecutar un servidor dentro de un contenedor gestionado por Kubernetes?",
+    "ruta_estudio": "1. **Prerequisitos**: conceptos de redes (TCP/IP, puertos), manejo de procesos en el sistema operativo y fundamentos de programación en al menos un lenguaje backend.  \r\n2. **Fundamentos**: crear servidores simples con la biblioteca estándar del lenguaje elegido, entender el ciclo de vida básico.  \r\n3. **Intermedio**: aprender a configurar workers, manejar señales de shutdown y aplicar patrones de *graceful restart*.  \r\n4. **Avanzado**: estudiar contenedorización, orquestación (Docker, Kubernetes) y técnicas de despliegue sin downtime.  \r\n5. **Especialización**: profundizar en servidores específicos (NGINX, Express, FastAPI) y en mecanismos de alta disponibilidad (load balancers, clustering)."
+  },
+  "sections_missing": [],
+  "slug": "servidor",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/backend"
+  ],
+  "title": "Servidor",
+  "uid": "c_DCMEIR6SK3",
+  "verification_marks": []
+}

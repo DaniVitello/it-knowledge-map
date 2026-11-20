@@ -1,0 +1,40 @@
+{
+  "aliases": [
+    "Planning"
+  ],
+  "area_uid": "project-management",
+  "content_hash": "9e02f6299072b62ab27deade1ccf12a62e461e314832b2d81c5226de4bc8ff01",
+  "numero": 9,
+  "related_uids": [
+    "c_5N3OJBWASE",
+    "c_CQ3MBF4W7W",
+    "c_FJSN2KSLMV",
+    "c_GYUCO2KNED",
+    "c_OXV4OR4VYX",
+    "c_S37BPPLTVF",
+    "c_YRDFIS7XCB"
+  ],
+  "sections": {
+    "como_funciona": "1. Parto del **Product Roadmap** y desgloso los objetivos en un **Work Breakdown Structure** (WBS).  \r\n2. Para cada elemento del WBS determino sus **dependencias** y establezco el orden de ejecución.  \r\n3. Realizo **estimaciones** de esfuerzo (horas, días) usando datos históricos o técnicas de juicio experto.  \r\n4. Con la información anterior creo un **schedule** que incluye fechas de inicio, fin y **milestones**.  \r\n5. El plan resultante se comunica al equipo y se usa como base para el **Task Management** diario.",
+    "conexiones": "- **Product Roadmap**: el Planning traduce la visión estratégica del roadmap en actividades concretas y fechas de entrega.  \r\n- **Work Breakdown Structure**: sirve como esqueleto estructural que el Planning organiza y programa.  \r\n- **Scheduling**: el resultado del Planning es un schedule que define cuándo se ejecutarán las tareas y se alcanzarán los hitos.",
+    "detalles": "- **Básico**: definir los entregables principales y dividirlos en paquetes de trabajo (WBS).  \r\n- **Intermedio**: mapear dependencias y aplicar técnicas de estimación (puntos de historia, PERT).  \r\n- **Avanzado**: integrar riesgos, recursos limitados y buffers de tiempo; ajustar el schedule con herramientas de optimización y validar contra el **Product Roadmap** para asegurar alineación estratégica.",
+    "ejemplo_minimo": "```json\r\n{\r\n  \"project\": \"Lanzamiento App Móvil\",\r\n  \"wbs\": [\r\n    {\"id\": \"1\", \"name\": \"Diseño UI\", \"estimateDays\": 5},\r\n    {\"id\": \"2\", \"name\": \"Desarrollo Backend\", \"estimateDays\": 10, \"dependsOn\": [\"1\"]},\r\n    {\"id\": \"3\", \"name\": \"Integración\", \"estimateDays\": 3, \"dependsOn\": [\"1\",\"2\"]},\r\n    {\"id\": \"4\", \"name\": \"Pruebas\", \"estimateDays\": 4, \"dependsOn\": [\"3\"]},\r\n    {\"id\": \"5\", \"name\": \"Release\", \"estimateDays\": 1, \"dependsOn\": [\"4\"], \"milestone\": true}\r\n  ]\r\n}\r\n```",
+    "errores_comunes": "- **Ignorar dependencias**: genera cuellos de botella; evitarlo revisando siempre la tabla “dependsOn”.  \r\n- **Subestimar esfuerzos**: provoca retrasos; usar datos históricos y técnicas de estimación múltiple.  \r\n- **No fijar hitos claros**: dificulta el seguimiento; definir al menos un hito por fase crítica.  \r\n- **Planificar sin validar con el roadmap**: riesgo de desalineación estratégica; revisar la coherencia antes de cerrar el plan.",
+    "estado_actual": "Los fundamentos de **Planning** (WBS, estimación y dependencias) son estables y se aplican en la mayoría de los marcos de gestión de proyectos. En la práctica moderna, se complementan con herramientas de planificación colaborativa que permiten actualizar el schedule en tiempo real y sincronizarlo con el **Product Roadmap** y los tableros de **Task Management**.",
+    "ideas_clave": "1. **Secuencia lógica**: ordenar actividades de forma que cada una tenga sentido respecto a la anterior y la siguiente.  \r\n2. **Organización del trabajo**: agrupar tareas en paquetes manejables (WBS) y asignar responsables.  \r\n3. **Identificación de dependencias**: reconocer qué tareas deben completarse antes de que otras puedan iniciar.  \r\n4. **Estimación de esfuerzo**: asignar valores de tiempo y recursos a cada paquete de trabajo.  \r\n5. **Definición de hitos**: marcar puntos de control críticos que indican progreso y permiten decisiones de ajuste.",
+    "objetivo": "Utilizo **Planning** para transformar la visión del proyecto en una hoja de ruta operativa que indique qué se hará, cuándo y por quién. Resuelvo la incertidumbre de “¿por dónde empezamos?” y alineo al equipo con los criterios de éxito definidos. Aparece en la fase inicial de cualquier proyecto que gestiono, justo antes de asignar tareas y establecer entregas. Después de comprender Planning, puedo diseñar la estructura de trabajo, estimar esfuerzos y crear un calendario realista; cuando el proyecto ya está en ejecución y el plan está aprobado, no necesito volver a preocuparte por la planificación básica, solo por su seguimiento y ajuste.",
+    "preguntas_repaso": "1. ¿Cómo transforma el Product Roadmap en actividades concretas dentro del Planning?  \r\n2. ¿Qué papel juegan las dependencias al crear el schedule de un proyecto?  \r\n3. ¿Cuál es la diferencia entre una estimación de esfuerzo y un hito?  \r\n4. ¿Qué riesgo implica planificar sin validar contra el roadmap y cómo se evita?  \r\n5. ¿Qué pasos seguirías para pasar de un WBS básico a un schedule con buffers de tiempo?",
+    "ruta_estudio": "1. **Prerequisitos**: comprender conceptos de alcance, entregables y gestión de riesgos.  \r\n2. **Fundamentos**: estudiar WBS, identificación de dependencias y técnicas básicas de estimación.  \r\n3. **Práctica**: crear planes en una herramienta de gestión (Jira, MS Project) y validar contra un roadmap real.  \r\n4. **Avanzado**: aprender a incorporar buffers, gestión de recursos y alineación continua con el roadmap.  \r\n5. **Especialización**: explorar metodologías ágiles (Scrum, SAFe) que adaptan el Planning a ciclos iterativos."
+  },
+  "sections_missing": [],
+  "slug": "planning",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/project-management"
+  ],
+  "title": "Planning",
+  "uid": "c_CDAPU4W4IV",
+  "verification_marks": []
+}

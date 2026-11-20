@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "CSS"
+  ],
+  "area_uid": "frontend",
+  "content_hash": "1d3b7b803f4c12e34a8809d3f6caaff55b0540b5fad66f07f319fc03d57e6a55",
+  "numero": 3,
+  "related_uids": [
+    "c_HRF35BCROZ",
+    "c_IFH4CCKUM6",
+    "c_UTVABXNLDY"
+  ],
+  "sections": {
+    "como_funciona": "1. Escribo una regla CSS con un selector y un bloque de declaraciones.  \r\n2. El navegador determina el origen de la regla (usuario, autor, navegador) y la coloca en la cadena de cascade.  \r\n3. Calcula la especificidad del selector; si hay conflicto, la regla con mayor especificidad prevalece.  \r\n4. Aplica las propiedades al box model del elemento, ajustando dimensiones y posición según padding, border y margin.  \r\n5. El renderizado final muestra el elemento con los estilos resultantes.",
+    "conexiones": "- **HTML**: CSS se enlaza a los elementos definidos en HTML mediante selectores, definiendo su presentación visual.  \r\n- **Layout**: Las propiedades de CSS (flex, grid, float) determinan la disposición espacial de los componentes en la página.  \r\n- **DOM**: El motor del navegador actualiza el DOM con los estilos calculados, permitiendo que JavaScript lea o modifique valores de estilo en tiempo real.",
+    "detalles": "- **Básico**: comprender cómo se forman los selectores y cómo el cascade resuelve conflictos simples.  \r\n- **Intermedio**: usar la especificidad de forma consciente, combinar clases, IDs y atributos, y manipular el box model para crear espacios coherentes.  \r\n- **Avanzado**: aplicar técnicas como variables CSS, funciones de cálculo y pseudo‑elementos, y combinar el modelo de caja con sistemas de layout modernos (flexbox, grid) para diseños responsivos y mantenibles.",
+    "ejemplo_minimo": "```html\r\n<!DOCTYPE html>\r\n<html>\r\n<head>\r\n  <style>\r\n    p { color: teal; margin: 10px; }\r\n  </style>\r\n</head>\r\n<body>\r\n  <p>Texto con estilo CSS mínimo.</p>\r\n</body>\r\n</html>\r\n```",
+    "errores_comunes": "- **Sobreespecificar**: usar IDs en exceso y dificultar la sobrescritura; prefiera clases.  \r\n- **Ignorar el box model**: olvidar que padding y border aumentan el ancho total; use `box-sizing: border-box` cuando sea necesario.  \r\n- **Confundir cascade con especificidad**: asumir que la última regla siempre gana; la especificidad puede anular el orden.",
+    "estado_actual": "Los principios del cascade, la especificidad y el box model son fundamentos estables y forman la base de cualquier hoja de estilo. En la práctica moderna, los desarrolladores complementan esos fundamentos con variables CSS, módulos de layout como flexbox y grid, y herramientas de preprocesado que facilitan la gestión de estilos a gran escala.",
+    "ideas_clave": "1. **Cascade** – Las reglas se aplican según su origen, orden y prioridad, determinando cuál estilo gana.  \r\n2. **Especificidad** – Cada selector tiene un peso que decide su precedencia frente a otros estilos.  \r\n3. **Box model** – Cada elemento se representa como una caja con contenido, padding, borde y margen, controlando su tamaño y espacio.  \r\n4. **Estilos** – Propiedades como `color`, `font-size` o `display` definen la apariencia visual de la caja.",
+    "objetivo": "Utilizo CSS para describir la presentación visual de los documentos que construyo con HTML. Resuelvo el problema de cómo organizar colores, tipografías, márgenes y disposiciones sin tocar el contenido estructural. En mi día a día como desarrollador Frontend, CSS aparece en cada componente que necesita estilo, desde botones hasta layouts complejos. Cuando entiendo bien el cascade, la especificidad y el box model, puedo crear interfaces consistentes y mantenerlas fácilmente. Después de dominarlo, paso a técnicas avanzadas como variables, flexbox y grid para construir diseños responsivos. No necesito preocuparme por CSS cuando trabajo exclusivamente con lógica de negocio en JavaScript o con datos en el backend.",
+    "preguntas_repaso": "1. ¿Cómo decide el cascade cuál regla se aplica cuando hay varios estilos compatibles?  \r\n2. ¿Qué diferencia hay entre la especificidad de una clase y la de un ID?  \r\n3. ¿De qué manera el box model afecta el ancho total de un elemento con padding y border?  \r\n4. ¿Cuál es la ventaja de usar `box-sizing: border-box` en un proyecto grande?  \r\n5. ¿Cómo combinarías flexbox y grid para crear un layout responsivo que se adapte a diferentes tamaños de pantalla?",
+    "ruta_estudio": "1. **Prerequisitos**: conocer la estructura básica de HTML y la manipulación del DOM.  \r\n2. **Fundamentos**: estudiar cascade, especificidad y box model mediante ejercicios de selección y ajuste de márgenes.  \r\n3. **Intermedio**: practicar con pseudo‑clases, pseudo‑elementos y técnicas de organización (BEM, SMACSS).  \r\n4. **Avanzado**: explorar variables CSS, funciones `calc()`, y los sistemas de layout flexbox y grid; integrar preprocesadores como Sass para escalar proyectos."
+  },
+  "sections_missing": [],
+  "slug": "css",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/frontend"
+  ],
+  "title": "CSS",
+  "uid": "c_ZIBCUCIHW3",
+  "verification_marks": []
+}

@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "Experimentation"
+  ],
+  "area_uid": "product-management",
+  "content_hash": "607d80bd0353330a96aca40515b645c2eb7f311e23adb516b6a626e9e5c233a0",
+  "numero": 16,
+  "related_uids": [
+    "c_ETWVMQBZXQ",
+    "c_YLNAJABAUR"
+  ],
+  "sections": {
+    "como_funciona": "1. Identifico una duda concreta del producto y la convierto en una hipótesis medible.  \r\n2. Elijo el método de experimentación (p. ej., A/B test) y determino la población de usuarios que participará.  \r\n3. Configuro la variante (A = control, B = cambio) y establezco métricas clave (conversiones, tiempo en pantalla, churn).  \r\n4. Lanzo el experimento, garantizando que el tráfico se distribuya aleatoriamente y que la duración sea suficiente para alcanzar significancia estadística.  \r\n5. Al cerrar el experimento, analizo los resultados, verifico la hipótesis y tomo una decisión: adoptar, descartar o iterar.",
+    "conexiones": "- **Product Discovery:** la experimentación convierte ideas surgidas en la fase de descubrimiento en evidencia cuantitativa antes de comprometer recursos.  \r\n- **MVP:** los experimentos ayudan a definir el alcance mínimo viable al validar qué funcionalidades generan el mayor impacto temprano.  \r\n- **Data Analytics:** el análisis de resultados depende de técnicas de analítica para interpretar métricas, segmentar usuarios y estimar significancia.",
+    "detalles": "- **Básico:** formular hipótesis simples (p. ej., “un botón más grande aumentará el click‑through en 5 %”).  \r\n- **Intermedio:** diseñar experimentos multivariantes para probar combinaciones de cambios y usar herramientas de segmentación para validar efectos en sub‑poblaciones.  \r\n- **Avanzado:** aplicar técnicas de experimentación bayesiana, ajustar el tamaño de muestra en tiempo real y combinar resultados de experimentos con modelos de atribución para decisiones de producto a nivel de roadmap.",
+    "ejemplo_minimo": "```python\r\n# Pseudocódigo de un A/B test con Python y una librería de experimentación\r\nimport random\r\nimport pandas as pd\r\n\r\ndef assign_variant(user_id):\r\n    return 'B' if random.random() < 0.5 else 'A'\r\n\r\ndef run_experiment(data):\r\n    # data: DataFrame con columnas user_id, variant, conversion (0/1)\r\n    results = data.groupby('variant')['conversion'].mean()\r\n    lift = results['B'] - results['A']\r\n    print(f\"Lift B vs A: {lift:.2%}\")\r\n\r\n# Simulación de 1000 usuarios\r\nusers = pd.DataFrame({\r\n    'user_id': range(1000),\r\n    'variant': [assign_variant(i) for i in range(1000)],\r\n    'conversion': [random.random() < (0.12 if assign_variant(i)=='B' else 0.10) for i in range(1000)]\r\n})\r\n\r\nrun_experiment(users)\r\n```",
+    "errores_comunes": "- **Hipótesis vaga:** evita definir métricas claras; reformula con un número concreto.  \r\n- **Muestreo insuficiente:** no esperes a alcanzar significancia; calcula el tamaño de muestra antes de lanzar.  \r\n- **Contaminación de grupos:** no permitas que usuarios vean ambas variantes; usa segmentación aleatoria estricta.  \r\n- **Sobrecargar métricas:** enfócate en una o dos KPIs principales para evitar decisiones contradictorias.  \r\n- **Ignorar resultados negativos:** documenta aprendizajes aunque la variante pierda.",
+    "estado_actual": "- **Fundamentos estables:** la formulación de hipótesis, el uso de A/B testing y la interpretación basada en significancia estadística son prácticas consolidadas.  \r\n- **Práctica moderna:** adopción creciente de experimentación bayesiana, integración de experimentos en pipelines de CI/CD y uso de plataformas de experimentación que permiten pruebas en tiempo real y segmentación dinámica.",
+    "ideas_clave": "1. **Hipótesis clara** – una afirmación medible que explica el impacto esperado de una variante.  \r\n2. **Diseño de experimento** – selección del tipo (A/B test, multivariante) y definición de métricas de éxito.  \r\n3. **Muestreo y ejecución** – lanzar la variante a un segmento representativo y recoger datos.  \r\n4. **Análisis y decisión** – comparar resultados con criterios estadísticos y actuar según el ganador.  \r\n5. **Iteración** – usar lo aprendido para refinar la hipótesis o generar nuevas pruebas.",
+    "objetivo": "Utilizo la experimentación para validar hipótesis de forma rápida y con riesgo controlado, transformando ideas vagas en decisiones basadas en datos. Resuelvo la incertidumbre que surge al priorizar funcionalidades o cambios de UI, evitando inversiones en soluciones que no generan valor. En mi día a día como product manager senior, la experimentación aparece cuando necesito decidir entre dos versiones de una pantalla, probar una nueva regla de precios o confirmar si una mejora de onboarding reduce la tasa de abandono. Después de dominarla, puedo diseñar roadmaps más seguros y comunicar resultados con evidencia cuantitativa. Cuando el producto está en fase de madurez y los cambios son marginales, la experimentación puede quedar en segundo plano y enfocarse en mantenimiento o escalado.",
+    "preguntas_repaso": "1. ¿Cómo convierto una duda del producto en una hipótesis medible?  \r\n2. ¿Qué criterios utilizo para decidir el tamaño de muestra de un A/B test?  \r\n3. ¿Cuál es la diferencia entre un experimento A/B y uno multivariante?  \r\n4. ¿Cómo debo actuar si el experimento muestra una diferencia no significativa?  \r\n5. ¿De qué manera la experimentación influye en la definición de un MVP?",
+    "ruta_estudio": "1. **Prerequisitos:** conceptos básicos de métricas de producto, estadística descriptiva y herramientas de tracking.  \r\n2. **Fundamentos:** leer guías de diseño de A/B tests, aprender a calcular tamaños de muestra y practicar con datasets simulados.  \r\n3. **Intermedio:** explorar experimentación multivariante y segmentación, usar plataformas como Optimizely o Firebase A/B Testing.  \r\n4. **Avanzado:** estudiar experimentación bayesiana, integración CI/CD y casos de uso de experimentos a escala de empresa.  \r\n5. **Aplicación:** liderar un experimento real, presentar resultados al equipo y alimentar el roadmap con los hallazgos."
+  },
+  "sections_missing": [],
+  "slug": "experimentation",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/product-management"
+  ],
+  "title": "Experimentation",
+  "uid": "c_4Q26FRTYNL",
+  "verification_marks": []
+}

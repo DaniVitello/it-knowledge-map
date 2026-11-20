@@ -1,0 +1,116 @@
+[
+  {
+    "color_token": "software-engineering",
+    "context_framing": "Fundamentos de ingenieria de software",
+    "count": 30,
+    "name": "Software Engineering",
+    "order": 1,
+    "professional_roles": [
+      "Software Engineer"
+    ],
+    "uid": "software-engineering"
+  },
+  {
+    "color_token": "frontend",
+    "context_framing": "Desarrollo frontend moderno",
+    "count": 25,
+    "name": "Frontend",
+    "order": 2,
+    "professional_roles": [
+      "Frontend Developer"
+    ],
+    "uid": "frontend"
+  },
+  {
+    "color_token": "backend",
+    "context_framing": "Desarrollo backend y APIs",
+    "count": 25,
+    "name": "Backend",
+    "order": 3,
+    "professional_roles": [
+      "Backend Developer"
+    ],
+    "uid": "backend"
+  },
+  {
+    "color_token": "database",
+    "context_framing": "Bases de datos y analisis de datos",
+    "count": 25,
+    "name": "Database & Data Analytics",
+    "order": 4,
+    "professional_roles": [
+      "Data Engineer"
+    ],
+    "uid": "database"
+  },
+  {
+    "color_token": "networking",
+    "context_framing": "Redes y protocolos de internet",
+    "count": 25,
+    "name": "Networking & Internet",
+    "order": 5,
+    "professional_roles": [
+      "DevOps Engineer",
+      "Backend Developer"
+    ],
+    "uid": "networking"
+  },
+  {
+    "color_token": "os-linux",
+    "context_framing": "Sistemas operativos y Linux",
+    "count": 25,
+    "name": "Operating Systems & Linux",
+    "order": 6,
+    "professional_roles": [
+      "DevOps Engineer",
+      "SRE"
+    ],
+    "uid": "os-linux"
+  },
+  {
+    "color_token": "ai-engineering",
+    "context_framing": "Ingenieria de IA y machine learning",
+    "count": 25,
+    "name": "AI Engineering",
+    "order": 7,
+    "professional_roles": [
+      "AI Engineer",
+      "Data Scientist"
+    ],
+    "uid": "ai-engineering"
+  },
+  {
+    "color_token": "ux-ui",
+    "context_framing": "Experiencia de usuario y diseño de interfaces",
+    "count": 25,
+    "name": "UX & UI",
+    "order": 8,
+    "professional_roles": [
+      "UX Designer",
+      "Frontend Developer"
+    ],
+    "uid": "ux-ui"
+  },
+  {
+    "color_token": "product-management",
+    "context_framing": "Gestion de producto y estrategia",
+    "count": 25,
+    "name": "Product Management",
+    "order": 9,
+    "professional_roles": [
+      "Product Manager"
+    ],
+    "uid": "product-management"
+  },
+  {
+    "color_token": "project-management",
+    "context_framing": "Gestion de proyectos y metodologias agiles",
+    "count": 25,
+    "name": "Project Management",
+    "order": 10,
+    "professional_roles": [
+      "Project Manager"
+    ],
+    "uid": "project-management"
+  }
+]

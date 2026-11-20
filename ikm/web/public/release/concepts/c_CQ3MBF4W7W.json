@@ -1,0 +1,40 @@
+{
+  "aliases": [
+    "Estimation"
+  ],
+  "area_uid": "project-management",
+  "content_hash": "e1592ea1601c4e197aeccda4d1754882bcb9dd92b4565ecf094262618d7da330",
+  "numero": 8,
+  "related_uids": [
+    "c_CDAPU4W4IV",
+    "c_FBWIOD73FI",
+    "c_GYUCO2KNED",
+    "c_OXV4OR4VYX",
+    "c_S37BPPLTVF",
+    "c_VZFUJQTAUP",
+    "c_YRDFIS7XCB"
+  ],
+  "sections": {
+    "como_funciona": "1. **Crear el WBS**: desgloso el alcance en tareas concretas.  \r\n2. **Estimar esfuerzo**: para cada tarea asigno horas‑persona basándome en experiencias pasadas y en la complejidad percibida.  \r\n3. **Aplicar disponibilidad**: divido el esfuerzo total entre la capacidad diaria del equipo (horas‑disponibles) para obtener la duración en días.  \r\n4. **Incluir contingencia**: añado un porcentaje de reserva según el nivel de riesgo identificado.  \r\n5. **Validar con el equipo**: reviso las cifras con los responsables de cada área y ajusto según feedback.  \r\n6. **Integrar al cronograma**: inserto las duraciones en el planning y establezco dependencias entre tareas.",
+    "conexiones": "- **Work Breakdown Structure**: Provee la estructura de paquetes de trabajo que se estiman; sin un WBS la estimación carece de unidades claras.  \r\n- **Scheduling**: La duración obtenida de la estimación alimenta directamente el cronograma, definiendo fechas de inicio y fin de cada actividad.  \r\n- **Project Metrics**: Las estimaciones sirven como línea base para métricas de variación (Earned Value, Schedule Variance) que evalúan el desempeño del proyecto.",
+    "detalles": "- **Básico**: Uso de listas simples y valores promedio de productividad (ej. 8 h/día).  \r\n- **Intermedio**: Aplicación de técnicas como *Planning Poker* o *Three‑Point Estimation* para refinar el esfuerzo y capturar la variabilidad.  \r\n- **Avanzado**: Modelos de Monte Carlo o algoritmos de simulación que incorporan distribuciones probabilísticas y permiten generar curvas de probabilidad para la fecha de entrega.",
+    "ejemplo_minimo": "```python\r\n# Estimación simple de esfuerzo\r\ntareas = {\r\n    \"Diseño UI\": 16,   # horas\r\n    \"Desarrollo API\": 40,\r\n    \"Pruebas\": 24\r\n}\r\nhoras_por_dia = 8\r\nesfuerzo_total = sum(tareas.values())\r\nduracion_dias = esfuerzo_total / horas_por_dia\r\nprint(f\"Duración estimada: {duracion_dias:.1f} días\")\r\n```",
+    "errores_comunes": "- **Subestimar la complejidad** – Ignorar factores técnicos lleva a cronogramas irrealistas; mitigarlo con revisión de riesgos.  \r\n- **Usar una sola opinión** – Confiar en un estimador sin consenso genera sesgos; aplicar técnicas colaborativas.  \r\n- **No actualizar la estimación** – Mantener valores estáticos después de cambios de alcance produce desviaciones; revisarla periódicamente.  \r\n- **Olvidar la capacidad del equipo** – Multiplicar esfuerzo por 1 sin considerar vacaciones o carga existente inflará la duración; incluir disponibilidad real.",
+    "estado_actual": "**Fundamentos estables**: La práctica de descomponer el trabajo, asignar esfuerzo y convertirlo en duración sigue siendo la base de la gestión de proyectos.  \r\n**Práctica moderna**: Se complementa con estimaciones ágiles (Planning Poker), análisis de riesgos cuantitativo y herramientas de simulación que generan probabilidades de cumplimiento, mejorando la precisión y la comunicación con stakeholders.",
+    "ideas_clave": "1. **Descomposición del trabajo** – Partir el producto en paquetes manejables (WBS) para identificar unidades de medida.  \r\n2. **Asignación de esfuerzo** – Relacionar cada paquete con la cantidad de horas‑persona que requiere, considerando la complejidad.  \r\n3. **Cálculo de duración** – Convertir el esfuerzo total en tiempo de calendario usando la disponibilidad del equipo y sus tasas de productividad.  \r\n4. **Revisión de riesgos** – Ajustar la estimación con factores de incertidumbre (contingencia).  \r\n5. **Comunicación de resultados** – Presentar la estimación al equipo y a los patrocinadores para validar el plan.",
+    "objetivo": "Utilizo la estimación para traducir la visión del proyecto en números de tiempo, esfuerzo y complejidad que permitan construir un plan realista. Resuelvo la incertidumbre que surge al decidir cuánto trabajo puede asumir el equipo y cuándo se podrá entregar cada incremento. Aparece en la fase de planificación, cuando defino el alcance y asigno recursos, y también durante la coordinación, al ajustar el cronograma frente a cambios. Después de comprender la estimación, puedo crear planes de proyecto más fiables, negociar compromisos con stakeholders y medir el desempeño del proyecto con métricas de variación. No necesito preocuparme por la estimación cuando el proyecto está en ejecución y los entregables ya están definidos y medidos.",
+    "preguntas_repaso": "1. ¿Cómo transforma la estimación de esfuerzo en una duración de calendario?  \r\n2. ¿Qué papel juega el WBS en la generación de una estimación fiable?  \r\n3. ¿Cuál es la diferencia entre una estimación puntual y una basada en tres puntos?  \r\n4. ¿Por qué es importante revisar y actualizar la estimación durante la ejecución del proyecto?  \r\n5. ¿Cómo se utilizan las estimaciones para calcular métricas de variación en Earned Value Management?",
+    "ruta_estudio": "1. **Prerequisitos**: Conocer los conceptos de alcance, WBS y capacidad del equipo.  \r\n2. **Fundamentos**: Practicar estimaciones de esfuerzo con datos históricos y técnicas de tres puntos.  \r\n3. **Intermedio**: Aprender Planning Poker y cómo integrar riesgos mediante factores de contingencia.  \r\n4. **Avanzado**: Dominar simulaciones Monte Carlo y herramientas de análisis de valor ganado.  \r\n5. **Aplicación**: Implementar estimaciones en un proyecto piloto, comparar la línea base con resultados reales y ajustar el proceso."
+  },
+  "sections_missing": [],
+  "slug": "estimation",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/project-management"
+  ],
+  "title": "Estimation",
+  "uid": "c_CQ3MBF4W7W",
+  "verification_marks": []
+}

@@ -1,0 +1,41 @@
+{
+  "aliases": [
+    "Relational Databases"
+  ],
+  "area_uid": "database",
+  "content_hash": "d2b4251574363832c73452c579c3338dfeb7a813102069923a94ba70c18c2829",
+  "numero": 3,
+  "related_uids": [
+    "c_3GNOH5HEH5",
+    "c_6QUR6EX2HV",
+    "c_6WHYRNWVHH",
+    "c_BHKPT7WX3D",
+    "c_JWMD5PBSD7",
+    "c_LIWOFAKHEO",
+    "c_OX2ZGYHT7N",
+    "c_QTK2SYOTSW"
+  ],
+  "sections": {
+    "como_funciona": "1. Defino el **modelo** creando tablas con columnas que describen los atributos del dominio.  \r\n2. Asigno una **primary key** a cada tabla para identificar unívocamente cada fila.  \r\n3. Cuando una entidad necesita referenciar a otra, añado una **foreign key** que apunta a la primary key correspondiente.  \r\n4. Aplico **reglas de normalización** (1NF, 2NF, 3NF) para distribuir la información en varias tablas y evitar duplicados.  \r\n5. Con **SQL** ejecuto consultas que usan `JOIN` para combinar datos de tablas relacionadas, obteniendo resultados analíticos o de reporte.",
+    "conexiones": "- **ORM / Data Access**: los mapeadores objeto‑relacional traducen clases de código a tablas y generan automáticamente las consultas `JOIN` necesarias.  \r\n- **Normalization**: la normalización define cómo dividir la información en tablas para que los ORM puedan crear relaciones coherentes.  \r\n- **NoSQL**: cuando los requisitos de flexibilidad de esquema o escala horizontal superan las ventajas de las relaciones, se evalúa migrar a bases de datos NoSQL.",
+    "detalles": "- **Básico**: creación de tablas simples, definición de primary keys y uso de `SELECT` con filtros (`WHERE`).  \r\n- **Intermedio**: implementación de foreign keys, índices para acelerar `JOIN`s, y uso de `GROUP BY`/`HAVING` para agregaciones.  \r\n- **Avanzado**: diseño de esquemas altamente normalizados, particionamiento de tablas, uso de vistas materializadas y optimización de planes de ejecución mediante hints y estadísticas.",
+    "ejemplo_minimo": "```sql\r\n-- Creación de dos tablas relacionadas\r\nCREATE TABLE clientes (\r\n    cliente_id INT PRIMARY KEY,\r\n    nombre VARCHAR(50)\r\n);\r\n\r\nCREATE TABLE pedidos (\r\n    pedido_id INT PRIMARY KEY,\r\n    cliente_id INT REFERENCES clientes(cliente_id),\r\n    total DECIMAL(10,2)\r\n);\r\n\r\n-- Consulta que une ambas tablas\r\nSELECT c.nombre, p.total\r\nFROM clientes c\r\nJOIN pedidos p ON c.cliente_id = p.cliente_id;\r\n```",
+    "errores_comunes": "- Definir foreign keys sin índices: ralentiza los `JOIN`s.  \r\n- Normalizar en exceso: genera demasiados `JOIN`s y afecta el rendimiento.  \r\n- Olvidar actualizar estadísticas: el optimizador elige planes subóptimos.  \r\n- Usar tipos de datos incompatibles entre columnas relacionadas: provoca errores de integridad.",
+    "estado_actual": "**Fundamentos estables**: el modelo relacional, ACID, SQL estándar y las reglas de normalización siguen siendo la base para la mayoría de los sistemas de gestión de bases de datos (PostgreSQL, MySQL, SQL Server, Oracle).  \r\n\r\n**Práctica moderna**: se complementa con arquitecturas cloud‑native (Amazon RDS, Azure SQL), bases de datos distribuidas que preservan compatibilidad SQL (CockroachDB, Google Spanner) y herramientas de orquestación de migraciones (Flyway, Liquibase). Además, el uso de índices columnstore y consultas vectorizadas mejora el rendimiento de cargas analíticas.",
+    "ideas_clave": "1. **Tablas**: estructuras bidimensionales donde cada fila representa un registro y cada columna un atributo.  \r\n2. **Llaves (Keys) y restricciones**: garantizan unicidad y relaciones entre tablas (primary key, foreign key, unique, check).  \r\n3. **Relaciones**: enlaces lógicos entre tablas mediante foreign keys que permiten JOINs y consultas integradas.  \r\n4. **Normalización**: proceso de organizar tablas para eliminar redundancia y asegurar consistencia.  \r\n5. **Consultas SQL**: lenguaje declarativo para crear, leer, actualizar y borrar datos dentro del esquema relacional.",
+    "objetivo": "Utilizo bases de datos relacionales para estructurar datos en tablas con filas y columnas, de modo que pueda consultar y combinar información de forma predecible y eficiente. Resuelvo problemas de integridad, duplicación y consultas complejas que aparecen al consolidar datos de distintas fuentes en un data warehouse o al servir métricas a un dashboard analítico. Después de entender cómo funcionan, puedo diseñar esquemas normalizados, escribir consultas SQL optimizadas y elegir entre una base relacional o una alternativa NoSQL según el caso de uso. No necesito preocuparme por este concepto cuando trabajo exclusivamente con archivos planos o con sistemas de almacenamiento de objetos sin requerimientos de relaciones entre entidades.",
+    "preguntas_repaso": "1. ¿Cómo garantiza una foreign key la integridad referencial entre dos tablas?  \r\n2. ¿Qué problema resuelve la normalización y en qué nivel (1NF, 2NF, 3NF) se elimina la dependencia parcial?  \r\n3. ¿Cuál es la diferencia práctica entre un `INNER JOIN` y un `LEFT JOIN` al combinar datos relacionales?  \r\n4. ¿Por qué es importante crear índices sobre columnas usadas en condiciones de `JOIN`?  \r\n5. ¿En qué situaciones considerarías reemplazar una base relacional por una solución NoSQL?",
+    "ruta_estudio": "1. **Prerequisitos**: conceptos de datos estructurados, lógica de bases de datos y sintaxis básica de SQL.  \r\n2. **Fundamentos**: crear esquemas simples, practicar `SELECT`, `INSERT`, `UPDATE`, `DELETE` y definir claves primarias.  \r\n3. **Intermedio**: diseñar relaciones, aplicar normalización hasta 3NF, crear índices y usar `JOIN`s avanzados.  \r\n4. **Avanzado**: estudiar particionamiento, replicación, tuning de consultas, y explorar bases relacionales distribuidas en la nube.  \r\n5. **Especialización**: integrar ORM en aplicaciones, comparar con modelos NoSQL y aprender migraciones de esquemas con herramientas de versionado."
+  },
+  "sections_missing": [],
+  "slug": "relational-databases",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/database-data-analytics"
+  ],
+  "title": "Relational Databases",
+  "uid": "c_3IEBYDYAQB",
+  "verification_marks": []
+}

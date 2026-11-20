@@ -1,0 +1,35 @@
+{
+  "aliases": [
+    "Evaluation"
+  ],
+  "area_uid": "ai-engineering",
+  "content_hash": "939e4d0ad7e3594ea6df97a9fcb992b3950be7bac475be62cb8991c51f3731d8",
+  "numero": 20,
+  "related_uids": [
+    "c_CSHCCYYZWJ",
+    "c_MMPVIHXRHF"
+  ],
+  "sections": {
+    "como_funciona": "1. Defino los criterios de éxito (accuracy, relevance, groundedness) según la tarea.  \r\n2. Construyo un conjunto de datos de referencia con respuestas esperadas y fuentes de verdad.  \r\n3. Ejecuto el modelo sobre ese conjunto y recojo sus salidas.  \r\n4. Aplico métricas genéricas (exact match, BLEU) y métricas específicas del dominio.  \r\n5. Analizo los resultados para decidir si el modelo pasa el umbral o necesita ajuste.",
+    "conexiones": "- **AI Safety & Security:** la evaluación de groundedness ayuda a detectar respuestas no verificables que pueden generar riesgos de desinformación.  \r\n- **Observability:** métricas de evaluación se exponen como indicadores que permiten monitorear la salud del modelo en producción.  \r\n- **Prompt Engineering:** los resultados de la evaluación guían la iteración de prompts para mejorar relevance y accuracy.",
+    "detalles": "- **Básico:** usar métricas de precisión y recall sobre un dataset estático.  \r\n- **Intermedio:** añadir evaluación de relevance mediante puntuaciones de similitud semántica y validar groundedness con verificadores de hechos.  \r\n- **Avanzado:** diseñar evaluaciones de ciclo completo que incluyan usuarios reales, pruebas A/B y monitoreo continuo de métricas en producción.",
+    "ejemplo_minimo": "```python\r\nfrom sklearn.metrics import accuracy_score\r\n\r\n# respuestas esperadas\r\ngold = [\"Paris\", \"Tokyo\", \"Berlin\"]\r\n# salida del modelo\r\npred = [\"Paris\", \"Osaka\", \"Berlin\"]\r\n\r\nacc = accuracy_score(gold, pred)\r\nprint(f\"Accuracy: {acc:.2f}\")\r\n```",
+    "errores_comunes": "- **Confiar solo en accuracy:** ignora relevancia y groundedness; combinar métricas evita este sesgo.  \r\n- **Usar datos de prueba que no reflejan el dominio real:** validar con datos representativos del entorno productivo.",
+    "estado_actual": "- **Fundamentos estables:** precisión, recall y métricas de similitud siguen siendo la base para cualquier evaluación de modelo.  \r\n- **Práctica moderna:** integración de evaluaciones de groundedness y relevance en pipelines CI/CD, y uso de observabilidad para detectar degradación de métricas en tiempo real.",
+    "ideas_clave": "1. **Accuracy** – mide la coincidencia entre la salida del modelo y la respuesta esperada.  \r\n2. **Relevance** – evalúa si la respuesta es útil para la tarea del usuario.  \r\n3. **Groundedness** – verifica que la información provenga de fuentes verificables o del contexto dado.  \r\n4. **Task‑specific evals** – métricas diseñadas para el dominio concreto (p. ej., F1 para extracción de entidades).",
+    "objetivo": "Utilizo la evaluación para medir si un modelo de IA cumple con los requisitos de precisión, relevancia y groundedness en el contexto del producto que estoy construyendo. Resuelvo el problema de saber si el modelo entrega respuestas correctas y útiles antes de lanzarlo a producción, lo que evita retrocesos costosos y problemas de confianza del usuario. Aparece en cada fase del ciclo de vida: durante el desarrollo de prompts, la integración de modelos y el monitoreo post‑despliegue. Después de entenderla, puedo diseñar pipelines de testing automatizados, comparar versiones de modelos y establecer umbrales de aceptación. No necesito preocuparme cuando el modelo solo se usa en pruebas internas sin impacto en usuarios finales ni decisiones críticas.",
+    "preguntas_repaso": "1. ¿Cómo se diferencia accuracy de relevance en la evaluación de un modelo de IA?  \r\n2. ¿Qué papel juega groundedness al validar respuestas generativas?  \r\n3. ¿Por qué una métrica task‑specific es necesaria aunque exista accuracy?  \r\n4. ¿Cómo se puede automatizar la evaluación de groundedness en un pipeline CI/CD?  \r\n5. ¿Qué relación existe entre la evaluación y la observabilidad en sistemas de IA en producción?",
+    "ruta_estudio": "1. **Prerequisitos:** estadística básica, conceptos de clasificación y métricas (precision, recall).  \r\n2. **Fundamentos:** práctica con datasets de referencia y cálculo de accuracy y F1.  \r\n3. **Intermedio:** aprender técnicas de evaluación semántica (cosine similarity, embeddings) y herramientas de fact‑checking.  \r\n4. **Avanzado:** implementar pipelines CI/CD con pruebas de evaluación, integrar observabilidad y diseñar pruebas de usuario."
+  },
+  "sections_missing": [],
+  "slug": "evaluation",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/ai-engineering"
+  ],
+  "title": "Evaluation",
+  "uid": "c_5VSM4JTVVK",
+  "verification_marks": []
+}

@@ -1,0 +1,38 @@
+{
+  "aliases": [
+    "Code Quality"
+  ],
+  "area_uid": "software-engineering",
+  "content_hash": "16445e4e9fc292b5dd6802ee6d9f54097cb33580c92604be4b61a610d573cb4f",
+  "numero": 13,
+  "related_uids": [
+    "c_3UAMR6JQWV",
+    "c_IMFWIGRRUB",
+    "c_K2J2R52QLA",
+    "c_VA6ETRQ2HH",
+    "c_ZUGE3YIJ5I"
+  ],
+  "sections": {
+    "como_funciona": "1. Defino un conjunto de normas de estilo y reglas de calidad (naming, formato, complejidad).  \r\n2. Configuro herramientas de análisis estático que inspeccionan el código en cada commit.  \r\n3. El equipo realiza revisiones de código donde se verifica la legibilidad, la mantenibilidad y la consistencia.  \r\n4. Cuando se detectan desviaciones, se corrigen mediante refactorizaciones pequeñas y enfocadas.  \r\n5. El proceso se repite en cada iteración, creando un ciclo de mejora continua.",
+    "conexiones": "- **Clean Code** – Proporciona principios y ejemplos concretos que refuerzan la legibilidad y la consistencia.  \r\n- **SOLID & Design Principles** – Extienden la mantenibilidad al guiar la arquitectura de clases y módulos.  \r\n- **Code Review** – Es el mecanismo colaborativo que verifica que el código cumpla con los criterios de calidad definidos.",
+    "detalles": "- **Básico**: Adoptar un estilo de codificación (por ejemplo, guías de estilo de lenguaje) y usar un linter para detectar violaciones simples.  \r\n- **Intermedio**: Introducir métricas de complejidad ciclomática y cobertura de pruebas, y establecer criterios de aceptación en las revisiones de código.  \r\n- **Avanzado**: Integrar análisis estático profundo, aplicar principios SOLID y patrones de diseño, y programar refactorizaciones estructurales que reduzcan la deuda técnica.",
+    "ejemplo_minimo": "```python\r\n# Código con buena legibilidad y consistencia\r\ndef calcular_descuento(precio: float, porcentaje: float) -> float:\r\n    \"\"\"Devuelve el precio después de aplicar el descuento.\"\"\"\r\n    descuento = precio * (porcentaje / 100)\r\n    return precio - descuento\r\n```",
+    "errores_comunes": "- **Nombrar variables con abreviaturas crípticas** – usar nombres descriptivos evita confusión.  \r\n- **Ignorar los avisos del linter** – atenderlos temprano previene problemas mayores.  \r\n- **Refactorizar sin pruebas** – siempre ejecutar pruebas antes y después de la refactorización.",
+    "estado_actual": "Los fundamentos de legibilidad, mantenibilidad y consistencia son estables y ampliamente aceptados. En la práctica moderna, la automatización mediante linters, análisis estático y pipelines de CI/CD se ha convertido en la norma para asegurar la calidad de código de forma continua.",
+    "ideas_clave": "1. **Legibilidad** – El código debe expresarse de forma clara, usando nombres descriptivos y una estructura visual coherente.  \r\n2. **Mantenibilidad** – Facilita la corrección de errores y la incorporación de nuevas funcionalidades sin introducir regresiones.  \r\n3. **Consistencia** – Aplica normas y estilos uniformes en todo el proyecto para que cualquier desarrollador entienda el mismo código de la misma manera.  \r\n4. **Automatización de controles** – Herramientas como linters y análisis estático verifican que se cumplan las reglas de calidad de forma continua.  \r\n5. **Retroalimentación continua** – Revisiones de código y refactorizaciones periódicas mantienen la calidad a lo largo del ciclo de vida.",
+    "objetivo": "Utilizo la calidad de código para garantizar que el software que desarrollo sea fácil de leer, mantener y evolucionar. Resuelvo problemas de ambigüedad, errores recurrentes y costos excesivos de mantenimiento, que aparecen en cualquier proyecto donde el código se comparte entre equipos o se revisa a lo largo del tiempo. En mi trabajo como ingeniero de software, la calidad de código es la base para entregas confiables y para la capacidad de responder rápidamente a cambios de negocio. Después de entender este concepto, puedo aplicar buenas prácticas, automatizar verificaciones y liderar procesos de revisión que mejoren la productividad del equipo. No necesito preocuparme por la calidad de código cuando escribo scripts de uso personal o prototipos que no serán reutilizados ni mantenidos.",
+    "preguntas_repaso": "1. ¿Por qué la legibilidad es esencial para la mantenibilidad del software?  \r\n2. ¿Cómo ayuda la consistencia a reducir el tiempo de onboarding de nuevos desarrolladores?  \r\n3. ¿Qué papel juegan los linters en el ciclo de mejora continua de la calidad de código?  \r\n4. ¿Cuál es la diferencia entre una revisión de código y una refactorización?  \r\n5. ¿De qué manera los principios SOLID complementan las prácticas de calidad de código?",
+    "ruta_estudio": "1. **Prerequisitos**: Conocer el lenguaje de programación y sus convenciones básicas.  \r\n2. **Fundamentos**: Aprender guías de estilo (por ejemplo, PEP 8) y usar un linter.  \r\n3. **Práctica**: Realizar revisiones de código en equipos pequeños y aplicar refactorizaciones guiadas por pruebas.  \r\n4. **Profundización**: Estudiar Clean Code, SOLID y patrones de diseño; integrar análisis estático avanzado en CI/CD.  \r\n5. **Especialización**: Liderar iniciativas de calidad de código, definir métricas de deuda técnica y automatizar su monitoreo."
+  },
+  "sections_missing": [],
+  "slug": "code-quality",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/software-engineering"
+  ],
+  "title": "Code Quality",
+  "uid": "c_53KOHLSCN5",
+  "verification_marks": []
+}

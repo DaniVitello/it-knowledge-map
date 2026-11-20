@@ -107,7 +107,7 @@
 
 /* Labels del grafo 3D (CSS2DRenderer) */
 .graph3d-label {
-  font: 500 11px/1.2 system-ui, sans-serif;
+  font: 500 9px/1.2 system-ui, sans-serif;
   color: rgb(var(--c-ink));
   background: rgb(var(--c-base) / 0.82);
   border: 1px solid rgb(var(--c-line) / 0.5);
@@ -119,7 +119,7 @@
   backdrop-filter: blur(4px);
 }
 .graph3d-label-head {
-  font-size: 13px;
+  font-size: 10px;
   font-weight: 700;
   border-color: rgb(var(--c-accent) / 0.6);
   box-shadow: 0 0 12px rgb(var(--c-accent) / 0.25);

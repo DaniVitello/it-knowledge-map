@@ -1,0 +1,36 @@
+{
+  "aliases": [
+    "RAG"
+  ],
+  "area_uid": "ai-engineering",
+  "content_hash": "612829f554e932d3db100587a371abd1b6c09662a5b36d330f30d5ae7f321450",
+  "numero": 14,
+  "related_uids": [
+    "c_DCYZGXRVW2",
+    "c_JS77WZ6QYB",
+    "c_YFKRGNUXRH"
+  ],
+  "sections": {
+    "como_funciona": "1. **Indexado**: se crean embeddings de los documentos y se insertan en una vector database.  \r\n2. **Consulta**: el usuario envía una pregunta; se genera su embedding.  \r\n3. **Recuperación**: la base de vectores devuelve los *k* documentos más similares.  \r\n4. **Construcción del prompt**: los documentos recuperados se concatenan con instrucciones (system prompt) que guían al LLM.  \r\n5. **Generación**: el LLM produce la respuesta, ahora anclada a la información recuperada.  \r\n6. **Post‑procesado** (opcional): se añaden referencias o se verifica la factualidad.",
+    "conexiones": "- **Embeddings**: convierten texto en vectores que la vector database puede comparar; la calidad del embedding determina la pertinencia de la recuperación.  \r\n- **Vector Databases**: almacenan y sirven los embeddings; su arquitectura (ANN, disk‑based) impacta la latencia y escalabilidad del pipeline RAG.  \r\n- **Context Engineering**: define cómo se inserta la información recuperada en el prompt; una buena ingeniería de contexto evita que el LLM ignore o contradiga los documentos.",
+    "detalles": "- **Básico**: usar una única capa de recuperación (top‑k) y un prompt simple.  \r\n- **Intermedio**: aplicar re‑ranking con modelos cross‑encoders, ajustar *k* dinámicamente y usar técnicas de chunking para documentos extensos.  \r\n- **Avanzado**: incorporar feedback del usuario para actualizar embeddings, emplear hybrid search (texto + vector) y orquestar múltiples LLMs especializados según el tipo de documento recuperado.",
+    "ejemplo_minimo": "```python\r\nfrom sentence_transformers import SentenceTransformer\r\nfrom chromadb import Client\r\nfrom openai import OpenAI\r\n\r\n# 1. Embeddings\r\nmodel = SentenceTransformer('all-MiniLM-L6-v2')\r\ndocs = [\"La capital de Francia es París.\", \"Python es un lenguaje de programación.\"]\r\nembs = model.encode(docs)\r\n\r\n# 2. Vector store (Chromadb)\r\nclient = Client()\r\ncollection = client.create_collection(name=\"knowledge\")\r\ncollection.add(ids=[\"d1\",\"d2\"], embeddings=embs.tolist(), documents=docs)\r\n\r\n# 3. Consulta\r\nquery = \"¿Cuál es la capital de Francia?\"\r\nq_emb = model.encode([query])[0]\r\nresults = collection.query(query_embeddings=[q_emb], n_results=1)\r\n\r\n# 4. Prompt con contexto\r\ncontext = results['documents'][0][0]\r\nprompt = f\"Contexto: {context}\\nPregunta: {query}\\nResponde citando el contexto.\"\r\n\r\n# 5. Generación (OpenAI)\r\nclient = OpenAI()\r\nanswer = client.chat.completions.create(\r\n    model=\"gpt-4o-mini\",\r\n    messages=[{\"role\":\"user\",\"content\":prompt}]\r\n)\r\nprint(answer.choices[0].message.content)\r\n```",
+    "errores_comunes": "- **Usar embeddings genéricos** que no capturan la terminología del dominio → entrenar o fine‑tune un encoder especializado.  \r\n- **Seleccionar *k* demasiado bajo** y perder información relevante → probar varios valores y validar la cobertura.  \r\n- **Sobrecargar el prompt** con documentos completos → chunkear y resumir antes de incluirlos.  \r\n- **Olvidar actualizar la base de vectores** cuando el corpus cambia → programar pipelines de re‑indexado periódico.",
+    "estado_actual": "- **Fundamentos estables**: la combinación de embeddings, búsqueda de similitud y generación de texto es ampliamente adoptada en productos de IA.  \r\n- **Práctica moderna**: uso de modelos de embeddings de última generación (e.g., Mistral‑Embed), bases de datos híbridas (e.g., Pinecone, Qdrant) y técnicas de *retrieval‑augmented generation* con LLMs de gran escala (GPT‑4, Claude). La comunidad también explora RAG con *multimodal retrieval* (imágenes + texto) y *self‑query retrievers* que generan sus propias consultas.",
+    "ideas_clave": "1. **Generación guiada por recuperación** – el modelo genera texto usando como contexto los documentos recuperados.  \r\n2. **Embeddings** – transforman textos en vectores para que la búsqueda sea semántica.  \r\n3. **Vector Database** – almacena los embeddings y permite consultas de similitud rápida.  \r\n4. **Prompt / Context Engineering** – combina la información recuperada con instrucciones al modelo.  \r\n5. **Ciclo de retro‑alimentación** – la calidad de la recuperación influye directamente en la calidad de la generación.",
+    "objetivo": "Utilizo Retrieval‑Augmented Generation (RAG) cuando necesito que un modelo de lenguaje produzca respuestas precisas y actualizadas sin entrenar el modelo con todo el conocimiento disponible. Resuelvo el problema de “alucinaciones” y de información desactualizada al combinar la generación de texto con una búsqueda en una base de datos de vectores que contiene documentos relevantes. En mi día a día como AI engineer senior, RAG aparece en sistemas de asistencia al cliente, buscadores internos y chatbots que deben citar fuentes. Después de entender RAG, puedo diseñar pipelines que integren embeddings, vector stores y prompts de contexto, y decidir cuándo delegar la recuperación a un motor externo en lugar de depender únicamente del modelo. No necesito preocuparme por RAG cuando el dominio es estático, pequeño o cuando la latencia de búsqueda supera los requisitos del producto.",
+    "preguntas_repaso": "1. ¿Qué papel juegan los embeddings dentro del ciclo RAG?  \r\n2. ¿Cómo afecta la elección del parámetro *k* a la precisión y latencia de la respuesta?  \r\n3. ¿Por qué es importante el *context engineering* al combinar documentos recuperados con un LLM?  \r\n4. ¿Qué diferencia hay entre una búsqueda puramente textual y una búsqueda basada en vectores en RAG?  \r\n5. ¿Cuál es una estrategia eficaz para mantener actualizada una vector database en un entorno productivo?",
+    "ruta_estudio": "1. **Prerequisitos**: Python, fundamentos de NLP, uso básico de APIs de LLM.  \r\n2. **Embeddings**: estudiar SentenceTransformers, Mistral‑Embed y técnicas de fine‑tuning.  \r\n3. **Vector Stores**: experimentar con Chroma, Pinecone o Qdrant; comprender índices ANN y métricas de distancia.  \r\n4. **Prompt Design**: aprender patrones de *system* y *user* prompts, manejo de longitud y referencias.  \r\n5. **RAG avanzado**: explorar re‑ranking, hybrid search y retro‑alimentación de usuario.  \r\n6. **Implementación en producción**: CI/CD para pipelines de re‑indexado, monitorización de latencia y calidad de respuesta."
+  },
+  "sections_missing": [],
+  "slug": "rag",
+  "sources": [],
+  "sources_detail": [],
+  "tags": [
+    "concepto",
+    "it/ai-engineering"
+  ],
+  "title": "RAG",
+  "uid": "c_XPKAEIKUDL",
+  "verification_marks": []
+}
