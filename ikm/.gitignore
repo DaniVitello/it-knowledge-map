@@ -15,3 +15,5 @@ api_release/
 _chat_test.py
 _llm_test.py
 _key_*.py
+deploy/ikm/
+deploy/release/

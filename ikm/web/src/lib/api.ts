@@ -27,9 +27,9 @@ export interface ChatTurn {
   note?: string;
 }
 
-const API_BASE = '/api';
+const API_BASE = (import.meta.env.VITE_API_BASE ?? '') + '/api';
 // El backend expone /health en la raíz (sin prefijo /api) y /api/chat con prefijo.
-const HEALTH_URL = '/health';
+const HEALTH_URL = (import.meta.env.VITE_API_BASE ?? '') + '/health';
 const PROBE_TIMEOUT_MS = 2500;
 
 async function fetchWithTimeout(url: string, ms: number, init?: RequestInit): Promise<Response> {
@@ -50,7 +50,7 @@ export async function probeChatAvailability(): Promise<ChatAvailability> {
     const data = (await res.json()) as Record<string, unknown>;
     // El backend actual es un stub: /health responde pero el chat no tiene LLM real.
     const status = String(data.status ?? data.state ?? '').toLowerCase();
-    if (status === 'degraded' || data.llm === false || data.stub === true) return 'degradado';
+    if (status === 'degraded' || data.llm_disponible === false || data.llm === false || data.stub === true) return 'degradado';
     return 'disponible';
   } catch {
     return 'no-disponible';
@@ -82,8 +82,9 @@ function basisToKind(basis: string): ProvenanceKind {
 
 /** Envía un mensaje al orquestador. Respuesta sin procedencia => general + aviso. */
 export async function sendChat(message: string, history: ChatTurn[]): Promise<ChatReply> {
-  const res = await fetchWithTimeout(`${API_BASE}/chat`, 30000, {
+  const res = await fetchWithTimeout(`${API_BASE}/chat`, 60000, {
     method: 'POST',
+    credentials: 'include',
     headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
     body: JSON.stringify({
       message,
