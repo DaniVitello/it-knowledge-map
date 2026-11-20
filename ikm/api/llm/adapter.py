@@ -36,25 +36,39 @@ class LLMRateLimitError(LLMError):
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 
 
+def _read_env_var(var: str) -> List[str]:
+    """User env fresco (Windows) + env del proceso. El proceso en marcha puede
+    tener valores viejos; el User env es la fuente que actualiza el usuario."""
+    vals: List[str] = []
+    if sys.platform == "win32":
+        try:
+            res = subprocess.run(
+                ["powershell", "-Command",
+                 f'[Environment]::GetEnvironmentVariable("{var}", "User")'],
+                capture_output=True, text=True, timeout=10,
+            )
+            v = res.stdout.strip()
+            if v:
+                vals.append(v)
+        except Exception:
+            pass
+    v = os.environ.get(var, "").strip()
+    if v:
+        vals.append(v)
+    return vals
+
+
 def _load_groq_keys() -> List[str]:
-    """Carga las keys igual que la sintesis (env -> User env en Windows)."""
-    raw = os.environ.get("GROQ_API_KEYS", "").strip()
-    if not raw:
-        raw = os.environ.get("GROQ_API_KEY", "").strip()
-    if not raw and sys.platform == "win32":
-        for var in ("GROQ_API_KEYS", "GROQ_API_KEY"):
-            try:
-                res = subprocess.run(
-                    ["powershell", "-Command",
-                     f'[Environment]::GetEnvironmentVariable("{var}", "User")'],
-                    capture_output=True, text=True, timeout=10,
-                )
-                raw = res.stdout.strip()
-                if raw:
-                    break
-            except Exception:
-                pass
-    return [k.strip() for k in raw.split(",") if k.strip()]
+    """Keys de GROQ_API_KEY, GROQ_API_KEY_2 y GROQ_API_KEYS, deduplicadas.
+    Lee el User env fresco para captar las keys nuevas aunque el proceso tenga viejas."""
+    keys: List[str] = []
+    for var in ("GROQ_API_KEY", "GROQ_API_KEY_2", "GROQ_API_KEYS"):
+        for raw in _read_env_var(var):
+            for k in raw.split(","):
+                k = k.strip()
+                if k and k not in keys:
+                    keys.append(k)
+    return keys
 
 
 class LLMAdapter:

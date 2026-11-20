@@ -17,3 +17,5 @@ _llm_test.py
 _key_*.py
 deploy/ikm/
 deploy/release/
+_chat_real.py
+_chat_doc.py

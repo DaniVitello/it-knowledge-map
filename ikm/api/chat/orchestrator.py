@@ -53,8 +53,9 @@ class ChatOrchestrator:
         except Exception as e:
             return self._error_response(str(e), 429, retry_after=getattr(e, "detalle", {}).get("retry_after"))
 
-        # L3: Alcance preliminar
-        scope = clasificar_alcance(message, None)
+        # L3: Alcance preliminar (entidades del proyecto para cubrir las 10 areas)
+        entidades = enlazar_entidades(message, self._get_conceptos())
+        scope = clasificar_alcance(message, entidades)
         if scope == "smalltalk":
             return self._smalltalk_response()
         if scope == "out":
@@ -62,7 +63,6 @@ class ChatOrchestrator:
             return self._out_of_scope_response()
 
         # L4: Recuperacion
-        entidades = enlazar_entidades(message, self._get_conceptos())
         chunks_recuperados = [r["chunk"] if isinstance(r, dict) and "chunk" in r else r
                               for r in buscar_bm25(message, self._chunks, top_k=20)]
         # Expansion por grafo

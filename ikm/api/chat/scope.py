@@ -18,6 +18,22 @@ SE_TERMS = {
     "kiss", "clean code", "refactoring", "debug", "profiling",
 }
 
+# Vocabulario de las demas areas del mapa (UX/UI, Product, Project, AI, datos, SO, redes)
+OTHER_TERMS = {
+    "ux", "ui", "experiencia de usuario", "interfaz", "diseno", "design",
+    "usabilidad", "accesibilidad", "jerarquia", "visual", "prototipo", "wireframe",
+    "producto", "product", "roadmap", "backlog", "sprint", "scrum", "agile",
+    "kanban", "stakeholder", "mvp", "product market fit", "go to market",
+    "pricing", "estimacion", "estimation", "planificacion", "planning",
+    "riesgo", "risk", "presupuesto", "cronograma", "wbs",
+    "ai", "inteligencia artificial", "machine learning", "ml", "embeddings",
+    "llm", "red neuronal", "deep learning", "rag", "prompt", "token",
+    "fine tuning", "transformer", "atencion", "attention", "computer vision",
+    "nlp", "analytics", "data", "dato", "sistema operativo", "operating system",
+    "networking", "internet", "proceso", "process", "ingenieria",
+}
+SE_TERMS = SE_TERMS | OTHER_TERMS
+
 SMALLTALK_TERMS = {
     "hola", "hello", "hi", "buenos dias", "buenas", "gracias", "thanks",
     "adios", "chau", "bye", "como estas", "que tal",
@@ -64,7 +80,9 @@ def clasificar_alcance(pregunta: str, recuperacion: Any) -> Literal[
             tiene_se = True
             break
 
-    # Si hay recuperacion con entidades enlazadas -> in_project
+    # Entidades del proyecto enlazadas (lista de uids) -> in_project
+    if isinstance(recuperacion, (list, tuple)) and len(recuperacion) > 0:
+        return "in_project"
     if recuperacion is not None:
         entidades = getattr(recuperacion, "entidades", None) or []
         if entidades:

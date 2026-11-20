@@ -34,15 +34,17 @@ def test_llm_adapter_init():
     cfg = PlanModelo()
     adapter = LLMAdapter(cfg)
     assert adapter.config == cfg
-    assert adapter._client is None
+    assert adapter.model == cfg.modelo
+    assert isinstance(adapter.keys, list)
 
 
-def test_llm_adapter_chat_sin_cliente():
+def test_llm_adapter_chat_sin_keys():
     cfg = PlanModelo()
     adapter = LLMAdapter(cfg)
+    adapter.keys = []  # sin keys: debe fallar sin llamar a la red
     try:
         adapter.chat([{"role": "user", "content": "hi"}])
         assert False, "should raise"
-    except Exception as e:
-        assert True  # any exception is acceptable
+    except Exception:
+        assert True
 
