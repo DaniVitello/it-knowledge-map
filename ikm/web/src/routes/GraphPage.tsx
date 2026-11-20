@@ -69,6 +69,7 @@ export default function GraphPage() {
   const [centerRequest, setCenterRequest] = useState<string | null>(null);
   const [fitSignal, setFitSignal] = useState(0);
   const [listFilter, setListFilter] = useState('');
+  const [hintOpen, setHintOpen] = useState(true);
   const obsidianMode = params.get('mode') === 'obsidian';
   const { colors: obsColors, setMono, setArea, reset: resetColors } = useObsidianColors();
   const [colorEditorOpen, setColorEditorOpen] = useState(false);
@@ -150,11 +151,13 @@ export default function GraphPage() {
   const panelOpen = Boolean(selected || selectedEdgeRecord || path);
   const selectedEntry = selected ? byUid.get(selected) : undefined;
   const selectedNode = view.nodes.find((n) => n.uid === selected) ?? graph.nodes.find((n) => n.uid === selected);
+  const syntheticNode = selected && !selectedEntry ? selectedNode ?? null : null;
+  const syntheticNeighbors = useMemo(() => (selected ? neighborsOf(adj, selected) : []), [adj, selected]);
 
   return (
     <div className="h-[calc(100vh-3.5rem)] flex flex-col">
       {/* Toolbar */}
-      <div className="flex items-center gap-2 px-3 h-12 border-b border-line/50 bg-surface/60 flex-wrap shrink-0">
+      <div className="flex items-center gap-2 px-3 min-h-12 py-1.5 border-b border-line/50 bg-surface/60 flex-wrap shrink-0">
         {contextual ? (
           <>
             <button className="btn-ghost !p-1.5" onClick={() => navigate('/graph')} aria-label="Volver al grafo completo">
@@ -292,9 +295,22 @@ export default function GraphPage() {
           <ObsidianColorPanel colors={obsColors} setMono={setMono} setArea={setArea} reset={resetColors} areas={areas} />
         )}
 
+        {hintOpen && !panelOpen && (
+          <div className="graph-hint" role="status">
+            <Waypoints className="h-3.5 w-3.5 text-accent shrink-0" aria-hidden />
+            <span>
+              Tocá un <strong className="font-semibold text-ink">nodo</strong> para ver su vecindad · tocá una{' '}
+              <strong className="font-semibold text-ink">línea</strong> para ver por qué se conectan
+            </span>
+            <button className="text-faint hover:text-ink ml-0.5" onClick={() => setHintOpen(false)} aria-label="Cerrar ayuda">
+              <X className="h-3.5 w-3.5" />
+            </button>
+          </div>
+        )}
+
         {/* Leyenda de áreas */}
         {!contextual && !obsidianMode && (
-          <div className="absolute left-3 bottom-3 panel px-3 py-2 flex flex-wrap gap-x-3 gap-y-1 max-w-[70%] text-[11px]">
+          <div className="absolute left-2 bottom-16 lg:bottom-3 lg:left-3 panel px-2.5 py-1.5 flex flex-wrap gap-x-2.5 gap-y-1 max-w-[calc(100%-1rem)] lg:max-w-[70%] text-[10px] lg:text-[11px]">
             {areas.map((a) => (
               <button
                 key={a.uid}
@@ -312,7 +328,7 @@ export default function GraphPage() {
         {/* Panel lateral */}
         {panelOpen && (
           <aside
-            className="w-80 shrink-0 border-l border-line/50 bg-surface/95 backdrop-blur overflow-y-auto max-lg:absolute max-lg:inset-y-0 max-lg:right-0 max-lg:z-20 max-lg:shadow-panel"
+            className="w-80 shrink-0 border-l border-line/50 bg-surface/95 backdrop-blur overflow-y-auto max-lg:absolute max-lg:inset-y-0 max-lg:right-0 max-lg:z-30 max-lg:shadow-panel"
             aria-label="Detalle de la selección"
           >
             <div className="p-4 space-y-4">
@@ -352,7 +368,7 @@ export default function GraphPage() {
                       Abrir ficha
                     </Link>
                     {!contextual && (
-                      <Link to={`/graph/view/${selectedEntry.uid}`} className="btn-ghost !py-1.5 !text-xs flex-1">
+                      <Link to={`/graph/view/${selectedEntry.uid}`} title="Ver solo este concepto y sus vecinos directos" className="btn-ghost !py-1.5 !text-xs flex-1">
                         Vecindad
                       </Link>
                     )}
@@ -388,6 +404,31 @@ export default function GraphPage() {
                     </div>
                   </div>
                 </>
+              )}
+
+              {syntheticNode && !selectedEdgeRecord && !path && (
+                <div>
+                  <p className="text-lg font-bold leading-tight">{syntheticNode.title}</p>
+                  <p className="text-xs text-muted mt-1">{syntheticNeighbors.length} conexiones directas</p>
+                  <div className="flex flex-wrap gap-1.5 mt-3">
+                    {syntheticNeighbors.slice(0, 20).map((nb) => {
+                      const e = byUid.get(nb.uid);
+                      if (!e) return null;
+                      return (
+                        <button
+                          key={nb.uid + nb.direction}
+                          className="chip bg-raised/70 border border-line/50 text-muted hover:text-accent hover:border-accent/40"
+                          onClick={() => selectNode(nb.uid, true)}
+                        >
+                          {e.title}
+                        </button>
+                      );
+                    })}
+                  </div>
+                  {syntheticNeighbors.length > 20 && (
+                    <p className="text-[11px] text-faint mt-2">+ {syntheticNeighbors.length - 20} más…</p>
+                  )}
+                </div>
               )}
 
               {path && !selectedEntry && !selectedEdgeRecord && (

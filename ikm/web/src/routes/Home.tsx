@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { animate, motion, useMotionValue, useReducedMotion, useTransform } from 'framer-motion';
-import { AlertTriangle, BookOpen, Network, Quote, Sparkles } from 'lucide-react';
+import { AlertTriangle, BookOpen, MessageSquare, Network, Quote, Sparkles } from 'lucide-react';
 import { useRelease } from '../lib/release';
 import { formatCount } from '../lib/format';
 import AreaCard from '../components/AreaCard';
@@ -72,6 +72,39 @@ export default function Home() {
         </motion.div>
       </section>
 
+      {/* Cómo se usa */}
+      <section aria-label="Cómo se usa" className="mb-12">
+        <h2 className="text-xl font-semibold mb-4">Cómo se usa</h2>
+        <div className="grid gap-3 md:grid-cols-3">
+          <div className="panel p-5">
+            <Network className="h-5 w-5 text-accent mb-2.5" aria-hidden />
+            <h3 className="font-semibold text-sm mb-1.5">1 · Explorar el grafo</h3>
+            <p className="text-xs text-muted leading-relaxed">
+              Tocá un <strong className="font-semibold text-ink">nodo</strong> para abrir su ficha y su vecindad.
+              Tocá una <strong className="font-semibold text-ink">línea</strong> para ver por qué dos conceptos se conectan.
+              Arrastrá para moverte, rueda para zoom.
+            </p>
+          </div>
+          <div className="panel p-5">
+            <BookOpen className="h-5 w-5 text-accent mb-2.5" aria-hidden />
+            <h3 className="font-semibold text-sm mb-1.5">2 · Navegar la base</h3>
+            <p className="text-xs text-muted leading-relaxed">
+              Cada concepto tiene una ficha con 10 secciones. Usá{' '}
+              <kbd className="border border-line/70 rounded px-1">Ctrl K</kbd> para buscar o recorré por área.
+              Los vecinos directos están a un clic.
+            </p>
+          </div>
+          <div className="panel p-5">
+            <MessageSquare className="h-5 w-5 text-accent mb-2.5" aria-hidden />
+            <h3 className="font-semibold text-sm mb-1.5">3 · Preguntar al chat</h3>
+            <p className="text-xs text-muted leading-relaxed">
+              El chat responde sobre lo documentado en el release. Nombrá un concepto o un área y el
+              grafo lo resalta para ver sus conexiones.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Métricas */}
       <section aria-label="Métricas del release" className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-12">
         <Stat value={counts.concepts} label="Conceptos" delay={0.05} format={formatCount} />
@@ -108,7 +141,7 @@ export default function Home() {
             <h3 className="font-semibold text-sm mb-1.5">Relaciones explicadas</h3>
             <p className="text-xs text-muted leading-relaxed">
               Los links entre conceptos vienen del autor del vault y se muestran con su
-              explicación citada (<em>quoted</em>). Nada se inventa: lo no documentado se etiqueta.
+              explicación. Nada se inventa: lo no documentado se etiqueta.
             </p>
           </div>
           <div className="panel p-5">

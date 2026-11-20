@@ -134,3 +134,21 @@
 @media (prefers-reduced-motion: reduce) {
   .hero-aurora { animation: none; }
 }
+
+/* Badge de Netlify (iframe flotante) — tapa la navegación en móvil. */
+#nl-badge-frame { display: none !important; }
+
+/* Hint de uso sobre el grafo: aclara vecindad y conexiones. */
+.graph-hint {
+  position: absolute; left: 50%; transform: translateX(-50%);
+  top: 0.6rem; z-index: 15; max-width: calc(100% - 1.5rem);
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: rgb(var(--c-surface) / 0.92); border: 1px solid rgb(var(--c-line) / 0.7);
+  border-radius: 0.6rem; padding: 0.4rem 0.7rem;
+  font-size: 11px; color: rgb(var(--c-muted));
+  backdrop-filter: blur(6px); box-shadow: 0 4px 18px rgb(0 0 0 / 0.08);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .graph-hint { animation: hint-in 0.35s ease both; }
+}
+@keyframes hint-in { from { opacity: 0; transform: translate(-50%, -6px); } to { opacity: 1; transform: translate(-50%, 0); } }

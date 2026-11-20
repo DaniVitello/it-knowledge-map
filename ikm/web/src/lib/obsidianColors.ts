@@ -3,7 +3,7 @@
  * Obsidian). Persiste en localStorage. */
 import { useCallback, useEffect, useState } from 'react';
 
-const KEY = 'ikm-obsidian-colors';
+const KEY = 'ikm-obsidian-colors-v2';
 
 export interface ObsidianColors {
   mono: string;

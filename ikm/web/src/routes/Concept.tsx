@@ -228,18 +228,20 @@ export default function Concept() {
             </section>
           )}
 
-          <section aria-label="Metadatos del release" className="panel p-4 text-xs text-muted space-y-1.5">
-            <h2 className="text-sm font-semibold text-ink mb-2">En este release</h2>
-            <p><span className="text-faint">uid:</span> <span className="font-mono">{ficha.uid}</span></p>
-            <p><span className="text-faint">hash:</span> <span className="font-mono">{ficha.content_hash.slice(0, 12)}…</span></p>
-            <p>
-              <span className="text-faint">secciones:</span>{' '}
-              {10 - (ficha.sections_missing ?? []).length}/10 completas
-            </p>
-            {(ficha.sections_missing ?? []).length > 0 && (
-              <p className="text-faint">Faltan: {ficha.sections_missing!.join(', ')}</p>
-            )}
-          </section>
+          <details className="panel p-4 text-xs text-muted space-y-1.5">
+            <summary className="cursor-pointer select-none text-sm font-semibold text-ink">Detalle técnico del release</summary>
+            <div className="mt-2 space-y-1.5">
+              <p><span className="text-faint">uid:</span> <span className="font-mono">{ficha.uid}</span></p>
+              <p><span className="text-faint">hash:</span> <span className="font-mono">{ficha.content_hash.slice(0, 12)}…</span></p>
+              <p>
+                <span className="text-faint">secciones:</span>{' '}
+                {10 - (ficha.sections_missing ?? []).length}/10 completas
+              </p>
+              {(ficha.sections_missing ?? []).length > 0 && (
+                <p className="text-faint">Faltan: {ficha.sections_missing!.join(', ')}</p>
+              )}
+            </div>
+          </details>
         </aside>
       </div>
     </div>

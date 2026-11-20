@@ -290,10 +290,11 @@ export default function Graph3D(props: Graph3DProps) {
     labelRenderer.domElement.style.top = '0';
     labelRenderer.domElement.style.left = '0';
     labelRenderer.domElement.style.pointerEvents = 'none';
+    labelRenderer.domElement.style.zIndex = '5';
     mount.appendChild(labelRenderer.domElement);
 
     // Render target con MSAA + HDR: bordes limpios a través del bloom y glow de calidad.
-    const rt = new THREE.WebGLRenderTarget(width, height, { samples: 4, type: THREE.HalfFloatType });
+    const rt = new THREE.WebGLRenderTarget(width, height, { samples: 2, type: THREE.HalfFloatType });
     const composer = new EffectComposer(renderer, rt);
     composer.addPass(new RenderPass(scene, camera));
     const bloom = new UnrealBloomPass(new THREE.Vector2(width / 2, height / 2), props.obsidian ? 0.35 : 0.9, 0.55, props.obsidian ? 0.5 : 0.18);

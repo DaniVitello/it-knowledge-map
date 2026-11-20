@@ -2,7 +2,7 @@
  * Perspectiva: desde qué concepto se mira. La explicación se cita, no se inventa.
  */
 import { Link } from 'react-router-dom';
-import { ArrowRight, Quote } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import type { RelationRecord } from '../lib/types';
 import { useRelease } from '../lib/release';
 import { cleanExplanationText } from '../lib/wikilinks';
@@ -57,15 +57,7 @@ export default function RelationCard({ relation, perspectiveUid, compact = false
         )}
       </div>
       {text && (
-        <p className="mt-1.5 text-xs text-muted leading-relaxed flex gap-1.5">
-          <Quote className="h-3 w-3 shrink-0 mt-0.5 text-faint" aria-hidden />
-          <span>
-            {text}
-            {explanation?.status === 'quoted' && (
-              <span className="ml-1.5 text-[10px] text-faint uppercase tracking-wide">· quoted</span>
-            )}
-          </span>
-        </p>
+        <p className="mt-1.5 text-xs text-muted leading-relaxed">{text}</p>
       )}
     </div>
   );
