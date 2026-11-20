@@ -301,6 +301,9 @@ export default function GraphCanvas({
     const { tx, ty, k } = cam.current;
     const pal = palette.current;
     const P = simData.byUid;
+    const __dbg = document.getElementById('ikm-dbg');
+    if (__dbg) __dbg.textContent = JSON.stringify({ sel: selectedUid, cam: { k: +cam.current.k.toFixed(2), tx: Math.round(cam.current.tx), ty: Math.round(cam.current.ty) }, w: w, h: h,
+      ns: nodes.map((n) => { const q = P.get(n.uid); return [n.title, q ? Math.round(q.x) : null, q ? Math.round(q.y) : null, q && q.isHead ? 1 : 0]; }) });
 
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx.clearRect(0, 0, w, h);
@@ -729,6 +732,7 @@ export default function GraphCanvas({
         onWheel={onWheel}
         onKeyDown={onKeyDown}
       />
+      <div id="ikm-dbg" style={{ position: 'absolute', left: 4, top: 4, zIndex: 60, fontSize: 9, fontFamily: 'monospace', background: 'rgba(0,0,0,.85)', color: '#0f0', padding: 4, maxWidth: 360, whiteSpace: 'pre', pointerEvents: 'none' }} />
     </div>
   );
 }
