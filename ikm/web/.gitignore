@@ -2,7 +2,7 @@
 node_modules/
 dist/
 
-# Release estatico: commiteado a proposito para el deploy en Netlify
+# Release estatico: commiteado a proposito (lo consume el build del front)
 # (antes gitignored; ahora se versiona para que el build tenga los datos).
 # public/release/
 
@@ -12,3 +12,5 @@ _*.ps1
 # Logs y PIDs
 *.log
 *.pid
+
+.vercel

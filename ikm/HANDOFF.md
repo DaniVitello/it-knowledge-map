@@ -20,8 +20,6 @@ grafo 2D (canvas), grafo 3D (Three) y chat con RAG (BM25 sobre el release) + Gro
     team `danivitello-gojirafcoms-projects` (`team_sUpemoDQYNGZgg44SWTmx1bX`, plan hobby),
     cuenta `danivitello-1613`.
   - Functions: `ikm/web/api/chat.ts`, `ikm/web/api/health.ts`, `ikm/web/vercel.json`.
-- **Netlify (respaldo, sin tráfico)**: https://it-knowledge-map-v2.netlify.app ·
-  site id `59f9bd3c-f52a-43ba-a5b7-fc34da3bfa7b`.
 
 ## Deploy a Vercel (IMPORTANTE)
 El autor del commit git (`danielgvitello@gmail.com`) NO es miembro del team hobby y el
@@ -35,7 +33,6 @@ Si el deploy se bloquea, no reintentar en loop: avisar al usuario.
 ## Comandos
 - Build / tests: `cd ikm/web; npm run build` · `npm test` (64 tests).
 - Python: `.venv/Scripts/python.exe -m pytest ikm/tests -q`.
-- Netlify (solo si hace falta): `npx @netlify/mcp@latest --site-id 59f9bd3c-f52a-43ba-a5b7-fc34da3bfa7b --proxy-path "<token fresco>"` desde `ikm/web`.
 
 ## Secretos
 - Groq: `GROQ_API_KEYS` (4 keys) en Vercel (Production) y en Netlify. En laptop 1 también en
@@ -43,8 +40,7 @@ Si el deploy se bloquea, no reintentar en loop: avisar al usuario.
 - **No imprimir claves. No commitear secretos.**
 
 ## Pendiente
-1. Decidir Netlify: borrar/pausar o dejarlo de respaldo.
-2. Opcional: alinear el email del git con la cuenta Vercel para poder deployar directo.
+1. Opcional: alinear el email del git con la cuenta Vercel para poder deployar directo.
 3. UI/UX: el lote de correcciones está aplicado (commits `8e3fabf`..`0c4a204`). Queda medir
    el 3D en una PC real, pulir la sensación "entry level" y lo que Dan siga encontrando.
 4. Chat: a veces responde `general`; se puede afinar el prompt P1 para más citas `documented`.

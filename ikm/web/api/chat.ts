@@ -1,8 +1,8 @@
 // DEPLOY_V3
-// Netlify Function: chat del IT Knowledge Map (Capa 20b, serverless).
+// Function de Vercel: chat del IT Knowledge Map (Capa 20b, serverless).
 // Port del pipeline Python (BM25 + prompt P1 + Groq). Devuelve {blocks, degraded, scope},
 // el mismo contrato que consume el frontend (src/lib/api.ts). La key de Groq vive en la
-// env var GROQ_API_KEYS (secret de Netlify); nunca en el cliente.
+// env var GROQ_API_KEYS (secret de Vercel); nunca en el cliente.
 
 const GROQ_URL = "https://api.groq.com/openai/v1/chat/completions";
 const UA =
