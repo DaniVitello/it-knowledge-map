@@ -35,7 +35,7 @@ Si el deploy se bloquea, no reintentar en loop: avisar al usuario.
 - Python: `.venv/Scripts/python.exe -m pytest ikm/tests -q`.
 
 ## Secretos
-- Groq: `GROQ_API_KEYS` (4 keys) en Vercel (Production) y en Netlify. En laptop 1 también en
+- Groq: `GROQ_API_KEYS` (4 keys) en Vercel (Production). En laptop 1 también en
   el User env de Windows (`GROQ_API_KEY`, `GROQ_API_KEY_2`).
 - **No imprimir claves. No commitear secretos.**
 
